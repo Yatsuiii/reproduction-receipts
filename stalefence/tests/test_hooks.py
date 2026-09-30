@@ -87,6 +87,31 @@ def test_install_claude_merges_settings_once(world):
     assert len(data["hooks"]["PreToolUse"]) == 1 and len(data["hooks"]["PostToolUse"]) == 1
 
 
+def test_install_uses_absolute_launcher_when_not_on_path(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+    from stalefence import hooks
+    repo = SimpleNamespace(root=str(tmp_path))
+    settings = tmp_path / ".claude" / "settings.json"
+
+    monkeypatch.setattr(hooks.shutil, "which", lambda name: "/usr/bin/stalefence")
+    hooks.install_claude(repo, write=True)
+    data = json.loads(settings.read_text())
+    assert {e["hooks"][0]["command"] for entries in data["hooks"].values() for e in entries} \
+        == {"stalefence hook claude"}
+
+    # Not on PATH: a bare name would fail silently (hooks fail open), so the launcher path is written,
+    # and it replaces the earlier entry instead of stacking a second one.
+    monkeypatch.setattr(hooks.shutil, "which", lambda name: None)
+    hooks.install_claude(repo, write=True)
+    hooks.install_claude(repo, write=True)
+    data = json.loads(settings.read_text())
+    commands = {e["hooks"][0]["command"] for entries in data["hooks"].values() for e in entries}
+    assert len(commands) == 1
+    (command,) = commands
+    assert command != "stalefence hook claude" and command.endswith(" hook claude")
+    assert all(len(entries) == 1 for entries in data["hooks"].values())
+
+
 def test_exploratory_globs_are_not_recorded_by_the_hook(world):
     world.seed({f"src/m{i}.py": "" for i in range(5)}, config={"glob_limit": 3})
     a = world.agent("a")

@@ -19,6 +19,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import shutil
 import sys
 
 from . import coord, premises
@@ -26,18 +27,42 @@ from .config import Config, resolve_target
 from .git import NotARepo, Repo
 
 FILE_TOOLS = ("Read", "Edit", "MultiEdit", "Write", "NotebookEdit")
-CLAUDE_HOOKS = {
-    "hooks": {
-        "SessionStart": [{"hooks": [{"type": "command", "command": "stalefence hook claude"}]}],
-        "PostToolUse": [{"matcher": "Read|Edit|MultiEdit|Write|NotebookEdit|Glob",
-                         "hooks": [{"type": "command", "command": "stalefence hook claude"}]}],
-        "PreToolUse": [{"matcher": "Bash", "hooks": [{"type": "command", "command": "stalefence hook claude"}]}],
-    }
+CLAUDE_EVENTS = {
+    "SessionStart": None,
+    "PostToolUse": "Read|Edit|MultiEdit|Write|NotebookEdit|Glob",
+    "PreToolUse": "Bash",
 }
 PRE_PUSH = """#!/bin/sh
 # Installed by `stalefence install git-hook`. Bypass once with STALEFENCE_SKIP=1 or --no-verify.
-exec stalefence hook pre-push "$@"
+exec {command} hook pre-push "$@"
 """
+
+
+def stalefence_command() -> str:
+    """What the hooks run: plain `stalefence` when it is on PATH, else this install's own launcher.
+
+    A hook whose command cannot be found does not block anything, so a guard installed into a
+    virtualenv that is not on PATH (the default on Windows) would silently do nothing.
+    """
+    if shutil.which("stalefence"):
+        return "stalefence"
+    bin_dir = os.path.dirname(sys.executable)
+    for name in ("stalefence.exe", "stalefence"):
+        launcher = os.path.join(bin_dir, name)
+        if os.path.isfile(launcher):
+            return '"%s"' % launcher.replace("\\", "/")
+    return '"%s" -m stalefence' % sys.executable.replace("\\", "/")
+
+
+def claude_hooks(command: str = "stalefence") -> dict:
+    hook = [{"type": "command", "command": f"{command} hook claude"}]
+    return {"hooks": {event: [{"matcher": matcher, "hooks": hook} if matcher else {"hooks": hook}]
+                      for event, matcher in CLAUDE_EVENTS.items()}}
+
+
+def _is_ours(entry: dict) -> bool:
+    return any("stalefence" in h.get("command", "") and h.get("command", "").endswith(" hook claude")
+               for h in entry.get("hooks", []))
 
 
 def _warn(msg: str) -> None:
@@ -145,17 +170,15 @@ def pre_push(argv, stdin=None) -> int:
 def install_claude(repo: Repo, write: bool) -> str:
     path = os.path.join(repo.root, ".claude", "settings.json")
     if not write:
-        return json.dumps(CLAUDE_HOOKS, indent=2)
+        return json.dumps(claude_hooks(stalefence_command()), indent=2)
     data = {}
     if os.path.exists(path):
         with open(path) as fh:
             data = json.load(fh)
     hooks = data.setdefault("hooks", {})
-    for event, entries in CLAUDE_HOOKS["hooks"].items():
+    for event, entries in claude_hooks(stalefence_command())["hooks"].items():
         have = hooks.setdefault(event, [])
-        for e in entries:
-            if e not in have:
-                have.append(e)
+        have[:] = [e for e in have if not _is_ours(e)] + entries
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as fh:
         json.dump(data, fh, indent=2)
@@ -169,12 +192,12 @@ def install_git_hook(repo: Repo, force: bool = False) -> str:
     path = os.path.join(hooks_dir, "pre-push")
     if os.path.exists(path) and not force:
         with open(path) as fh:
-            if "stalefence hook pre-push" in fh.read():
+            if "hook pre-push" in fh.read():
                 return path
         raise FileExistsError(f"{path} already exists; add `stalefence hook pre-push \"$@\"` to it, "
                               "or rerun with --force to replace it")
     os.makedirs(hooks_dir, exist_ok=True)
     with open(path, "w") as fh:
-        fh.write(PRE_PUSH)
+        fh.write(PRE_PUSH.format(command=stalefence_command()))
     os.chmod(path, 0o755)
     return path
