@@ -61,6 +61,10 @@ stalefence install git-hook           # optional: also guard pushes made outside
   the command is blocked and the agent is told exactly what changed, so it re-reads and
   re-plans instead of shipping a stale plan.
 - Run `stalefence install claude` without `--write` to just print the hook JSON.
+- If `stalefence` is not on your PATH (for example it lives in a virtualenv, the default on Windows),
+  the installer writes the full path to the launcher into the hooks instead. A hook whose command
+  cannot be found would otherwise fail silently and block nothing. Rerun the installer after moving
+  or recreating the environment; it replaces its own earlier entries.
 
 ### With any other agent (or people)
 
