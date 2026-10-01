@@ -167,11 +167,14 @@ Optional `.stalefence.json` at the repo root:
 - Granularity is the file. A change elsewhere in a file you read still flags it. Symbol-level
   premises would cut those false alarms further.
 - `merge-check` tests only committed work, and only what your command exercises.
-- Coordination is tested against plain git remotes. Hosts generally accept custom ref namespaces
-  (git-bug and git-appraise keep their data that way), but check that yours allows pushes
-  outside `refs/heads`, or use `"coordination": "local"` for single-machine swarms. On GitHub the
-  refs show up in `git ls-remote`, not in the web UI. Clean up landed numbers with
-  `stalefence release`.
+- Coordination is tested against plain git remotes, and by hand against GitHub (2026-10-01: two
+  clones with different owners got distinct `reserve` numbers, and a second `claim` of a held task
+  was refused). Hosts generally accept custom ref namespaces (git-bug and git-appraise keep their
+  data that way), but check that yours allows pushes outside `refs/heads`, or use
+  `"coordination": "local"` for single-machine swarms. On GitHub the refs show up in
+  `git ls-remote`, not in the web UI. Clean up landed numbers with `stalefence release`.
+- Two clones with the same git email and branch count as the same owner, so a second `claim` is
+  treated as a renewal. Set `STALEFENCE_OWNER` to tell sessions apart.
 - Outside git, `stalefence.ledger.Premises` is a small in-process helper. You supply the
   versions (ETags, `updated_at`) and the verification call.
 
