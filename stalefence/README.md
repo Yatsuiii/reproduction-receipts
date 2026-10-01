@@ -60,6 +60,9 @@ stalefence install git-hook           # optional: also guard pushes made outside
 - Before `git push` or `gh pr merge`, the check runs. If anything the agent relied on moved,
   the command is blocked and the agent is told exactly what changed, so it re-reads and
   re-plans instead of shipping a stale plan.
+- The check runs before the command does, so a compound like `git pull --rebase && git push` is
+  blocked too, even though the pull would have fixed it. The agent has to rebase and re-read first,
+  then push on its own. (Seen in a live Windows session: it split the command and carried on.)
 - Run `stalefence install claude` without `--write` to just print the hook JSON.
 - If `stalefence` is not on your PATH (for example it lives in a virtualenv, the default on Windows),
   the installer writes the full path to the launcher into the hooks instead. A hook whose command
