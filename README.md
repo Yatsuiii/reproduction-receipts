@@ -8,8 +8,9 @@ Small verification runs on third-party scientific code. Each receipt names an up
 - Two clean clones and separate environments reproduced the README example: F = `5.243655749705594`, p = `0.023200326227690037`.
 - Both analysis exits were 0; scientific CSVs and stdout were byte-identical.
 - [Full receipt](pingouin/RECEIPT.md), [raw CSV](pingouin/run-1/analysis.csv), [independent verification instructions](INDEPENDENT_CHECK.md), [additional standalone local check](standalone-control/RESULT.md).
+- [Public GitHub Actions check](https://github.com/Yatsuiii/reproduction-receipts/actions/runs/42859691077): passed on a fresh Windows runner; [CI evidence and downloaded CSV](CI_RECEIPT.md).
 
-This is one library example, not a neuroimaging paper replication or a complete native-I/O audit. The checksums document bytes; they do not independently prove that a run happened. The independent procedure avoids the original harness. Public CI has not run yet.
+This is one library example, not a neuroimaging paper replication or a complete native-I/O audit. The checksums document bytes; they do not independently prove that a run happened. The public CI procedure avoids the original harness and produces an inspectable execution log and artifact. It is hosted CI corroboration, not independent human scientific review.
 
 ## Next target
 

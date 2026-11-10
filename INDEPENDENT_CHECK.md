@@ -72,4 +72,6 @@ Same-platform byte identity is the recorded claim. Different Python/package/OS v
 
 ## Public automation
 
-The included GitHub Actions workflow runs `IndependentCheck.ps1` on a fresh Windows runner and uploads the resulting CSV. It never calls the original harness. Its result is **not yet available**: the bundle has not been published and no public CI execution has been requested. A successful local independent check is still execution on the original operator's machine; public CI would supply a separate machine and a publicly inspectable log.
+The included GitHub Actions workflow runs `IndependentCheck.ps1` on a fresh Windows runner and uploads the resulting CSV. It never calls the original harness. [Public run 42859691077](https://github.com/Yatsuiii/reproduction-receipts/actions/runs/42859691077) **passed** at bundle commit `a000d24b0939f3e92cfb4544b13211605cbea8e4`. The downloaded scientific CSV matches both original runs byte-for-byte; [CI_RECEIPT.md](CI_RECEIPT.md) preserves the result and provenance.
+
+The hosted runner supplies a separate machine and a publicly inspectable log. The workflow was still authored by this project's operator: it is CI corroboration, not independent human scientific review. The inline manual procedure above lets another reader avoid both the original harness and its receipt generator.

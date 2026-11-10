@@ -1,0 +1,246 @@
+reproduce	Set up job	﻿2026-11-10T16:56:23.6381454Z Current runner version: '2.338.2'
+reproduce	Set up job	2026-11-10T16:56:23.6428231Z ##[group]Runner Image Provisioner
+reproduce	Set up job	2026-11-10T16:56:23.6428935Z Hosted Compute Agent
+reproduce	Set up job	2026-11-10T16:56:23.6429518Z Version: 20261103.629
+reproduce	Set up job	2026-11-10T16:56:23.6430185Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+reproduce	Set up job	2026-11-10T16:56:23.6430778Z Build Date: 2026-11-03T17:26:59Z
+reproduce	Set up job	2026-11-10T16:56:23.6431309Z Worker ID: {d69421fd-dad9-4e7c-8467-4d97784e2d6f}
+reproduce	Set up job	2026-11-10T16:56:23.6431850Z Region: eastus
+reproduce	Set up job	2026-11-10T16:56:23.6432250Z Cloud: Azure
+reproduce	Set up job	2026-11-10T16:56:23.6432652Z ##[endgroup]
+reproduce	Set up job	2026-11-10T16:56:23.6434159Z ##[group]Operating System
+reproduce	Set up job	2026-11-10T16:56:23.6434652Z Microsoft Windows Server 2025
+reproduce	Set up job	2026-11-10T16:56:23.6435142Z 10.0.26100
+reproduce	Set up job	2026-11-10T16:56:23.6435570Z Datacenter
+reproduce	Set up job	2026-11-10T16:56:23.6435964Z ##[endgroup]
+reproduce	Set up job	2026-11-10T16:56:23.6436370Z ##[group]Runner Image
+reproduce	Set up job	2026-11-10T16:56:23.6436796Z Image: windows-2025-vs2026
+reproduce	Set up job	2026-11-10T16:56:23.6437379Z Version: 20261103.298.1
+reproduce	Set up job	2026-11-10T16:56:23.6438439Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261103.298/images/windows/Windows2025-VS2026-Readme.md
+reproduce	Set up job	2026-11-10T16:56:23.6440107Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261103.298
+reproduce	Set up job	2026-11-10T16:56:23.6440838Z ##[endgroup]
+reproduce	Set up job	2026-11-10T16:56:23.6441695Z ##[group]GITHUB_TOKEN Permissions
+reproduce	Set up job	2026-11-10T16:56:23.6443394Z Contents: read
+reproduce	Set up job	2026-11-10T16:56:23.6443871Z Metadata: read
+reproduce	Set up job	2026-11-10T16:56:23.6444319Z ##[endgroup]
+reproduce	Set up job	2026-11-10T16:56:23.6445953Z Secret source: Actions
+reproduce	Set up job	2026-11-10T16:56:23.6446742Z Cache mode: write
+reproduce	Set up job	2026-11-10T16:56:23.6447253Z Prepare workflow directory
+reproduce	Set up job	2026-11-10T16:56:23.6697383Z Prepare all required actions
+reproduce	Set up job	2026-11-10T16:56:23.6736355Z Getting action download info
+reproduce	Set up job	2026-11-10T16:56:23.8252764Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+reproduce	Set up job	2026-11-10T16:56:23.9615966Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+reproduce	Set up job	2026-11-10T16:56:24.1029477Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+reproduce	Set up job	2026-11-10T16:56:24.5122899Z Complete job name: reproduce
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-11-10T16:56:24.7418151Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7420220Z with:
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7420994Z   repository: Yatsuiii/reproduction-receipts
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7427302Z   token: ***
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7427789Z   ssh-strict: true
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7428397Z   ssh-user: git
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7429111Z   persist-credentials: true
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7429891Z   clean: true
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7430692Z   sparse-checkout-cone-mode: true
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7431521Z   fetch-depth: 1
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7432105Z   fetch-tags: false
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7432609Z   show-progress: true
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7433247Z   lfs: false
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7433934Z   submodules: false
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7434473Z   set-safe-directory: true
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7435286Z   allow-unsafe-pr-checkout: false
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.7436190Z ##[endgroup]
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.9175070Z Syncing repository: Yatsuiii/reproduction-receipts
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.9176650Z ##[group]Getting Git version info
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:24.9177303Z Working directory is 'D:\a\reproduction-receipts\reproduction-receipts'
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:25.0594025Z [command]"C:\Program Files\Git\bin\git.exe" version
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.8456251Z git version 2.56.0.windows.4
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.8506762Z ##[endgroup]
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.8525427Z Temporarily overriding HOME='D:\a\_temp\95d76ac9-a0b6-41e4-9745-bf8f05558fbb' before making global git config changes
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.8526503Z Adding repository directory to the temporary git global config as a safe directory
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.8534086Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\reproduction-receipts\reproduction-receipts
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.9106668Z Deleting the contents of 'D:\a\reproduction-receipts\reproduction-receipts'
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.9112181Z ##[group]Initializing the repository
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.9120127Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\reproduction-receipts\reproduction-receipts
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.9927390Z Initialized empty Git repository in D:/a/reproduction-receipts/reproduction-receipts/.git/
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:27.9976264Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/Yatsuiii/reproduction-receipts
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:28.0652584Z ##[endgroup]
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:28.0653139Z ##[group]Disabling automatic garbage collection
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:28.0662935Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:28.0969775Z ##[endgroup]
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:28.0970222Z ##[group]Setting up auth
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:28.0978964Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:28.1271166Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:30.1361324Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:30.1658606Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:30.6306330Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:30.6645889Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:31.1496064Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:31.1823519Z ##[endgroup]
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:31.1823977Z ##[group]Fetching the repository
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:31.1834266Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a000d24b0939f3e92cfb4544b13211605cbea8e4:refs/remotes/origin/main
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.3747818Z From https://github.com/Yatsuiii/reproduction-receipts
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.3748745Z  * [new ref]         a000d24b0939f3e92cfb4544b13211605cbea8e4 -> origin/main
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.3782639Z ##[endgroup]
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.3783001Z ##[group]Determining the checkout info
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.3785027Z ##[endgroup]
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.3797529Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.4263407Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.4567657Z ##[group]Checking out the ref
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.4575194Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.5432340Z Switched to a new branch 'main'
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.5533827Z branch 'main' set up to track 'origin/main'.
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.5571752Z ##[endgroup]
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.5997650Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+reproduce	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:32.6260020Z a000d24b0939f3e92cfb4544b13211605cbea8e4
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	﻿2026-11-10T16:56:32.6686456Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.6686863Z with:
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.6687029Z   python-version: 3.12.10
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.6687222Z   check-latest: false
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.6689348Z   token: ***
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.6689513Z   update-environment: true
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.6689849Z   allow-prereleases: false
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.6690022Z   freethreaded: false
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.6690832Z ##[endgroup]
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.7928300Z ##[group]Installed versions
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.8027553Z (node:960) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.8047428Z (Use `node --trace-deprecation ...` to show where the warning was created)
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.8047955Z Successfully set up CPython (3.12.10)
+reproduce	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:32.8049681Z ##[endgroup]
+reproduce	Install the recorded dependency installer	﻿2026-11-10T16:56:32.8294365Z ##[group]Run python -m pip install uv==0.12.24
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:32.8294751Z ^[[36;1mpython -m pip install uv==0.12.24^[[0m
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:32.9364830Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:32.9365147Z env:
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:32.9365356Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:32.9365734Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:32.9366086Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:32.9366447Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:32.9366790Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:32.9367024Z ##[endgroup]
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:38.8778520Z Collecting uv==0.12.24
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:39.0859759Z   Downloading uv-0.12.24-py3-none-win_amd64.whl.metadata (11 kB)
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:39.1442385Z Downloading uv-0.12.24-py3-none-win_amd64.whl (15.8 MB)
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:39.4022691Z    ---------------------------------------- 15.8/15.8 MB 99.5 MB/s  0:00:00
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:39.7153588Z Installing collected packages: uv
+reproduce	Install the recorded dependency installer	2026-11-10T16:56:39.9131289Z Successfully installed uv-0.12.24
+reproduce	Clone upstream and calculate without the original harness	﻿2026-11-10T16:56:40.0835394Z ##[group]Run ./IndependentCheck.ps1 -Scratch (Join-Path $env:RUNNER_TEMP 'pingouin-independent-check')
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.0836053Z ^[[36;1m./IndependentCheck.ps1 -Scratch (Join-Path $env:RUNNER_TEMP 'pingouin-independent-check')^[[0m
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.0895085Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.0895381Z env:
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.0895603Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.0895960Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.0896296Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.0896600Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.0896902Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.0897136Z ##[endgroup]
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:40.3983457Z Cloning into 'D:\a\_temp\pingouin-independent-check\upstream'...
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:42.5641876Z HEAD is now at 1ffb923 fix(core): replace assert-based input validation with explicit errors (#551) (#555)
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:42.7137380Z Using CPython 3.12.10 interpreter at: C:\hostedtoolcache\windows\Python\3.12.10\x64\python3.exe
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:42.7138272Z Creating virtual environment at: D:\a\_temp\pingouin-independent-check\env
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:42.7292666Z Activate with: D:\a\_temp\pingouin-independent-check\env\Scripts\activate
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:42.7509537Z Using Python 3.12.10 environment at: D:\a\_temp\pingouin-independent-check\env
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:42.9963441Z Resolved 22 packages in 244ms
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:43.0607327Z Downloading fonttools (2.4MiB)
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:43.0630088Z Downloading pillow (6.9MiB)
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:43.0674371Z Downloading scikit-learn (7.9MiB)
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:43.0680980Z Downloading matplotlib (8.9MiB)
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:43.0686597Z Downloading numpy (12.0MiB)
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:43.0692545Z Downloading pandas (10.3MiB)
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:43.0698202Z Downloading scipy (35.0MiB)
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:47.3437457Z  Downloaded fonttools
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:48.9070926Z  Downloaded pillow
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:49.1777586Z  Downloaded matplotlib
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:49.2260273Z  Downloaded numpy
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:49.3600850Z  Downloaded scikit-learn
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:50.5270627Z  Downloaded pandas
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:51.2934881Z  Downloaded scipy
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:51.2967124Z Prepared 22 packages in 8.29s
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:51.2993995Z warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:51.2997130Z          If the cache and target directories are on different filesystems, hardlinking may not be supported.
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:51.2998888Z          If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8894377Z Installed 22 packages in 2.59s
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8895318Z  + cloudpickle==3.1.2
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8896379Z  + contourpy==1.4.0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8897364Z  + cycler==0.12.1
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8898575Z  + fonttools==4.68.0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8899557Z  + joblib==1.6.0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8900648Z  + kiwisolver==1.5.1
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8901574Z  + matplotlib==3.11.2
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8902568Z  + narwhals==2.28.0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8903597Z  + numpy==2.5.4
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8904441Z  + packaging==26.3
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8905472Z  + pandas==3.1.1
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8906457Z  + pillow==13.0.0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8907349Z  + pyparsing==3.3.3
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8908445Z  + python-dateutil==4.0.0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8909451Z  + scikit-learn==1.9.1
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8910452Z  + scipy==1.18.1
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8911415Z  + seaborn==0.13.2
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8912320Z  + setuptools==84.2.1
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8913262Z  + tabulate==0.10.0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8914187Z  + threadpoolctl==3.8.0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8915762Z  + tzdata==2026.6
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:53.8916998Z  + wheel==0.48.0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:54.0199554Z Using Python 3.12.10 environment at: D:\a\_temp\pingouin-independent-check\env
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:54.8709201Z Resolved 1 package in 849ms
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:54.8719658Z    Building pingouin @ file:///D:/a/_temp/pingouin-independent-check/upstream
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:55.2468327Z       Built pingouin @ file:///D:/a/_temp/pingouin-independent-check/upstream
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:55.2704366Z Prepared 1 package in 399ms
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:55.2712633Z warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:55.2713373Z          If the cache and target directories are on different filesystems, hardlinking may not be supported.
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:55.2713922Z          If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:55.2980847Z Installed 1 package in 27ms
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:55.2982321Z  + pingouin==0.7.0 (from file:///D:/a/_temp/pingouin-independent-check/upstream)
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:58.5708891Z    Source          SS   DF        MS         F   p_unc       np2
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:58.5709442Z 0   Group    5.459963    1  5.459963  5.243656  0.0232  0.028616
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:58.5709839Z 1  Within  185.342729  178  1.041251       NaN     NaN       NaN
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:58.6782739Z Upstream commit: 1ffb923219c636a396c3f749eac7092b00e80e8d
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:58.6785550Z CSV SHA256: bb7b390027087569e4baa58ab9664fa739aaad9f5e62f41258dcd49ea7bfe0a0
+reproduce	Clone upstream and calculate without the original harness	2026-11-10T16:56:58.7365151Z Independent byte match. Upstream checkout remains clean.
+reproduce	Preserve the raw result even if the comparison fails	﻿2026-11-10T16:56:58.7717896Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7718286Z with:
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7718449Z   name: independent-scientific-csv
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7718733Z   path: D:\a\_temp/pingouin-independent-check/independent-analysis.csv
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7719015Z   if-no-files-found: warn
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7719185Z   compression-level: 6
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7719345Z   overwrite: false
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7719502Z   include-hidden-files: false
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7719674Z env:
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7719872Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7720213Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7720550Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7721047Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7721351Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.7721613Z ##[endgroup]
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.9198186Z (node:8256) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.9198781Z (Use `node --trace-deprecation ...` to show where the warning was created)
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.9239730Z With the provided path, there will be 1 file uploaded
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.9243847Z Artifact name is valid!
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:58.9245250Z Root directory input is valid!
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:59.1374655Z Beginning upload of artifact content to blob storage
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:59.1537063Z (node:8256) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:59.1987972Z Uploaded bytes 288
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:59.2185125Z Finished uploading artifact content to blob storage!
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:59.2186312Z SHA256 digest of uploaded artifact zip is 42579e6049e3d5348841468c12664c427e1c99a1f27c1ec0c95b2772f381e5fa
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:59.2187993Z Finalizing artifact upload
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:59.6189380Z Artifact independent-scientific-csv.zip successfully finalized. Artifact ID 13784951207
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:59.6190542Z Artifact independent-scientific-csv has been successfully uploaded! Final size is 288 bytes. Artifact ID is 13784951207
+reproduce	Preserve the raw result even if the comparison fails	2026-11-10T16:56:59.6199485Z Artifact download URL: https://github.com/Yatsuiii/reproduction-receipts/actions/runs/42859691077/artifacts/13784951207
+reproduce	Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	﻿2026-11-10T16:56:59.6514979Z Post job cleanup.
+reproduce	Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:59.7707004Z (node:5736) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+reproduce	Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-11-10T16:56:59.7707639Z (Use `node --trace-deprecation ...` to show where the warning was created)
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-11-10T16:56:59.7955341Z Post job cleanup.
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:59.9517697Z [command]"C:\Program Files\Git\bin\git.exe" version
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:59.9804695Z git version 2.56.0.windows.4
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:59.9858619Z Temporarily overriding HOME='D:\a\_temp\6724a0a1-71a5-4aa3-bb0f-dab21a3edd56' before making global git config changes
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:59.9859546Z Adding repository directory to the temporary git global config as a safe directory
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:56:59.9867385Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\reproduction-receipts\reproduction-receipts
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:57:00.0232378Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:57:00.0536928Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:57:00.5198169Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:57:00.5471905Z http.https://github.com/.extraheader
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:57:00.5513396Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:57:00.5834302Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:57:01.0937101Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+reproduce	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-10T16:57:01.1243121Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+reproduce	Complete job	﻿2026-11-10T16:57:01.5975096Z Cleaning up orphan processes
+reproduce	Complete job	2026-11-10T16:57:01.6473020Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
