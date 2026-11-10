@@ -1,0 +1,69 @@
+{
+  "repo_url": "https://github.com/AlexandreAbraham/frontiers2013",
+  "commit_sha": "97bf25836804195401ef213f963135957b431d70",
+  "status": "preflight only; no analysis execution attempted",
+  "selection_reason": "Published neuroimaging paper; removed API imports and pre-existing score caches make provenance and recomputation worth checking. No numerical-failure claim.",
+  "entrypoint": "scripts/miyawaki_decoding.py",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "456aad920c3183d9d04badcb4575ffc61456b82286578e74ad4ca99ca947b752",
+      "bytes": 520
+    },
+    {
+      "path": "frontiers.tex",
+      "sha256": "00f833bc3db6d5f113a286deb9094697506cbe2759b535b76e3f13e284158b1d",
+      "bytes": 55117
+    },
+    {
+      "path": "scripts/miyawaki_decoding.py",
+      "sha256": "57f925c95553b67c5a86457460db30a9f0a3109df488474efd1da9caf2f3e6ef",
+      "bytes": 9498
+    },
+    {
+      "path": "scripts/utils/datasets.py",
+      "sha256": "4006a46aa2a5987ae94a6faf8f6a636e8510ce9ffa1a529c794ac02e949d363d",
+      "bytes": 48472
+    },
+    {
+      "path": "scripts/miyawaki/lr_scores.npy",
+      "sha256": "03ac97b0a6fa563822f8e5129559e3b4406fea395571744c8e4bd08ef20c39d3",
+      "bytes": 4080,
+      "array_header": {
+        "shape": [
+          100,
+          5
+        ],
+        "dtype": "<f8",
+        "fortran_order": false
+      }
+    },
+    {
+      "path": "scripts/miyawaki/svc_scores.npy",
+      "sha256": "1ca1cfe2e11a8065e4e0b4dff536c689941b78521a51e8f09fd8a5ca351ea934",
+      "bytes": 4080,
+      "array_header": {
+        "shape": [
+          100,
+          5
+        ],
+        "dtype": "<f8",
+        "fortran_order": false
+      }
+    },
+    {
+      "path": "scripts/miyawaki/svcl2_scores.npy",
+      "sha256": "ac58d25a9f0179d3b5b349950ef5ea8cc87ce79c1b1ca0fc8858c265e8d3003d",
+      "bytes": 4080,
+      "array_header": {
+        "shape": [
+          100,
+          5
+        ],
+        "dtype": "<f8",
+        "fortran_order": false
+      }
+    }
+  ],
+  "dependency_specifications_found": []
+}

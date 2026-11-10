@@ -1,0 +1,16 @@
+{
+  "error": null,
+  "pingouin_import_path": "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\env\\Lib\\site-packages\\pingouin\\__init__.py",
+  "python_executable": "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\env\\Scripts\\python.exe",
+  "sys_path": [
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\python312.zip",
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\DLLs",
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\Lib",
+    "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312",
+    "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\env",
+    "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\env\\Lib\\site-packages"
+  ],
+  "readme_block_executed_verbatim": true,
+  "existing_read_files_not_presealed": 0,
+  "changed_presealed_inputs": 0
+}

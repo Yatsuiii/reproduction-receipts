@@ -1,0 +1,80 @@
+[
+  {
+    "command": [
+      "git",
+      "-c",
+      "core.autocrlf=false",
+      "clone",
+      "https://github.com/raphaelvallat/pingouin.git",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\repo"
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110",
+    "exit_code": 0,
+    "wall_seconds": 24.037343600000895
+  },
+  {
+    "command": [
+      "git",
+      "checkout",
+      "--detach",
+      "1ffb923219c636a396c3f749eac7092b00e80e8d"
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\repo",
+    "exit_code": 0,
+    "wall_seconds": 0.16142549999494804
+  },
+  {
+    "command": [
+      "uv",
+      "venv",
+      "--python",
+      "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\env"
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\repo",
+    "exit_code": 0,
+    "wall_seconds": 0.09470719999808352
+  },
+  {
+    "command": [
+      "uv",
+      "pip",
+      "sync",
+      "--python",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\env\\Scripts\\python.exe",
+      "--require-hashes",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\DEPENDENCIES.lock.txt",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\BUILD.lock.txt"
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\repo",
+    "exit_code": 0,
+    "wall_seconds": 1.5896804000003613
+  },
+  {
+    "command": [
+      "uv",
+      "pip",
+      "install",
+      "--python",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\env\\Scripts\\python.exe",
+      "--no-deps",
+      "--no-build-isolation",
+      "."
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\repo",
+    "exit_code": 0,
+    "wall_seconds": 5.858600599996862
+  },
+  {
+    "command": [
+      "uv",
+      "pip",
+      "freeze",
+      "--python",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\env\\Scripts\\python.exe"
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-2\\repo",
+    "exit_code": 0,
+    "wall_seconds": 0.05025389999354957
+  }
+]

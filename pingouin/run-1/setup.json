@@ -1,0 +1,71 @@
+[
+  {
+    "command": [
+      "uv",
+      "venv",
+      "--python",
+      "C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\env"
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\repo",
+    "exit_code": 0,
+    "wall_seconds": 0.11279890000150772
+  },
+  {
+    "command": [
+      "uv",
+      "pip",
+      "compile",
+      "--quiet",
+      "--generate-hashes",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\build-requirements.in",
+      "--output-file",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\BUILD.lock.txt"
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\repo",
+    "exit_code": 0,
+    "wall_seconds": 7.302841199998511
+  },
+  {
+    "command": [
+      "uv",
+      "pip",
+      "sync",
+      "--python",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\env\\Scripts\\python.exe",
+      "--require-hashes",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\DEPENDENCIES.lock.txt",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\BUILD.lock.txt"
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\repo",
+    "exit_code": 0,
+    "wall_seconds": 75.46330190000299
+  },
+  {
+    "command": [
+      "uv",
+      "pip",
+      "install",
+      "--python",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\env\\Scripts\\python.exe",
+      "--no-deps",
+      "--no-build-isolation",
+      "."
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\repo",
+    "exit_code": 0,
+    "wall_seconds": 6.705869899997197
+  },
+  {
+    "command": [
+      "uv",
+      "pip",
+      "freeze",
+      "--python",
+      "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\env\\Scripts\\python.exe"
+    ],
+    "cwd": "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\repo",
+    "exit_code": 0,
+    "wall_seconds": 0.05272810000315076
+  }
+]

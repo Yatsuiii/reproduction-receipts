@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-11-10T15:39:25.348789+00:00",
+  "repo_url": "https://github.com/raphaelvallat/pingouin.git",
+  "commit_sha": "1ffb923219c636a396c3f749eac7092b00e80e8d",
+  "analysis_entrypoint": "src/pingouin/parametric.py::anova",
+  "entrypoint_line": 812,
+  "example_source": "README.rst, section 5: One-way ANOVA using a pandas DataFrame",
+  "readme_code": "# Read an example dataset\ndf = pg.read_dataset('mixed_anova')\n\n# Run the ANOVA\naov = pg.anova(data=df, dv='Scores', between='Group', detailed=True)\nprint(aov)\n",
+  "bootstrap_import": "import pingouin as pg",
+  "scientific_data_inputs": [
+    "src/pingouin/datasets/datasets.csv",
+    "src/pingouin/datasets/mixed_anova.csv"
+  ],
+  "expected_readme_rows": [
+    {
+      "Source": "Group",
+      "SS": 5.46,
+      "DF": 1,
+      "MS": 5.46,
+      "F": 5.244,
+      "p_unc": 0.023,
+      "np2": 0.029
+    },
+    {
+      "Source": "Within",
+      "SS": 185.343,
+      "DF": 178,
+      "MS": 1.041,
+      "F": null,
+      "p_unc": null,
+      "np2": null
+    }
+  ],
+  "comparison_rule": "Compare each displayed numeric table value at README precision (3 decimal places; DF exact). Preserve unrounded returned CSV. Byte-compare both raw CSV artifacts without normalization.",
+  "environment_rule": "Separate fresh venvs; same resolver-generated hashed lock from upstream pyproject runtime requirements; install each checkout without dependencies after syncing that lock. No upstream edits or bug fixes.",
+  "repeat_policy": "Exactly two analysis invocations, one per clean clone. Failures remain failures. No analysis retries or patches.",
+  "output_serialization": "Upstream README print(aov) captured as stdout; returned aov saved by harness as UTF-8 CSV, index=False, LF, default pandas float representation."
+}

@@ -1,0 +1,37 @@
+{
+  "started_utc": "2026-11-10T15:45:13.334519+00:00",
+  "command": [
+    "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\env\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "C:\\Users\\lenovo\\harness-verification-20261110\\harness.py",
+    "worker",
+    "1"
+  ],
+  "manifest_sha256": "40f49e8ae18d60261c6d629a830175e527e005d9d7276290a652cea99a9246ef",
+  "exit_code": 0,
+  "wall_seconds": 10.618727600005514,
+  "artifacts": {
+    "stdout.txt": {
+      "sha256": "3dfe828239ed12388ff2175e3a5719aae9adea9f7db7a77204a67b51cbd70156",
+      "bytes": 198
+    },
+    "stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "analysis.csv": {
+      "sha256": "bb7b390027087569e4baa58ab9664fa739aaad9f5e62f41258dcd49ea7bfe0a0",
+      "bytes": 182
+    },
+    "worker.json": {
+      "sha256": "beee6685b10d8562a8fc975783c4399fe216f97504c7e4e47fc4e12747676335",
+      "bytes": 876
+    },
+    "file-access.json": {
+      "sha256": "eb246c6230913393c36d88b891aada67c9f3a972dad198373f0bbde56c00fe51",
+      "bytes": 531926
+    }
+  },
+  "tracked_status_after": ""
+}

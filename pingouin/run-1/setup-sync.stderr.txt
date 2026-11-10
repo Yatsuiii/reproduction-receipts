@@ -1,0 +1,40 @@
+Using Python 3.12.10 environment at: C:\Users\lenovo\harness-verification-20261110\run-1\env
+Resolved 22 packages in 14ms
+Downloading pillow (6.9MiB)
+Downloading scipy (35.0MiB)
+Downloading matplotlib (8.9MiB)
+Downloading scikit-learn (7.9MiB)
+Downloading fonttools (2.4MiB)
+Downloading pandas (10.3MiB)
+Downloading numpy (12.0MiB)
+ Downloaded fonttools
+ Downloaded pillow
+ Downloaded scikit-learn
+ Downloaded matplotlib
+ Downloaded pandas
+ Downloaded numpy
+ Downloaded scipy
+Prepared 21 packages in 1m 13s
+Installed 22 packages in 1.55s
+ + cloudpickle==3.1.2
+ + contourpy==1.4.0
+ + cycler==0.12.1
+ + fonttools==4.68.0
+ + joblib==1.6.0
+ + kiwisolver==1.5.1
+ + matplotlib==3.11.2
+ + narwhals==2.28.0
+ + numpy==2.5.4
+ + packaging==26.3
+ + pandas==3.1.1
+ + pillow==13.0.0
+ + pyparsing==3.3.3
+ + python-dateutil==4.0.0
+ + scikit-learn==1.9.1
+ + scipy==1.18.1
+ + seaborn==0.13.2
+ + setuptools==84.2.1
+ + tabulate==0.10.0
+ + threadpoolctl==3.8.0
+ + tzdata==2026.6
+ + wheel==0.48.0

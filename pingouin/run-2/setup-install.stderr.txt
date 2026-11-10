@@ -1,0 +1,7 @@
+Using Python 3.12.10 environment at: C:\Users\lenovo\harness-verification-20261110\run-2\env
+Resolved 1 package in 1.90s
+   Building pingouin @ file:///C:/Users/lenovo/harness-verification-20261110/run-2/repo
+      Built pingouin @ file:///C:/Users/lenovo/harness-verification-20261110/run-2/repo
+Prepared 1 package in 3.51s
+Installed 1 package in 37ms
+ + pingouin==0.7.0 (from file:///C:/Users/lenovo/harness-verification-20261110/run-2/repo)

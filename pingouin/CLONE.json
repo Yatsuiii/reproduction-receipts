@@ -1,0 +1,14 @@
+{
+  "url": "https://github.com/raphaelvallat/pingouin.git",
+  "sha": "1ffb923219c636a396c3f749eac7092b00e80e8d",
+  "command": [
+    "git",
+    "-c",
+    "core.autocrlf=false",
+    "clone",
+    "https://github.com/raphaelvallat/pingouin.git",
+    "C:\\Users\\lenovo\\harness-verification-20261110\\run-1\\repo"
+  ],
+  "initial_status": "",
+  "repo_license": "GPL-3.0-only"
+}

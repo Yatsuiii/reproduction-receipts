@@ -1,0 +1,1171 @@
+{
+  "success": true,
+  "scientific_artifact": {
+    "sha256_run_1": "bb7b390027087569e4baa58ab9664fa739aaad9f5e62f41258dcd49ea7bfe0a0",
+    "sha256_run_2": "bb7b390027087569e4baa58ab9664fa739aaad9f5e62f41258dcd49ea7bfe0a0",
+    "bytes_match": true,
+    "difference": null
+  },
+  "readme_comparisons": [
+    [
+      {
+        "row": "Group",
+        "column": "SS",
+        "stated": 5.46,
+        "produced": "5.459963286855937",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "DF",
+        "stated": 1,
+        "produced": "1",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "MS",
+        "stated": 5.46,
+        "produced": "5.459963286855937",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "F",
+        "stated": 5.244,
+        "produced": "5.243655749705594",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "p_unc",
+        "stated": 0.023,
+        "produced": "0.023200326227690037",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "np2",
+        "stated": 0.029,
+        "produced": "0.02861575604488026",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "SS",
+        "stated": 185.343,
+        "produced": "185.3427287088636",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "DF",
+        "stated": 178,
+        "produced": "178",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "MS",
+        "stated": 1.041,
+        "produced": "1.0412512848812563",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "F",
+        "stated": null,
+        "produced": "",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "p_unc",
+        "stated": null,
+        "produced": "",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "np2",
+        "stated": null,
+        "produced": "",
+        "matches_readme_precision": true
+      }
+    ],
+    [
+      {
+        "row": "Group",
+        "column": "SS",
+        "stated": 5.46,
+        "produced": "5.459963286855937",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "DF",
+        "stated": 1,
+        "produced": "1",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "MS",
+        "stated": 5.46,
+        "produced": "5.459963286855937",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "F",
+        "stated": 5.244,
+        "produced": "5.243655749705594",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "p_unc",
+        "stated": 0.023,
+        "produced": "0.023200326227690037",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Group",
+        "column": "np2",
+        "stated": 0.029,
+        "produced": "0.02861575604488026",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "SS",
+        "stated": 185.343,
+        "produced": "185.3427287088636",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "DF",
+        "stated": 178,
+        "produced": "178",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "MS",
+        "stated": 1.041,
+        "produced": "1.0412512848812563",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "F",
+        "stated": null,
+        "produced": "",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "p_unc",
+        "stated": null,
+        "produced": "",
+        "matches_readme_precision": true
+      },
+      {
+        "row": "Within",
+        "column": "np2",
+        "stated": null,
+        "produced": "",
+        "matches_readme_precision": true
+      }
+    ]
+  ],
+  "artifact_comparisons": {
+    "analysis.csv": {
+      "sha256_run_1": "bb7b390027087569e4baa58ab9664fa739aaad9f5e62f41258dcd49ea7bfe0a0",
+      "sha256_run_2": "bb7b390027087569e4baa58ab9664fa739aaad9f5e62f41258dcd49ea7bfe0a0",
+      "bytes_match": true,
+      "difference": null
+    },
+    "stdout.txt": {
+      "sha256_run_1": "3dfe828239ed12388ff2175e3a5719aae9adea9f7db7a77204a67b51cbd70156",
+      "sha256_run_2": "3dfe828239ed12388ff2175e3a5719aae9adea9f7db7a77204a67b51cbd70156",
+      "bytes_match": true,
+      "difference": null
+    },
+    "stderr.txt": {
+      "sha256_run_1": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_run_2": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_match": true,
+      "difference": null
+    },
+    "worker.json": {
+      "sha256_run_1": "beee6685b10d8562a8fc975783c4399fe216f97504c7e4e47fc4e12747676335",
+      "sha256_run_2": "845dea2f479e026db1897aec82fd417b35527779fa54090f40515859f0878983",
+      "bytes_match": false,
+      "difference": {
+        "first_differing_byte_zero_based": 102,
+        "context_run_1": "\\\\lenovo\\\\harness-verification-20261110\\\\run-1\\\\env\\\\Lib\\\\site-packages\\\\pingouin\\\\__init__.py\",\r\n  \"python_executable\": \"C:\\",
+        "context_run_2": "\\\\lenovo\\\\harness-verification-20261110\\\\run-2\\\\env\\\\Lib\\\\site-packages\\\\pingouin\\\\__init__.py\",\r\n  \"python_executable\": \"C:\\"
+      }
+    },
+    "file-access.json": {
+      "sha256_run_1": "eb246c6230913393c36d88b891aada67c9f3a972dad198373f0bbde56c00fe51",
+      "sha256_run_2": "143af293eafaa7487290851a7b457567857c37d941149b287ebb0ce1a75949d6",
+      "bytes_match": false,
+      "difference": {
+        "first_differing_byte_zero_based": 38529,
+        "context_run_1": "\\\\lenovo\\\\harness-verification-20261110\\\\run-1\\\\env\\\\Lib\\\\site-packages\\\\dateutil\\\\__init__.py\",\r\n      \"read_before_write\": ",
+        "context_run_2": "\\\\lenovo\\\\harness-verification-20261110\\\\run-2\\\\env\\\\Lib\\\\site-packages\\\\dateutil\\\\__init__.py\",\r\n      \"read_before_write\": "
+      }
+    }
+  },
+  "identical_tracked_upstream_files": 118,
+  "package_versions_match": true,
+  "presealed_environment_byte_differences": [
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\__pycache__\\_virtualenv.cpython-312.pyc",
+      "sha256_run_1": "61796901c04b3306666d6dba4d5798607ece94d6548ab4635c14656e61a8a301",
+      "sha256_run_2": "fceb09072499892fa93f79662165704707a6de04a146bb3a3a3cae7e6bb48994"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\_distutils_hack\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "d887779cff810dd85835caa4731832f26bf03b3c0c71633ba282f16bf1621723",
+      "sha256_run_2": "5a33e7ba1baeb0ba2426cb6cc04edfe624421c0df4f9b79578e0e2c617692857"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\_distutils_hack\\__pycache__\\override.cpython-312.pyc",
+      "sha256_run_1": "fc7b9e3ba95b6e480ce229ce328828943b55184920bb6b9c8ac726140d160b3e",
+      "sha256_run_2": "efe2cfdd8f8b19e3dae3e2bd3e3854c366ec9910e3620ee5eb64ce163cf918fc"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\fonttools-4.68.0.dist-info\\RECORD",
+      "sha256_run_1": "7def8630753ec82474a16f262654758a8f044b304bc63a00bbabc18df6f7c483",
+      "sha256_run_2": "a71c79068d61e1d71681a6940e83b861b0484527c3094bd0d37b8aa70d1108f1"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\numpy-2.5.4.dist-info\\RECORD",
+      "sha256_run_1": "cabb0955cf6c33270ff8848cd5af506b96c53397e987513f57d88f050a7ab774",
+      "sha256_run_2": "a6fd1cb05cea0b467a58775b142b55e96b8ceeb5271456340a1a04565383cf46"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "54bf42ce0748ad130f32dd59d9eeddca7a424e61059e332a36382c897edd4db8",
+      "sha256_run_2": "9c699bb9abf365a10fb7a6346e60062f5518ac642465bf67cb02008f2cfdfd69"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\_elffile.cpython-312.pyc",
+      "sha256_run_1": "1cf4ca0c46c606bce93d6591602b9a8ef34669aff81601a6f0f5f9172a3ca8dc",
+      "sha256_run_2": "8b293341c4a7257f866be039d27c110dfc47af8c27196186daaaa566e23dc03f"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\_manylinux.cpython-312.pyc",
+      "sha256_run_1": "feb8b31933b103bea23e274bee1db971b66960ae618ad89189d647e87b2ba4da",
+      "sha256_run_2": "31be8776f214d45ce66952eb094b2d0ae39a1b461fce214cfc67ecd98127f794"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\_musllinux.cpython-312.pyc",
+      "sha256_run_1": "b45f496f85e8b7dc9bd7c04eae6935ce22579b56696514b5e3af8a6fe2a40d42",
+      "sha256_run_2": "896ef22b05ae98a023a7b93dc84a49b467e3e20eba5fd2ff74600397e4d6f9c3"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\_parser.cpython-312.pyc",
+      "sha256_run_1": "4b072cf903e728b2155118dbd456d3392744394c87acd912abf88121dea33726",
+      "sha256_run_2": "64bbca2255373212b705bdf05a0d06fa1d53ffe97572168377b2f0a157d0df23"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\_ranges.cpython-312.pyc",
+      "sha256_run_1": "9605d35a972f3a4f03912d6bef5edf461e8059cddfb48e98c61dd9e6521fd886",
+      "sha256_run_2": "e2e1242153ff52e073a2c47962dc868e701e292aa1744e31580562063be321c6"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\_tokenizer.cpython-312.pyc",
+      "sha256_run_1": "015c39d22478fd60d31a7cd0d6c0e0e67659fd87903f9ee28ace65e7ee5fe0e5",
+      "sha256_run_2": "077e4ce68df59d278a29adbb3188399bffdc22b7a2f80186ac9860b0f5dee958"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\markers.cpython-312.pyc",
+      "sha256_run_1": "3cbe4cf6b4144e5b9ba352e3dd68f93b064a3545861231b944c0c6edd75e1e0b",
+      "sha256_run_2": "47017087ddb0c52a394110cf23bd48e0db1cf4e573dde0f434f77b8b67aaa46c"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\requirements.cpython-312.pyc",
+      "sha256_run_1": "4dbf2a3bf443435a16b2838b90d6915356ab9c5326a0fa6ecd3c346e219c91e0",
+      "sha256_run_2": "c72426dbfb2e16cc66af7abe53bfaa3c7682a88fef293e120282e003de6134b8"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\specifiers.cpython-312.pyc",
+      "sha256_run_1": "21bc1fc179b1d364d9303069bf0bf6741046e06d700fb591ff56b41052629772",
+      "sha256_run_2": "7fc8fdbb1c71bbb03c99c07f0042d68edb03d2d69f0c872b21e2395d8cda74dc"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\tags.cpython-312.pyc",
+      "sha256_run_1": "a7fdaefb8b131e281b147d98d3d82034294ba6010c313f634714e92df3e5a983",
+      "sha256_run_2": "5617429fdaf853f60bebabeaae47f7a5432be859937bbef6ae535d58b1642767"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\utils.cpython-312.pyc",
+      "sha256_run_1": "6b34235dd14cfcb749b5a05cbeccde6439db4d79e0ce5877fa1609b0234a690b",
+      "sha256_run_2": "9b44a2a008fab5525b30b5bc05c51d70cf1eebda50d4504ee399cd2ae856ba9e"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\__pycache__\\version.cpython-312.pyc",
+      "sha256_run_1": "7fb6ccb57f0cde42f57bc3eb3158553368058719f48773f5e9e5f1d9bd85f005",
+      "sha256_run_2": "551789024b628fdd23cbc89d6f9a2b87981f8e5e7a94787f4efc0abc1cb8aef0"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\licenses\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "c553014cccb1c5c1a84e58f6ad98710b22cf1a5410eb8ceeaf6502b6c83b77f8",
+      "sha256_run_2": "9d09edce959a01f76cce8e7ab8ed9429eed72f150a3245db43bf484862f71b2d"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\packaging\\licenses\\__pycache__\\_spdx.cpython-312.pyc",
+      "sha256_run_1": "1a6cacd3a474056cc59344f3d0e4ce71b4331f174de14d1c0c21df9d319e53e6",
+      "sha256_run_2": "a91f4aad5af7a3363e1355149e8a5e5581beb831a520c4177056b994b56a8c65"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\pingouin-0.7.0.dist-info\\RECORD",
+      "sha256_run_1": "794eec4e65554fd5464aeefabe58259f2bdb0f88b19f85ea94f347bfe2e680b7",
+      "sha256_run_2": "b585c99492019b202bf443aecd8439354e5686cc2fffe89e143c03dc0e2f392a"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\pingouin-0.7.0.dist-info\\direct_url.json",
+      "sha256_run_1": "4552b60445004e85db22dfcda02e9d8de67ec15543b01d4e898379705b726685",
+      "sha256_run_2": "6a4ae7506cc4512814b3b9419929421145923b4a774ac10437e3b3f07ada49d3"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\pingouin-0.7.0.dist-info\\uv_cache.json",
+      "sha256_run_1": "07f196f342ce45ced8710fc5e5719644942da93d0f9aab82c5a59c5a22482609",
+      "sha256_run_2": "0280e716cf88bdf93493067c25f0a85b9b329af49c6c9a8dbc5281ed0d741d94"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "11d5c6303c12a7d8ad1c8bae4c6e3665825b209daa915fb61de48cad51d70aaa",
+      "sha256_run_2": "0574e49cc08d136fe711a0a20f0c9b76bd831b85adc35f701a957e0677ca0d02"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_core_metadata.cpython-312.pyc",
+      "sha256_run_1": "f584e6393e40380625181f2c943faa942f0d6d886eba8c5f56c6b73fd67f0e5c",
+      "sha256_run_2": "457b8cf94c4b03619397c15a3d04fef384c54cfea628b1e851a9a0a9958c5f2f"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_entry_points.cpython-312.pyc",
+      "sha256_run_1": "7f747a014da85958b88159e4c498b147da0281f88f518c41d036f265b60a71d5",
+      "sha256_run_2": "d52932dd0911179f5773ff11f1fe99aa0ee956c0d5d3d43fb8733e361c2ef470"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_imp.cpython-312.pyc",
+      "sha256_run_1": "d26d8bfe5c84ae5c5fc8c385d5641b5765755cbd53626e12c451e0d67f5cfce2",
+      "sha256_run_2": "f687c776761eb406a01c3baefdadec26751f2a1e8319accf866e88ff07a67b0e"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_importlib.cpython-312.pyc",
+      "sha256_run_1": "2da1ac47c013b97a9dd616999cb2c11128fb48b6e5e3fff33c50599a0f07589f",
+      "sha256_run_2": "7967d76ca80b5d61b08838704e524d41c2a7bb691972c5e94ca5cc8a70278343"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_itertools.cpython-312.pyc",
+      "sha256_run_1": "4bbfadbb9d6d2a661faf698af3631c914df760275340960e72f2fc323553503e",
+      "sha256_run_2": "aa895b2a08e621c6dc10bea68cb993a00964b3e5361763cb52ded34ce1bea551"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_normalization.cpython-312.pyc",
+      "sha256_run_1": "dd9a86eea35a1025433e6bbb75594300600c21148389ecb2c27d659cf9372f08",
+      "sha256_run_2": "47782b16f40ef333a6fc225b0e177ea8f567f24a0881ad51c95f450bf65aa169"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_path.cpython-312.pyc",
+      "sha256_run_1": "2a23519e89ee09158775cbcbb5919d8480899dcc0472c7eecfa101c2288a1626",
+      "sha256_run_2": "769340d2b58e2d065197992de6061e07e4e948dd2ad186c87d75868ebaaa6625"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_reqs.cpython-312.pyc",
+      "sha256_run_1": "c2bc67fac70abfb611016f61f9f36240a100e3e874937b7651334097f4a28afb",
+      "sha256_run_2": "0387c351374bf99ea9fe83be5e4483840b02b4c716afd756ee16d41d6dbe32c8"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_scripts.cpython-312.pyc",
+      "sha256_run_1": "6308cb1d9c288b4831a2544a91a2ecc33bbe508ad7a885705c714511f93b39da",
+      "sha256_run_2": "ed683e60401b14a8ad5011028367ffc5a8612d1369df70783f92078e93b05e17"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_shutil.cpython-312.pyc",
+      "sha256_run_1": "0e56a416804e73d644041bdbb59e9be722fbfef1c15c0e8eb0c2519e387b9a39",
+      "sha256_run_2": "4dfa5f42e66d5ef718b544e6fbed4342ae4d3118f71af850793a0bb20b39e6c4"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\_static.cpython-312.pyc",
+      "sha256_run_1": "c875e688924f53335a3e65596accd1bf741263eb15b31cfdf080ac57523664c9",
+      "sha256_run_2": "c652023d55eecfaba7aeae752fd7925d497329236573eefc0a3a5045e2e8b9d0"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\archive_util.cpython-312.pyc",
+      "sha256_run_1": "d8a2a25aeab8275c8fc9fe04b178029b07a17470156f7c21b30050bc040bd8cd",
+      "sha256_run_2": "35a35b3555bda6288a33ef63c62cb708af8e8626f452d45bfb686a281ffac092"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\build_meta.cpython-312.pyc",
+      "sha256_run_1": "9871423c72e0fc60ae2b3a0fb464732fa6a82e1204df088945dd4e2482fb0b87",
+      "sha256_run_2": "2bd7a5877a2e08e41a316da76a5c1fc7a640b8f9553c3ab8d2304334916f9045"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\depends.cpython-312.pyc",
+      "sha256_run_1": "f38032cd297424df304c80dbc7ac1773b016d81f48304e53b0fafbbebf1b6f5e",
+      "sha256_run_2": "7c5ce095d001b52d7d4c9a201f72f4dae420db75624c32888dd08618c30d10d6"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\discovery.cpython-312.pyc",
+      "sha256_run_1": "a009defd69c23f767dcc6e1a91e1c4ca6b33aa93bb71003be9fae3ab96df7e40",
+      "sha256_run_2": "5b9d9a047f8166766ef1989b1d23aade4cdbd7244a83a00ab49163e6615efb63"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\dist.cpython-312.pyc",
+      "sha256_run_1": "12ce3dab2b00730a36b1eac91bed7fad7e66b20d5fe93eb0d34d4b193dae2557",
+      "sha256_run_2": "698d3586a597d5186d0c3a42590417ba18821ffadaf31e71b52dbd830888bad0"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\errors.cpython-312.pyc",
+      "sha256_run_1": "95e639f82635039f6e12a79cb492356161285389fe24da99159ad5d130cc1968",
+      "sha256_run_2": "31f69355d1e38cd51083bd4d1f23824b171f5afad77b77614f77f7276933cfba"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\extension.cpython-312.pyc",
+      "sha256_run_1": "3f33d23feccb86e5ae367c9ff80aa154e912d44e38e73dd2f20fd8df8f5e36d6",
+      "sha256_run_2": "0210d935d391e44c28222c395c1092ce2744ba697e9d29cd4e3d10527cf42262"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\glob.cpython-312.pyc",
+      "sha256_run_1": "6892ef5258bff74ee4328d20c5247dbb8452caa0101f539ccee2a9568a19b768",
+      "sha256_run_2": "3b540cf5a0b97beb881108023250432d385145a241e6a94bb161894cbe770c3e"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\logging.cpython-312.pyc",
+      "sha256_run_1": "2e953255245945faf1c6ca7449168ab07b363712c8fa84e4ed5b26e9d5fbdc0e",
+      "sha256_run_2": "7840510e9be3160b69f43d50677fdb3bdbcdd3f29c7ff6be486e72b0e114c929"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\modified.cpython-312.pyc",
+      "sha256_run_1": "5cc2e674a5ba91ec526989e8f617826c60c85003c01e9f7dcd60401e27a06809",
+      "sha256_run_2": "7ff7b99861db21bb57a83e8646150828f125a24e9b3d53079034d7f9d1ef0e28"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\monkey.cpython-312.pyc",
+      "sha256_run_1": "0fb4f102d93690ea55a1c56185f738828f7532555cf0d51200621652a2e845b2",
+      "sha256_run_2": "22b1cf72de1142153dc01ebdc047c285cc9711063606c44056febb9342964867"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\namespaces.cpython-312.pyc",
+      "sha256_run_1": "df52c6d4f8d5bbc30e4152dadd26f298be1a9f720c35631ea882117240f40e70",
+      "sha256_run_2": "76269b29c5620ac3050af7b6f6ad9deaeedfef366adf7f055ecfd92306278e89"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\unicode_utils.cpython-312.pyc",
+      "sha256_run_1": "531f1c89d59c04b5bccf0aea10da4a9e79789aa93346114e6d704f39345ffda0",
+      "sha256_run_2": "dee5eeb9a5fe7b29fe591bb133de8a177a9145d2dadc1fe6a3fda17714ab0786"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\version.cpython-312.pyc",
+      "sha256_run_1": "505ee4456774b7793ae89810fbc3fd384cf2c5503cf5a0b6795c140d613fac69",
+      "sha256_run_2": "57fcad93874afa0bfe188d74c8bd7e1bd3079815d271dbd033d7ddd98640a01e"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\__pycache__\\warnings.cpython-312.pyc",
+      "sha256_run_1": "6440733a87c0dcbc05c42768eeefd75416478b0640f48aa1c70110b8c57f81a7",
+      "sha256_run_2": "43edb90685ff1e948cba4e503b4cc5dc9080ceb9416d7dbdb651e915db11988d"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "6cccc95c9f1d39f8c4639d260a46d65cc3fa57c313541db881bb3fbb47c974e1",
+      "sha256_run_2": "d0b951bd016ab6f3453c8fb7b00ed54a62d1dfec77b7155da395caf770b97d4f"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\_dataclass.cpython-312.pyc",
+      "sha256_run_1": "ade9e6cc3d74c51b9f3b43dc32b81f53602cd20e1ad91390991a8349701c84de",
+      "sha256_run_2": "233eaf26c6f50650d1444ea57d373e5610e8be7357b9d6055b32c81670215f51"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\_log.cpython-312.pyc",
+      "sha256_run_1": "7759a5d6636cb60972fbc14abbe2715e0c9c181adac15605155059e4ccfb1319",
+      "sha256_run_2": "b957deb035a08c82f3cb0b76fc47773101a05fd0d6a7861b789195f6f6d4f843"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\_modified.cpython-312.pyc",
+      "sha256_run_1": "73384228b33935d149150b5cb2a0dcf820580927eed3f8e3e73b5069d804b620",
+      "sha256_run_2": "96b3e6a1ce0552038a25223cd274a9feb7d37744cdb3b32b277cf54376891f87"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\archive_util.cpython-312.pyc",
+      "sha256_run_1": "d7075bdaf08e30db00cee1541ccf49749d9c32f529182a12ffb0fd6339c04c05",
+      "sha256_run_2": "3a08ed1194dd6b5fd67d5d7b337416e5eb32aa7d36198516087b5a6cb6be0203"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\ccompiler.cpython-312.pyc",
+      "sha256_run_1": "aff0a4fd980b85164b402fec9cc26d8dc9558193d6f6557041bae8d088e89cb7",
+      "sha256_run_2": "9c376ef1db115676126f9bb45e8a0c550314a3a395a9977a84f3ac7536fbb423"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\cmd.cpython-312.pyc",
+      "sha256_run_1": "fc151a18ce947905f222ee59cb886b8c8bd6a47b76a1609d45c8ee8442d3ccee",
+      "sha256_run_2": "8528aff5b5001f0da6f1e05558c29bfeb0e8e3e9bbe11041d3dd9e0ddf86639b"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\core.cpython-312.pyc",
+      "sha256_run_1": "1f90454a9103bf75ed38ff94d00a283203d80a1e78cd97438f747cd8ec564522",
+      "sha256_run_2": "41cbd94c5e06e84ec20f73ecd39318c12f2b6dbb3c5b9709fb0768f7ea4aedb8"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\debug.cpython-312.pyc",
+      "sha256_run_1": "2e1556fb5c0aa27840f089be8ba5ebecf618d3ee9af9ef2b53595843cfc111be",
+      "sha256_run_2": "ee41d966a3114f94d97a57d764b22e3f5f4aaad0116bb5fc092917d20f30bff3"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\dir_util.cpython-312.pyc",
+      "sha256_run_1": "c0721151ebfc50a3a9f0728a2466b01a82ecbe93769f57066b2377c1266b2452",
+      "sha256_run_2": "aadc26f7573b27c5f72cf038814c6a8d340cc3a6ee0ea8576c2e7f3443ccb7c6"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\dist.cpython-312.pyc",
+      "sha256_run_1": "edfaa275189c94dfc7a2d2599bf41745ada1aa5c707300f0c5835cc06013f77f",
+      "sha256_run_2": "dd338187db584ccb114c84e45b9b6b4d04ec25033cd2bb4389594024d1c08d10"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\errors.cpython-312.pyc",
+      "sha256_run_1": "a59b23b640f051be90b0ad9ac85d940f3b1e48b4643067179e51c847d98ed32a",
+      "sha256_run_2": "2ec6ad38c85cf0cead252a7ade7c16ec770f92e2dcfb087554303aefdb726443"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\extension.cpython-312.pyc",
+      "sha256_run_1": "1759020cafd5cafadd3021c5408a8718c4783b1b5f3315870dafdda25b475f44",
+      "sha256_run_2": "fd3b95874766825e31ffbbf0f26fcfc10e07d9db877f0aa16c84ff8aa2b3d822"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\fancy_getopt.cpython-312.pyc",
+      "sha256_run_1": "6a66fd3f325163bc4a4a08b89f117def1d3e5756d4705e51e278684b87f60c1e",
+      "sha256_run_2": "ff076cebc64e5486e92dc9e568dd483eded6d8ea3d9b24b1dec26002792482d4"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\file_util.cpython-312.pyc",
+      "sha256_run_1": "b53ad208937dd843984923431a42e30881b5ec39773a25fe0af33523e7e8649c",
+      "sha256_run_2": "012dd432af1f4e887b832ffe882a3a73a83295f105582d428d9b8e84cd6fb239"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\filelist.cpython-312.pyc",
+      "sha256_run_1": "f8451e6a26d3b544b913899248c1d1231902ac2e02422b8dd4305b9b82f7b623",
+      "sha256_run_2": "87a2e5401ed677b5dcf9229a92b220dd59c91e13623f64f20eabe162d1deedfb"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\log.cpython-312.pyc",
+      "sha256_run_1": "13d6b920ff00b059e7f2c16de2beec355f583531be74d427f2ceb6aff91118bb",
+      "sha256_run_2": "25d0116c6fd9552af54497fd794883d1765d556bb3fc0d127041dfdcf1598e43"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\spawn.cpython-312.pyc",
+      "sha256_run_1": "b6979bdb5f1adde1b21fa983edc86fcb8f5d63c74ee3ed01d14090492374436c",
+      "sha256_run_2": "89d6985dab104902885e1187ef0835053b55fecd3f7f7cbac52e3269bf2871bf"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\sysconfig.cpython-312.pyc",
+      "sha256_run_1": "202aeb9b7a3cd9542c124c8c51e5327acfd3933ad4eb7806f3d455e624ac43de",
+      "sha256_run_2": "fdfceb65dbe83f967cc8935b8c29efb13cedd015c7c6720880c780ebd80608ca"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\text_file.cpython-312.pyc",
+      "sha256_run_1": "49d28621e18aa21d632b4721b6c910652d0b77dd69b59ac336f321f6cf111cbc",
+      "sha256_run_2": "ec94a62f6a2d1c800dd1750be15828f027a458f8492b10a93103dd14ba40dd71"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\__pycache__\\util.cpython-312.pyc",
+      "sha256_run_1": "97c8070b0f217a1b81d665cd38bcd649787c59b80c298c2e4b396c8ee49cf1c2",
+      "sha256_run_2": "2ed5aaace35ceb9fa6df34cd8c7db289aaba74ce02bdd29de20e1c69e5d34434"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "4ac9b00e06a8a6d9a4ee251171fa39f1c1c715ebf01be61fe29e0150ddba1bf4",
+      "sha256_run_2": "d6145c758fc59e9307812a254ace8e0de65371af5836d5b9c18186314c0f1ce3"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\_framework_compat.cpython-312.pyc",
+      "sha256_run_1": "436133af97d3157515de21deb7be4b7f60c1aeeefd2e1d6c8a8d4b8f3902646b",
+      "sha256_run_2": "6cb23312fedf67e627be1a0669d811f10301434d15b7d6b70db91cd3c6ad01e5"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\bdist.cpython-312.pyc",
+      "sha256_run_1": "15d1564c6eae8abbf09f143beea6764b6cec146e936f1b13ee71ca4f0e2a0cfd",
+      "sha256_run_2": "f2b93f094a02b9a5f6d83e202179ad121ff47e5e3c0b921f3cd1113b137c170b"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\bdist_rpm.cpython-312.pyc",
+      "sha256_run_1": "023c9af6c224bfb3afb45e07140546b16b262b3b6366923e1243c3716b369e8a",
+      "sha256_run_2": "60ac521d97afd1d067160fc2b332ef56770fc6a30302a4906bc66d4b82906882"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\build.cpython-312.pyc",
+      "sha256_run_1": "887dfd41e6f4430c6ee97a00808a5c77af954df01da763f7410bcce1b96ff57d",
+      "sha256_run_2": "dc96937b88c74ea5a780f6bd96e08859781a5bfd4e9879a859c5a3469cb091b1"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\build_clib.cpython-312.pyc",
+      "sha256_run_1": "190332ecb349d4bf2920d26558f4c1fc5945118f5013dbb4c8179312990c328b",
+      "sha256_run_2": "8d8ef47336a90525649578cee672e2813af8f0e8f7c5a4e057a7d3a88dd37647"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\build_ext.cpython-312.pyc",
+      "sha256_run_1": "6890ee34b1ee5a1364ce18c682bf3793eeee52e1dd6bc573c63cbf436a984833",
+      "sha256_run_2": "118a2d7d3b73a6ab61c69ab0be11bed6c968efa8b5cb6cf094171c5934637c71"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\build_py.cpython-312.pyc",
+      "sha256_run_1": "986f81d971b232d8fd8dbb810159345bdccccff6adada68636ac27fe38840a2f",
+      "sha256_run_2": "37f5b6f248be2523aeb04113d6bdf54f98e3f414999822c9e9221f6d18b5385c"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\build_scripts.cpython-312.pyc",
+      "sha256_run_1": "1dfb994ee039085733bbe03ce77fcb809dc8bab9c0f9ff6bd2de0bd7d5bcb99d",
+      "sha256_run_2": "f21e9f7a59b01dd7f810486b428451ac47da896262beab6d0bc6fd4cbbee9803"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\install.cpython-312.pyc",
+      "sha256_run_1": "74cf728d8dabe93a4f7b501af2c4ce0a70a461978a8392c2e8a94719091d7323",
+      "sha256_run_2": "8b4a7895636ff07e01c6b57c6da4618b5e6eb8e51093b615cf3b88a4ce8cca89"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\install_lib.cpython-312.pyc",
+      "sha256_run_1": "24a45988da1d24e842d3656c5c6e4eeca6abdbd791b652317cab5320213fb22f",
+      "sha256_run_2": "130f9da829872c445fe91f38b8080784673afacba8522dc3294e7a69cf2e99e6"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\install_scripts.cpython-312.pyc",
+      "sha256_run_1": "63e3cfe471df1fa2f1a055cac98b336d8012095a28ed961f10216decdafdaa33",
+      "sha256_run_2": "4838abd9484fa2eac79ba70259185899e27ae918403b923d3cc08d6256c83816"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\command\\__pycache__\\sdist.cpython-312.pyc",
+      "sha256_run_1": "8ea3c9df6bab23ededcb8d39cb4a5c7bc91748c43ec640c4d7f2b71d00009842",
+      "sha256_run_2": "99a203b871f11067500f6dbc64a03e9214e1c427405f01380ffca49c52415b2a"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compat\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "b25a9c62f97bef96aa7a654fad09412c933b5e5749362516b1d7355670cbdafd",
+      "sha256_run_2": "1deda71df1ebcc6f88a7843e3afb5244840f5f35d1961abfacaa9b6fd0d7bec4"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compat\\__pycache__\\numpy.cpython-312.pyc",
+      "sha256_run_1": "a2c4c6035685a99224ac4bb234d42d806940930e16d8a2f4d37d399e80302874",
+      "sha256_run_2": "226619c7dd185ff6d8593452e60e9153fbf72737f7d447b11884a6942149ea19"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compat\\__pycache__\\py310.cpython-312.pyc",
+      "sha256_run_1": "0a4ce88a6e5119603fef63458c0fd3a4e8d2eb637cd7ce6af10ed5844a8d9a7e",
+      "sha256_run_2": "0bd5d3ae0640879e32c6b8b7e84757128cddaf5b5dc0539a23789e0b073affbf"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\__pycache__\\base.cpython-312.pyc",
+      "sha256_run_1": "b451bb69bc486f9112a4591045388ef0388f2f4a043958891cdcee0604853080",
+      "sha256_run_2": "4f4d0547a8d3230a2a4fe498e1a0372704c6017a2af074f3cef2507ea8d05696"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\__pycache__\\errors.cpython-312.pyc",
+      "sha256_run_1": "83eb27fddb608baafe1db9a995933cf3d5e79899a91d660783893e90c442caab",
+      "sha256_run_2": "4bb9254d14d9d1e708551e41dd505f45c5824192f8bb9fbcb6abb8e4f6337883"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compilers\\__pycache__\\_modified.cpython-312.pyc",
+      "sha256_run_1": "9d4bf93ee940bc364a866883100c70f093edf24c562e73ab719905089beba107",
+      "sha256_run_2": "5cf3c79ff58d45f1327f1db1c60b1395ba331246020438edd18d28ce16396f05"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compilers\\__pycache__\\_util.cpython-312.pyc",
+      "sha256_run_1": "b92860a23be6425fe65badfca0241b1182eaa60650ef129e8589206e3cfae000",
+      "sha256_run_2": "114634273596de7d8d27dde8cce4396cc7c53a9e8ad80fb2b491ddb0d81c513b"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compilers\\__pycache__\\errors.cpython-312.pyc",
+      "sha256_run_1": "08ac36a9b9c983a45b7264c0d60abfc051ec3742e4ec91e0fa588009a4388725",
+      "sha256_run_2": "20784bc071eb992a8ab426363eea69f15a7934651439d0e9e12d085b0a3f7864"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compilers\\__pycache__\\logging.cpython-312.pyc",
+      "sha256_run_1": "26234f887071d1ac358b8053905858f4d950c2e6976719f7bf615c2d3351bd02",
+      "sha256_run_2": "0829e2d729038bc57748e07c7d209923653229a13df2a3781578adadfda074df"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compilers\\platform\\__pycache__\\detect.cpython-312.pyc",
+      "sha256_run_1": "0ace07db9cbf6be3cde4cd3d5d948c5b9e780a287fb3e1302b3160a394383dac",
+      "sha256_run_2": "2d30661dad4c04b1fec5e4ceaae5b42f3267e45a8039b5fe5b684a4bf4502d92"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_distutils\\compilers\\platform\\__pycache__\\macos.cpython-312.pyc",
+      "sha256_run_1": "bd07a02751634d74a1e79c8f4b6d041495f7875e79289258d2896eede2a54e8c",
+      "sha256_run_2": "8a03fe72d430b9ceebf92d0531ca0a128b79a72aac7bcc042483f0dab91f38c1"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_vendor\\jaraco\\context\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "9ce44e17ff37b84ea2ba21a52f8494b53fbd51d859ade74a0e274b2b591fe808",
+      "sha256_run_2": "817783af614ce313af95ab48bab37c445b318202533b810e5d0dbf4248ac1b35"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_vendor\\jaraco\\functools\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "6a883d24a810737ed8c2768430b7ec01af9e2e0311b4a90dde1d6106e9e041dc",
+      "sha256_run_2": "c3fee9f8578c849a7ba33870c38f5d9dd07df7c2b1da68dbacde6fbe9c51b369"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "6985aab0ee8cae143ae6b274975be96893eff1d93d4f6bcbdf0f17d70f47e8e5",
+      "sha256_run_2": "c0425d0c1a3aadd277018420ba62fea2d1bac50fc179d3e8ae628a0fe0c54555"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "3b95e9941bf96fb439571c5cd2ef08b12734ba701e0039559ff8c140f75fb451",
+      "sha256_run_2": "f8cf8d82aef6c19840813c3dd3730679fd7c8dae3da19732ae6a8bf544dd0c57"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\__pycache__\\more.cpython-312.pyc",
+      "sha256_run_1": "e7d28d27dd7c377ac66431eefba1b0a0a2c4a8bda1dc515f999bdebc1a8560e0",
+      "sha256_run_2": "e5fc52e1cfd48d3e0d41b7cb12e93e00ab3b1a70e705a0b57e49f72d946c5549"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\__pycache__\\recipes.cpython-312.pyc",
+      "sha256_run_1": "86d1d8ea3d0dbef1c711fd57d20f8fc8612de247722c11e8b20fb1d1403a39a7",
+      "sha256_run_2": "def47af0ad6ea91978a12e45c58d06c184e88b7d9fd149c592a08af18f221127"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "e1764dab3442635d54ae446a15af5e314fb45bd12529b758931b1d4ff07b7248",
+      "sha256_run_2": "fef3a61538e10a7b6e00aa789ed8f81d53cf58f9e24a7955e35b257af6fb0ff7"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\_requirestxt.cpython-312.pyc",
+      "sha256_run_1": "d16f8d22195c8f4b8d65c9aa1b521fb2e9b50573afe802e3c73483e9b4396e39",
+      "sha256_run_2": "355c1bbb1fac7d37b787dfab56dbb0aa4324ba8b98c82d0d58d7a26c83fa73ed"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\alias.cpython-312.pyc",
+      "sha256_run_1": "a2e9b0459f5e0c91e449cff467a4fece5d4cd4d34f0a03eee24bc1a13c01a65f",
+      "sha256_run_2": "3cde440fcd4f1eebd8167904d7ce3c675f1b15a4dae0b255c858a26411a0c421"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\bdist_egg.cpython-312.pyc",
+      "sha256_run_1": "5eafaf8044d0c1c6beabb8814f3a67b594890213d806237c7f5a56708df08aa0",
+      "sha256_run_2": "88d21bf9c4193bf27485b6049355f368ba21437d32259cf79187312bb679ba5c"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\bdist_rpm.cpython-312.pyc",
+      "sha256_run_1": "f48bab33ea19547214dc9a53eb8a7219eb9b792ab88066501ef309201e5d7a3e",
+      "sha256_run_2": "0f45a7bf10dae2336197c30b86b967a4c99e014d85ec3d18317b0c0c2de3b434"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\bdist_wheel.cpython-312.pyc",
+      "sha256_run_1": "098d58c6c83519a34e7113f903eaa856b8874bbb512de887bd9b55182bddf2e6",
+      "sha256_run_2": "bc655050add3c2b73ffec95d86225cd3ef77582cb26bc7183ce6129269769b4b"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\build.cpython-312.pyc",
+      "sha256_run_1": "9828bb92067230a4682b54978ce8778b0fdc103b7a23004e3da750f65055bc8b",
+      "sha256_run_2": "0e40f2ccf6e73537842d746bd71c8fe5b33435691592148647dc85e0980ee100"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\build_clib.cpython-312.pyc",
+      "sha256_run_1": "5e964d159769d7b8fed695a9e828dc2ab9b378823cbaa7686b21a7ca8f1395c9",
+      "sha256_run_2": "a0d1d34d6c0c0db6fa240891ebb7a7cac19d7ac2a3c93a5605ffd6d7fb399091"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\build_ext.cpython-312.pyc",
+      "sha256_run_1": "e28bec768952fb337fabf3d2985048f6e9d37dcd78cb66bc7312fffd4ea53eec",
+      "sha256_run_2": "53f73b07e47de6399de616c56234c0092eb77f2c8819aa4af7c8f5db44fae17b"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\build_py.cpython-312.pyc",
+      "sha256_run_1": "5c9bf3e0140e10f7c0e1e62a426c507d46a8893823fa8ccab21aba5aa6530ad5",
+      "sha256_run_2": "c7e5c64305cf46825ee6f750f57765744ffc3178db81531b2d800cec87e50de4"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\develop.cpython-312.pyc",
+      "sha256_run_1": "5e4df744c1659b1b59ba402636f794e15971bcd79ec34453430f2cccb711ab25",
+      "sha256_run_2": "1ae50ff582c7014723d4448364bb386e1e70ea297b85ef764695cc544a3e23e2"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\dist_info.cpython-312.pyc",
+      "sha256_run_1": "92f8d63be1c7ce684a7574f4357afa18232720fd67ce1637a0ead461e83047f3",
+      "sha256_run_2": "2988e9504b63b0aeb5866a2159812d36c446d8d2d0c5e9c67da0161db6080e28"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\easy_install.cpython-312.pyc",
+      "sha256_run_1": "ccc819da536383829380f054c44abc5450707a824e32dc3b366f9af3fd444edd",
+      "sha256_run_2": "f8ffef1b1964cf1803642bb1116b82af86c10b527b3e2fe0e57a90182c8f6343"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\editable_wheel.cpython-312.pyc",
+      "sha256_run_1": "14d2b1437e5c7de19b98383997c41abd0f440ae373da4fb00c6de3d847d00bd4",
+      "sha256_run_2": "07a8e09ae02a89d90a05efa3f3a181df71f9d0ec09d73e2d74cd12aa879df6c1"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\egg_info.cpython-312.pyc",
+      "sha256_run_1": "15bfef65e2b6f3f7b238ebf656a3414dbea424613753154571e6cfd12a3d2c78",
+      "sha256_run_2": "aeb73ca63c1a3c35581838e4225262438dbad9137ef0743733cca30b53296cdb"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\install.cpython-312.pyc",
+      "sha256_run_1": "28946d7bb2cfac611e8a3989d91310d512e84538e1989e9414859c2dc6f3ca22",
+      "sha256_run_2": "a076a6befc7b6d188f43fce416bd76a157648dc87bbf71771d8fbbb137a67619"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\install_egg_info.cpython-312.pyc",
+      "sha256_run_1": "e67230c8b4b991180b1c2c96800ed8ea75a167d3afe4d17f934f8ce281212407",
+      "sha256_run_2": "78512808d06a44b6c62e0f4518a31db9b838851021cea337f6990680d7693a2c"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\install_lib.cpython-312.pyc",
+      "sha256_run_1": "7506577887ce9b29c68e1874207f64b381dcdb1c3dac4503b7bdd4b4c1676a8d",
+      "sha256_run_2": "d3f26c6b6e3608220b7e6e195a528bc77e55a529a4a90a79ad46a180d7068cf2"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\install_scripts.cpython-312.pyc",
+      "sha256_run_1": "eecf7e1cf0d5f0e32d0b608c7b99db973ed02c954ffc98862b1eb3ab9efb3765",
+      "sha256_run_2": "33396674e7c6c35f80b753b8640beb976ba7ba874993c0d0ceac00eb4a413e12"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\rotate.cpython-312.pyc",
+      "sha256_run_1": "ee97f9f909f529ee39a2b1ad05d0f8e644b05a55baf398e43392a654588ec6c7",
+      "sha256_run_2": "8a23a9d3eaec6a8adac329e7f085b7221d534cc7ea0d871dbaa231fffb09aeef"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\saveopts.cpython-312.pyc",
+      "sha256_run_1": "d799e212c98890425470cac596a118a8b66a02601c026de314aa3276e5f66c99",
+      "sha256_run_2": "4a2680873aa39e780734c934cc2b806b9bc8b4d76b53403878e0a500b01b24cc"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\sdist.cpython-312.pyc",
+      "sha256_run_1": "8ff7b38b3c166f9b9ad9ca2f233c562dd488306d1d075360c317d337843cb65b",
+      "sha256_run_2": "563e0a00155fbcc45155d044781e483f940b2da337a1cfaf255f86c41485f6da"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\command\\__pycache__\\setopt.cpython-312.pyc",
+      "sha256_run_1": "cbe1a9c64b0294d7a7ef119b8125bae7ea72a3cf6fc71af7e3624730c106621a",
+      "sha256_run_2": "9e1e56478c333636c40896c354c13409a2a167149651b7f367f2412a5e75fe36"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\compat\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "5c07037934aacb3595b98db4d38ab51adc50c4c9bcd75d1885b9dce78fb948db",
+      "sha256_run_2": "1874ae9eb17fbb21a56156bf24aa81f4651551b83dad1d9042950fc498bda2a3"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\compat\\__pycache__\\py310.cpython-312.pyc",
+      "sha256_run_1": "a5c4c475187800e2c50fa462d28e730b896626b8d75512967851ff8724635753",
+      "sha256_run_2": "fe10cf63b8369286fab1b75f00cc7ad0c6a9cc19a63d2a9e1cc3d0d6806d6bd2"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\compat\\__pycache__\\py311.cpython-312.pyc",
+      "sha256_run_1": "dfc6ab98f053c4310ccd75929c74ba11179dd0e2231530d6ce80c72e2706f853",
+      "sha256_run_2": "b0f8e582f392ff7b6e9ec9d0fba7dc22388e60d3e29588ef5508f4fb549fb7ca"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\compat\\__pycache__\\py312.cpython-312.pyc",
+      "sha256_run_1": "4def0ff2108b712fd0bfa8793d51f39c2e28fd931dddebec69140b4d372b18d6",
+      "sha256_run_2": "09b95993f15befcd1145c2c978b1dbfd0908b666dc22c418d7b260796e386342"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\compat\\__pycache__\\py39.cpython-312.pyc",
+      "sha256_run_1": "9843d4eb7bcfb2cd104241d8c2f63c8c0af5adacff8b886746eb9723aba0d4cf",
+      "sha256_run_2": "9e96a12c6ec12de49cd5e4350d49316fe587fa6f64dac60352dd457e5f847b83"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "64e642e409252bacb1ef45ad046f9c972cb9d3f8a033fc848cb31864b062f1e0",
+      "sha256_run_2": "4e407c226da3a7f359219c4e6915e45b3409d6c734e108bf207cd44b2e89897e"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\__pycache__\\_apply_pyprojecttoml.cpython-312.pyc",
+      "sha256_run_1": "61ef0f0678a246e2aac02b03bada60497c8186f1e84d991d86f576ba2da3bce3",
+      "sha256_run_2": "d88de185c4f0a3575dd674173ea92605c02786b83c0b3c16846b260c6cb755d3"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\__pycache__\\expand.cpython-312.pyc",
+      "sha256_run_1": "946d184a2dbf2ddd11a682fce81b92a7fd1a4ac3adb41b3b6d9ae1e6793addc6",
+      "sha256_run_2": "b8a6e7836d10f0b6c31e82be8744679a3499c5928e727be4510b0125e1186b45"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\__pycache__\\pyprojecttoml.cpython-312.pyc",
+      "sha256_run_1": "2c0f4b2492fc2f36cc0797ff18da084101e1627e90cc2e662654cd4348280c69",
+      "sha256_run_2": "8abe4e698a2d733ea12ddd2fee04703dcc5cb4c8319de094b7f588142a31cefa"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\__pycache__\\setupcfg.cpython-312.pyc",
+      "sha256_run_1": "ecd7f3b9849587e24fa0c8889c1915dc5e6f202b6ec34855cffbe615ca03a7b7",
+      "sha256_run_2": "baee803f99ed0552636af1fdf406de2e3be8e837349ade3dfb56576a71f0d6b0"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "bb6e8f8939562d8ac8c5382b20ce46ef2a84e0f5c64e445f1e7d2f94ccdf4cb7",
+      "sha256_run_2": "41af1d024501766184d8a866d58d8904feb13f2e78c3aa4657e61ab1b465271f"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__pycache__\\error_reporting.cpython-312.pyc",
+      "sha256_run_1": "ce28a6627dea05ace09e823429d4420e00e65fb3237b3b7e9543c6f3ee107c87",
+      "sha256_run_2": "c999c459a5acefc30d0c319fe1e4113615ec107d795f54b0aa916cca116977d1"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__pycache__\\extra_validations.cpython-312.pyc",
+      "sha256_run_1": "3c2aef45108200333396b55325ada74a5fc90197599b738001f3617497e25ddd",
+      "sha256_run_2": "2b4f5b093f2100c92f3356b662af0d596e4d42153bed519d7d977812807f4bd9"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__pycache__\\fastjsonschema_exceptions.cpython-312.pyc",
+      "sha256_run_1": "f6f3072f6b16ba95a5caf49460fd8a795d0ecb3391b5a32c559c2c72211b2c27",
+      "sha256_run_2": "8d8650f1e7b5cd3fe2d9ee2a82f6f879cec5f25500cc96a2929c3e33eb695c03"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__pycache__\\fastjsonschema_validations.cpython-312.pyc",
+      "sha256_run_1": "e203bc0e661655fa60fe3899e259302aa978380ed06b32e0b738de4913e3c11d",
+      "sha256_run_2": "b0c1855c9a5a258f4165aa0d6b55b77fe0bed15002957dbb27eb3ff411a14d4b"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__pycache__\\formats.cpython-312.pyc",
+      "sha256_run_1": "c43594cb8100a24f077d676e9274e93a17530501814ad10c153408e06d67630d",
+      "sha256_run_2": "661b0adad0e0f05f7d4ea338bd0322236a40f0057350592c95eade491d2db419"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\tabulate-0.10.0.dist-info\\RECORD",
+      "sha256_run_1": "6f11a6b90f4f8e162236a8a5e564f3b6795fba76eefaae7fbfb696fe618f11f2",
+      "sha256_run_2": "a5f77ebbc57db1141257feb9e702f1b83af4a76419472eb3a38f72ddf1e1b93e"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\wheel-0.48.0.dist-info\\RECORD",
+      "sha256_run_1": "585ba0c9fd29db054e03e3b43d4392595db28caec75a10b651a29221220770e8",
+      "sha256_run_2": "4b04f85d66b1b90ca9aedac4a1533f752945cf97f34039f4b0b11559d2acfc86"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\wheel\\__pycache__\\__init__.cpython-312.pyc",
+      "sha256_run_1": "54ef5ba1f294df6e6cdfc2daef6816b47e887b9c2a443d780c4a4902579a8f46",
+      "sha256_run_2": "28e6525cb70d96d51ee6adbb40716370c3c785e582f68694ddf0f20bb2095a6b"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Lib\\site-packages\\wheel\\__pycache__\\wheelfile.cpython-312.pyc",
+      "sha256_run_1": "c8eca7501d8e67c8bfba94bca0416229d3fe16153751802f846e1914cd881469",
+      "sha256_run_2": "cbc5808f57fc7c67bdf1ea14528bf1741b92414e8e4cb5aa3abaadc0f00fa647"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\activate",
+      "sha256_run_1": "5fe9ce7eb768a17ce3ea60ed4df52173662a42c98749617a765d131e1647ec31",
+      "sha256_run_2": "a4abdb4b0820a1623a405da6fa3d212f581916b631e15d1fb719cd605bec17bd"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\activate.bat",
+      "sha256_run_1": "4ade46ce0c8253a78c54a4492b1f3828827e46b0a3d9b37f028f3cc1d8e3b74b",
+      "sha256_run_2": "c7260fb40eb38c9f7334739b610af739a6f374905e5c02ec03af3dfc1946ac37"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\activate.csh",
+      "sha256_run_1": "07398e4a66dce8245e0cc076e90a9203620914ce0b019265784f95c93916d076",
+      "sha256_run_2": "19c7e7680dd9be19e9ebed99f203955716f9986edeac7c5f0d254b932b6bb01c"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\activate.fish",
+      "sha256_run_1": "f9ee24bebc100a86cf41de6d6d67a879c4b73aa0bf0042961a5e198b7861a134",
+      "sha256_run_2": "231997347283c9711058316ba77f2e17dd4bd7c39fed2ced51f2cf2b4748bd65"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\activate.nu",
+      "sha256_run_1": "bc59fae79e2cd9006cf8f60c9925b0366262b353f4300b8985112697af59e6f8",
+      "sha256_run_2": "42014da7f424e2c733edb34d75c0513cbb0c7ea8ec7506037e3570d2b4e6b620"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\f2py.exe",
+      "sha256_run_1": "609ae33d771cd9eed38e4998fb464da6f6e2f35c3edbd5584a4c97a8419be3d2",
+      "sha256_run_2": "0d56770b7bff13fe6a6873cf6a39c8f9e660c7335f3d4dfd818dd8446af35f99"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\fonttools.exe",
+      "sha256_run_1": "dccbeb6495a8e6fb4fe65d2cedf0a242fed6d90d5b6e6afc8e06bedd17853d06",
+      "sha256_run_2": "80886c204615bd37d5908fbb4452f0db055465051d30b8b62029a0161a48f19f"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\numpy-config.exe",
+      "sha256_run_1": "c5b9a7621fd9cb2b52fd1af133649e60613f71e2c1afa1004365085b54ccc469",
+      "sha256_run_2": "9561b6a7a0737af1ffce7e1d4dab9f9bdfdc23274e8c914e9194699717c7bd70"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\pyftmerge.exe",
+      "sha256_run_1": "970d0390c1e4f7d0619f24c451b47ca47456687111a93552d670ea6cf18da0a3",
+      "sha256_run_2": "8b2e76e050812c4be52dd02990d226303ed48821c7518a10dda1d14c51d09d3b"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\pyftsubset.exe",
+      "sha256_run_1": "125ec83cd70a890a681ce72aaaa27668a11559de03060358d98d54e810ada42b",
+      "sha256_run_2": "bd58f553210acb69fb860f1b55e73f6c52ccb030b7ab5e5116e95dac69e6af85"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\tabulate.exe",
+      "sha256_run_1": "712ad475dd6670ae2170343265c4f49c9e2d9b96d435c2e8334c074560bdb81a",
+      "sha256_run_2": "218ef8f5940fa7870d321c261e47b2000ba0e3ca4fa5582611417c3140772c39"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\ttx.exe",
+      "sha256_run_1": "796f2e0e539b3c8d772e71f74af34d33fa5964e73efba71b7a8d26b1d1530bf7",
+      "sha256_run_2": "aace04c2cc279fea08834b45215e8c65744dfeebc215ea197f63df2500cc3702"
+    },
+    {
+      "role": "isolated_environment",
+      "logical_path": "Scripts\\wheel.exe",
+      "sha256_run_1": "2323c870fd691dce15f6d53b2858da66b7e20cef272866bc8129eac0562c058f",
+      "sha256_run_2": "05caaea6141ca499972a4030f0322c6b82e33829224336017a8e74669c193baf"
+    }
+  ],
+  "python_visible_input_coverage_ok": true,
+  "scope": "One README ANOVA example, same Windows/Python platform, independent clones and virtual environments; not an operating-system-level I/O audit or a scientific study replication."
+}

@@ -1,0 +1,3 @@
+Using CPython 3.12.10 interpreter at: C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python.exe
+Creating virtual environment at: C:\Users\lenovo\harness-verification-20261110\run-1\env
+Activate with: C:\Users\lenovo\harness-verification-20261110\run-1\env\Scripts\activate
