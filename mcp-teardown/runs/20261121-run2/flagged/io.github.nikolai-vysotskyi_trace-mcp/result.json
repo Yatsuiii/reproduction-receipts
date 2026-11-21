@@ -1,0 +1,415 @@
+{
+  "counts": {
+    "all_handshakes_ok": true,
+    "group_trials": 10,
+    "group_with_residue": 5,
+    "pid_trials": 10,
+    "pid_with_residue": 5
+  },
+  "install": {
+    "argv": [
+      "/opt/node22/bin/node",
+      "/var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js"
+    ],
+    "artefact": {
+      "bin": "trace-mcp",
+      "integrity": "sha512-yiFdNxK2iamX6rGs0IbzoCcij4srpM/JYc6dq+IhLuJyi6rzfU+GkNyV1RMU9QSG6riauZgr/soXeJdg1znttA==",
+      "registry": "npm",
+      "resolved": "https://registry.npmjs.org/trace-mcp/-/trace-mcp-3.44.4.tgz",
+      "resolved_version": "3.44.4",
+      "spec": "trace-mcp@3.44.4"
+    },
+    "ok": true,
+    "reason": ""
+  },
+  "started_at": "2026-11-21T11:16:31Z",
+  "target": {
+    "default_env": {},
+    "identifier": "trace-mcp",
+    "name": "io.github.nikolai-vysotskyi/trace-mcp",
+    "package_args": [],
+    "package_version": "3.44.4",
+    "registry_snapshot_sha256": "e27815345a70935e9f77a3874faf6642c6fab5f01e1ab3cc0b11d97e95febc39",
+    "registry_type": "npm",
+    "repo": "nikolai-vysotskyi/trace-mcp",
+    "required_env": [],
+    "subfolder": null,
+    "updated_at": "2026-11-19T10:07:57.976948Z",
+    "version": "3.44.4"
+  },
+  "trials": [
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 16951,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-5070fbbb7991410a",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-54e9be6517864a4c",
+      "teardown_return_s": 0.07,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 17111,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-52c1b4f44ee944cd",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-0dcfd7f276ce4f4d",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 17272,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-e6ba8107e5934fb1",
+      "teardown_return_s": 0.069,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-fcf4fb1c096d4abf",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 17460,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-00a78702d8c84d10",
+      "teardown_return_s": 0.032,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-3ca8d4ff658d455f",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 17594,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-35505b6556cd4d63",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-cf21b42134f14b16",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 17749,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-659bc90a352a4cae",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-0fcf177d2ba949b4",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 17911,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-5823294e091e49ae",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-1ce1f527072a42e1",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 18058,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-3d5ac835c3cd46c5",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-730e9a4b44d54ea2",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 18224,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-0ed8ec52a4ab45e7",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4cef22c2fb194cf8",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 18361,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-7232806990a84213",
+      "teardown_return_s": 0.032,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-d4516a33bd6148f3",
+      "teardown_return_s": 0.064,
+      "tool_count": 29
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.nikolai-vysotskyi_trace-mcp-bd6894/pkg/node_modules/trace-mcp/dist/cli.js serve-http --port 3741",
+          "pid": 18497,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "trace",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-2ea1302c9d5c4b5a",
+      "teardown_return_s": 0.164,
+      "tool_count": 29
+    }
+  ],
+  "verdict": "UNCONFIRMED",
+  "wall_clock_s": 158.4
+}

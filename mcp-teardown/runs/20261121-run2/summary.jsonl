@@ -1,0 +1,1000 @@
+{"name": "io.github.opensemanticagent/opensemanticagent", "repo": "opensemanticagent/opensemanticagent", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.firenook-dev/firenook", "repo": "firenook-dev/firenook", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.kajisho5/ffmpeg-skill", "repo": "kajisho5/ffmpeg-skill", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 6.9}
+{"name": "io.github.Nutshell2000/agent-data-tools", "repo": "Nutshell2000/agent-data-tools", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32000, 'message': 'could not reach the server: EAI_AGAIN'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.6}
+{"name": "io.github.pvliesdonk/scholar-mcp", "repo": "pvliesdonk/scholar-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result (14 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.5}
+{"name": "io.github.kitfunso/hippo-memory", "repo": "kitfunso/hippo-memory", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.4}
+{"name": "io.github.rezmeplxrf/insightsentry_mcp", "repo": "rezmeplxrf/insight_mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.7}
+{"name": "sh.agentdrive/agentdrive", "repo": "agentdrive-sh/agentdrive-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.isokron-ai/mcp-check", "repo": "isokron-ai/mcp-check", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.razzant/claudexor", "repo": "razzant/claudexor", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 15.1}
+{"name": "io.github.HamedShams/whenship", "repo": "HamedShams/whenship", "verdict": "DEAD", "reason": "handshake failed: no initialize result (4 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 38.5}
+{"name": "io.github.c0decave/axross-headless-mcp", "repo": "c0decave/axross-headless-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.benethos-hub/benethos-yahoo-finance-mcp", "repo": "benethos-hub/yahoo-finance-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.7}
+{"name": "io.github.alexar76/argus3", "repo": "alexar76/argus", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 23.1}
+{"name": "io.github.johannesPettersson80/codesys-mcp-toolkit", "repo": "johannesPettersson80/codesys-mcp-toolkit", "verdict": "DEAD", "reason": "npm install failed", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.8}
+{"name": "io.github.andrewbartels1/solidworks-mcp-python", "repo": "andrewbartels1/SolidworksMCP-python", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.2}
+{"name": "org.polarka/polarka-agent", "repo": "Polarka-monitor/polarka-agent", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.benethos-hub/benethos-lexware-office-mcp", "repo": "benethos-hub/lexware-office-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.Craig-Horton/aibvf-mcp", "repo": "Craig-Horton/ai-bvf", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.wyverselabs/shotomatic", "repo": "wyverselabs/shotomatic-cli", "verdict": "DEAD", "reason": "npm install failed", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.4}
+{"name": "io.github.riceharvest/ctxprune", "repo": "riceharvest/ctxprune", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.4}
+{"name": "io.github.hjma29/proliant-mcp", "repo": "hjma29/proliant-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.zhuyansen/backlink-guard", "repo": "zhuyansen/backlink-guard", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.argon-lab/argon", "repo": "argon-lab/argon", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.kitepon/aiterm-mcp", "repo": "kitepon/aiterm-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.sunglasses-dev/sunglasses", "repo": "sunglasses-dev/sunglasses", "verdict": "DEAD", "reason": "handshake failed: no initialize result (32 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.alexar76/warden", "repo": "alexar76/warden", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.systasys/skeptopus", "repo": "systasys/skeptopus", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.vvapnik/takesix", "repo": "vvapnik/takesix-agent", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.cdaily1995-create/seven-deadly-sins-mcp", "repo": "cdaily1995-create/seven-deadly-sins-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.TsukimioRinka/agg-search", "repo": "TsukimioRinka/agg-search", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.vpndetection/mcp", "repo": "vpndetection-io/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.6}
+{"name": "com.bykaranteli/mcp", "repo": "bykarantelicom/bykaranteli-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.Aricept094/negaresh", "repo": "Aricept094/negaresh", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.shibbirweb/sendmock", "repo": "shibbirweb/sendmock", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.4}
+{"name": "io.github.MaksimGalatin/padam-nocturne", "repo": "MaksimGalatin/padam-nocturne", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.Aureliolo/gdharness", "repo": "Aureliolo/gdharness", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32022, 'message': 'Unsupported protocol version: 2025-06-18', 'data': {'supported': ['2026-07-28'], 'requested': '2025-06-18'}}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.Denpex/denpex-mcp", "repo": "Denpex/denpex-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.internetdata/mcp", "repo": "internetdata/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.TonytheTiger22/payperscreen", "repo": "TonytheTiger22/payperscreen", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 15.0}
+{"name": "com.cleanedweb/catalog", "repo": "cleanedweb/cleanedweb-mcp", "verdict": "DEAD", "reason": "handshake failed: no tools/list result", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.AnthonyPuggs/ausecon-mcp-server", "repo": "AnthonyPuggs/ausecon-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.6}
+{"name": "io.github.AI-Driftline/driftline", "repo": "AI-Driftline/driftline", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.csitte/mailwarden", "repo": "csitte/mailwarden", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.5}
+{"name": "io.github.i-ops-hq/assurance-mcp", "repo": "i-ops-hq/assurance", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.INTENTIUS/behold", "repo": "INTENTIUS/behold", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 17.4}
+{"name": "io.github.learn-automated-testing/selenium-ai-agent", "repo": "learn-automated-testing/selenium_agent", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.5}
+{"name": "cloud.dchub/mcp-server", "repo": "azmartone67/dchub-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.9}
+{"name": "io.github.jeremdecustovox/custovox-visual", "repo": "jeremdecustovox/custovox-ai", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 39.9}
+{"name": "io.github.goklab/guardvibe", "repo": "goklab/guardvibe", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.2}
+{"name": "io.github.code2nguyen/c2n", "repo": "code2nguyen/web-components", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.2}
+{"name": "ai.trustysquire/trusty-squire", "repo": "Trusty-Squire/trusty-squire", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 15.0}
+{"name": "io.github.chrisgleissner/c64bridge", "repo": "chrisgleissner/c64bridge", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 14.2}
+{"name": "io.github.Ashutos1997/ffmpeg-mcp-server", "repo": "Ashutos1997/ffmpeg-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.gangfun/gang", "repo": "gangfun/cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.8}
+{"name": "to.agentescrow/mark", "repo": "yuvlero/mark", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.6}
+{"name": "io.github.seleniumbase/seleniumbase", "repo": "seleniumbase/SeleniumBase", "verdict": "DEAD", "reason": "uv install failed (wheels only)", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.3}
+{"name": "io.github.mallikcheripally/session-steward", "repo": "mallikcheripally/session-steward", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.6}
+{"name": "io.github.vikasny30/aletheia-aegis", "repo": "vikasny30/aletheia-aegis", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.samuelrojas-dev/depquiet", "repo": "samuelrojas-dev/depquiet", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.hermoso-ai/hermoso", "repo": "hermoso-ai/hermoso", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.letoribo/mcp-graphql-enhanced", "repo": "letoribo/mcp-graphql-enhanced", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.9}
+{"name": "com.keylineicons/mcp", "repo": "keyline-icons/keyline-icons", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "ai.rightcard/mcp", "repo": "rightcard/rightcard-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.chrisryugj/kordoc", "repo": "chrisryugj/kordoc", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.6}
+{"name": "io.github.dleon55/ai-sdlc-prompts", "repo": "dleon55/ai-sdlc-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.Damien829/aipaygen", "repo": "Damien829/aipaygen", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'Could not reach https://mcp.aipaygen.com/mcp: fetch failed'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.sblattj/oss-search", "repo": "sblattj/oss-search", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.open-winmale/wmshare", "repo": "open-winmale/wmshare", "verdict": "DEAD", "reason": "handshake failed: no initialize result (21 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.9}
+{"name": "io.github.kensaurus/lazycow", "repo": "kensaurus/lazycow-studio", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.IOServicesLabs/indexio", "repo": "IOServicesLabs/indexio", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.Sahil170595/chimeraforge", "repo": "Sahil170595/Chimeraforge", "verdict": "DEAD", "reason": "handshake failed: no initialize result (1 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.8}
+{"name": "io.github.WendellResearch-AI/benchwarmers", "repo": "WendellResearch-AI/benchwarmers", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 3, "wall_clock_s": 7.1}
+{"name": "io.github.Voidborn-Industries/mindupload", "repo": "Voidborn-Industries/mindupload-sdk-python", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "com.ruyuejian/ruyuejian-jobs-mcp", "repo": "aaron20032/ruyuejian-jobs-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.xultrax-web/dogpolicies-mcp", "repo": "xultrax-web/dogpolicies-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.allxsmith/bestax-mcp", "repo": "allxsmith/bestax", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.7}
+{"name": "io.github.paironce/cli", "repo": "paironce/cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.sr-dash/heliofleet-mcp", "repo": "sr-dash/heliofleet-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.MikeyPetrillo/agent402", "repo": "MikeyPetrillo/Agent402", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 18.4}
+{"name": "io.github.embeddedci-com/embeddedci-mcp", "repo": "embeddedci-com/embeddedci-python", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "ai.testiv/mcp", "repo": "testivai/testivai-oss", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.4}
+{"name": "io.github.vishalsachdev/canvas-mcp", "repo": "vishalsachdev/canvas-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.8}
+{"name": "io.github.CloudCorpRecords/sitedossier", "repo": "CloudCorpRecords/sitedossier", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.rcgiri-physics/physverify", "repo": "rcgiri-physics/physverify", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.First-CH/tools-mcp", "repo": "First-CH/firstch-tools-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.3}
+{"name": "io.github.pinguxx/elementum", "repo": "pinguxx/Elementum", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "com.onadit/onadit", "repo": "clementrog/onadit", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 14.2}
+{"name": "io.github.gregsonworks/gregsonworks", "repo": "gregsonworks/gregsonworks-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.9}
+{"name": "io.github.goldmarklabs/crispparse-mcp", "repo": "goldmarklabs/crispparse-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.Hutusion/dsh-cua", "repo": "Hutusion/dsh-cua", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.6}
+{"name": "io.github.majinju/mqtt-mcp", "repo": "majinju/mqtt-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.3}
+{"name": "io.github.jgravelle/jcodemunch-mcp", "repo": "jgravelle/jcodemunch-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "finance.orla/orla", "repo": "cheetah-trade/orla-cli", "verdict": "DEAD", "reason": "handshake failed: no tools/list result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.afnannuzulasugihartono/navego", "repo": "afnannuzulasugihartono/navego", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.ruvnet/ruflo", "repo": "ruvnet/ruflo", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 36.1}
+{"name": "io.github.mgantlett/nomos", "repo": "mgantlett/nomos", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.navid72m/mcp-behave", "repo": "navid72m/mcp-behave", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.4}
+{"name": "eu.quantumreadiness/qrp-mcp", "repo": "StanimirTenev/qrp-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.aarwitz/tapp", "repo": "aarwitz/tapp", "verdict": "DEAD", "reason": "handshake failed: no initialize result (56 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.3}
+{"name": "io.github.ChanMeng666/archlang-mcp", "repo": "ChanMeng666/archlang", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "io.github.DeepAgentLabs/deep-agentic-core-mcp", "repo": "DeepAgentLabs/mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.drjerryrelth/ghl-command", "repo": "drjerryrelth/ghl-command-feedback", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.Tracetoon/tracetoon", "repo": "Tracetoon/tracetoon", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 8.2}
+{"name": "io.github.stefanoshea/rlm-tools", "repo": "stefanoshea/rlm-tools", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.7}
+{"name": "io.github.cyanheads/brapi-mcp-server", "repo": "cyanheads/brapi-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.8}
+{"name": "io.github.Nain9Dev/nain-mcp-validator", "repo": "Nain9Dev/nain-mcp-validator", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.cyanheads/attack-surface-mcp-server", "repo": "cyanheads/attack-surface-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.1}
+{"name": "io.github.moncef00327-cloud/quantum-aether", "repo": "moncef00327-cloud/quantum-aether", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.6}
+{"name": "io.github.lkopietz3-byte/honesty-mcp", "repo": "lkopietz3-byte/honesty-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.5}
+{"name": "io.github.GehDoc/svg-to-video", "repo": "GehDoc/svg-to-video", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 13.5}
+{"name": "cn.mackorn/mackorn-cone-crusher", "repo": "LeifDai/MACKORN-hydraulic-cone-crusher", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "com.usebrainchain/brainchain", "repo": "usebrainchain/brainchain-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.8}
+{"name": "io.github.stoneskin/open-memex", "repo": "stoneskin/open-memex", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.vmware-skills/vmware-debug", "repo": "vmware-skills/VMware-Debug", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "com.readfetch/mcp-x402-proxy", "repo": "readfetch/mcp-x402-proxy", "verdict": "DEAD", "reason": "handshake failed: no tools/list result", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.8}
+{"name": "io.github.keshrath/agent-tasks", "repo": "keshrath/agent-tasks", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.6}
+{"name": "io.github.AKzar1el/god-prompt-mcp", "repo": "AKzar1el/god-prompt-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.5}
+{"name": "io.github.keshrath/agent-knowledge", "repo": "keshrath/agent-knowledge", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.1}
+{"name": "io.github.mypeerlink/peerlink-mcp", "repo": "mypeerlink/peerlink", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.labyrinth-analytics/loredocs", "repo": "labyrinth-analytics/loredocs", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.aartiq/nowaikit", "repo": "aartiq/servicenow-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.6}
+{"name": "io.github.flisk-sh/flisk", "repo": "flisk-sh/flisk", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.2}
+{"name": "io.github.elisymlabs/elisym", "repo": "elisymlabs/elisym", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.9}
+{"name": "io.github.Artexis10/exomem", "repo": "Artexis10/exomem", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 16.1}
+{"name": "io.github.GoatInAHat/toolfactory", "repo": "GoatInAHat/toolfactory", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.8}
+{"name": "io.github.oaslananka/ssh-mcp-pro", "repo": "oaslananka/ssh-mcp-pro", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.6}
+{"name": "io.github.THORCollective/hearth", "repo": "THORCollective/HEARTH", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.8enSmith/mcp-open-library", "repo": "8enSmith/mcp-open-library", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.oaslananka/kicad-mcp-pro", "repo": "oaslananka/kicad-mcp-pro", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.0}
+{"name": "io.github.Godcreatebugs/raytrace", "repo": "Godcreatebugs/raytrace-cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.keshrath/agent-discover", "repo": "keshrath/agent-discover", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 30.3}
+{"name": "io.github.udaysinh-git/tether", "repo": "udaysinh-git/tether", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32000, 'message': 'Could not start the Tether host. Run `tether serve` to see why.'}", "counts": null, "live_before_shutdown": 2, "wall_clock_s": 15.1}
+{"name": "io.github.gdhub-io/character-forge-mcp", "repo": "gdhub-io/character-forge-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "com.ascent-partners/startup-valuation", "repo": "simonmak-ascent/startup-valuation", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.Keremturker/cmpose", "repo": "whinstudio/cmpose", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.reliant-labs/forge", "repo": "reliant-labs/forge", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.8}
+{"name": "io.github.calasdan-sketch/monomem", "repo": "calasdan-sketch/monomem", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.Akkiruk/craftos-mcp", "repo": "Akkiruk/craftos-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.kaiser-data/kitsune-mcp", "repo": "kaiser-data/kitsune-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.4}
+{"name": "io.github.hridaya423/phonedriver", "repo": "hridaya423/phonedriver", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.4}
+{"name": "io.github.joepenmandev/arcsight", "repo": "joepenmandev/arcsight-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 9.1}
+{"name": "io.github.hessbey/parfumo-mcp", "repo": "hessbey/parfumo-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.2}
+{"name": "io.github.KittyCAD/zoo-mcp", "repo": "KittyCAD/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.5}
+{"name": "io.github.Shicodiez/crypto-regime-mcp", "repo": "Shicodiez/crypto-regime-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 16.3}
+{"name": "io.github.cyanheads/osv-advisory-mcp-server", "repo": "cyanheads/osv-advisory-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.5}
+{"name": "io.github.cyanheads/faostat-mcp-server", "repo": "cyanheads/faostat-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.4}
+{"name": "io.github.omnigami-ai/mcp", "repo": "omnigami-ai/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "io.github.cyanheads/pharmacogenomics-guidelines-mcp-server", "repo": "cyanheads/pharmacogenomics-guidelines-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.3}
+{"name": "io.github.cyanheads/nonprofit-explorer-mcp-server", "repo": "cyanheads/nonprofit-explorer-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.2}
+{"name": "io.github.bvisible/mcp-ssh-manager", "repo": "bvisible/mcp-ssh-manager", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.7}
+{"name": "io.github.reticlehq/reticle", "repo": "reticlehq/reticle", "verdict": "UNCONFIRMED", "reason": null, "counts": {"pid_trials": 10, "pid_with_residue": 8, "group_trials": 10, "group_with_residue": 8, "all_handshakes_ok": true}, "live_before_shutdown": 2, "wall_clock_s": 149.0}
+{"name": "io.github.gAI-ventures/pilotfish", "repo": "gAI-ventures/pilotfish-ai", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.7}
+{"name": "dev.paidfor/paidfor", "repo": "sarmadahsan/paidfor-index", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 20.0}
+{"name": "io.github.botzrDev/dreamd", "repo": "botzrDev/dreamd", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.verbaly-i18n/verbaly", "repo": "verbaly-i18n/verbaly", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.1}
+{"name": "io.github.riponcm/projectmem", "repo": "riponcm/projectmem", "verdict": "DEAD", "reason": "handshake failed: no initialize result (49 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.2}
+{"name": "com.porkbun/mcp", "repo": "oborseth/Porkbun-MCP", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 18.1}
+{"name": "io.github.cyanheads/coingecko-mcp-server", "repo": "cyanheads/coingecko-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.4}
+{"name": "io.github.cyanheads/sports-mcp-server", "repo": "cyanheads/sports-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.0}
+{"name": "io.github.varity-labs/varity-mcp", "repo": "varity-labs/varity-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 15.2}
+{"name": "io.github.cyanheads/anime-mcp-server", "repo": "cyanheads/anime-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.2}
+{"name": "io.github.BSVanon/petasats-mcp", "repo": "BSVanon/petasats-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.lorenzo-cambiaghi/lynx", "repo": "lorenzo-cambiaghi/LynxMCP", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.0}
+{"name": "io.github.inzention-team/indie-metrics-mcp", "repo": "inzention-team/indie-metrics-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.lintsure/lintsure", "repo": "lintsure/lintsure", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.4}
+{"name": "io.github.RohanMuppa/brightspace", "repo": "RohanMuppa/brightspace-mcp-server", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'Could not reach the shared Brightspace runtime: connect ENETUNREACH 127.0.0.1:44237 - Local (0.0.0.0:0)'}", "counts": null, "live_before_shutdown": 3, "wall_clock_s": 13.3}
+{"name": "io.github.swaphunt/swaphunt-mcp", "repo": "swaphunt/x402-examples", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.9}
+{"name": "io.github.chowdhurylab-studio/ipro-agent", "repo": "chowdhurylab-studio/ipro-agent", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.3}
+{"name": "io.github.coderneme/neme-world", "repo": "coderneme/neme-cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "com.ferscloud/fers", "repo": "Jeroen124/FERS_core", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.0}
+{"name": "io.github.roomi-fields/osc-bridge", "repo": "roomi-fields/osc-bridge", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.8}
+{"name": "io.github.Khoshkhah/roadstyle", "repo": "Khoshkhah/roadstyle", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.9}
+{"name": "io.github.laurent512/opencalque", "repo": "laurent512/opencalque", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.dropbg/dropbg-mcp", "repo": "dropbg/dropbg-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.4}
+{"name": "io.github.leocelis/stele", "repo": "leocelis/stele", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.0}
+{"name": "io.github.matinfo-tech/markdown-pdf-export", "repo": "matinfo-tech/markdown-pdf-export", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.9}
+{"name": "io.github.Halo-design-system/halo-ds", "repo": "Halo-design-system/Halo-design-system", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.dreamworkhq/dreamwork", "repo": "dreamworkhq/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "com.alertviz/eurokyb-mcp", "repo": "clime-alertviz/eurokyb-mcp", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32000, 'message': 'fetch failed'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.XGamesFun/solana-kit", "repo": "XGamesFun/solana-kit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.Brandcode-Studio/brandsystem-mcp", "repo": "Brandcode-Studio/brandsystem-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.9}
+{"name": "dev.edgegap/mcp", "repo": "edgegap/llm-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.markusweldon/cverdict", "repo": "markusweldon/cverdict", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.kimen-dev/kimen", "repo": "kimen-dev/kimen", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.synchronicity-labs/mcp-server", "repo": "synchronicity-labs/mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.6}
+{"name": "ai.orangepro/mcp", "repo": "OrangeproAI/orangepro-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 10.5}
+{"name": "io.github.andrey-usa/navigera", "repo": "andrey-usa/navigera", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.3}
+{"name": "io.github.ffroliva/gflow-cli", "repo": "ffroliva/gflow-cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.1}
+{"name": "io.github.ryanduguid/aus-accounting", "repo": "ryanduguid/australian-accounting", "verdict": "DEAD", "reason": "uv install failed (wheels only)", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.2}
+{"name": "io.github.devlensio/devlens", "repo": "devlensio/devlensOSS", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 12.8}
+{"name": "io.github.orcalayer/orcalayer-mcp", "repo": "orcalayer/orcalayer-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.imperalcloud/imperal-mcp", "repo": "imperalcloud/imperal-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.sriinnu/tokmeter", "repo": "sriinnu/tokmeter", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.2}
+{"name": "io.github.event4u-app/agent-config", "repo": "event4u-app/agent-config", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.0}
+{"name": "io.github.flagrix-io/flagrix", "repo": "flagrix-io/flagrix-cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "com.dankmachine/dank-meme-sounds", "repo": "HalberdLLC/dank-meme-sounds", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.patchloom/patchloom", "repo": "patchloom/patchloom", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.3}
+{"name": "io.github.costajohnt/oss-autopilot", "repo": "costajohnt/oss-autopilot", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.fitzss/valun", "repo": "fitzss/valun-open", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.foundrole/jobs-mcp-proxy", "repo": "foundrole/jobs-mcp-proxy", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.9}
+{"name": "io.github.atomsai/pyai", "repo": "atomsai/pyai-platform-backend", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.7}
+{"name": "io.github.swarmrelay/openagentforum", "repo": "swarmrelay/openagentforum", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['openagentforum-mcp', 'swarmrelay-mcp']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 4.0}
+{"name": "io.github.snayyar00/webability", "repo": "snayyar00/webability-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.4}
+{"name": "io.github.fluxmailai/fluxmail", "repo": "fluxmailai/fluxmail", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 20.5}
+{"name": "io.github.cygnixlabs-cmd/cygnix-seo-mcp", "repo": "cygnixlabs-cmd/cygnix-seo-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.1}
+{"name": "io.github.mmoonport-labs/unifi-mcp", "repo": "mmoonport-labs/unifi-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.5}
+{"name": "io.github.krishnaGauss/geo-shield", "repo": "krishnaGauss/MCP_WebSafe", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.sickn33/tidal-mcp", "repo": "sickn33/tidal-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.8}
+{"name": "com.coppica/persuasion-taxonomy", "repo": "Otha-Labs/persuasion-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.Ostico/bruno-mcp-studio", "repo": "Ostico/bruno-mcp-studio", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.9}
+{"name": "io.github.Kentucky-ai/opentakeoff", "repo": "Kentucky-ai/opentakeoff", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.0}
+{"name": "io.github.maxtechera/hushdrop", "repo": "maxtechera/hushdrop", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.anulum/synapse-channel", "repo": "anulum/synapse-channel", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.4}
+{"name": "io.github.NeelGhoshal/paper-librarian", "repo": "NeelGhoshal/MCP", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.5}
+{"name": "io.github.yourbit-network/notibuddy", "repo": "yourbit-network/notibuddy", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.9}
+{"name": "com.slickfast/mcp", "repo": "SlickFast/slickfast", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.Softeria/ms-365-mcp-server", "repo": "Softeria/ms-365-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.2}
+{"name": "io.github.qualixar/superlocalmemory", "repo": "qualixar/superlocalmemory", "verdict": "RESIDUE_BOTH_ARMS", "reason": null, "counts": {"pid_trials": 10, "pid_with_residue": 10, "group_trials": 10, "group_with_residue": 10, "all_handshakes_ok": true}, "live_before_shutdown": 2, "wall_clock_s": 166.9}
+{"name": "io.github.D4umak/heylead", "repo": "D4umak/linkedin-outreach-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.speedyapply/jobspy", "repo": "speedyapply/JobSpy", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.pkolawa/parliament-poland-mcp-server", "repo": "pkolawa/parliament-poland-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.5}
+{"name": "io.github.williamdoring-prog/ai-host-optimizer", "repo": "williamdoring-prog/ai-host-optimizer", "verdict": "DEAD", "reason": "handshake failed: no initialize result (234 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.2}
+{"name": "io.github.verfy-dev/verfy", "repo": "verfy-dev/verfy", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.mcontrerasmalpar-pixel/text-barrier-mcp", "repo": "mcontrerasmalpar-pixel/text-barrier-detector", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.bytebase/dbhub", "repo": "bytebase/dbhub", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 14.6}
+{"name": "io.github.SylphxAI/anymd", "repo": "SylphxAI/anymd", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.2}
+{"name": "io.github.labyrinth-analytics/loreconvo", "repo": "labyrinth-analytics/loreconvo", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.akshayyswami/postgres-schema-mcp", "repo": "akshayyswami/postgres-schema-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.spirolo/spirolo", "repo": "spirolo/spirolo", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 6.8}
+{"name": "io.github.vaneui/mcp", "repo": "vaneui/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.nubo-db/dynoxide", "repo": "nubo-db/dynoxide", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.2}
+{"name": "io.github.ufhouck/aicost-cli", "repo": "ufhouck/aicost", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.BargLabs/dunstan", "repo": "BargLabs/dunstan", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.turbyho/kicad-workbench", "repo": "turbyho/kicad-workbench", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.chrischall/schoolpass-mcp", "repo": "chrischall/schoolpass-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.MiiKiyoshi/tex-mcp-web", "repo": "MiiKiyoshi/tex-mcp-web", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.sipyourdrink-ltd/bernstein", "repo": "sipyourdrink-ltd/bernstein", "verdict": "DEAD", "reason": "handshake failed: no initialize result (10 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 37.6}
+{"name": "io.github.gambrelcolby63/helm-mcp", "repo": "gambrelcolby63/helmswap-sdk", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.moskrc/serbia-prices-mcp", "repo": "moskrc/serbia-prices-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.6}
+{"name": "io.github.pkolawa/krs-poland-mcp-server", "repo": "pkolawa/krs-poland-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.SemanticDataCharter/sdcreader", "repo": "SemanticDataCharter/sdcreader", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.4}
+{"name": "io.github.Lykhoyda/ask-llm", "repo": "Lykhoyda/ask-llm", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.7}
+{"name": "io.github.SemanticDataCharter/sdc-mapper", "repo": "SemanticDataCharter/sdc-mapper", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.5}
+{"name": "com.fulcradynamics/context", "repo": "fulcradynamics/fulcra-context-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.3}
+{"name": "io.github.hrpering/vira", "repo": "hrpering/tryvira", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.5}
+{"name": "io.github.egor-fedorov/telegram-mcp", "repo": "egor-fedorov/telegram-mcp", "verdict": "DEAD", "reason": "uv install failed (wheels only)", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.3}
+{"name": "io.github.base-buzz/preflight", "repo": "base-buzz/paystage", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.3}
+{"name": "io.github.stafordtituss/amep-verifier", "repo": "stafordtituss/amep", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.rctruta/ashby-location-filter", "repo": "rctruta/ashby-location-filter", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.YXZYSME/mimikyu", "repo": "YXZYSME/mimikyu", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.Datura-ai/lium", "repo": "Datura-ai/lium", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.6}
+{"name": "io.github.munhq/codeindex", "repo": "munhq/codeindex", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.tronrental-com/tronrental", "repo": "tronrentalcom/tronrental-com-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.OptimNow/cloud-finops", "repo": "OptimNow/cloud-finops-skills", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.guhttps/veu", "repo": "guhttps/veu", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.google/three-live", "repo": "google/three-live", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.stophydotdev/mcp", "repo": "stophydotdev/stophy", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.6}
+{"name": "io.github.akshaysharma1088/pipeverify", "repo": "akshaysharma1088/pipeverify", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.akshaysharma1088/dataranger", "repo": "akshaysharma1088/dataranger", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.3121n/kartverket-mcp", "repo": "3121n/nor-data-kartverket-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.6}
+{"name": "io.github.GridlineGPU/mcp", "repo": "GridlineGPU/gridline-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.AmrDab/clawdcursor", "repo": "AmrDab/clawdcursor", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 13.8}
+{"name": "io.github.eren23/attocode-code-intel", "repo": "eren23/attocode", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.turbyho/fw-context-mcp", "repo": "turbyho/fw-context-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.oaslananka/easyeda-mcp-pro", "repo": "oaslananka/easyeda-mcp-pro", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 17.9}
+{"name": "io.github.TheVilfer/better-tg-cli", "repo": "TheVilfer/better-tg-cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "ai.pidgeon/mcp", "repo": "pidgeon-ai/pidgeon-js", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.agentsearchhq-coder/agentsearch-mcp", "repo": "agentsearchhq-coder/agentsearch-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 15.7}
+{"name": "io.github.sgInnora/noracu", "repo": "sgInnora/noracu", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.alex2loop/openalpha", "repo": "alex2loop/openalpha", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.zhiyuanvision-lang/inkmap-markdown-mindmap-markmap", "repo": "zhiyuanvision-lang/InkMap", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "com.regiabi/chart-mcp", "repo": "codexguy/regiabi-plugins", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.2}
+{"name": "io.github.googlarz/proton-drive-mcp", "repo": "googlarz/proton-drive-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.formfeed-dev/formfeed", "repo": "formfeed-dev/formfeed", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.1}
+{"name": "org.allunits/allunits-mcp", "repo": "tusimply/allunits-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "ai.chronary/mcp", "repo": "Chronary/chronary-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.9}
+{"name": "io.github.Presencis-com/regulatory-mcp", "repo": "Presencis-com/regulatory-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.carlwr/zshref-mcp", "repo": "carlwr/zsh-lexicon", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.6}
+{"name": "io.github.devlint/gitwand", "repo": "devlint/GitWand", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.4}
+{"name": "io.github.L00PLeGeNd/witnis", "repo": "L00PLeGeNd/Witnis", "verdict": "DEAD", "reason": "handshake failed: no initialize result (86 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.2}
+{"name": "io.github.rkocosmergon/cosmergon", "repo": "rkocosmergon/cosmergon-agent", "verdict": "DEAD", "reason": "handshake failed: no initialize result (22 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.9}
+{"name": "io.github.pedra-ai/pedra-mcp", "repo": "pedra-ai/pedra-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.8}
+{"name": "io.github.klappay/klap-mcp", "repo": "klappay/klap-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.9}
+{"name": "io.github.Scottnine/filamental", "repo": "Scottnine/filamental", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.6}
+{"name": "io.github.AlgoVaultFi/crypto-quant-signal-mcp", "repo": "AlgoVaultLabs/crypto-quant-signal-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 47.0}
+{"name": "io.github.nika-open/nika", "repo": "nika-open/nika", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 8.6}
+{"name": "io.github.Atrix21/typetrace", "repo": "Atrix21/typetrace", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.1}
+{"name": "io.github.pablo-albaladejo/kaiord", "repo": "pablo-albaladejo/kaiord", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.1}
+{"name": "ai.skilltotal/skilltotal", "repo": "pezhik/skilltotal", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.4}
+{"name": "io.github.gamealia/gamealia-mcp", "repo": "gamealia/gamealia-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.3}
+{"name": "io.github.fatihcimen/appdyno", "repo": "fatihcimen/appdyno", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "ai.wavespeed/mcp", "repo": "WaveSpeedAI/mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.6}
+{"name": "io.github.getmcpm/cli", "repo": "getmcpm/cli", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.3}
+{"name": "com.savvly/savvly", "repo": "Savvly/savvly-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.5}
+{"name": "io.github.open-daemon/opendaemon-comfyui-mcp", "repo": "open-daemon/opendaemon-comfyui-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.christianclaudio/espn", "repo": "christianclaudio/mcp-server-espn", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.christianclaudio/taxcode", "repo": "christianclaudio/mcp-server-taxcode", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.9}
+{"name": "io.github.RegistrumUK/uk-companies-house-mcp", "repo": "RegistrumUK/uk-companies-house-mcp", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'Registrum hosted endpoint unreachable: fetch failed'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "ai.glassflow/tares", "repo": "glassflow/tares", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "io.github.Wyrdsekai/researchzosho", "repo": "Wyrdsekai/researchzosho", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.1}
+{"name": "io.github.guillermollopis/saef", "repo": "guillermollopis/soma-ai-emission-factors", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.4}
+{"name": "io.github.siweina/dsh-novel-writer", "repo": "siweina/dsh-novel-writer", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.hostinger/hostinger-api-mcp", "repo": "hostinger/api-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.9}
+{"name": "io.github.atrislabs/atris", "repo": "atrislabs/atris", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.0}
+{"name": "io.github.KushalP1/context-doctor", "repo": "KushalP1/context-doctor", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.0}
+{"name": "io.github.deepankar17/crewchat", "repo": "deepankar17/crewchat", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.Severin2k/blumen-komander-mcp", "repo": "Severin2k/blumen-komander-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.afsharid/turkactuary", "repo": "afsharid/turkactuary-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.mgcrea/mcp-apple-safari", "repo": "mgcrea/cupertino", "verdict": "DEAD", "reason": "npm install failed", "counts": null, "live_before_shutdown": null, "wall_clock_s": 1.0}
+{"name": "com.exactpdf/mcp", "repo": "smmallya/ExactPDF", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.5}
+{"name": "io.github.cachly-dev/mcp-server", "repo": "cachly-dev/cachly-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.truecopydev/truecopy", "repo": "truecopydev/truecopy", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "com.copado/agentia-cli", "repo": "CopadoSolutions/agentia-cli-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.8}
+{"name": "io.github.NeoZorK/monte-neo", "repo": "NeoZorK/Monte-Neo", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.DMS1979/ingravity-security", "repo": "DMS1979/ingravity-security", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.u9401066/pubmed-search-mcp", "repo": "u9401066/pubmed-search-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "io.github.ronak-create/fablecut", "repo": "ronak-create/FableCut", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.extensiondev/mcp", "repo": "extensiondev/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.8}
+{"name": "io.github.cloudgpu-app/cloudgpu-mcp", "repo": "cloudgpu-app/cloudgpu-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.SunrisesIllNeverSee/sigrank-mcp", "repo": "SunrisesIllNeverSee/sigrank-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "io.github.renjithrrkj/vidx", "repo": "renjithrrkj/vidx", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.SmartMobileHouse/vat-whitelist-mcp", "repo": "SmartMobileHouse/vat-whitelist-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.morluto/rea", "repo": "morluto/rea", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 22.4}
+{"name": "io.github.ArtJack/verdict", "repo": "ArtJack/verdict", "verdict": "DEAD", "reason": "ambiguous or missing console scripts: ['verdict-accept', 'verdict-answer', 'verdict-backfill', 'verdict-browse', 'verdict-check', 'verdict-dupes', 'verdict-facts', 'verdict-finalize', 'verdict-gate', 'verdict-issues', 'verdict-local', 'verdict-mcp', 'verdict-replay', 'verdict-run', 'verdict-validate']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.5}
+{"name": "io.github.zhaoxinghua09-cell/uibc-core", "repo": "zhaoxinghua09-cell/uibc-core", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.reamerlabs/reamer-research-mcp", "repo": "reamerlabs/reamer-research-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.markdown-pipeline/mdpipeline", "repo": "markdown-pipeline/markdown-pipeline", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.RoninForge/ai-price-index-mcp", "repo": "RoninForge/ai-price-index-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.SQUORA-NL/crayon-c4-mcp", "repo": "SQUORA-NL/CRAYON.C4", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['crayon-c4-mcp', 'crayon-c4-mcp-http']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 2.3}
+{"name": "uk.co.signafaide/signafaide", "repo": "AIME-TECH-UK-LIMITED/signafaide-sdk", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.5}
+{"name": "io.github.ggozad/haiku-rag", "repo": "ggozad/haiku.rag", "verdict": "DEAD", "reason": "handshake failed: no initialize result (46 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.6}
+{"name": "io.github.wellknownmcp/hoshin-kanri", "repo": "wellknownmcp/hoshin-kanri", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.wimo-dev/turno-browser", "repo": "wimo-dev/turno", "verdict": "DEAD", "reason": "handshake failed: no initialize result (83 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.6}
+{"name": "io.github.haris-musa/excel-mcp-server", "repo": "haris-musa/excel-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.Savirinc/unfragile", "repo": "Savirinc/unfragile-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.complydoc/complydoc", "repo": "complydoc/complydoc", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.akalsoftware/supaforge", "repo": "akalsoftware/supaforge", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.0}
+{"name": "art.funai/studio", "repo": "fun-aI-studio/funai-mcp", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'Could not reach FunAI at https://mcp.funai.art (EAI_AGAIN)'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.frsorrentino/chrome-bridge", "repo": "frsorrentino/chrome-bridge", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "app.apick/all", "repo": "lead788/apick-mcp", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32001, 'message': 'Cannot reach https://apick.app/mcp/all: fetch failed'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.4}
+{"name": "io.github.MrHenrySword/agile-analytics-mcp", "repo": "MrHenrySword/agile-analytics-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.temet-ai/ask-kit", "repo": "temet-ai/ask-kit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.4}
+{"name": "io.github.rxolve/zpup", "repo": "rxolve/zpup", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.6}
+{"name": "io.github.patrickchugh/terravision", "repo": "patrickchugh/terravision", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.4}
+{"name": "io.github.mrfentmen/newborns-visitor-rules-window-track-mcp", "repo": "mrfentmen/awesome-servers", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.danbuildss/breakra", "repo": "danbuildss/breakra", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.AlbertoBarrago/markasso", "repo": "AlbertoBarrago/markasso", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "io.github.samuccaya/signoff-studio", "repo": "samuccaya/signoff-studio-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.2}
+{"name": "io.github.kato9292929/agentpay402-mcp", "repo": "kato9292929/x402-wallet-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 31.7}
+{"name": "io.github.mleoca/ucn", "repo": "mleoca/ucn", "verdict": "DEAD", "reason": "handshake failed: no initialize result (149 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.1}
+{"name": "io.github.SiddhuYen/eitri", "repo": "SiddhuYen/eitri", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 21.2}
+{"name": "com.oods-foundry/foundry", "repo": "kneelinghorse/OODS-Foundry", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 4, "wall_clock_s": 7.5}
+{"name": "io.github.Kochurin/telegram-channels-mcp", "repo": "Kochurin/telegram-channels-mcp", "verdict": "DEAD", "reason": "uv install failed (wheels only)", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.3}
+{"name": "io.github.emirmrkaljevic/mesh2cad", "repo": "emirmrkaljevic/mesh2cad", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.1}
+{"name": "io.github.GuardBee/mcp-claude-usage-guard", "repo": "GuardBee/guardbee-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.6}
+{"name": "io.github.fallow-rs/fallow", "repo": "fallow-rs/fallow", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.9}
+{"name": "dev.linkdigest/linkdigest", "repo": "jcaiagent7143-ui/linkdigest-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.munimtechnologies/munim-computer-use", "repo": "munimtechnologies/munim-computer-use", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "com.kotecharts/charts", "repo": "kote-charts/kote-charts", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.7}
+{"name": "io.github.roomi-fields/notebooklm-mcp", "repo": "roomi-fields/notebooklm-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.6}
+{"name": "io.github.cryptoduke01/gloam", "repo": "gloamtrade/gloam", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 19.9}
+{"name": "io.github.sekrdcom/sekrd", "repo": "sekrdcom/sekrd-mcp-ts", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.UpstageAI/korean-tax-mcp", "repo": "UpstageAI/korean-tax-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.fadedDexofan/lightroom-agent", "repo": "fadedDexofan/lightroom-agent", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.verifystack-dev/verifystack-x402", "repo": "verifystack-dev/verifystack-x402", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.9}
+{"name": "io.github.UpstageAI/korean-tax-calc-mcp", "repo": "UpstageAI/korean-tax-calc-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.fxia0018/furima-mcp", "repo": "fxia0018/furima-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.xiaobinger/curlgen-mcp", "repo": "xiaobinger/cURL_remote", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "com.signature-theme/x420-mcp", "repo": "BodhiNath/X420", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 15.2}
+{"name": "io.github.renezander030/graphiti-local", "repo": "renezander030/graphiti-local", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.9}
+{"name": "io.github.useotterkit/otterkit", "repo": "useotterkit/skill", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "io.github.sanghyoLe/cc0-library", "repo": "sanghyoLe/cc0-library", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "immo.rundum/real-estate-appraisal", "repo": "Rundum-Immo/real-estate-appraisal-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.PugarHuda/takar", "repo": "PugarHuda/takar", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.4}
+{"name": "io.github.DidroAI/cloud-alm-mcp-server", "repo": "DidroAI/cloud-alm-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.3}
+{"name": "io.github.amerged-org/ohmyhost-mcp", "repo": "amerged-org/ohmyhost-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.razvangirgiz/wazap", "repo": "razvangirgiz/wazap", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.9}
+{"name": "io.github.aiarchitecturedev/aiarchitect-blog-mcp", "repo": "aiarchitecturedev/aiarchitect-blog-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.emeraldleaf/okl", "repo": "emeraldleaf/okl", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.syncky/syncky-health", "repo": "syncky/syncky-open", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['syncky', 'syncky-agent']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.6}
+{"name": "io.github.zereight/gitlab-mcp", "repo": "zereight/gitlab-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.7}
+{"name": "io.github.chrischall/ofw-mcp", "repo": "chrischall/ofw-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.5}
+{"name": "io.github.chrischall/skylight-mcp", "repo": "chrischall/skylight-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "com.caelaralabs/shield", "repo": "kingefman1-cmyk/shield-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.vuluu2k/webcake-landing-mcp", "repo": "vuluu2k/webcake-landing-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "io.github.musharna/tmodloader-mcp", "repo": "musharna/tmodloader-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.ArmorNGlory/armornglory-mcp-server", "repo": "ArmorNGlory/armornglory-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.1}
+{"name": "io.github.Sagargupta16/bedrock-multi-model-mcp", "repo": "Sagargupta16/bedrock-multi-model-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.2}
+{"name": "io.github.mishmar-io/mishmar", "repo": "mishmar-io/mishmar", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.SoftDevEng/aisecuritywarden", "repo": "SoftDevEng/aiSecurityWarden-client", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.chenziyaos/weft", "repo": "chenziyaos/weft", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.jfarcand/mirroir-mcp", "repo": "jfarcand/mirroir-mcp", "verdict": "DEAD", "reason": "npm install failed", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.4}
+{"name": "io.github.stackwares/casama", "repo": "stackwares/casama", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.markymakes-dev/javabytes", "repo": "markymakes-dev/javabytes", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.2}
+{"name": "io.github.mickey-ichi/backlog-bridge", "repo": "mickey-ichi/backlog-bridge", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.eiry16/beacon-mfg-mcp", "repo": "eiry16/beacon-mfg", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 6.7}
+{"name": "io.github.jameselle/sockodds-mcp", "repo": "jameselle/sockodds-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.gautamvarmadatla/mcpsafetywarden", "repo": "gautamvarmadatla/mcpsafetywarden", "verdict": "DEAD", "reason": "handshake failed: no initialize result (48 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.6}
+{"name": "io.github.stablevoy/stablevoy-mcp", "repo": "stablevoy/stablevoy-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.neilmorse/spring-runtime-mcp", "repo": "neilmorse/spring-runtime-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.aokings/thth", "repo": "aokings/thth", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.2}
+{"name": "io.github.kitao/pyxel-mcp", "repo": "kitao/pyxel-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "com.getoddsapi/getodds", "repo": "getoddsapi/getodds-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.pyeconomics-dev/pyeconomics", "repo": "pyeconomics-dev/pyeconomics", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.8}
+{"name": "io.github.mzizi-dev/mzizi-mcp", "repo": "mzizi-dev/agent-tools", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.topdawgyq/oyapicks-mcp", "repo": "oyapicks/oyapicks-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 17.5}
+{"name": "io.github.JialaoLiu/dsh-baton", "repo": "JialaoLiu/dsh-baton", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 6.5}
+{"name": "io.github.onemira-space/okf-wiki-mcp", "repo": "onemira-space/okf-wiki-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.4}
+{"name": "io.github.Grinv/steam-games-mcp", "repo": "Grinv/steam-games-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "br.com.dten/speed", "repo": "Dten-Org/dten-speed", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.0}
+{"name": "io.github.PacketFabric/packetfabric-mcp", "repo": "PacketFabric/public-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.matinfo/markdown-pdf-export", "repo": "matinfo/markdown-pdf-export", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.archestack/mcp", "repo": "archestack/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.6}
+{"name": "io.github.ugchooks/mcp-server", "repo": "ugchooks/mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.6}
+{"name": "io.github.iwe-org/iwe", "repo": "iwe-org/iwe", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 8.8}
+{"name": "io.github.Tommkruix/archprint", "repo": "Tommkruix/archprint", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.8}
+{"name": "io.github.mavaali/daftari", "repo": "mavaali/daftari", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 19.2}
+{"name": "io.github.claimseed/claimseed", "repo": "claimseed/claimseed", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.9}
+{"name": "app.hellohop/hellohop", "repo": "socialgroundco/hellohop-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.Coaspe/sap-abap-mcp", "repo": "Coaspe/sap-abap-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 19.0}
+{"name": "dev.tokensafe/tokensafe", "repo": "tokensafe-dev/tokensafe", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 25.0}
+{"name": "io.github.openvancamp/openvan-travel", "repo": "openvancamp/openvan-camp-public-api", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.gzchenhao/openhire", "repo": "gzchenhao/openhire", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.OpenPowerShift/raptor-studio", "repo": "openpowershift/RaptorStudio", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.6}
+{"name": "io.github.rebasepro/rebase", "repo": "rebasepro/rebase", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.1}
+{"name": "io.github.diagrammo/dgmo-mcp", "repo": "diagrammo/dgmo-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.2}
+{"name": "io.github.appwrite/mcp", "repo": "appwrite/mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.9}
+{"name": "io.github.nteract/semiotic", "repo": "nteract/semiotic", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.0}
+{"name": "lat.panal/panal", "repo": "gucclabs/Panal", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.5}
+{"name": "com.mindpolling/mindpolling", "repo": "news-community/mind-polling-public", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.4}
+{"name": "io.github.LevapVeeskela/lv24-seo", "repo": "LevapVeeskela/lv24-seo-optimizer", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.raulkivi/agent-cost-analyzer", "repo": "raulkivi/agent-cost-analyzer", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.2}
+{"name": "io.github.vpatel9202/nostrings", "repo": "vpatel9202/nostrings", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.erkamyaman/rust-anything", "repo": "erkamyaman/rust-anything", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.6}
+{"name": "io.github.john-broadway/proximo-proxmox", "repo": "john-broadway/proximo", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.pattrnlabs/grain", "repo": "pattrnlabs/grain", "verdict": "DEAD", "reason": "handshake failed: no initialize result (8 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.3}
+{"name": "io.github.Seventhwalllab/anairyspirit", "repo": "Seventhwalllab/anairyspirit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.4}
+{"name": "ai.mroffice/office", "repo": "XinaTian/MROffice", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.7}
+{"name": "io.github.daniel-munoz/claude-checkpoint-mcp", "repo": "daniel-munoz/claude-checkpoint-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.masondelan/selvedge", "repo": "masondelan/selvedge", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.8}
+{"name": "dev.kurlo/kurlo", "repo": "stormhop/kurlo", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.7}
+{"name": "io.github.64Etienne/cerfaless-dsnap", "repo": "64Etienne/cerfaless-dsnap", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.table-bro/table-bro", "repo": "table-bro/table-bro", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.BetaBots-LLC/callimachus", "repo": "BetaBots-LLC/callimachus", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.Jubstaaa/standup-mr", "repo": "Jubstaaa/standup-mr", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.cmeans/mcp-synology", "repo": "cmeans/mcp-synology", "verdict": "DEAD", "reason": "handshake failed: no initialize result (16 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.1}
+{"name": "io.github.t3ratech/market-pulse", "repo": "t3ratech/market-pulse-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.tombaldwin/candor", "repo": "tombaldwin/candor-ts", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.5}
+{"name": "pl.agentrynku/gpw", "repo": "krystiangw/agentrynku-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.9}
+{"name": "io.github.matteoredaelli/active-directory-ldap-mcp", "repo": "matteoredaelli/mcpAD", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "com.dethboy/vedetta", "repo": "lacryptorina/vedetta-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.0}
+{"name": "io.github.sheetxl/sheetxl", "repo": "sheetxl/sheetxl", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.9}
+{"name": "io.github.ironflowsh/hyperliquid", "repo": "ironflowsh/mcp", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['ironflow-mcp', 'ironflow-mcp-http']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 2.5}
+{"name": "io.github.kochetkov-ma/brewpage-mcp", "repo": "kochetkov-ma/brewpage-openapi", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.9}
+{"name": "io.github.JoernBerkefeld/mcp-server-sfmc", "repo": "JoernBerkefeld/mcp-server-sfmc", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.sriinnu/kosha-discovery", "repo": "sriinnu/kosha-discovery", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['kosha', 'kosha-mcp']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 1.6}
+{"name": "io.github.nirholas/vid2context", "repo": "nirholas/vid2context", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.guillochon/shaderous", "repo": "guillochon/shaderous", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.payware/mcp-server", "repo": "payware/mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.dsanchezp18/maplestats-mcp", "repo": "dsanchezp18/maplestats-mcp", "verdict": "DEAD", "reason": "uv install failed (wheels only)", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.4}
+{"name": "io.github.NameetP/pdfmux", "repo": "NameetP/pdfmux", "verdict": "DEAD", "reason": "handshake failed: no initialize result (34 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.2}
+{"name": "io.github.Anwani-app/anwani-mcp", "repo": "Anwani-app/anwani-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "com.formtango/formtango-mcp", "repo": "formtango/formtango-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.budna-marketplace/mcp", "repo": "budna-marketplace/mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "ai.achurch/church", "repo": "a-church-ai/church", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.4}
+{"name": "io.github.junyeong-nero/kitsune", "repo": "junyeong-nero/kitsune", "verdict": "RESIDUE_BOTH_ARMS", "reason": null, "counts": {"pid_trials": 10, "pid_with_residue": 10, "group_trials": 10, "group_with_residue": 10, "all_handshakes_ok": true}, "live_before_shutdown": 2, "wall_clock_s": 462.8}
+{"name": "io.github.brdz4/robot-mcp", "repo": "brdz4/robot-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.JovieInc/jovie", "repo": "JovieInc/Jovie", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.bumpsmith/bumpsmith", "repo": "bumpsmith/bumpsmith", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.9}
+{"name": "io.github.kjgueye/netintel-mcp", "repo": "kjgueye/netintel-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.9}
+{"name": "io.github.meob/pg-cve-mcp", "repo": "meob/PG_CVE-MCP", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.9}
+{"name": "io.github.danilokhury/synabun", "repo": "danilokhury/Synabun", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 15.6}
+{"name": "io.github.master-co/master-css", "repo": "master-co/css", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.4}
+{"name": "io.github.wiltodelta/remove-ai-watermarks", "repo": "wiltodelta/remove-ai-watermarks", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.0}
+{"name": "dev.zerodrop/zerodrop-mcp", "repo": "zerodrop-dev/zerodrop-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "dev.servonaut/servonaut", "repo": "zb-ss/servonaut", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.1}
+{"name": "io.github.wiresage/mikrotik-mcp", "repo": "wiresage/mikrotik-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "com.local-mcp/local-mcp", "repo": "colibird-ai/local-mcp-releases", "verdict": "DEAD", "reason": "npm install failed", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.7}
+{"name": "io.github.lukasgolino/kiln", "repo": "lukasgolino/kiln", "verdict": "DEAD", "reason": "handshake failed: no initialize result (1 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.1}
+{"name": "io.github.tuProlog/arg2p", "repo": "tuProlog/arg2p-kt", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.7}
+{"name": "io.github.alexgaoth/escalate-anything", "repo": "alexgaoth/escalate-anything", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.0}
+{"name": "io.github.erayendes/asc-mcp", "repo": "erayendes/app-store-connect-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "ai.llmbenchmark/llmbenchmark", "repo": "Take-Group/llmbenchmark-mcp", "verdict": "DEAD", "reason": "handshake failed: no tools/list result", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.4}
+{"name": "io.github.snapsynapse/every-ai-law", "repo": "snapsynapse/every-ai-law", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.callstack/agent-device", "repo": "callstack/agent-device", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.3}
+{"name": "io.github.RitualDev-Lab/mcpshelf", "repo": "RitualDev-Lab/MCPShelf", "verdict": "DEAD", "reason": "handshake failed: no initialize result (10 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.0}
+{"name": "io.github.wyroapi/wyro", "repo": "wyroapi/wyro", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'No pude conectar con wyro: fetch failed. Revisa tu conexi\u00f3n o WYRO_API_URL.'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.macropulse-lab/macropulse-mcp", "repo": "macropulse-lab/macropulse-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "io.github.BetaNYC/nyc-checkbook-mcp", "repo": "BetaNYC/nyc-checkbook-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.comet-ml/opik-mcp", "repo": "comet-ml/opik-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.3}
+{"name": "io.github.sugukurukabe/jp-bids", "repo": "sugukurukabe/koko-call-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.2}
+{"name": "io.github.snapsynapse/ai-incident-law", "repo": "snapsynapse/ai-incident-law", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.bpmnkit/bpmnkit", "repo": "bpmnkit/bpmnkit", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 13.1}
+{"name": "io.github.BetaNYC/nyc-budget-mcp", "repo": "BetaNYC/New-York-City-Budget", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.9}
+{"name": "io.github.RitualDev-Lab/mcp-monetize", "repo": "RitualDev-Lab/mcp-monetize", "verdict": "DEAD", "reason": "handshake failed: no initialize result (20 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.0}
+{"name": "io.github.RitualDev-Lab/devshelf", "repo": "RitualDev-Lab/DevShelf", "verdict": "DEAD", "reason": "handshake failed: no initialize result (51 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.6}
+{"name": "io.github.nievesjesus/distill", "repo": "nievesjesus/distill", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 5, "wall_clock_s": 13.7}
+{"name": "io.github.RitualDev-Lab/web-sec-auditor", "repo": "RitualDev-Lab/web-sec-auditor", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.restspace/sitelooper", "repo": "restspace/sitelooper", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.RitualDev-Lab/agentshield", "repo": "RitualDev-Lab/AgentShield", "verdict": "DEAD", "reason": "handshake failed: no initialize result (57 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "dev.seoskill/seo", "repo": "iannuttall/seo", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.0}
+{"name": "io.github.youdotcom-oss/mcp", "repo": "youdotcom-oss/mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.8}
+{"name": "io.github.flgisimone/agentrica", "repo": "flgisimone/agentrica", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.MikkoParkkola/trvl", "repo": "MikkoParkkola/trvl", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.BetaNYC/nyc-council-mcp", "repo": "BetaNYC/nyc-council-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.4}
+{"name": "io.github.lokal-id/lokal", "repo": "lokal-id/lokal", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.7}
+{"name": "io.github.nucliweb/webperf-snippets", "repo": "nucliweb/webperf-snippets", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.blasestevez/unlam-mcp", "repo": "blasestevez/unlam-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.aligndottech/cli", "repo": "aligndottech/align-cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.9}
+{"name": "io.github.gordonkjlee/facthouse", "repo": "gordonkjlee/facthouse", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.5}
+{"name": "io.github.BetaNYC/ny-data-registry-mcp", "repo": "BetaNYC/ny-data-registry-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.phalkmin/trendzeist-mcp", "repo": "phalkmin/trendzeist-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "io.github.cyanheads/sanctions-screening-mcp-server", "repo": "cyanheads/sanctions-screening-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.6}
+{"name": "io.github.rofoso-com/polopan-fashion-mcp", "repo": "rofoso-com/polopan-fashion-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.omitly/omitly-mcp", "repo": "omitly/omitly-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.0}
+{"name": "io.github.auragridcorp-rgb/auragrid", "repo": "auragridcorp-rgb/auragrid", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.a32116150-ctrl/verify402-mcp", "repo": "a32116150-ctrl/verify402", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 17.1}
+{"name": "tools.audiolab/audiolab", "repo": "Audio-Launch/audiolab-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.kurpeeren/copperflow", "repo": "kurpeeren/copperflow", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.4}
+{"name": "io.github.faktry/faktry-mcp", "repo": "faktry/faktry-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.0}
+{"name": "io.github.UseJunior/email-agent-mcp", "repo": "UseJunior/email-agent-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.7}
+{"name": "io.github.yocontra/pulsar", "repo": "yocontra/pulsar", "verdict": "UNCONFIRMED", "reason": null, "counts": {"pid_trials": 10, "pid_with_residue": 5, "group_trials": 10, "group_with_residue": 5, "all_handshakes_ok": true}, "live_before_shutdown": 2, "wall_clock_s": 191.1}
+{"name": "io.github.BourbonDog/amicus", "repo": "BourbonDog/amicus", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 15.4}
+{"name": "io.github.MervinPraison/praisonai", "repo": "MervinPraison/PraisonAI", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.4}
+{"name": "io.github.niksa90/toolmenu", "repo": "niksa90/toolmenu", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.cdump/evmole", "repo": "cdump/evmole", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.dreamrec/livepilot", "repo": "dreamrec/LivePilot", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 17.4}
+{"name": "io.github.smart-byte/pdf-to-einvoice", "repo": "smart-byte/pdf-to-einvoice", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.9}
+{"name": "dev.avakit/avalanche", "repo": "mericcintosun/AvaKit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.chuang44-tiff/optivibe-mcp", "repo": "chuang44-tiff/optivibe-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.coo-quack/calc-mcp", "repo": "coo-quack/calc-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.9}
+{"name": "io.github.dogrucanemek-alt/conarium", "repo": "dogrucanemek-alt/conarium", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['conarium', 'conarium-anchor-service', 'conarium-anchor-upgrade', 'conarium-console', 'conarium-countersign-verify', 'conarium-coverage', 'conarium-doctor', 'conarium-init', 'conarium-reconcile', 'conarium-stamp', 'conarium-suggest-policy', 'conarium-token-sync', 'conarium-verify']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 3.7}
+{"name": "dev.wirecat/cli-memo", "repo": "WireCatLabs/cli-memo", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['memo', 'wcat-memo']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 11.3}
+{"name": "io.github.comficker/checklist-templates", "repo": "comficker/checklist-templates", "verdict": "DEAD", "reason": "handshake failed: no initialize result (8 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.9}
+{"name": "io.github.comficker/factcovery-facts", "repo": "comficker/factcovery-facts", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.vargov3-spec/vargov-mcp", "repo": "vargov3-spec/vargov-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.5}
+{"name": "io.github.amcharts/amcharts5", "repo": "amcharts/amcharts5-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.6}
+{"name": "io.github.comficker/pomoduck", "repo": "comficker/pomoduck-cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.comficker/pixel-art-mcp", "repo": "comficker/pixel-art-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.4}
+{"name": "io.github.dembrandt/dembrandt", "repo": "dembrandt/dembrandt", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.7}
+{"name": "io.github.say1j/tronenergyfrog", "repo": "say1j/tron-energy-rental", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 18.5}
+{"name": "io.github.RectaBuild/recta", "repo": "RectaBuild/recta", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.8}
+{"name": "io.github.arun250492/Personal-MCP", "repo": "arun250492/Personal-MCP", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.cyanheads/npi-providers-mcp-server", "repo": "cyanheads/npi-providers-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.5}
+{"name": "io.github.keplertech/naja-scope", "repo": "keplertech/naja-scope", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.cyanheads/worldbank-mcp-server", "repo": "cyanheads/worldbank-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.5}
+{"name": "io.github.tidegap/tidegap", "repo": "tidegap/tidegap", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "io.github.aileron-tech/wingbox", "repo": "aileron-tech/wingbox", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.cyanheads/gbif-biodiversity-mcp-server", "repo": "cyanheads/gbif-biodiversity-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.1}
+{"name": "io.github.sbroenne/mcp-server-excel", "repo": "sbroenne/mcp-server-excel", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.9}
+{"name": "io.github.BetaNYC/nys-openlegislation-mcp", "repo": "BetaNYC/nys-openlegislation-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.0}
+{"name": "io.github.BetaNYC/nyc-charter-laws-rules", "repo": "BetaNYC/nyc-charter-laws-rules", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "dev.skillry/skillry", "repo": "yihui-dev/skillry-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.BetaNYC/nyc-311-mcp", "repo": "BetaNYC/nyc-311-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.BetaNYC/nyc-record-mcp", "repo": "BetaNYC/nyc-record-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.mcp-hangar/hangar", "repo": "mcp-hangar/mcp-hangar", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.9}
+{"name": "io.github.usezn/zn-gate", "repo": "usezn/zn", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.arcadia-finance/mcp-server", "repo": "arcadia-finance/mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 15.2}
+{"name": "io.github.newrelic-experimental/preflight", "repo": "newrelic-experimental/preflight", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.5}
+{"name": "io.github.e2e-inc/e2e", "repo": "e2e-inc/e2e", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.5}
+{"name": "io.github.aicostbudget/ai-api-pricing-mcp", "repo": "aicostbudget/ai-api-pricing-data", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.makebead/craft-color-codes", "repo": "makebead/craft-color-codes", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.ChoYugyeong/memdex", "repo": "ChoYugyeong/memdex", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.0}
+{"name": "io.github.zz-plant/refract", "repo": "zz-plant/refract", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['refract', 'wikihistory']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 1.8}
+{"name": "io.github.HarshaVardhan1111/pagemint", "repo": "HarshaVardhan1111/pagemint", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.RunTimeAdmin/sigvara", "repo": "RunTimeAdmin/Sigvara", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.ABCastor/borgo", "repo": "ABCastor/borgo", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.cyanheads/switzerland-parliament-mcp-server", "repo": "cyanheads/switzerland-parliament-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.5}
+{"name": "com.akshitanchan/applesauce", "repo": "akshitanchan/applesauce", "verdict": "DEAD", "reason": "npm install failed", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.5}
+{"name": "io.github.giraygokirmak/tapebasis", "repo": "giraygokirmak/tapebasis", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.elfensky/macos-apps-mcp", "repo": "elfensky/macos-apps-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.1}
+{"name": "io.github.Guoqiang1006/gomami-mcp", "repo": "Guoqiang1006/gomami-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.4}
+{"name": "io.github.AlienatedAliens/epistemic-guard", "repo": "AlienatedAliens/epistemic-guard", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.aahlijia/dekko", "repo": "aahlijia/dekko", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.3}
+{"name": "io.github.ZIZKA-AI-SL/zizkadb-mcp", "repo": "ZIZKA-AI-SL/ZizkaDB", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.tiptreesystems/lacuna-research-mcp", "repo": "tiptreesystems/lacuna-research-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.rdcahalane/genome-industrial-intelligence", "repo": "rdcahalane/genome-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.9}
+{"name": "com.keboola/mcp", "repo": "keboola/mcp-server", "verdict": "DEAD", "reason": "ambiguous or missing console scripts: ['keboola-mcp-server', 'keboola_mcp_server']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.6}
+{"name": "io.github.4DA-Systems/4da-mcp-server", "repo": "4DA-Systems/4da-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.IngTian/witness", "repo": "IngTian/witness", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.6}
+{"name": "io.github.Leizhidong-creator/modelpick", "repo": "Leizhidong-creator/modelpick", "verdict": "DEAD", "reason": "handshake failed: no initialize result (61 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.astyboyy-ship-it/bloom-exchange", "repo": "astyboyy-ship-it/bloom-exchange", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.ni-c/mcp-hub", "repo": "ni-c/mcp-hub", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.9}
+{"name": "io.github.cammac-creator/ibanforge", "repo": "cammac-creator/ibanforge", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "so.pharaoh/pharaoh", "repo": "Pharaoh-so/pharaoh-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.2}
+{"name": "io.github.MakersMCP/makersmcp", "repo": "MakersMCP/makersmcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.3}
+{"name": "io.github.agent402-dev/a402-pay-mcp", "repo": "agent402-dev/agent402-toolkit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.2}
+{"name": "com.linkbreakers/mcp", "repo": "linkbreakers-com/agent-skills", "verdict": "DEAD", "reason": "handshake failed: no tools/list result", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.flukeatzerocool/holonovel", "repo": "flukeatzerocool/holonovel", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.JoernBerkefeld/mcp-server-mcdev", "repo": "JoernBerkefeld/mcp-server-mcdev", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.3}
+{"name": "io.github.vshulcz/deja-vu", "repo": "vshulcz/deja-vu", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.3}
+{"name": "io.github.Filippo-Venturini/ctxvault", "repo": "Filippo-Venturini/ctxvault", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 24.8}
+{"name": "com.instavar/mcp-server", "repo": "instavar/mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.SkaleAgents/swarm", "repo": "SkaleAgents/mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.7}
+{"name": "io.github.plur-ai/plur", "repo": "plur-ai/plur", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.6}
+{"name": "io.github.editmamei/editmamei-photoshop-mcp", "repo": "editmamei/editmamei", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.xinzzu/memoria", "repo": "xinzzu/Memoria", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.nyssance/tauri-hasgard", "repo": "nyssance/tauri-hasgard", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.4}
+{"name": "io.github.ramirkoz/project-consulting", "repo": "ramirkoz/project-consulting-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.5}
+{"name": "io.github.ohad6k/viberaven", "repo": "ohad6k/VibeRaven", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.Siddhant-K-code/agent-trace", "repo": "Siddhant-K-code/agent-trace", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.3}
+{"name": "io.github.Nullclear-Protocol/nullclear", "repo": "Nullclear-Protocol/nullclear", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.8}
+{"name": "com.debugbundle/mcp", "repo": "debugbundle/debugbundle", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.2}
+{"name": "io.github.BitmapAsset/probbit", "repo": "BitmapAsset/probbit", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "app.apiguru/amazon-data", "repo": "apiguru-app/agent-kit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.VoltageGPU/voltagegpu-cli", "repo": "VoltageGPU/VOLTAGEGPU-CLI", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.0}
+{"name": "io.github.thenamespace/ens-mcp", "repo": "thenamespace/ens-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 18.1}
+{"name": "io.github.toogreatwtf/fmrl-mcp", "repo": "toogreatwtf/fmrl-plugin", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.voidmobcom/voidmob-mcp", "repo": "voidmobcom/voidmob-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.4}
+{"name": "io.github.antonpogrebenko-public/rftools", "repo": "antonpogrebenko-public/rftools-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.cuolm/swiss-weather-mcp", "repo": "cuolm/swiss-weather-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.vuluu2k/webcake-storefront-mcp", "repo": "vuluu2k/webcake-storefront-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.Davmunrey/trazum", "repo": "Davmunrey/Trazum", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.OpenTrain-AI/opentrain", "repo": "OpenTrain-AI/OpenTrain-Platform-Monorepo", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.5}
+{"name": "io.github.munhq/chat-recall", "repo": "munhq/chat-recall", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.0}
+{"name": "dev.wirecat/attio-cli", "repo": "WireCatLabs/attio-cli", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['attio', 'wcat-attio']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 9.5}
+{"name": "io.browsa/open-shopping-agent", "repo": "browsa-io/open-shopping-agent", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.4}
+{"name": "io.github.mozilla/firefox-mcp", "repo": "mozilla/firefox-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.5}
+{"name": "io.github.fangchenghao/latex-look", "repo": "fangchenghao/latex-look", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.mirasim-ai/computer-use", "repo": "mirasim-ai/computer-use", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.4}
+{"name": "io.github.ufortstephen/localize-dev", "repo": "ufortstephen/localize-dev", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.tammy357/ts-second-opinion", "repo": "tammy357/ts-second-opinion", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.priberry-data/crumplelab", "repo": "priberry-data/crumplelab", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.davidscotttufts/tracegate-ci", "repo": "davidscotttufts/tracegate-ci", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.software-mansion/argent", "repo": "software-mansion/argent", "verdict": "RESIDUE_BOTH_ARMS", "reason": null, "counts": {"pid_trials": 10, "pid_with_residue": 10, "group_trials": 10, "group_with_residue": 10, "all_handshakes_ok": true}, "live_before_shutdown": 2, "wall_clock_s": 254.1}
+{"name": "io.github.majiayu000/remem", "repo": "majiayu000/remem", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.8}
+{"name": "io.github.HarimxChoi/google-surf-mcp", "repo": "HarimxChoi/google-surf-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 24.3}
+{"name": "com.githits/githits", "repo": "githits-com/githits-cli", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.cogdepot/cogdepot", "repo": "cogdepot/mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "ai.thetahealth/mirobody", "repo": "thetahealth/mirobody", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.ets-public/brevi", "repo": "ets-public/brevi", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.mollymogi/media-context", "repo": "mollymogi/media-context", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.Nimbleway/webrouter", "repo": "Nimbleway/webrouter", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.3}
+{"name": "io.github.coffeecoproject/layermap", "repo": "coffeecoproject/layermap", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.ONLYOFFICE/docspace", "repo": "ONLYOFFICE/docspace-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.arthurpanhku/dvalincode", "repo": "arthurpanhku/dvalincode", "verdict": "DEAD", "reason": "handshake failed: no initialize result (55 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.1}
+{"name": "io.github.nithin554/code-crawler", "repo": "nithin554/code-crawler", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.beadhive/beadhive", "repo": "beadhive/beadhive", "verdict": "DEAD", "reason": "ambiguous or missing console scripts: ['beadhive-frame-bridge', 'beadlog', 'bh', 'bh-host-daemon', 'bh-mcp']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.4}
+{"name": "io.github.legatolabs/legato", "repo": "legatolabs/legato", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.8}
+{"name": "io.github.pontivus-com/span", "repo": "pontivus-com/span", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.0}
+{"name": "io.github.edsml-jz2321/dsh-evokit", "repo": "edsml-jz2321/dsh-evokit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.cenitu/inventor-mcp-server", "repo": "cenitu/inventor-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.hyeonsang010716/opendockit", "repo": "hyeonsang010716/OpenDocKit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.4}
+{"name": "com.poindeo/poindeo-mcp", "repo": "poindeo/poindeo-plugins", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.writerslogic/warm-mcp", "repo": "writerslogic/warm", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.Decodo/mcp-server", "repo": "Decodo/mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.1}
+{"name": "io.github.sathya-sankaran/bharatlas-mcp", "repo": "urbanmorph/geodata", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.roarose/stemseal", "repo": "roarose/stemseal", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.snowkit/snowkit", "repo": "snowkit-io/snowkit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.feronovak/llm-preflight", "repo": "feronovak/llm-preflight", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.SoHardToMakeAName/RememberMe", "repo": "SoHardToMakeAName/RememberMe", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.6}
+{"name": "io.github.seukwoo/nudg", "repo": "seukwoo/nudg", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.2}
+{"name": "io.github.FunplayAI/funplay-cocos-mcp", "repo": "FunplayAI/funplay-cocos-mcp", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32000, 'message': 'Proxy transport error: connect ENETUNREACH 127.0.0.1:8765 - Local (0.0.0.0:0)'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.TencentCloudBase/cloudbase-mcp", "repo": "TencentCloudBase/CloudBase-AI-Toolkit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.3}
+{"name": "io.github.layervai/qurl-mcp", "repo": "layervai/qurl-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.6}
+{"name": "com.hedwigai/hedwigai", "repo": "un-seen/hedwigai-skills", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.7}
+{"name": "io.github.ReadyUpAgents/ready-check", "repo": "ReadyUpAgents/ready-check-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "club.atlasyield/mcp", "repo": "gveshk/atlasyield-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.singularitybpjade/balance-engine", "repo": "singularitybpjade/balance-engine", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.DiffCI/diffci", "repo": "DiffCI/core", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 8.6}
+{"name": "io.github.xmtlzzz/dsh-any-agent", "repo": "xmtlzzz/dsh-any-agent", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.54yyyu/zotero-mcp", "repo": "54yyyu/zotero-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.5}
+{"name": "io.github.Dinoctor/dinoctor-mcp", "repo": "Dinoctor/dinoctor-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.Evalogical-Inc/keypeek", "repo": "Evalogical-Inc/keypeek", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.beyond-a11y/malimbe", "repo": "beyond-a11y/malimbeba-releases", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "dev.semlayer/mcp", "repo": "semlayer-dev/semlayer", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.9}
+{"name": "io.github.wtznicy/my-websearch", "repo": "wtznicy/my-websearch", "verdict": "DEAD", "reason": "npm install failed", "counts": null, "live_before_shutdown": null, "wall_clock_s": 5.4}
+{"name": "ai.robosystems/xbrlkit", "repo": "RoboFinSystems/xbrlkit", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.8}
+{"name": "io.github.shamazkhan/stet", "repo": "shamazkhan/stet", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.r-a-elu-architecture/rsos", "repo": "r-a-elu-architecture/RSOS-Language", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.9}
+{"name": "io.github.rubrikinc/rubrik-mcp", "repo": "rubrikinc/rubrik-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.5}
+{"name": "io.github.dongdongbh/mindwtr", "repo": "dongdongbh/Mindwtr", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.infino-ai/code-context", "repo": "infino-ai/code-context", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.0}
+{"name": "io.github.Ar9av/obsidian-wiki", "repo": "Ar9av/obsidian-wiki", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.unvus/neosql-mcp", "repo": "unvus/neosql-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.4}
+{"name": "io.github.tukorama/mcp-server-polymarket", "repo": "tukorama/mcp-server-polymarket", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "io.github.nikolai-vysotskyi/trace-mcp", "repo": "nikolai-vysotskyi/trace-mcp", "verdict": "UNCONFIRMED", "reason": null, "counts": {"pid_trials": 10, "pid_with_residue": 5, "group_trials": 10, "group_with_residue": 5, "all_handshakes_ok": true}, "live_before_shutdown": 2, "wall_clock_s": 158.4}
+{"name": "io.github.domdomegg/shell-exec-mcp", "repo": "domdomegg/shell-exec-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.4}
+{"name": "io.github.domdomegg/computer-use-mcp", "repo": "domdomegg/computer-use-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.6}
+{"name": "io.github.domdomegg/filesystem-mcp", "repo": "domdomegg/filesystem-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "com.amberflip/amberflip", "repo": "ismoil77/amberflip-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.5}
+{"name": "io.github.t-crew/memory-pulse", "repo": "t-crew/memory-pulse", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.tinh2/skills-hub", "repo": "tinh2/skills-hub-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.sriram1983007-dev/sra-riskgate-mcp", "repo": "sriram1983007-dev/sra-riskgate-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "uk.minia2a/minia2a-x402", "repo": "minia2auk/minia2a-x402", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 17.9}
+{"name": "io.github.AVIDS2/memorix", "repo": "AVIDS2/memorix", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 22.3}
+{"name": "uk.minia2a/minia2a-mcp", "repo": "minia2auk/minia2a-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.9}
+{"name": "io.github.firecrawl/firecrawl-mcp-server", "repo": "firecrawl/firecrawl-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.openscout-app/scout", "repo": "openscout-app/scout", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.4}
+{"name": "io.github.vmware-skills/vmware-nsx-security", "repo": "vmware-skills/VMware-NSX-Security", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.YKLovePython/halfsize", "repo": "YKLovePython/halfsize", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "io.github.vmware-skills/vmware-aiops", "repo": "vmware-skills/VMware-AIops", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.5}
+{"name": "io.github.vmware-skills/vmware-nsx", "repo": "vmware-skills/VMware-NSX", "verdict": "DEAD", "reason": "ambiguous or missing console scripts: ['vmware-nsx', 'vmware-nsx-mcp']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.4}
+{"name": "io.github.vmware-skills/vmware-harden", "repo": "vmware-skills/VMware-Harden", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.vmware-skills/vmware-privateai", "repo": "vmware-skills/VMware-PrivateAI", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.vmware-skills/vmware-vdi", "repo": "vmware-skills/VMware-VDI", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.vmware-skills/vmware-aria", "repo": "vmware-skills/VMware-Aria", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.bricksentry/bricksentry", "repo": "bricksentry/bricksentry", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.Keesan12/martin-loop", "repo": "Keesan12/martin-loop", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.dylancaponi/agent-press-wire", "repo": "dylancaponi/agent-press-wire-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 14.0}
+{"name": "com.sapiensinteticos/sapiens", "repo": "inhabitants/sapiens-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.3}
+{"name": "com.nextoolsolutions/glpi", "repo": "NexTools-Solutions/nextool-mcp-glpi", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.tukorama/mcp-server-worldquantbrain", "repo": "tukorama/mcp-server-worldquantbrain", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.LienDeadline/liendeadline-mcp", "repo": "LienDeadline/liendeadline-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.JasmyLab-JANCTION/janction-render", "repo": "JasmyLab-JANCTION/janction-render", "verdict": "DEAD", "reason": "handshake failed: no initialize result (15 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.0}
+{"name": "com.schemity/mcp", "repo": "schemity/mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.atuzlak/kicad-splitplane", "repo": "atuzlak/kicad-splitplane", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.DamienDrash/iphone-mcp", "repo": "DamienDrash/iphone-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "dev.krusch/hydrascope", "repo": "kruschdev/HydraScope", "verdict": "DEAD", "reason": "npm install failed", "counts": null, "live_before_shutdown": null, "wall_clock_s": 2.9}
+{"name": "com.hodlodds/hodlodds-mcp", "repo": "hodlodds/hodlodds-sdk", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.mhmdaskari/overleaf-web-mcp", "repo": "mhmdaskari/overleaf-web-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.9}
+{"name": "io.github.matthiasnordwig/matrix-mcp", "repo": "matthiasnordwig/matrix-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 8.3}
+{"name": "dev.krusch/krusch-frontend-mcp", "repo": "kruschdev/krusch-frontend-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "dev.krusch/grounded-harness", "repo": "kruschdev/grounded-harness", "verdict": "DEAD", "reason": "npm install failed", "counts": null, "live_before_shutdown": null, "wall_clock_s": 1.1}
+{"name": "dev.krusch/g-krusch", "repo": "kruschdev/G-krusch", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.4}
+{"name": "dev.krusch/krusch-coding-harness", "repo": "kruschdev/krusch-coding-harness", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "dev.krusch/krusch-git", "repo": "kruschdev/krusch-git", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.4}
+{"name": "io.github.tukorama/mcp-server-everesteer", "repo": "tukorama/mcp-server-everesteer", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "dev.krusch/krusch-context-mcp", "repo": "kruschdev/krusch-context-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.sly13/cryptoetf", "repo": "zerosix-studio/cryptoetf-mcp", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'cryptoetf-mcp: https://mcp.cryptoetf.today/mcp unreachable \u2014 fetch failed'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "dev.krusch/krusch-stack", "repo": "kruschdev/krusch-stack", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.8}
+{"name": "io.github.JoviDeCroock/pracht", "repo": "JoviDeCroock/pracht", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.3}
+{"name": "com.mairwunnx/minecraft-mcp", "repo": "MairwunNx/minecraft-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.3}
+{"name": "io.github.skovtun/coherent", "repo": "skovtun/coherent-design-method", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.8}
+{"name": "io.github.drew-dot-com/charter", "repo": "drew-dot-com/charter", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.1}
+{"name": "io.github.jztan/kampung-mcp", "repo": "jztan/kampung-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.rayson-tech/nomarmy", "repo": "rayson-tech/nomarmy", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 10.4}
+{"name": "io.github.Pyrochem/universal-quant-tournament-mcp", "repo": "Pyrochem/universal-quant-tournament-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.SpIob/devlog", "repo": "SpIob/devlog-cli", "verdict": "DEAD", "reason": "handshake failed: no initialize result (37 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.0}
+{"name": "io.github.SergeyShk/ruts-mcp", "repo": "SergeyShk/ruTS-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.9}
+{"name": "io.github.ComplyEdge/complyedge", "repo": "ComplyEdge/complyedge", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.6}
+{"name": "io.github.hslee16/archy", "repo": "hslee16/archy", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.cutoptim/engine", "repo": "cutoptim/engine-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "com.temporevenue/proposals", "repo": "TempoRevenue/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.tombaldwin/nattermatic", "repo": "tombaldwin/nattermatic", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.1}
+{"name": "io.github.zaprojektuj-ogrod/garden-design-mcp", "repo": "zaprojektuj-ogrod/garden-design-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.5}
+{"name": "tools.secondlayer/secondlayer", "repo": "ryanwaits/secondlayer", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 16.5}
+{"name": "io.github.chriswu727/argus", "repo": "chriswu727/argus", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.bartholomej/node-csfd-api", "repo": "bartholomej/node-csfd-api", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.0}
+{"name": "io.github.diffbot/diffbot-mcp", "repo": "diffbot/diffbot-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.6}
+{"name": "io.github.Jcorderop02/packet-tracer-mcp", "repo": "Jcorderop02/packet-tracer-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.3}
+{"name": "io.github.RevenueClaw/mcp-chipradar", "repo": "RevenueClaw/mcp-chipradar", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.7}
+{"name": "app.fluxygram/mcp", "repo": "Fluxygram/fluxygram", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.YUZU-Hub/wiring-diagram-mcp", "repo": "YUZU-Hub/wiring-diagram-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.qants-labs/mizan-ledger", "repo": "qants-labs/mizan-ledger", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.4}
+{"name": "io.github.shenn667/agent-context-bridge", "repo": "shenn667/agent-context-bridge", "verdict": "DEAD", "reason": "ambiguous or missing console scripts: ['acb', 'acb-mcp', 'agent-bridge']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.3}
+{"name": "io.github.Sempera-AI/sempera", "repo": "Sempera-AI/sempera-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.applitools/applitools", "repo": "applitools/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.7}
+{"name": "io.github.SugarCasino/mcp", "repo": "SugarCasino/ts-sdks", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.4}
+{"name": "io.github.foxdavidson/property-mortgage-mcp", "repo": "foxdavidson/property-mortgage-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.Vordium/vordium-mcp", "repo": "Vordium/vordium-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.rayklanderman/devray-datalab-mcp", "repo": "rayklanderman/devray-datalab-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.sebastienrousseau/bankstatementparser-mcp", "repo": "sebastienrousseau/bankstatementparser-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.9}
+{"name": "io.github.imouiche/mitre-atlas-mcp-server", "repo": "imouiche/mitre-atlas-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 25.0}
+{"name": "io.github.BITRATE-Labs/vrchat-mcp", "repo": "BITRATE-Labs/vrchat-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.6}
+{"name": "com.execbro/execbro", "repo": "igorzheludkov/execbro", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.2}
+{"name": "io.github.hlplanet/hlplanet-mcp", "repo": "hlplanet/hlplanet-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.noetive/riffle", "repo": "noetive/riffle", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.6}
+{"name": "io.github.faxforagents/faxforagents-mcp", "repo": "faxforagents/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "app.nomac/simulator-use", "repo": "NoMac-app/simulator-use", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.index-pages/getdr-mcp", "repo": "index-pages/getdr-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.RepoAssay/repo-test-architect", "repo": "repoassay/repo-test-architect", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.simonjamescarroll/thunderbirdmcp", "repo": "simonjamescarroll/thunderbirdmcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.hyusband/droid-agent", "repo": "hyusband/droid-agent", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.codedroid-team/codedroid-mcp", "repo": "codedroid-team/codedroid-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 29.1}
+{"name": "io.github.CordilleraSarl/clearotron", "repo": "CordilleraSarl/clearotron", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 12.1}
+{"name": "io.github.ipvolt/proxy-toolkit", "repo": "ipvolt/proxy-toolkit-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.7}
+{"name": "io.github.skyblue3925-svg/geo-figure-mcp", "repo": "skyblue3925-svg/geo-figure-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.7}
+{"name": "io.github.avansaber/seo-monster", "repo": "avansaber/seo-monster", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "io.github.brianirish/laravel-mcp-companion", "repo": "brianirish/laravel-mcp-companion", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.5}
+{"name": "io.onesource/mcp", "repo": "blockparty-global/1s-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 19.2}
+{"name": "io.github.hrabosh/wos-mcp-bridge", "repo": "hrabosh/wos-mcp-bridge", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.0}
+{"name": "io.github.brainfoods-studio/llmgraph", "repo": "brainfoods-studio/llmgraph-agent-plugin", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.9}
+{"name": "io.github.dmytrome/groundhog-mcp", "repo": "dmytrome/groundhog", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.biocatalystfeed/biocatalystfeed", "repo": "biocatalystfeed/biocatalystfeed", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.lacausecrypto/mcp-nbb", "repo": "lacausecrypto/mcp-nbb", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.NJohansen/handle-mcp", "repo": "NJohansen/handle-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "net.unfret/mcp", "repo": "kroshtan/unfret_backend", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.arcaeon/arcaeon", "repo": "Arcaeon-io/arcaeon", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.getsentry/sentry-mcp", "repo": "getsentry/toolkit", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.1}
+{"name": "io.github.lacausecrypto/mcp-belgium", "repo": "lacausecrypto/mcp-belgium", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.jkresearch8/domscout", "repo": "jkresearch8/domscout-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "com.quickcoderhub/tools", "repo": "Youismw/quickcoderhub-web", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'Remote MCP error: fetch failed'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.microsoft/playwright-mcp", "repo": "microsoft/playwright-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.2}
+{"name": "io.github.claimidx/claimidx", "repo": "claimidx/claimidx", "verdict": "DEAD", "reason": "handshake failed: no initialize result (4 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.9}
+{"name": "io.github.beSaif/zenpilot", "repo": "beSaif/zenpilot", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.9}
+{"name": "io.github.Wolfe-Jam/mcp-better", "repo": "Wolfe-Jam/mcp-better", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.ctrlpi/pico-bay", "repo": "ctrlpi/pico-bay", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.CoinRithm/mcp-trading", "repo": "CoinRithm/coinrithm-agent-trading", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['coinrithm-agent', 'coinrithm-mcp']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 3.3}
+{"name": "io.github.Vladimir-Human/ru-marketplace-mcp", "repo": "Vladimir-Human/ru-marketplace-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.3}
+{"name": "io.github.ctrlpi/pi-bay", "repo": "ctrlpi/pi-bay", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.ctrlpi/ctrlpi-mcp", "repo": "ctrlpi/ctrlpi-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.Samyrrrrrr990/openleads", "repo": "Samyrrrrrr990/openleads", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.AKzar1el/mcp-web-validator", "repo": "AKzar1el/mcp-web-validator", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.0}
+{"name": "io.github.allchemylabs/aether-wcag-scanner", "repo": "allchemylabs/aether-wcag-scanner", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.4}
+{"name": "io.github.diy-accounting-uk/diya-submit", "repo": "diy-accounting-uk/submit.diyaccounting.co.uk", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.5}
+{"name": "io.github.tillbooks/tillbooks", "repo": "tillbooks/tillbooks", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.3}
+{"name": "io.github.seatable/seatable", "repo": "seatable/seatable-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.6}
+{"name": "io.github.endurancetools/garmin-mcp", "repo": "endurancetools/garmin-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.UI5/webcomponents-react-mcp-server", "repo": "UI5/webcomponents-react", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.0xVarius/basedloans", "repo": "0xVarius/basedloans-agents", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 15.5}
+{"name": "dev.humanuse/human-use", "repo": "human-use/human-use", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.A1-x-Tech/mcp-google-tagmanager", "repo": "A1-x-Tech/mcp-google-tagmanager", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.spurvik/spurvik-mcp-server", "repo": "spurvik/spurvik", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.dinhkarate/keyshroud", "repo": "dinhkarate/keyshroud", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.jacobfunch/usefillo", "repo": "jacobfunch/usefillo", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.Omodaka9375/browserr", "repo": "Omodaka9375/browserr", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.4}
+{"name": "io.github.Tthanh2k6/supabase-rls-check", "repo": "Tthanh2k6/supabase-rls-check", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.AdamWashingtonIII/coinop-mcp", "repo": "AdamWashingtonIII/coinop", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.3}
+{"name": "io.github.coltonbearden/filester-mcp", "repo": "coltonbearden/filester-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.6}
+{"name": "io.github.rowstile/rowstile", "repo": "rowstile/rowstile", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 8.6}
+{"name": "io.github.codellyson/passalong", "repo": "codellyson/passalong", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.jgravelle/jdocmunch-mcp", "repo": "jgravelle/jdocmunch-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.Opita-Code/dark-memory-mcp", "repo": "Opita-Code/dark-memory-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 3, "wall_clock_s": 8.0}
+{"name": "io.github.marciocar/kg-ssot", "repo": "marciocar/kg-ssot", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.caelum29/calibre-mcp", "repo": "caelum29/calibre-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.5}
+{"name": "io.github.ykarapazar/fontes", "repo": "ykarapazar/fontes", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.Fe2-O3/imap-wizard", "repo": "Fe2-O3/imap-wizard", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.5}
+{"name": "io.github.heroson86462-hsnu/agenttrust-kye", "repo": "heroson86462-hsnu/agenttrust-kye", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "com.crosodo/mcp", "repo": "Terahertz-Inc/crosodo-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 38.7}
+{"name": "io.sota/mcp", "repo": "sota-deploy/mcp-server", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['sota-mcp', 'sota-mcp-http']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 4.0}
+{"name": "io.github.beiryu/vn-skills", "repo": "beiryu/vn-skills", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.1}
+{"name": "io.github.elViRafa/memory-fabric", "repo": "elViRafa/agentic-memory", "verdict": "DEAD", "reason": "ambiguous or missing console scripts: ['ai-memory', 'memory-fabric-mcp']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.3}
+{"name": "io.github.GhostPawJS/grimoire", "repo": "GhostPawJS/grimoire", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.pendpost/pendpost", "repo": "pendpost/pendpost", "verdict": "DEAD", "reason": "handshake failed: no initialize result (3 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 38.6}
+{"name": "io.github.arif-js/dataparity", "repo": "arif-js/dataparity", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.2}
+{"name": "io.github.awaistechnologist/llm-sidecar", "repo": "awaistechnologist/llm-sidecar", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.8}
+{"name": "io.github.hjbaard/solidworks-mcp", "repo": "hjbaard/SolidWorks-MCP", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "dev.dnsdoctor/dns-doctor", "repo": "dnsdoctor/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.withpica/pica", "repo": "withpica/pica", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.6}
+{"name": "io.github.EslaM-X/coreguard-agent-commerce", "repo": "coreguard-global/CoreGuard", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.8}
+{"name": "network.pocket/agentic-portal-mcp", "repo": "pokt-network/agentic-portal-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 15.3}
+{"name": "io.github.tia-forge/tialink", "repo": "tia-forge/tialink", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'fetch failed (endpoint: http://127.0.0.1:8080/mcp)'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.ShaanGS/ventriloquist", "repo": "ShaanGS/ventriloquist", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.EugeneNeverov/productops-jira", "repo": "EugeneNeverov/productops-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.wonderwhy-er/desktop-commander", "repo": "wonderwhy-er/DesktopCommanderMCP", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 22.1}
+{"name": "io.github.romudille-bit/agentpay", "repo": "romudille-bit/agentpay", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.OrderlyNetwork/trading-mcp", "repo": "OrderlyNetwork/trading-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.imatza-rh/mcp-zuul", "repo": "imatza-rh/mcp-zuul", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.1}
+{"name": "io.github.0xfreak0/sui-mcp", "repo": "0xfreak0/sui-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.0}
+{"name": "io.github.beepboop2025/seiche", "repo": "beepboop2025/seiche", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.2}
+{"name": "io.github.awesomemotive/pushengage-mcp", "repo": "awesomemotive/pushengage-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.9}
+{"name": "io.github.pkotecha-eng/aria-mcp-server", "repo": "pkotecha-eng/aria-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "io.github.virusxd521/rendra", "repo": "virusxd521/rendra-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.zzhang82/agent-memory-bridge", "repo": "zzhang82/Agent-Memory-Bridge", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.kritzerenkrieg/raspberry-pi-connect-mcp", "repo": "kritzerenkrieg/raspberry-pi-connect-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.1}
+{"name": "io.github.Looted/kibi-mcp", "repo": "Looted/kibi", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.2}
+{"name": "io.github.agentwik-labs/skillhawk", "repo": "agentwik-labs/skillhawk", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "io.github.jakcmencz/sentinel-ir-mcp", "repo": "jakcmencz/sentinel-ir-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.SinanTufekci/agent-intern", "repo": "SinanTufekci/agent-intern", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "com.streamkap/tools", "repo": "streamkap-com/streamkap-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.3}
+{"name": "io.github.financeratecalc/frc-mcp", "repo": "financeratecalc/frc-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.mohammad-abbasi-sh/bonbama-mcp", "repo": "mohammad-abbasi-sh/bonbama-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.6}
+{"name": "io.github.whisper-sec/whisper", "repo": "whisper-sec/whisper-cli", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.7}
+{"name": "io.github.srpp011/dailymeteo-mcp", "repo": "srpp011/dailymeteo-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.2}
+{"name": "io.github.alex-jordan547/renforge", "repo": "alex-jordan547/renforge-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.gawk-dev/mcpgawk", "repo": "gawk-dev/mcpgawk", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.felipebasurto/viajante", "repo": "felipebasurto/viajante", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.2}
+{"name": "io.github.juulieen/beeper-mcp-addon", "repo": "juulieen/beeper-mcp-addon", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.NeuralNexusNote/n3mc-workingmemory", "repo": "NeuralNexusNote/n3mcmcp-lite", "verdict": "DEAD", "reason": "ambiguous or missing console scripts: ['n3mc-mcp-lite', 'n3mc-workingmemory']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.6}
+{"name": "io.github.KoyoYeager/pystub", "repo": "KoyoYeager/mcp-pystub", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.6}
+{"name": "io.github.getlake/lake-gate", "repo": "getlake/lake-gate", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.memtomem/memtomem", "repo": "memtomem/memtomem", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "io.github.jakubro/folio", "repo": "jakubro/folio", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "dev.schemasketch/mcp-server", "repo": "SchemaSketch-dev/schemasketch-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.sierikov/audiobookshelf-mcp", "repo": "sierikov/audiobookshelf-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.6}
+{"name": "io.github.mobile-next/mobile-mcp", "repo": "mobile-next/mobile-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.0}
+{"name": "io.github.Vouchwell/vouchwell", "repo": "Vouchwell/vouchwell", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.1}
+{"name": "io.github.cesteral/msads-mcp", "repo": "cesteral/mcp-open-advertising", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 19.5}
+{"name": "io.github.sepehr071/iran-brokers-mcp", "repo": "sepehr071/iran-brokers-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/zoomit-mcp", "repo": "sepehr071/zoomit-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.sepehr071/varzesh3-mcp", "repo": "sepehr071/varzesh3-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/tsetmc-mcp", "repo": "sepehr071/tsetmc-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/torob-mcp", "repo": "sepehr071/torob-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/tiwall-mcp", "repo": "sepehr071/tiwall-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/time-ir-mcp", "repo": "sepehr071/time-ir-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/telewebion-mcp", "repo": "sepehr071/telewebion-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/tgju-mcp", "repo": "sepehr071/tgju-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/technolife-mcp", "repo": "sepehr071/technolife-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.sepehr071/tapsifood-mcp", "repo": "sepehr071/tapsifood-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.sepehr071/snapptrip-mcp", "repo": "sepehr071/snapptrip-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/taaghche-mcp", "repo": "sepehr071/taaghche-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.sepehr071/snappshop-mcp", "repo": "sepehr071/snappshop-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.8}
+{"name": "io.github.sepehr071/shopino-mcp", "repo": "sepehr071/shopino-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/snapp-mcp", "repo": "sepehr071/snapp-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.sepehr071/raja-mcp", "repo": "sepehr071/raja-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/sheypoor-mcp", "repo": "sepehr071/sheypoor-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/qavanin-mcp", "repo": "sepehr071/qavanin-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/otaghak-mcp", "repo": "sepehr071/otaghak-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/paziresh24-mcp", "repo": "sepehr071/paziresh24-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.sepehr071/okala-mcp", "repo": "sepehr071/okala-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/neshan-mcp", "repo": "sepehr071/neshan-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/namasha-mcp", "repo": "sepehr071/namasha-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/milligold-mcp", "repo": "sepehr071/milligold-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.sepehr071/mrbilit-mcp", "repo": "sepehr071/mrbilit-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.sepehr071/mobile-ir-mcp", "repo": "sepehr071/mobile-ir-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/masterkala-mcp", "repo": "sepehr071/masterkala-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/maktabkhooneh-mcp", "repo": "sepehr071/maktabkhooneh-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.sepehr071/kilid-mcp", "repo": "sepehr071/kilid-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/khodro45-mcp", "repo": "sepehr071/khodro45-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/khanoumi-mcp", "repo": "sepehr071/khanoumi-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/karlancer-mcp", "repo": "sepehr071/karlancer-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/jabama-mcp", "repo": "sepehr071/jabama-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/iranseda-mcp", "repo": "sepehr071/iranseda-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/iranketab-mcp", "repo": "sepehr071/iranketab-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/iran-weather-mcp", "repo": "sepehr071/iran-weather-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "ly.img/codesign", "repo": "imgly/codesign", "verdict": "RESIDUE_BOTH_ARMS", "reason": null, "counts": {"pid_trials": 10, "pid_with_residue": 10, "group_trials": 10, "group_with_residue": 10, "all_handshakes_ok": true}, "live_before_shutdown": 2, "wall_clock_s": 159.9}
+{"name": "io.github.sepehr071/iran-tax-mcp", "repo": "sepehr071/iran-tax-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/iran-roads-mcp", "repo": "sepehr071/iran-roads-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/iran-quake-mcp", "repo": "sepehr071/iran-quake-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/iran-news-mcp", "repo": "sepehr071/iran-news-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.sepehr071/iran-dictionary-mcp", "repo": "sepehr071/iran-dictionary-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.sepehr071/iran-downloads-mcp", "repo": "sepehr071/iran-downloads-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/iran-bus-mcp", "repo": "sepehr071/iran-bus-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/iran-crypto-mcp", "repo": "sepehr071/iran-crypto-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/iran-apps-mcp", "repo": "sepehr071/iran-apps-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/ime-mcp", "repo": "sepehr071/ime-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/fidibo-mcp", "repo": "sepehr071/fidibo-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/flytoday-mcp", "repo": "sepehr071/flytoday-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/doctoreto-mcp", "repo": "sepehr071/doctoreto-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/faradars-mcp", "repo": "sepehr071/faradars-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.michvllni/mcp-azahar", "repo": "michvllni/mcp-azahar", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.3}
+{"name": "io.github.sepehr071/divar-mcp", "repo": "sepehr071/divar-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.sepehr071/digistyle-mcp", "repo": "sepehr071/digistyle-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.sepehr071/digikala-mcp", "repo": "sepehr071/digikala-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/digiato-mcp", "repo": "sepehr071/digiato-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.sepehr071/codal-mcp", "repo": "sepehr071/codal-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.sepehr071/cinematicket-mcp", "repo": "sepehr071/cinematicket-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.1}
+{"name": "io.github.sepehr071/basalam-mcp", "repo": "sepehr071/basalam-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/baneh-mcp", "repo": "sepehr071/baneh-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/banimode-mcp", "repo": "sepehr071/banimode-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "io.github.sepehr071/aparat-mcp", "repo": "sepehr071/aparat-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "au.com.brandrail/brandrail", "repo": "brandrail-app/brandrail", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.sepehr071/balad-mcp", "repo": "sepehr071/balad-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/asalbanoo-mcp", "repo": "sepehr071/asalbanoo-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/amar-mcp", "repo": "sepehr071/amar-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.sepehr071/30book-mcp", "repo": "sepehr071/30book-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.2}
+{"name": "io.github.sepehr071/virgool-mcp", "repo": "sepehr071/virgool-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.3}
+{"name": "io.github.sepehr071/persian-wikipedia-mcp", "repo": "sepehr071/persian-wikipedia-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.0}
+{"name": "io.github.pvliesdonk/markdown-vault-mcp", "repo": "pvliesdonk/markdown-vault-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result (27 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.6}
+{"name": "io.github.sepehr071/ninisite-mcp", "repo": "sepehr071/ninisite-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.Ashutosh3142857/lugh", "repo": "Ashutosh3142857/lugh-lang", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.olegsher-ds-2025/mcp-il-innovation", "repo": "olegsher-ds-2025/mcp-il-innovation", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.9}
+{"name": "io.github.olegsher-ds-2025/mcp-eu-funding", "repo": "olegsher-ds-2025/mcp-eu-funding", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.2}
+{"name": "io.github.CHAPIBUNNY/repolens", "repo": "CHAPIBUNNY/repolens", "verdict": "DEAD", "reason": "handshake failed: no initialize result (91 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.2}
+{"name": "io.github.Applied-Artificial-Intelligence-Eurecat/epanet-mcp-server", "repo": "Applied-Artificial-Intelligence-Eurecat/epanet-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.0}
+{"name": "io.github.wiiiktor/chopper", "repo": "wiiiktor/chopper_demo", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 13.7}
+{"name": "io.github.matteoredaelli/atm-milano-mcp", "repo": "matteoredaelli/atm-milano", "verdict": "DEAD", "reason": "uv install failed (wheels only)", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.2}
+{"name": "io.github.zamansheikh/memory-lean", "repo": "zamansheikh/memory-lean", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.7}
+{"name": "io.github.blink1217/quant-swarm", "repo": "blink1217/trading-swarm-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.4}
+{"name": "io.github.matteoredaelli/italy-trains-viaggiatreno-mcp", "repo": "matteoredaelli/pyviaggiatreno", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 10.0}
+{"name": "com.keepmacawake/mcp", "repo": "bartdudzic/keepmacawake", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.2}
+{"name": "io.github.emirmrkaljevic/iotaudit", "repo": "emirmrkaljevic/iotaudit", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.9}
+{"name": "io.github.gronare/mindin", "repo": "gronare/mindin", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.3}
+{"name": "io.github.kuzenlabs/maviapi-mcp", "repo": "kuzenlabs/maviapi-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.4}
+{"name": "ai.shiwake/mcp", "repo": "iszgroup/shiwake-ai-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.distronode-corporation/worldinmotion", "repo": "distronode-corporation/worldinmotion", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.9}
+{"name": "com.getmattered/getmattered", "repo": "getmattered/getmattered-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 40.4}
+{"name": "io.github.cyanheads/ntfy-mcp-server", "repo": "cyanheads/ntfy-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 12.0}
+{"name": "app.anakior/atlas-mind", "repo": "Anakior/atlas-mind", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.0}
+{"name": "io.github.cyanheads/eur-lex-mcp-server", "repo": "cyanheads/eur-lex-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.0}
+{"name": "io.github.cyanheads/open-meteo-mcp-server", "repo": "cyanheads/open-meteo-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.8}
+{"name": "io.github.oortmem/oort", "repo": "oortmem/oort", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.0}
+{"name": "io.github.zyno-io/zynohosting", "repo": "zyno-io/zynohosting-cli", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.4}
+{"name": "io.github.cyanheads/gdelt-mcp-server", "repo": "cyanheads/gdelt-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.7}
+{"name": "io.github.sathya-sankaran/twelveswaras", "repo": "twelveswaras/twelveswaras", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'Could not reach https://twelveswaras.com (fetch failed).'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.6}
+{"name": "io.github.distronode-corporation/mcp-patchbay", "repo": "distronode-corporation/mcp-patchbay", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.7}
+{"name": "io.github.ussefidder/shopify-store-sync-mcp", "repo": "ussefidder/shopify-store-sync-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}
+{"name": "com.growsurf/growsurf", "repo": "growsurf/growsurf-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "io.github.cwasley/earnrate", "repo": "cwasley/earnrate", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.6}
+{"name": "io.github.cyanheads/internet-archive-mcp-server", "repo": "cyanheads/internet-archive-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.3}
+{"name": "io.github.orifisher2/sqlike-mcp", "repo": "orifisher2/sqlike", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.5}
+{"name": "ai.achromat/mcp-server", "repo": "achromat-ai/achromat-mcp-server", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.5}
+{"name": "io.github.TheTsungYing/annealbridge", "repo": "TheTsungYing/AnnealBridge", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.9}
+{"name": "io.github.gulmezeren2-byte/ihalent", "repo": "gulmezeren2-byte/ihalent", "verdict": "DEAD", "reason": "handshake failed: no initialize result (32 non-JSON stdout lines)", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 7.0}
+{"name": "io.github.roomi-fields/rtfm", "repo": "roomi-fields/rtfm", "verdict": "DEAD", "reason": "ambiguous or missing console scripts: ['rtfm', 'rtfm-serve']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 0.3}
+{"name": "io.github.twojlogin/awesome-core", "repo": "twojlogin/awesome-core", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "com.parallelsandbox/parallelsandbox", "repo": "parallel-sandbox/parallelsandbox-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 9.0}
+{"name": "com.vibgrate/ai-context", "repo": "vibgrate/cli", "verdict": "DEAD", "reason": "ambiguous bin entry points: ['vg', 'vibgrate']", "counts": null, "live_before_shutdown": null, "wall_clock_s": 6.9}
+{"name": "io.github.cyanheads/crossref-mcp-server", "repo": "cyanheads/crossref-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.6}
+{"name": "io.github.cyanheads/uniprot-mcp-server", "repo": "cyanheads/uniprot-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 11.1}
+{"name": "io.github.Archaofan/xusbcan", "repo": "Archaofan/xusbcan-cli", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.5}
+{"name": "io.github.alyiox/mcp-clickhousex", "repo": "alyiox/mcp-clickhousex", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.4}
+{"name": "io.github.NITI-Lab/ajiro-api", "repo": "niti-lab/ajiro-api", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.1}
+{"name": "io.github.cyanheads/openalex-mcp-server", "repo": "cyanheads/openalex-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.3}
+{"name": "io.github.utilix-tech/utilix-mcp", "repo": "utilix-tech/utilix-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 12.4}
+{"name": "io.github.cyanheads/fcc-spectrum-mcp-server", "repo": "cyanheads/fcc-spectrum-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 10.1}
+{"name": "io.alterlab/mcp-server", "repo": "RapierCraft/alterlab-mcp-server", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 8.4}
+{"name": "io.github.clauseo-ai/stetdoc", "repo": "clauseo-ai/stetdoc", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 2, "wall_clock_s": 7.5}
+{"name": "io.github.cnkang/qdrant-memory", "repo": "cnkang/qdrant-memory-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.3}
+{"name": "io.github.agentic-hil/agentic-hil", "repo": "agentic-hil/agentic-hil", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 7.3}
+{"name": "com.revclamp/revclamp-mcp", "repo": "lhphong09t2/revclamp-mcp", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': 'MCP transport error: fetch failed'}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.emailens/mcp", "repo": "emailens/mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 11.5}
+{"name": "io.github.VanLandinghamLabs/arcsync-mcp", "repo": "VanLandinghamLabs/arcsync-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.8}
+{"name": "io.github.FTHTrading/genesis402-mcp", "repo": "FTHTrading/genesis402-agent-kit", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 17.0}
+{"name": "io.github.stoolap/mcp", "repo": "stoolap/stoolap-mcp", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 9.5}
+{"name": "com.hproxy/mcp", "repo": "hproxy-com/hproxy-mcp", "verdict": "DEAD", "reason": "handshake failed: initialize error: {'code': -32603, 'message': \"HProxy's MCP server could not be reached: fetch failed (EAI_AGAIN).\"}", "counts": null, "live_before_shutdown": 1, "wall_clock_s": 6.5}
+{"name": "io.github.lifan-builds/agent-autofill", "repo": "lifan-builds/agent-autofill", "verdict": "DEAD", "reason": "handshake failed: no initialize result", "counts": null, "live_before_shutdown": 0, "wall_clock_s": 6.8}
+{"name": "io.github.TMHSDigital/screencast-mcp", "repo": "TMHSDigital/screencast-mcp", "verdict": "PASS_SCREEN", "reason": null, "counts": null, "live_before_shutdown": 1, "wall_clock_s": 8.6}

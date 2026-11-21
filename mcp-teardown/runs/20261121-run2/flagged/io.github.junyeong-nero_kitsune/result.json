@@ -1,0 +1,494 @@
+{
+  "counts": {
+    "all_handshakes_ok": true,
+    "group_trials": 10,
+    "group_with_residue": 10,
+    "pid_trials": 10,
+    "pid_with_residue": 10
+  },
+  "install": {
+    "argv": [
+      "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/kitsune-browser-mcp"
+    ],
+    "artefact": {
+      "console_script": "kitsune-browser-mcp",
+      "published_files": [
+        {
+          "filename": "kitsune_browser_mcp-0.8.1-py3-none-any.whl",
+          "sha256": "a4a5a68d4dcb14d3700019f105e2e73ca26df5d45437f97b9e9e512ab3cc2ae9"
+        },
+        {
+          "filename": "kitsune_browser_mcp-0.8.1.tar.gz",
+          "sha256": "9c6d989ae58a8adfae08b8f799c0e2eafcdafe5e98f4d281468a2767d62da3e5"
+        }
+      ],
+      "registry": "pypi",
+      "resolved_version": "0.8.1",
+      "spec": "kitsune-browser-mcp==0.8.1"
+    },
+    "ok": true,
+    "reason": ""
+  },
+  "started_at": "2026-11-21T11:00:53Z",
+  "target": {
+    "default_env": {
+      "KITSUNE_SCRIPTING": "1"
+    },
+    "identifier": "kitsune-browser-mcp",
+    "name": "io.github.junyeong-nero/kitsune",
+    "package_args": [],
+    "package_version": "0.8.1",
+    "registry_snapshot_sha256": "e27815345a70935e9f77a3874faf6642c6fab5f01e1ab3cc0b11d97e95febc39",
+    "registry_type": "pypi",
+    "repo": "junyeong-nero/kitsune",
+    "required_env": [],
+    "subfolder": null,
+    "updated_at": "2026-11-20T11:22:10.40584Z",
+    "version": "0.8.1"
+  },
+  "trials": [
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 8255,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-46c66f85e0564431",
+      "teardown_return_s": 0.214,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 8389,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-1c3d1580b1144a1e",
+      "teardown_return_s": 0.164,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 8588,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-0338f135259c40b8",
+      "teardown_return_s": 0.17,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 8782,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-9d471c163e694ce8",
+      "teardown_return_s": 0.266,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 8925,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-3d19317af1bb449e",
+      "teardown_return_s": 0.165,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 9050,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-fb1f0898b74d4fc2",
+      "teardown_return_s": 0.164,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 9257,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4f3bc4ae56a64b7b",
+      "teardown_return_s": 0.216,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 9389,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-611a9fd502b440ce",
+      "teardown_return_s": 0.221,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 9550,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-0ead7bd3044249b4",
+      "teardown_return_s": 0.164,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 9710,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-ce201e8b7ebb4453",
+      "teardown_return_s": 0.164,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 9896,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-13b157226037407c",
+      "teardown_return_s": 0.168,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 10096,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-848f76e9470643ae",
+      "teardown_return_s": 0.215,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 10315,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-49bc8f374916400c",
+      "teardown_return_s": 0.164,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 10511,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-a904ec19ebd94c5c",
+      "teardown_return_s": 0.244,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 10664,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-5e9173aa7b6a44f4",
+      "teardown_return_s": 0.215,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 10821,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-2a446c7ff86d4591",
+      "teardown_return_s": 0.165,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 10981,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-c9d3d29478944deb",
+      "teardown_return_s": 0.168,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 11111,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-d9537f859b044f1a",
+      "teardown_return_s": 0.167,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 11310,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-1ab34517605c4b50",
+      "teardown_return_s": 0.214,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 11527,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-f9f82c4847104108",
+      "teardown_return_s": 0.218,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.junyeong-nero_kitsune-04add1/venv/bin/python -m kitsune.bridge",
+          "pid": 11702,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "Kitsune",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-b7188ff26a2c4182",
+      "teardown_return_s": 0.165,
+      "tool_count": 6
+    }
+  ],
+  "verdict": "RESIDUE_BOTH_ARMS",
+  "wall_clock_s": 462.8
+}

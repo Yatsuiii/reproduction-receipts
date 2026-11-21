@@ -1,0 +1,40 @@
+{
+  "run_id": "20261121T104242Z",
+  "targets_file": "/home/claude/reproduction-receipts/mcp-teardown/targets.jsonl",
+  "targets_sha256": "a8bbd27be0e09d34324dc7df514b1548fa0305361c6274f8a4ed45c2cd72225b",
+  "n_targets": 1000,
+  "environment": {
+    "os": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39",
+    "kernel": "6.18.44-fc-v726",
+    "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "cpus": 4,
+    "mem_gb": 15.7,
+    "python": "3.13.18",
+    "node": "v22.23.5",
+    "npm": "10.9.9",
+    "uv": "uv 0.11.32 (x86_64-unknown-linux-gnu)",
+    "runner_sha256": "205449453cc4278a1222202532a683fb5f33c3a68221256c8ecfd6d24a716a8f",
+    "timeouts": {
+      "handshake_s": 30.0,
+      "eof_wait_s": 2.0,
+      "term_wait_s": 2.0,
+      "settle_s": 5.0,
+      "confirm_trials": 10
+    }
+  },
+  "started_at": "2026-11-21T10:42:42Z",
+  "arming": {
+    "negative_probe_empty": true,
+    "leaky_control_confirmed": true,
+    "clean_control_pass": true,
+    "armed": true
+  },
+  "tally": {
+    "PASS_SCREEN": 731,
+    "DEAD": 262,
+    "UNCONFIRMED": 3,
+    "RESIDUE_BOTH_ARMS": 4
+  },
+  "wall_clock_s": 2980.0,
+  "finished_at": "2026-11-21T11:32:22Z"
+}

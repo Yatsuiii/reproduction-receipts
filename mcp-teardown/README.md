@@ -12,6 +12,12 @@ against published stdio MCP servers in bulk.
 When a client shuts a stdio MCP server down the way the MCP lifecycle spec describes (close stdin, wait,
 SIGTERM, wait, SIGKILL), are processes the server started still running afterwards?
 
+## Result so far
+
+[Run 2](runs/20261121-run2/RESULT.md): 1,000 servers, 738 live, 49 with a child process, **0 confirmed**.
+The seven flagged servers each start an intentional shared daemon. [Run 1](runs/20261121-run1/NOTE.md)
+is kept as a failed run (runner bug).
+
 ## Pieces
 
 | File | What it does |
