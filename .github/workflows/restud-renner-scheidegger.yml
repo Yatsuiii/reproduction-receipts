@@ -1,0 +1,60 @@
+name: REStud Renner-Scheidegger rerun (second machine)
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['restud-renner-scheidegger/**', '.github/workflows/restud-renner-scheidegger.yml']
+permissions:
+  contents: read
+jobs:
+  step2:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      UPSTREAM: https://github.com/GaussianProcessesForDynamicEcon/DynamicIncentiveProblems
+      COMMIT: 374fe17a6a21bb137c469260a7e1f72f2c6246ed
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Clean clone of the authors' package at the pinned commit
+        run: |
+          git clone -q "$UPSTREAM" pkg
+          git -C pkg checkout -q "$COMMIT"
+          test "$(git -C pkg rev-parse HEAD)" = "$COMMIT"
+          (cd pkg && git ls-files | xargs sha256sum) > package-files.sha256
+          diff package-files.sha256 restud-renner-scheidegger/evidence/package-files.sha256
+      - name: Install Miniforge (same installer bytes as the first machine)
+        run: |
+          curl -sL -o Miniforge3.sh https://github.com/conda-forge/miniforge/releases/download/26.9.4-2/Miniforge3-Linux-x86_64.sh
+          echo "bbaf16b3897da24c4be50315934ba74848f617b4495982841d6a0a60e0edbbdf  Miniforge3.sh" | sha256sum -c -
+          bash Miniforge3.sh -b -p "$HOME/miniforge"
+      - name: Step 1, 1_install.sh unchanged
+        working-directory: pkg
+        run: |
+          export PATH="$HOME/miniforge/bin:$PATH"
+          start=$(date +%s); bash ./1_install.sh > ../step1.log 2>&1; rc=$?; echo "exit=$rc wall_s=$(( $(date +%s)-start ))" | tee -a ../step1.log; exit $rc
+      - name: Step 2, 2_replicate_original.sh unchanged
+        working-directory: pkg
+        run: |
+          export PATH="$HOME/miniforge/bin:$PATH"
+          start=$(date +%s); bash ./2_replicate_original.sh > ../step2.log 2>&1; rc=$?; echo "exit=$rc wall_s=$(( $(date +%s)-start ))" | tee -a ../step2.log; exit $rc
+      - name: Compare every generated table with the paper's table and with the first machine
+        run: |
+          export PATH="$HOME/miniforge/bin:$PATH"; eval "$(conda shell.bash hook)"; conda activate rep
+          pip freeze > pip-freeze.txt
+          lscpu | grep -E "Model name|^CPU\(s\)" > hardware.txt; free -g >> hardware.txt
+          python restud-renner-scheidegger/compare_tables.py pkg/figure_replication/figure_and_table_paper pkg/figure_replication/figure_and_table_outputs/2 | tee compare-paper.txt
+          python restud-renner-scheidegger/compare_tables.py restud-renner-scheidegger/evidence/step2 pkg/figure_replication/figure_and_table_outputs/2 | tee compare-machine1.txt
+          sha256sum pkg/figure_replication/figure_and_table_outputs/2/*.tex > step2-tex.sha256
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: restud-renner-scheidegger-machine2
+          path: |
+            step1.log
+            step2.log
+            pip-freeze.txt
+            hardware.txt
+            compare-paper.txt
+            compare-machine1.txt
+            step2-tex.sha256
+            package-files.sha256
+            pkg/figure_replication/figure_and_table_outputs/2/

@@ -1,0 +1,144 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "/home/claude/cands/GaussianProcessesForDynamicEcon_DynamicIncentiveProblems",
+  "commit": "374fe17a6a21bb137c469260a7e1f72f2c6246ed"
+ },
+ "when": "2026-11-21T17:56:05Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "defaults",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 1,
+   "deviation": 3,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "PROPRIETARY_SOFTWARE",
+    "severity": "blocker",
+    "message": "Requires Mathematica, which is proprietary and not declared available on this desk. Rerun triage with --have mathematica if a licensed copy is available.",
+    "evidence": [
+     "dptorch/2D_Fernandes_Phelan/autarky_state_precompute.nb",
+     "dptorch/2D_baseline_to_limited_or/autarky_state_precompute.nb",
+     "dptorch/2D_limited_overreporting/2D_limitedor_autarky_state_precompute.nb",
+     "dptorch/4D_baseline_to_limited_or/autarky_state_precompute.nb",
+     "dptorch/4D_limited_overreporting/limitedor_autarky_state_precompute.nb"
+    ]
+   },
+   {
+    "code": "UNDECLARED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python code imports cyipopt, hydra, which no dependency file names.",
+    "evidence": [
+     "dptorch/10D_Fernandes_Phelan/GPModel.py",
+     "dptorch/10D_Fernandes_Phelan/Model.py",
+     "dptorch/10D_Fernandes_Phelan/Params.py",
+     "dptorch/10D_Fernandes_Phelan/PostProcess.py",
+     "dptorch/2D_Fernandes_Phelan/GPModel.py"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "16 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb:56",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb:58",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb:60",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb:62",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb:59",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb:61",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb:63",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb:65",
+     "figure_replication/Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb:245",
+     "figure_replication/Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb:247"
+    ]
+   },
+   {
+    "code": "LONG_COMPUTE",
+    "severity": "deviation",
+    "message": "The documentation claims a run time of about 346 hours, over this desk's budget of 24 hours (--max-hours). A full rerun needs a compute plan; a partial rerun must say which parts it skipped.",
+    "evidence": []
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "18 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb:74",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb:174",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb:261",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb:263",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb:71",
+     "figure_replication/Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb:76",
+     "figure_replication/Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb:61",
+     "figure_replication/Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb:81",
+     "figure_replication/Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb:187",
+     "figure_replication/Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb:191"
+    ]
+   },
+   {
+    "code": "RESTRICTED_DATA_MENTIONED",
+    "severity": "note",
+    "message": "The documentation mentions restricted data (\"Proprietary\") but every input triage could trace is present. Check by hand that no restricted file is read through a path triage could not resolve.",
+    "evidence": []
+   },
+   {
+    "code": "CLUSTER_MENTIONED",
+    "severity": "note",
+    "message": "The package mentions a cluster or batch scheduler; scripts may assume one.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 125,
+   "bytes": 124213111,
+   "languages": [
+    "mathematica",
+    "python",
+    "shell"
+   ],
+   "code_files": {
+    "mathematica": 5,
+    "python": 47,
+    "shell": 8
+   },
+   "docs_read": [
+    "README.md",
+    "reproducibility/README.md",
+    "reproducibility/REPRODUCIBILITY.md",
+    "reproducibility/SUMMARY.md",
+    "reproducibility/binary_reference.md",
+    "reproducibility/dependencies.md"
+   ],
+   "licences_named": [
+    "CC BY",
+    "MIT",
+    "BSD",
+    "GPL",
+    "Apache"
+   ],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 25,
+   "writes": 51,
+   "missing": [],
+   "unresolved": 18,
+   "remote": []
+  },
+  "links": {
+   "found": 11,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.842
+ }
+}
