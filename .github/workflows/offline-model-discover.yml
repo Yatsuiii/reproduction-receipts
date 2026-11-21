@@ -1,0 +1,32 @@
+name: Offline model, discover pin and lock
+# One-off: reads the model repository and resolves the dependency lock so both can be committed and frozen
+# before any scored run. Removed once MODEL.json and requirements.lock are committed.
+on:
+  pull_request:
+    paths: ['offline-model/fetch_weights.py', 'offline-model/requirements.in', '.github/workflows/offline-model-discover.yml']
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Install uv and huggingface-hub
+        run: python -m pip install uv==0.13.7 huggingface-hub==2.3.0
+      - name: Resolve dependency lock with hashes
+        run: |
+          uv pip compile offline-model/requirements.in --generate-hashes --python-version 3.12 \
+            --python-platform x86_64-manylinux_2_28 --exclude-newer 2026-11-14T00:00:00Z \
+            --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match \
+            -o lock.txt
+          echo '----- BEGIN requirements.lock -----'; cat lock.txt; echo '----- END requirements.lock -----'
+      - name: Discover model pin
+        run: |
+          python offline-model/fetch_weights.py --discover --repo Qwen/Qwen2.5-1.5B-Instruct --revision main \
+            --files LICENSE config.json generation_config.json model.safetensors tokenizer.json tokenizer_config.json vocab.json merges.txt \
+            > model.json
+          echo '----- BEGIN MODEL.json -----'; cat model.json; echo '----- END MODEL.json -----'
