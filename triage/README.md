@@ -1,5 +1,11 @@
 # Package triage
 
+> **Parked, 2026-11-21.** This is an experiment I stopped, not a product. Across two held-out rounds, its verdict did not clearly
+> beat assuming every package is blocked: 4/6 against 4/6 in round 2, and 4/6 against 3/6 in round 3. It gave the right reason only
+> 3/6 and then 2/6 times. Its answer key was a hand reading of each README, never a rerun, and six packages per round is too few to
+> show improvement. The failures are left as found in [`results/heldout_review.md`](results/heldout_review.md) and
+> [`results/heldout_r3_review.md`](results/heldout_r3_review.md). No round 4 is planned.
+
 Step one of a reproduction check. Given a replication package, `triage.py` decides in about a second whether it can run at all on
 this desk, and why not, before anyone spends a day on it.
 
