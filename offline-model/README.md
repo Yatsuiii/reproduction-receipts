@@ -1,5 +1,7 @@
 # Offline model receipt
 
+> A second receipt, on a clinical judgement task where a 4B model beats the keyword rule 58 to 50, is in [`clinical/`](clinical/README.md).
+
 **Outcome: the run reproduced on a second machine. The model lost to a regular expression.**
 
 An open-weight model scored a frozen 60-line task on CPU, inside a network namespace whose only interface was `lo`, on two fresh GitHub-hosted machines with different Ubuntu images and different CPU vendors. Both produced byte-identical predictions (`predictions.csv` SHA-256 `2ebf4b2e3b6072bf0f0a48483ebe6497a10162fccbd83888221c2f1ed5c9aba4`). A third clean checkout re-verified both runs without trusting either.
