@@ -7,8 +7,8 @@ Same rules as the [first receipt](../README.md): task frozen before anything els
 | | Correct of 60 | Errors |
 |---|---|---|
 | Qwen3-4B-Instruct-2507, bfloat16, offline | **58** | `c04` "Would benefit from a cardiology opinion before discharge" (said NO), `c45` "Safe for discharge today with a district nurse visit on Thursday" (said NO; one of the judgement calls flagged in the [task README](task/README.md) before any run) |
-| Keyword rule ([`baseline_keywords.py`](baseline_keywords.py)) | **50** | Past tense and negation: "Amoxicillin was started yesterday", "No need to repeat the chest X-ray", "Bloods not needed today" all read as YES |
-| Qwen2.5-1.5B-Instruct, float32, offline | **45** | 13 of its 15 errors are YES on a note that asks for nothing, mostly ones that describe a finished action |
+| Keyword rule ([`baseline_keywords.py`](baseline_keywords.py)) | **50** | Negation, finished work and decisions not to act: "No need to repeat the chest X-ray", "Bloods not needed today", "The recommendation from last week's review has been carried out", "I would not stop the beta blocker" all read as YES; "Safe for discharge today..." has no keyword and read as NO |
+| Qwen2.5-1.5B-Instruct, float32, offline | **45** | 13 of its 15 errors are YES on a note that asks for nothing, mostly notes that describe finished work or a plain observation |
 | Always answer NO | 33 | |
 
 This is the first task in this repo where a model beats the cheap baseline. Read it with the bias stated in the task README: I wrote the notes knowing that a keyword rule struggles with tense and negation, so the 8-line gap partly measures how I wrote them. A keyword rule tuned on these 60 lines could close it. The task is 60 lines and the labels are mine, not a clinician's.
