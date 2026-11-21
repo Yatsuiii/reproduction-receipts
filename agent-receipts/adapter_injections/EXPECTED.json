@@ -1,0 +1,29 @@
+{
+ "format": "agent-receipts-adapter-injections/1",
+ "note": "Written before the LangGraph, OpenAI Agents SDK and CrewAI adapters existed. Every framework runs the same scripted plan through its own runtime, with no model calls. receipt = what the adapter writes; native = the framework's own record of the same run (the cheap baseline), reduced by the example to a list of {tool, args, output, is_error}.",
+ "plan": [
+  {"tool": "read_note",    "args": {"name": "policy.txt"}},
+  {"tool": "search_kb",    "args": {"query": "refund window"}},
+  {"tool": "lookup_order", "args": {"order_id": "A-404"}, "raises": "ValueError"},
+  {"tool": "send_reply",   "args": {"to": "customer@example.test", "body": "Refund approved for A-100."}}
+ ],
+ "fidelity": {
+  "receipt_statuses": ["ok", "ok", "error", "ok"],
+  "receipt_args_equal_plan": true,
+  "receipt_calls_equal_native_calls": true,
+  "framework_continues_after_tool_error": true
+ },
+ "native_marks_the_failure_as_an_error_guess": {
+  "langgraph": true,
+  "openai_agents": false,
+  "crewai": false,
+  "note": "A guess written down before running: LangGraph's ToolMessage has status=error; the other two hand the model an error string. Scored, not enforced."
+ },
+ "tamper": {
+  "edit_reply_args":   {"receipt": {"passes": false, "detect": ["bad_signature", "chain_broken"]}, "native": {"passes": true}},
+  "hide_failure":      {"receipt": {"passes": false, "detect": ["bad_signature", "chain_broken"]}, "native": {"passes": true}},
+  "delete_failed_call": {"receipt": {"passes": false, "detect": ["chain_broken", "sequence", "count_mismatch"]}, "native": {"passes": true}},
+  "foreign_resign":    {"receipt": {"passes": false, "detect": ["untrusted_key"]}, "native": {"passes": true}}
+ },
+ "frameworks": ["langgraph", "openai_agents", "crewai"]
+}

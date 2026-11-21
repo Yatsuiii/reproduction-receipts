@@ -1,0 +1,29 @@
+{
+ "format": "agent-receipts-overhead/1",
+ "python": "3.13.18",
+ "machine": "x86_64",
+ "cpu_count": 4,
+ "note": "one machine, one run, wall clock; a tool that does real I/O dwarfs these numbers",
+ "rows": [
+  {
+   "backend": "cryptography",
+   "n": 500,
+   "plain_log_us_per_call": 4.4,
+   "receipt_us_per_call": 146.0,
+   "verify_us_per_record": 209.6,
+   "verified": true,
+   "plain_bytes_per_call": 189,
+   "receipt_bytes_per_call": 795
+  },
+  {
+   "backend": "pure-python",
+   "n": 500,
+   "plain_log_us_per_call": 5.0,
+   "receipt_us_per_call": 3228.7,
+   "verify_us_per_record": 3396.8,
+   "verified": true,
+   "plain_bytes_per_call": 189,
+   "receipt_bytes_per_call": 795
+  }
+ ]
+}

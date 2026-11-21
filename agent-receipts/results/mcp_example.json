@@ -1,0 +1,47 @@
+{
+ "format": "agent-receipts-mcp-example/1",
+ "python": "3.13.18",
+ "calls": 5,
+ "statuses": [
+  "ok",
+  "ok",
+  "ok",
+  "error",
+  "ok"
+ ],
+ "verify": {
+  "ok": true,
+  "codes": [
+   "ok"
+  ]
+ },
+ "replay_same_server": {
+  "1": "replay_match",
+  "2": "replay_match",
+  "3": "replay_match",
+  "4": "replay_match",
+  "5": "not_replayable"
+ },
+ "replay_kb_v2": {
+  "1": "replay_match",
+  "2": "replay_mismatch",
+  "3": "replay_match",
+  "4": "replay_match",
+  "5": "not_replayable"
+ },
+ "revoked_kb_stale_seqs": [
+  2,
+  5
+ ],
+ "tampered": {
+  "ok": false,
+  "codes": [
+   "bad_signature",
+   "chain_broken",
+   "digest_mismatch"
+  ]
+ },
+ "receipt_bytes": 5413,
+ "wall_seconds": 2.33,
+ "cost_usd": 0
+}

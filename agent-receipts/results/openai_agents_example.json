@@ -1,0 +1,116 @@
+{
+ "format": "agent-receipts-framework-example/1",
+ "framework": "openai_agents",
+ "versions": {
+  "openai-agents": "0.20.0",
+  "openai": "2.54.0"
+ },
+ "python": "3.13.18",
+ "model_calls": 0,
+ "cost_usd": 0,
+ "fidelity": {
+  "receipt_statuses": [
+   "ok",
+   "ok",
+   "error",
+   "ok"
+  ],
+  "receipt_args_equal_plan": true,
+  "receipt_calls_equal_native_calls": true,
+  "framework_continues_after_tool_error": true
+ },
+ "native_marks_the_failure_as_an_error": false,
+ "native_marks_guess": false,
+ "tamper_detected": {
+  "receipt": 4,
+  "native": 0,
+  "of": 4
+ },
+ "tamper": {
+  "edit_reply_args": {
+   "receipt": {
+    "passes": false,
+    "codes": [
+     "bad_signature",
+     "chain_broken"
+    ]
+   },
+   "native": {
+    "passes": true
+   }
+  },
+  "hide_failure": {
+   "receipt": {
+    "passes": false,
+    "codes": [
+     "bad_signature",
+     "chain_broken"
+    ]
+   },
+   "native": {
+    "passes": true
+   }
+  },
+  "delete_failed_call": {
+   "receipt": {
+    "passes": false,
+    "codes": [
+     "chain_broken",
+     "count_mismatch",
+     "sequence"
+    ]
+   },
+   "native": {
+    "passes": true
+   }
+  },
+  "foreign_resign": {
+   "receipt": {
+    "passes": false,
+    "codes": [
+     "untrusted_key"
+    ]
+   },
+   "native": {
+    "passes": true
+   }
+  }
+ },
+ "native": [
+  {
+   "tool": "read_note",
+   "args": {
+    "name": "policy.txt"
+   },
+   "output": "{'name': 'policy.txt', 'text': 'Refunds within 30 days of delivery.'}",
+   "is_error": false
+  },
+  {
+   "tool": "search_kb",
+   "args": {
+    "query": "refund window"
+   },
+   "output": "{'query': 'refund window', 'hits': ['kb/refunds.md#30-days']}",
+   "is_error": false
+  },
+  {
+   "tool": "lookup_order",
+   "args": {
+    "order_id": "A-404"
+   },
+   "output": "An error occurred while running the tool. Please try again. Error: no order A-404",
+   "is_error": false
+  },
+  {
+   "tool": "send_reply",
+   "args": {
+    "to": "customer@example.test",
+    "body": "Refund approved for A-100."
+   },
+   "output": "{'queued': True, 'to': 'customer@example.test'}",
+   "is_error": false
+  }
+ ],
+ "departures_from_expected": [],
+ "unreviewed_departures": []
+}

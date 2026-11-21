@@ -1,0 +1,5 @@
+INVALID: tampered.jsonl  actor=support-agent@example.test session=62ab05b4e50f7ab6a796a36160a6b561 calls=5
+  bad_signature    line 6 (seq 5): signature does not verify
+  digest_mismatch  line 6 (seq 5): inline args do not hash to args_sha256
+  chain_broken     line 7 (seq 6): prev does not match the hash of line 6
+  close hash (anchor): 647e55f962f85e8e4d7a36bc8fb428334cf86633d794352b2d01bd22b20ec52b

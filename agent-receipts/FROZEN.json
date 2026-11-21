@@ -1,0 +1,14 @@
+{
+ "format": "agent-receipts-frozen/1",
+ "files": {
+  "ANCHOR.md": "eba07157bfac59459c0b08881c1ffdfbca40723ea82ec7803d889fbe737bc3d8",
+  "FORMAT.md": "55154e6cb47f1568a1e17d02ce1b22508589131f090c796d6a413f0dfbf458eb",
+  "adapter_injections/EXPECTED.json": "b780d5a7e9d1f395275099d7ef69bc7e9380ea2a8c96b4d4b448062ed093b883",
+  "adapter_injections/tamper.py": "4d00289b5aa0e272d3be077fb33675f62ca53cece467cae2e9619e6c30558b8c",
+  "anchor_injections/EXPECTED.json": "821b7bf14552844a100a3cf64a72353ce78049cbed70219e64eace926a30d969",
+  "anchor_injections/cases.py": "ef9abd15088f840b9908cb840d23badb9f528b3aa4e4af10094aeceba86e0df1",
+  "anchor_injections/fakelog.py": "8f9acd833bc6cf9dd957408ac7f3ae8eb2686ab7c07410d05791cab6b7009d3b",
+  "injections/EXPECTED.json": "c6f6a5e94da5b46362a762a60687213f822afaebc11944cd606a968da1ae745b",
+  "injections/injections.py": "dc8dc7ea14311d42aca28b17ec169216c8f3cf949183011baa4f888935775faf"
+ }
+}

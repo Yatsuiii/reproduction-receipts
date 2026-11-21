@@ -1,0 +1,3 @@
+examples/anchor/out-local/
+build/
+*.egg-info/

@@ -1,0 +1,22 @@
+name: Anchor demo receipt in public Rekor
+# Manual only. Publishes one entry (a SHA-512 hash and a throwaway public key) to the public Rekor transparency log.
+# The entry is public and permanent, so this never runs on push or pull request.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  anchor:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Record, anchor in rekor.sigstore.dev, verify offline, show the anchor catching a holder rewrite
+        run: python agent-receipts/examples/anchor/run.py --live
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: anchor-demo
+          path: agent-receipts/examples/anchor/out-live/

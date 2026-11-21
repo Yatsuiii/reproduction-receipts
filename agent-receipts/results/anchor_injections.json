@@ -1,0 +1,297 @@
+{
+ "format": "agent-receipts-anchor-results/1",
+ "python": "3.13.18",
+ "log": "local Rekor v1 stand-in (anchor_injections/fakelog.py); live-log formats are checked in tests/test_rekor_live.py",
+ "wall_seconds": 1.844,
+ "attacks": 11,
+ "detected": {
+  "sdk_anchored": 10,
+  "v0_no_anchor": 0
+ },
+ "holder_attacks": 4,
+ "holder_detected": {
+  "sdk_anchored": 3,
+  "v0_no_anchor": 0
+ },
+ "unreviewed_departures": 0,
+ "cases": [
+  {
+   "case": "clean",
+   "holder": false,
+   "attack": false,
+   "got": {
+    "sdk_anchored": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "findings": []
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "holder_rewrite",
+   "holder": true,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_bad_signature",
+      "anchor_mismatch"
+     ],
+     "findings": [
+      "anchor_bad_signature line 4 (seq 3): the entry's Ed25519ph signature does not cover this close record",
+      "anchor_mismatch  line 4 (seq 3): the logged hash is not this receipt's close record"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "holder_rewrite_edits_bundle",
+   "holder": true,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_inclusion_invalid",
+      "anchor_set_invalid"
+     ],
+     "findings": [
+      "anchor_set_invalid line 4 (seq 3): signed entry timestamp does not verify",
+      "anchor_inclusion_invalid line 4 (seq 3): inclusion proof does not lead to rootHash"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "holder_rewrite_reanchor_later",
+   "holder": true,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_late"
+     ],
+     "findings": [
+      "anchor_late      line 4 (seq 3): anchored 172800 s after the receipt closed (max 3600)"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "holder_rewrite_shift_and_reanchor",
+   "holder": true,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "findings": []
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "forged_log",
+   "holder": false,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_untrusted_log"
+     ],
+     "findings": [
+      "anchor_untrusted_log line 4 (seq 3): logID 71a9ea203a995e1b... is not a pinned log key"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "inclusion_hash_flipped",
+   "holder": false,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_inclusion_invalid"
+     ],
+     "findings": [
+      "anchor_inclusion_invalid line 4 (seq 3): inclusion proof does not lead to rootHash"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "checkpoint_sig_flipped",
+   "holder": false,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_checkpoint_invalid"
+     ],
+     "findings": [
+      "anchor_checkpoint_invalid line 4 (seq 3): checkpoint signature does not verify against the log key"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "set_flipped",
+   "holder": false,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_set_invalid"
+     ],
+     "findings": [
+      "anchor_set_invalid line 4 (seq 3): signed entry timestamp does not verify"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "anchor_of_other_session",
+   "holder": false,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_bad_signature",
+      "anchor_mismatch"
+     ],
+     "findings": [
+      "anchor_bad_signature line 4 (seq 3): the entry's Ed25519ph signature does not cover this close record",
+      "anchor_mismatch  line 4 (seq 3): the logged hash is not this receipt's close record"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "anchor_by_other_key",
+   "holder": false,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_key_mismatch"
+     ],
+     "findings": [
+      "anchor_key_mismatch line 4 (seq 3): the log entry was made with a different key from the receipt's"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "missing_but_required",
+   "holder": false,
+   "attack": true,
+   "got": {
+    "sdk_anchored": {
+     "passes": false,
+     "codes": [
+      "anchor_missing"
+     ],
+     "findings": [
+      "anchor_missing   line 4 (seq 3): no anchor bundle"
+     ]
+    },
+    "v0_no_anchor": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ]
+    }
+   },
+   "departures": {}
+  }
+ ]
+}

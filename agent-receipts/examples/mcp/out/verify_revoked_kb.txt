@@ -1,0 +1,4 @@
+VALID: receipt.jsonl  actor=support-agent@example.test session=62ab05b4e50f7ab6a796a36160a6b561 calls=5
+  stale            line 3 (seq 2): uses a revoked source, directly or through derived_from
+  stale            line 6 (seq 5): uses a revoked source, directly or through derived_from
+  close hash (anchor): 647e55f962f85e8e4d7a36bc8fb428334cf86633d794352b2d01bd22b20ec52b

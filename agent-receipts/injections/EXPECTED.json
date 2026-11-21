@@ -1,0 +1,25 @@
+{
+ "format": "agent-receipts-injections/1",
+ "note": "Written before agent_receipts existed. passes = the verifier's overall verdict; detect = codes that must appear. For clean and holder_rewrite the code set must be exactly [\"ok\"]. attack = counts toward the detection score.",
+ "revoked": ["web:kb.example.test"],
+ "replay_tools": {"search": "changed_search"},
+ "cases": {
+  "clean":                   {"attack": false, "sdk": {"passes": true,  "detect": ["ok"], "exact": true}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "edit_args":               {"attack": true,  "sdk": {"passes": false, "detect": ["bad_signature", "chain_broken"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "edit_result":             {"attack": true,  "sdk": {"passes": false, "detect": ["bad_signature", "chain_broken"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "hide_failure":            {"attack": true,  "sdk": {"passes": false, "detect": ["bad_signature", "chain_broken"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "delete_middle":           {"attack": true,  "sdk": {"passes": false, "detect": ["chain_broken", "sequence", "count_mismatch"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "reorder":                 {"attack": true,  "sdk": {"passes": false, "detect": ["chain_broken", "sequence"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "truncate_tail":           {"attack": true,  "sdk": {"passes": false, "detect": ["unclosed"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "drop_close_keep_count":   {"attack": true,  "sdk": {"passes": false, "detect": ["chain_broken", "sequence", "count_mismatch"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "foreign_resign":          {"attack": true,  "sdk": {"passes": false, "detect": ["untrusted_key"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "splice_other_session":    {"attack": true,  "sdk": {"passes": false, "detect": ["chain_broken", "sequence", "session_mismatch", "count_mismatch"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "inline_digest_lie":       {"attack": true,  "sdk": {"passes": false, "detect": ["digest_mismatch"]}, "hash_chain": {"passes": false, "detect": ["digest_mismatch"]}, "plain_log": {"passes": true, "detect": []}},
+  "malformed_line":          {"attack": true,  "sdk": {"passes": false, "detect": ["malformed"]}, "hash_chain": {"passes": false, "detect": ["malformed"]}, "plain_log": {"passes": false, "detect": ["malformed"]}},
+  "holder_rewrite":          {"attack": true,  "sdk": {"passes": true,  "detect": ["ok"], "exact": true, "blind_spot": "the key holder can rewrite and re-sign; only an anchor published elsewhere catches it"}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}},
+  "holder_rewrite_with_anchor": {"attack": true, "anchor": true, "sdk": {"passes": false, "detect": ["anchor_mismatch"]}, "hash_chain": {"passes": false, "detect": ["anchor_mismatch"]}, "plain_log": {"passes": true, "detect": []}},
+  "holder_clock_backwards":  {"attack": true,  "sdk": {"passes": false, "detect": ["clock_backwards"]}, "hash_chain": {"passes": false, "detect": ["clock_backwards"]}, "plain_log": {"passes": true, "detect": []}},
+  "revoked_source":          {"attack": false, "revoke": true, "sdk": {"passes": true, "detect": ["stale"], "stale": [2, 3, 5]}, "hash_chain": {"passes": true, "detect": ["stale"], "stale": [2, 3, 5]}, "plain_log": {"passes": true, "detect": ["stale"], "stale": [2, 3, 5]}},
+  "replay_tool_changed":     {"attack": false, "replay": {"1": "replay_match", "2": "replay_mismatch", "3": "replay_match", "4": "replay_match", "5": "not_replayable"}, "sdk": {"passes": true, "detect": ["ok"]}, "hash_chain": {"passes": true, "detect": []}, "plain_log": {"passes": true, "detect": []}}
+ }
+}
