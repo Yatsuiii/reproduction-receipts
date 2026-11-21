@@ -271,7 +271,7 @@ def extract_refs(path: Path, rel: str, text: str, lang: str) -> tuple[list[Ref],
     blank = lambda m: "\n" * m.group(0).count("\n")  # noqa: E731  keep line numbers
     if lang == "stata":
         text = re.sub(r"/\*.*?\*/", blank, text, flags=re.S)
-    elif lang == "matlab":
+    elif lang in ("matlab", "dynare"):
         text = re.sub(r"^\s*%\{.*?^\s*%\}", blank, text, flags=re.S | re.M)
     for i, raw in enumerate(text.splitlines(), 1):
         line = raw.strip()
@@ -287,8 +287,9 @@ def extract_refs(path: Path, rel: str, text: str, lang: str) -> tuple[list[Ref],
                         out.append(Ref(t, rel, i, lang))
             continue
         table = {"python": ((PY_READ, reads), (PY_WRITE, writes)), "r": ((R_READ, reads), (R_WRITE, writes)),
-                 "matlab": ((M_READ, reads), (M_WRITE, writes)), "julia": ((JL_READ, reads), (JL_WRITE, writes))}.get(lang, ())
-        if lang == "matlab":
+                 "matlab": ((M_READ, reads), (M_WRITE, writes)), "dynare": ((M_READ, reads), (M_WRITE, writes)),
+                 "julia": ((JL_READ, reads), (JL_WRITE, writes))}.get(lang, ())
+        if lang in ("matlab", "dynare"):
             m = re.match(r"^\s*(save|load)\s+([^\s(=;,'][^\s;,]*)", raw)    # command syntax: save targets.mat x y
             if m:
                 f = m.group(2) if "." in m.group(2) else m.group(2) + ".mat"
@@ -301,6 +302,11 @@ def extract_refs(path: Path, rel: str, text: str, lang: str) -> tuple[list[Ref],
         for rx, out in table:
             for m in rx.finditer(raw):
                 t = path_of(m.group(2), env)
+                if not t and lang in ("matlab", "dynare") and m.group(1) in ("save", "load"):
+                    lits = literals(m.group(2))
+                    t = lits[0] if lits else None
+                if t and lang in ("matlab", "dynare") and m.group(1) in ("save", "load") and "." not in basename(t):
+                    t += ".mat"
                 if t:
                     out.append(Ref(t, rel, i, lang))
         if lang == "python":
@@ -317,7 +323,7 @@ def basename(p: str) -> str:
 
 
 def unresolved(p: str) -> bool:
-    return any(c in basename(p) for c in "*?{}$`%") or basename(p) in ("", ".", "..")
+    return p.startswith(("{macro}", "{concat}")) or any(c in basename(p) for c in "*?{}$`%") or basename(p) in ("", ".", "..")
 
 
 # ------------------------------------------------------------------------------------------------------------- dependencies

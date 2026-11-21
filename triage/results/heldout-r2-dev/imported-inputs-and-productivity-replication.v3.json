@@ -1,0 +1,156 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "git",
+  "url": "https://github.com/korenmiklos/imported-inputs-and-productivity-replication",
+  "commit": "a24e5f08085af959275e36c3b5ba65836dd6e2bc"
+ },
+ "when": "2026-11-21T12:11:23Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata --check-links",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 2,
+   "deviation": 3,
+   "note": 4
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`../doc/foreignpresence_tfp_gain.dta` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "code/table9.do:36"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data/impmanuf.dta` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "code/decomposition.do:63",
+     "code/import_margins.do:20",
+     "code/import_margins.do:77",
+     "code/numbers-in-text.do:15",
+     "code/numbers-in-text.do:72"
+    ]
+   },
+   {
+    "code": "PYTHON2_SYNTAX",
+    "severity": "deviation",
+    "message": "2 Python files do not parse as Python 3, most likely Python 2. A rerun needs a Python 2.7 interpreter (end of life since 2020) or a port, and either is a logged deviation.",
+    "evidence": [
+     "code/filename_parser.py:23",
+     "code/write_results_to_excel.py:156"
+    ]
+   },
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Python code imports StringIO but the package has no requirements file, environment file or lockfile. A rerun must choose versions and log them.",
+    "evidence": [
+     "code/filename_parser.py",
+     "code/write_results_to_excel.py"
+    ]
+   },
+   {
+    "code": "STATA_NETWORK_INSTALL",
+    "severity": "deviation",
+    "message": "Do-files install graphexportpdf from the network at run time, with no version pinned and no copy bundled. SSC serves the current version, which may differ from the authors'.",
+    "evidence": [
+     "code/all_graphs.do:9"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Stata (version 10, 12, 9 named in code); the desk says it has it.",
+    "evidence": [
+     "code/all_graphs.do",
+     "code/collapse-and-draw-graph.do",
+     "code/counterfactual.do",
+     "code/csvmerge.ado",
+     "code/decomposition.do"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "20 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "code/all_graphs.do:73",
+     "code/all_graphs.do:74",
+     "code/collapse-and-draw-graph.do:19",
+     "code/collapse-and-draw-graph.do:21",
+     "code/csvmerge.ado:8",
+     "code/csvmerge.ado:14",
+     "code/estimate_specification.do:28",
+     "code/estimate_specification.do:31",
+     "code/estimate_specification.do:48",
+     "code/import_margins.do:25"
+    ]
+   },
+   {
+    "code": "LINK_UNREACHABLE",
+    "severity": "note",
+    "message": "1 other links could not be reached from this machine (DNS, refused, timeout or proxy). That may be this machine's network rather than the link.",
+    "evidence": [
+     "http://www.mtakti.hu/english/"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 9502,
+   "bytes": 87733828,
+   "languages": [
+    "python",
+    "stata"
+   ],
+   "code_files": {
+    "python": 2,
+    "stata": 32
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": [
+    "code/Makefile"
+   ]
+  },
+  "inputs": {
+   "reads": 58,
+   "writes": 27,
+   "missing": [
+    "foreignpresence_tfp_gain.dta",
+    "impmanuf.dta"
+   ],
+   "unresolved": 20,
+   "remote": []
+  },
+  "links": {
+   "found": 1,
+   "checked": true,
+   "results": [
+    {
+     "url": "http://www.mtakti.hu/english/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    }
+   ]
+  },
+  "seconds": 0.378
+ }
+}

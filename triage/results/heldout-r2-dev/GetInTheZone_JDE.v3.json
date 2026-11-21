@@ -1,0 +1,139 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "git",
+  "url": "https://github.com/Ellakirchner/GetInTheZone_JDE",
+  "commit": "cf696bc1d756df185fca391933326fd3fb06b7b0"
+ },
+ "when": "2026-11-21T12:11:31Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata --check-links",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 4,
+   "deviation": 2,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`ggsave_latex.R` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"cannot be shared\"), so it is most likely one of those.",
+    "evidence": [
+     "06_calcCE.R:74"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`datasets/heatmap_cost0.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"cannot be shared\"), so it is most likely one of those.",
+    "evidence": [
+     "06_calcCE.R:1422"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`datasets/heatmap_cost10.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"cannot be shared\"), so it is most likely one of those.",
+    "evidence": [
+     "06_calcCE.R:1423"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`datasets/heatmap_cost10_nodesignrisk.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"cannot be shared\"), so it is most likely one of those.",
+    "evidence": [
+     "06_calcCE.R:1424"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads ClustGeo, PerformanceAnalytics, RColorBrewer, aricode, caret, chron, cowplot, doParallel, dplyr, dtplyr, furrr, future, geodata, geojsonsf, ggpattern, ggplot2, ggpubr, ggspatial, gridExtra, gtable, janitor, lubridate, mclust, ncdf4, palmerpenguins, patchwork, proxy, purrr, randomForest, scales, sf, sp, spdep, stringr, summarytools, terra, tictoc, tidylog, tidyr, tidyverse, writexl, xgboost, xtable, zoo with no renv.lock. A rerun installs current CRAN versions and must log them.",
+    "evidence": [
+     "01_prepData.R:50",
+     "01_prepData.R:51",
+     "01_prepData.R:52",
+     "01_prepData.R:53",
+     "01_prepData.R:54"
+    ]
+   },
+   {
+    "code": "EXTERNAL_SERVICE",
+    "severity": "deviation",
+    "message": "A step runs in Google Earth Engine, which needs an account and exports through Google Drive. Its outputs are inputs to later steps; a receipt must record the export date and hash, because the hosted image collections change.",
+    "evidence": [
+     "00_extract_data_gee.js"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "1 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "01_prepData.R:104"
+    ]
+   },
+   {
+    "code": "CLUSTER_MENTIONED",
+    "severity": "note",
+    "message": "The package mentions a cluster or batch scheduler; scripts may assume one.",
+    "evidence": []
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 13,
+   "bytes": 5426763,
+   "languages": [
+    "earthengine",
+    "r"
+   ],
+   "code_files": {
+    "earthengine": 1,
+    "r": 6
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": [
+    "01_prepData.R",
+    "02_predictYields.R",
+    "03_mergeCluster.R",
+    "04_calcDescriptives.R",
+    "05_mapROI.R",
+    "06_calcCE.R"
+   ]
+  },
+  "inputs": {
+   "reads": 42,
+   "writes": 91,
+   "missing": [
+    "ggsave_latex.r",
+    "heatmap_cost0.csv",
+    "heatmap_cost10.csv",
+    "heatmap_cost10_nodesignrisk.csv"
+   ],
+   "unresolved": 1,
+   "remote": []
+  },
+  "links": {
+   "found": 0,
+   "checked": true,
+   "results": []
+  },
+  "seconds": 0.064
+ }
+}

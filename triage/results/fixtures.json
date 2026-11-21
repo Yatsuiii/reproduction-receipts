@@ -1,9 +1,9 @@
 {
  "format": "triage-fixture-results/1",
- "triage_sha256": "6a73ebe7ea82258916ee4e0d8eb744af8c3c4d4e9fcf73c442f70c0dec723291",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
  "expected_sha256": "fd93c387d0d03310fe3ebbd50d9a59fb16a0df55604b4ad1c3811f6fb815a71f",
  "summary": {
-  "triage": "34/36",
+  "triage": "36/36",
   "always-runnable": "14/36",
   "readme-and-code": "15/36"
  },
@@ -905,13 +905,12 @@
     "SOFTWARE_REQUIRED"
    ],
    "triage": {
-    "verdict": "blocked",
+    "verdict": "runnable",
     "codes": [
-     "MISSING_INPUT_UNDOCUMENTED",
      "SOFTWARE_REQUIRED"
     ],
     "missing_codes": [],
-    "pass": false
+    "pass": true
    },
    "always-runnable": {
     "verdict": "runnable",
@@ -934,15 +933,13 @@
     "UNRESOLVED_PATHS"
    ],
    "triage": {
-    "verdict": "blocked",
+    "verdict": "runnable",
     "codes": [
-     "MISSING_INPUT_UNDOCUMENTED",
-     "SOFTWARE_REQUIRED"
-    ],
-    "missing_codes": [
+     "SOFTWARE_REQUIRED",
      "UNRESOLVED_PATHS"
     ],
-    "pass": false
+    "missing_codes": [],
+    "pass": true
    },
    "always-runnable": {
     "verdict": "runnable",
