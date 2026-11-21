@@ -1,0 +1,18 @@
+{
+ "format": "agent-receipts-anchor-injections/1",
+ "note": "Written before the anchoring code. sdk_anchored = verify() with the bundle and the pinned log key. v0_no_anchor = verify() as in v0, bundle ignored (the baseline). passes = overall verdict; detect = codes that must appear; exact = the code set must equal detect. holder = the attack needs the signing key.",
+ "cases": {
+  "clean":                             {"holder": false, "attack": false, "sdk_anchored": {"passes": true,  "detect": ["ok"], "exact": true}, "v0_no_anchor": {"passes": true}},
+  "holder_rewrite":                    {"holder": true,  "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_mismatch"]}, "v0_no_anchor": {"passes": true}},
+  "holder_rewrite_edits_bundle":       {"holder": true,  "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_set_invalid", "anchor_inclusion_invalid"]}, "v0_no_anchor": {"passes": true}},
+  "holder_rewrite_reanchor_later":     {"holder": true,  "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_late"]}, "v0_no_anchor": {"passes": true}},
+  "holder_rewrite_shift_and_reanchor": {"holder": true,  "attack": true,  "sdk_anchored": {"passes": true,  "detect": ["ok"], "exact": true, "blind_spot": "needs an online search of the log for other entries made with the key"}, "v0_no_anchor": {"passes": true}},
+  "forged_log":                        {"holder": false, "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_untrusted_log"]}, "v0_no_anchor": {"passes": true}},
+  "inclusion_hash_flipped":            {"holder": false, "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_inclusion_invalid"]}, "v0_no_anchor": {"passes": true}},
+  "checkpoint_sig_flipped":            {"holder": false, "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_checkpoint_invalid"]}, "v0_no_anchor": {"passes": true}},
+  "set_flipped":                       {"holder": false, "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_set_invalid"]}, "v0_no_anchor": {"passes": true}},
+  "anchor_of_other_session":           {"holder": false, "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_mismatch"]}, "v0_no_anchor": {"passes": true}},
+  "anchor_by_other_key":               {"holder": false, "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_key_mismatch"]}, "v0_no_anchor": {"passes": true}},
+  "missing_but_required":              {"holder": false, "attack": true,  "sdk_anchored": {"passes": false, "detect": ["anchor_missing"]}, "v0_no_anchor": {"passes": true}}
+ }
+}
