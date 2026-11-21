@@ -2,7 +2,7 @@
  "format": "agent-receipts-results/1",
  "python": "3.13.18",
  "ed25519_backend": "cryptography",
- "wall_seconds": 0.039,
+ "wall_seconds": 0.048,
  "attacks": 14,
  "detected": {
   "sdk": 13,
@@ -330,7 +330,7 @@
      ],
      "stale": [],
      "findings": [
-      "session_mismatch line 4 (seq 2): session 9a4abf7adabd... is not this receipt's",
+      "session_mismatch line 4 (seq 2): session ed9434f5c9c3... is not this receipt's",
       "sequence         line 4 (seq 2): seq 2 at position 3",
       "chain_broken     line 4 (seq 2): prev does not match the hash of line 3",
       "sequence         line 5 (seq 3): seq 3 at position 4",
@@ -466,7 +466,7 @@
      ],
      "stale": [],
      "findings": [
-      "anchor_mismatch  line 7 (seq 6): close hash a450bb8e33ac76aa... is not the published anchor 27f5eeb3d8d0caa2..."
+      "anchor_mismatch  line 7 (seq 6): close hash cea5f320482786b7... is not the published anchor 059835302813ac60..."
      ]
     },
     "hash_chain": {

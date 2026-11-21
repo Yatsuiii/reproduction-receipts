@@ -1,0 +1,35 @@
+[
+ {
+  "tool": "read_note",
+  "args": {
+   "name": "policy.txt"
+  },
+  "output": "{\"name\": \"policy.txt\", \"text\": \"Refunds within 30 days of delivery.\"}",
+  "is_error": false
+ },
+ {
+  "tool": "search_kb",
+  "args": {
+   "query": "refund window"
+  },
+  "output": "{\"query\": \"refund window\", \"hits\": [\"kb/refunds.md#30-days\"]}",
+  "is_error": false
+ },
+ {
+  "tool": "lookup_order",
+  "args": {
+   "order_id": "A-404"
+  },
+  "output": "Error: ValueError('no order A-404')\n Please fix your mistakes.",
+  "is_error": true
+ },
+ {
+  "tool": "send_reply",
+  "args": {
+   "to": "customer@example.test",
+   "body": "Refund approved for A-100."
+  },
+  "output": "{\"queued\": true, \"to\": \"customer@example.test\"}",
+  "is_error": false
+ }
+]

@@ -1,0 +1,124 @@
+{
+ "format": "agent-receipts-framework-example/1",
+ "framework": "crewai",
+ "versions": {
+  "crewai": "1.15.44"
+ },
+ "python": "3.13.18",
+ "model_calls": 0,
+ "cost_usd": 0,
+ "fidelity": {
+  "receipt_statuses": [
+   "ok",
+   "ok",
+   "error",
+   "error",
+   "error",
+   "error",
+   "error",
+   "error",
+   "ok"
+  ],
+  "receipt_args_equal_plan": false,
+  "receipt_calls_equal_native_calls": false,
+  "framework_continues_after_tool_error": true
+ },
+ "native_marks_the_failure_as_an_error": false,
+ "native_marks_guess": false,
+ "tamper_detected": {
+  "receipt": 4,
+  "native": 0,
+  "of": 4
+ },
+ "tamper": {
+  "edit_reply_args": {
+   "receipt": {
+    "passes": false,
+    "codes": [
+     "bad_signature",
+     "chain_broken"
+    ]
+   },
+   "native": {
+    "passes": true
+   }
+  },
+  "hide_failure": {
+   "receipt": {
+    "passes": false,
+    "codes": [
+     "bad_signature",
+     "chain_broken"
+    ]
+   },
+   "native": {
+    "passes": true
+   }
+  },
+  "delete_failed_call": {
+   "receipt": {
+    "passes": false,
+    "codes": [
+     "chain_broken",
+     "count_mismatch",
+     "sequence"
+    ]
+   },
+   "native": {
+    "passes": true
+   }
+  },
+  "foreign_resign": {
+   "receipt": {
+    "passes": false,
+    "codes": [
+     "untrusted_key"
+    ]
+   },
+   "native": {
+    "passes": true
+   }
+  }
+ },
+ "native": [
+  {
+   "tool": "read_note",
+   "args": {
+    "name": "policy.txt"
+   },
+   "output": "{'name': 'policy.txt', 'text': 'Refunds within 30 days of delivery.'}",
+   "is_error": false
+  },
+  {
+   "tool": "search_kb",
+   "args": {
+    "query": "refund window"
+   },
+   "output": "{'query': 'refund window', 'hits': ['kb/refunds.md#30-days']}",
+   "is_error": false
+  },
+  {
+   "tool": "lookup_order",
+   "args": {
+    "order_id": "A-404"
+   },
+   "output": "\nI encountered an error while trying to use the tool. This was the error: no order A-404.\n Tool lookup_order accepts these inputs: Tool Name: lookup_order\nTool Arguments: {\n  \"properties\": {\n    \"order_id\": {\n      \"title\": \"Order Id\",\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"order_id\"\n  ],\n  \"title\": \"Lookup_Order\",\n  \"type\": \"object\",\n  \"additionalProperties\": false\n}\nTool Description: Look up an order by id..\nMoving on then. Decide if you need a tool or can provide the final answer. Use one at a time.\nTo use a tool, use:\nThought: [reasoning]\nAction: [name from read_note, search_kb, lookup_order, send_reply]\nAction Input: [JSON object]\n\nTo provide the final answer, use:\nThought: [reasoning]\nFinal Answer: [complete response]",
+   "is_error": false
+  },
+  {
+   "tool": "send_reply",
+   "args": {
+    "to": "customer@example.test",
+    "body": "Refund approved for A-100."
+   },
+   "output": "{'queued': True, 'to': 'customer@example.test'}\n\n\nYou ONLY have access to the following tools, and should NEVER make up tools that are not listed here:\n\nTool Name: read_note\nTool Arguments: {\n  \"properties\": {\n    \"name\": {\n      \"title\": \"Name\",\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"name\"\n  ],\n  \"title\": \"Read_Note\",\n  \"type\": \"object\",\n  \"additionalProperties\": false\n}\nTool Description: Read an internal note.\nTool Name: search_kb\nTool Arguments: {\n  \"properties\": {\n    \"query\": {\n      \"title\": \"Query\",\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"query\"\n  ],\n  \"title\": \"Search_Kb\",\n  \"type\": \"object\",\n  \"additionalProperties\": false\n}\nTool Description: Search the support knowledge base.\nTool Name: lookup_order\nTool Arguments: {\n  \"properties\": {\n    \"order_id\": {\n      \"title\": \"Order Id\",\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"order_id\"\n  ],\n  \"title\": \"Lookup_Order\",\n  \"type\": \"object\",\n  \"additionalProperties\": false\n}\nTool Description: Look up an order by id.\nTool Name: send_reply\nTool Arguments: {\n  \"properties\": {\n    \"to\": {\n      \"title\": \"To\",\n      \"type\": \"string\"\n    },\n    \"body\": {\n      \"title\": \"Body\",\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"to\",\n    \"body\"\n  ],\n  \"title\": \"Send_Reply\",\n  \"type\": \"object\",\n  \"additionalProperties\": false\n}\nTool Description: Send a reply to the customer.\n\nIMPORTANT: Use the following format in your response:\n\n```\nThought: you should always think about what to do\nAction: the action to take, only one name of [read_note, search_kb, lookup_order, send_reply], just the name, exactly as it's written.\nAction Input: the input to the action, just a simple JSON object, enclosed in curly braces, using \" to wrap keys and values.\nObservation: the result of the action\n```\n\nOnce all necessary information is gathered, return the following format:\n\n```\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n```",
+   "is_error": false
+  }
+ ],
+ "departures_from_expected": [
+  "receipt_statuses: got ['ok', 'ok', 'error', 'error', 'error', 'error', 'error', 'error', 'ok'], expected ['ok', 'ok', 'error', 'ok']",
+  "receipt_args_equal_plan: got False, expected True",
+  "receipt_calls_equal_native_calls: got False, expected True"
+ ],
+ "unreviewed_departures": []
+}

@@ -25,7 +25,7 @@ This is one library example, not a neuroimaging paper replication or a complete 
 [`agent-receipts/`](agent-receipts/README.md) is the execution-evidence half: a stdlib-only Python SDK that wraps an agent's
 tool calls and writes a signed, chained, replayable record of each one, checkable offline by someone who was not there. On 14
 frozen tampering cases it catches 13; a plain JSONL tool log catches 1 and an unsigned hash chain 5. The one it misses is the
-key holder rewriting history, which only an anchor published elsewhere catches. Worked example with an MCP client.
+key holder rewriting history, which only an anchor published elsewhere catches. Worked examples with an MCP client, LangGraph, the OpenAI Agents SDK and CrewAI.
 
 ## Also in this repo
 

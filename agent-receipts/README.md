@@ -71,6 +71,51 @@ The first run of this example found a bug in the adapter: mcp 2.x renamed `isErr
 the old name, and the failed lookup was recorded as `ok`. That run's summary is kept in
 [`results/mcp_example.run1.json`](results/mcp_example.run1.json). The adapter now checks both, with a test for each.
 
+## Framework adapters: LangGraph, OpenAI Agents SDK, CrewAI
+
+Any tool function can be wrapped with `@receipted(rec, sources=[...], replayable=...)`. The wrapper keeps the function's name,
+docstring and signature, so a framework builds the same tool schema from it, and it sits inside the framework's own error
+handling, so a tool that raises is recorded as `error` even when the framework turns the exception into text for the model.
+Thin helpers per framework, in `agent_receipts/adapters/`:
+
+| framework | helper |
+| --- | --- |
+| LangGraph / LangChain | `wrap_tools(tools, rec, policy)`, then `ToolNode(tools)` as usual |
+| OpenAI Agents SDK | `receipted_function_tool(fn, rec, ...)` in place of `function_tool(fn)` |
+| CrewAI | `wrap_tool(tool, rec, ...)` for a BaseTool or an `@tool` tool |
+
+Each has a worked example in [`examples/frameworks/`](examples/frameworks/). The same plan of four tool calls, one of which
+fails, runs through each framework's own runtime: a LangGraph `StateGraph` with `ToolNode`, `Runner.run` in the Agents SDK,
+and a CrewAI `Crew`. A scripted stand-in replaces the model in each, so nothing calls an API and every run costs $0. The tamper
+cases, the expected verdicts, and a written guess of which frameworks mark the failure in their own record were frozen in
+[`adapter_injections/`](adapter_injections/) before any adapter code existed. The baseline is each framework's own record of
+the run: LangGraph's messages, the Agents SDK's `new_items`, and CrewAI's step callback.
+
+| | LangGraph 1.2.24 | Agents SDK 0.20.0 | CrewAI 1.15.44 |
+| --- | --- | --- | --- |
+| failed call recorded as `error` in the receipt | yes | yes | yes |
+| framework's own record marks the failure as an error | yes (`ToolMessage.status`) | no, only an error string | no, only an error string |
+| tool executions in the receipt / in the framework's own record | 4 / 4 | 4 / 4 | **9 / 4** |
+| tamper cases caught: receipt / framework's own record | 4 / 0 of 4 | 4 / 0 of 4 | 4 / 0 of 4 |
+
+Results: [LangGraph](results/langgraph_example.json), [Agents SDK](results/openai_agents_example.json),
+[CrewAI](results/crewai_example.json). The guesses about which framework marks its own failures were all right.
+
+Two things the examples found:
+
+- **CrewAI re-ran the failing tool six times on its own, and its own record shows one call.** A counter inside the tool
+  confirmed six real executions, so the receipt is right and the frozen expectation (4 calls) was wrong about the framework.
+  This is left as a departure, explained in [results/departures.md](results/departures.md). For a lookup that is harmless. For
+  a tool that charges a card or sends an email, it would be six charges or six emails, with one visible in the framework's
+  record.
+- **LangGraph's default `ToolNode` stops the graph on a plain exception.** That default run is kept in
+  [`examples/frameworks/out/langgraph/default_handler/`](examples/frameworks/out/langgraph/default_handler/): the receipt is
+  `unclosed` but still holds the failed call. The main run sets `handle_tool_errors=True`.
+
+What these examples do not show: behaviour with a real model choosing the calls, streaming, parallel tool calls, or
+framework features beyond plain function tools (LangChain tools without a function behind them, Agents SDK hosted tools,
+handoffs, CrewAI delegation).
+
 ## Results, next to the cheap baselines
 
 [`run_injections.py`](run_injections.py) records one clean session, then applies 14 attacks and 2 non-attack checks (revoked
@@ -133,9 +178,10 @@ Same rules as the rest of this repository.
    are kept, not fitted away.
 
 CI (`.github/workflows/agent-receipts.yml`) runs the tests twice: once with nothing installed (pure-Python Ed25519), and once
-with `cryptography` and `mcp` installed, including the MCP example. It then verifies the committed example receipt with the CLI.
+with `cryptography` and `mcp` installed, including the MCP example. A second job installs the three frameworks at the pinned
+versions above and runs their examples. Both jobs verify the committed example receipts with the CLI.
 
 ## Not in v0
 
-Adapters for Google ADK and other frameworks (any async `call_tool(name, arguments)` already works through `RecordedSession`),
-an anchor service, key rotation, and receipts that span more than one agent process.
+An adapter for Google ADK (a plain tool function already works with `@receipted`), an anchor service, key rotation, and
+receipts that span more than one agent process.
