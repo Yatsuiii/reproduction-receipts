@@ -1,0 +1,157 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/ekrose__rss_rep",
+  "commit": "fa5cc286e09c6e744e09d07e93b66590edfbcea3"
+ },
+ "when": "2026-11-21T18:16:36Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 5,
+   "deviation": 1,
+   "note": 4
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`/scratch/public/ncrime/analysis_11_01_2021.dta` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "code/fake_data_formats.py:18"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`aoc_data/offense_newonly_2020-09-08.pkl` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "build code/build_final.py:783"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`data/schoolExit.pkl.gz` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "build code/build_final.py:982"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`temp/teach_mean_resids_covmale.dta` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "code/teacher_chars.do:98"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`temp/teach_mean_resids_covwhite.dta` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "code/teacher_chars.do:75"
+    ]
+   },
+   {
+    "code": "STATA_NETWORK_INSTALL",
+    "severity": "deviation",
+    "message": "Do-files install `pkg', tuples from the network at run time, with no version pinned and no copy bundled. SSC serves the current version, which may differ from the authors'.",
+    "evidence": [
+     "code/estimate_variance_robustness.do:21",
+     "code/set_options.do:34"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Stata (version 10.1, 11 named in code); the desk says it has it.",
+    "evidence": [
+     "code/covariate_correlation_part1.do",
+     "code/entry_ivs_part1.do",
+     "code/entry_ivs_part2.do",
+     "code/entry_ivs_part3.do",
+     "code/estimate_heterog_variance.do"
+    ]
+   },
+   {
+    "code": "PRECOMPUTED_OUTPUTS",
+    "severity": "note",
+    "message": "Files the code both writes and reads are already in the package: data/teacher_covars.dta. A run may read these instead of recomputing them. A receipt must say whether it replayed them or recomputed them, and a matching output hash alone does not show recomputation.",
+    "evidence": [
+     "data/teacher_covars.dta"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "44 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "build code/build_final.py:29",
+     "build code/build_final.py:131",
+     "build code/build_final.py:206",
+     "build code/build_final.py:386",
+     "build code/build_final.py:406",
+     "build code/build_final.py:430",
+     "build code/build_final.py:535",
+     "build code/build_final.py:538",
+     "build code/build_final.py:587",
+     "build code/build_final.py:590"
+    ]
+   },
+   {
+    "code": "CLUSTER_MENTIONED",
+    "severity": "note",
+    "message": "The package mentions a cluster or batch scheduler; scripts may assume one.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 54,
+   "bytes": 59953600,
+   "languages": [
+    "python",
+    "shell",
+    "stata"
+   ],
+   "code_files": {
+    "python": 19,
+    "shell": 3,
+    "stata": 15
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [
+    "BSD"
+   ],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 105,
+   "writes": 77,
+   "missing": [
+    "analysis_11_01_2021.dta",
+    "offense_newonly_2020-09-08.pkl",
+    "schoolexit.pkl.gz",
+    "teach_mean_resids_covmale.dta",
+    "teach_mean_resids_covwhite.dta"
+   ],
+   "unresolved": 44,
+   "remote": []
+  },
+  "links": {
+   "found": 4,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.329
+ }
+}

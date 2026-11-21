@@ -1,0 +1,410 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/mbholm__Asset-Price-Redistribution",
+  "commit": "6636b72eafad8506756f4fa7e76b50b542ab70ad"
+ },
+ "when": "2026-11-21T18:16:40Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 28,
+   "deviation": 3,
+   "note": 5
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/cooperative_transactions_by_sector` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/2 - kappa.do:249"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/corr_welfare_revgain_sc_rank_1994` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:315"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$data/cpi_1960_2020_USD.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Pre/aggregate_housing_transactions.do:44",
+     "Code/Pre/aggregate_housing_transactions.do:88"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/hist_revgain_total_sc_1994` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:273"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/hist_welfare_total_1994` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:226"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/hist_welfare_total_diff_xi_10_1994` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:345"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/hist_welfare_total_sc_1994` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:126",
+     "Code/Stata/3 - individuals.do:239",
+     "Code/Stata/3 - individuals.do:269"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/housing_transactions_by_sector` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/2 - kappa.do:243"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/interest_rate_and_ltv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:359"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/interest_rate_and_ltv_regression` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:382"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$data/lnr_mlnr_flnr_updated2013.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Pre/P_clean_bequest_data.do:94",
+     "Code/Pre/P_clean_bequest_data.do:99"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/planner_welfare` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:252"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`${output}/planner_welfare.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Pre/welfare_histograms.do:229"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/sum_stats_stocks_1993` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:48"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/sum_stats_welfare_1994` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:97"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/sum_stats_welfare_total_diff_xi_10_1994` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:325"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/sum_stats_welfare_total_diff_xi_5_1994` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:330"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Aggregate Data/Table10788` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/2 - kappa.do:23"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/welfare_cohort_xi_0` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/4 - bycohort.do:275"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/welfare_cohort_xi_10` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/4 - bycohort.do:283"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/welfare_cohort_xi_5` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/4 - bycohort.do:279"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/welfare_effect_decompose_100` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:168"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/welfare_revgain_sc_heatmap_5_1994` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:297"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$WorldscopePath/wrds_ws_company.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Pre/worldscope.do:7"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$WorldscopePath/wrds_ws_funda.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Pre/worldscope.do:19"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/year_cohort` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/2 - kappa.do:352",
+     "Code/Stata/2 - kappa.do:422",
+     "Code/Stata/4 - bycohort.do:6",
+     "Code/Stata/4 - bycohort.do:54",
+     "Code/Stata/4 - bycohort.do:102"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/year_cohort_percentile` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/5 - bywealth.do:7",
+     "Code/Stata/5 - bywealth.do:56"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$MyPath/Data/Micro Data/year_mean_ltv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Code/Stata/3 - individuals.do:372"
+    ]
+   },
+   {
+    "code": "STATA_VERSION_MISSING",
+    "severity": "deviation",
+    "message": "No `version` statement in any do-file. Stata's behaviour depends on the version, so a rerun must choose one and log it.",
+    "evidence": []
+   },
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Julia code without a Manifest.toml: package versions are not pinned.",
+    "evidence": [
+     "Code/Julia/IncompleteMarkets.jl",
+     "Code/Julia/run.jl"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "10 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "Code/Julia/run.jl:21",
+     "Code/Julia/run.jl:22",
+     "Code/Julia/run.jl:23",
+     "Code/Julia/run.jl:26",
+     "Code/Julia/run.jl:30",
+     "Code/Julia/run.jl:31",
+     "Code/Julia/run.jl:114",
+     "Code/Julia/run.jl:115",
+     "Code/Pre/worldscope.do:2",
+     "Code/Stata/run.do:1"
+    ]
+   },
+   {
+    "code": "README_NOT_TEXT",
+    "severity": "note",
+    "message": "The README is not plain text (README.pdf). Triage cannot read it, so the data availability statement, licence and run time below were not checked against it. Read it by hand.",
+    "evidence": [
+     "README.pdf"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Stata; the desk says it has it.",
+    "evidence": [
+     "Code/Pre/P_clean_bequest_data.do",
+     "Code/Pre/P_copy_data.do",
+     "Code/Pre/P_final_data.do",
+     "Code/Pre/P_inheritance_events.do",
+     "Code/Pre/aggregate_housing_transactions.do"
+    ]
+   },
+   {
+    "code": "PRECOMPUTED_OUTPUTS",
+    "severity": "note",
+    "message": "Files the code both writes and reads are already in the package: $MyPath/Save/prices.dta, $MyPath/Save/prices_synthetic.dta, $MyPath/Save/sector_scons.dta, $MyPath/data/worldscope/worldscope.csv, $MyPath/save/bycohort_cov.dta, $MyPath/save/bycohort_secondorder_transactions.dta, $MyPath/save/bycohort_synthetic.dta, $MyPath/save/bycohort_welfare_baseline.dta, $MyPath/save/bycohort_welfare_collateral.dta, $MyPath/save/bycohort_welfare_combine.dta. A run may read these instead of recomputing them. A receipt must say whether it replayed them or recomputed them, and a matching output hash alone does not show recomputation.",
+    "evidence": [
+     "$MyPath/Save/prices.dta",
+     "$MyPath/Save/prices_synthetic.dta",
+     "$MyPath/Save/sector_scons.dta",
+     "$MyPath/data/worldscope/worldscope.csv",
+     "$MyPath/save/bycohort_cov.dta",
+     "$MyPath/save/bycohort_secondorder_transactions.dta",
+     "$MyPath/save/bycohort_synthetic.dta",
+     "$MyPath/save/bycohort_welfare_baseline.dta",
+     "$MyPath/save/bycohort_welfare_collateral.dta",
+     "$MyPath/save/bycohort_welfare_combine.dta"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "58 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "Code/Pre/incomplete_markets.do:132",
+     "Code/Pre/incomplete_markets.do:137",
+     "Code/Pre/welfare_histograms.do:97",
+     "Code/Pre/welfare_histograms.do:163",
+     "Code/Pre/worldscope.do:21",
+     "Code/Stata/1 - prices.do:39",
+     "Code/Stata/1 - prices.do:66",
+     "Code/Stata/1 - prices.do:83",
+     "Code/Stata/1 - prices.do:93",
+     "Code/Stata/1 - prices.do:94"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 816,
+   "bytes": 62749003,
+   "languages": [
+    "julia",
+    "stata"
+   ],
+   "code_files": {
+    "julia": 2,
+    "stata": 21
+   },
+   "docs_read": [],
+   "licences_named": [],
+   "master_scripts": [
+    "Code/Julia/run.jl",
+    "Code/Stata/run.do"
+   ]
+  },
+  "inputs": {
+   "reads": 206,
+   "writes": 134,
+   "missing": [
+    "cooperative_transactions_by_sector",
+    "corr_welfare_revgain_sc_rank_1994",
+    "cpi_1960_2020_usd.dta",
+    "hist_revgain_total_sc_1994",
+    "hist_welfare_total_1994",
+    "hist_welfare_total_diff_xi_10_1994",
+    "hist_welfare_total_sc_1994",
+    "housing_transactions_by_sector",
+    "interest_rate_and_ltv",
+    "interest_rate_and_ltv_regression",
+    "lnr_mlnr_flnr_updated2013.dta",
+    "planner_welfare",
+    "planner_welfare.xlsx",
+    "sum_stats_stocks_1993",
+    "sum_stats_welfare_1994",
+    "sum_stats_welfare_total_diff_xi_10_1994",
+    "sum_stats_welfare_total_diff_xi_5_1994",
+    "table10788",
+    "welfare_cohort_xi_0",
+    "welfare_cohort_xi_10",
+    "welfare_cohort_xi_5",
+    "welfare_effect_decompose_100",
+    "welfare_revgain_sc_heatmap_5_1994",
+    "wrds_ws_company.dta",
+    "wrds_ws_funda.dta",
+    "year_cohort",
+    "year_cohort_percentile",
+    "year_mean_ltv"
+   ],
+   "unresolved": 58,
+   "remote": []
+  },
+  "links": {
+   "found": 0,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.055
+ }
+}

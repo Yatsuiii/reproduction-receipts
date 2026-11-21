@@ -1,0 +1,199 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/Paul-Haimerl__replication-fuse-time",
+  "commit": "d768f7539e679bda30f1663233147f3fd25cb8de"
+ },
+ "when": "2026-11-21T18:16:37Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 6,
+   "deviation": 2,
+   "note": 6
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`df_emp_illustration.xlsx` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "Code/Matlab/empirical_illustration.m:43"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`empirical_coefficients_reference.mat` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "Code/Matlab/verify_empirical.m:51"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`empirical_verification.json` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "Code/Matlab/verify_empirical.m:80",
+     "Code/Matlab/verify_empirical.m:136"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`Timing_DGP1_N100_T50.rds` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "Code/R/07_Timing_Table.R:30"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`Timing_DGP1_N50_T50.rds` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "Code/R/07_Timing_Table.R:29"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`Timing_summary_DGP_1_K_N50_N100_T50.xlsx` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "Code/R/07_Timing_Table.R:32"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads PAGFL, PAGFLReplication, aricode, gridExtra, openxlsx, pckg, readxl with no renv.lock. A rerun installs current CRAN versions and must log them.",
+    "evidence": [
+     "Code/R/01_MC_Simulation_Study.R:165",
+     "Code/R/Fast_One_Cell_Check.R:247",
+     "Code/R/Helper_Functions.R:2",
+     "Code/R/Helper_Functions.R:7",
+     "Code/R/Helper_Functions.R:166"
+    ]
+   },
+   {
+    "code": "LONG_COMPUTE",
+    "severity": "deviation",
+    "message": "The documentation claims a run time of about 48 hours, over this desk's budget of 24 hours (--max-hours). A full rerun needs a compute plan; a partial rerun must say which parts it skipped.",
+    "evidence": []
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "Code/Matlab/IC.m",
+     "Code/Matlab/IC_DGP2.m",
+     "Code/Matlab/MC_Sim_Study.m",
+     "Code/Matlab/PLS_group_mod.m",
+     "Code/Matlab/Timing_script.m"
+    ]
+   },
+   {
+    "code": "ENVIRONMENT_IMAGE",
+    "severity": "note",
+    "message": "The package ships a container definition. A rerun can build it, but image tags and base images must be pinned by digest to be reproducible.",
+    "evidence": [
+     "Dockerfile"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "27 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "Code/Matlab/MC_Sim_Study.m:100",
+     "Code/Matlab/MC_Sim_Study.m:107",
+     "Code/Matlab/Timing_script.m:44",
+     "Code/R/02_Extract_Simulated_Data.R:43",
+     "Code/R/05_Timing_Benchmark.R:66",
+     "Code/R/C_Lasso_Helper_Functions.R:58",
+     "Code/R/C_Lasso_Helper_Functions.R:63",
+     "Code/R/C_Lasso_Helper_Functions.R:64",
+     "Code/R/C_Lasso_Helper_Functions.R:69",
+     "Code/R/C_Lasso_Helper_Functions.R:70"
+    ]
+   },
+   {
+    "code": "CLUSTER_MENTIONED",
+    "severity": "note",
+    "message": "The package mentions a cluster or batch scheduler; scripts may assume one.",
+    "evidence": []
+   },
+   {
+    "code": "MATLAB_TOOLBOX",
+    "severity": "note",
+    "message": "Documentation names MATLAB toolboxes: Parallel Computing Toolbox. Each is licensed separately; check the desk's MATLAB has them.",
+    "evidence": []
+   },
+   {
+    "code": "NONCOMMERCIAL_LICENCE",
+    "severity": "note",
+    "message": "Non-commercial licence. Rerunning for an editorial check is normally fine; a receipt should not redistribute the package's files.",
+    "evidence": [
+     "LICENSE.txt"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 67,
+   "bytes": 7232924,
+   "languages": [
+    "matlab",
+    "r"
+   ],
+   "code_files": {
+    "matlab": 18,
+    "r": 13
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [
+    "CC BY-NC",
+    "CC0",
+    "GPL"
+   ],
+   "master_scripts": [
+    "Code/R/01_MC_Simulation_Study.R",
+    "Code/R/02_Extract_Simulated_Data.R",
+    "Code/R/03_MC_Figures.R",
+    "Code/R/04_Empirical_Illustration.R",
+    "Code/R/05_Timing_Benchmark.R",
+    "Code/R/06_C_Lasso_Comparison.R",
+    "Code/R/07_Timing_Table.R",
+    "Code/R/08_Empirical_C_Lasso_Comparison.R"
+   ]
+  },
+  "inputs": {
+   "reads": 51,
+   "writes": 23,
+   "missing": [
+    "df_emp_illustration.xlsx",
+    "empirical_coefficients_reference.mat",
+    "empirical_verification.json",
+    "timing_dgp1_n100_t50.rds",
+    "timing_dgp1_n50_t50.rds",
+    "timing_summary_dgp_1_k_n50_n100_t50.xlsx"
+   ],
+   "unresolved": 27,
+   "remote": []
+  },
+  "links": {
+   "found": 22,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.09
+ }
+}

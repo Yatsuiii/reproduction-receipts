@@ -1,0 +1,214 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/jblumenstock__migration_networks_replication",
+  "commit": "2651b34cf01a2c9892117c90e1d8dae837b5201c"
+ },
+ "when": "2026-11-21T18:16:57Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 8,
+   "deviation": 4,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`cdr_move_from_district_proportion.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "figures/figure_A13_step2.py:11"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`census_destination_simple.csv` is read by the code and named in the documentation (README.md, figures/README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "figures/figure_A13_step2.py:8",
+     "figures/figure_A1_step2.py:8"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`census_origin.csv` is read by the code and named in the documentation (README.md, figures/README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "figures/figure_A1_step2.py:9"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`data/dest_home_d_s_l_6month_lag.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "tables/table_A12.R:6"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`data/dest_home_for_regression_information_support_diff_between_-12_to_-2_month.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "tables/table_A13_step3.R:62"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`data/dest_home_for_regression_information_support_diff_between_-6_to_-2_month.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "tables/table_A13_step3.R:3"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`data/inset_degree_distribution_dest.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "figures/figure_6bd_7bd_A6bd_step5_plot.py:132"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`data/inset_degree_distribution_home.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "figures/figure_6bd_7bd_A6bd_step5_plot.py:133"
+    ]
+   },
+   {
+    "code": "PYTHON2_SYNTAX",
+    "severity": "deviation",
+    "message": "1 Python files do not parse as Python 3, most likely Python 2. A rerun needs a Python 2.7 interpreter (end of life since 2020) or a port, and either is a logged deviation.",
+    "evidence": [
+     "tables/table_A10_step2_support_strong.py"
+    ]
+   },
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Python code imports dateutil, graphlab, matplotlib, numpy, pandarallel, pandas, seaborn, snap, statsmodels, turicreate but the package has no requirements file, environment file or lockfile. A rerun must choose versions and log them.",
+    "evidence": [
+     "figures/figure_4_A2_A3.py",
+     "figures/figure_5_6ac_7ac.py",
+     "figures/figure_6bd_7bd_A6bd_step1_generate_data_for_regression.py",
+     "figures/figure_6bd_7bd_A6bd_step2_convert_data.py",
+     "figures/figure_6bd_7bd_A6bd_step3_sampling.py"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads fixest, lfe, stargazer with no renv.lock. A rerun installs current CRAN versions and must log them.",
+    "evidence": [
+     "figures/figure_6bd_7bd_A6bd_step4_regression.R:1",
+     "tables/table_2_step2_regression.R:1",
+     "tables/table_A10_step3.R:1",
+     "tables/table_A11_step3.R:1",
+     "tables/table_A12.R:1"
+    ]
+   },
+   {
+    "code": "LONG_COMPUTE",
+    "severity": "deviation",
+    "message": "The documentation claims a run time of about 8640 hours, over this desk's budget of 24 hours (--max-hours). A full rerun needs a compute plan; a partial rerun must say which parts it skipped.",
+    "evidence": []
+   },
+   {
+    "code": "PRECOMPUTED_OUTPUTS",
+    "severity": "note",
+    "message": "Files the code both writes and reads are already in the package: data/cdr_move_from_district_proportion_2month.csv, data/cdr_move_to_district_proportion_12month.csv, data/cdr_move_to_district_proportion_2month.csv, data/cdr_move_to_district_proportion_6month.csv, data/cluster_dest_for_regression_22degree_sampled_10pct.csv, data/dest_home_d_s_l.csv, data/dest_home_d_s_l_infor_strong.csv, data/dest_home_d_s_l_information_overall_network.csv, data/dest_home_d_s_l_recent_migrant.csv, data/dest_home_d_s_l_shorttime_longtime.csv. A run may read these instead of recomputing them. A receipt must say whether it replayed them or recomputed them, and a matching output hash alone does not show recomputation.",
+    "evidence": [
+     "data/cdr_move_from_district_proportion_2month.csv",
+     "data/cdr_move_to_district_proportion_12month.csv",
+     "data/cdr_move_to_district_proportion_2month.csv",
+     "data/cdr_move_to_district_proportion_6month.csv",
+     "data/cluster_dest_for_regression_22degree_sampled_10pct.csv",
+     "data/dest_home_d_s_l.csv",
+     "data/dest_home_d_s_l_infor_strong.csv",
+     "data/dest_home_d_s_l_information_overall_network.csv",
+     "data/dest_home_d_s_l_recent_migrant.csv",
+     "data/dest_home_d_s_l_shorttime_longtime.csv"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "72 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "figures/figure_4_A2_A3.py:24",
+     "figures/figure_4_A2_A3.py:39",
+     "figures/figure_5_6ac_7ac.py:255",
+     "figures/figure_5_6ac_7ac.py:265",
+     "figures/figure_6bd_7bd_A6bd_step1_generate_data_for_regression.py:86",
+     "figures/figure_6bd_7bd_A6bd_step2_convert_data.py:49",
+     "figures/figure_6bd_7bd_A6bd_step5_plot.py:134",
+     "figures/figure_6bd_7bd_A6bd_step5_plot.py:135",
+     "figures/figure_6bd_7bd_A6bd_step5_plot.py:136",
+     "figures/figure_A10_A11_A12_step1_calcualte_utility.py:263"
+    ]
+   },
+   {
+    "code": "NONCOMMERCIAL_LICENCE",
+    "severity": "note",
+    "message": "Non-commercial licence. Rerunning for an editorial check is normally fine; a receipt should not redistribute the package's files.",
+    "evidence": [
+     "LICENSE"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 107,
+   "bytes": 495559,
+   "languages": [
+    "python",
+    "r"
+   ],
+   "code_files": {
+    "python": 40,
+    "r": 15
+   },
+   "docs_read": [
+    "README.md",
+    "data/README.md",
+    "figures/README.md"
+   ],
+   "licences_named": [
+    "CC BY-NC",
+    "GPL"
+   ],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 125,
+   "writes": 60,
+   "missing": [
+    "cdr_move_from_district_proportion.csv",
+    "census_destination_simple.csv",
+    "census_origin.csv",
+    "dest_home_d_s_l_6month_lag.csv",
+    "dest_home_for_regression_information_support_diff_between_-12_to_-2_month.csv",
+    "dest_home_for_regression_information_support_diff_between_-6_to_-2_month.csv",
+    "inset_degree_distribution_dest.csv",
+    "inset_degree_distribution_home.csv"
+   ],
+   "unresolved": 72,
+   "remote": []
+  },
+  "links": {
+   "found": 3,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 14.771
+ }
+}

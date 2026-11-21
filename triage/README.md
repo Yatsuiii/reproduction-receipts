@@ -5,6 +5,10 @@
 > 3/6 and then 2/6 times. Its answer key was a hand reading of each README, never a rerun, and six packages per round is too few to
 > show improvement. The failures are left as found in [`results/heldout_review.md`](results/heldout_review.md) and
 > [`results/heldout_r3_review.md`](results/heldout_r3_review.md). No round 4 is planned.
+>
+> **Survey, 2026-11-21.** The same unchanged script was then run once on 33 newer journal packages, all checked by hand. Its verdict
+> matched 23 times, against 16 for the best cheap guess, and its reason was right 17 times. It called two blocked packages runnable.
+> See [`results/survey_review.md`](results/survey_review.md).
 
 Step one of a reproduction check. Given a replication package, `triage.py` decides in about a second whether it can run at all on
 this desk, and why not, before anyone spends a day on it.
@@ -61,6 +65,8 @@ Same rules as the receipts.
 | Round 3 fixtures, v3 | 36/36 | 14/36 | 15/36 | [`fixtures.json`](results/fixtures.json) |
 | Six new held-out packages, v3, verdict | 4/6 | 0/6 (always-blocked 3/6) | 0/6 | [`heldout_r3_review.md`](results/heldout_r3_review.md) |
 | Same six, verdict and main reason | 2/6 | n/a | n/a | [`heldout_r3_review.md`](results/heldout_r3_review.md) |
+| 33 recent journal packages (survey), v3 unchanged, verdict | 23/33 | 3/33 (always-blocked 14/33, always-deviations 16/33) | n/a | [`survey_review.md`](results/survey_review.md) |
+| Same 33, verdict and main reason | 17/33 | n/a | n/a | [`survey_review.md`](results/survey_review.md) |
 
 \* Scored on the first 34 cases. The last two were written after the v3 draft (see `FROZEN_CHANGES.md`); that draft scored 34/36 ([`fixtures.v3draft.json`](results/fixtures.v3draft.json)).
 

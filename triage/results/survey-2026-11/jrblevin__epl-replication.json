@@ -1,0 +1,123 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/jrblevin__epl-replication",
+  "commit": "ab20cf057c991fbaf5759f46f0caeaba33b4d0a8"
+ },
+ "when": "2026-11-21T18:16:42Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 3,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "STATA_VERSION_MISSING",
+    "severity": "deviation",
+    "message": "No `version` statement in any do-file. Stata's behaviour depends on the version, so a rerun must choose one and log it.",
+    "evidence": []
+   },
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Python code imports pandas but the package has no requirements file, environment file or lockfile. A rerun must choose versions and log them.",
+    "evidence": [
+     "application/extract.py"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "22 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "application/main.m:863",
+     "application/main.m:867",
+     "application/main.m:869",
+     "application/main.m:876",
+     "application/main.m:885",
+     "application/main.m:889",
+     "application/main.m:892",
+     "application/main.m:905",
+     "application/main.m:913",
+     "application/main.m:922"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "application/Gfunc.m",
+     "application/clogit.m",
+     "application/epldygam.m",
+     "application/forwardsim.m",
+     "application/freqprob.m"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Stata; the desk says it has it.",
+    "evidence": [
+     "application/clubstore_county.do",
+     "application/population_county.do",
+     "application/population_zip.do"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "1 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "application/main.m:125"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 129,
+   "bytes": 23596385,
+   "languages": [
+    "matlab",
+    "python",
+    "stata"
+   ],
+   "code_files": {
+    "matlab": 37,
+    "python": 1,
+    "stata": 3
+   },
+   "docs_read": [
+    "README.md",
+    "application/nhgis0012_csv/nhgis0012_ts_geog2010_zcta_codebook.txt"
+   ],
+   "licences_named": [],
+   "master_scripts": [
+    "application/main.m",
+    "mc-psd2008/main.m",
+    "mc-psd2010/main.m"
+   ]
+  },
+  "inputs": {
+   "reads": 11,
+   "writes": 15,
+   "missing": [],
+   "unresolved": 1,
+   "remote": []
+  },
+  "links": {
+   "found": 17,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.076
+ }
+}

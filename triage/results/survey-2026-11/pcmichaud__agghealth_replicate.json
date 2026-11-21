@@ -1,0 +1,422 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/pcmichaud__agghealth_replicate",
+  "commit": "360fec651d2b451d5bc8b2b30f5b1ce7177f3f70"
+ },
+ "when": "2026-11-21T18:16:41Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 29,
+   "deviation": 4,
+   "note": 4
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`CPI.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/old/Table 2 Historical Price Effects.m:66"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPI_de.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:55"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../agghealth_replicate/data_sources/prices/CPI_dk.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:66"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPI_fr.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:77"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPI_it.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:88"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPI_nl.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:99"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPI_se.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:110"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPI_sp.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:121"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`CPIH.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/old/Table 2 Historical Price Effects.m:69"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../agghealth_replicate/data_sources/prices/CPIH_de.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:59"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../agghealth_replicate/data_sources/prices/CPIH_dk.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:70"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../agghealth_replicate/data_sources/prices/CPIH_fr.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:81"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPIH_it.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:92"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPIH_nl.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:103"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPIH_se.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:114"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/CPIH_sp.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:125"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/xlsx_files/DALY_my_sample.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "post/Figure 3 Health Risks.ipynb:23",
+     "post/Figure 3 Health Risks.ipynb:25"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/data_regFL.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:178",
+     "build/old/Table 2 Historical Price Effects.m:137"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/xlsx_files/data_risky_alpha.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "post/Figure 3 Health Risks.ipynb:131"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/prices/DataPriceUS.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 2 Historical Price.ipynb:25",
+     "build/Table 2 Historical Price.ipynb:27",
+     "build/old/Table 2 Historical Price Effects.m:21",
+     "build/old/Table 2 Historical Price Effects.m:25"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/echp/echp_incomes.pkl` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 5 Income Shocks.ipynb:6"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`output/eq_` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "post/Tables 10-11 Welfare.ipynb:27"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/fred/gsy.xls` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Macro Moments.ipynb:48"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/hmd/leatbirth.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 1 Historical Growth.ipynb:6"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/meps/MEPS0004_agghealth.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "post/Figure D2 Health Spending by Income.ipynb:33",
+     "post/Figure D2 Health Spending by Income.ipynb:102"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/oecd/oecd_history.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 1 Historical Growth.ipynb:5"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/psid/psid_incomes.pkl` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Table 5 Income Shocks.ipynb:65"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../data_sources/hrs/rndhrs_n.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/Preparation HRS.ipynb:3"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`xlsx_files/TFP_data.xlsx` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "post/Figure D1 Model Fit.py:227"
+    ]
+   },
+   {
+    "code": "PYTHON2_SYNTAX",
+    "severity": "deviation",
+    "message": "1 Python files do not parse as Python 3, most likely Python 2. A rerun needs a Python 2.7 interpreter (end of life since 2020) or a port, and either is a logged deviation.",
+    "evidence": [
+     "post/logs/table9-ref.py"
+    ]
+   },
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Python code imports linearmodels, matplotlib, nlopt, numba, numpy, pandas, scipy, seaborn, statsmodels but the package has no requirements file, environment file or lockfile. A rerun must choose versions and log them.",
+    "evidence": [
+     "build/Figure 1 Moments.ipynb",
+     "build/Health Moments.ipynb",
+     "build/Macro Moments.ipynb",
+     "build/Preparation ECHP.ipynb",
+     "build/Preparation HRS-SHARE.ipynb"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "3 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "build/old/Table 2 Historical Price Effects.m:9",
+     "build/old/Table 2 Historical Price Effects.m:10",
+     "build/old/Table 2 Historical Price Effects.m:11"
+    ]
+   },
+   {
+    "code": "NO_RUN_ORDER",
+    "severity": "deviation",
+    "message": "61 scripts, no master script, and the README does not name an order. A rerun must choose one and log it.",
+    "evidence": [
+     "build/Figure 1 Moments.ipynb",
+     "build/Health Moments.ipynb",
+     "build/Macro Moments.ipynb",
+     "build/Preparation ECHP.ipynb",
+     "build/Preparation HRS-SHARE.ipynb",
+     "build/Preparation HRS.ipynb",
+     "build/Preparation PSID.ipynb",
+     "build/Preparation SHARE.ipynb",
+     "build/Section 2 Static Model with Insurance.ipynb",
+     "build/Section 2 Static Model.ipynb"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "build/old/Table 2 Historical Price Effects.m",
+     "build/old/monthly2annual.m"
+    ]
+   },
+   {
+    "code": "PRECOMPUTED_OUTPUTS",
+    "severity": "note",
+    "message": "Files the code both writes and reads are already in the package: ../estimation/moments/means_health.pkl, ../estimation/moments/means_macro.pkl, ../estimation/moments/stds_health.pkl, ../estimation/moments/stds_macro.pkl, ../model/params/auxiliary.pkl, ../model/params/income_shocks.pkl, /model/params/sim_gdp_us.csv, output/eq_pus_ge3.pkl, output/moms.pkl, output/moms_sim.pkl. A run may read these instead of recomputing them. A receipt must say whether it replayed them or recomputed them, and a matching output hash alone does not show recomputation.",
+    "evidence": [
+     "../estimation/moments/means_health.pkl",
+     "../estimation/moments/means_macro.pkl",
+     "../estimation/moments/stds_health.pkl",
+     "../estimation/moments/stds_macro.pkl",
+     "../model/params/auxiliary.pkl",
+     "../model/params/income_shocks.pkl",
+     "/model/params/sim_gdp_us.csv",
+     "output/eq_pus_ge3.pkl",
+     "output/moms.pkl",
+     "output/moms_sim.pkl"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "46 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "build/Macro Moments.ipynb:10",
+     "build/Macro Moments.ipynb:36",
+     "build/Preparation ECHP.ipynb:4",
+     "build/Preparation ECHP.ipynb:9",
+     "build/Preparation ECHP.ipynb:11",
+     "build/Preparation ECHP.ipynb:18",
+     "build/Preparation ECHP.ipynb:25",
+     "build/Preparation ECHP.ipynb:34",
+     "build/Preparation PSID.ipynb:4",
+     "build/Preparation PSID.ipynb:8"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 246,
+   "bytes": 15350300,
+   "languages": [
+    "matlab",
+    "python",
+    "shell"
+   ],
+   "code_files": {
+    "matlab": 2,
+    "python": 79,
+    "shell": 1
+   },
+   "docs_read": [
+    "README.md",
+    "estimation/README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 242,
+   "writes": 85,
+   "missing": [
+    "cpi.xlsx",
+    "cpi_de.xlsx",
+    "cpi_dk.xlsx",
+    "cpi_fr.xlsx",
+    "cpi_it.xlsx",
+    "cpi_nl.xlsx",
+    "cpi_se.xlsx",
+    "cpi_sp.xlsx",
+    "cpih.xlsx",
+    "cpih_de.xlsx",
+    "cpih_dk.xlsx",
+    "cpih_fr.xlsx",
+    "cpih_it.xlsx",
+    "cpih_nl.xlsx",
+    "cpih_se.xlsx",
+    "cpih_sp.xlsx",
+    "daly_my_sample.xlsx",
+    "data_regfl.xlsx",
+    "data_risky_alpha.xlsx",
+    "datapriceus.xlsx",
+    "echp_incomes.pkl",
+    "eq_",
+    "gsy.xls",
+    "leatbirth.dta",
+    "meps0004_agghealth.dta",
+    "oecd_history.dta",
+    "psid_incomes.pkl",
+    "rndhrs_n.dta",
+    "tfp_data.xlsx"
+   ],
+   "unresolved": 46,
+   "remote": []
+  },
+  "links": {
+   "found": 0,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.479
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/kelloggrk__Public_EndOfOil",
+  "commit": "b491fbac63c7387de74e1f3f89a279e556574e16"
+ },
+ "when": "2026-11-21T18:16:57Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 3,
+   "note": 1
+  },
+  "findings": [
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Julia code without a Manifest.toml: package versions are not pinned.",
+    "evidence": [
+     "code/analysis/CustomEndOfOilModel.jl",
+     "code/analysis/EOOmodel.jl",
+     "code/analysis/EOOmodel_AKS.jl",
+     "code/analysis/PlotFunctions.jl",
+     "code/analysis/altcaseout.jl"
+    ]
+   },
+   {
+    "code": "LFS_POINTERS",
+    "severity": "deviation",
+    "message": "51 files are Git LFS pointers, not data. The data must be fetched with git lfs, which may need the host's quota or credentials.",
+    "evidence": [
+     "output/figures/AKSplot_agg.pdf",
+     "output/figures/AKSplot_region1.pdf",
+     "output/figures/AKSplot_region2.pdf",
+     "output/figures/AKSplot_region3.pdf",
+     "output/figures/AKSplot_region4.pdf",
+     "output/figures/ThyFigA.png",
+     "output/figures/ThyFigB.png",
+     "output/figures/comboplot_R.pdf",
+     "output/figures/comboplot_c0high.pdf",
+     "output/figures/comboplot_costR.pdf"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "3 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "EndOfOil_bash_file.sh:25",
+     "EndOfOil_bash_file.sh:26",
+     "code/analysis/intfilepath.jl:1"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 351,
+   "bytes": 548959,
+   "languages": [
+    "julia",
+    "shell"
+   ],
+   "code_files": {
+    "julia": 18,
+    "shell": 3
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 68,
+   "writes": 16,
+   "missing": [],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 4,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.071
+ }
+}

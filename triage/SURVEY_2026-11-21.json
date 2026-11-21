@@ -180,5 +180,8 @@
    "commit": "5b7f48c533dff10d5658e842820332c5c3228542",
    "journal": "Review of Economic Studies"
   }
+ ],
+ "corrections": [
+  "2026-11-21, after the run: hsoccer/rum-unobs was labelled 'Economic Journal'. Its README names the Economic Journal only as the source of one dataset (McCausland et al. 2020), not as the paper's journal. It is dropped from the scored set, which leaves 33. Its raw verdict is kept in results/survey-2026-11/."
  ]
 }

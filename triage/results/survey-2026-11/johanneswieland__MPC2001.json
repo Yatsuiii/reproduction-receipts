@@ -1,0 +1,300 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/johanneswieland__MPC2001",
+  "commit": "15a801cc5d4acae71a9956c52a016d5bb510f644"
+ },
+ "when": "2026-11-21T18:16:35Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 2,
+   "deviation": 19,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../input/fmli.parquet` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "createconsumptionvariables/code/sumFMLIquarterlyconsumption.py:9"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../input/mtbi.parquet` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "createconsumptionvariables/code/create_new_UCC.py:12"
+    ]
+   },
+   {
+    "code": "STATA_VERSION_MISSING",
+    "severity": "deviation",
+    "message": "No `version` statement in any do-file. Stata's behaviour depends on the version, so a rerun must choose one and log it.",
+    "evidence": []
+   },
+   {
+    "code": "UNDECLARED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python code imports cycler, which no dependency file names.",
+    "evidence": [
+     "appendCEXfiles/code/appendCEXfiles.py",
+     "checkforsmoothing/code/checkforsmoothing.py",
+     "createconsumptionvariables/code/aggregateMTBIucc.py",
+     "createconsumptionvariables/code/aggregateMTBIucc_smallmemory.py",
+     "createconsumptionvariables/code/aggregation_labels.py"
+    ]
+   },
+   {
+    "code": "STATA_NETWORK_INSTALL",
+    "severity": "deviation",
+    "message": "Do-files install did_imputation from the network at run time, with no version pinned and no copy bundled. SSC serves the current version, which may differ from the authors'.",
+    "evidence": [
+     "psmjregressions/code/variablelabels.do:1"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/agglabels_levelnames_nipa.dta` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "psmjregressions/code/Table2001_bea_all.do:68"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/agglabelsnipa.dta` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "psmjregressions/code/Table2001_bea_all.do:67"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/agglabelspsmj.dta` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "psmjregressions/code/Table2001_bea_all.do:70"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/mtbimonthly.parquet` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "checkforsmoothing/code/checkforsmoothing.py:9",
+     "psmjvariables/code/psmjexpenditures.py:13",
+     "psmjvariables/code/psmjexpenditures.py:17",
+     "testingconsumptionaggregation/code/testingaggregation.py:9"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/pceexpenditure.parquet` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "jpsexpenditure/code/jpsexpenditure.py:12",
+     "jpsexpenditure/code/jpsexpenditure.py:36"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/pceexpenditureprice.parquet` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "jpsexpenditure/code/jpsexpenditure.py:35"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../output/psmjexpendituresinterview.parquet` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "psmjvariables/code/psmjexpenditures.py:120"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../output/psmjexpendituresmonthly.parquet` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "psmjvariables/code/psmjexpenditures.py:117"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../output/psmjsampleinterview_wlabels.dta` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "psmjregressions/code/Table2001_aggdef.do:27",
+     "psmjregressions/code/Table2001_bea_all.do:8"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/psmjvariablesinterview.parquet` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "psmjsample/code/psmjsample.py:15"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/psmjvariablesmonthly.parquet` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "psmjsample/code/psmjsample.py:118"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/rebate2001cuid.parquet` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "nipavariables/code/nipamergedata.py:21",
+     "psmjvariables/code/psmjmergedata.py:28"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../input/TAX.parquet` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "processrebatemodule/code/rebate2001.py:18"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`../output/testirfs.csv` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "model/code/nk_rebates_mpc_model.py:407"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code fetches data over the network when it runs (import fred, requests.get). What the server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+    "evidence": [
+     "downloaddata/code/pcefromBEA.py:40",
+     "downloaddata/code/pull_pce_detail.py:36",
+     "survey_prof_fore/code/pull_SPF.py:18",
+     "forecasting/code/build_forecast_data.do:34",
+     "forecasting/code/build_forecast_data.do:69",
+     "narrative/code/build_narrative_data.do:42",
+     "survey_prof_fore/code/graph_SPF_cons_dist.do:15"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "2 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "model/code/nk_rebates_mpc_plot2001.py:364",
+     "model/code/tables.py:30"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Stata; the desk says it has it.",
+    "evidence": [
+     "forecasting/code/build_forecast_data.do",
+     "forecasting/code/forecast2001.do",
+     "narrative/code/build_narrative_data.do",
+     "narrative/code/narrative_graphs.do",
+     "psmjregressions/code/Table2001_aggdef.do"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "17 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "forecasting/code/build_forecast_data.do:76",
+     "forecasting/code/build_forecast_data.do:176",
+     "narrative/code/build_narrative_data.do:52",
+     "nipavariables/code/nipaexpenditures.py:26",
+     "nipavariables/code/nipamergedata.py:31",
+     "nipavariables/code/nipamergedata.py:34",
+     "processrebatemodule/code/rebate2001.py:46",
+     "processrebatemodule/code/rebate2001.py:49",
+     "psmjregressions/code/Table2001_bea_all.do:77",
+     "psmjregressions/code/Table2001_bea_all.do:90"
+    ]
+   },
+   {
+    "code": "NONCOMMERCIAL_LICENCE",
+    "severity": "note",
+    "message": "Non-commercial licence. Rerunning for an editorial check is normally fine; a receipt should not redistribute the package's files.",
+    "evidence": [
+     "LICENSE",
+     "license_sss"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 116,
+   "bytes": 87134371,
+   "languages": [
+    "python",
+    "shell",
+    "stata"
+   ],
+   "code_files": {
+    "python": 41,
+    "shell": 3,
+    "stata": 8
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [
+    "CC BY-NC",
+    "CC0",
+    "BSD",
+    "GPL"
+   ],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 73,
+   "writes": 66,
+   "missing": [
+    "agglabels_levelnames_nipa.dta",
+    "agglabelsnipa.dta",
+    "agglabelspsmj.dta",
+    "fmli.parquet",
+    "mtbi.parquet",
+    "mtbimonthly.parquet",
+    "pceexpenditure.parquet",
+    "pceexpenditureprice.parquet",
+    "psmjexpendituresinterview.parquet",
+    "psmjexpendituresmonthly.parquet",
+    "psmjsampleinterview_wlabels.dta",
+    "psmjvariablesinterview.parquet",
+    "psmjvariablesmonthly.parquet",
+    "rebate2001cuid.parquet",
+    "tax.parquet",
+    "testirfs.csv"
+   ],
+   "unresolved": 17,
+   "remote": []
+  },
+  "links": {
+   "found": 6,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.309
+ }
+}
