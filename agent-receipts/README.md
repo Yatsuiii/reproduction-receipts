@@ -61,7 +61,8 @@ receipt anchor run.jsonl --key agent.key  # public and permanent; writes run.jso
 receipt verify run.jsonl --log-key rekor.pub --require-anchor
 ```
 
-These three commands have not been run against the live log yet (see the anchoring section for why); everything above them has.
+The upload and offline check behind these commands were run once against the live log on 21 Nov 2026, with a throwaway key
+(see the anchoring section). The CLI wrappers themselves are covered by the local tests.
 
 Two ideas come from earlier work in this repository:
 
@@ -106,8 +107,11 @@ How far this has been tested, plainly:
 - CI checks the offline verifier against real entries fetched read-only from the live log
   ([tests/test_rekor_live.py](tests/test_rekor_live.py)): signed entry timestamp, inclusion proof and checkpoint. That tests
   the log's formats, not the upload.
-- The upload (`receipt anchor`) has not been run against the live log. It publishes a permanent public entry, so it sits in a
-  manual workflow ([anchor-demo.yml](../.github/workflows/anchor-demo.yml)) that runs only when started by hand.
+- The upload has been run once against the live log, on 21 Nov 2026, from the manual workflow
+  ([anchor-demo.yml](../.github/workflows/anchor-demo.yml)) with a throwaway key. It made Rekor entry
+  [logIndex 4033359777](https://search.sigstore.dev/?logIndex=4033359777). The bundle verified offline, and a
+  holder rewrite of that receipt passed without the anchor and failed with it (`anchor_bad_signature`,
+  `anchor_mismatch`). The workflow stays manual because each run publishes a permanent public entry.
 - Ed25519ph matches the RFC 8032 test vector. P-256 verification is pure Python and cross-checked against `cryptography`.
 
 ## Worked example: an MCP client
