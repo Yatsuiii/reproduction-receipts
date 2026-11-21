@@ -242,6 +242,10 @@ class Trial:
     exit_stage: str = ""
     teardown_return_s: float | None = None
     residuals: list[dict] = field(default_factory=list)
+    # Tagged processes alive just before shutdown, server included. A server
+    # that never starts a child cannot leave one behind, so this is the
+    # denominator that a clean result should be read against.
+    live_before_shutdown: int | None = None
     stdout_noise_lines: int = 0
     stdout_noise_sample: list[str] = field(default_factory=list)
 
@@ -317,6 +321,7 @@ def run_trial(inst: Install, t: dict, root: Path, arm: str, stderr_path: Path) -
             else:
                 trial.handshake_error = "no tools/list result"
         time.sleep(1.0)
+        trial.live_before_shutdown = len(tagged_processes(tag))
     except (BrokenPipeError, OSError) as e:
         trial.handshake_error = f"pipe closed during handshake: {e}"
 
@@ -383,6 +388,10 @@ def run_target(t: dict, work: Path, out_dir: Path, keep: bool = False) -> dict:
             result["verdict"] = "DEAD"
             result["reason"] = inst.reason
             return result
+        # HOME and TMPDIR must exist before the chown, or the server cannot write
+        # to its own home (first full run, 2026-11-21, lost targets to this).
+        (root / "home").mkdir(exist_ok=True)
+        (root / "tmp").mkdir(exist_ok=True)
         subprocess.run(["chown", "-R", f"{NOBODY}:{NOBODY}", str(root)], check=False)
         stderr_path = tdir / "server-stderr.log"
         trials: list[Trial] = []
@@ -514,6 +523,7 @@ def main(argv: list[str] | None = None) -> int:
             tally[v] = tally.get(v, 0) + 1
             summ.write(json.dumps({"name": r["target"]["name"], "repo": r["target"].get("repo"), "verdict": v,
                                    "reason": r.get("reason"), "counts": r.get("counts"),
+                                   "live_before_shutdown": (r.get("trials") or [{}])[0].get("live_before_shutdown"),
                                    "wall_clock_s": r.get("wall_clock_s")}) + "\n")
             summ.flush()
             print(f"[{i}/{len(targets)}] {v:18} {r['target']['name']}", file=sys.stderr)
