@@ -1,0 +1,129 @@
+name: Offline model receipt
+# Two fresh GitHub-hosted machines on different Ubuntu images each install the hashed lock, fetch the pinned weights,
+# check that the harness refuses to run while the network is up, then score the frozen task inside a network namespace
+# whose only interface is lo. Each machine commits its own evidence directory back to the PR branch. A third job
+# verifies both runs from a clean checkout and compares them.
+on:
+  pull_request:
+    paths: ['offline-model/**', '.github/workflows/offline-model.yml']
+permissions:
+  contents: write   # each run job commits its own evidence directory to this PR branch
+concurrency:
+  group: offline-model-${{ github.head_ref }}
+  cancel-in-progress: false
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Frozen task, injections and entry points unchanged
+        run: python offline-model/check_frozen.py
+      - name: Failure injections (stub runtime, no weights)
+        run: python -m unittest discover -s offline-model/tests -v
+
+  run:
+    needs: tests
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - machine: a
+            image: ubuntu-24.04
+          - machine: b
+            image: ubuntu-22.04
+    runs-on: ${{ matrix.image }}
+    timeout-minutes: 60
+    env:
+      RUN_ID: gha-${{ github.run_id }}-${{ github.run_attempt }}-${{ matrix.machine }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Checkout is the commit this workflow was started for
+        run: |
+          test "$(git rev-parse HEAD)" = "${{ github.event.pull_request.head.sha }}" \
+            || { echo "branch moved on since this run started; refusing"; exit 1; }
+          mkdir -p "offline-model/runs/$RUN_ID"
+          echo "$RUN_ID" > /tmp/run_id
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Install the hashed lock into a fresh venv
+        run: |
+          start=$(date +%s)
+          python -m venv /tmp/venv
+          /tmp/venv/bin/python -m pip install --quiet --require-hashes --no-deps \
+            --extra-index-url https://download.pytorch.org/whl/cpu -r offline-model/requirements.lock
+          echo "install_seconds=$(( $(date +%s) - start ))" >> "offline-model/runs/$RUN_ID/setup.txt"
+      - name: Fetch the pinned weights (network still on) and check every hash
+        run: |
+          start=$(date +%s)
+          /tmp/venv/bin/python -I offline-model/fetch_weights.py --fetch --model offline-model/MODEL.json --dest /tmp/weights \
+            | tee "offline-model/runs/$RUN_ID/fetch.txt"
+          echo "fetch_seconds=$(( $(date +%s) - start ))" >> "offline-model/runs/$RUN_ID/setup.txt"
+          head -3 /tmp/weights/LICENSE | tee "offline-model/runs/$RUN_ID/licence_head.txt"
+      - name: The harness must refuse while the network is up (expected exit 3)
+        run: |
+          set +e
+          /tmp/venv/bin/python -I offline-model/harness.py --weights /tmp/weights --out "offline-model/runs/$RUN_ID-network-up" \
+            > "/tmp/netup.txt" 2>&1
+          code=$?
+          set -e
+          cat /tmp/netup.txt; mv /tmp/netup.txt "offline-model/runs/$RUN_ID-network-up/stdout.txt"
+          test "$code" = 3 || { echo "expected exit 3, got $code"; exit 1; }
+      - name: Score the frozen task with no network interface but lo
+        run: |
+          {
+            echo "runner_name=$RUNNER_NAME"; echo "image_os=$ImageOS"; echo "image_version=$ImageVersion"
+            echo "matrix_image=${{ matrix.image }}"
+          } >> "offline-model/runs/$RUN_ID/setup.txt"
+          sudo unshare -n setpriv --reuid="$(id -u)" --regid="$(id -g)" --clear-groups \
+            env HOME="$HOME" PATH="/tmp/venv/bin:/usr/bin:/bin" \
+            /tmp/venv/bin/python -I offline-model/harness.py --weights /tmp/weights --out "/tmp/out" \
+            2>&1 | tee /tmp/offline_stdout.txt
+          code=${PIPESTATUS[0]}
+          cp /tmp/out/* "offline-model/runs/$RUN_ID/"
+          mv /tmp/offline_stdout.txt "offline-model/runs/$RUN_ID/stdout.txt"
+          exit "$code"
+      - name: Commit this machine's evidence (also on failure)
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -f offline-model/runs/
+          git commit -m "offline-model: evidence from $RUN_ID (${{ matrix.image }}, job status ${{ job.status }})"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin "${{ github.head_ref }}" && git push origin "HEAD:${{ github.head_ref }}" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
+
+  check:
+    needs: run
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Verify both runs from this clean checkout and compare them
+        run: |
+          A="offline-model/runs/gha-${{ github.run_id }}-${{ github.run_attempt }}-a"
+          B="offline-model/runs/gha-${{ github.run_id }}-${{ github.run_attempt }}-b"
+          set +e
+          {
+            echo "## verify A"; python -I offline-model/verify.py run "$A"; a=$?
+            echo "## verify B"; python -I offline-model/verify.py run "$B"; b=$?
+            echo "## compare A B"; python -I offline-model/verify.py compare "$A" "$B"; c=$?
+            echo "## baselines"; python -I offline-model/baseline.py
+            echo "exit codes: verify_a=$a verify_b=$b compare=$c"
+          } 2>&1 | tee check.txt
+          grep -q "exit codes: verify_a=0 verify_b=0 compare=0" check.txt
