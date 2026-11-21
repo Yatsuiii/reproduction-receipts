@@ -1,7 +1,7 @@
 {
   "format": "triage-expected/1",
   "written": "2026-11-21, before triage.py existed; see the commit that adds this file",
-  "rule": "A case passes when the verdict matches and every listed code appears among the findings. Extra notes are allowed; extra blockers or deviations change the verdict and so fail the case.",
+  "rule": "A case passes when the verdict matches and every listed code appears among the findings. Extra notes are allowed; extra blockers or deviations change the verdict and so fail the case. Cases with serve_status are run against a local HTTP server that answers every request with that status; {{SERVER}} in the fixture is replaced by its address.",
   "cases": [
     {
       "fixture": "clean_python",
@@ -70,10 +70,12 @@
       "args": [
         "--check-links"
       ],
-      "verdict": "blocked",
+      "verdict": "runnable-with-deviations",
       "codes": [
-        "DEAD_DATA_LINK"
-      ]
+        "MISSING_INPUT_DOWNLOAD",
+        "DATA_LINK_UNREACHABLE"
+      ],
+      "changed": "2026-11-21, round 3: a refused connection is not evidence that a link is dead; see FROZEN_CHANGES.md"
     },
     {
       "fixture": "no_licence",
@@ -180,6 +182,151 @@
         "PYTHON2_SYNTAX"
       ],
       "added": "2026-11-21, round 2"
+    },
+    {
+      "fixture": "link_status",
+      "args": [
+        "--check-links"
+      ],
+      "serve_status": 404,
+      "verdict": "blocked",
+      "codes": [
+        "DEAD_DATA_LINK"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "link_status",
+      "args": [
+        "--check-links"
+      ],
+      "serve_status": 410,
+      "verdict": "blocked",
+      "codes": [
+        "DEAD_DATA_LINK"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "link_status",
+      "args": [
+        "--check-links"
+      ],
+      "serve_status": 403,
+      "verdict": "runnable-with-deviations",
+      "codes": [
+        "MISSING_INPUT_DOWNLOAD",
+        "DATA_LINK_UNVERIFIED"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "link_status",
+      "args": [
+        "--check-links"
+      ],
+      "serve_status": 503,
+      "verdict": "runnable-with-deviations",
+      "codes": [
+        "MISSING_INPUT_DOWNLOAD",
+        "DATA_LINK_UNVERIFIED"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "link_status",
+      "args": [
+        "--check-links"
+      ],
+      "serve_status": 200,
+      "verdict": "runnable-with-deviations",
+      "codes": [
+        "MISSING_INPUT_DOWNLOAD"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "dynare_model",
+      "args": [
+        "--have",
+        "matlab"
+      ],
+      "verdict": "runnable",
+      "codes": [
+        "SOFTWARE_REQUIRED"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "matlab_command_save",
+      "args": [
+        "--have",
+        "matlab"
+      ],
+      "verdict": "runnable",
+      "codes": [],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "source_listed_data",
+      "args": [],
+      "verdict": "runnable-with-deviations",
+      "codes": [
+        "MISSING_INPUT_SOURCE_LISTED"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "gams_model",
+      "args": [],
+      "verdict": "blocked",
+      "codes": [
+        "PROPRIETARY_SOFTWARE"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "gams_model",
+      "args": [
+        "--have",
+        "gams"
+      ],
+      "verdict": "runnable",
+      "codes": [
+        "SOFTWARE_REQUIRED"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "earth_engine",
+      "args": [],
+      "verdict": "runnable-with-deviations",
+      "codes": [
+        "EXTERNAL_SERVICE"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "gpu_listing",
+      "args": [
+        "--have",
+        "matlab"
+      ],
+      "verdict": "runnable",
+      "codes": [
+        "MATLAB_TOOLBOX"
+      ],
+      "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "stata_prose",
+      "args": [
+        "--have",
+        "stata"
+      ],
+      "verdict": "runnable",
+      "codes": [],
+      "added": "2026-11-21, round 3"
     }
   ]
 }
