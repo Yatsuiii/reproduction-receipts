@@ -19,7 +19,7 @@ jobs:
           git clone -q "$UPSTREAM" pkg
           git -C pkg checkout -q "$COMMIT"
           test "$(git -C pkg rev-parse HEAD)" = "$COMMIT"
-          (cd pkg && git ls-files | xargs sha256sum) > package-files.sha256
+          (cd pkg && git ls-files -s | awk '$1 != "120000" {print $4}' | xargs sha256sum) > package-files.sha256  # 14 tracked entries are symlinks to directories; hash regular files only
           diff package-files.sha256 restud-renner-scheidegger/evidence/package-files.sha256
       - name: Install Miniforge (same installer bytes as the first machine)
         run: |
