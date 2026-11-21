@@ -1,0 +1,303 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "git",
+  "url": "https://github.com/korenmiklos/Diversification-Through-Trade-Replication",
+  "commit": "5e286506a97fbf60c344879110fb7c38efb0b8fc"
+ },
+ "when": "2026-11-21T12:12:21Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata --check-links",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 1,
+   "deviation": 6,
+   "note": 2
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`$sigma/results.jld2` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "experiments/CES/scenario.jl:18",
+     "save.jl:4"
+    ]
+   },
+   {
+    "code": "PYTHON2_SYNTAX",
+    "severity": "deviation",
+    "message": "5 Python files do not parse as Python 3, most likely Python 2. A rerun needs a Python 2.7 interpreter (end of life since 2020) or a port, and either is a logged deviation.",
+    "evidence": [
+     "notebooks/Admissible EOS.ipynb",
+     "notebooks/Compare S100 to S500.ipynb",
+     "notebooks/Compare scenarios.ipynb",
+     "notebooks/Create Figure 2.ipynb",
+     "notebooks/Volatility by decade.ipynb"
+    ]
+   },
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Python code imports GR but the package has no requirements file, environment file or lockfile. A rerun must choose versions and log them.",
+    "evidence": [
+     "notebooks/Admissible EOS.ipynb",
+     "notebooks/Compare S100 to S500.ipynb",
+     "notebooks/Compare scenarios.ipynb",
+     "notebooks/Create Figure 2.ipynb",
+     "notebooks/Volatility by decade.ipynb"
+    ]
+   },
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Julia code without a Manifest.toml: package versions are not pinned.",
+    "evidence": [
+     "calibrate_params.jl",
+     "calibration_utils.jl",
+     "equilibrium.jl",
+     "experiments/CES/init_parameters.jl",
+     "experiments/CES/scenario.jl"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`$sigma/common_parameters.jld2` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (README.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "experiments/CES/init_parameters.jl:26",
+     "experiments/CES0.5/actual/scenario.jl:7",
+     "experiments/CES0.5/init_parameters.jl:21",
+     "experiments/CES0.5/kappa1972/scenario.jl:7",
+     "experiments/CES0.5/nosectoral/scenario.jl:7"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "2 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "notebooks/aws-julia.sh:6",
+     "notebooks/aws-julia.sh:7"
+    ]
+   },
+   {
+    "code": "LONG_COMPUTE",
+    "severity": "deviation",
+    "message": "The documentation claims a run time of about 27 hours, over this desk's budget of 24 hours (--max-hours). A full rerun needs a compute plan; a partial rerun must say which parts it skipped.",
+    "evidence": []
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "2 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "output.jl:94",
+     "output.jl:128"
+    ]
+   },
+   {
+    "code": "LINK_UNREACHABLE",
+    "severity": "note",
+    "message": "22 other links could not be reached from this machine (DNS, refused, timeout or proxy). That may be this machine's network rather than the link.",
+    "evidence": [
+     "https://doi.org/10.1093/qje/qjz028",
+     "https://creativecommons.org/licenses/by/4.0/",
+     "http://www.euklems.net/",
+     "http://data.un.org/",
+     "https://stat.unido.org/content/dataset_description/indstat-2-2018%252c-isic-revision-3",
+     "http://databank.worldbank.org/data/download/WDI_csv.zip",
+     "https://datacatalog.worldbank.org/public-licenses#cc-by",
+     "https://comtrade.un.org/",
+     "https://comtrade.un.org/db/help/PolicyOnUseAndRedissemination.pdf",
+     "http://www.euklems.net/euk08i.shtml"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 257,
+   "bytes": 89011321,
+   "languages": [
+    "julia",
+    "python",
+    "shell"
+   ],
+   "code_files": {
+    "julia": 139,
+    "python": 5,
+    "shell": 4
+   },
+   "docs_read": [
+    "LICENSE.md",
+    "README.md",
+    "notebooks/aws-recipe.md"
+   ],
+   "licences_named": [
+    "CC BY"
+   ],
+   "master_scripts": [
+    "Makefile"
+   ]
+  },
+  "inputs": {
+   "reads": 301,
+   "writes": 4,
+   "missing": [
+    "common_parameters.jld2",
+    "results.jld2"
+   ],
+   "unresolved": 2,
+   "remote": []
+  },
+  "links": {
+   "found": 23,
+   "checked": true,
+   "results": [
+    {
+     "url": "http://creativecommons.org/policies",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://data.un.org/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://data.un.org/Data.aspx?d=SNA&f=group_code%3a201",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://data.un.org/Handlers/DownloadHandler.ashx?DataFilter=group_code:201;fiscal_year:$year&DataMartId=SNA&Format=csv",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://databank.worldbank.org/data/download/WDI_csv.zip",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://databank.worldbank.org/data/download/archive/WDI_excel_2015_10.zip",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://wiki.creativecommons.org/Considerations_for_licensors_and_licensees#Considerations_for_licensees",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://wiki.creativecommons.org/Considerations_for_licensors_and_licensees#Considerations_for_licensors",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.euklems.net/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.euklems.net/euk08i.shtml",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "https://comtrade.un.org/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://comtrade.un.org/db/help/PolicyOnUseAndRedissemination.pdf",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://creativecommons.org/licenses/by/4.0/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://datacatalog.worldbank.org/public-licenses#cc-by",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://doi.org/10.1093/qje/qjz028",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://eu-central-1.console.aws.amazon.com/ec2/v2/home?region=eu-central-1#Instances:instanceId=i-0892e3c38c5d6f7d7;sort=instanceId",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://eu-central-1.console.aws.amazon.com/ec2/v2/home?region=eu-central-1#LaunchTemplates:sort=launchTemplateId|",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://julialang.org/research/julia-fresh-approach-BEKS.pdf",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/korenmiklos/impvol-julia/master/notebooks/aws-julia.sh",
+     "status": 200,
+     "ok": true,
+     "final_url": "https://raw.githubusercontent.com/korenmiklos/impvol-julia/master/notebooks/aws-julia.sh"
+    },
+    {
+     "url": "https://stat.unido.org/content/dataset_description/indstat-2-2018%252c-isic-revision-3",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://www.rug.nl/ggdc/docs/pwt71_11302012version.zip",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://www.rug.nl/ggdc/productivity/pwt/pwt-releases/pwt-7.1",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://www.unido.org/researchers/statistical-databases",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    }
+   ]
+  },
+  "seconds": 0.598
+ }
+}

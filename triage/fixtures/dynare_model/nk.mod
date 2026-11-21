@@ -1,0 +1,10 @@
+var y pi i;
+varexo e;
+parameters beta;
+beta = 0.99;
+model;
+y = y(+1) - (i - pi(+1));
+pi = beta*pi(+1) + 0.1*y;
+i = 1.5*pi + e;
+end;
+stoch_simul(order=1);

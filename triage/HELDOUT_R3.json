@@ -1,0 +1,48 @@
+{
+ "format": "triage-heldout/1",
+ "written": "2026-11-21, round 3, before triage.py was run on any of these packages",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "selection_rule": "Public GitHub repositories found by searching for 'replication package/files' plus a journal name (QJE, JPE, Economic Journal, AEJ: Applied), that are the authors' own package or the author's mirror of the journal archive. Third-party re-replications and packages with no named journal were excluded. None overlaps the round 2 set. Pinned at HEAD on the day of selection.",
+ "options": [
+  "--have",
+  "stata,matlab",
+  "--check-links"
+ ],
+ "options_reason": "Economics data desks normally hold Stata and often MATLAB licences; the verdict without them is trivially blocked.",
+ "rule": "Each package is triaged once with this exact triage.py, then compared with a hand reading of its README and the files it names. Every disagreement is recorded in results/heldout_r3_review.md. triage.py is not changed in this pull request in response to these packages.",
+ "packages": [
+  {
+   "repo": "korenmiklos/Diversification-Through-Trade-Replication",
+   "commit": "5e286506a97fbf60c344879110fb7c38efb0b8fc",
+   "journal": "Quarterly Journal of Economics"
+  },
+  {
+   "repo": "timhdesilva/replication_qje2025",
+   "commit": "7d944b14fb5fd38f5848d62cf1caf3af0b5fa0ef",
+   "journal": "Quarterly Journal of Economics"
+  },
+  {
+   "repo": "tyleransom/Dropout-JPE",
+   "commit": "fb1e3f6962a80c8bd839c9956f6cca7b93acd983",
+   "journal": "Journal of Political Economy"
+  },
+  {
+   "repo": "mbholm/MPC-Heterogeneity-and-Household-Balance-Sheets",
+   "commit": "c9c41c7169c92fba0e4181aa1ad62a88e09d6373",
+   "journal": "American Economic Journal: Macroeconomics"
+  },
+  {
+   "repo": "jrothst/Location-location-location",
+   "commit": "f7391e148cb75509e97db1e296983707a51edaf2",
+   "journal": "AEJ: Applied (author's mirror of the openICPSR archive)"
+  },
+  {
+   "repo": "korenmiklos/Volatility-and-Development-replication",
+   "commit": "ea6fe0748160c7262d5ee038575370213284d303",
+   "journal": "Quarterly Journal of Economics"
+  }
+ ],
+ "corrections": [
+  "2026-11-21, after the run: mbholm/MPC-Heterogeneity-and-Household-Balance-Sheets was labelled 'Economic Journal (per its description)'. The search matched 'American Economic Journal', and the LyX README names authors Fagereng, Holm and Natvik. The journal label is corrected; the selection, commit and options are unchanged."
+ ]
+}

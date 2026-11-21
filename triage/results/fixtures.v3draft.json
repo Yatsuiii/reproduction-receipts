@@ -1,0 +1,957 @@
+{
+ "format": "triage-fixture-results/1",
+ "triage_sha256": "6a73ebe7ea82258916ee4e0d8eb744af8c3c4d4e9fcf73c442f70c0dec723291",
+ "expected_sha256": "fd93c387d0d03310fe3ebbd50d9a59fb16a0df55604b4ad1c3811f6fb815a71f",
+ "summary": {
+  "triage": "34/36",
+  "always-runnable": "14/36",
+  "readme-and-code": "15/36"
+ },
+ "cases": [
+  {
+   "fixture": "clean_python",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "clean_r_renv",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "stata_package",
+   "args": [],
+   "serve_status": null,
+   "expected": "blocked",
+   "expected_codes": [
+    "PROPRIETARY_SOFTWARE"
+   ],
+   "triage": {
+    "verdict": "blocked",
+    "codes": [
+     "PROPRIETARY_SOFTWARE"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "stata_package",
+   "args": [
+    "--have",
+    "stata"
+   ],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [
+     "SOFTWARE_REQUIRED"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "restricted_data",
+   "args": [],
+   "serve_status": null,
+   "expected": "blocked",
+   "expected_codes": [
+    "MISSING_INPUT_RESTRICTED"
+   ],
+   "triage": {
+    "verdict": "blocked",
+    "codes": [
+     "MISSING_INPUT_RESTRICTED"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "missing_input",
+   "args": [],
+   "serve_status": null,
+   "expected": "blocked",
+   "expected_codes": [
+    "MISSING_INPUT_UNDOCUMENTED"
+   ],
+   "triage": {
+    "verdict": "blocked",
+    "codes": [
+     "MISSING_INPUT_UNDOCUMENTED"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "unpinned_python",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "UNPINNED_DEPENDENCIES",
+    "UNDECLARED_DEPENDENCIES"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "UNDECLARED_DEPENDENCIES",
+     "UNPINNED_DEPENDENCIES"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "external_download",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "MISSING_INPUT_DOWNLOAD"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "MISSING_INPUT_DOWNLOAD"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "external_download",
+   "args": [
+    "--check-links"
+   ],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "MISSING_INPUT_DOWNLOAD",
+    "DATA_LINK_UNREACHABLE"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "DATA_LINK_UNREACHABLE",
+     "MISSING_INPUT_DOWNLOAD"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "no_licence",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [
+    "NO_LICENCE"
+   ],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [
+     "NO_LICENCE"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "absolute_paths",
+   "args": [
+    "--have",
+    "stata"
+   ],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "ABSOLUTE_PATH"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "ABSOLUTE_PATH",
+     "SOFTWARE_REQUIRED"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "no_code",
+   "args": [],
+   "serve_status": null,
+   "expected": "blocked",
+   "expected_codes": [
+    "NO_CODE"
+   ],
+   "triage": {
+    "verdict": "blocked",
+    "codes": [
+     "NO_CODE"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "blocked",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "stata_ssc",
+   "args": [
+    "--have",
+    "stata"
+   ],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "STATA_NETWORK_INSTALL"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "SOFTWARE_REQUIRED",
+     "STATA_NETWORK_INSTALL"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "cached_outputs",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [
+    "PRECOMPUTED_OUTPUTS"
+   ],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [
+     "PRECOMPUTED_OUTPUTS"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "no_run_order",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "NO_RUN_ORDER"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "NO_RUN_ORDER"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "long_compute",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "LONG_COMPUTE"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "CLUSTER_MENTIONED",
+     "LONG_COMPUTE"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "removed_api",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "REMOVED_API",
+    "UNPINNED_DEPENDENCIES"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "REMOVED_API",
+     "UNPINNED_DEPENDENCIES"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "runtime_fetch",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "RUNTIME_DOWNLOAD"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "RUNTIME_DOWNLOAD"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "cache_via_variable",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [
+    "PRECOMPUTED_OUTPUTS"
+   ],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [
+     "PRECOMPUTED_OUTPUTS"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "helper_modules",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "python2",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "PYTHON2_SYNTAX"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "PYTHON2_SYNTAX"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "link_status",
+   "args": [
+    "--check-links"
+   ],
+   "serve_status": 404,
+   "expected": "blocked",
+   "expected_codes": [
+    "DEAD_DATA_LINK"
+   ],
+   "triage": {
+    "verdict": "blocked",
+    "codes": [
+     "DEAD_DATA_LINK"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "link_status",
+   "args": [
+    "--check-links"
+   ],
+   "serve_status": 410,
+   "expected": "blocked",
+   "expected_codes": [
+    "DEAD_DATA_LINK"
+   ],
+   "triage": {
+    "verdict": "blocked",
+    "codes": [
+     "DEAD_DATA_LINK"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "link_status",
+   "args": [
+    "--check-links"
+   ],
+   "serve_status": 403,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "MISSING_INPUT_DOWNLOAD",
+    "DATA_LINK_UNVERIFIED"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "DATA_LINK_UNVERIFIED",
+     "MISSING_INPUT_DOWNLOAD"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "link_status",
+   "args": [
+    "--check-links"
+   ],
+   "serve_status": 503,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "MISSING_INPUT_DOWNLOAD",
+    "DATA_LINK_UNVERIFIED"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "DATA_LINK_UNVERIFIED",
+     "MISSING_INPUT_DOWNLOAD"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "link_status",
+   "args": [
+    "--check-links"
+   ],
+   "serve_status": 200,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "MISSING_INPUT_DOWNLOAD"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "MISSING_INPUT_DOWNLOAD"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "dynare_model",
+   "args": [
+    "--have",
+    "matlab"
+   ],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [
+    "SOFTWARE_REQUIRED"
+   ],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [
+     "SOFTWARE_REQUIRED",
+     "UNRESOLVED_PATHS"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "matlab_command_save",
+   "args": [
+    "--have",
+    "matlab"
+   ],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [
+     "SOFTWARE_REQUIRED"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "source_listed_data",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "MISSING_INPUT_SOURCE_LISTED"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "MISSING_INPUT_SOURCE_LISTED",
+     "SYSTEM_FILE_READS"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "gams_model",
+   "args": [],
+   "serve_status": null,
+   "expected": "blocked",
+   "expected_codes": [
+    "PROPRIETARY_SOFTWARE"
+   ],
+   "triage": {
+    "verdict": "blocked",
+    "codes": [
+     "PROPRIETARY_SOFTWARE"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "gams_model",
+   "args": [
+    "--have",
+    "gams"
+   ],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [
+    "SOFTWARE_REQUIRED"
+   ],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [
+     "SOFTWARE_REQUIRED"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "earth_engine",
+   "args": [],
+   "serve_status": null,
+   "expected": "runnable-with-deviations",
+   "expected_codes": [
+    "EXTERNAL_SERVICE"
+   ],
+   "triage": {
+    "verdict": "runnable-with-deviations",
+    "codes": [
+     "EXTERNAL_SERVICE"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": false
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": false
+   }
+  },
+  {
+   "fixture": "gpu_listing",
+   "args": [
+    "--have",
+    "matlab"
+   ],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [
+    "MATLAB_TOOLBOX"
+   ],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [
+     "MATLAB_TOOLBOX",
+     "SOFTWARE_REQUIRED"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "stata_prose",
+   "args": [
+    "--have",
+    "stata"
+   ],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [],
+   "triage": {
+    "verdict": "runnable",
+    "codes": [
+     "SOFTWARE_REQUIRED",
+     "UNRESOLVED_PATHS"
+    ],
+    "missing_codes": [],
+    "pass": true
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "dynare_mod_save",
+   "args": [
+    "--have",
+    "matlab"
+   ],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [
+    "SOFTWARE_REQUIRED"
+   ],
+   "triage": {
+    "verdict": "blocked",
+    "codes": [
+     "MISSING_INPUT_UNDOCUMENTED",
+     "SOFTWARE_REQUIRED"
+    ],
+    "missing_codes": [],
+    "pass": false
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  },
+  {
+   "fixture": "stata_macro_dir",
+   "args": [
+    "--have",
+    "stata"
+   ],
+   "serve_status": null,
+   "expected": "runnable",
+   "expected_codes": [
+    "UNRESOLVED_PATHS"
+   ],
+   "triage": {
+    "verdict": "blocked",
+    "codes": [
+     "MISSING_INPUT_UNDOCUMENTED",
+     "SOFTWARE_REQUIRED"
+    ],
+    "missing_codes": [
+     "UNRESOLVED_PATHS"
+    ],
+    "pass": false
+   },
+   "always-runnable": {
+    "verdict": "runnable",
+    "pass": true
+   },
+   "readme-and-code": {
+    "verdict": "runnable",
+    "pass": true
+   }
+  }
+ ]
+}

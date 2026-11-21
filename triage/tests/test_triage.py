@@ -13,6 +13,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(HERE))
 import check_frozen  # noqa: E402
+import run_fixtures  # noqa: E402
 import triage  # noqa: E402
 
 EXPECTED = json.loads((HERE / "fixtures" / "EXPECTED.json").read_text(encoding="utf-8"))
@@ -28,8 +29,8 @@ class FrozenInjections(unittest.TestCase):
 
     def test_expected_cases(self):
         for case in EXPECTED["cases"]:
-            with self.subTest(fixture=case["fixture"], args=case["args"]):
-                res = verdict(HERE / "fixtures" / case["fixture"], case["args"])
+            with self.subTest(fixture=case["fixture"], args=case["args"], status=case.get("serve_status")):
+                res, _ = run_fixtures.run_case(case)
                 codes = {f["code"] for f in res["findings"]}
                 self.assertEqual(res["verdict"], case["verdict"], [(f["code"], f["severity"]) for f in res["findings"]])
                 self.assertTrue(set(case["codes"]) <= codes, f"missing {set(case['codes']) - codes}; got {codes}")
