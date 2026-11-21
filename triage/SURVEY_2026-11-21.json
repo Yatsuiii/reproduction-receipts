@@ -1,0 +1,184 @@
+{
+ "format": "triage-heldout/1",
+ "written": "2026-11-21, survey of 34 packages, before triage.py was run on any of them",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "selection_rule": "Public GitHub repositories created after mid-2021, not forks, found by repository search for replication package/files/code plus the names of the journals whose data editors were contacted (Econometrica, REStud, Economic Journal, Econometrics Journal, JEEA, JPE, Journal of Finance, Canadian Journal of Economics, Economic Inquiry). Kept only the authors' own package (or the authors' mirror of the journal archive) for a paper published, forthcoming or accepted in one of those journals, where the journal is named in the package text or the repository description. Excluded: third-party re-replications, ports to another language, course work, theses, collections, papers only submitted or under review, and every package from triage rounds 2 and 3. Two packages were dropped at pinning because no file or description named the journal. No package was found for Economic Inquiry. The journals' own archives (openICPSR, Zenodo, Harvard Dataverse) were not used: this container's network policy refuses those hosts.",
+ "options": [
+  "--have",
+  "stata,matlab"
+ ],
+ "options_reason": "Economics data desks normally hold Stata and often MATLAB licences. --check-links is NOT used: this container's proxy refuses most hosts, so link results here describe this machine, not the links.",
+ "rule": "Each package is triaged once with this exact triage.py, then compared with a hand reading of its README (and PDF README where that is the only one) and the files the findings name. Every disagreement is recorded in results/survey_review.md. triage.py is not changed in response to these packages in the same pull request.",
+ "packages": [
+  {
+   "repo": "bela-georgiev/CJE-replication-countryfood",
+   "commit": "2b6e11b81503067210839f6b6a4493c5614d3af1",
+   "journal": "Canadian Journal of Economics"
+  },
+  {
+   "repo": "akhederlarian/pre-trends-TTBs",
+   "commit": "e2077db1470536a50411c2acf253e5381e717f76",
+   "journal": "Canadian Journal of Economics"
+  },
+  {
+   "repo": "hsoccer/rum-unobs",
+   "commit": "01d74f1f2bf6859622c4878a3e5d1fcc0fada134",
+   "journal": "Economic Journal"
+  },
+  {
+   "repo": "pzoch/demographic-transition-wealth-inequality",
+   "commit": "bc01805b1e16ee906f200292c0f73d4b0b5568a8",
+   "journal": "Economic Journal"
+  },
+  {
+   "repo": "johanneswieland/MPC2001",
+   "commit": "15a801cc5d4acae71a9956c52a016d5bb510f644",
+   "journal": "Economic Journal"
+  },
+  {
+   "repo": "tholden/RobustRealRateRulesReplication",
+   "commit": "41d8bf69e4b47dc71dd15aa2929db6eea131ef41",
+   "journal": "Econometrica"
+  },
+  {
+   "repo": "zhexiaolin/Estimation-based-on-nearest-neighbor-matching",
+   "commit": "0d0d5539c4b74c667c23bb909d27eebdd495b2c8",
+   "journal": "Econometrica"
+  },
+  {
+   "repo": "ekrose/rss_rep",
+   "commit": "fa5cc286e09c6e744e09d07e93b66590edfbcea3",
+   "journal": "Econometrica"
+  },
+  {
+   "repo": "rsaggio87/Replication_DKSS",
+   "commit": "ddbe91801f7193c63aebb4fd74cc63b77b0041d4",
+   "journal": "Econometrica"
+  },
+  {
+   "repo": "andreaviselli/comparing-predictive-ability-very-short-instability",
+   "commit": "09efc854d246d3b068c2e3f21e7ba8093561fede",
+   "journal": "Econometrics Journal"
+  },
+  {
+   "repo": "andreaviselli/robust-fcast-eval-extreme-shocks",
+   "commit": "f8e38a2a1ecc99a9636fb674a59c601c54294a96",
+   "journal": "Econometrics Journal"
+  },
+  {
+   "repo": "Paul-Haimerl/replication-fuse-time",
+   "commit": "d768f7539e679bda30f1663233147f3fd25cb8de",
+   "journal": "Econometrics Journal"
+  },
+  {
+   "repo": "InsIDE-Lab-DiECO/permanent-transitory-decomposition-replication",
+   "commit": "d46e6006dda79c13313daa02d405b76e53df0ae4",
+   "journal": "Econometrics Journal"
+  },
+  {
+   "repo": "DavBrg/Structural-Forecast-Analysis-Final",
+   "commit": "3c18528c0bedd75867a4bb7a6418640345c3261d",
+   "journal": "Econometrics Journal"
+  },
+  {
+   "repo": "timmy-o-toole/Assemblage_VAR",
+   "commit": "199c5f8c432c9571e601ce68ada49ab3d1819e55",
+   "journal": "Econometrics Journal"
+  },
+  {
+   "repo": "pcmichaud/repl_msa_jf",
+   "commit": "487849e1733d37c3aa6ff6ccf95432b0af701dea",
+   "journal": "Journal of Finance"
+  },
+  {
+   "repo": "lefarmer89/pockets-of-predictability-reply",
+   "commit": "22c6be1295b898a9ad9b963f1061cac6e6fcfb7c",
+   "journal": "Journal of Finance"
+  },
+  {
+   "repo": "pmichaillat/pricing-fairness",
+   "commit": "a8d5d758eef3cffabe154e07b58e3cb150113a50",
+   "journal": "Journal of the European Economic Association"
+  },
+  {
+   "repo": "fediskhakov/EQB",
+   "commit": "33c68b4f7de035c1a86ee5450146905800a0a966",
+   "journal": "Journal of Political Economy"
+  },
+  {
+   "repo": "chrisconlon/Liquor_Replication_JPE",
+   "commit": "97567b1968f44980a47a7b72c1928a5e01255a67",
+   "journal": "Journal of Political Economy"
+  },
+  {
+   "repo": "ymohanty/rationing-commons",
+   "commit": "4d60ad2f8d12ced60106c70649d8984b8d97bce0",
+   "journal": "Journal of Political Economy"
+  },
+  {
+   "repo": "mbholm/Asset-Price-Redistribution",
+   "commit": "6636b72eafad8506756f4fa7e76b50b542ab70ad",
+   "journal": "Journal of Political Economy"
+  },
+  {
+   "repo": "mbholm/Transmission-of-Monetary-Policy-under-the-Microscope",
+   "commit": "c7677d15754508208d41f83e547fa64018a841d5",
+   "journal": "Journal of Political Economy"
+  },
+  {
+   "repo": "apb-umn/managing-public-portfolios-replication",
+   "commit": "b9de92dd229ac162a5fafd4a46c8be17e23ef11e",
+   "journal": "Journal of Political Economy"
+  },
+  {
+   "repo": "pcmichaud/agghealth_replicate",
+   "commit": "360fec651d2b451d5bc8b2b30f5b1ce7177f3f70",
+   "journal": "Journal of Political Economy"
+  },
+  {
+   "repo": "rolf-campos/navigating-replication",
+   "commit": "e5404a755fb7a30d82a311669bf5ee1451a0a616",
+   "journal": "Journal of Political Economy (JPE Macro)"
+  },
+  {
+   "repo": "gabrielgggg/DeadlyDebtCrises",
+   "commit": "62d163e82276e1bc79d00adba0f075ca8b9766dc",
+   "journal": "Review of Economic Studies"
+  },
+  {
+   "repo": "jrblevin/epl-replication",
+   "commit": "ab20cf057c991fbaf5759f46f0caeaba33b4d0a8",
+   "journal": "Review of Economic Studies"
+  },
+  {
+   "repo": "jblumenstock/migration_networks_replication",
+   "commit": "2651b34cf01a2c9892117c90e1d8dae837b5201c",
+   "journal": "Review of Economic Studies"
+  },
+  {
+   "repo": "kelloggrk/Public_EndOfOil",
+   "commit": "b491fbac63c7387de74e1f3f89a279e556574e16",
+   "journal": "Review of Economic Studies"
+  },
+  {
+   "repo": "mschwedeler/countryrisk",
+   "commit": "17caff81a4ee30e83cf3d70211871aff2c7fbffe",
+   "journal": "Review of Economic Studies"
+  },
+  {
+   "repo": "LindseyRRay/HiringAsExplorationReplPackage",
+   "commit": "d830a57846520bbaa1dd12a964abed4fc80e5b48",
+   "journal": "Review of Economic Studies"
+  },
+  {
+   "repo": "haanwinckel/HaanwinckelSoares2021",
+   "commit": "297d90a561bf2d6001fefe9cd4f03a20496c2b33",
+   "journal": "Review of Economic Studies"
+  },
+  {
+   "repo": "floswald/LandUse-REStud",
+   "commit": "5b7f48c533dff10d5658e842820332c5c3228542",
+   "journal": "Review of Economic Studies"
+  }
+ ]
+}
