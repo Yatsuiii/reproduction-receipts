@@ -80,6 +80,15 @@ python3 -I offline-model/verify.py ledger offline-model/RUNS.json
 
 To rerun the model rather than check the record, run the commands above on your own Linux machine (about 3 GB download, 10 GB RAM).
 
+## Confirming run
+
+Marking the PR ready started a second pair of machines on commit `3d917e5` ([run 44906734903](https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906734903)). Both got 42/60 again, both refused with the network up, and both logged zero network attempts. Machine b landed on a different AMD part (EPYC 9V45). Results across all four scored runs:
+
+- `predictions.csv` is byte-identical in all four.
+- `logits.csv` is byte-identical between the two runs on the Intel Xeon 6975P-C, 40 minutes apart on different runners.
+- Between CPU models the logits drift by at most 1.03e-4, against a smallest decision margin of 0.281.
+- Harness wall clock 91.7 s (Intel) and 139.7 s (EPYC 9V45).
+
 ## Failure injections
 
 [`injections/EXPECTED.json`](injections/EXPECTED.json) lists 14 ways the run could cheat or the receipt could lie, committed before any harness code. Each has a test in [`tests/test_injections.py`](tests/test_injections.py) that builds the case in a throwaway checkout with fake weights and a stub model, and runs the real harness and verifier. All 14 are caught, on this sandbox and on GitHub. They include: a network interface present, a connect or DNS call during inference, one flipped byte in the weights, a missing or extra weights file, an edited task, a dirty checkout, an edited prediction, a misreported accuracy, an edited label, two runs that disagree, and a failed run deleted from the ledger.

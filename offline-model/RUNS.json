@@ -47,6 +47,38 @@
    "status": "ok",
    "machine": "b, ubuntu-22.04, AMD EPYC 7763",
    "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906039993"
+  },
+  {
+   "id": "gha-44906734903-1-a-network-up",
+   "dir": "runs/gha-44906734903-1-a-network-up",
+   "status": "refused",
+   "machine": "a, ubuntu-24.04",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906734903",
+   "note": "Expected refusal, exit 3."
+  },
+  {
+   "id": "gha-44906734903-1-a",
+   "dir": "runs/gha-44906734903-1-a",
+   "status": "ok",
+   "machine": "a, ubuntu-24.04, Intel Xeon 6975P-C",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906734903",
+   "note": "Confirming run on commit 3d917e5, started by marking the PR ready."
+  },
+  {
+   "id": "gha-44906734903-1-b-network-up",
+   "dir": "runs/gha-44906734903-1-b-network-up",
+   "status": "refused",
+   "machine": "b, ubuntu-22.04",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906734903",
+   "note": "Expected refusal, exit 3."
+  },
+  {
+   "id": "gha-44906734903-1-b",
+   "dir": "runs/gha-44906734903-1-b",
+   "status": "ok",
+   "machine": "b, ubuntu-22.04, AMD EPYC 9V45",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906734903",
+   "note": "Confirming run on commit 3d917e5."
   }
  ]
 }
