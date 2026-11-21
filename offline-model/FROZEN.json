@@ -10,7 +10,8 @@
   "runtime_transformers.py",
   "fetch_weights.py",
   "verify.py",
-  "baseline.py"
+  "baseline.py",
+  "clinical/task"
  ],
  "files": {
   "task/README.md": "5b458284e2a64a1386d3fc8bf41f3d4d8cf3de5e95510673fa351eadaf57b70e",
@@ -24,6 +25,9 @@
   "runtime_transformers.py": "de6b99d9545fc737149775aaefff921b6fd85ea6ef3f9eb08505957fc2314aeb",
   "fetch_weights.py": "8db4fd7fa3b0efeb5b80754f2a9b1b497fc96646a543f9ff79adc4cd67b31b79",
   "verify.py": "733999ed31ee29244197d6565abc1e2b8cf9e107da06839c81ce35201e3877e5",
-  "baseline.py": "4d75d61d12c060a4637dcb7565d9b59be3548954752fb285398f8be54005b181"
+  "baseline.py": "4d75d61d12c060a4637dcb7565d9b59be3548954752fb285398f8be54005b181",
+  "clinical/task/README.md": "baad13f740027ba0a82a5494682259a27c0222787108d0c3fb2e0c1e474ff80e",
+  "clinical/task/items.jsonl": "19062a06a7b9a130f356bf6f337e024e3efd3f502d180ac213132891fe9a5d0a",
+  "clinical/task/prompt.json": "c19b9ab9d8a69e183f54d4335058dc52d79b1312909c28254e9ba57a1e572443"
  }
 }
