@@ -1,0 +1,4 @@
+rs-rmcp                                 clean        {'CLEAN': 10}
+rs-goose-spawn                          clean        {'CLEAN': 10}
+rs-rmcp                                 eof-ignore   {'CLEAN': 10}
+rs-goose-spawn                          eof-ignore   {'CLEAN': 10}
