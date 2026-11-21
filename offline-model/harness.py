@@ -10,7 +10,10 @@ socket calls only; the network namespace is the real guarantee, the hook is the 
 
 The output directory must not exist. run.json is written on every outcome, refusals included.
 
-usage: python -I offline-model/harness.py --weights DIR --out DIR [--runtime FILE] [--allow-dirty]"""
+usage: python -I offline-model/harness.py --weights DIR --out DIR [--task DIR] [--model-json FILE] [--runtime FILE] [--allow-dirty]
+
+--task and --model-json are paths relative to offline-model/ (defaults: task, MODEL.json). The task files must be
+pinned in FROZEN.json; the model pin is recorded with its own SHA-256."""
 import argparse
 import csv
 import hashlib
@@ -62,20 +65,20 @@ def check_checkout(top: Path, allow_dirty: bool, rec: dict):
             raise Refusal(5, f"checkout has modified tracked files: {dirty.splitlines()}")
 
 
-def check_task(rec: dict):
+def check_task(task: str, rec: dict):
     pinned = json.loads((HERE / "FROZEN.json").read_text(encoding="utf-8"))["files"]
     rec["task"] = {}
-    for name in ("task/items.jsonl", "task/prompt.json"):
+    for name in (f"{task}/items.jsonl", f"{task}/prompt.json"):
         digest = sha256_file(HERE / name)
         rec["task"][name] = digest
         if pinned.get(name) != digest:
             raise Refusal(2, f"{name} is {digest}, FROZEN.json pins {pinned.get(name)}")
 
 
-def check_weights(weights: Path, rec: dict):
-    model = json.loads((HERE / "MODEL.json").read_text(encoding="utf-8"))
+def check_weights(weights: Path, model_json: str, rec: dict):
+    model = json.loads((HERE / model_json).read_text(encoding="utf-8"))
     rec["model"] = {"repo": model["repo"], "revision": model["revision"], "licence": model.get("licence"),
-                    "model_json_sha256": sha256_file(HERE / "MODEL.json"), "files": {}}
+                    "model_json": model_json, "model_json_sha256": sha256_file(HERE / model_json), "files": {}}
     if not weights.is_dir():
         raise Refusal(2, f"weights directory {weights} does not exist")
     present = {p.relative_to(weights).as_posix() for p in weights.rglob("*") if p.is_file()}
@@ -158,8 +161,8 @@ def run(a) -> int:
     os.environ["HF_HUB_DISABLE_TELEMETRY"] = "1"
     try:
         check_checkout(HERE.parent, a.allow_dirty, rec)
-        check_task(rec)
-        check_weights(a.weights, rec)
+        check_task(a.task.strip("/"), rec)
+        check_weights(a.weights, a.model_json, rec)
         check_network(rec)
         install_socket_guard(rec["blocked_network_attempts"])
         rec["environment"] = environment()
@@ -167,8 +170,8 @@ def run(a) -> int:
         rec["runtime_file"] = {"path": runtime_path.relative_to(HERE).as_posix() if runtime_path.is_relative_to(HERE)
                                else str(runtime_path), "sha256": sha256_file(runtime_path)}
         rec["harness_sha256"] = sha256_file(Path(__file__))
-        prompt = json.loads((HERE / "task/prompt.json").read_text(encoding="utf-8"))
-        items = [json.loads(l) for l in (HERE / "task/items.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
+        prompt = json.loads((HERE / a.task / "prompt.json").read_text(encoding="utf-8"))
+        items = [json.loads(l) for l in (HERE / a.task / "items.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
         t_load = time.perf_counter()
         rt = load_runtime(runtime_path).Runtime(str(a.weights))
         rec["load_seconds"] = round(time.perf_counter() - t_load, 3)
@@ -224,6 +227,8 @@ def main(argv: list) -> int:
     ap.add_argument("--weights", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--runtime", type=Path, default=HERE / "runtime_transformers.py")
+    ap.add_argument("--task", default="task")
+    ap.add_argument("--model-json", default="MODEL.json")
     ap.add_argument("--allow-dirty", action="store_true")
     return run(ap.parse_args(argv))
 

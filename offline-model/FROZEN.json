@@ -11,23 +11,27 @@
   "fetch_weights.py",
   "verify.py",
   "baseline.py",
-  "clinical/task"
+  "clinical/task",
+  "runtime_transformers_bf16.py",
+  "clinical/baseline_keywords.py"
  ],
  "files": {
   "task/README.md": "5b458284e2a64a1386d3fc8bf41f3d4d8cf3de5e95510673fa351eadaf57b70e",
   "task/items.jsonl": "d7ca7ec4ff141549de092595e967b8e74aa4fd191e0a9b183dea2cee5c8156c3",
   "task/prompt.json": "c02dc49711d5a302506c60ade50773f32b44c72ddd4ea46456da5a0c27d568a6",
-  "injections/EXPECTED.json": "70255d703e920a7e37546a57ff7cb083d3a82d1c6db357169cb9e4bca8cc24b9",
+  "injections/EXPECTED.json": "7eeb6eef1f8ef009716fd164908bfdb95d3bb774deedb4c9cf9ecac4d72b6954",
   "MODEL.json": "f1962c5715c1a1fe4543dcf6239f64c34490b6f39e9c849ab883f8366d867864",
   "requirements.in": "07532bd6079f30e79295da1034235ca06759f558102c6b17875e1bf191d4d387",
   "requirements.lock": "c3646b017170034f6701e59f54e3368647e93faf63618db89ff8fbe5726578d3",
-  "harness.py": "b82d905620e3e307b8d2e2b8644c43f3956f7392acf5bd3bacf588c329be383a",
+  "harness.py": "646f586618f293f88052c83de13a2b71d10f6a161d3c5ae74c44d11c7799a70b",
   "runtime_transformers.py": "de6b99d9545fc737149775aaefff921b6fd85ea6ef3f9eb08505957fc2314aeb",
   "fetch_weights.py": "8db4fd7fa3b0efeb5b80754f2a9b1b497fc96646a543f9ff79adc4cd67b31b79",
-  "verify.py": "733999ed31ee29244197d6565abc1e2b8cf9e107da06839c81ce35201e3877e5",
+  "verify.py": "07edf965cd4fc225dd387e870dd0ec38a2602474b22d97419aa36ad54bc28e25",
   "baseline.py": "4d75d61d12c060a4637dcb7565d9b59be3548954752fb285398f8be54005b181",
   "clinical/task/README.md": "baad13f740027ba0a82a5494682259a27c0222787108d0c3fb2e0c1e474ff80e",
   "clinical/task/items.jsonl": "19062a06a7b9a130f356bf6f337e024e3efd3f502d180ac213132891fe9a5d0a",
-  "clinical/task/prompt.json": "c19b9ab9d8a69e183f54d4335058dc52d79b1312909c28254e9ba57a1e572443"
+  "clinical/task/prompt.json": "c19b9ab9d8a69e183f54d4335058dc52d79b1312909c28254e9ba57a1e572443",
+  "runtime_transformers_bf16.py": "5a51e7b1eab664a0f5088d328ce69dc25c4054dc85545e3e428e59dc68d7219b",
+  "clinical/baseline_keywords.py": "7e5238171a230058dd90429f9bd31db470d2c2e0c2b8e312abdd0aede369437f"
  }
 }

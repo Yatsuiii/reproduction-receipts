@@ -40,11 +40,12 @@ def verify_run(d: Path) -> list:
         got = sha256_file(HERE / name)
         if got != pinned:
             fails.append(f"task file {name} in this checkout is {got}, the run used {pinned}")
+    items_path = next(k for k in rec["task"] if k.endswith("items.jsonl"))
     labels = {json.loads(l)["id"]: json.loads(l)["label"]
-              for l in (HERE / "task/items.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()}
+              for l in (HERE / items_path).read_text(encoding="utf-8").splitlines() if l.strip()}
     rows = read_csv(d / "predictions.csv")
     if [r["id"] for r in rows] != list(labels):
-        fails.append("predictions.csv item ids do not match task/items.jsonl")
+        fails.append(f"predictions.csv item ids do not match {items_path}")
     for r in rows:
         if labels.get(r["id"]) != r["label"]:
             fails.append(f"{r['id']}: predictions.csv label {r['label']} differs from task label {labels.get(r['id'])}")

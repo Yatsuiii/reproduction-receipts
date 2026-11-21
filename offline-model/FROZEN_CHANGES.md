@@ -7,6 +7,7 @@ Every change to a file pinned in `FROZEN.json` is logged here first, with the re
 | 2026-11-21 | `task/`, `injections/` | First freeze, before any harness code or model run. |
 | 2026-11-21 | `MODEL.json`, `requirements.in`, `requirements.lock`, `harness.py`, `runtime_transformers.py`, `fetch_weights.py`, `verify.py`, `baseline.py` | Entry points, weights pin and dependency lock frozen after all 14 injection tests passed and before the first real model run. |
 | 2026-11-21 | `clinical/task/` | Second task frozen before its keyword baseline, any harness change, or any model run on it. |
+| 2026-11-21 | `harness.py`, `verify.py`, `injections/EXPECTED.json`; new `runtime_transformers_bf16.py`, `clinical/baseline_keywords.py` | Harness takes `--task` and `--model-json` (defaults unchanged, so the first task runs as before); verify reads labels from the task the run recorded. Two injections added first (`task_unpinned`, `second_task_runs`) and seen failing (1 failure, 1 error) before the change; 18 of 18 pass after. The four PII runs keep the harness hash they recorded at commit `7c1d878`/`3d917e5`. |
 
 ## Incident, 2026-11-21: a second lock appeared
 

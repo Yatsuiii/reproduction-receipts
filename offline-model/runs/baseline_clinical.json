@@ -1,0 +1,549 @@
+{
+ "format": "offline-baseline/1",
+ "task": "clinical",
+ "items": 60,
+ "majority": {
+  "correct": 33,
+  "accuracy": 0.55,
+  "wrong": [
+   "c01",
+   "c04",
+   "c06",
+   "c08",
+   "c10",
+   "c13",
+   "c16",
+   "c18",
+   "c21",
+   "c23",
+   "c26",
+   "c27",
+   "c30",
+   "c32",
+   "c35",
+   "c37",
+   "c39",
+   "c41",
+   "c43",
+   "c45",
+   "c48",
+   "c50",
+   "c52",
+   "c54",
+   "c56",
+   "c58",
+   "c60"
+  ]
+ },
+ "keywords": {
+  "correct": 50,
+  "accuracy": 0.833333,
+  "wrong": [
+   "c03",
+   "c05",
+   "c17",
+   "c20",
+   "c29",
+   "c34",
+   "c35",
+   "c45",
+   "c49",
+   "c59"
+  ]
+ },
+ "rows": [
+  {
+   "id": "c01",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "start"
+   ]
+  },
+  {
+   "id": "c02",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c03",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "need",
+    "repeat"
+   ]
+  },
+  {
+   "id": "c04",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "would benefit"
+   ]
+  },
+  {
+   "id": "c05",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "stop"
+   ]
+  },
+  {
+   "id": "c06",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "repeat"
+   ]
+  },
+  {
+   "id": "c07",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c08",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "refer"
+   ]
+  },
+  {
+   "id": "c09",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c10",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "start"
+   ]
+  },
+  {
+   "id": "c11",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c12",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c13",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "hold",
+    "please"
+   ]
+  },
+  {
+   "id": "c14",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c15",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c16",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "ask"
+   ]
+  },
+  {
+   "id": "c17",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "plan"
+   ]
+  },
+  {
+   "id": "c18",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "uptitrate"
+   ]
+  },
+  {
+   "id": "c19",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c20",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "recommendation"
+   ]
+  },
+  {
+   "id": "c21",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "needs"
+   ]
+  },
+  {
+   "id": "c22",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c23",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "reduce"
+   ]
+  },
+  {
+   "id": "c24",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c25",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c26",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "offer"
+   ]
+  },
+  {
+   "id": "c27",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "monitor"
+   ]
+  },
+  {
+   "id": "c28",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c29",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "stop"
+   ]
+  },
+  {
+   "id": "c30",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "book"
+   ]
+  },
+  {
+   "id": "c31",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c32",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "consider"
+   ]
+  },
+  {
+   "id": "c33",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c34",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "needed"
+   ]
+  },
+  {
+   "id": "c35",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c36",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c37",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "give",
+    "please",
+    "should"
+   ]
+  },
+  {
+   "id": "c38",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c39",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "remove"
+   ]
+  },
+  {
+   "id": "c40",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c41",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "check"
+   ]
+  },
+  {
+   "id": "c42",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c43",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "arrange"
+   ]
+  },
+  {
+   "id": "c44",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c45",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c46",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c47",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c48",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "add"
+   ]
+  },
+  {
+   "id": "c49",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "escalate"
+   ]
+  },
+  {
+   "id": "c50",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "escalate"
+   ]
+  },
+  {
+   "id": "c51",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c52",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "needed"
+   ]
+  },
+  {
+   "id": "c53",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c54",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "recheck",
+    "restrict"
+   ]
+  },
+  {
+   "id": "c55",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c56",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "give",
+    "offer"
+   ]
+  },
+  {
+   "id": "c57",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "NO",
+   "keyword_hits": []
+  },
+  {
+   "id": "c58",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "get",
+    "repeat"
+   ]
+  },
+  {
+   "id": "c59",
+   "label": "NO",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "plan"
+   ]
+  },
+  {
+   "id": "c60",
+   "label": "YES",
+   "majority": "NO",
+   "keywords": "YES",
+   "keyword_hits": [
+    "withhold"
+   ]
+  }
+ ]
+}

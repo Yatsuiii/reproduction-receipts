@@ -8,6 +8,7 @@ OFFLINE_STUB_MODE selects the behaviour:
   drift:X    like ok, but every YES logit is shifted by X"""
 import hashlib
 import os
+import re
 import socket
 
 
@@ -31,7 +32,7 @@ class Runtime:
                 socket.getaddrinfo("telemetry.example.com", 443)
             except OSError:
                 pass
-        text = user.split("Text: ", 1)[1].split("\n", 1)[0]
+        text = re.search(r"(?:Text|Note): (.*)", user).group(1)
         ly = 1.0 if any(c.isdigit() for c in text) or "@" in text else 0.0
         ln = 0.5
         if self.mode.startswith("drift:"):

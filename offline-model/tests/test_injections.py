@@ -14,7 +14,7 @@ from pathlib import Path
 
 SRC = Path(__file__).resolve().parent.parent
 EXPECTED = json.loads((SRC / "injections/EXPECTED.json").read_text(encoding="utf-8"))["cases"]
-COPY = ["task", "injections", "FROZEN.json", "harness.py", "verify.py", "tests/stub_runtime.py"]
+COPY = ["task", "clinical/task", "injections", "FROZEN.json", "harness.py", "verify.py", "tests/stub_runtime.py"]
 
 
 def netns_prefix():
@@ -206,6 +206,26 @@ class Offline(unittest.TestCase):
         p = self.c.verify("ledger", str(led))
         self.assertEqual(p.returncode, 1)
         self.assertIn("run.json is gone", p.stdout)
+
+
+    def test_task_unpinned(self):
+        d = self.c.om / "extra_task"
+        shutil.copytree(self.c.om / "task", d)
+        self.c.git("add", "-A"); self.c.commit("unpinned task")
+        p, rec = self.c.harness("a", extra=["--task", "extra_task"])
+        self.assertEqual(p.returncode, 2, p.stderr)
+        self.assertIn("extra_task/items.jsonl", rec["reason"])
+        self.assertNotIn("runtime", rec)
+
+    def test_second_task_runs(self):
+        p, rec = self.c.harness("a", extra=["--task", "clinical/task"])
+        self.assertEqual(p.returncode, 0, p.stderr)
+        self.assertIn("clinical/task/items.jsonl", rec["task"])
+        v = self.c.verify("run", str(self.c.tmp / "a"))
+        self.assertEqual(v.returncode, 0, v.stdout)
+        labels = [json.loads(l)["label"] for l in (self.c.om / "clinical/task/items.jsonl").read_text().splitlines()]
+        self.assertEqual(rec["result"]["confusion"]["label_YES_pred_YES"] + rec["result"]["confusion"]["label_YES_pred_NO"],
+                         labels.count("YES"))
 
 
 class Online(unittest.TestCase):
