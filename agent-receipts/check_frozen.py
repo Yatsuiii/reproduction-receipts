@@ -16,7 +16,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 REGISTRY = HERE / "FROZEN.json"
 FILES = ["FORMAT.md"]
-ROOTS = ["injections"]
+ROOTS = ["injections", "adapter_injections"]
 
 
 def sha256(p: Path) -> str:
