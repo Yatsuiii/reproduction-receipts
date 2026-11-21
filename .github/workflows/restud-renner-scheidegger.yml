@@ -40,10 +40,14 @@ jobs:
         run: |
           export PATH="$HOME/miniforge/bin:$PATH"; eval "$(conda shell.bash hook)"; conda activate rep
           pip freeze > pip-freeze.txt
+          diff restud-renner-scheidegger/evidence/env-pip-freeze.txt pip-freeze.txt && echo "pip freeze identical to the first machine"
           lscpu | grep -E "Model name|^CPU\(s\)" > hardware.txt; free -g >> hardware.txt
           python restud-renner-scheidegger/compare_tables.py pkg/figure_replication/figure_and_table_paper pkg/figure_replication/figure_and_table_outputs/2 | tee compare-paper.txt
           python restud-renner-scheidegger/compare_tables.py restud-renner-scheidegger/evidence/step2 pkg/figure_replication/figure_and_table_outputs/2 | tee compare-machine1.txt
-          sha256sum pkg/figure_replication/figure_and_table_outputs/2/*.tex > step2-tex.sha256
+          (cd pkg/figure_replication/figure_and_table_outputs/2 && sha256sum *.tex) > step2-tex.sha256
+          cat hardware.txt step2-tex.sha256
+          echo "byte comparison of the nine .tex tables with the first machine:"
+          (cd restud-renner-scheidegger/evidence/step2 && sha256sum *.tex) | diff - step2-tex.sha256 && echo "all nine .tex files byte-identical to the first machine"
       - if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
