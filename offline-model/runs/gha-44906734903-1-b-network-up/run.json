@@ -1,0 +1,52 @@
+{
+ "format": "offline-run/1",
+ "argv": [
+  "offline-model/harness.py",
+  "--weights",
+  "/tmp/weights",
+  "--out",
+  "offline-model/runs/gha-44906734903-1-b-network-up"
+ ],
+ "started_utc": "2026-11-21T13:02:42+00:00",
+ "status": "refused",
+ "exit_code": 3,
+ "blocked_network_attempts": [],
+ "checkout": {
+  "commit": "3d917e5cf6c29d29bef20d48aab537c2b376e3b4",
+  "dirty": false
+ },
+ "task": {
+  "task/items.jsonl": "d7ca7ec4ff141549de092595e967b8e74aa4fd191e0a9b183dea2cee5c8156c3",
+  "task/prompt.json": "c02dc49711d5a302506c60ade50773f32b44c72ddd4ea46456da5a0c27d568a6"
+ },
+ "model": {
+  "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "licence": "apache-2.0 (declared on the model card; LICENSE file pinned below)",
+  "model_json_sha256": "f1962c5715c1a1fe4543dcf6239f64c34490b6f39e9c849ab883f8366d867864",
+  "files": {
+   "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+   "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+   "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+   "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+   "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+   "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+   "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+   "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  }
+ },
+ "network": {
+  "interfaces": [
+   "docker0",
+   "enP30832s1",
+   "eth0",
+   "lo"
+  ],
+  "probe_1.1.1.1:443": "connected"
+ },
+ "reason": "network interfaces other than lo present: ['docker0', 'enP30832s1', 'eth0', 'lo']",
+ "wall_seconds": 1.595,
+ "cpu_seconds": 1.552,
+ "max_rss_kib": 20716,
+ "ended_utc": "2026-11-21T13:02:44+00:00"
+}

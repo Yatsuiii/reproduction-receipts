@@ -1,0 +1,60 @@
+{"id": "c01", "text": "Start amoxicillin 500 mg three times daily for seven days.", "label": "YES"}
+{"id": "c02", "text": "Amoxicillin was started yesterday and the fever has settled.", "label": "NO"}
+{"id": "c03", "text": "No need to repeat the chest X-ray; the consolidation has cleared.", "label": "NO"}
+{"id": "c04", "text": "Would benefit from a cardiology opinion before discharge.", "label": "YES"}
+{"id": "c05", "text": "Patient asked whether she could stop her statin; discussed, she will continue it.", "label": "NO"}
+{"id": "c06", "text": "Repeat potassium in the morning.", "label": "YES"}
+{"id": "c07", "text": "Potassium 4.1, within range.", "label": "NO"}
+{"id": "c08", "text": "Refer to physiotherapy for gait training.", "label": "YES"}
+{"id": "c09", "text": "Physiotherapy referral was sent on Monday and accepted.", "label": "NO"}
+{"id": "c10", "text": "If the wound looks red or hot again, swab it and start flucloxacillin.", "label": "YES"}
+{"id": "c11", "text": "Wound reviewed, clean and dry, edges intact.", "label": "NO"}
+{"id": "c12", "text": "We decided against anticoagulation given the bleeding risk.", "label": "NO"}
+{"id": "c13", "text": "Please hold metformin until the contrast scan is done.", "label": "YES"}
+{"id": "c14", "text": "Metformin was held for the scan and restarted afterwards without issue.", "label": "NO"}
+{"id": "c15", "text": "Family would like him moved closer to home; social work is aware.", "label": "NO"}
+{"id": "c16", "text": "Ask the dietitian to see her this week about her weight loss.", "label": "YES"}
+{"id": "c17", "text": "Seen by the dietitian today; plan documented in her note.", "label": "NO"}
+{"id": "c18", "text": "Blood pressure 178/104 on three readings; uptitrate amlodipine to 10 mg.", "label": "YES"}
+{"id": "c19", "text": "Blood pressure 128/80, no change to medication.", "label": "NO"}
+{"id": "c20", "text": "The recommendation from last week's review has been carried out.", "label": "NO"}
+{"id": "c21", "text": "Needs an echocardiogram as an outpatient.", "label": "YES"}
+{"id": "c22", "text": "Echo last month showed normal function.", "label": "NO"}
+{"id": "c23", "text": "Reduce the morphine dose by a quarter given the drowsiness.", "label": "YES"}
+{"id": "c24", "text": "Drowsiness has resolved since the morphine was reduced.", "label": "NO"}
+{"id": "c25", "text": "Patient declined the flu vaccine and does not wish to discuss it again.", "label": "NO"}
+{"id": "c26", "text": "Offer the flu vaccine at the next visit.", "label": "YES"}
+{"id": "c27", "text": "Monitor fluid balance closely overnight.", "label": "YES"}
+{"id": "c28", "text": "Fluid balance chart reviewed: positive 400 ml, acceptable.", "label": "NO"}
+{"id": "c29", "text": "I would not stop the beta blocker at this stage.", "label": "NO"}
+{"id": "c30", "text": "Book a follow-up in clinic in six weeks.", "label": "YES"}
+{"id": "c31", "text": "Follow-up was booked by the ward clerk for 12 January.", "label": "NO"}
+{"id": "c32", "text": "Consider switching to a long-acting insulin if overnight lows continue.", "label": "YES"}
+{"id": "c33", "text": "No overnight lows since the insulin change.", "label": "NO"}
+{"id": "c34", "text": "Bloods not needed today.", "label": "NO"}
+{"id": "c35", "text": "Bloods tomorrow: FBC, U&E, CRP.", "label": "YES"}
+{"id": "c36", "text": "Discussed driving restrictions; patient understands and agrees.", "label": "NO"}
+{"id": "c37", "text": "He should not drive until reviewed in the seizure clinic; please give the written advice.", "label": "YES"}
+{"id": "c38", "text": "Catheter removed this morning, passing urine.", "label": "NO"}
+{"id": "c39", "text": "Remove the catheter tomorrow if she is mobilising.", "label": "YES"}
+{"id": "c40", "text": "Allergy to penicillin documented, rash in 2019.", "label": "NO"}
+{"id": "c41", "text": "Check her allergy history with the GP before prescribing.", "label": "YES"}
+{"id": "c42", "text": "The MRI is not indicated, in my view.", "label": "NO"}
+{"id": "c43", "text": "Arrange an MRI of the lumbar spine.", "label": "YES"}
+{"id": "c44", "text": "Patient keen to go home today.", "label": "NO"}
+{"id": "c45", "text": "Safe for discharge today with a district nurse visit on Thursday.", "label": "YES"}
+{"id": "c46", "text": "District nurse visited and dressing changed.", "label": "NO"}
+{"id": "c47", "text": "Pain controlled on current regimen.", "label": "NO"}
+{"id": "c48", "text": "Add regular paracetamol, 1 g four times a day.", "label": "YES"}
+{"id": "c49", "text": "We will not escalate to intensive care, as agreed with the family.", "label": "NO"}
+{"id": "c50", "text": "Escalate to the outreach team if the respiratory rate rises above 25.", "label": "YES"}
+{"id": "c51", "text": "Mental capacity assessment completed; has capacity for this decision.", "label": "NO"}
+{"id": "c52", "text": "A capacity assessment is needed before the consent form is signed.", "label": "YES"}
+{"id": "c53", "text": "Sodium 129, stable over three days, asymptomatic, no action.", "label": "NO"}
+{"id": "c54", "text": "Restrict fluids to 1.5 litres a day and recheck sodium on Friday.", "label": "YES"}
+{"id": "c55", "text": "Smoking cessation advice was given last admission.", "label": "NO"}
+{"id": "c56", "text": "Give smoking cessation advice and offer a referral.", "label": "YES"}
+{"id": "c57", "text": "ECG unchanged from previous.", "label": "NO"}
+{"id": "c58", "text": "Get a repeat ECG after the next dose.", "label": "YES"}
+{"id": "c59", "text": "The plan from the surgical team was reviewed and nothing further is required from medicine.", "label": "NO"}
+{"id": "c60", "text": "Withhold the evening dose of enoxaparin ahead of tomorrow's procedure.", "label": "YES"}

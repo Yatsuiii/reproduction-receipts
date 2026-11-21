@@ -1,0 +1,172 @@
+name: Offline model receipt
+# Fresh GitHub-hosted machines on different Ubuntu images each install the hashed lock, fetch the pinned weights, check
+# that the harness refuses to run while the network is up, then score a frozen task inside a network namespace whose
+# only interface is lo. Each machine commits its own evidence directory back to the PR branch. A last job verifies every
+# run from a clean checkout and compares the machines.
+#
+# Tests run on every push. Model runs start only when a label is added to the PR, so a docs push never spends a run:
+#   offline-run-pii       first task, Qwen2.5-1.5B (float32)
+#   offline-run-clinical  clinical task, Qwen2.5-1.5B (float32) and Qwen3-4B-Instruct-2507 (bfloat16)
+#   offline-discover      print a MODEL.json candidate for Qwen3-4B-Instruct-2507 to the log; commits nothing
+on:
+  pull_request:
+    types: [labeled, synchronize]
+    paths: ['offline-model/**', '.github/workflows/offline-model.yml']
+permissions:
+  contents: write   # each run job commits its own evidence directory to this PR branch
+concurrency:
+  group: offline-model-${{ github.head_ref }}-${{ github.event.label.name || 'push' }}
+  cancel-in-progress: false
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Frozen task, injections and entry points unchanged
+        run: python offline-model/check_frozen.py
+      - name: Failure injections (stub runtime, no weights)
+        run: python -m unittest discover -s offline-model/tests -v
+
+  discover:
+    needs: tests
+    if: github.event.action == 'labeled' && github.event.label.name == 'offline-discover'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Install the hashed lock
+        run: |
+          python -m venv /tmp/venv
+          /tmp/venv/bin/python -m pip install --quiet --require-hashes --no-deps \
+            --extra-index-url https://download.pytorch.org/whl/cpu -r offline-model/requirements.lock
+      - name: Print a MODEL.json candidate (nothing is committed)
+        run: |
+          /tmp/venv/bin/python -I offline-model/fetch_weights.py --discover --repo Qwen/Qwen3-4B-Instruct-2507 --revision main \
+            --files LICENSE config.json generation_config.json merges.txt model.safetensors.index.json \
+              model-00001-of-00003.safetensors model-00002-of-00003.safetensors model-00003-of-00003.safetensors \
+              tokenizer.json tokenizer_config.json vocab.json
+
+  run:
+    needs: tests
+    if: >-
+      github.event.action == 'labeled' &&
+      (github.event.label.name == 'offline-run-pii' || github.event.label.name == 'offline-run-clinical')
+    strategy:
+      fail-fast: false
+      matrix:
+        machine: [a, b]
+        model: ${{ fromJSON(github.event.label.name == 'offline-run-pii' && '["qwen2.5-1.5b"]' || '["qwen2.5-1.5b","qwen3-4b"]') }}
+        include:
+          - machine: a
+            image: ubuntu-24.04
+          - machine: b
+            image: ubuntu-22.04
+          - model: qwen2.5-1.5b
+            model_json: MODEL.json
+            runtime: runtime_transformers.py
+          - model: qwen3-4b
+            model_json: clinical/MODEL_qwen3_4b.json
+            runtime: runtime_transformers_bf16.py
+    runs-on: ${{ matrix.image }}
+    timeout-minutes: 90
+    env:
+      TASK: ${{ github.event.label.name == 'offline-run-pii' && 'task' || 'clinical/task' }}
+      RUN_ID: gha-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.event.label.name == 'offline-run-pii' && 'pii' || 'clinical' }}-${{ matrix.model }}-${{ matrix.machine }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Checkout is the commit this workflow was started for
+        run: |
+          test "$(git rev-parse HEAD)" = "${{ github.event.pull_request.head.sha }}" \
+            || { echo "branch moved on since this run started; refusing"; exit 1; }
+          mkdir -p "offline-model/runs/$RUN_ID"
+          echo "$RUN_ID" > /tmp/run_id
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Install the hashed lock into a fresh venv
+        run: |
+          start=$(date +%s)
+          python -m venv /tmp/venv
+          /tmp/venv/bin/python -m pip install --quiet --require-hashes --no-deps \
+            --extra-index-url https://download.pytorch.org/whl/cpu -r offline-model/requirements.lock
+          echo "install_seconds=$(( $(date +%s) - start ))" >> "offline-model/runs/$RUN_ID/setup.txt"
+      - name: Fetch the pinned weights (network still on) and check every hash
+        run: |
+          start=$(date +%s)
+          /tmp/venv/bin/python -I offline-model/fetch_weights.py --fetch --model "offline-model/${{ matrix.model_json }}" --dest /tmp/weights \
+            | tee "offline-model/runs/$RUN_ID/fetch.txt"
+          echo "fetch_seconds=$(( $(date +%s) - start ))" >> "offline-model/runs/$RUN_ID/setup.txt"
+          head -3 /tmp/weights/LICENSE | tee "offline-model/runs/$RUN_ID/licence_head.txt"
+      - name: The harness must refuse while the network is up (expected exit 3)
+        run: |
+          set +e
+          /tmp/venv/bin/python -I offline-model/harness.py --weights /tmp/weights --out "offline-model/runs/$RUN_ID-network-up" \
+            --task "$TASK" --model-json "${{ matrix.model_json }}" --runtime "offline-model/${{ matrix.runtime }}" \
+            > "/tmp/netup.txt" 2>&1
+          code=$?
+          set -e
+          cat /tmp/netup.txt; mv /tmp/netup.txt "offline-model/runs/$RUN_ID-network-up/stdout.txt"
+          test "$code" = 3 || { echo "expected exit 3, got $code"; exit 1; }
+      - name: Score the frozen task with no network interface but lo
+        run: |
+          {
+            echo "runner_name=$RUNNER_NAME"; echo "image_os=$ImageOS"; echo "image_version=$ImageVersion"
+            echo "matrix_image=${{ matrix.image }}"
+          } >> "offline-model/runs/$RUN_ID/setup.txt"
+          sudo unshare -n setpriv --reuid="$(id -u)" --regid="$(id -g)" --clear-groups \
+            env HOME="$HOME" PATH="/tmp/venv/bin:/usr/bin:/bin" \
+            /tmp/venv/bin/python -I offline-model/harness.py --weights /tmp/weights --out "/tmp/out" \
+            --task "$TASK" --model-json "${{ matrix.model_json }}" --runtime "offline-model/${{ matrix.runtime }}" \
+            2>&1 | tee /tmp/offline_stdout.txt
+          code=${PIPESTATUS[0]}
+          cp /tmp/out/* "offline-model/runs/$RUN_ID/"
+          mv /tmp/offline_stdout.txt "offline-model/runs/$RUN_ID/stdout.txt"
+          exit "$code"
+      - name: Commit this machine's evidence (also on failure)
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          mkdir -p "offline-model/runs/$RUN_ID"
+          echo "${{ job.status }}" > "offline-model/runs/$RUN_ID/job_status.txt"
+          git add -f offline-model/runs/
+          git commit -m "offline-model: evidence from $RUN_ID (${{ matrix.image }}, job status ${{ job.status }})"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin "${{ github.head_ref }}" && git push origin "HEAD:${{ github.head_ref }}" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
+
+  check:
+    needs: run
+    if: always() && needs.run.result != 'skipped'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Verify every run from this clean checkout and compare machines
+        run: |
+          prefix="offline-model/runs/gha-${{ github.run_id }}-${{ github.run_attempt }}-"
+          status=0
+          for a in "$prefix"*-a; do
+            b="${a%-a}-b"
+            echo "## verify $a"; python -I offline-model/verify.py run "$a" || status=1
+            echo "## verify $b"; python -I offline-model/verify.py run "$b" || status=1
+            echo "## compare"; python -I offline-model/verify.py compare "$a" "$b" || status=1
+          done
+          echo "## baselines"; python -I offline-model/baseline.py; python -I offline-model/clinical/baseline_keywords.py
+          exit $status

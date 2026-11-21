@@ -1,0 +1,2 @@
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<02:37,  2.14it/s]Loading weights:  40%|███▉      | 135/338 [00:00<00:00, 300.19it/s]Loading weights:  59%|█████▉    | 200/338 [00:00<00:00, 314.96it/s]Loading weights:  74%|███████▍  | 251/338 [00:00<00:00, 319.13it/s]Loading weights:  87%|████████▋ | 295/338 [00:01<00:00, 270.15it/s]Loading weights:  98%|█████████▊| 330/338 [00:01<00:00, 251.60it/s]Loading weights: 100%|██████████| 338/338 [00:01<00:00, 253.55it/s]
+ok: 45/60 correct, wall 191.48 s

@@ -1,0 +1,6 @@
+install_seconds=37
+fetch_seconds=28
+runner_name=GitHub Actions 1000000883
+image_os=ubuntu24
+image_version=20261116.376.1
+matrix_image=ubuntu-24.04

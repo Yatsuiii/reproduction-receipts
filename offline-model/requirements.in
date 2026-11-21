@@ -1,0 +1,3 @@
+# Runtime for the real model run. Resolved once into requirements.lock with hashes; runs install with --require-hashes.
+torch==2.14.1+cpu
+transformers==5.22.2

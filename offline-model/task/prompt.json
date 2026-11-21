@@ -1,0 +1,6 @@
+{
+ "system": "You check text for personal identifiers before it leaves a regulated system. Answer with exactly one word: YES or NO.",
+ "user_template": "Does the text below contain information that identifies a specific person: a full or partial personal name, a personal email address, a phone number, a home address, a date of birth, or an ID or account number tied to a person? A business name, a role such as 'the patient', an amount, a product or order code, a room number or a medical code is not an identifier.\n\nText: {text}\n\nAnswer YES or NO.",
+ "answers": ["YES", "NO"],
+ "decision": "Compare the model's next-token logit for the first token of each answer after the assistant turn opens. Higher wins. No sampling, no generation."
+}
