@@ -261,3 +261,7 @@ versions above and runs their examples. Both jobs verify the committed example r
 
 An adapter for Google ADK (a plain tool function already works with `@receipted`), an anchor service, key rotation, and
 receipts that span more than one agent process.
+
+## Sponsoring
+
+If this saves you time, you can [sponsor it on GitHub](https://github.com/sponsors/Yatsuiii).

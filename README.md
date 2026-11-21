@@ -31,6 +31,10 @@ tool calls and writes a signed, chained, replayable record of each one, checkabl
 frozen tampering cases it catches 13; a plain JSONL tool log catches 1 and an unsigned hash chain 5. The one it misses is the
 key holder rewriting history, which only an anchor published elsewhere catches. Worked examples with an MCP client, LangGraph, the OpenAI Agents SDK and CrewAI.
 
+## Sponsoring
+
+If agent-receipts saves you time, you can [sponsor the work on GitHub](https://github.com/sponsors/Yatsuiii). It pays for the CI runs and the time to keep adding adapters and tampering cases.
+
 ## Also in this repo
 
 Each folder below was its own repository and was merged in with its full history. The original repositories stay up and will be archived rather than deleted, so existing links keep working.
