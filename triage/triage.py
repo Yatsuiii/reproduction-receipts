@@ -69,7 +69,7 @@ URL = re.compile(r"https?://[^\s)\]>\"'<`]+")
 PY_DIST = {"sklearn": "scikit-learn", "cv2": "opencv-python", "PIL": "pillow", "yaml": "pyyaml", "bs4": "beautifulsoup4",
            "skimage": "scikit-image", "dateutil": "python-dateutil", "Bio": "biopython", "attr": "attrs", "jwt": "pyjwt",
            "dotenv": "python-dotenv", "nilearn": "nilearn", "nibabel": "nibabel", "mpl_toolkits": "matplotlib",
-           "google": "google-api-core", "linearmodels": "linearmodels", "pyfixest": "pyfixest"}
+           "google": "google-api-core", "pylab": "matplotlib", "linearmodels": "linearmodels", "pyfixest": "pyfixest"}
 
 
 @dataclass
@@ -215,6 +215,23 @@ def last_path_literal(arg: str) -> str | None:
     return lits[-1] if lits else None
 
 
+JOIN = re.compile(r"\b(?:os\.path\.join|path\.join|file\.path|fullfile|joinpath|here::here|here)\s*\(")
+ASSIGN = re.compile(r"^\s*([A-Za-z_][\w.]*)\s*(?:=|<-)\s*(.+)$")
+
+
+def path_of(arg: str, env: dict) -> str | None:
+    """The path an argument names: joined literals of a join call, else the last path literal, else a variable set earlier."""
+    if JOIN.search(arg):
+        lits = [x for x in literals(arg.split(")")[0] if ")" in arg else arg)]
+        if lits and pathlike(lits[-1]):
+            return "/".join(lits)
+    lit = last_path_literal(arg)
+    if lit:
+        return lit
+    m = re.match(r"\s*(?:file\s*=\s*|fname\s*=\s*)?([A-Za-z_][\w.]*)\s*(?:,|$)", arg)
+    return env.get(m.group(1)) if m else None
+
+
 def stata_target(cmd: str, rest: str) -> str | None:
     rest = rest.split("//")[0]
     m = re.search(r"\busing\s+(\"[^\"]+\"|`\"[^\"]+\"'|[^\s,]+)", rest)
@@ -239,6 +256,7 @@ def stata_target(cmd: str, rest: str) -> str | None:
 def extract_refs(path: Path, rel: str, text: str, lang: str) -> tuple[list[Ref], list[Ref], list[tuple[str, int, str]]]:
     """Reads, writes and every non-comment code line (for later line checks) of one code file."""
     reads, writes, lines = [], [], []
+    env: dict[str, str] = {}
     cm = COMMENT.get(lang, "#")
     for i, raw in enumerate(text.splitlines(), 1):
         line = raw.strip()
@@ -255,9 +273,14 @@ def extract_refs(path: Path, rel: str, text: str, lang: str) -> tuple[list[Ref],
             continue
         table = {"python": ((PY_READ, reads), (PY_WRITE, writes)), "r": ((R_READ, reads), (R_WRITE, writes)),
                  "matlab": ((M_READ, reads), (M_WRITE, writes)), "julia": ((JL_READ, reads), (JL_WRITE, writes))}.get(lang, ())
+        a = ASSIGN.match(raw)
+        if a and not re.match(r"\s*(if|while|for|elif|return)\b", raw):
+            v = path_of(a.group(2), env) if (JOIN.search(a.group(2)) or re.match(r"\s*[\"']", a.group(2))) else None
+            if v:
+                env[a.group(1)] = v
         for rx, out in table:
             for m in rx.finditer(raw):
-                t = last_path_literal(m.group(2))
+                t = path_of(m.group(2), env)
                 if t:
                     out.append(Ref(t, rel, i, lang))
         if lang == "python":
@@ -278,6 +301,38 @@ def unresolved(p: str) -> bool:
 
 
 # ------------------------------------------------------------------------------------------------------------- dependencies
+
+# APIs that current releases no longer have. A run either installs versions old enough (which an unpinned package does not name)
+# or edits the code, and either is a deviation. Each entry: (language, pattern, what it is, where it went).
+REMOVED_APIS = [
+    ("python", r"\bsklearn\.cross_validation\b", "sklearn.cross_validation", "removed in scikit-learn 0.20"),
+    ("python", r"\bsklearn\.grid_search\b", "sklearn.grid_search", "removed in scikit-learn 0.20"),
+    ("python", r"\bsklearn\.learning_curve\b", "sklearn.learning_curve", "removed in scikit-learn 0.20"),
+    ("python", r"\bsklearn\.externals\.(joblib|six)\b", "sklearn.externals.joblib / six", "removed in scikit-learn 0.23"),
+    ("python", r"\bsklearn\.datasets\.base\b", "sklearn.datasets.base", "removed in scikit-learn 0.24"),
+    ("python", r"\b(?:np|numpy)\.(?:int|float|bool|object|str|complex|long|unicode)\b(?![\w(]*\d)", "NumPy scalar aliases (np.int, np.float, ...)",
+     "removed in NumPy 1.24"),
+    ("python", r"\.ix\[", "pandas .ix indexer", "removed in pandas 1.0"),
+    ("python", r"\bpd\.(?:rolling_\w+|ewma|ols|datetools|stats)\b|\bpandas\.io\.data\b", "old pandas top-level functions",
+     "removed in pandas 0.20 to 0.23"),
+    ("python", r"\bscipy\.misc\.(?:imread|imsave|imresize|comb|factorial|logsumexp)\b|\bfrom scipy\.misc import (?:imread|imsave|imresize|comb|factorial|logsumexp)",
+     "scipy.misc image and special functions", "removed in SciPy 1.0 to 1.3"),
+    ("python", r"^\s*(?:import|from)\s+distutils\b", "distutils", "removed from the standard library in Python 3.12"),
+    ("python", r"^\s*(?:import|from)\s+imp\b", "imp", "removed from the standard library in Python 3.12"),
+    ("python", r"\bcollections\.(?:Mapping|MutableMapping|Sequence|Iterable|Callable)\b|from collections import (?:Mapping|MutableMapping|Sequence|Iterable|Callable)\b",
+     "collections ABC aliases", "removed in Python 3.10 (moved to collections.abc)"),
+    ("python", r"\.get_data\(\)", "nibabel get_data()", "removed in nibabel 5.0"),
+    ("python", r"\.get_affine\(\)|\.get_header\(\)", "nibabel get_affine() / get_header()", "deprecated, removed in later nibabel"),
+]
+PY2 = re.compile(r"^\s*print\s+[^\s(=]|^\s*except\s+[\w.]+\s*,\s*\w+\s*:|^\s*exec\s+\"|\bur\"|^\s*raise\s+\w+\s*,", re.M)
+FETCH = {
+    "python": re.compile(r"\b(fetch_\w+|urlretrieve|urlopen|requests\.get|wget\.download|gdown\.download|load_dataset|hf_hub_download|"
+                         r"snapshot_download|pdr\.DataReader|DataReader|yf\.download)\s*\("),
+    "r": re.compile(r"\b(download\.file|curl_download|httr::GET|GET|get_acs|get_decennial|WDI|fredr|getSymbols|Quandl|pins::pin_get)\s*\("),
+    "stata": re.compile(r"^\s*(?:qui(?:etly)?\s+|cap(?:ture)?\s+)*(copy\s+\"?https?|use\s+\"?https?|webuse|wbopendata|freduse|import\s+fred)\b"),
+    "matlab": re.compile(r"\b(websave|urlread|webread|urlwrite)\s*\("),
+    "julia": re.compile(r"\b(download|Downloads\.download)\s*\("),
+}
 
 def py_imports(text: str) -> set[str]:
     try:
@@ -427,6 +482,18 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
 
     # ---- dependencies: Python
     py_files = [r for r, l in code.items() if l == "python"]
+    py_pinned = True
+    py2 = []
+    for r in py_files:
+        t = texts.get(r, "")
+        try:
+            ast.parse(t)
+        except (SyntaxError, ValueError):
+            m = PY2.search(t)
+            py2.append(f"{r}:{t[:m.start()].count(chr(10)) + 1}" if m else r)
+    if py2:
+        add("PYTHON2_SYNTAX", DEVIATION, f"{len(py2)} Python files do not parse as Python 3, most likely Python 2. A rerun needs a Python 2.7 "
+            "interpreter (end of life since 2020) or a port, and either is a logged deviation.", py2[:10])
     if py_files:
         spec_files = [r for f, r in rels.items() if re.match(r"requirements.*\.txt$|environment\.ya?ml$|pyproject\.toml$|setup\.(py|cfg)$|"
                                                              r"Pipfile(\.lock)?$|poetry\.lock$|uv\.lock$|pdm\.lock$|conda-lock\.ya?ml$", f.name)]
@@ -448,11 +515,14 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
             third |= {m for m in py_imports(texts.get(r, "")) if m not in sys.stdlib_module_names and m not in local and m != "__future__"}
         declared = {d for d, _, _ in reqs}
         undeclared = sorted(m for m in third if norm_dist(PY_DIST.get(m, m)) not in declared and norm_dist(m) not in declared)
+        if not spec_files:
+            py_pinned = False
         if not spec_files and third:
             add("NO_DEPENDENCY_SPEC", DEVIATION, f"Python code imports {', '.join(sorted(third))} but the package has no requirements "
                 "file, environment file or lockfile. A rerun must choose versions and log them.", py_files[:5])
         elif spec_files:
             unpinned = [line for _, pinned, line in reqs if not pinned]
+            py_pinned = bool(locked) or not unpinned
             if unpinned and not locked:
                 add("UNPINNED_DEPENDENCIES", DEVIATION, f"Python requirements without an exact version: {'; '.join(unpinned[:10])}. "
                     "A rerun installs whatever is current and must log the versions it got.", spec_files)
@@ -512,6 +582,35 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
         add("ENVIRONMENT_IMAGE", NOTE, "The package ships a container definition. A rerun can build it, but image tags and base "
             "images must be pinned by digest to be reproducible.", [r for f, r in rels.items() if f.name in ("Dockerfile", "Containerfile")])
 
+    # ---- removed APIs
+    hits: dict[str, list] = {}
+    for r, lang in code.items():
+        for i, line in enumerate(texts.get(r, "").splitlines(), 1):
+            if line.lstrip().startswith("#"):
+                continue
+            for l2, rx, what, when in REMOVED_APIS:
+                if l2 == lang and re.search(rx, line):
+                    hits.setdefault(f"{what} ({when})", []).append(f"{r}:{i}")
+    if hits:
+        pinned_py = bool(py_files) and py_pinned
+        add("REMOVED_API", NOTE if pinned_py else DEVIATION, "Code uses APIs that current releases no longer have: "
+            + "; ".join(hits) + (". The package pins its versions, so an install of those versions should still have them, if they "
+            "still install on a current interpreter." if pinned_py else ". Nothing pins versions old enough, so a rerun must either "
+            "reconstruct an old environment or edit the code, and log which."), [e for v in hits.values() for e in v][:10])
+
+    # ---- data fetched at run time
+    fetches: dict[str, list] = {}
+    for r, lang in code.items():
+        rx = FETCH.get(lang)
+        if not rx:
+            continue
+        for i, line in enumerate(texts.get(r, "").splitlines(), 1):
+            st = line.strip()
+            if st.startswith(("#", "def ", "*", "//", "%", "function ")) or not st:
+                continue
+            for m in rx.finditer(line):
+                fetches.setdefault(m.group(1).split("(")[0].strip(' "'), []).append(f"{r}:{i}")
+
     # ---- inputs and outputs
     reads, writes, code_lines = [], [], []
     for r, lang in code.items():
@@ -550,6 +649,10 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
             urls.setdefault(clean_url(u), set()).add(r)
     for x in remote:
         urls.setdefault(clean_url(x.path), set()).add(f"{x.file}:{x.line}")
+    for r, i, line in code_lines:                  # URLs in code strings: often where a fetcher gets its data
+        for lit in literals(line):
+            for u in URL.findall(lit):
+                urls.setdefault(clean_url(u), set()).add(f"{r}:{i}")
     link_results = {}
     if check_links and urls:
         targets = sorted(urls)[:100]
@@ -593,6 +696,10 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
         else:
             add("MISSING_INPUT_UNDOCUMENTED", BLOCKER, f"`{refs[0].path}` is read by the code but is not in the package, and the "
                 "documentation does not say where it comes from.", ev)
+    if fetches:
+        add("RUNTIME_DOWNLOAD", DEVIATION, f"Code fetches data over the network when it runs ({', '.join(sorted(fetches))}). What the "
+            "server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+            [e for v in fetches.values() for e in v][:10])
     for x in remote:
         d = dead(x.path)
         if d:
@@ -604,9 +711,15 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
     if restricted_global and not any(f.code == "MISSING_INPUT_RESTRICTED" for f in findings):
         add("RESTRICTED_DATA_MENTIONED", NOTE, f"The documentation mentions restricted data (\"{restricted_global[0]}\") but every input "
             "triage could trace is present. Check by hand that no restricted file is read through a path triage could not resolve.")
-    other_dead = [u for u in urls if dead(u) and not any(u in e for f in findings for e in f.evidence)]
-    if other_dead:
-        add("DEAD_LINK", NOTE, f"{len(other_dead)} other links in the documentation could not be fetched.", other_dead[:10])
+    other = [u for u in urls if dead(u) and not any(u in e for f in findings for e in f.evidence)]
+    http_dead = [u for u in other if link_results[u].get("status")]
+    unreachable = [u for u in other if not link_results[u].get("status")]
+    if http_dead:
+        add("DEAD_LINK", NOTE, f"{len(http_dead)} other links answered with an HTTP error: "
+            + ", ".join(f"{u} ({link_results[u]['status']})" for u in http_dead[:10]) + ".", http_dead[:10])
+    if unreachable:
+        add("LINK_UNREACHABLE", NOTE, f"{len(unreachable)} other links could not be reached from this machine (DNS, refused, timeout or "
+            "proxy). That may be this machine's network rather than the link.", unreachable[:10])
 
     # ---- absolute paths
     abs_hits = [f"{r}:{i}" for r, i, line in code_lines
@@ -616,7 +729,13 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
             "them, and each edit is a logged deviation.", abs_hits[:10])
 
     # ---- run order
-    scripts = [r for r in code if not r.endswith(".ado")]
+    called: set[str] = set()
+    for r, lang in code.items():
+        if lang == "python":
+            called |= py_imports(texts.get(r, ""))
+    called_paths = {basename(x.path) for x in reads if x.lang in ("r", "stata", "julia")}
+    scripts = [r for r in code if not r.endswith(".ado") and Path(r).stem not in called and Path(r).name.lower() not in called_paths
+               and not set(r.split("/")[:-1]) & called and Path(r).name != "__init__.py"]
     masters = [r for f, r in rels.items() if (f.suffix.lower() in LANGUAGES and MASTER.match(f.stem))
                or f.name in ("Makefile", "Snakefile", "dvc.yaml", "justfile", "run.sh", "run_all.sh")]
     named_in_docs = [r for r in scripts if Path(r).name in doc_text]
