@@ -1,8 +1,8 @@
 # Survey review: triage v3 on 33 recent journal packages
 
-I pinned 36 author-published packages in [`SURVEY_2026-11-21.json`](../SURVEY_2026-11-21.json) before triage ran on any of them.
-None was in the round 2 or round 3 sets. Two were dropped at pinning because no file or description named the journal, and one after
-the run because its journal label was wrong (see `corrections` in that file). Each was triaged once with `triage.py` SHA-256
+The search found 36 author-published packages. Two were dropped because no file or description named the journal, and the other 34
+were pinned in [`SURVEY_2026-11-21.json`](../SURVEY_2026-11-21.json) before triage ran on any of them. None was in the round 2 or
+round 3 sets. One more was dropped after the run because its journal label was wrong (see `corrections` in that file). Each was triaged once with `triage.py` SHA-256
 `c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca` and `--have stata,matlab`. That is the same script as round 3,
 unchanged. Raw verdicts are in [`survey-2026-11/`](survey-2026-11/).
 
