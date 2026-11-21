@@ -1,0 +1,106 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "git",
+  "url": "https://github.com/AlexandreAbraham/frontiers2013",
+  "commit": "97bf25836804195401ef213f963135957b431d70"
+ },
+ "when": "2026-11-21T10:21:04Z",
+ "triage_sha256": "fedc562d7a1e1b45cb20e1200412b40d2cffd540fb63d6a8b303b59806bcbec2",
+ "options": "--check-links",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 2,
+   "note": 2
+  },
+  "findings": [
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Python code imports distutils, lxml, matplotlib, nibabel, nilearn, numpy, pylab, scipy, sklearn but the package has no requirements file, environment file or lockfile. A rerun must choose versions and log them.",
+    "evidence": [
+     "scripts/adhd_clustering.py",
+     "scripts/adhd_ica.py",
+     "scripts/haxby_decoding.py",
+     "scripts/miyawaki_decoding.py",
+     "scripts/miyawaki_encoding.py"
+    ]
+   },
+   {
+    "code": "NO_RUN_ORDER",
+    "severity": "deviation",
+    "message": "11 scripts, no master script, and the README does not name an order. A rerun must choose one and log it.",
+    "evidence": [
+     "scripts/adhd_clustering.py",
+     "scripts/adhd_ica.py",
+     "scripts/haxby_decoding.py",
+     "scripts/miyawaki_decoding.py",
+     "scripts/miyawaki_encoding.py",
+     "scripts/utils/datasets.py",
+     "scripts/utils/masking.py",
+     "scripts/utils/resampling.py",
+     "scripts/utils/searchlight.py",
+     "scripts/utils/signal.py"
+    ]
+   },
+   {
+    "code": "DEAD_LINK",
+    "severity": "note",
+    "message": "1 other links in the documentation could not be fetched.",
+    "evidence": [
+     "http://nilearn.github.io"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 129,
+   "bytes": 97449167,
+   "languages": [
+    "python"
+   ],
+   "code_files": {
+    "python": 11
+   },
+   "docs_read": [
+    "README.md",
+    "submission/README.md",
+    "submission_review/README.md",
+    "submission_review_2/README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 0,
+   "writes": 41,
+   "missing": [],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 1,
+   "checked": true,
+   "results": [
+    {
+     "url": "http://nilearn.github.io",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    }
+   ]
+  },
+  "seconds": 0.068
+ }
+}
