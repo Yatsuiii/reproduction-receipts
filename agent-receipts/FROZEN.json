@@ -1,0 +1,8 @@
+{
+ "format": "agent-receipts-frozen/1",
+ "files": {
+  "FORMAT.md": "55154e6cb47f1568a1e17d02ce1b22508589131f090c796d6a413f0dfbf458eb",
+  "injections/EXPECTED.json": "c6f6a5e94da5b46362a762a60687213f822afaebc11944cd606a968da1ae745b",
+  "injections/injections.py": "dc8dc7ea14311d42aca28b17ec169216c8f3cf949183011baa4f888935775faf"
+ }
+}
