@@ -15,3 +15,12 @@ This is one library example, not a neuroimaging paper replication or a complete 
 ## Next target
 
 [A published neuroimaging paper with deprecated APIs and committed score caches](NEXT_TARGET.md). Selection is a preflight decision, not a finding of numerical non-reproduction.
+
+## Also in this repo
+
+Each folder below was its own repository and was merged in with its full history. The original repositories stay up and will be archived rather than deleted, so existing links keep working.
+
+- [`mcp-teardown/`](mcp-teardown/): teardown receipts for published MCP servers, run in bulk.
+- [`agent-disclosure-fidelity/`](agent-disclosure-fidelity/): does an agent's report of what it did match what the machine shows. Source of the teardown probe.
+- [`custody/`](custody/): source and revocation state on every memory (Vertex AI Memory Bank). Only `main` was merged; the experiment branches stay in the original repository.
+- [`stalefence/`](stalefence/): fencing for agents acting on state that changed under them. Was private until this merge.
