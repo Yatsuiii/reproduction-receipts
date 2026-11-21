@@ -1,0 +1,343 @@
+{
+ "crewai": "1.15.44",
+ "python": "3.12.3",
+ "n": 10,
+ "arms": {
+  "ok": [
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   },
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   },
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   },
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   },
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   },
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   },
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   },
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   },
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   },
+   {
+    "arm": "ok",
+    "executions": 1,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 1,
+    "errors": 0
+   }
+  ],
+  "always": [
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   },
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   },
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   },
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   },
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   },
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   },
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   },
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   },
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   },
+   {
+    "arm": "always",
+    "executions": 3,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "\nI encountered an error while trying to use the tool. This was the error: payment gateway timed out.\n Tool charge_card a"
+    ],
+    "started": 3,
+    "errors": 3
+   }
+  ],
+  "transient": [
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   },
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   },
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   },
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   },
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   },
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   },
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   },
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   },
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   },
+   {
+    "arm": "transient",
+    "executions": 2,
+    "llm_asks": 1,
+    "steps": 1,
+    "step_results": [
+     "charged A-100"
+    ],
+    "started": 2,
+    "errors": 1
+   }
+  ]
+ }
+}

@@ -1,0 +1,60 @@
+diff --git a/lib/crewai/src/crewai/tools/tool_usage.py b/lib/crewai/src/crewai/tools/tool_usage.py
+index 573c709..af0ab6c 100644
+--- a/lib/crewai/src/crewai/tools/tool_usage.py
++++ b/lib/crewai/src/crewai/tools/tool_usage.py
+@@ -353,6 +353,9 @@ class ToolUsage:
+                     fingerprint_config = self._build_fingerprint_config()
+ 
+                     if calling.arguments:
++                        # Only the schema lookup may fall back to the raw
++                        # arguments. The tool itself runs once: an exception it
++                        # raises must not be caught here and run it again.
+                         try:
+                             acceptable_args = tool.args_schema.model_json_schema()[
+                                 "properties"
+@@ -362,14 +365,11 @@ class ToolUsage:
+                                 for k, v in calling.arguments.items()
+                                 if k in acceptable_args
+                             }
+-                            result = await tool.ainvoke(
+-                                input=arguments, config=fingerprint_config
+-                            )
+                         except Exception:
+                             arguments = calling.arguments
+-                            result = await tool.ainvoke(
+-                                input=arguments, config=fingerprint_config
+-                            )
++                        result = await tool.ainvoke(
++                            input=arguments, config=fingerprint_config
++                        )
+                     else:
+                         result = await tool.ainvoke(input={}, config=fingerprint_config)
+ 
+@@ -610,6 +610,9 @@ class ToolUsage:
+                     fingerprint_config = self._build_fingerprint_config()
+ 
+                     if calling.arguments:
++                        # Only the schema lookup may fall back to the raw
++                        # arguments. The tool itself runs once: an exception it
++                        # raises must not be caught here and run it again.
+                         try:
+                             acceptable_args = tool.args_schema.model_json_schema()[
+                                 "properties"
+@@ -619,14 +622,11 @@ class ToolUsage:
+                                 for k, v in calling.arguments.items()
+                                 if k in acceptable_args
+                             }
+-                            result = tool.invoke(
+-                                input=arguments, config=fingerprint_config
+-                            )
+                         except Exception:
+                             arguments = calling.arguments
+-                            result = tool.invoke(
+-                                input=arguments, config=fingerprint_config
+-                            )
++                        result = tool.invoke(
++                            input=arguments, config=fingerprint_config
++                        )
+                     else:
+                         result = tool.invoke(input={}, config=fingerprint_config)
+ 
