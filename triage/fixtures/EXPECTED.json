@@ -327,6 +327,30 @@
       "verdict": "runnable",
       "codes": [],
       "added": "2026-11-21, round 3"
+    },
+    {
+      "fixture": "dynare_mod_save",
+      "args": [
+        "--have",
+        "matlab"
+      ],
+      "verdict": "runnable",
+      "codes": [
+        "SOFTWARE_REQUIRED"
+      ],
+      "added": "2026-11-21, round 3b"
+    },
+    {
+      "fixture": "stata_macro_dir",
+      "args": [
+        "--have",
+        "stata"
+      ],
+      "verdict": "runnable",
+      "codes": [
+        "UNRESOLVED_PATHS"
+      ],
+      "added": "2026-11-21, round 3b"
     }
   ]
 }

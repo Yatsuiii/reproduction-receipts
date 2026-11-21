@@ -17,3 +17,6 @@ and whether triage results had already been seen when the change was made.
 - 2026-11-21, round 3: added eight fixtures, one or more per held-out failure in `results/heldout_review.md`: `link_status` (1),
   `dynare_model` and `matlab_command_save` (2), `source_listed_data` (3), `gams_model` and `earth_engine` (4), `gpu_listing` (5),
   `stata_prose` (6). Written before the fixes.
+- 2026-11-21, round 3b: added `dynare_mod_save` and `stata_macro_dir`. Written after running a v3 draft on the six round 2
+  packages (now development cases), which still reported Dynare `.mod` saves, extension-less MATLAB `save('name')` and a Stata
+  local-macro directory as missing inputs. Written before the fix.
