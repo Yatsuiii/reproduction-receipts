@@ -1,0 +1,1 @@
+refused: network interfaces other than lo present: ['docker0', 'enP32441s1', 'eth0', 'lo']
