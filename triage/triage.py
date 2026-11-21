@@ -45,9 +45,14 @@ LANGUAGES = {  # extension -> language
     ".py": "python", ".ipynb": "python", ".r": "r", ".rmd": "r", ".qmd": "r", ".do": "stata", ".ado": "stata",
     ".m": "matlab", ".mlx": "matlab", ".jl": "julia", ".sas": "sas", ".nb": "mathematica", ".wl": "mathematica",
     ".gss": "gauss", ".prg": "eviews", ".sps": "spss", ".f90": "fortran", ".f": "fortran", ".cpp": "c++", ".c": "c",
-    ".sh": "shell", ".mod": "dynare",
+    ".sh": "shell", ".mod": "dynare", ".gms": "gams",
 }
-PROPRIETARY = {"stata", "matlab", "sas", "mathematica", "gauss", "eviews", "spss"}
+PROPRIETARY = {"stata", "matlab", "sas", "mathematica", "gauss", "eviews", "spss", "gams"}
+SYSTEM_PATH = re.compile(r"^(/etc|/proc|/dev|/sys|/usr|/bin|/tmp)/")
+DYNARE_OUTPUTS = ("_results.mat", ".log", "_dynamic.m", "_static.m", "_set_auxiliary_variables.m", "_steadystate2.m")
+EARTH_ENGINE = re.compile(r"\bee\.(?:ImageCollection|Image|FeatureCollection|Initialize|Geometry)\b|\bExport\.(?:table|image)\.")
+TOOLBOX = re.compile(r"\b((?:[A-Z][A-Za-z]+ ){0,3}Toolbox)\b")
+VERSION_LISTING = re.compile(r"Version\s+[\d.]+\s+\(R20\d\d[ab]\)")
 DATA_EXT = {".csv", ".tsv", ".txt", ".dta", ".rds", ".rdata", ".rda", ".xlsx", ".xls", ".parquet", ".feather", ".json", ".sav",
             ".sas7bdat", ".mat", ".npy", ".npz", ".pkl", ".pickle", ".h5", ".hdf5", ".nc", ".shp", ".dbf", ".zip", ".gz", ".fst"}
 DOC_NAMES = re.compile(r"(readme|read_me|data.?availability|instructions|replication|codebook)", re.I)
@@ -182,9 +187,9 @@ def notebook_source(text: str) -> tuple[str, str]:
 
 STR = re.compile(r"\"([^\"\n]*)\"|'([^'\n]*)'")
 STATA_READ = re.compile(r"^\s*(?:quietly\s+|qui\s+|capture\s+|cap\s+)*(use|merge|append|joinby|cross|import\s+delimited|import\s+excel|"
-                        r"insheet|infile|infix|do|run|include)\b(.*)$", re.I)
+                        r"insheet|infile|infix|do|run|include)\b(.*)$")
 STATA_WRITE = re.compile(r"^\s*(?:quietly\s+|qui\s+|capture\s+|cap\s+)*(save|saveold|export\s+delimited|export\s+excel|outsheet|"
-                         r"esttab|estout|outreg2|graph\s+export|log\s+using|estimates\s+save|putexcel\s+set|texsave|file\s+open)\b(.*)$", re.I)
+                         r"esttab|estout|outreg2|graph\s+export|log\s+using|estimates\s+save|putexcel\s+set|texsave|file\s+open)\b(.*)$")
 R_READ = re.compile(r"\b(read\.csv2?|read\.table|read\.delim|fread|read_csv2?|read_tsv|read_delim|read_dta|read_sav|read_sas|"
                     r"read_excel|read_xlsx?|readRDS|read_rds|load|read_parquet|read_feather|read_fst|st_read|source|readLines)\s*\(([^)]*)")
 R_WRITE = re.compile(r"\b(write\.csv2?|write\.table|fwrite|write_csv|write_tsv|saveRDS|write_rds|save|ggsave|write_dta|"
@@ -221,6 +226,9 @@ ASSIGN = re.compile(r"^\s*([A-Za-z_][\w.]*)\s*(?:=|<-)\s*(.+)$")
 
 def path_of(arg: str, env: dict) -> str | None:
     """The path an argument names: joined literals of a join call, else the last path literal, else a variable set earlier."""
+    outside = STR.sub("", arg)
+    if literals(arg) and re.search(r"\bpaste0?\s*\(|sprintf\s*\(|strcat\s*\(|\+|\[|\bf[\"']", arg) and re.search(r"[A-Za-z_]\w*", re.sub(r"\b(paste0?|sprintf|strcat|sep|f)\b", "", outside)):
+        return "{concat}" + (last_path_literal(arg) or "")
     if JOIN.search(arg):
         lits = [x for x in literals(arg.split(")")[0] if ")" in arg else arg)]
         if lits and pathlike(lits[-1]):
@@ -244,6 +252,8 @@ def stata_target(cmd: str, rest: str) -> str | None:
         tok = None
     if not tok:
         return None
+    if "`" in tok:                                   # a local macro: the file name is only known at run time
+        return "{macro}" + tok.strip("\"")
     tok = tok.strip("`'\"")
     base = tok.replace("\\", "/").rsplit("/", 1)[-1]
     if "." not in base:
@@ -258,6 +268,11 @@ def extract_refs(path: Path, rel: str, text: str, lang: str) -> tuple[list[Ref],
     reads, writes, lines = [], [], []
     env: dict[str, str] = {}
     cm = COMMENT.get(lang, "#")
+    blank = lambda m: "\n" * m.group(0).count("\n")  # noqa: E731  keep line numbers
+    if lang == "stata":
+        text = re.sub(r"/\*.*?\*/", blank, text, flags=re.S)
+    elif lang == "matlab":
+        text = re.sub(r"^\s*%\{.*?^\s*%\}", blank, text, flags=re.S | re.M)
     for i, raw in enumerate(text.splitlines(), 1):
         line = raw.strip()
         if not line or line.startswith(cm if isinstance(cm, tuple) else (cm,)):
@@ -273,6 +288,11 @@ def extract_refs(path: Path, rel: str, text: str, lang: str) -> tuple[list[Ref],
             continue
         table = {"python": ((PY_READ, reads), (PY_WRITE, writes)), "r": ((R_READ, reads), (R_WRITE, writes)),
                  "matlab": ((M_READ, reads), (M_WRITE, writes)), "julia": ((JL_READ, reads), (JL_WRITE, writes))}.get(lang, ())
+        if lang == "matlab":
+            m = re.match(r"^\s*(save|load)\s+([^\s(=;,'][^\s;,]*)", raw)    # command syntax: save targets.mat x y
+            if m:
+                f = m.group(2) if "." in m.group(2) else m.group(2) + ".mat"
+                (writes if m.group(1) == "save" else reads).append(Ref(f, rel, i, lang))
         a = ASSIGN.match(raw)
         if a and not re.match(r"\s*(if|while|for|elif|return)\b", raw):
             v = path_of(a.group(2), env) if (JOIN.search(a.group(2)) or re.match(r"\s*[\"']", a.group(2))) else None
@@ -441,6 +461,9 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
             if ext == ".ipynb":
                 t, lang = notebook_source(t)
             code[r], texts[r] = lang, t
+    for f, r in rels.items():
+        if f.suffix.lower() == ".js" and (t := read_text(f)) and EARTH_ENGINE.search(t):
+            code[r], texts[r] = "earthengine", t
     languages = sorted(set(code.values()))
 
     # ---- documentation
@@ -616,7 +639,15 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
     for r, lang in code.items():
         rd, wr, ln = extract_refs(root / r, r, texts.get(r, ""), lang)
         reads += rd; writes += wr; code_lines += ln
+    for r, lang in code.items():
+        if lang == "earthengine":                  # Export.table.toDrive({description: 'ndvi', fileFormat: 'CSV'}) writes ndvi.csv
+            for m in re.finditer(r"description\s*:\s*['\"]([^'\"]+)['\"](?:[^}]*?fileFormat\s*:\s*['\"](\w+)['\"])?", texts[r]):
+                writes.append(Ref(f"{m.group(1)}.{(m.group(2) or 'csv').lower()}", r, texts[r][:m.start()].count("\n") + 1, lang))
+        if lang == "dynare":                       # dynare <model> writes <model>_results.mat and friends
+            writes += [Ref(Path(r).stem + suffix, r, 0, lang) for suffix in DYNARE_OUTPUTS]
     written = {basename(w.path) for w in writes}
+    system_reads = [x for x in reads if SYSTEM_PATH.match(x.path)]
+    reads = [x for x in reads if x not in system_reads]
     unres = [x for x in reads if unresolved(x.path)]
     remote = [x for x in reads if URL.match(x.path)]
     missing: dict[str, list[Ref]] = {}
@@ -637,6 +668,10 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
     if lfs:
         add("LFS_POINTERS", DEVIATION, f"{len(lfs)} files are Git LFS pointers, not data. The data must be fetched with git lfs, "
             "which may need the host's quota or credentials.", lfs[:10])
+    if system_reads:
+        add("SYSTEM_FILE_READS", NOTE, f"Code reads system files ({', '.join(sorted({x.path for x in system_reads}))}), usually to "
+            "detect the operating system. Not package inputs; a rerun on another OS may take a different branch.",
+            [f"{x.file}:{x.line}" for x in system_reads[:5]])
     if unres:
         add("UNRESOLVED_PATHS", NOTE, f"{len(unres)} file reads use paths built at run time (macros, globs, variables), so triage could "
             "not check that those inputs exist.", [f"{x.file}:{x.line}" for x in unres[:10]])
@@ -661,10 +696,33 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
                 link_results[res["url"]] = res
 
     def dead(u: str) -> dict | None:
+        """Only an HTTP 404 or 410 shows that a link is gone. Anything else says nothing about the link."""
         r = link_results.get(clean_url(u))
-        return r if r is not None and not r["ok"] else None
+        return r if r is not None and r.get("status") in (404, 410) else None
+
+    def failed(u: str) -> dict | None:
+        r = link_results.get(clean_url(u))
+        return r if r is not None and not r["ok"] and not dead(u) else None
+
+    def link_problems(links: list, ev: list):
+        """A deviation for each required link that could not be verified, kept apart from dead links."""
+        bad = [u for u in links if failed(u)]
+        net = [u for u in bad if not link_results[clean_url(u)].get("status")]
+        http = [u for u in bad if link_results[clean_url(u)].get("status")]
+        if net:
+            add("DATA_LINK_UNREACHABLE", DEVIATION, f"Could not reach {', '.join(net[:3])} from this machine ("
+                f"{link_results[clean_url(net[0])].get('error')}). That is evidence about this machine's network, not about the link; "
+                "check it from another network before treating the data as unavailable.", ev + net[:3])
+        if http:
+            add("DATA_LINK_UNVERIFIED", DEVIATION, "The server answered "
+                + ", ".join(f"{u} with HTTP {link_results[clean_url(u)]['status']}" for u in http[:3])
+                + ". That does not show the data are gone (only 404 or 410 would); it may need a login, a browser or a retry.", ev + http[:3])
 
     restricted_global = has_any(RESTRICTED, doc_text)
+    # Documents that list where raw data come from, by dataset rather than by file name.
+    source_docs = sorted({r for r, t in docs.items() if URL.search(t) and (re.search(r"source|data", Path(r).stem, re.I) and not
+                          re.match(r"read_?me", Path(r).name, re.I) or re.search(r"^#+\s*(?:data|raw data|data sources?)\b", t, re.I | re.M))})
+    source_urls = {clean_url(u) for r in source_docs for u in URL.findall(docs[r])}
     for b, refs in sorted(missing.items()):
         stem = b.rsplit(".", 1)[0]
         ev = [f"{x.file}:{x.line}" for x in refs[:5]]
@@ -677,9 +735,8 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
             add("MISSING_INPUT_RESTRICTED", BLOCKER, f"`{refs[0].path}` is read by the code but is not in the package, and the "
                 f"documentation{where} describes it as restricted (\"{restricted[0]}\"). The desk cannot run this without access.", ev)
         elif links and all(dead(u) for u in links):
-            d = dead(links[0])
             add("DEAD_DATA_LINK", BLOCKER, f"`{refs[0].path}` is not in the package. The documentation points to {links[0]}, which "
-                f"could not be fetched from this machine: {d.get('error') or d.get('status')}.", ev + links[:3])
+                f"answered HTTP {dead(links[0])['status']}: the file is gone from that address.", ev + links[:3])
         elif registration:
             add("MISSING_INPUT_REGISTRATION", DEVIATION, f"`{refs[0].path}` is not in the package; the documentation{where} says it comes "
                 f"from a source that needs registration (\"{registration[0]}\"). The desk must register, download and log the extract.", ev)
@@ -687,12 +744,18 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
             add("MISSING_INPUT_DOWNLOAD", DEVIATION, f"`{refs[0].path}` is not in the package; the documentation{where} says to download it "
                 f"from {', '.join(links[:3])}. The download date and the file's SHA-256 become part of the receipt"
                 + ("" if check_links else "; links were not checked (use --check-links)") + ".", ev + links[:3])
+            link_problems(links, ev)
         elif mentions:
             add("MISSING_INPUT_UNDOCUMENTED", BLOCKER, f"`{refs[0].path}` is read by the code and named in the documentation{where}, "
                 "but it is not in the package and no source for it is given.", ev)
         elif restricted_global:
             add("MISSING_INPUT_RESTRICTED", BLOCKER, f"`{refs[0].path}` is read by the code but is not in the package. The documentation "
                 f"does not name it, but does describe restricted data (\"{restricted_global[0]}\"), so it is most likely one of those.", ev)
+        elif source_docs:
+            add("MISSING_INPUT_SOURCE_LISTED", DEVIATION, f"`{refs[0].path}` is read by the code but is not in the package. The "
+                f"documentation does not name the file but lists external data sources ({', '.join(source_docs)}: {len(source_urls)} "
+                "links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source "
+                "accounts for would make this blocked.", ev)
         else:
             add("MISSING_INPUT_UNDOCUMENTED", BLOCKER, f"`{refs[0].path}` is read by the code but is not in the package, and the "
                 "documentation does not say where it comes from.", ev)
@@ -703,20 +766,25 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
     for x in remote:
         d = dead(x.path)
         if d:
-            add("DEAD_DATA_LINK", BLOCKER, f"Code downloads {x.path} at run time, which could not be fetched from this machine: "
-                f"{d.get('error') or d.get('status')}.", [f"{x.file}:{x.line}"])
-        else:
-            add("RUNTIME_DOWNLOAD", DEVIATION, f"Code downloads {x.path} at run time. The content may have changed since publication; "
-                "a receipt must record its SHA-256" + ("" if check_links else " (link not checked)") + ".", [f"{x.file}:{x.line}"])
+            add("DEAD_DATA_LINK", BLOCKER, f"Code downloads {x.path} at run time, which answered HTTP {d['status']}: the file is gone "
+                "from that address.", [f"{x.file}:{x.line}"])
+            continue
+        add("RUNTIME_DOWNLOAD", DEVIATION, f"Code downloads {x.path} at run time. The content may have changed since publication; "
+            "a receipt must record its SHA-256" + ("" if check_links else " (link not checked)") + ".", [f"{x.file}:{x.line}"])
+        link_problems([x.path], [f"{x.file}:{x.line}"])
     if restricted_global and not any(f.code == "MISSING_INPUT_RESTRICTED" for f in findings):
         add("RESTRICTED_DATA_MENTIONED", NOTE, f"The documentation mentions restricted data (\"{restricted_global[0]}\") but every input "
             "triage could trace is present. Check by hand that no restricted file is read through a path triage could not resolve.")
-    other = [u for u in urls if dead(u) and not any(u in e for f in findings for e in f.evidence)]
-    http_dead = [u for u in other if link_results[u].get("status")]
-    unreachable = [u for u in other if not link_results[u].get("status")]
+    cited = {e for f in findings for e in f.evidence}
+    http_dead = [u for u in urls if dead(u) and u not in cited]
+    unverified = [u for u in urls if failed(u) and u not in cited and link_results[u].get("status")]
+    unreachable = [u for u in urls if failed(u) and u not in cited and not link_results[u].get("status")]
     if http_dead:
-        add("DEAD_LINK", NOTE, f"{len(http_dead)} other links answered with an HTTP error: "
+        add("DEAD_LINK", NOTE, f"{len(http_dead)} other links answered 404 or 410: "
             + ", ".join(f"{u} ({link_results[u]['status']})" for u in http_dead[:10]) + ".", http_dead[:10])
+    if unverified:
+        add("LINK_UNVERIFIED", NOTE, f"{len(unverified)} other links answered with an HTTP error other than 404 or 410, which does not "
+            "show they are gone: " + ", ".join(f"{u} ({link_results[u]['status']})" for u in unverified[:10]) + ".", unverified[:10])
     if unreachable:
         add("LINK_UNREACHABLE", NOTE, f"{len(unreachable)} other links could not be reached from this machine (DNS, refused, timeout or "
             "proxy). That may be this machine's network rather than the link.", unreachable[:10])
@@ -754,11 +822,28 @@ def triage(root: Path, have: set[str], check_links: bool = False, max_hours: flo
     if hours and max(hours) > max_hours:
         add("LONG_COMPUTE", DEVIATION, f"The documentation claims a run time of about {max(hours):.0f} hours, over this desk's budget of "
             f"{max_hours:.0f} hours (--max-hours). A full rerun needs a compute plan; a partial rerun must say which parts it skipped.")
-    if re.search(r"\b(GPU|CUDA|cuDNN)\b", doc_text) or any(re.search(r"\b(cuda|cupy|\.to\(['\"]cuda)", t) for t in texts.values()):
+    prose = "\n".join(l for l in doc_text.splitlines() if not VERSION_LISTING.search(l))
+    if re.search(r"\b(GPU|CUDA|cuDNN)\b", prose) or any(re.search(r"\b(cuda|cupy|\.to\(['\"]cuda)", t) for t in texts.values()):
         add("GPU_REQUIRED", DEVIATION, "The package refers to GPUs or CUDA. A CPU rerun may be slower or numerically different and "
             "must say so.")
     if re.search(r"\b(SLURM|sbatch|PBS|HPC|supercomputer|cluster)\b", doc_text, re.I) or any(f.suffix in (".slurm", ".pbs", ".sbatch") for f in files):
         add("CLUSTER_MENTIONED", NOTE, "The package mentions a cluster or batch scheduler; scripts may assume one.")
+
+    # ---- other software and services the run needs
+    if "matlab" in languages:
+        boxes = sorted({m.group(1).strip() for l in doc_text.splitlines() for m in TOOLBOX.finditer(l)} - {"Toolbox"})
+        if boxes:
+            add("MATLAB_TOOLBOX", NOTE, f"Documentation names MATLAB toolboxes: {', '.join(boxes)}. Each is licensed separately; check the "
+                "desk's MATLAB has them.")
+    if "dynare" in languages:
+        dv = sorted(set(re.findall(r"Dynare\s+v?(\d+(?:\.\d+)+)", doc_text, re.I)))
+        add("SOFTWARE_REQUIRED", NOTE if dv else DEVIATION, "Requires Dynare (free) inside MATLAB or Octave"
+            + (f", version {', '.join(dv)} named in the documentation." if dv else ", with no version named; a rerun must choose one and log it."),
+            [r for r, l in code.items() if l == "dynare"][:5])
+    if "earthengine" in languages:
+        add("EXTERNAL_SERVICE", DEVIATION, "A step runs in Google Earth Engine, which needs an account and exports through Google Drive. "
+            "Its outputs are inputs to later steps; a receipt must record the export date and hash, because the hosted image "
+            "collections change.", [r for r, l in code.items() if l == "earthengine"][:5])
 
     # ---- licence
     lic_files = [r for f, r in rels.items() if re.match(r"(licen[cs]e|copying)", f.name, re.I)]
