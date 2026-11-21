@@ -8,24 +8,60 @@ of the record before it. A third party with the receipt file and the public key 
 edited, removed, reordered or added, that the receipt was not cut short, and that it was signed by the key the deployer
 vouched for. Calls declared safe to re-run can be replayed against the tools to see whether they still give the same answer.
 
-v0. Stdlib only (Ed25519 is implemented in pure Python, and `cryptography` is used instead when it is installed). Python 3.10+.
+v0.1. Stdlib only (Ed25519 is implemented in pure Python, and `cryptography` is used instead when it is installed). Python 3.10+.
 No server, no service, nothing leaves the machine.
 
-```python
-from agent_receipts import Recorder, Signer, verify
+## Quickstart (5 minutes)
 
-rec = Recorder("run.jsonl", signer=Signer.from_file("agent.key"), actor="billing-agent@acme")
-note = rec.call("read_file", read_file, {"path": "policy.txt"}, sources=["file:policy.txt"], replayable=True)
-rec.call("send_email", send_email, {"to": "c@x.test", "body": "..."}, derived_from=[rec.last_seq])
-anchor = rec.close()            # publish this hash somewhere the agent's operator cannot rewrite
-
-verify("run.jsonl", trusted={"billing-agent@acme": PUBLIC_KEY_HEX}, anchor=anchor).ok
-```
+Every command here was run as written, in a fresh virtualenv.
 
 ```sh
-python -m agent_receipts keygen agent.key        # prints the public key; the seed file is written 0600
-python -m agent_receipts verify run.jsonl --trust billing-agent@acme=PUBHEX --anchor HASH [--revoke SOURCE]
+pip install "git+https://github.com/Yatsuiii/reproduction-receipts#subdirectory=agent-receipts"
+receipt keygen agent.key                 # private seed, written 0600; prints the public key
 ```
+
+Save as `quickstart.py` and run it:
+
+```python
+from agent_receipts import Recorder, Signer, receipted
+
+rec = Recorder("run.jsonl", signer=Signer.from_file("agent.key"), actor="me@example.test")
+
+@receipted(rec, sources=["kb:demo"], replayable=True)
+def search(query: str) -> dict:
+    return {"query": query, "hits": ["kb/refunds.md"]}
+
+@receipted(rec)
+def send_reply(to: str, body: str) -> dict:
+    return {"queued": True}
+
+search("refund window")
+send_reply("c@example.test", "Refunds within 30 days.")
+print("anchor:", rec.close())
+```
+
+Check it the way a third party would, then tamper with it:
+
+```sh
+echo "me@example.test=$(receipt pubkey agent.key)" > public_key.txt
+receipt verify run.jsonl                  # VALID, exit 0
+sed -i 's/30 days/365 days/' run.jsonl
+receipt verify run.jsonl                  # INVALID: bad_signature, digest_mismatch, chain_broken; exit 1
+```
+
+`receipt verify` picks up `public_key.txt` and `anchor.txt` next to the receipt, and says so in its output. The public key
+only means something if it reached the verifier separately from the receipt.
+
+To stop whoever holds the key from rewriting the receipt later, anchor it in Sigstore's public Rekor log
+([below](#anchoring-in-a-public-log)):
+
+```sh
+receipt log-key > rekor.pub               # once; keep it, this is the key you pin
+receipt anchor run.jsonl --key agent.key  # public and permanent; writes run.jsonl.anchor.json
+receipt verify run.jsonl --log-key rekor.pub --require-anchor
+```
+
+These three commands have not been run against the live log yet (see the anchoring section for why); everything above them has.
 
 Two ideas come from earlier work in this repository:
 
@@ -38,6 +74,41 @@ Two ideas come from earlier work in this repository:
 
 Failures are recorded, not dropped: a tool that raises gets an `error` record, a tool whose result cannot be stored gets one too
 (it ran, so the receipt says so), and a fenced call gets a `fenced` record.
+
+## Anchoring in a public log
+
+v0 had one blind spot: whoever holds the signing key can rewrite the whole receipt and re-sign it. `receipt anchor` closes most
+of it. It publishes the SHA-512 of the receipt's close record to [Sigstore's Rekor](https://docs.sigstore.dev/logging/overview/)
+transparency log, signed with the receipt's own key (Ed25519ph, the form Rekor accepts for Ed25519 keys). The log's response
+(a signed entry timestamp and a Merkle inclusion proof) is saved next to the receipt. A verifier then checks it with no network,
+against the log's public key pinned once. Spec: [ANCHOR.md](ANCHOR.md).
+
+The tamper cases were frozen before the code ([anchor_injections/](anchor_injections/), [results](results/anchor_injections.md)):
+
+| verifier | attacks caught (of 11) | of those needing the signing key (of 4) |
+| --- | --- | --- |
+| v0, no anchor (baseline) | 0 | 0 |
+| with a Rekor anchor | 10 | 3 |
+
+What it catches: rewriting after anchoring (the logged hash no longer matches), patching the logged hash in the bundle (the
+log's signatures break), re-anchoring a rewrite later (the log's timestamp is days after the receipt closed), an entry from a
+log you did not pin, a flipped proof or signature byte, someone else's anchor attached to your receipt, and a missing anchor
+when one is required.
+
+What it still misses: a key holder who rewrites, moves every timestamp forward to match, and anchors the rewrite as a new
+entry. The log then holds both versions, but an offline verifier is shown only one. Catching that needs an online search of
+the log for every entry made with the key, which this does not do yet.
+
+How far this has been tested, plainly:
+
+- The tamper cases run against a local stand-in for Rekor ([fakelog.py](anchor_injections/fakelog.py)), because the
+  network policy of the machine this was built on blocks `rekor.sigstore.dev`.
+- CI checks the offline verifier against real entries fetched read-only from the live log
+  ([tests/test_rekor_live.py](tests/test_rekor_live.py)): signed entry timestamp, inclusion proof and checkpoint. That tests
+  the log's formats, not the upload.
+- The upload (`receipt anchor`) has not been run against the live log. It publishes a permanent public entry, so it sits in a
+  manual workflow ([anchor-demo.yml](../.github/workflows/anchor-demo.yml)) that runs only when started by hand.
+- Ed25519ph matches the RFC 8032 test vector. P-256 verification is pure Python and cross-checked against `cryptography`.
 
 ## Worked example: an MCP client
 
@@ -148,8 +219,9 @@ record is about 4 times the size of the plain log line, because it stores digest
 - **That the tool did what the record says.** The record is what the wrapper saw cross the tool boundary in the agent's own
   process. If the host running the agent is compromised, it can sign a lie. A receipt proves the key holder said this, in this
   order, and did not change it afterwards.
-- **Anything without the anchor, against the key holder.** The operator holding the key can rewrite and re-sign. Publish the
-  close hash somewhere they cannot edit: a ticket, an email to the reviewer, a git commit.
+- **Anything without an anchor, against the key holder.** The operator holding the key can rewrite and re-sign. Anchor the
+  receipt in Rekor, or hand the close hash to someone they cannot reach. Even anchored, a rewrite with every timestamp moved
+  and a fresh anchor is caught only by an online search of the log (above).
 - **Who a person is.** Identity is a key. The `actor` name means only what the trust list says it means; getting the right
   public key to the verifier is the deployer's job.
 - **When things happened.** Timestamps are the recorder's own clock. The verifier checks they never go backwards, nothing more.

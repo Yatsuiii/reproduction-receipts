@@ -24,6 +24,14 @@ jobs:
         run: pip install cryptography==50.0.1 mcp==2.3.0
       - name: Tests with cryptography and mcp, including the MCP worked example
         run: python -m unittest discover -s agent-receipts/tests -v
+      - name: Check the offline anchor verifier against the live public Rekor log (read only, publishes nothing)
+        env:
+          REKOR_LIVE: '1'
+        run: python -m unittest discover -s agent-receipts/tests -p test_rekor_live.py -v
+      - name: Install the package and verify the committed example receipt with the one-command CLI
+        run: |
+          pip install ./agent-receipts
+          cd agent-receipts/examples/mcp/out && receipt verify receipt.jsonl
       - name: Verify the committed example receipt as a third party would
         working-directory: agent-receipts
         run: python -m agent_receipts verify examples/mcp/out/receipt.jsonl --trust "$(cat examples/mcp/out/public_key.txt)" --anchor "$(cat examples/mcp/out/anchor.txt)"

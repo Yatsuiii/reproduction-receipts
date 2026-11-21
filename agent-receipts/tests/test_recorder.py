@@ -141,6 +141,10 @@ class Injections(unittest.TestCase):
         r = subprocess.run([sys.executable, str(ROOT / "check_frozen.py")], capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stdout)
 
+    def test_anchor_injections_match_expected(self):
+        r = subprocess.run([sys.executable, str(ROOT / "run_anchor_injections.py")], capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
     def test_injections_match_expected(self):
         r = subprocess.run([sys.executable, str(ROOT / "run_injections.py")], capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)

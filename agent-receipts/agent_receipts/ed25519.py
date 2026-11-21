@@ -143,3 +143,34 @@ def verify(pub: bytes, msg: bytes, sig: bytes, *, pure: bool = False) -> bool:
         return False
     k = int.from_bytes(_H(sig[:32] + pub + msg), "little") % _L
     return _eq(_mul(S, _B), _add(R, _mul(k, A)))
+
+
+# ---- Ed25519ph (RFC 8032 section 5.1, phflag=1, empty context). Pure Python only: `cryptography` does not offer it.
+# Sigstore's Rekor accepts Ed25519 keys in hashedrekord entries only with Ed25519ph over a SHA-512 prehash.
+
+_DOM2_PH = b"SigEd25519 no Ed25519 collisions" + bytes([1, 0])
+
+
+def sign_ph(seed: bytes, msg: bytes) -> bytes:
+    ph = hashlib.sha512(msg).digest()
+    a, prefix = _expand(seed)
+    A = _encode(_mul(a, _B))
+    r = int.from_bytes(_H(_DOM2_PH + prefix + ph), "little") % _L
+    R = _encode(_mul(r, _B))
+    k = int.from_bytes(_H(_DOM2_PH + R + A + ph), "little") % _L
+    S = (r + k * a) % _L
+    return R + S.to_bytes(32, "little")
+
+
+def verify_ph(pub: bytes, msg: bytes, sig: bytes) -> bool:
+    if len(sig) != 64 or len(pub) != 32:
+        return False
+    ph = hashlib.sha512(msg).digest()
+    A, R = _decode(pub), _decode(sig[:32])
+    if A is None or R is None:
+        return False
+    S = int.from_bytes(sig[32:], "little")
+    if S >= _L:
+        return False
+    k = int.from_bytes(_H(_DOM2_PH + sig[:32] + pub + ph), "little") % _L
+    return _eq(_mul(S, _B), _add(R, _mul(k, A)))

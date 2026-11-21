@@ -18,5 +18,8 @@ langgraph = ["langgraph>=1.2"]
 openai-agents = ["openai-agents>=0.20"]
 crewai = ["crewai>=1.15"]
 
+[project.scripts]
+receipt = "agent_receipts.__main__:main"
+
 [tool.setuptools.packages.find]
 include = ["agent_receipts*"]

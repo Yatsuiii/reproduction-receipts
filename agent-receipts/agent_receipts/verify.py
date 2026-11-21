@@ -12,7 +12,9 @@ from .canon import body, record_hash, sha256_json
 
 FORMAT = "agent-receipts/0"
 FAILURES = ("malformed", "bad_signature", "untrusted_key", "chain_broken", "sequence", "session_mismatch", "unclosed",
-            "count_mismatch", "clock_backwards", "digest_mismatch", "anchor_mismatch")
+            "count_mismatch", "clock_backwards", "digest_mismatch", "anchor_mismatch", "anchor_missing", "anchor_malformed",
+            "anchor_untrusted_log", "anchor_set_invalid", "anchor_inclusion_invalid", "anchor_checkpoint_invalid",
+            "anchor_key_mismatch", "anchor_bad_signature", "anchor_late")
 WARNINGS = ("stale",)
 
 _COMMON = {"type": str, "format": str, "session": str, "seq": int, "t": (int, float), "key": str, "sig": str}
@@ -109,9 +111,13 @@ def _sig_ok(rec: dict) -> bool:
 
 
 def verify(path, *, trusted: dict | None = None, anchor: str | None = None, revoked: Iterable[str] = (),
-           check_signatures: bool = True) -> Report:
+           check_signatures: bool = True, anchor_bundle: dict | None = None, log_keys: Iterable[bytes] = (),
+           require_anchor: bool = False, max_delay: float = 3600) -> Report:
     """Verify a receipt file. `trusted` maps actor -> public key hex; without it, signatures are checked against each
     record's own key but nothing binds that key to anyone (reported as untrusted_key).
+
+    anchor: a close hash handed over out of band. anchor_bundle + log_keys: a transparency-log anchor (ANCHOR.md), checked
+    offline against the pinned log public keys (PEM bytes).
 
     check_signatures=False turns this into the unsigned-hash-chain baseline (used in baselines/, not for real checks)."""
     path = Path(path)
@@ -185,6 +191,12 @@ def verify(path, *, trusted: dict | None = None, anchor: str | None = None, revo
     if anchor is not None and report.close_hash != anchor.lower():
         report.add("anchor_mismatch", last_ln, last["seq"],
                    f"close hash {str(report.close_hash)[:16]}... is not the published anchor {anchor[:16]}...")
+
+    if anchor_bundle is not None or require_anchor:
+        from .rekor import verify_anchor
+        for code, detail in verify_anchor(path, anchor_bundle, log_keys=list(log_keys), max_delay=max_delay,
+                                          require=require_anchor):
+            report.add(code, last_ln, last["seq"], detail)
 
     report.stale = stale_calls([r for _, r in recs], revoked)
     for ln, r in recs:
