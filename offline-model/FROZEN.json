@@ -13,7 +13,8 @@
   "baseline.py",
   "clinical/task",
   "runtime_transformers_bf16.py",
-  "clinical/baseline_keywords.py"
+  "clinical/baseline_keywords.py",
+  "clinical/MODEL_qwen3_4b.json"
  ],
  "files": {
   "task/README.md": "5b458284e2a64a1386d3fc8bf41f3d4d8cf3de5e95510673fa351eadaf57b70e",
@@ -32,6 +33,7 @@
   "clinical/task/items.jsonl": "19062a06a7b9a130f356bf6f337e024e3efd3f502d180ac213132891fe9a5d0a",
   "clinical/task/prompt.json": "c19b9ab9d8a69e183f54d4335058dc52d79b1312909c28254e9ba57a1e572443",
   "runtime_transformers_bf16.py": "5a51e7b1eab664a0f5088d328ce69dc25c4054dc85545e3e428e59dc68d7219b",
-  "clinical/baseline_keywords.py": "7e5238171a230058dd90429f9bd31db470d2c2e0c2b8e312abdd0aede369437f"
+  "clinical/baseline_keywords.py": "7e5238171a230058dd90429f9bd31db470d2c2e0c2b8e312abdd0aede369437f",
+  "clinical/MODEL_qwen3_4b.json": "3049e92dc7a27ee52919788af2186dcd5f520352cf1c518b485e06bfb76ca23c"
  }
 }
