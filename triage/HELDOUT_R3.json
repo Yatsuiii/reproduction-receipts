@@ -29,7 +29,7 @@
   {
    "repo": "mbholm/MPC-Heterogeneity-and-Household-Balance-Sheets",
    "commit": "c9c41c7169c92fba0e4181aa1ad62a88e09d6373",
-   "journal": "Economic Journal (per its description)"
+   "journal": "American Economic Journal: Macroeconomics"
   },
   {
    "repo": "jrothst/Location-location-location",
@@ -41,5 +41,8 @@
    "commit": "ea6fe0748160c7262d5ee038575370213284d303",
    "journal": "Quarterly Journal of Economics"
   }
+ ],
+ "corrections": [
+  "2026-11-21, after the run: mbholm/MPC-Heterogeneity-and-Household-Balance-Sheets was labelled 'Economic Journal (per its description)'. The search matched 'American Economic Journal', and the LyX README names authors Fagereng, Holm and Natvik. The journal label is corrected; the selection, commit and options are unchanged."
  ]
 }
