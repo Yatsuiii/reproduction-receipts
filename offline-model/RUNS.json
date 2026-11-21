@@ -1,0 +1,8 @@
+{
+ "format": "offline-ledger/1",
+ "note": "Every attempt, failed ones included. `runs` have a run directory with a run.json that verify.py ledger checks. `attempts` died before any run directory existed and are listed so they cannot be dropped quietly.",
+ "attempts": [
+  {"id": "gha-44905916825-1", "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44905916825", "commit": "5581caf73f6c1ebb9abaa038fc1eda8d4a2f4ed0", "status": "failed before scoring", "why": "Both machines refused at the commit check: the one-off discover workflow re-ran on the same push and committed a second, different dependency lock to the branch, so the branch no longer pointed at the commit under test. No weights were loaded. The evidence step then failed too, because the run directory had not been created yet. The second lock was reverted (frozen check caught it) and the discover workflow removed."}
+ ],
+ "runs": []
+}
