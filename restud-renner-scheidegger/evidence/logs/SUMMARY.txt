@@ -1,0 +1,6 @@
+1_install exit=0 wall_s=312
+2_replicate_original exit=0 wall_s=105
+4_validate_BE run1 ABORTED by me at 2026-11-21T18:22:34Z after ~17 min: I ran git stash/pop in the working tree while it ran; restarted in a fresh checkout (run2)
+run2 package hashes match run1
+run2_2_replicate_original exit=0 wall_s=107
+run2_4_validate_BE KILLED at ~20:22Z by the session's 2 h background limit (my timeout setting), after all five mpirun solves finished (last at 20:11Z), during the post-processing step. Resumed from 'parallel' onward with the script's own remaining lines.
