@@ -1,0 +1,17 @@
+diff --git a/pydantic_ai_slim/pydantic_ai/mcp.py b/pydantic_ai_slim/pydantic_ai/mcp.py
+index fd89012..0ac3106 100644
+--- a/pydantic_ai_slim/pydantic_ai/mcp.py
++++ b/pydantic_ai_slim/pydantic_ai/mcp.py
+@@ -1443,6 +1443,12 @@ class MCPToolset(AbstractToolset[AgentDepsT]):
+             if self._running_count == 0 and self._exit_stack is not None:
+                 await self._exit_stack.aclose()
+                 self._exit_stack = None
++                # FastMCP's StdioTransport defaults to keep_alive=True, which keeps the
++                # subprocess running after the client session closes. Leaving the toolset is
++                # documented to stop the subprocess, so close the transport too.
++                transport = getattr(self.client, 'transport', None)
++                if isinstance(transport, StdioTransport) and transport.keep_alive:
++                    await transport.close()
+                 self._server_info = None
+                 self._server_capabilities = None
+                 self._instructions = None

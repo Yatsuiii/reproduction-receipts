@@ -1,0 +1,1038 @@
+{
+ "target": "py-semantic-kernel",
+ "variant": "",
+ "driver": [
+  "/home/claude/envs/py-semantic-kernel/bin/python",
+  "{here}/drivers/py/frameworks.py",
+  "semantic-kernel"
+ ],
+ "env": null,
+ "cells": [
+  {
+   "scenario": "clean",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-e56b438d24f5",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 19593 1795267513079",
+      "initialize 19593 1795267513082",
+      "tools/list 19593 1795267513084",
+      "tools/call 19593 1795267513086",
+      "eof 19593 1795267513087"
+     ],
+     "seconds": 12.26,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c2165ea1d6de",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 19977 1795267525239",
+      "initialize 19977 1795267525244",
+      "tools/list 19977 1795267525246",
+      "tools/call 19977 1795267525247",
+      "eof 19977 1795267525248"
+     ],
+     "seconds": 12.15,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-d9fd9af9d1e6",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 20338 1795267537065",
+      "initialize 20338 1795267537068",
+      "tools/list 20338 1795267537069",
+      "tools/call 20338 1795267537070",
+      "eof 20338 1795267537071"
+     ],
+     "seconds": 11.84,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-4cda7449c4e8",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 20597 1795267549367",
+      "initialize 20597 1795267549369",
+      "tools/list 20597 1795267549371",
+      "tools/call 20597 1795267549372",
+      "eof 20597 1795267549373"
+     ],
+     "seconds": 12.3,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ebdf0ced1a2b",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 20843 1795267561677",
+      "initialize 20843 1795267561679",
+      "tools/list 20843 1795267561681",
+      "tools/call 20843 1795267561682",
+      "eof 20843 1795267561683"
+     ],
+     "seconds": 12.3,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-2463e877f419",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 21120 1795267573620",
+      "initialize 21120 1795267573623",
+      "tools/list 21120 1795267573624",
+      "tools/call 21120 1795267573626",
+      "eof 21120 1795267573626"
+     ],
+     "seconds": 11.94,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-e6238de1d3f0",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 21367 1795267585440",
+      "initialize 21367 1795267585443",
+      "tools/list 21367 1795267585445",
+      "tools/call 21367 1795267585447",
+      "eof 21367 1795267585448"
+     ],
+     "seconds": 11.83,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-0f2e37090eb2",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 21654 1795267597652",
+      "initialize 21654 1795267597654",
+      "tools/list 21654 1795267597656",
+      "tools/call 21654 1795267597658",
+      "eof 21654 1795267597659"
+     ],
+     "seconds": 12.22,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-f5efad29bbbd",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 21908 1795267609855",
+      "initialize 21908 1795267609857",
+      "tools/list 21908 1795267609858",
+      "tools/call 21908 1795267609860",
+      "eof 21908 1795267609860"
+     ],
+     "seconds": 12.2,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-07167b53391e",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 22165 1795267621725",
+      "initialize 22165 1795267621727",
+      "tools/list 22165 1795267621729",
+      "tools/call 22165 1795267621730",
+      "eof 22165 1795267621731"
+     ],
+     "seconds": 11.87,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "eof-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-271cf2fe7e4c",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 22456 1795267633864",
+      "initialize 22456 1795267633866",
+      "tools/list 22456 1795267633868",
+      "tools/call 22456 1795267633869",
+      "eof 22456 1795267633870",
+      "sigterm 22456 1795267635872"
+     ],
+     "seconds": 14.24,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a6430c80e654",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 22688 1795267648046",
+      "initialize 22688 1795267648048",
+      "tools/list 22688 1795267648049",
+      "tools/call 22688 1795267648051",
+      "eof 22688 1795267648051",
+      "sigterm 22688 1795267650054"
+     ],
+     "seconds": 14.17,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-5fb87673ae3c",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 22954 1795267662114",
+      "initialize 22954 1795267662117",
+      "tools/list 22954 1795267662119",
+      "tools/call 22954 1795267662120",
+      "eof 22954 1795267662121",
+      "sigterm 22954 1795267664123"
+     ],
+     "seconds": 14.07,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-30d257e0c3e3",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 23242 1795267676002",
+      "initialize 23242 1795267676005",
+      "tools/list 23242 1795267676006",
+      "tools/call 23242 1795267676007",
+      "eof 23242 1795267676008",
+      "sigterm 23242 1795267678010"
+     ],
+     "seconds": 13.9,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-6f4ae6fbf3be",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 23547 1795267690062",
+      "initialize 23547 1795267690064",
+      "tools/list 23547 1795267690066",
+      "tools/call 23547 1795267690068",
+      "eof 23547 1795267690069",
+      "sigterm 23547 1795267692072"
+     ],
+     "seconds": 14.05,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-752ad7bf2a1e",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 23905 1795267704235",
+      "initialize 23905 1795267704238",
+      "tools/list 23905 1795267704241",
+      "tools/call 23905 1795267704243",
+      "eof 23905 1795267704244",
+      "sigterm 23905 1795267706246"
+     ],
+     "seconds": 14.17,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-3e95e99cd7be",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 24234 1795267718262",
+      "initialize 24234 1795267718265",
+      "tools/list 24234 1795267718267",
+      "tools/call 24234 1795267718268",
+      "eof 24234 1795267718270",
+      "sigterm 24234 1795267720272"
+     ],
+     "seconds": 14.03,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-217a9fab69ea",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 24506 1795267732355",
+      "initialize 24506 1795267732358",
+      "tools/list 24506 1795267732359",
+      "tools/call 24506 1795267732361",
+      "eof 24506 1795267732361",
+      "sigterm 24506 1795267734364"
+     ],
+     "seconds": 14.09,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-21409fb44a7b",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 24753 1795267746395",
+      "initialize 24753 1795267746398",
+      "tools/list 24753 1795267746399",
+      "tools/call 24753 1795267746400",
+      "eof 24753 1795267746401",
+      "sigterm 24753 1795267748403"
+     ],
+     "seconds": 14.04,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-0f0918309947",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 24994 1795267760365",
+      "initialize 24994 1795267760368",
+      "tools/list 24994 1795267760369",
+      "tools/call 24994 1795267760370",
+      "eof 24994 1795267760371",
+      "sigterm 24994 1795267762371"
+     ],
+     "seconds": 13.98,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "term-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-46f1de60a85b",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 25234 1795267774293",
+      "initialize 25234 1795267774295",
+      "tools/list 25234 1795267774297",
+      "tools/call 25234 1795267774298",
+      "eof 25234 1795267774299",
+      "sigterm-ignored 25234 1795267776302"
+     ],
+     "seconds": 15.82,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-dcb73ebc81fd",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 25472 1795267790214",
+      "initialize 25472 1795267790216",
+      "tools/list 25472 1795267790217",
+      "tools/call 25472 1795267790218",
+      "eof 25472 1795267790219",
+      "sigterm-ignored 25472 1795267792221"
+     ],
+     "seconds": 15.93,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-cb5c76030b83",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.0}"
+     ],
+     "markers": [
+      "start 25694 1795267806375",
+      "initialize 25694 1795267806379",
+      "tools/list 25694 1795267806381",
+      "tools/call 25694 1795267806382",
+      "eof 25694 1795267806383",
+      "sigterm-ignored 25694 1795267808384"
+     ],
+     "seconds": 16.16,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-d1713b5d779a",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.0}"
+     ],
+     "markers": [
+      "start 25923 1795267822425",
+      "initialize 25923 1795267822427",
+      "tools/list 25923 1795267822429",
+      "tools/call 25923 1795267822430",
+      "eof 25923 1795267822431",
+      "sigterm-ignored 25923 1795267824432"
+     ],
+     "seconds": 16.04,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-640fbdb8a353",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 26174 1795267838580",
+      "initialize 26174 1795267838582",
+      "tools/list 26174 1795267838584",
+      "tools/call 26174 1795267838585",
+      "eof 26174 1795267838586",
+      "sigterm-ignored 26174 1795267840588"
+     ],
+     "seconds": 16.16,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-80d7c4d9cd9e",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.0}"
+     ],
+     "markers": [
+      "start 26362 1795267854400",
+      "initialize 26362 1795267854403",
+      "tools/list 26362 1795267854405",
+      "tools/call 26362 1795267854406",
+      "eof 26362 1795267854407",
+      "sigterm-ignored 26362 1795267856409"
+     ],
+     "seconds": 15.84,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-3b42c273e270",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 26484 1795267870238",
+      "initialize 26484 1795267870241",
+      "tools/list 26484 1795267870243",
+      "tools/call 26484 1795267870245",
+      "eof 26484 1795267870246",
+      "sigterm-ignored 26484 1795267872248"
+     ],
+     "seconds": 15.82,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-bb8b4b21f537",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 26615 1795267886092",
+      "initialize 26615 1795267886094",
+      "tools/list 26615 1795267886095",
+      "tools/call 26615 1795267886097",
+      "eof 26615 1795267886097",
+      "sigterm-ignored 26615 1795267888100"
+     ],
+     "seconds": 15.85,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-34f059f4dccc",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 26758 1795267902108",
+      "initialize 26758 1795267902112",
+      "tools/list 26758 1795267902115",
+      "tools/call 26758 1795267902117",
+      "eof 26758 1795267902117",
+      "sigterm-ignored 26758 1795267904120"
+     ],
+     "seconds": 16.02,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c1df0217ed50",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 26921 1795267917970",
+      "initialize 26921 1795267917974",
+      "tools/list 26921 1795267917976",
+      "tools/call 26921 1795267917978",
+      "eof 26921 1795267917980",
+      "sigterm-ignored 26921 1795267919980"
+     ],
+     "seconds": 15.86,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "wrapped",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-e664c2b31ff5",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 27101 1795267933843",
+      "initialize 27101 1795267933846",
+      "tools/list 27101 1795267933847",
+      "tools/call 27101 1795267933848",
+      "eof 27101 1795267933849",
+      "sigterm 27101 1795267935851"
+     ],
+     "seconds": 15.07,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a4e3b83ecdb9",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 27264 1795267948899",
+      "initialize 27264 1795267948901",
+      "tools/list 27264 1795267948903",
+      "tools/call 27264 1795267948904",
+      "eof 27264 1795267948905",
+      "sigterm 27264 1795267950907"
+     ],
+     "seconds": 15.05,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ea60c914060d",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.91
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.91}"
+     ],
+     "markers": [
+      "start 27429 1795267964185",
+      "initialize 27429 1795267964189",
+      "tools/list 27429 1795267964192",
+      "tools/call 27429 1795267964194",
+      "eof 27429 1795267964195",
+      "sigterm 27429 1795267966197"
+     ],
+     "seconds": 15.98,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ab1f4b3ae43d",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.11
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.11}"
+     ],
+     "markers": [
+      "start 27587 1795267980026",
+      "initialize 27587 1795267980029",
+      "tools/list 27587 1795267980030",
+      "tools/call 27587 1795267980032",
+      "eof 27587 1795267980033",
+      "sigterm 27587 1795267982035"
+     ],
+     "seconds": 15.03,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-084c5691ea6c",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.11
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.11}"
+     ],
+     "markers": [
+      "start 27740 1795267994977",
+      "initialize 27740 1795267994980",
+      "tools/list 27740 1795267994982",
+      "tools/call 27740 1795267994985",
+      "eof 27740 1795267994986",
+      "sigterm 27740 1795267996988"
+     ],
+     "seconds": 14.96,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-83a126fc186f",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.11
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.11}"
+     ],
+     "markers": [
+      "start 27885 1795268010036",
+      "initialize 27885 1795268010038",
+      "tools/list 27885 1795268010040",
+      "tools/call 27885 1795268010041",
+      "eof 27885 1795268010042",
+      "sigterm 27885 1795268012044"
+     ],
+     "seconds": 15.05,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-fc07257c6248",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 28030 1795268024885",
+      "initialize 28030 1795268024887",
+      "tools/list 28030 1795268024889",
+      "tools/call 28030 1795268024890",
+      "eof 28030 1795268024891",
+      "sigterm 28030 1795268026892"
+     ],
+     "seconds": 14.96,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-eb9ef66e9b82",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.11
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.11}"
+     ],
+     "markers": [
+      "start 28193 1795268040016",
+      "initialize 28193 1795268040019",
+      "tools/list 28193 1795268040021",
+      "tools/call 28193 1795268040023",
+      "eof 28193 1795268040024",
+      "sigterm 28193 1795268042026"
+     ],
+     "seconds": 15.03,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-64defa29b0f5",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 28329 1795268054895",
+      "initialize 28329 1795268054898",
+      "tools/list 28329 1795268054899",
+      "tools/call 28329 1795268054900",
+      "eof 28329 1795268054901",
+      "sigterm 28329 1795268056903"
+     ],
+     "seconds": 14.98,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-5b5bc8fb2b5b",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.11
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 3.11}"
+     ],
+     "markers": [
+      "start 28444 1795268070025",
+      "initialize 28444 1795268070027",
+      "tools/list 28444 1795268070029",
+      "tools/call 28444 1795268070030",
+      "eof 28444 1795268070031",
+      "sigterm 28444 1795268072033"
+     ],
+     "seconds": 15.04,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  }
+ ]
+}

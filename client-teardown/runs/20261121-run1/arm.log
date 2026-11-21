@@ -4,3 +4,9 @@ ref-none         term-ignore  {'RESIDUE': 10} expected RESIDUE ok
 ref-none         wrapped      {'RESIDUE': 10} expected RESIDUE ok
 ref-spec-pid     clean        {'CLEAN': 10} expected CLEAN ok
 ref-spec-pid     eof-ignore   {'CLEAN': 10} expected CLEAN ok
+ref-spec-pid     term-ignore  {'CLEAN': 10} expected CLEAN ok
+ref-spec-pid     wrapped      {'RESIDUE': 10} expected RESIDUE ok
+ref-spec-group   clean        {'CLEAN': 10} expected CLEAN ok
+ref-spec-group   eof-ignore   {'CLEAN': 10} expected CLEAN ok
+ref-spec-group   term-ignore  {'CLEAN': 10} expected CLEAN ok
+ref-spec-group   wrapped      {'CLEAN': 10} expected CLEAN ok

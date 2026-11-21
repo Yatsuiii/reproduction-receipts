@@ -41,3 +41,66 @@ py-openai-agents                        clean        {'CLEAN': 10}
 py-langchain                            wrapped      {'CLEAN': 10}
 py-semantic-kernel                      clean        {'CLEAN': 10}
 py-adk                                  clean        {'CLEAN': 10}
+py-llamaindex                           eof-ignore   {'CLEAN': 10}
+py-pydantic-ai                          clean        {'RESIDUE': 10}
+py-fastmcp                              eof-ignore   {'CLEAN': 10}
+py-camel                                clean        {'CLEAN': 10}
+py-smolagents                           eof-ignore   {'CLEAN': 10}
+py-agno                                 eof-ignore   {'CLEAN': 10}
+py-openai-agents                        eof-ignore   {'CLEAN': 10}
+py-semantic-kernel                      eof-ignore   {'CLEAN': 10}
+py-adk                                  eof-ignore   {'CLEAN': 10}
+py-fastmcp                              term-ignore  {'CLEAN': 10}
+py-pydantic-ai                          eof-ignore   {'RESIDUE': 10}
+py-camel                                eof-ignore   {'CLEAN': 10}
+py-smolagents                           term-ignore  {'CLEAN': 10}
+py-agno                                 term-ignore  {'CLEAN': 10}
+py-llamaindex                           term-ignore  {'CLEAN': 10}
+py-openai-agents                        term-ignore  {'CLEAN': 10}
+py-semantic-kernel                      term-ignore  {'CLEAN': 10}
+py-adk                                  term-ignore  {'CLEAN': 10}
+py-fastmcp                              wrapped      {'CLEAN': 10}
+py-pydantic-ai                          term-ignore  {'RESIDUE': 10}
+py-camel                                term-ignore  {'CLEAN': 10}
+py-smolagents                           wrapped      {'CLEAN': 10}
+py-agno                                 wrapped      {'CLEAN': 10}
+py-openai-agents                        wrapped      {'CLEAN': 10}
+py-semantic-kernel                      wrapped      {'CLEAN': 10}
+py-adk                                  wrapped      {'CLEAN': 10}
+py-llamaindex                           wrapped      {'CLEAN': 10}
+py-pydantic-ai                          wrapped      {'RESIDUE': 10}
+py-camel                                wrapped      {'CLEAN': 10}
+Traceback (most recent call last):
+  File "/home/claude/reproduction-receipts/client-teardown/runner.py", line 227, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/claude/reproduction-receipts/client-teardown/runner.py", line 222, in main
+    list(ex.map(run_target, a.target))
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/concurrent/futures/_base.py", line 625, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/concurrent/futures/_base.py", line 318, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/concurrent/futures/_base.py", line 453, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/concurrent/futures/_base.py", line 402, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/claude/reproduction-receipts/client-teardown/runner.py", line 213, in run_target
+    cell = run_cell(driver, sc, a.n, env_extra=t.get("env"),
+                    cwd=t.get("cwd", "").replace("{here}", str(HERE)) or None)
+  File "/home/claude/reproduction-receipts/client-teardown/runner.py", line 158, in run_cell
+    trials = [run_trial(driver, scenario, **kw) for _ in range(n)]
+              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/reproduction-receipts/client-teardown/runner.py", line 118, in run_trial
+    closed = json.loads(line[len("CLOSED"):].strip() or "{}")
+  File "/usr/local/lib/python3.13/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.13/json/decoder.py", line 348, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 23 (char 22)

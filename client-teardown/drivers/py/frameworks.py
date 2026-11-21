@@ -178,6 +178,53 @@ async def pydantic_ai():
     return t0
 
 
+async def pydantic_ai_nokeepalive():
+    # Control for the keep_alive cause: the same as pydantic_ai() with keep_alive=False
+    from fastmcp.client.transports import StdioTransport
+    from pydantic_ai.mcp import MCPToolset
+    toolset = MCPToolset(StdioTransport(command=CMD, args=ARGS, keep_alive=False))
+    async with toolset:
+        await toolset.client.call_tool("ping", {})
+        t0 = time.monotonic()
+    return t0
+
+
+async def pydantic_ai_config():
+    # load_mcp_toolsets: the documented config-file path (docs/mcp/client.md)
+    import tempfile
+    from pydantic_ai.mcp import load_mcp_toolsets
+    cfg = tempfile.NamedTemporaryFile("w", suffix=".json", delete=False)
+    json.dump({"mcpServers": {"fx": {"command": CMD, "args": ARGS}}}, cfg)
+    cfg.close()
+    (toolset,) = load_mcp_toolsets(cfg.name)
+    async with toolset:
+        await toolset.wrapped.client.call_tool("ping", {})
+        t0 = time.monotonic()
+    return t0
+
+
+async def pydantic_ai_agent():
+    # An agent run with no explicit context manager: "the toolset will be opened
+    # and closed automatically as needed" (docs/mcp/client.md). FunctionModel is
+    # Pydantic AI's own scripted model, so no API is called.
+    from fastmcp.client.transports import StdioTransport
+    from pydantic_ai import Agent
+    from pydantic_ai.messages import ModelResponse, TextPart, ToolCallPart
+    from pydantic_ai.mcp import MCPToolset
+    from pydantic_ai.models.function import FunctionModel
+
+    def script(messages, info):
+        if len(messages) == 1:
+            return ModelResponse(parts=[ToolCallPart(tool_name="ping", args={})])
+        return ModelResponse(parts=[TextPart("done")])
+
+    toolset = MCPToolset(StdioTransport(command=CMD, args=ARGS))
+    agent = Agent(FunctionModel(script), toolsets=[toolset])
+    r = await agent.run("ping it")
+    assert r.output == "done"
+    return time.monotonic()
+
+
 # --- CAMEL ---------------------------------------------------------------
 async def camel():
     from camel.toolkits import MCPToolkit
@@ -218,7 +265,8 @@ ASYNC = {
     "mcp-sdk": mcp_sdk, "langchain": langchain, "langchain-session": langchain_session,
     "crewai-native": crewai_native, "llamaindex": llamaindex, "agno": agno,
     "openai-agents": openai_agents, "fastmcp": fastmcp, "semantic-kernel": semantic_kernel,
-    "adk": adk, "pydantic-ai": pydantic_ai, "camel": camel, "mcp-use": mcp_use, "autogen": autogen,
+    "adk": adk, "pydantic-ai": pydantic_ai, "pydantic-ai-config": pydantic_ai_config,
+    "pydantic-ai-agent": pydantic_ai_agent, "pydantic-ai-nokeepalive": pydantic_ai_nokeepalive, "camel": camel, "mcp-use": mcp_use, "autogen": autogen,
 }
 
 if __name__ == "__main__":

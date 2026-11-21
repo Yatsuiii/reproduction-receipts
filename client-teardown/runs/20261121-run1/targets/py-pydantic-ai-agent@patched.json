@@ -1,0 +1,1038 @@
+{
+ "target": "py-pydantic-ai-agent@patched",
+ "variant": "",
+ "driver": [
+  "/home/claude/envs/py-pydantic-ai-patched/bin/python",
+  "{here}/drivers/py/frameworks.py",
+  "pydantic-ai-agent"
+ ],
+ "env": null,
+ "cells": [
+  {
+   "scenario": "clean",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-482a2ed9d67c",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 32008 1795273215275",
+      "initialize 32008 1795273215301",
+      "tools/list 32008 1795273215303",
+      "tools/call 32008 1795273215310",
+      "eof 32008 1795273215320"
+     ],
+     "seconds": 12.15,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-113bbee433d4",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 32202 1795273227702",
+      "initialize 32202 1795273227724",
+      "tools/list 32202 1795273227732",
+      "tools/call 32202 1795273227743",
+      "eof 32202 1795273227758"
+     ],
+     "seconds": 12.44,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-d7250f5e0c72",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 32405 1795273240099",
+      "initialize 32405 1795273240122",
+      "tools/list 32405 1795273240137",
+      "tools/call 32405 1795273240151",
+      "eof 32405 1795273240157"
+     ],
+     "seconds": 12.4,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-f4fe8eda4b90",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 32623 1795273252532",
+      "initialize 32623 1795273252537",
+      "tools/list 32623 1795273252552",
+      "tools/call 32623 1795273252568",
+      "eof 32623 1795273252578"
+     ],
+     "seconds": 12.42,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b24567b4a0ae",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 349 1795273264648",
+      "initialize 349 1795273264654",
+      "tools/list 349 1795273264657",
+      "tools/call 349 1795273264663",
+      "eof 349 1795273264668"
+     ],
+     "seconds": 12.1,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-e340bf1076b9",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 542 1795273276861",
+      "initialize 542 1795273276865",
+      "tools/list 542 1795273276868",
+      "tools/call 542 1795273276874",
+      "eof 542 1795273276878"
+     ],
+     "seconds": 12.19,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-188668badad3",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 734 1795273288722",
+      "initialize 734 1795273288734",
+      "tools/list 734 1795273288740",
+      "tools/call 734 1795273288758",
+      "eof 734 1795273288767"
+     ],
+     "seconds": 11.91,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-af8b2863a005",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 928 1795273300684",
+      "initialize 928 1795273300708",
+      "tools/list 928 1795273300715",
+      "tools/call 928 1795273300731",
+      "eof 928 1795273300748"
+     ],
+     "seconds": 11.97,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-85943459658b",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1121 1795273313007",
+      "initialize 1121 1795273313020",
+      "tools/list 1121 1795273313023",
+      "tools/call 1121 1795273313032",
+      "eof 1121 1795273313041"
+     ],
+     "seconds": 12.29,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-bb3327624908",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1296 1795273325539",
+      "initialize 1296 1795273325561",
+      "tools/list 1296 1795273325571",
+      "tools/call 1296 1795273325583",
+      "eof 1296 1795273325599"
+     ],
+     "seconds": 12.57,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "eof-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-814fbff764a9",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1467 1795273337502",
+      "initialize 1467 1795273337525",
+      "tools/list 1467 1795273337527",
+      "tools/call 1467 1795273337540",
+      "eof 1467 1795273337549",
+      "sigterm 1467 1795273339559"
+     ],
+     "seconds": 13.96,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c493626c6b61",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1660 1795273351419",
+      "initialize 1660 1795273351448",
+      "tools/list 1660 1795273351451",
+      "tools/call 1660 1795273351463",
+      "eof 1660 1795273351473",
+      "sigterm 1660 1795273353478"
+     ],
+     "seconds": 13.92,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c15fcf2d647f",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1857 1795273365690",
+      "initialize 1857 1795273365706",
+      "tools/list 1857 1795273365712",
+      "tools/call 1857 1795273365722",
+      "eof 1857 1795273365732",
+      "sigterm 1857 1795273367741"
+     ],
+     "seconds": 14.26,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ba52e2c4b6ad",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2062 1795273379739",
+      "initialize 2062 1795273379768",
+      "tools/list 2062 1795273379772",
+      "tools/call 2062 1795273379792",
+      "eof 2062 1795273379810",
+      "sigterm 2062 1795273381816"
+     ],
+     "seconds": 14.07,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-fa502b9360fb",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2255 1795273393986",
+      "initialize 2255 1795273394007",
+      "tools/list 2255 1795273394010",
+      "tools/call 2255 1795273394023",
+      "eof 2255 1795273394030",
+      "sigterm 2255 1795273396037"
+     ],
+     "seconds": 14.23,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-50d9e77da1e2",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2455 1795273408032",
+      "initialize 2455 1795273408035",
+      "tools/list 2455 1795273408037",
+      "tools/call 2455 1795273408042",
+      "eof 2455 1795273408046",
+      "sigterm 2455 1795273410054"
+     ],
+     "seconds": 14.02,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-96c05721ba5e",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2677 1795273422163",
+      "initialize 2677 1795273422167",
+      "tools/list 2677 1795273422169",
+      "tools/call 2677 1795273422174",
+      "eof 2677 1795273422178",
+      "sigterm 2677 1795273424184"
+     ],
+     "seconds": 14.13,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-9a3c89da3f7c",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2856 1795273436090",
+      "initialize 2856 1795273436094",
+      "tools/list 2856 1795273436096",
+      "tools/call 2856 1795273436101",
+      "eof 2856 1795273436104",
+      "sigterm 2856 1795273438107"
+     ],
+     "seconds": 13.92,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a9fcfe04611b",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 3059 1795273450416",
+      "initialize 3059 1795273450421",
+      "tools/list 3059 1795273450425",
+      "tools/call 3059 1795273450434",
+      "eof 3059 1795273450441",
+      "sigterm 3059 1795273452450"
+     ],
+     "seconds": 14.33,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-cf2d49f900c6",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 3315 1795273464256",
+      "initialize 3315 1795273464259",
+      "tools/list 3315 1795273464261",
+      "tools/call 3315 1795273464267",
+      "eof 3315 1795273464272",
+      "sigterm 3315 1795273466278"
+     ],
+     "seconds": 13.83,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "term-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-11662b233b8b",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 3594 1795273478089",
+      "initialize 3594 1795273478093",
+      "tools/list 3594 1795273478095",
+      "tools/call 3594 1795273478100",
+      "eof 3594 1795273478104",
+      "sigterm-ignored 3594 1795273480107"
+     ],
+     "seconds": 15.83,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-298d7774d403",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 3829 1795273493851",
+      "initialize 3829 1795273493856",
+      "tools/list 3829 1795273493858",
+      "tools/call 3829 1795273493863",
+      "eof 3829 1795273493867",
+      "sigterm-ignored 3829 1795273495870"
+     ],
+     "seconds": 15.76,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b2f9d1d9f563",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 4068 1795273509738",
+      "initialize 4068 1795273509742",
+      "tools/list 4068 1795273509744",
+      "tools/call 4068 1795273509750",
+      "eof 4068 1795273509753",
+      "sigterm-ignored 4068 1795273511760"
+     ],
+     "seconds": 15.89,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-5bd086724f44",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 4304 1795273525642",
+      "initialize 4304 1795273525646",
+      "tools/list 4304 1795273525649",
+      "tools/call 4304 1795273525657",
+      "eof 4304 1795273525663",
+      "sigterm-ignored 4304 1795273527668"
+     ],
+     "seconds": 15.92,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-f94692d6895d",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 4543 1795273541568",
+      "initialize 4543 1795273541572",
+      "tools/list 4543 1795273541574",
+      "tools/call 4543 1795273541580",
+      "eof 4543 1795273541584",
+      "sigterm-ignored 4543 1795273543592"
+     ],
+     "seconds": 15.91,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-e3ba3bd76ec2",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 4837 1795273557630",
+      "initialize 4837 1795273557633",
+      "tools/list 4837 1795273557635",
+      "tools/call 4837 1795273557641",
+      "eof 4837 1795273557645",
+      "sigterm-ignored 4837 1795273559653"
+     ],
+     "seconds": 16.05,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-fb1396dfa8a6",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5082 1795273573458",
+      "initialize 5082 1795273573462",
+      "tools/list 5082 1795273573464",
+      "tools/call 5082 1795273573470",
+      "eof 5082 1795273573474",
+      "sigterm-ignored 5082 1795273575477"
+     ],
+     "seconds": 15.84,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-736d2eb706fb",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5324 1795273589354",
+      "initialize 5324 1795273589357",
+      "tools/list 5324 1795273589360",
+      "tools/call 5324 1795273589365",
+      "eof 5324 1795273589370",
+      "sigterm-ignored 5324 1795273591375"
+     ],
+     "seconds": 15.89,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ce791c0b1b4c",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5449 1795273605236",
+      "initialize 5449 1795273605239",
+      "tools/list 5449 1795273605242",
+      "tools/call 5449 1795273605249",
+      "eof 5449 1795273605254",
+      "sigterm-ignored 5449 1795273607262"
+     ],
+     "seconds": 15.88,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-bf6a7ee3b168",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5571 1795273621171",
+      "initialize 5571 1795273621174",
+      "tools/list 5571 1795273621177",
+      "tools/call 5571 1795273621184",
+      "eof 5571 1795273621188",
+      "sigterm-ignored 5571 1795273623191"
+     ],
+     "seconds": 15.93,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "wrapped",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-038d44beb4fb",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5711 1795273636995",
+      "initialize 5711 1795273636999",
+      "tools/list 5711 1795273637001",
+      "tools/call 5711 1795273637007",
+      "eof 5711 1795273637011",
+      "sigterm 5711 1795273639018"
+     ],
+     "seconds": 15.78,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-72169f00d6cf",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5865 1795273652808",
+      "initialize 5865 1795273652813",
+      "tools/list 5865 1795273652816",
+      "tools/call 5865 1795273652822",
+      "eof 5865 1795273652827",
+      "sigterm 5865 1795273654836"
+     ],
+     "seconds": 15.0,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-fdbc9a1ef953",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5994 1795273667899",
+      "initialize 5994 1795273667904",
+      "tools/list 5994 1795273667908",
+      "tools/call 5994 1795273667917",
+      "eof 5994 1795273667922",
+      "sigterm 5994 1795273669927"
+     ],
+     "seconds": 15.0,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-8b877e5255a8",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 6182 1795273682949",
+      "initialize 6182 1795273682954",
+      "tools/list 6182 1795273682957",
+      "tools/call 6182 1795273682963",
+      "eof 6182 1795273682969",
+      "sigterm 6182 1795273684972"
+     ],
+     "seconds": 15.0,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-f2d4ead2be8f",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 6449 1795273697806",
+      "initialize 6449 1795273697809",
+      "tools/list 6449 1795273697812",
+      "tools/call 6449 1795273697818",
+      "eof 6449 1795273697822",
+      "sigterm 6449 1795273699830"
+     ],
+     "seconds": 15.02,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-7c6a03d639e0",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 6797 1795273712906",
+      "initialize 6797 1795273712912",
+      "tools/list 6797 1795273712916",
+      "tools/call 6797 1795273712927",
+      "eof 6797 1795273712931",
+      "sigterm 6797 1795273714934"
+     ],
+     "seconds": 15.0,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a0a815c7fac0",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 7015 1795273727944",
+      "initialize 7015 1795273727950",
+      "tools/list 7015 1795273727953",
+      "tools/call 7015 1795273727959",
+      "eof 7015 1795273727964",
+      "sigterm 7015 1795273729966"
+     ],
+     "seconds": 15.04,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-4a8de5a74984",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 7372 1795273742771",
+      "initialize 7372 1795273742775",
+      "tools/list 7372 1795273742777",
+      "tools/call 7372 1795273742782",
+      "eof 7372 1795273742786",
+      "sigterm 7372 1795273744792"
+     ],
+     "seconds": 15.11,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-1eed06537320",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 7461 1795273757867",
+      "initialize 7461 1795273757871",
+      "tools/list 7461 1795273757874",
+      "tools/call 7461 1795273757879",
+      "eof 7461 1795273757883",
+      "sigterm 7461 1795273759885"
+     ],
+     "seconds": 14.88,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-461133cddbc5",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 7774 1795273772866",
+      "initialize 7774 1795273772869",
+      "tools/list 7774 1795273772872",
+      "tools/call 7774 1795273772878",
+      "eof 7774 1795273772882",
+      "sigterm 7774 1795273774890"
+     ],
+     "seconds": 15.13,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  }
+ ]
+}

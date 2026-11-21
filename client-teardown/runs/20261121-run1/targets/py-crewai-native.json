@@ -1,0 +1,1198 @@
+{
+ "target": "py-crewai-native",
+ "variant": "",
+ "driver": [
+  "/home/claude/envs/py-crewai/bin/python",
+  "{here}/drivers/py/frameworks.py",
+  "crewai-native"
+ ],
+ "env": null,
+ "cells": [
+  {
+   "scenario": "clean",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-58b1f513f4f0",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 9456 1795273925269",
+      "initialize 9456 1795273925272",
+      "tools/list 9456 1795273925275",
+      "tools/call 9456 1795273925279",
+      "eof 9456 1795273925280"
+     ],
+     "seconds": 14.16,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-70df3be612bc",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.01}"
+     ],
+     "markers": [
+      "start 9525 1795273937851",
+      "initialize 9525 1795273937854",
+      "tools/list 9525 1795273937856",
+      "tools/call 9525 1795273937860",
+      "eof 9525 1795273937864"
+     ],
+     "seconds": 12.59,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-2b51fc7ba383",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.01}"
+     ],
+     "markers": [
+      "start 9648 1795273950606",
+      "initialize 9648 1795273950609",
+      "tools/list 9648 1795273950613",
+      "tools/call 9648 1795273950617",
+      "eof 9648 1795273950619"
+     ],
+     "seconds": 12.75,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-e311c42e1ac3",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 9777 1795273963202",
+      "initialize 9777 1795273963204",
+      "tools/list 9777 1795273963207",
+      "tools/call 9777 1795273963210",
+      "eof 9777 1795273963213"
+     ],
+     "seconds": 12.61,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-fddede732bcf",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.01}"
+     ],
+     "markers": [
+      "start 9903 1795273976147",
+      "initialize 9903 1795273976151",
+      "tools/list 9903 1795273976155",
+      "tools/call 9903 1795273976159",
+      "eof 9903 1795273976163"
+     ],
+     "seconds": 12.95,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-9a3e2508e518",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 10061 1795273988639",
+      "initialize 10061 1795273988641",
+      "tools/list 10061 1795273988644",
+      "tools/call 10061 1795273988646",
+      "eof 10061 1795273988649"
+     ],
+     "seconds": 12.49,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-8f0d3e324b59",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 10161 1795274001340",
+      "initialize 10161 1795274001343",
+      "tools/list 10161 1795274001345",
+      "tools/call 10161 1795274001349",
+      "eof 10161 1795274001350"
+     ],
+     "seconds": 12.7,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-be5e3fa2e059",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 10252 1795274014088",
+      "initialize 10252 1795274014090",
+      "tools/list 10252 1795274014093",
+      "tools/call 10252 1795274014096",
+      "eof 10252 1795274014099"
+     ],
+     "seconds": 12.73,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-e8c689a07945",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 10349 1795274026948",
+      "initialize 10349 1795274026951",
+      "tools/list 10349 1795274026954",
+      "tools/call 10349 1795274026958",
+      "eof 10349 1795274026960"
+     ],
+     "seconds": 12.87,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b85b376a3a73",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 10433 1795274039586",
+      "initialize 10433 1795274039588",
+      "tools/list 10433 1795274039591",
+      "tools/call 10433 1795274039595",
+      "eof 10433 1795274039597"
+     ],
+     "seconds": 12.63,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "eof-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-6aa35e78b0b6",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 10544 1795274052268",
+      "initialize 10544 1795274052270",
+      "tools/list 10544 1795274052273",
+      "tools/call 10544 1795274052276",
+      "eof 10544 1795274052277",
+      "sigterm 10544 1795274054280"
+     ],
+     "seconds": 14.78,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-1da7abd1b1bc",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 10622 1795274067118",
+      "initialize 10622 1795274067122",
+      "tools/list 10622 1795274067126",
+      "tools/call 10622 1795274067130",
+      "eof 10622 1795274067132",
+      "sigterm 10622 1795274069135"
+     ],
+     "seconds": 14.86,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-99e0fece9aef",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 10744 1795274081652",
+      "initialize 10744 1795274081654",
+      "tools/list 10744 1795274081656",
+      "tools/call 10744 1795274081661",
+      "eof 10744 1795274081664",
+      "sigterm 10744 1795274083666"
+     ],
+     "seconds": 14.55,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-19f5b6436a79",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.11
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.11}"
+     ],
+     "markers": [
+      "start 10877 1795274096230",
+      "initialize 10877 1795274096232",
+      "tools/list 10877 1795274096236",
+      "tools/call 10877 1795274096238",
+      "eof 10877 1795274096242",
+      "sigterm 10877 1795274098245"
+     ],
+     "seconds": 14.56,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-79d3b77fdf1a",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11039 1795274110745",
+      "initialize 11039 1795274110748",
+      "tools/list 11039 1795274110750",
+      "tools/call 11039 1795274110754",
+      "eof 11039 1795274110756",
+      "sigterm 11039 1795274112759"
+     ],
+     "seconds": 14.51,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b37e62cbfe33",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11162 1795274125287",
+      "initialize 11162 1795274125290",
+      "tools/list 11162 1795274125292",
+      "tools/call 11162 1795274125294",
+      "eof 11162 1795274125296",
+      "sigterm 11162 1795274127298"
+     ],
+     "seconds": 14.54,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-5bfb75f251f1",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11324 1795274139878",
+      "initialize 11324 1795274139881",
+      "tools/list 11324 1795274139883",
+      "tools/call 11324 1795274139885",
+      "eof 11324 1795274139887",
+      "sigterm 11324 1795274141891"
+     ],
+     "seconds": 14.61,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-0f727a3cb06e",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.11
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.11}"
+     ],
+     "markers": [
+      "start 11456 1795274154437",
+      "initialize 11456 1795274154439",
+      "tools/list 11456 1795274154441",
+      "tools/call 11456 1795274154443",
+      "eof 11456 1795274154448",
+      "sigterm 11456 1795274156451"
+     ],
+     "seconds": 14.55,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-4118e848cc45",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11593 1795274169448",
+      "initialize 11593 1795274169452",
+      "tools/list 11593 1795274169456",
+      "tools/call 11593 1795274169460",
+      "eof 11593 1795274169462",
+      "sigterm 11593 1795274171464"
+     ],
+     "seconds": 15.01,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c70858112b06",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11703 1795274184392",
+      "initialize 11703 1795274184396",
+      "tools/list 11703 1795274184398",
+      "tools/call 11703 1795274184403",
+      "eof 11703 1795274184406",
+      "sigterm 11703 1795274186408"
+     ],
+     "seconds": 14.96,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "term-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-71341431e88c",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 11780 1795274199104",
+      "initialize 11780 1795274199107",
+      "tools/list 11780 1795274199110",
+      "tools/call 11780 1795274199113",
+      "eof 11780 1795274199115",
+      "sigterm-ignored 11780 1795274201118"
+     ],
+     "seconds": 16.6,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-2838af4fab10",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 11891 1795274216001",
+      "initialize 11891 1795274216003",
+      "tools/list 11891 1795274216006",
+      "tools/call 11891 1795274216009",
+      "eof 11891 1795274216010",
+      "sigterm-ignored 11891 1795274218012"
+     ],
+     "seconds": 16.88,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-e317623fea0e",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 11999 1795274232765",
+      "initialize 11999 1795274232767",
+      "tools/list 11999 1795274232769",
+      "tools/call 11999 1795274232773",
+      "eof 11999 1795274232776",
+      "sigterm-ignored 11999 1795274234778"
+     ],
+     "seconds": 16.76,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-83479fd8c3cc",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12081 1795274249265",
+      "initialize 12081 1795274249268",
+      "tools/list 12081 1795274249270",
+      "tools/call 12081 1795274249273",
+      "eof 12081 1795274249275",
+      "sigterm-ignored 12081 1795274251278"
+     ],
+     "seconds": 16.5,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-05515685eb74",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12185 1795274265941",
+      "initialize 12185 1795274265943",
+      "tools/list 12185 1795274265947",
+      "tools/call 12185 1795274265951",
+      "eof 12185 1795274265953",
+      "sigterm-ignored 12185 1795274267956"
+     ],
+     "seconds": 16.7,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c58844221f85",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12269 1795274282704",
+      "initialize 12269 1795274282708",
+      "tools/list 12269 1795274282711",
+      "tools/call 12269 1795274282715",
+      "eof 12269 1795274282717",
+      "sigterm-ignored 12269 1795274284720"
+     ],
+     "seconds": 16.75,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-4f9f193edca7",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12358 1795274299443",
+      "initialize 12358 1795274299445",
+      "tools/list 12358 1795274299447",
+      "tools/call 12358 1795274299451",
+      "eof 12358 1795274299453",
+      "sigterm-ignored 12358 1795274301457"
+     ],
+     "seconds": 16.75,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c75cde94031c",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12452 1795274316006",
+      "initialize 12452 1795274316009",
+      "tools/list 12452 1795274316012",
+      "tools/call 12452 1795274316014",
+      "eof 12452 1795274316017",
+      "sigterm-ignored 12452 1795274318019"
+     ],
+     "seconds": 16.55,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-4ba2f8658602",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12526 1795274332646",
+      "initialize 12526 1795274332648",
+      "tools/list 12526 1795274332651",
+      "tools/call 12526 1795274332653",
+      "eof 12526 1795274332658",
+      "sigterm-ignored 12526 1795274334660"
+     ],
+     "seconds": 16.66,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-7cf4cb852759",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12633 1795274349278",
+      "initialize 12633 1795274349280",
+      "tools/list 12633 1795274349283",
+      "tools/call 12633 1795274349286",
+      "eof 12633 1795274349288",
+      "sigterm-ignored 12633 1795274351292"
+     ],
+     "seconds": 16.61,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "wrapped",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-67c7c6a25513",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.61
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.61}"
+     ],
+     "markers": [
+      "start 12736 1795274365661",
+      "initialize 12736 1795274365663",
+      "tools/list 12736 1795274365665",
+      "tools/call 12736 1795274365669",
+      "eof 12736 1795274365670",
+      "sigterm 12736 1795274367672"
+     ],
+     "seconds": 16.0,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-aeedac73a81c",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.41
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.41}"
+     ],
+     "markers": [
+      "start 12827 1795274381890",
+      "initialize 12827 1795274381893",
+      "tools/list 12827 1795274381896",
+      "tools/call 12827 1795274381900",
+      "eof 12827 1795274381902",
+      "sigterm 12827 1795274383905"
+     ],
+     "seconds": 16.02,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-f98c5a6a867c",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 12920 1795274398081",
+      "initialize 12920 1795274398084",
+      "tools/list 12920 1795274398088",
+      "tools/call 12920 1795274398090",
+      "eof 12920 1795274398092",
+      "sigterm 12920 1795274400095"
+     ],
+     "seconds": 16.01,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-5a5a5ac2ed3c",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 13026 1795274414055",
+      "initialize 13026 1795274414058",
+      "tools/list 13026 1795274414060",
+      "tools/call 13026 1795274414066",
+      "eof 13026 1795274414069",
+      "sigterm 13026 1795274416072"
+     ],
+     "seconds": 15.96,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-424728759ba3",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.51
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.51}"
+     ],
+     "markers": [
+      "start 13123 1795274429812",
+      "initialize 13123 1795274429815",
+      "tools/list 13123 1795274429818",
+      "tools/call 13123 1795274429820",
+      "eof 13123 1795274429822",
+      "sigterm 13123 1795274431824"
+     ],
+     "seconds": 16.05,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-adc52c485319",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.51
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.51}"
+     ],
+     "markers": [
+      "start 13220 1795274445776",
+      "initialize 13220 1795274445778",
+      "tools/list 13220 1795274445780",
+      "tools/call 13220 1795274445784",
+      "eof 13220 1795274445785",
+      "sigterm 13220 1795274447788"
+     ],
+     "seconds": 15.96,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-48e35b0dd78f",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.31
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.31}"
+     ],
+     "markers": [
+      "start 13341 1795274462045",
+      "initialize 13341 1795274462049",
+      "tools/list 13341 1795274462053",
+      "tools/call 13341 1795274462057",
+      "eof 13341 1795274462060",
+      "sigterm 13341 1795274464065"
+     ],
+     "seconds": 16.08,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-be8d78385027",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.61
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.61}"
+     ],
+     "markers": [
+      "start 13450 1795274477737",
+      "initialize 13450 1795274477740",
+      "tools/list 13450 1795274477742",
+      "tools/call 13450 1795274477744",
+      "eof 13450 1795274477747",
+      "sigterm 13450 1795274479752"
+     ],
+     "seconds": 15.99,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-3f611752cf9c",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 13521 1795274494096",
+      "initialize 13521 1795274494100",
+      "tools/list 13521 1795274494104",
+      "tools/call 13521 1795274494108",
+      "eof 13521 1795274494110",
+      "sigterm 13521 1795274496113"
+     ],
+     "seconds": 15.96,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-da43a3e589af",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.61
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "\u2502                                                                              \u2502",
+      "\u2502                                                                              \u2502",
+      "\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f",
+      "",
+      "CLOSED {\"close_seconds\": 3.61}"
+     ],
+     "markers": [
+      "start 13567 1795274509756",
+      "initialize 13567 1795274509758",
+      "tools/list 13567 1795274509762",
+      "tools/call 13567 1795274509765",
+      "eof 13567 1795274509766",
+      "sigterm 13567 1795274511769"
+     ],
+     "seconds": 16.06,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  }
+ ]
+}

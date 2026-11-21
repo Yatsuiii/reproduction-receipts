@@ -1,0 +1,1518 @@
+{
+ "target": "py-pydantic-ai",
+ "variant": "",
+ "driver": [
+  "/home/claude/envs/py-pydantic-ai/bin/python",
+  "{here}/drivers/py/frameworks.py",
+  "pydantic-ai"
+ ],
+ "env": null,
+ "cells": [
+  {
+   "scenario": "clean",
+   "n": 10,
+   "counts": {
+    "RESIDUE": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-109247af7dc9",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 21931,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-109247af7dc9 /tmp/ct-5q9lgi92"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 21931,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-109247af7dc9 /tmp/ct-5q9lgi92"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 21931 1795267610082",
+      "initialize 21931 1795267610086",
+      "tools/list 21931 1795267610086",
+      "tools/call 21931 1795267610088",
+      "eof 21931 1795267620099"
+     ],
+     "seconds": 12.15,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-f6968abc93df",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 22173,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-f6968abc93df /tmp/ct-yyuo5yka"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 22173,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-f6968abc93df /tmp/ct-yyuo5yka"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 22173 1795267621786",
+      "initialize 22173 1795267621790",
+      "tools/list 22173 1795267621790",
+      "tools/call 22173 1795267621791",
+      "eof 22173 1795267631801"
+     ],
+     "seconds": 11.7,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-45af8de7f95a",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 22448,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-45af8de7f95a /tmp/ct-c59sd6aj"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 22448,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-45af8de7f95a /tmp/ct-c59sd6aj"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 22448 1795267633536",
+      "initialize 22448 1795267633540",
+      "tools/list 22448 1795267633541",
+      "tools/call 22448 1795267633542",
+      "eof 22448 1795267643561"
+     ],
+     "seconds": 11.77,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-cea711b7d132",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 22645,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-cea711b7d132 /tmp/ct-c8be4n7a"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 22645,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-cea711b7d132 /tmp/ct-c8be4n7a"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 22645 1795267645251",
+      "initialize 22645 1795267645255",
+      "tools/list 22645 1795267645256",
+      "tools/call 22645 1795267645257",
+      "eof 22645 1795267655267"
+     ],
+     "seconds": 11.69,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-12ccbade6843",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 22857,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-12ccbade6843 /tmp/ct-7nng0u55"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 22857,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-12ccbade6843 /tmp/ct-7nng0u55"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 22857 1795267657090",
+      "initialize 22857 1795267657094",
+      "tools/list 22857 1795267657095",
+      "tools/call 22857 1795267657096",
+      "eof 22857 1795267667108"
+     ],
+     "seconds": 11.84,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-97527464d698",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 23127,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-97527464d698 /tmp/ct-ofqme7sa"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 23127,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-97527464d698 /tmp/ct-ofqme7sa"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 23127 1795267668791",
+      "initialize 23127 1795267668795",
+      "tools/list 23127 1795267668796",
+      "tools/call 23127 1795267668797",
+      "eof 23127 1795267678807"
+     ],
+     "seconds": 11.7,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-81a4907665e1",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 23333,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-81a4907665e1 /tmp/ct-y7sq8jsi"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 23333,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-81a4907665e1 /tmp/ct-y7sq8jsi"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 23333 1795267680490",
+      "initialize 23333 1795267680494",
+      "tools/list 23333 1795267680494",
+      "tools/call 23333 1795267680495",
+      "eof 23333 1795267690506"
+     ],
+     "seconds": 11.7,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-870e657c73f5",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 23648,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-870e657c73f5 /tmp/ct-ch3dqqno"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 23648,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-870e657c73f5 /tmp/ct-ch3dqqno"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 23648 1795267692220",
+      "initialize 23648 1795267692224",
+      "tools/list 23648 1795267692225",
+      "tools/call 23648 1795267692227",
+      "eof 23648 1795267702237"
+     ],
+     "seconds": 11.73,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-b377694be25b",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 23897,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-b377694be25b /tmp/ct-2ughpfb2"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 23897,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-b377694be25b /tmp/ct-2ughpfb2"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 23897 1795267703983",
+      "initialize 23897 1795267703987",
+      "tools/list 23897 1795267703988",
+      "tools/call 23897 1795267703989",
+      "eof 23897 1795267714019"
+     ],
+     "seconds": 11.79,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-1fcb6bdd34c6",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 24167,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-1fcb6bdd34c6 /tmp/ct-dvnykvp_"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 24167,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-1fcb6bdd34c6 /tmp/ct-dvnykvp_"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 24167 1795267715842",
+      "initialize 24167 1795267715846",
+      "tools/list 24167 1795267715847",
+      "tools/call 24167 1795267715849",
+      "eof 24167 1795267725860"
+     ],
+     "seconds": 11.84,
+     "connected": true,
+     "verdict": "RESIDUE"
+    }
+   ]
+  },
+  {
+   "scenario": "eof-ignore",
+   "n": 10,
+   "counts": {
+    "RESIDUE": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-a70b8a4eea1a",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 24380,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a70b8a4eea1a /tmp/ct-f0byi3bi"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 24380,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a70b8a4eea1a /tmp/ct-f0byi3bi"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 24380 1795267727836",
+      "initialize 24380 1795267727839",
+      "tools/list 24380 1795267727840",
+      "tools/call 24380 1795267727841",
+      "eof 24380 1795267737852",
+      "sigterm 24380 1795267739854"
+     ],
+     "seconds": 13.98,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-c2bd30ac419d",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 24627,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-c2bd30ac419d /tmp/ct-7tot7c4z"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 24627,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-c2bd30ac419d /tmp/ct-7tot7c4z"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 24627 1795267741785",
+      "initialize 24627 1795267741789",
+      "tools/list 24627 1795267741790",
+      "tools/call 24627 1795267741792",
+      "eof 24627 1795267751801",
+      "sigterm 24627 1795267753801"
+     ],
+     "seconds": 13.94,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-9d2436d5378a",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 24879,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-9d2436d5378a /tmp/ct-41fiy3g9"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 24879,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-9d2436d5378a /tmp/ct-41fiy3g9"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 24879 1795267755497",
+      "initialize 24879 1795267755502",
+      "tools/list 24879 1795267755503",
+      "tools/call 24879 1795267755504",
+      "eof 24879 1795267765515",
+      "sigterm 24879 1795267767518"
+     ],
+     "seconds": 13.77,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-27fff7346bc8",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 25086,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-27fff7346bc8 /tmp/ct-cbw8aftd"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 25086,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-27fff7346bc8 /tmp/ct-cbw8aftd"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 25086 1795267769386",
+      "initialize 25086 1795267769391",
+      "tools/list 25086 1795267769392",
+      "tools/call 25086 1795267769394",
+      "eof 25086 1795267779405",
+      "sigterm 25086 1795267781408"
+     ],
+     "seconds": 13.89,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-5e3d4f1aa402",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 25325,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-5e3d4f1aa402 /tmp/ct-rywvzo0n"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 25325,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-5e3d4f1aa402 /tmp/ct-rywvzo0n"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 25325 1795267783253",
+      "initialize 25325 1795267783258",
+      "tools/list 25325 1795267783259",
+      "tools/call 25325 1795267783261",
+      "eof 25325 1795267793271",
+      "sigterm 25325 1795267795271"
+     ],
+     "seconds": 13.87,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-82f7834dfbbc",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 25531,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-82f7834dfbbc /tmp/ct-u5ik1qri"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 25531,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-82f7834dfbbc /tmp/ct-u5ik1qri"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 25531 1795267797016",
+      "initialize 25531 1795267797019",
+      "tools/list 25531 1795267797020",
+      "tools/call 25531 1795267797021",
+      "eof 25531 1795267807029",
+      "sigterm 25531 1795267809035"
+     ],
+     "seconds": 13.77,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-7ac435140842",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 25743,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-7ac435140842 /tmp/ct-uwhshind"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 25743,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-7ac435140842 /tmp/ct-uwhshind"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 25743 1795267810970",
+      "initialize 25743 1795267810975",
+      "tools/list 25743 1795267810976",
+      "tools/call 25743 1795267810977",
+      "eof 25743 1795267820988",
+      "sigterm 25743 1795267822996"
+     ],
+     "seconds": 13.95,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-6b6b93f00a80",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 25941,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-6b6b93f00a80 /tmp/ct-rgdmnc3a"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 25941,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-6b6b93f00a80 /tmp/ct-rgdmnc3a"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 25941 1795267824874",
+      "initialize 25941 1795267824879",
+      "tools/list 25941 1795267824880",
+      "tools/call 25941 1795267824882",
+      "eof 25941 1795267834892",
+      "sigterm 25941 1795267836897"
+     ],
+     "seconds": 13.91,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-c059369ba7a1",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 26181,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-c059369ba7a1 /tmp/ct-gkuadro8"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 26181,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-c059369ba7a1 /tmp/ct-gkuadro8"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 26181 1795267838762",
+      "initialize 26181 1795267838765",
+      "tools/list 26181 1795267838766",
+      "tools/call 26181 1795267838767",
+      "eof 26181 1795267848778",
+      "sigterm 26181 1795267850782"
+     ],
+     "seconds": 13.89,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-db0e57019612",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 26334,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-db0e57019612 /tmp/ct-t4ulxlww"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 26334,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-db0e57019612 /tmp/ct-t4ulxlww"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 26334 1795267852563",
+      "initialize 26334 1795267852567",
+      "tools/list 26334 1795267852568",
+      "tools/call 26334 1795267852570",
+      "eof 26334 1795267862579",
+      "sigterm 26334 1795267864579"
+     ],
+     "seconds": 13.79,
+     "connected": true,
+     "verdict": "RESIDUE"
+    }
+   ]
+  },
+  {
+   "scenario": "term-ignore",
+   "n": 10,
+   "counts": {
+    "RESIDUE": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-025f0a35d732",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 26449,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-025f0a35d732 /tmp/ct-xsikvr2h"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 26449,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-025f0a35d732 /tmp/ct-xsikvr2h"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 26449 1795267866300",
+      "initialize 26449 1795267866304",
+      "tools/list 26449 1795267866305",
+      "tools/call 26449 1795267866306",
+      "eof 26449 1795267876318",
+      "sigterm-ignored 26449 1795267878321"
+     ],
+     "seconds": 15.74,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-1d136b609ad1",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 26575,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-1d136b609ad1 /tmp/ct-vjguye7k"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 26575,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-1d136b609ad1 /tmp/ct-vjguye7k"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 26575 1795267882273",
+      "initialize 26575 1795267882277",
+      "tools/list 26575 1795267882279",
+      "tools/call 26575 1795267882280",
+      "eof 26575 1795267892292",
+      "sigterm-ignored 26575 1795267894292"
+     ],
+     "seconds": 15.93,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-5158e63159fb",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 26728,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-5158e63159fb /tmp/ct-6xeqpyeq"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 26728,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-5158e63159fb /tmp/ct-6xeqpyeq"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 26728 1795267897988",
+      "initialize 26728 1795267897991",
+      "tools/list 26728 1795267897992",
+      "tools/call 26728 1795267897993",
+      "eof 26728 1795267908003",
+      "sigterm-ignored 26728 1795267910008"
+     ],
+     "seconds": 15.71,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-5c10d9d78ab9",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 26890,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-5c10d9d78ab9 /tmp/ct-5i33mq6n"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 26890,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-5c10d9d78ab9 /tmp/ct-5i33mq6n"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 26890 1795267913669",
+      "initialize 26890 1795267913673",
+      "tools/list 26890 1795267913674",
+      "tools/call 26890 1795267913675",
+      "eof 26890 1795267923684",
+      "sigterm-ignored 26890 1795267925686"
+     ],
+     "seconds": 15.68,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-cb3b45016bdb",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 27034,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-cb3b45016bdb /tmp/ct-_mw2wn_y"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 27034,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-cb3b45016bdb /tmp/ct-_mw2wn_y"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 27034 1795267929379",
+      "initialize 27034 1795267929383",
+      "tools/list 27034 1795267929383",
+      "tools/call 27034 1795267929385",
+      "eof 27034 1795267939393",
+      "sigterm-ignored 27034 1795267941401"
+     ],
+     "seconds": 15.71,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-7e378d79443a",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 27211,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-7e378d79443a /tmp/ct-q_49jhfa"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 27211,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-7e378d79443a /tmp/ct-q_49jhfa"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 27211 1795267945001",
+      "initialize 27211 1795267945005",
+      "tools/list 27211 1795267945006",
+      "tools/call 27211 1795267945007",
+      "eof 27211 1795267955017",
+      "sigterm-ignored 27211 1795267957026"
+     ],
+     "seconds": 15.67,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-9d2bd6eae8b2",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 27406,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-9d2bd6eae8b2 /tmp/ct-igmcn8x6"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 27406,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-9d2bd6eae8b2 /tmp/ct-igmcn8x6"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 27406 1795267961045",
+      "initialize 27406 1795267961048",
+      "tools/list 27406 1795267961049",
+      "tools/call 27406 1795267961051",
+      "eof 27406 1795267971067",
+      "sigterm-ignored 27406 1795267973073"
+     ],
+     "seconds": 16.05,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-b55a2420befa",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 27566,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-b55a2420befa /tmp/ct-e1496388"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 27566,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-b55a2420befa /tmp/ct-e1496388"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 27566 1795267976845",
+      "initialize 27566 1795267976849",
+      "tools/list 27566 1795267976850",
+      "tools/call 27566 1795267976851",
+      "eof 27566 1795267986861",
+      "sigterm-ignored 27566 1795267988864"
+     ],
+     "seconds": 15.74,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-9728dcd55a73",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 27719,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-9728dcd55a73 /tmp/ct-x7znofa4"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 27719,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-9728dcd55a73 /tmp/ct-x7znofa4"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 27719 1795267992533",
+      "initialize 27719 1795267992536",
+      "tools/list 27719 1795267992537",
+      "tools/call 27719 1795267992538",
+      "eof 27719 1795268002547",
+      "sigterm-ignored 27719 1795268004547"
+     ],
+     "seconds": 15.68,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-261e7a60f52d",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 27857,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-261e7a60f52d /tmp/ct-9pd11z3a"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 27857,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-261e7a60f52d /tmp/ct-9pd11z3a"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 27857 1795268008216",
+      "initialize 27857 1795268008219",
+      "tools/list 27857 1795268008220",
+      "tools/call 27857 1795268008221",
+      "eof 27857 1795268018232",
+      "sigterm-ignored 27857 1795268020239"
+     ],
+     "seconds": 15.74,
+     "connected": true,
+     "verdict": "RESIDUE"
+    }
+   ]
+  },
+  {
+   "scenario": "wrapped",
+   "n": 10,
+   "counts": {
+    "RESIDUE": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-0337bed677db",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28002,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28009,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-0337bed677db /tmp/ct-to2yactn"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28002,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28009,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-0337bed677db /tmp/ct-to2yactn"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28009 1795268023955",
+      "initialize 28009 1795268023958",
+      "tools/list 28009 1795268023960",
+      "tools/call 28009 1795268023961",
+      "eof 28009 1795268033971",
+      "sigterm 28009 1795268035975"
+     ],
+     "seconds": 14.79,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-773f91620642",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28167,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28174,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-773f91620642 /tmp/ct-jkyshk7l"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28167,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28174,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-773f91620642 /tmp/ct-jkyshk7l"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28174 1795268038821",
+      "initialize 28174 1795268038824",
+      "tools/list 28174 1795268038825",
+      "tools/call 28174 1795268038826",
+      "eof 28174 1795268048835",
+      "sigterm 28174 1795268050835"
+     ],
+     "seconds": 15.03,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-2343de5a6190",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28304,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28311,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-2343de5a6190 /tmp/ct-9tjbbn5c"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28304,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28311,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-2343de5a6190 /tmp/ct-9tjbbn5c"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28311 1795268053727",
+      "initialize 28311 1795268053731",
+      "tools/list 28311 1795268053733",
+      "tools/call 28311 1795268053735",
+      "eof 28311 1795268063745",
+      "sigterm 28311 1795268065752"
+     ],
+     "seconds": 15.0,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-06053bde4895",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28419,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28426,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-06053bde4895 /tmp/ct-77bl3l88"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28419,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28426,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-06053bde4895 /tmp/ct-77bl3l88"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28426 1795268068835",
+      "initialize 28426 1795268068838",
+      "tools/list 28426 1795268068839",
+      "tools/call 28426 1795268068841",
+      "eof 28426 1795268078855",
+      "sigterm 28426 1795268080859"
+     ],
+     "seconds": 15.0,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-157fd1d51e5e",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28541,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28549,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-157fd1d51e5e /tmp/ct-4czvalva"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28541,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28549,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-157fd1d51e5e /tmp/ct-4czvalva"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28549 1795268083760",
+      "initialize 28549 1795268083764",
+      "tools/list 28549 1795268083765",
+      "tools/call 28549 1795268083766",
+      "eof 28549 1795268093775",
+      "sigterm 28549 1795268095779"
+     ],
+     "seconds": 15.02,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-4c18ac863db7",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28617,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28624,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-4c18ac863db7 /tmp/ct-glmo8oef"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28617,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28624,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-4c18ac863db7 /tmp/ct-glmo8oef"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28624 1795268098841",
+      "initialize 28624 1795268098845",
+      "tools/list 28624 1795268098847",
+      "tools/call 28624 1795268098848",
+      "eof 28624 1795268108857",
+      "sigterm 28624 1795268110860"
+     ],
+     "seconds": 15.01,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-6dbcdde66c4f",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28666,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28673,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-6dbcdde66c4f /tmp/ct-lurjlpt1"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28666,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28673,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-6dbcdde66c4f /tmp/ct-lurjlpt1"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28673 1795268113951",
+      "initialize 28673 1795268113955",
+      "tools/list 28673 1795268113957",
+      "tools/call 28673 1795268113958",
+      "eof 28673 1795268123968",
+      "sigterm 28673 1795268125971"
+     ],
+     "seconds": 14.98,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-ee93d8fc5d0b",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28710,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28717,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-ee93d8fc5d0b /tmp/ct-5po7ie4l"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28710,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28717,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-ee93d8fc5d0b /tmp/ct-5po7ie4l"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28717 1795268128994",
+      "initialize 28717 1795268129002",
+      "tools/list 28717 1795268129003",
+      "tools/call 28717 1795268129004",
+      "eof 28717 1795268139014",
+      "sigterm 28717 1795268141023"
+     ],
+     "seconds": 14.99,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-b4baf9a47909",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28757,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28764,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-b4baf9a47909 /tmp/ct-5ji34a5m"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28757,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28764,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-b4baf9a47909 /tmp/ct-5ji34a5m"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28764 1795268143766",
+      "initialize 28764 1795268143769",
+      "tools/list 28764 1795268143770",
+      "tools/call 28764 1795268143771",
+      "eof 28764 1795268153780",
+      "sigterm 28764 1795268155788"
+     ],
+     "seconds": 15.02,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-76c3d93d511e",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 28803,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28810,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-76c3d93d511e /tmp/ct-5kxu5ixa"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 28803,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 28810,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-76c3d93d511e /tmp/ct-5kxu5ixa"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 28810 1795268158960",
+      "initialize 28810 1795268158965",
+      "tools/list 28810 1795268158965",
+      "tools/call 28810 1795268158967",
+      "eof 28810 1795268168975",
+      "sigterm 28810 1795268170980"
+     ],
+     "seconds": 14.99,
+     "connected": true,
+     "verdict": "RESIDUE"
+    }
+   ]
+  }
+ ]
+}

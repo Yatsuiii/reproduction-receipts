@@ -115,7 +115,11 @@ def run_trial(driver: list[str], scenario: str, env_extra: dict | None = None, c
                 break
             lines.append(line.rstrip())
             if line.startswith("CLOSED"):
-                closed = json.loads(line[len("CLOSED"):].strip() or "{}")
+                body = line[len("CLOSED"):].strip() or "{}"
+                try:
+                    closed, _ = json.JSONDecoder().raw_decode(body)
+                except json.JSONDecodeError:
+                    closed = {"unparsed": body[:200]}
                 break
         trial["closed"] = closed
         if closed is not None:

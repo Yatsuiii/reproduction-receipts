@@ -47,8 +47,12 @@ env = dict(os.environ, HOME=str(home), XDG_CONFIG_HOME=str(home / ".config"),
            NO_COLOR="1", CI="1")
 env.pop("CT_SPEC", None)
 t0 = time.monotonic()
-p = subprocess.run(cmd, cwd=work, env=env, stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=120)
-out = (p.stdout + p.stderr)[-400:]
+# Output goes to a file, not a pipe: a server left running can inherit the CLI's
+# stderr, and a pipe would then keep subprocess.run waiting long after the CLI exited.
+log = home / "cli.log"
+with open(log, "w") as fh:
+    p = subprocess.run(cmd, cwd=work, env=env, stdin=subprocess.DEVNULL, stdout=fh, stderr=subprocess.STDOUT, timeout=120)
+out = log.read_text()[-400:]
 print("CLOSED " + json.dumps({"cli_seconds": round(time.monotonic() - t0, 2), "exit": p.returncode,
                               "connected_line": "Connected" in out or "connected" in out, "out_tail": out}), flush=True)
 sys.stdin.read()

@@ -283,5 +283,61 @@
    "/home/claude/envs/ctrust",
    "goose-spawn"
   ]
+ },
+ "py-pydantic-ai-config": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-config"
+  ]
+ },
+ "py-pydantic-ai-agent": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-agent"
+  ]
+ },
+ "py-pydantic-ai-nokeepalive": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-nokeepalive"
+  ]
+ },
+ "py-pydantic-ai@patched": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai-patched/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai"
+  ],
+  "patch": "patches/pydantic-ai-close-stdio-on-exit.patch"
+ },
+ "py-pydantic-ai-config@patched": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai-patched/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-config"
+  ],
+  "patch": "patches/pydantic-ai-close-stdio-on-exit.patch"
+ },
+ "py-pydantic-ai-agent@patched": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai-patched/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-agent"
+  ],
+  "patch": "patches/pydantic-ai-close-stdio-on-exit.patch"
+ },
+ "js-ai-sdk@patched": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/libs.mjs",
+   "ai-sdk"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/libs-js-aisdk-patched/node_modules"
+  },
+  "patch": "patches/ai-sdk-mcp-stdio-close-sequence.patch"
  }
 }

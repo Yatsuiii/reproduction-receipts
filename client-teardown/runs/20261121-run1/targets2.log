@@ -15,3 +15,10 @@ cli-qwen                                term-ignore  {'CLEAN': 10}
 cli-opencode                            term-ignore  {'CLEAN': 10}
 cli-gemini                              term-ignore  {'CLEAN': 10}
 go-go-sdk                               term-ignore  {'CLEAN': 10}
+cli-kilo                                term-ignore  {'CLEAN': 10}
+go-mcp-go                               wrapped      {'RESIDUE': 10}
+cli-opencode                            wrapped      {'CLEAN': 10}
+cli-gemini                              wrapped      {'RESIDUE': 10}
+go-go-sdk                               wrapped      {'RESIDUE': 10}
+cli-kilo                                wrapped      {'CLEAN': 10}
+cli-qwen                                wrapped      {'DEAD': 10}

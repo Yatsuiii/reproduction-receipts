@@ -1,0 +1,1115 @@
+{
+ "target": "cli-opencode",
+ "variant": "",
+ "driver": [
+  "python3",
+  "-I",
+  "{here}/drivers/cli.py",
+  "opencode"
+ ],
+ "env": {
+  "CT_CLI_BIN": "/home/claude/envs/clis/node_modules/.bin"
+ },
+ "cells": [
+  {
+   "scenario": "clean",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-54f8deb06361",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 1.25,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-54f8deb06361 /tmp/ct-nvx19wd_\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.25, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-54f8deb06361 /tmp/ct-nvx19wd_\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 10477 1795267205753",
+      "initialize 10477 1795267205760",
+      "tools/list 10477 1795267205769",
+      "eof 10477 1795267205851"
+     ],
+     "seconds": 11.81,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-7365f7979ff9",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 1.24,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-7365f7979ff9 /tmp/ct-8somz172\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.24, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-7365f7979ff9 /tmp/ct-8somz172\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 10813 1795267217611",
+      "initialize 10813 1795267217614",
+      "tools/list 10813 1795267217644",
+      "eof 10813 1795267217692"
+     ],
+     "seconds": 11.79,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c3126d187ff1",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 1.07,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-c3126d187ff1 /tmp/ct-jaipftx6\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.07, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-c3126d187ff1 /tmp/ct-jaipftx6\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 11087 1795267229239",
+      "initialize 11087 1795267229242",
+      "tools/list 11087 1795267229253",
+      "eof 11087 1795267229300"
+     ],
+     "seconds": 11.63,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-304f9ddb85a0",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 1.16,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-304f9ddb85a0 /tmp/ct-e7h5d77r\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.16, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-304f9ddb85a0 /tmp/ct-e7h5d77r\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 11330 1795267240958",
+      "initialize 11330 1795267240961",
+      "tools/list 11330 1795267240975",
+      "eof 11330 1795267241039"
+     ],
+     "seconds": 11.73,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-2d05b9730486",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 1.49,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-2d05b9730486 /tmp/ct-z82hjqos\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.49, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-2d05b9730486 /tmp/ct-z82hjqos\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 12289 1795267252903",
+      "initialize 12289 1795267252910",
+      "tools/list 12289 1795267253031",
+      "eof 12289 1795267253096"
+     ],
+     "seconds": 12.06,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ef72e3b05c8b",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 1.67,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-ef72e3b05c8b /tmp/ct-c2gc1xw1\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.67, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-ef72e3b05c8b /tmp/ct-c2gc1xw1\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 13194 1795267265068",
+      "initialize 13194 1795267265071",
+      "tools/list 13194 1795267265215",
+      "eof 13194 1795267265290"
+     ],
+     "seconds": 12.26,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-432db8a76625",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 1.46,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-432db8a76625 /tmp/ct-mp77um2h\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.46, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-432db8a76625 /tmp/ct-mp77um2h\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 13513 1795267277292",
+      "initialize 13513 1795267277295",
+      "tools/list 13513 1795267277314",
+      "eof 13513 1795267277384"
+     ],
+     "seconds": 12.02,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a2aaa91b711f",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.99,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-a2aaa91b711f /tmp/ct-37s48o13\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.99, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-a2aaa91b711f /tmp/ct-37s48o13\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 13772 1795267288903",
+      "initialize 13772 1795267288910",
+      "tools/list 13772 1795267288916",
+      "eof 13772 1795267288935"
+     ],
+     "seconds": 11.53,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-bb7a1b5b1b6e",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.99,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-bb7a1b5b1b6e /tmp/ct-1gdy6jw1\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.99, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-bb7a1b5b1b6e /tmp/ct-1gdy6jw1\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 14103 1795267300439",
+      "initialize 14103 1795267300442",
+      "tools/list 14103 1795267300453",
+      "eof 14103 1795267300475"
+     ],
+     "seconds": 11.55,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-3181019006f0",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 1.14,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3181019006f0 /tmp/ct-g_4oljx1\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.14, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3181019006f0 /tmp/ct-g_4oljx1\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 14435 1795267312104",
+      "initialize 14435 1795267312107",
+      "tools/list 14435 1795267312113",
+      "eof 14435 1795267312159"
+     ],
+     "seconds": 11.7,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "eof-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-94ba3a981050",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.13,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-94ba3a981050 /tmp/ct-lavtmkvi\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.13, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-94ba3a981050 /tmp/ct-lavtmkvi\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 14731 1795267323647",
+      "initialize 14731 1795267323656",
+      "tools/list 14731 1795267323753",
+      "eof 14731 1795267323841",
+      "sigterm 14731 1795267325845"
+     ],
+     "seconds": 13.68,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a1078dc288ed",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.16,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a1078dc288ed /tmp/ct-p2447cs3\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.16, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a1078dc288ed /tmp/ct-p2447cs3\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 15086 1795267337509",
+      "initialize 15086 1795267337514",
+      "tools/list 15086 1795267337545",
+      "eof 15086 1795267337568",
+      "sigterm 15086 1795267339568"
+     ],
+     "seconds": 13.72,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-fa9cead000f2",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.0,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-fa9cead000f2 /tmp/ct-nmct01vd\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.0, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-fa9cead000f2 /tmp/ct-nmct01vd\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 15471 1795267351073",
+      "initialize 15471 1795267351075",
+      "tools/list 15471 1795267351080",
+      "eof 15471 1795267351100",
+      "sigterm 15471 1795267353105"
+     ],
+     "seconds": 13.54,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-9f1400e2335c",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.1,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-9f1400e2335c /tmp/ct-rqu98poo\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.1, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-9f1400e2335c /tmp/ct-rqu98poo\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 15773 1795267364645",
+      "initialize 15773 1795267364647",
+      "tools/list 15773 1795267364664",
+      "eof 15773 1795267364686",
+      "sigterm 15773 1795267366707"
+     ],
+     "seconds": 13.66,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a359c19d303a",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.05,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a359c19d303a /tmp/ct-yp1kmd_n\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.05, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a359c19d303a /tmp/ct-yp1kmd_n\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 16120 1795267378321",
+      "initialize 16120 1795267378324",
+      "tools/list 16120 1795267378343",
+      "eof 16120 1795267378376",
+      "sigterm 16120 1795267380374"
+     ],
+     "seconds": 13.61,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-768adcf294ad",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.17,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-768adcf294ad /tmp/ct-0odgc0hk\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.17, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-768adcf294ad /tmp/ct-0odgc0hk\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 16485 1795267391971",
+      "initialize 16485 1795267391973",
+      "tools/list 16485 1795267391996",
+      "eof 16485 1795267392080",
+      "sigterm 16485 1795267394088"
+     ],
+     "seconds": 13.72,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a21b6ccb05d2",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.03,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a21b6ccb05d2 /tmp/ct-ot8y2w8_\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.03, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a21b6ccb05d2 /tmp/ct-ot8y2w8_\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 16853 1795267405561",
+      "initialize 16853 1795267405564",
+      "tools/list 16853 1795267405576",
+      "eof 16853 1795267405596",
+      "sigterm 16853 1795267407681"
+     ],
+     "seconds": 13.59,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b301bbe2c224",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.52,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-b301bbe2c224 /tmp/ct-anl73xs8\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.52, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-b301bbe2c224 /tmp/ct-anl73xs8\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 17235 1795267419611",
+      "initialize 17235 1795267419614",
+      "tools/list 17235 1795267419757",
+      "eof 17235 1795267419791",
+      "sigterm 17235 1795267421794"
+     ],
+     "seconds": 14.11,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-324851186543",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.19,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-324851186543 /tmp/ct-1j_d1k8f\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.19, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-324851186543 /tmp/ct-1j_d1k8f\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 17569 1795267433453",
+      "initialize 17569 1795267433457",
+      "tools/list 17569 1795267433479",
+      "eof 17569 1795267433532",
+      "sigterm 17569 1795267435543"
+     ],
+     "seconds": 13.75,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-85869871e3fb",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 3.05,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-85869871e3fb /tmp/ct-xx9nkkh3\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 3.05, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-85869871e3fb /tmp/ct-xx9nkkh3\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 17929 1795267447027",
+      "initialize 17929 1795267447030",
+      "tools/list 17929 1795267447041",
+      "eof 17929 1795267447062",
+      "sigterm 17929 1795267449136"
+     ],
+     "seconds": 13.6,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "term-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-b4a828adabb7",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.18,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-b4a828adabb7 /tmp/ct-ea_4wpdx\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.18, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-b4a828adabb7 /tmp/ct-ea_4wpdx\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 18299 1795267460621",
+      "initialize 18299 1795267460625",
+      "tools/list 18299 1795267460632",
+      "eof 18299 1795267460658",
+      "sigterm-ignored 18299 1795267462658"
+     ],
+     "seconds": 15.73,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ec69dd500aa8",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.62,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-ec69dd500aa8 /tmp/ct-kee_mnql\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.62, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-ec69dd500aa8 /tmp/ct-kee_mnql\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 18706 1795267476667",
+      "initialize 18706 1795267476670",
+      "tools/list 18706 1795267476713",
+      "eof 18706 1795267476761",
+      "sigterm-ignored 18706 1795267478781"
+     ],
+     "seconds": 16.2,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-511e73ac2544",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.62,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-511e73ac2544 /tmp/ct-z9je3t82\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.62, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-511e73ac2544 /tmp/ct-z9je3t82\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 19092 1795267492664",
+      "initialize 19092 1795267492667",
+      "tools/list 19092 1795267492682",
+      "eof 19092 1795267492715",
+      "sigterm-ignored 19092 1795267494714"
+     ],
+     "seconds": 16.17,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-67d61c360810",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.53,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-67d61c360810 /tmp/ct-hprw7e8m\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.53, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-67d61c360810 /tmp/ct-hprw7e8m\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 19468 1795267508818",
+      "initialize 19468 1795267508821",
+      "tools/list 19468 1795267508838",
+      "eof 19468 1795267508892",
+      "sigterm-ignored 19468 1795267510901"
+     ],
+     "seconds": 16.09,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-50ed5f606477",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.24,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-50ed5f606477 /tmp/ct-97eh5a51\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.24, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-50ed5f606477 /tmp/ct-97eh5a51\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 19963 1795267524881",
+      "initialize 19963 1795267524883",
+      "tools/list 19963 1795267525003",
+      "eof 19963 1795267525074",
+      "sigterm-ignored 19963 1795267527093"
+     ],
+     "seconds": 15.79,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-72cd7a439e4e",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.32,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-72cd7a439e4e /tmp/ct-ly36tern\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.32, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-72cd7a439e4e /tmp/ct-ly36tern\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 20381 1795267540648",
+      "initialize 20381 1795267540650",
+      "tools/list 20381 1795267540657",
+      "eof 20381 1795267540678",
+      "sigterm-ignored 20381 1795267542765"
+     ],
+     "seconds": 15.88,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-e96cdc0fe776",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.78,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-e96cdc0fe776 /tmp/ct-xeue5k0a\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.78, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-e96cdc0fe776 /tmp/ct-xeue5k0a\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 20759 1795267556878",
+      "initialize 20759 1795267556881",
+      "tools/list 20759 1795267556897",
+      "eof 20759 1795267556918",
+      "sigterm-ignored 20759 1795267558918"
+     ],
+     "seconds": 16.38,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-f990a545a71e",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.61,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-f990a545a71e /tmp/ct-ryqt4b4r\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.61, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-f990a545a71e /tmp/ct-ryqt4b4r\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 21111 1795267572898",
+      "initialize 21111 1795267572901",
+      "tools/list 21111 1795267572912",
+      "eof 21111 1795267572933",
+      "sigterm-ignored 21111 1795267574989"
+     ],
+     "seconds": 16.16,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-498b907d766f",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.27,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-498b907d766f /tmp/ct-w0ub3_e0\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.27, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-498b907d766f /tmp/ct-w0ub3_e0\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 21432 1795267589101",
+      "initialize 21432 1795267589103",
+      "tools/list 21432 1795267589112",
+      "eof 21432 1795267589236",
+      "sigterm-ignored 21432 1795267591231"
+     ],
+     "seconds": 15.82,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c78f3882c790",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 5.62,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-c78f3882c790 /tmp/ct-qh55gvhg\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 5.62, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-c78f3882c790 /tmp/ct-qh55gvhg\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 21813 1795267604827",
+      "initialize 21813 1795267604831",
+      "tools/list 21813 1795267604936",
+      "eof 21813 1795267604971",
+      "sigterm-ignored 21813 1795267606972"
+     ],
+     "seconds": 16.17,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "wrapped",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-bb87f7e43146",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 1.29,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-bb87f7e43146 /tmp/ct-xdb4h6zw\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.29, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-bb87f7e43146 /tmp/ct-xdb4h6zw\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 22137 1795267621195",
+      "initialize 22137 1795267621201",
+      "tools/list 22137 1795267621264",
+      "sigterm 22137 1795267621354"
+     ],
+     "seconds": 11.85,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-f0d9f9d03a65",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 1.38,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-f0d9f9d03a65 /tmp/ct-2sooq0ms\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.38, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-f0d9f9d03a65 /tmp/ct-2sooq0ms\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 22438 1795267633238",
+      "initialize 22438 1795267633241",
+      "tools/list 22438 1795267633300",
+      "sigterm 22438 1795267633330"
+     ],
+     "seconds": 11.94,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-4039bde5adb7",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 1.44,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-4039bde5adb7 /tmp/ct-aeuwczc1\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.44, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-4039bde5adb7 /tmp/ct-aeuwczc1\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 22638 1795267645224",
+      "initialize 22638 1795267645232",
+      "tools/list 22638 1795267645246",
+      "eof 22638 1795267645322",
+      "sigterm 22638 1795267645322"
+     ],
+     "seconds": 11.99,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-bbff31738274",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 1.16,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-bbff31738274 /tmp/ct-cqqusuzg\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.16, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-bbff31738274 /tmp/ct-cqqusuzg\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 22847 1795267656922",
+      "initialize 22847 1795267656933",
+      "tools/list 22847 1795267656954",
+      "sigterm 22847 1795267657042"
+     ],
+     "seconds": 11.72,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-fdf4dbcb5894",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 1.19,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-fdf4dbcb5894 /tmp/ct-gjnq86om\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.19, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-fdf4dbcb5894 /tmp/ct-gjnq86om\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 23120 1795267668715",
+      "initialize 23120 1795267668718",
+      "tools/list 23120 1795267668733",
+      "eof 23120 1795267668791",
+      "sigterm 23120 1795267668791"
+     ],
+     "seconds": 11.74,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a30d702c6bc4",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 0.93,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a30d702c6bc4 /tmp/ct-714btpuh\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.93, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a30d702c6bc4 /tmp/ct-714btpuh\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 23323 1795267680241",
+      "initialize 23323 1795267680243",
+      "tools/list 23323 1795267680249",
+      "sigterm 23323 1795267680270"
+     ],
+     "seconds": 11.48,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a7c27004c2c9",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 1.14,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a7c27004c2c9 /tmp/ct-cv5ndrvg\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.14, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a7c27004c2c9 /tmp/ct-cv5ndrvg\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 23637 1795267691923",
+      "initialize 23637 1795267691927",
+      "tools/list 23637 1795267691934",
+      "eof 23637 1795267691967",
+      "sigterm 23637 1795267691968"
+     ],
+     "seconds": 11.69,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-72db135eae74",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 1.14,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-72db135eae74 /tmp/ct-yaf5afix\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.14, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-72db135eae74 /tmp/ct-yaf5afix\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 23886 1795267703578",
+      "initialize 23886 1795267703580",
+      "tools/list 23886 1795267703609",
+      "eof 23886 1795267703657",
+      "sigterm 23886 1795267703657"
+     ],
+     "seconds": 11.7,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-64218311b351",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 1.4,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-64218311b351 /tmp/ct-ezxvia_c\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.4, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-64218311b351 /tmp/ct-ezxvia_c\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 24143 1795267715569",
+      "initialize 24143 1795267715572",
+      "tools/list 24143 1795267715582",
+      "sigterm 24143 1795267715608"
+     ],
+     "seconds": 11.95,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-6bc72d351f95",
+     "scenario": "wrapped",
+     "closed": {
+      "cli_seconds": 1.27,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "T  MCP Servers\n|\n\u2022  \u2713 fx \u001b[90mconnected\n|      \u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-6bc72d351f95 /tmp/ct-foetmejb\n|\n\u2014  1 server(s)\n\n\u001b[0m\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 1.27, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"T  MCP Servers\\n|\\n\\u2022  \\u2713 fx \\u001b[90mconnected\\n|      \\u001b[90m/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-6bc72d351f95 /tmp/ct-foetmejb\\n|\\n\\u2014  1 server(s)\\n\\n\\u001b[0m\\n\"}"
+     ],
+     "markers": [
+      "start 24368 1795267727376",
+      "initialize 24368 1795267727379",
+      "tools/list 24368 1795267727399",
+      "sigterm 24368 1795267727431"
+     ],
+     "seconds": 11.83,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  }
+ ]
+}
