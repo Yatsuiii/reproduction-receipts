@@ -1,0 +1,109 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "git",
+  "url": "https://github.com/xgabaixLab/Behavioral-New-Keynesian-Model-AER-2020",
+  "commit": "4ca774b68454c89621671ce84c59bb8a15e6f1a0"
+ },
+ "when": "2026-11-21T10:23:16Z",
+ "triage_sha256": "42fe3acc44ecb384ba61c190862dd5f58ac33d0d2e15650289c1fc23359b63f6",
+ "options": "--have matlab,stata --check-links",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 1,
+   "deviation": 0,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`_results.mat` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Original AER Replication Dynare 4.5.3/zlbCostResult.m:16",
+     "zlbCostResult.m:16"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "Original AER Replication Dynare 4.5.3/main.m",
+     "Original AER Replication Dynare 4.5.3/mainBRNKAugmentedPermanentShock.m",
+     "Original AER Replication Dynare 4.5.3/mainBRNKAugmentedTemporaryShock.m",
+     "Original AER Replication Dynare 4.5.3/mainForwardGuidance.m",
+     "Original AER Replication Dynare 4.5.3/mainOptimalPolicy.m"
+    ]
+   },
+   {
+    "code": "LINK_UNREACHABLE",
+    "severity": "note",
+    "message": "2 other links could not be reached from this machine (DNS, refused, timeout or proxy). That may be this machine's network rather than the link.",
+    "evidence": [
+     "https://www.aeaweb.org/articles?id=10.1257/aer.20162005",
+     "https://www.openicpsr.org/openicpsr/project/117842/version/V1/view"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 49,
+   "bytes": 864907,
+   "languages": [
+    "dynare",
+    "matlab"
+   ],
+   "code_files": {
+    "dynare": 10,
+    "matlab": 20
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": [
+    "Original AER Replication Dynare 4.5.3/main.m",
+    "main.m"
+   ]
+  },
+  "inputs": {
+   "reads": 14,
+   "writes": 16,
+   "missing": [
+    "_results.mat"
+   ],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 2,
+   "checked": true,
+   "results": [
+    {
+     "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20162005",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://www.openicpsr.org/openicpsr/project/117842/version/V1/view",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    }
+   ]
+  },
+  "seconds": 0.286
+ }
+}

@@ -12,6 +12,10 @@ Small verification runs on third-party scientific code. Each receipt names an up
 
 This is one library example, not a neuroimaging paper replication or a complete native-I/O audit. The checksums document bytes; they do not independently prove that a run happened. The public CI procedure avoids the original harness and produces an inspectable execution log and artifact. It is hosted CI corroboration, not independent human scientific review.
 
+## Package triage
+
+[`triage/`](triage/README.md) decides in about a second whether a replication package can run at all, and why not, before a rerun is attempted. On six held-out journal packages its verdict agreed with a hand reading 4 times in 6, the same as assuming every package is blocked; its stated reason was right 3 times in 6. [Review, with every failure](triage/results/heldout_review.md).
+
 ## Next target
 
 [A published neuroimaging paper with deprecated APIs and committed score caches](NEXT_TARGET.md). Selection is a preflight decision, not a finding of numerical non-reproduction.
