@@ -64,4 +64,4 @@ Do the spec's sequence in `close()`, with the same 2 s steps the official SDK us
 
 One thing it does not change: if the server is started through a launcher such as `npx`, signalling the launcher's pid does not reach the server (npm 10.9.9 does not pass SIGTERM on, measured 10/10). The official SDK has the same limit. Killing the process group would cover that; I left it out to keep this change small.
 
-Full harness, controls and raw trials: <link to receipt>
+Full harness, controls and raw trials: https://github.com/yatsuiii/reproduction-receipts/tree/claude/project-thread-757w48/client-teardown

@@ -65,4 +65,4 @@ Close the stdio transport when the last context exits:
 
 With this, every row above comes out clean 10/10, the per-request test leaves 0 servers in 10/10 trials, and `tests/test_mcp.py` passes (178 passed, 19 skipped). Passing `keep_alive=False` in `load_mcp_toolsets()` would be a smaller change but would not cover a user-built `StdioTransport`. If keeping the server warm between `async with` blocks is intended, then the docs line about stopping subprocesses is what needs changing, and the per-request pile-up is still worth a warning.
 
-Full harness, controls and raw trials: <link to receipt>
+Full harness, controls and raw trials: https://github.com/yatsuiii/reproduction-receipts/tree/claude/project-thread-757w48/client-teardown
