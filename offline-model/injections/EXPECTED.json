@@ -1,0 +1,20 @@
+{
+ "format": "offline-injections/1",
+ "note": "Written before harness.py, verify.py or any model run existed. Each case names a way the receipt could lie or the run could quietly cheat, and the outcome the code must produce. Tests in ../tests build each case from a stub model, so they need no weights and no network.",
+ "cases": {
+  "network_present": {"stage": "harness preflight", "setup": "run with a network interface other than lo available", "expect": "refuse before loading weights, exit 3, reason names the interfaces seen"},
+  "network_connect_attempt": {"stage": "harness during inference", "setup": "model code calls socket.connect to any address", "expect": "connect blocked by audit hook, run marked failed, exit 4, attempted address listed in run.json"},
+  "dns_lookup_attempt": {"stage": "harness during inference", "setup": "model code calls socket.getaddrinfo for a hostname", "expect": "lookup blocked, run marked failed, exit 4, hostname listed in run.json"},
+  "weights_tampered": {"stage": "harness preflight", "setup": "one byte of a weights file differs from MODEL.json", "expect": "refuse before loading, exit 2, reason names the file and both hashes"},
+  "weights_missing": {"stage": "harness preflight", "setup": "a file listed in MODEL.json is absent", "expect": "refuse, exit 2, no download attempted"},
+  "weights_extra_file": {"stage": "harness preflight", "setup": "an unlisted file is in the weights directory", "expect": "refuse, exit 2, reason names the file"},
+  "task_tampered": {"stage": "harness preflight", "setup": "items.jsonl differs from its pinned hash", "expect": "refuse, exit 2"},
+  "dirty_checkout": {"stage": "harness preflight", "setup": "a tracked file in the checkout is modified", "expect": "refuse, exit 5, unless --allow-dirty is passed, in which case run.json records dirty=true and the diff"},
+  "predictions_edited": {"stage": "verify", "setup": "one prediction in predictions.csv flipped after the run", "expect": "verify FAIL, names the file and both hashes"},
+  "accuracy_misreported": {"stage": "verify", "setup": "run.json states an accuracy the predictions and labels do not give", "expect": "verify FAIL, names the stated and recomputed values"},
+  "label_edited": {"stage": "verify", "setup": "a label in items.jsonl changed after the run", "expect": "verify FAIL on the task hash"},
+  "runs_disagree": {"stage": "compare", "setup": "two runs with one differing prediction", "expect": "compare FAIL, lists the item id"},
+  "logits_drift_within_tolerance": {"stage": "compare", "setup": "two runs with identical predictions and logit margins differing by 1e-5", "expect": "compare PASS on predictions, reports the max margin difference, does not claim byte identity of logits"},
+  "failed_run_hidden": {"stage": "verify", "setup": "a run directory listed in RUNS.json is deleted", "expect": "verify FAIL, every attempted run must stay listed, failed ones included"}
+ }
+}

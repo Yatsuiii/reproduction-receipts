@@ -1,0 +1,13 @@
+{
+ "format": "offline-frozen/1",
+ "roots": [
+  "task",
+  "injections"
+ ],
+ "files": {
+  "task/README.md": "5b458284e2a64a1386d3fc8bf41f3d4d8cf3de5e95510673fa351eadaf57b70e",
+  "task/items.jsonl": "d7ca7ec4ff141549de092595e967b8e74aa4fd191e0a9b183dea2cee5c8156c3",
+  "task/prompt.json": "c02dc49711d5a302506c60ade50773f32b44c72ddd4ea46456da5a0c27d568a6",
+  "injections/EXPECTED.json": "70255d703e920a7e37546a57ff7cb083d3a82d1c6db357169cb9e4bca8cc24b9"
+ }
+}

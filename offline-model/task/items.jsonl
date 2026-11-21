@@ -1,0 +1,60 @@
+{"id": "p01", "text": "Patient in bed 14 reports pain 6/10 after the second dose.", "label": "NO"}
+{"id": "p02", "text": "Please call Priya Raman back about her claim before Friday.", "label": "YES"}
+{"id": "p03", "text": "Invoice 88213 totals 4,120.50 USD and is due on 30 November.", "label": "NO"}
+{"id": "p04", "text": "Reach the account holder at m.okafor@fastmail.com for the signature.", "label": "YES"}
+{"id": "p05", "text": "ICD-10 code J45.909 was added to the problem list.", "label": "NO"}
+{"id": "p06", "text": "The claimant's phone is 415-555-0182, best after 6 pm.", "label": "YES"}
+{"id": "p07", "text": "Shipment 7Q-221 left the depot at 06:40 with 12 pallets.", "label": "NO"}
+{"id": "p08", "text": "DOB 03/11/1984, MRN 00451877, admitted via emergency.", "label": "YES"}
+{"id": "p09", "text": "Room 3B needs a new pump before the 2 pm round.", "label": "NO"}
+{"id": "p10", "text": "Transfer approved for Daniel Kowalczyk, sort code 20-45-61.", "label": "YES"}
+{"id": "p11", "text": "Quarterly churn rose to 4.2 percent in the northern region.", "label": "NO"}
+{"id": "p12", "text": "Send the discharge letter to 22 Elm Row, Leith, EH7 4AA.", "label": "YES"}
+{"id": "p13", "text": "The nurse on shift flagged a missed dose at 03:00.", "label": "NO"}
+{"id": "p14", "text": "SSN 078-05-1120 appears on the scanned intake form.", "label": "YES"}
+{"id": "p15", "text": "Firmware 2.4.1 fixes the overheating fault on unit C.", "label": "NO"}
+{"id": "p16", "text": "Mrs. Alvarez asked to move her appointment to Tuesday.", "label": "YES"}
+{"id": "p17", "text": "Batch 5521 failed QA because of a seal defect.", "label": "NO"}
+{"id": "p18", "text": "Passport number X4829117 was recorded at check-in.", "label": "YES"}
+{"id": "p19", "text": "The model flagged 312 transactions for manual review.", "label": "NO"}
+{"id": "p20", "text": "Contact: +44 7700 900461 (Tom).", "label": "YES"}
+{"id": "p21", "text": "Order total is 19 units at 44 dollars each.", "label": "NO"}
+{"id": "p22", "text": "Akira Tanaka's blood pressure was 148/92 this morning.", "label": "YES"}
+{"id": "p23", "text": "The ward has 3 empty beds and 2 pending admissions.", "label": "NO"}
+{"id": "p24", "text": "Card ending 4417 belongs to the customer who called today.", "label": "NO"}
+{"id": "p25", "text": "Email jsmith1979@gmail.com bounced twice this week.", "label": "YES"}
+{"id": "p26", "text": "Server rack 9 lost power for eleven minutes.", "label": "NO"}
+{"id": "p27", "text": "Dr. Nkemelu signed the consent form at 10:15.", "label": "YES"}
+{"id": "p28", "text": "Policy GL-2290 renews on the first of the month.", "label": "NO"}
+{"id": "p29", "text": "Home address on file: 1849 Willow Creek Dr, Austin TX 78704.", "label": "YES"}
+{"id": "p30", "text": "Average wait time in clinic B was 38 minutes.", "label": "NO"}
+{"id": "p31", "text": "Ref 2023-0441: the applicant withdrew before interview.", "label": "NO"}
+{"id": "p32", "text": "Fatima Zahra Benali will collect the documents in person.", "label": "YES"}
+{"id": "p33", "text": "Lab result: potassium 5.8 mmol/L, repeat in 4 hours.", "label": "NO"}
+{"id": "p34", "text": "NHS number 943 476 5919 is attached to this referral.", "label": "YES"}
+{"id": "p35", "text": "The pilot program covered 40 branches across 3 states.", "label": "NO"}
+{"id": "p36", "text": "Grandmother of the patient, Rosa Lima, is the emergency contact.", "label": "YES"}
+{"id": "p37", "text": "Ticket 55102 was escalated to tier 2 support.", "label": "NO"}
+{"id": "p38", "text": "Account 0012-4478-9921 was opened by Leon Ferreira in 2019.", "label": "YES"}
+{"id": "p39", "text": "Temperature in cold store 2 held at 4 degrees overnight.", "label": "NO"}
+{"id": "p40", "text": "Born 17 July 1962 in Cork, the applicant lists no dependants.", "label": "YES"}
+{"id": "p41", "text": "Release candidate 7 passed all 1,204 regression tests.", "label": "NO"}
+{"id": "p42", "text": "Text from 202-555-0147: running late, start without me.", "label": "YES"}
+{"id": "p43", "text": "Vendor Northwind Ltd raised its unit price by 3 percent.", "label": "NO"}
+{"id": "p44", "text": "Officer Brennan took the statement at the scene.", "label": "YES"}
+{"id": "p45", "text": "Two of the five audit findings remain open.", "label": "NO"}
+{"id": "p46", "text": "Employee ID E-30917 belongs to Sara Lindqvist in payroll.", "label": "YES"}
+{"id": "p47", "text": "The patient declined the flu vaccine today.", "label": "NO"}
+{"id": "p48", "text": "Wire to beneficiary Omar Haddad, IBAN DE89 3704 0044 0532 0130 00.", "label": "YES"}
+{"id": "p49", "text": "Drone unit 4 returned with 22 percent battery.", "label": "NO"}
+{"id": "p50", "text": "Her mobile, 0412 555 019, is the only number we have.", "label": "YES"}
+{"id": "p51", "text": "Model version 3.1 cut false positives by a fifth.", "label": "NO"}
+{"id": "p52", "text": "Kindly forward the scan to chen.wei@clinic-mail.org.", "label": "YES"}
+{"id": "p53", "text": "Loan application 9921 is waiting on an income check.", "label": "NO"}
+{"id": "p54", "text": "Mr. and Mrs. Obi requested a joint statement.", "label": "YES"}
+{"id": "p55", "text": "The building at 100 Main Street hosts our regional office.", "label": "NO"}
+{"id": "p56", "text": "Interpreter needed for the patient in cubicle 6.", "label": "NO"}
+{"id": "p57", "text": "Driver licence D1234-56789-01234 was photographed at the desk.", "label": "YES"}
+{"id": "p58", "text": "Twelve customers reported the outage before 9 am.", "label": "NO"}
+{"id": "p59", "text": "Note from Gareth: the keys are with reception.", "label": "YES"}
+{"id": "p60", "text": "Contract value is 1.2 million over three years.", "label": "NO"}
