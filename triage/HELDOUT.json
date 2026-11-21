@@ -1,0 +1,17 @@
+{
+ "format": "triage-heldout/1",
+ "written": "2026-11-21, before triage.py was run on any of these packages",
+ "triage_sha256": "42fe3acc44ecb384ba61c190862dd5f58ac33d0d2e15650289c1fc23359b63f6",
+ "selection_rule": "Public GitHub repositories found by searching for 'replication package/files' that are the authors' own package for a named journal article, mixed across Stata, MATLAB, R and Python/Julia. Third-party re-replications were excluded. Pinned at their HEAD commit on the day of selection.",
+ "options": ["--have", "stata,matlab", "--check-links"],
+ "options_reason": "Economics data desks normally hold Stata and often MATLAB licences; the verdict without them is trivially blocked.",
+ "rule": "Each package is triaged once with this exact triage.py. Its verdict is then compared with a hand reading of the package's README, and every disagreement is recorded in results/heldout_review.md. triage.py is not changed in this pull request in response to these packages.",
+ "packages": [
+  {"repo": "skhiggins/BachasGertlerHigginsSeira_JF_replication", "commit": "bf71158ff85e148ac8e6d4b6b44258d2f7625026", "journal": "Journal of Finance"},
+  {"repo": "xgabaixLab/Behavioral-New-Keynesian-Model-AER-2020", "commit": "4ca774b68454c89621671ce84c59bb8a15e6f1a0", "journal": "American Economic Review"},
+  {"repo": "korenmiklos/imported-inputs-and-productivity-replication", "commit": "a24e5f08085af959275e36c3b5ba65836dd6e2bc", "journal": "American Economic Review"},
+  {"repo": "mwaugh0328/welfare-rural-urban-migration", "commit": "573c5bffcb0185f482eca89e7151333ef66a72f9", "journal": "Econometrica"},
+  {"repo": "CMK-EEC-Food/JDE_replication", "commit": "4616a49bfa67aab2cfba215f80bcf914d1043651", "journal": "Journal of Development Economics"},
+  {"repo": "Ellakirchner/GetInTheZone_JDE", "commit": "cf696bc1d756df185fca391933326fd3fb06b7b0", "journal": "Journal of Development Economics"}
+ ]
+}

@@ -1,0 +1,22 @@
+name: Triage tests
+on:
+  pull_request:
+    paths: ['triage/**', 'scripts/hooks/**', '.github/workflows/triage.yml']
+  push:
+    branches: [main]
+    paths: ['triage/**', 'scripts/hooks/**', '.github/workflows/triage.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04            # setup-python has no 3.12.10 build for Ubuntu 26.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Frozen failure injections unchanged
+        run: python triage/check_frozen.py
+      - name: Tests (stdlib only, no network beyond a local test server)
+        run: python -m unittest discover -s triage/tests -v

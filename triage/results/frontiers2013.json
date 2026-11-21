@@ -1,0 +1,226 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "git",
+  "url": "https://github.com/AlexandreAbraham/frontiers2013",
+  "commit": "97bf25836804195401ef213f963135957b431d70"
+ },
+ "when": "2026-11-21T10:22:57Z",
+ "triage_sha256": "42fe3acc44ecb384ba61c190862dd5f58ac33d0d2e15650289c1fc23359b63f6",
+ "options": "--check-links",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 4,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "NO_DEPENDENCY_SPEC",
+    "severity": "deviation",
+    "message": "Python code imports distutils, lxml, matplotlib, nibabel, nilearn, numpy, pylab, scipy, sklearn but the package has no requirements file, environment file or lockfile. A rerun must choose versions and log them.",
+    "evidence": [
+     "scripts/adhd_clustering.py",
+     "scripts/adhd_ica.py",
+     "scripts/haxby_decoding.py",
+     "scripts/miyawaki_decoding.py",
+     "scripts/miyawaki_encoding.py"
+    ]
+   },
+   {
+    "code": "REMOVED_API",
+    "severity": "deviation",
+    "message": "Code uses APIs that current releases no longer have: NumPy scalar aliases (np.int, np.float, ...) (removed in NumPy 1.24); nibabel get_data() (removed in nibabel 5.0); nibabel get_affine() / get_header() (deprecated, removed in later nibabel); sklearn.cross_validation (removed in scikit-learn 0.20); sklearn.externals.joblib / six (removed in scikit-learn 0.23); sklearn.datasets.base (removed in scikit-learn 0.24); distutils (removed from the standard library in Python 3.12). Nothing pins versions old enough, so a rerun must either reconstruct an old environment or edit the code, and log which.",
+    "evidence": [
+     "scripts/adhd_clustering.py:33",
+     "scripts/haxby_decoding.py:21",
+     "scripts/haxby_decoding.py:25",
+     "scripts/haxby_decoding.py:152",
+     "scripts/miyawaki_decoding.py:47",
+     "scripts/miyawaki_decoding.py:54",
+     "scripts/miyawaki_encoding.py:40",
+     "scripts/utils/datasets.py:1252",
+     "scripts/utils/searchlight.py:288",
+     "scripts/utils/searchlight.py:305"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code fetches data over the network when it runs (fetch_adhd, fetch_haxby, fetch_haxby_simple, fetch_miyawaki2008, urlopen). What the server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+    "evidence": [
+     "scripts/adhd_clustering.py:27",
+     "scripts/adhd_ica.py:11",
+     "scripts/haxby_decoding.py:40",
+     "scripts/haxby_decoding.py:41",
+     "scripts/miyawaki_decoding.py:9",
+     "scripts/miyawaki_encoding.py:14",
+     "scripts/utils/datasets.py:335"
+    ]
+   },
+   {
+    "code": "NO_RUN_ORDER",
+    "severity": "deviation",
+    "message": "6 scripts, no master script, and the README does not name an order. A rerun must choose one and log it.",
+    "evidence": [
+     "scripts/adhd_clustering.py",
+     "scripts/adhd_ica.py",
+     "scripts/haxby_decoding.py",
+     "scripts/miyawaki_decoding.py",
+     "scripts/miyawaki_encoding.py",
+     "scripts/visualization_101.py"
+    ]
+   },
+   {
+    "code": "PRECOMPUTED_OUTPUTS",
+    "severity": "note",
+    "message": "Files the code both writes and reads are already in the package: miyawaki/lr_coef.npy, miyawaki/lr_scores.npy, miyawaki/svc_coef.npy, miyawaki/svc_scores.npy, miyawaki/svcl2_scores.npy. A run may read these instead of recomputing them. A receipt must say whether it replayed them or recomputed them, and a matching output hash alone does not show recomputation.",
+    "evidence": [
+     "miyawaki/lr_coef.npy",
+     "miyawaki/lr_scores.npy",
+     "miyawaki/svc_coef.npy",
+     "miyawaki/svc_scores.npy",
+     "miyawaki/svcl2_scores.npy"
+    ]
+   },
+   {
+    "code": "LINK_UNREACHABLE",
+    "severity": "note",
+    "message": "13 other links could not be reached from this machine (DNS, refused, timeout or proxy). That may be this machine's network rather than the link.",
+    "evidence": [
+     "http://nilearn.github.io",
+     "http://www.bic.mni.mcgill.ca/~vfonov/icbm/2009/",
+     "http://www.pymvpa.org/files/pymvpa_exampledata.tar.bz2",
+     "http://data.pymvpa.org/datasets/haxby2001/",
+     "http://www.nitrc.org/frs/download.php/1071/NYU_TRT_session1a.tar.gz",
+     "http://www.nitrc.org/frs/download.php/1072/NYU_TRT_session1b.tar.gz",
+     "http://www.nitrc.org/frs/download.php/1073/NYU_TRT_session2a.tar.gz",
+     "http://www.nitrc.org/frs/download.php/1074/NYU_TRT_session2b.tar.gz",
+     "http://www.nitrc.org/frs/download.php/1075/NYU_TRT_session3a.tar.gz",
+     "http://www.nitrc.org/frs/download.php/1076/NYU_TRT_session3b.tar.gz"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 129,
+   "bytes": 97449167,
+   "languages": [
+    "python"
+   ],
+   "code_files": {
+    "python": 11
+   },
+   "docs_read": [
+    "README.md",
+    "submission/README.md",
+    "submission_review/README.md",
+    "submission_review_2/README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 5,
+   "writes": 46,
+   "missing": [],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 13,
+   "checked": true,
+   "results": [
+    {
+     "url": "http://connectir.projects.nitrc.org",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://data.pymvpa.org/datasets/haxby2001/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://nilearn.github.io",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.bic.mni.mcgill.ca/~vfonov/icbm/2009/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.nitrc.org/frs/download.php/1071/NYU_TRT_session1a.tar.gz",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.nitrc.org/frs/download.php/1072/NYU_TRT_session1b.tar.gz",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.nitrc.org/frs/download.php/1073/NYU_TRT_session2a.tar.gz",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.nitrc.org/frs/download.php/1074/NYU_TRT_session2b.tar.gz",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.nitrc.org/frs/download.php/1075/NYU_TRT_session3a.tar.gz",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.nitrc.org/frs/download.php/1076/NYU_TRT_session3b.tar.gz",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "http://www.pymvpa.org/files/pymvpa_exampledata.tar.bz2",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "https://team.inria.fr/parietal/files/2013/05/MSDL_rois.zip",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://www.nitrc.org/frs/download.php",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    }
+   ]
+  },
+  "seconds": 0.502
+ }
+}

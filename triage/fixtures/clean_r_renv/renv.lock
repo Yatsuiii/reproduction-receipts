@@ -1,0 +1,7 @@
+{
+  "R": {"Version": "4.3.2", "Repositories": [{"Name": "CRAN", "URL": "https://cloud.r-project.org"}]},
+  "Packages": {
+    "fixest": {"Package": "fixest", "Version": "0.11.2", "Source": "Repository"},
+    "data.table": {"Package": "data.table", "Version": "1.15.0", "Source": "Repository"}
+  }
+}

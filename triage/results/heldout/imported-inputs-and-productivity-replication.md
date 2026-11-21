@@ -1,0 +1,53 @@
+# Triage verdict: BLOCKED
+
+- Package: `https://github.com/korenmiklos/imported-inputs-and-productivity-replication` at commit `a24e5f08085af959275e36c3b5ba65836dd6e2bc`
+- Triaged: 2026-11-21T10:23:19Z on Linux-6.18.44-fc-v726-x86_64-with-glibc2.39, Python 3.13.18, 0.462 s of analysis
+- Triage script: `triage.py` SHA-256 `42fe3acc44ecb384ba61c190862dd5f58ac33d0d2e15650289c1fc23359b63f6`; options: --have matlab,stata --check-links
+- 6 blockers, 3 deviations, 5 notes
+
+Triage reads the package and never executes it. This verdict says whether the committed materials can be run on this desk and what a rerun would have to change. It says nothing about whether the paper's results are correct.
+
+## Blockers
+
+- **MISSING_INPUT_RESTRICTED**: `../doc/foreignpresence_tfp_gain.dta` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data ("confidential"), so it is most likely one of those.
+  Evidence: `code/table9.do:36`
+- **MISSING_INPUT_UNDOCUMENTED**: `datastore'/customs/import/hs6imports.dta` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.
+  Evidence: `code/import_margins.do:25`
+- **MISSING_INPUT_UNDOCUMENTED**: `../data/impmanuf.dta` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.
+  Evidence: `code/decomposition.do:63`, `code/import_margins.do:20`, `code/import_margins.do:77`, `code/numbers-in-text.do:15`, `code/numbers-in-text.do:72`
+- **MISSING_INPUT_RESTRICTED**: `it.do` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data ("confidential"), so it is most likely one of those.
+  Evidence: `code/all_graphs.do:6`
+- **MISSING_INPUT_RESTRICTED**: `the.do` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data ("confidential"), so it is most likely one of those.
+  Evidence: `code/run_the_estimation.do:5`
+- **MISSING_INPUT_UNDOCUMENTED**: `using` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.
+  Evidence: `code/csvmerge.ado:8`
+
+## Deviations a rerun would have to log
+
+- **PYTHON2_SYNTAX**: 2 Python files do not parse as Python 3, most likely Python 2. A rerun needs a Python 2.7 interpreter (end of life since 2020) or a port, and either is a logged deviation.
+  Evidence: `code/filename_parser.py:23`, `code/write_results_to_excel.py:156`
+- **NO_DEPENDENCY_SPEC**: Python code imports StringIO but the package has no requirements file, environment file or lockfile. A rerun must choose versions and log them.
+  Evidence: `code/filename_parser.py`, `code/write_results_to_excel.py`
+- **STATA_NETWORK_INSTALL**: Do-files install graphexportpdf from the network at run time, with no version pinned and no copy bundled. SSC serves the current version, which may differ from the authors'.
+  Evidence: `code/all_graphs.do:9`
+
+## Notes
+
+- **SOFTWARE_REQUIRED**: Requires Stata (version 10, 12, 9 named in code); the desk says it has it.
+  Evidence: `code/all_graphs.do`, `code/collapse-and-draw-graph.do`, `code/counterfactual.do`, `code/csvmerge.ado`, `code/decomposition.do`
+- **PRECOMPUTED_OUTPUTS**: Files the code both writes and reads are already in the package: dir'/estimates.csv. A run may read these instead of recomputing them. A receipt must say whether it replayed them or recomputed them, and a matching output hash alone does not show recomputation.
+  Evidence: `dir'/estimates.csv`
+- **UNRESOLVED_PATHS**: 7 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.
+  Evidence: `code/all_graphs.do:73`, `code/collapse-and-draw-graph.do:19`, `code/estimate_specification.do:28`, `code/estimate_specification.do:31`, `code/load_specification.do:25`, `code/prepare_for_estimation.do:13`, `code/reducer.do:17`
+- **LINK_UNREACHABLE**: 1 other links could not be reached from this machine (DNS, refused, timeout or proxy). That may be this machine's network rather than the link.
+  Evidence: `http://www.mtakti.hu/english/`
+- **NO_LICENCE**: No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.
+
+## What triage looked at
+
+- 9502 files, 87,733,828 bytes. Languages: python (2), stata (32).
+- Documentation read: README.md. Licences named: none.
+- Master scripts: code/Makefile.
+- File reads traced: 61; writes: 27; unresolved paths: 7; missing: foreignpresence_tfp_gain.dta, hs6imports.dta, impmanuf.dta, it.do, the.do, using.
+- Links found: 1; checked: yes.
+  - http://www.mtakti.hu/english/: FAILED (URLError: <urlopen error [Errno -2] Name or service not known>)
