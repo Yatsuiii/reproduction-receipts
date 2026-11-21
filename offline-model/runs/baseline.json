@@ -1,0 +1,528 @@
+{
+ "format": "offline-baseline/1",
+ "items": 60,
+ "majority": {
+  "correct": 32,
+  "accuracy": 0.533333,
+  "wrong": [
+   "p02",
+   "p04",
+   "p06",
+   "p08",
+   "p10",
+   "p12",
+   "p14",
+   "p16",
+   "p18",
+   "p20",
+   "p22",
+   "p25",
+   "p27",
+   "p29",
+   "p32",
+   "p34",
+   "p36",
+   "p38",
+   "p40",
+   "p42",
+   "p44",
+   "p46",
+   "p48",
+   "p50",
+   "p52",
+   "p54",
+   "p57",
+   "p59"
+  ]
+ },
+ "regex": {
+  "correct": 53,
+  "accuracy": 0.883333,
+  "wrong": [
+   "p02",
+   "p22",
+   "p31",
+   "p32",
+   "p36",
+   "p55",
+   "p59"
+  ]
+ },
+ "rows": [
+  {
+   "id": "p01",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p02",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p03",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p04",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "email"
+   ]
+  },
+  {
+   "id": "p05",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p06",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run"
+   ]
+  },
+  {
+   "id": "p07",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p08",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run",
+    "id_keyword"
+   ]
+  },
+  {
+   "id": "p09",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p10",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "id_keyword"
+   ]
+  },
+  {
+   "id": "p11",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p12",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "street"
+   ]
+  },
+  {
+   "id": "p13",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p14",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run",
+    "id_keyword"
+   ]
+  },
+  {
+   "id": "p15",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p16",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "title"
+   ]
+  },
+  {
+   "id": "p17",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p18",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "id_keyword"
+   ]
+  },
+  {
+   "id": "p19",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p20",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run"
+   ]
+  },
+  {
+   "id": "p21",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p22",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p23",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p24",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p25",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "email"
+   ]
+  },
+  {
+   "id": "p26",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p27",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "title"
+   ]
+  },
+  {
+   "id": "p28",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p29",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "street"
+   ]
+  },
+  {
+   "id": "p30",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p31",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run"
+   ]
+  },
+  {
+   "id": "p32",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p33",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p34",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run",
+    "id_keyword"
+   ]
+  },
+  {
+   "id": "p35",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p36",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p37",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p38",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run"
+   ]
+  },
+  {
+   "id": "p39",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p40",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "id_keyword"
+   ]
+  },
+  {
+   "id": "p41",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p42",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run"
+   ]
+  },
+  {
+   "id": "p43",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p44",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "title"
+   ]
+  },
+  {
+   "id": "p45",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p46",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "id_keyword"
+   ]
+  },
+  {
+   "id": "p47",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p48",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run",
+    "id_keyword"
+   ]
+  },
+  {
+   "id": "p49",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p50",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run"
+   ]
+  },
+  {
+   "id": "p51",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p52",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "email"
+   ]
+  },
+  {
+   "id": "p53",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p54",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "title"
+   ]
+  },
+  {
+   "id": "p55",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "street"
+   ]
+  },
+  {
+   "id": "p56",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p57",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "YES",
+   "regex_rules": [
+    "digit_run",
+    "id_keyword"
+   ]
+  },
+  {
+   "id": "p58",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p59",
+   "label": "YES",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  },
+  {
+   "id": "p60",
+   "label": "NO",
+   "majority": "NO",
+   "regex": "NO",
+   "regex_rules": []
+  }
+ ]
+}

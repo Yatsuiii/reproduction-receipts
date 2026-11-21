@@ -1,0 +1,6 @@
+install_seconds=31
+fetch_seconds=28
+runner_name=GitHub Actions 1000000869
+image_os=ubuntu22
+image_version=20261116.365.1
+matrix_image=ubuntu-22.04

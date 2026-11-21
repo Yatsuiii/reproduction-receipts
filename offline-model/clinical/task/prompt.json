@@ -1,0 +1,6 @@
+{
+ "system": "You read clinical notes for a hospital audit. Answer with exactly one word: YES or NO.",
+ "user_template": "Does the note below ask the care team to do something they have not yet done, such as start, stop, change, order, arrange, refer, check or monitor something? A conditional plan ('if X, do Y') counts as YES. Something already done, a decision not to act, a plain observation, or a wish from the patient or family with no plan from the clinician is NO.\n\nNote: {text}\n\nAnswer YES or NO.",
+ "answers": ["YES", "NO"],
+ "decision": "Compare the model's next-token logit for the first token of each answer after the assistant turn opens. Higher wins. No sampling, no generation."
+}

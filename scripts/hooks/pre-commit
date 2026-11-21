@@ -1,6 +1,8 @@
 #!/bin/sh
-# Blocks commits that change frozen triage fixtures or agent-receipts injections without updating their FROZEN.json.
+# Blocks commits that change frozen triage fixtures, agent-receipts injections or offline-model files without updating their FROZEN.json.
 # Install for this repo: git config core.hooksPath scripts/hooks
 top=$(git rev-parse --show-toplevel) || exit 1
 python3 "$top/triage/check_frozen.py" || exit 1
 python3 "$top/agent-receipts/check_frozen.py" || exit 1
+# Same guard for the offline-model receipt's task, injections and frozen entry points.
+python3 "$top/offline-model/check_frozen.py" || exit 1
