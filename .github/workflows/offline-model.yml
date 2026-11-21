@@ -5,7 +5,10 @@ name: Offline model receipt
 # verifies both runs from a clean checkout and compares them.
 on:
   pull_request:
+    types: [opened, reopened, ready_for_review, synchronize]
     paths: ['offline-model/**', '.github/workflows/offline-model.yml']
+# Tests run on every push. The model runs (about 10 runner-minutes) run only when the PR is opened, reopened or
+# marked ready for review, so a docs-only push does not spend another scored run.
 permissions:
   contents: write   # each run job commits its own evidence directory to this PR branch
 concurrency:
@@ -27,6 +30,7 @@ jobs:
 
   run:
     needs: tests
+    if: github.event.action != 'synchronize'
     strategy:
       fail-fast: false
       matrix:
@@ -94,6 +98,8 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          mkdir -p "offline-model/runs/$RUN_ID"
+          echo "${{ job.status }}" > "offline-model/runs/$RUN_ID/job_status.txt"
           git add -f offline-model/runs/
           git commit -m "offline-model: evidence from $RUN_ID (${{ matrix.image }}, job status ${{ job.status }})"
           for i in 1 2 3 4 5; do
@@ -104,7 +110,7 @@ jobs:
 
   check:
     needs: run
-    if: always()
+    if: always() && github.event.action != 'synchronize'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:

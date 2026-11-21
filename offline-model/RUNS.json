@@ -2,7 +2,51 @@
  "format": "offline-ledger/1",
  "note": "Every attempt, failed ones included. `runs` have a run directory with a run.json that verify.py ledger checks. `attempts` died before any run directory existed and are listed so they cannot be dropped quietly.",
  "attempts": [
-  {"id": "gha-44905916825-1", "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44905916825", "commit": "5581caf73f6c1ebb9abaa038fc1eda8d4a2f4ed0", "status": "failed before scoring", "why": "Both machines refused at the commit check: the one-off discover workflow re-ran on the same push and committed a second, different dependency lock to the branch, so the branch no longer pointed at the commit under test. No weights were loaded. The evidence step then failed too, because the run directory had not been created yet. The second lock was reverted (frozen check caught it) and the discover workflow removed."}
+  {
+   "id": "gha-44905916825-1",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44905916825",
+   "commit": "5581caf73f6c1ebb9abaa038fc1eda8d4a2f4ed0",
+   "status": "failed before scoring",
+   "why": "Both machines refused at the commit check: the one-off discover workflow re-ran on the same push and committed a second, different dependency lock to the branch, so the branch no longer pointed at the commit under test. No weights were loaded. The evidence step then failed too, because the run directory had not been created yet. The second lock was reverted (frozen check caught it) and the discover workflow removed."
+  },
+  {
+   "id": "gha-44905951637-1",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44905951637",
+   "commit": "9557749f4abe27cfe9de583c3ab49785317db6b1",
+   "status": "never ran",
+   "why": "Triggered by the bot's second-lock commit; GitHub held it as action_required (bot-pushed commits need approval). That commit was reverted."
+  }
  ],
- "runs": []
+ "runs": [
+  {
+   "id": "gha-44906039993-1-a-network-up",
+   "dir": "runs/gha-44906039993-1-a-network-up",
+   "status": "refused",
+   "machine": "a, ubuntu-24.04",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906039993",
+   "note": "Expected refusal: harness started with the network up, exit 3 before any weights loaded."
+  },
+  {
+   "id": "gha-44906039993-1-a",
+   "dir": "runs/gha-44906039993-1-a",
+   "status": "ok",
+   "machine": "a, ubuntu-24.04, Intel Xeon 6975P-C",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906039993"
+  },
+  {
+   "id": "gha-44906039993-1-b-network-up",
+   "dir": "runs/gha-44906039993-1-b-network-up",
+   "status": "refused",
+   "machine": "b, ubuntu-22.04",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906039993",
+   "note": "Expected refusal, exit 3."
+  },
+  {
+   "id": "gha-44906039993-1-b",
+   "dir": "runs/gha-44906039993-1-b",
+   "status": "ok",
+   "machine": "b, ubuntu-22.04, AMD EPYC 7763",
+   "url": "https://github.com/Yatsuiii/reproduction-receipts/actions/runs/44906039993"
+  }
+ ]
 }
