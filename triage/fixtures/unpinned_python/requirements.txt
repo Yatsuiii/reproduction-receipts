@@ -1,0 +1,2 @@
+pandas
+statsmodels>=0.13

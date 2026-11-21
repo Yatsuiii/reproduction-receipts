@@ -1,0 +1,5 @@
+library(fixest)
+library(data.table)
+d <- fread("data/panel.csv")
+m <- feols(y ~ x | id, data = d)
+saveRDS(m, "output/model.rds")

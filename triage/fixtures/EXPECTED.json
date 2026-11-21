@@ -1,0 +1,23 @@
+{
+  "format": "triage-expected/1",
+  "written": "2026-11-21, before triage.py existed; see the commit that adds this file",
+  "rule": "A case passes when the verdict matches and every listed code appears among the findings. Extra notes are allowed; extra blockers or deviations change the verdict and so fail the case.",
+  "cases": [
+    {"fixture": "clean_python", "args": [], "verdict": "runnable", "codes": []},
+    {"fixture": "clean_r_renv", "args": [], "verdict": "runnable", "codes": []},
+    {"fixture": "stata_package", "args": [], "verdict": "blocked", "codes": ["PROPRIETARY_SOFTWARE"]},
+    {"fixture": "stata_package", "args": ["--have", "stata"], "verdict": "runnable", "codes": []},
+    {"fixture": "restricted_data", "args": [], "verdict": "blocked", "codes": ["MISSING_INPUT_RESTRICTED"]},
+    {"fixture": "missing_input", "args": [], "verdict": "blocked", "codes": ["MISSING_INPUT_UNDOCUMENTED"]},
+    {"fixture": "unpinned_python", "args": [], "verdict": "runnable-with-deviations", "codes": ["UNPINNED_DEPENDENCIES", "UNDECLARED_DEPENDENCIES"]},
+    {"fixture": "external_download", "args": [], "verdict": "runnable-with-deviations", "codes": ["MISSING_INPUT_DOWNLOAD"]},
+    {"fixture": "external_download", "args": ["--check-links"], "verdict": "blocked", "codes": ["DEAD_DATA_LINK"]},
+    {"fixture": "no_licence", "args": [], "verdict": "runnable", "codes": ["NO_LICENCE"]},
+    {"fixture": "absolute_paths", "args": ["--have", "stata"], "verdict": "runnable-with-deviations", "codes": ["ABSOLUTE_PATH"]},
+    {"fixture": "no_code", "args": [], "verdict": "blocked", "codes": ["NO_CODE"]},
+    {"fixture": "stata_ssc", "args": ["--have", "stata"], "verdict": "runnable-with-deviations", "codes": ["STATA_NETWORK_INSTALL"]},
+    {"fixture": "cached_outputs", "args": [], "verdict": "runnable", "codes": ["PRECOMPUTED_OUTPUTS"]},
+    {"fixture": "no_run_order", "args": [], "verdict": "runnable-with-deviations", "codes": ["NO_RUN_ORDER"]},
+    {"fixture": "long_compute", "args": [], "verdict": "runnable-with-deviations", "codes": ["LONG_COMPUTE"]}
+  ]
+}
