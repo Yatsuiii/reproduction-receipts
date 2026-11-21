@@ -12,9 +12,9 @@ Small verification runs on third-party scientific code. Each receipt names an up
 
 This is one library example, not a neuroimaging paper replication or a complete native-I/O audit. The checksums document bytes; they do not independently prove that a run happened. The public CI procedure avoids the original harness and produces an inspectable execution log and artifact. It is hosted CI corroboration, not independent human scientific review.
 
-## Package triage
+## Package triage (parked)
 
-[`triage/`](triage/README.md) decides in about a second whether a replication package can run at all, and why not, before a rerun is attempted. On six held-out journal packages its verdict agreed with a hand reading 4 times in 6, the same as assuming every package is blocked; its stated reason was right 3 times in 6. [Review, with every failure](triage/results/heldout_review.md).
+A parked experiment: it does not beat the always-blocked baseline. [`triage/`](triage/README.md) decides in about a second whether a replication package can run at all, and why not, before a rerun is attempted. On a second set of six held-out journal packages, its verdict agreed with a hand reading 4 times in 6, against 3 in 6 for assuming every package is blocked. Its stated reason was right only 2 times in 6. Reviews, with every failure: [round 2](triage/results/heldout_review.md), [round 3](triage/results/heldout_r3_review.md).
 
 ## Next target
 

@@ -1,0 +1,401 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "git",
+  "url": "https://github.com/CMK-EEC-Food/JDE_replication",
+  "commit": "4616a49bfa67aab2cfba215f80bcf914d1043651"
+ },
+ "when": "2026-11-21T12:11:29Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata --check-links",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 1,
+   "deviation": 18,
+   "note": 4
+  },
+  "findings": [
+   {
+    "code": "PROPRIETARY_SOFTWARE",
+    "severity": "blocker",
+    "message": "Requires Gams, which is proprietary and not declared available on this desk. Rerun triage with --have gams if a licensed copy is available.",
+    "evidence": [
+     "GAMS/CST_v3_2_base.gms",
+     "GAMS/CST_v3_2_spcorr.gms",
+     "GAMS/CST_v3_2_spcorr_sens.gms",
+     "GAMS/CST_v3_2_spuncorr.gms",
+     "GAMS/CST_v3_2_spuncorr_sens.gms"
+    ]
+   },
+   {
+    "code": "UNDECLARED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads libpath, project, version, which renv.lock does not pin.",
+    "evidence": [
+     "renv.lock"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/processed_data/afr_cty_admin2_missingSPEI.Rda` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/analysis_fs.R:180"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/processed_data/AFR_tradepattern_qty_ddat_y_dt.Rda` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/descriptive_statistics.R:18",
+     "R/process_combine_adm2_fs.R:63"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/processed_data/AFR_tradepattern_value_ddat_y_dt.Rda` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/process_combine_adm2_fs.R:64"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/output/data_fs_cc_trade_ym_adm2.Rda` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/prepare_analysis_fs.R:8"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/output/data_fs_cc_trade_ym_adm2_processed.Rda` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/analysis_fs.R:177"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/FEWSNET/Grids/df_grid_clean_wtgeom_2021-08-16.Rdata` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/process_fs.R:69"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/ILOSTAT/EMP_2EMP_SEX_GEO_ECO_NB_A_EN_sel.csv` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/process_control.R:693"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/output/FEWS_mapping_prices_market_admin2.Rda` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/parameterize_scenarios.R:54"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/prices/FEWS_NET_Staple_Food_Price_Data.csv` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/process_fp.R:95"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/output/FPMA_mapping_prices_market_admin2.Rda` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/parameterize_scenarios.R:55"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/output/FS_id_geo_sample_AEZall.RData` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/analysis_spatialcorrelation.R:44",
+     "R/parameterize_scenarios.R:31"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/GADM/gadm36_1.shp` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/process_spatialunit.R:11"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/GADM/gadm36_2.shp` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/process_spatialunit.R:12"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/processed_data/GEDEvent_AFR_dt_adm2_ym.Rda` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/process_combine_adm2_fs.R:65"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/UCDP/GEDEvent_v21_1.rdata` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/process_control.R:63"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`R/processed_data/spei_3m_adm2_share_ym_gs_dt.Rda` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (data_sources.md: 15 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "R/analysis_spatialcorrelation.R:215",
+     "R/descriptive_statistics.R:13",
+     "R/prepare_analysis_fs.R:110"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code fetches data over the network when it runs (WDI). What the server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+    "evidence": [
+     "R/process_trade.R:1110"
+    ]
+   },
+   {
+    "code": "SYSTEM_FILE_READS",
+    "severity": "note",
+    "message": "Code reads system files (/etc/redhat-release), usually to detect the operating system. Not package inputs; a rerun on another OS may take a different branch.",
+    "evidence": [
+     "renv/activate.R:923"
+    ]
+   },
+   {
+    "code": "LINK_UNVERIFIED",
+    "severity": "note",
+    "message": "2 other links answered with an HTTP error other than 404 or 410, which does not show they are gone: https://api.github.com/repos/rstudio/renv/tarball (403), https://github.com/rstudio/renv/issues (403).",
+    "evidence": [
+     "https://api.github.com/repos/rstudio/renv/tarball",
+     "https://github.com/rstudio/renv/issues"
+    ]
+   },
+   {
+    "code": "LINK_UNREACHABLE",
+    "severity": "note",
+    "message": "19 other links could not be reached from this machine (DNS, refused, timeout or proxy). That may be this machine's network rather than the link.",
+    "evidence": [
+     "https://hal.inrae.fr/hal-04497903",
+     "https://doi.org/10.1016/j.jdeveco.2026.103761",
+     "https://www.cepii.fr/DATA_DOWNLOAD/baci/doc/baci_webpage.html#download-links",
+     "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/LMSYG5",
+     "https://gadm.org/old_versions.html",
+     "https://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-density-adjusted-to-2015-unwpp-country-totals-rev11",
+     "https://www.ifpri.org/publication/agro-ecological-zones-africa-south-sahara",
+     "https://doi.org/10.7910/DVN/M7XIUB",
+     "https://ilostat.ilo.org/topics/employment/#elementor-toc__heading-anchor-1",
+     "https://figshare.com/articles/dataset/Travel_time_to_cities_and_ports_in_the_year_2015/7638134"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 69,
+   "bytes": 13384503,
+   "languages": [
+    "gams",
+    "r"
+   ],
+   "code_files": {
+    "gams": 18,
+    "r": 24
+   },
+   "docs_read": [
+    "data_sources.md",
+    "readme.md",
+    "workflow.md"
+   ],
+   "licences_named": [],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 64,
+   "writes": 75,
+   "missing": [
+    "afr_cty_admin2_missingspei.rda",
+    "afr_tradepattern_qty_ddat_y_dt.rda",
+    "afr_tradepattern_value_ddat_y_dt.rda",
+    "data_fs_cc_trade_ym_adm2.rda",
+    "data_fs_cc_trade_ym_adm2_processed.rda",
+    "df_grid_clean_wtgeom_2021-08-16.rdata",
+    "emp_2emp_sex_geo_eco_nb_a_en_sel.csv",
+    "fews_mapping_prices_market_admin2.rda",
+    "fews_net_staple_food_price_data.csv",
+    "fpma_mapping_prices_market_admin2.rda",
+    "fs_id_geo_sample_aezall.rdata",
+    "gadm36_1.shp",
+    "gadm36_2.shp",
+    "gedevent_afr_dt_adm2_ym.rda",
+    "gedevent_v21_1.rdata",
+    "spei_3m_adm2_share_ym_gs_dt.rda"
+   ],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 21,
+   "checked": true,
+   "results": [
+    {
+     "url": "http://dx.doi.org/10.5285/bbdfd09a04304158b366777eba0d2aeb",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+     "url": "https://api.github.com/repos/rstudio/renv/tarball",
+     "status": 403,
+     "ok": false,
+     "error": "HTTP 403"
+    },
+    {
+     "url": "https://apps.fas.usda.gov/psdonline/app/index.html#/app/downloads",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://catalogue.ceda.ac.uk/uuid/bbdfd09a04304158b366777eba0d2aeb",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://catalogue.ceda.ac.uk/uuid/bbdfd09a04304158b366777eba0d2aeb/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://cloud.r-project.org",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/LMSYG5",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://doi.org/10.1016/j.jdeveco.2026.103761",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://doi.org/10.7910/DVN/M7XIUB",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://fews.net/fews-data/337",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://figshare.com/articles/dataset/Travel_time_to_cities_and_ports_in_the_year_2015/7638134",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://fpma.apps.fao.org/giews/food-prices/tool/public/#/dataset/domestic",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://gadm.org/old_versions.html",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://github.com/rstudio/renv/issues",
+     "status": 403,
+     "ok": false,
+     "error": "HTTP 403"
+    },
+    {
+     "url": "https://hal.inrae.fr/hal-04497903",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://ilostat.ilo.org/topics/employment/#elementor-toc__heading-anchor-1",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://msi.nga.mil/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-density-adjusted-to-2015-unwpp-country-totals-rev11",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://ucdp.uu.se/downloads/",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://www.cepii.fr/DATA_DOWNLOAD/baci/doc/baci_webpage.html#download-links",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://www.ifpri.org/publication/agro-ecological-zones-africa-south-sahara",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    }
+   ]
+  },
+  "seconds": 0.925
+ }
+}

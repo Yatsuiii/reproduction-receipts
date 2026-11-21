@@ -1,0 +1,133 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "git",
+  "url": "https://github.com/xgabaixLab/Behavioral-New-Keynesian-Model-AER-2020",
+  "commit": "4ca774b68454c89621671ce84c59bb8a15e6f1a0"
+ },
+ "when": "2026-11-21T12:09:55Z",
+ "triage_sha256": "6a73ebe7ea82258916ee4e0d8eb744af8c3c4d4e9fcf73c442f70c0dec723291",
+ "options": "--have matlab,stata --check-links",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 1,
+   "deviation": 0,
+   "note": 5
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`result.mat` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "Original AER Replication Dynare 4.5.3/mainOptimalPolicy.m:19",
+     "Original AER Replication Dynare 4.5.3/mainOptimalPolicy.m:24",
+     "Original AER Replication Dynare 4.5.3/mainOptimalPolicy.m:31",
+     "Original AER Replication Dynare 4.5.3/mainOptimalPolicy.m:36",
+     "mainOptimalPolicy.m:19"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "Original AER Replication Dynare 4.5.3/main.m",
+     "Original AER Replication Dynare 4.5.3/mainBRNKAugmentedPermanentShock.m",
+     "Original AER Replication Dynare 4.5.3/mainBRNKAugmentedTemporaryShock.m",
+     "Original AER Replication Dynare 4.5.3/mainForwardGuidance.m",
+     "Original AER Replication Dynare 4.5.3/mainOptimalPolicy.m"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "2 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "Original AER Replication Dynare 4.5.3/zlbCostResult.m:16",
+     "zlbCostResult.m:16"
+    ]
+   },
+   {
+    "code": "LINK_UNREACHABLE",
+    "severity": "note",
+    "message": "2 other links could not be reached from this machine (DNS, refused, timeout or proxy). That may be this machine's network rather than the link.",
+    "evidence": [
+     "https://www.aeaweb.org/articles?id=10.1257/aer.20162005",
+     "https://www.openicpsr.org/openicpsr/project/117842/version/V1/view"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Dynare (free) inside MATLAB or Octave, version 4.5.3, 4.6.4 named in the documentation.",
+    "evidence": [
+     "Original AER Replication Dynare 4.5.3/brnkAugmentedPermanentShock.mod",
+     "Original AER Replication Dynare 4.5.3/brnkAugmentedTemporaryShock.mod",
+     "Original AER Replication Dynare 4.5.3/optPolCostpushBasic.mod",
+     "Original AER Replication Dynare 4.5.3/zlb.mod",
+     "Original AER Replication Dynare 4.5.3/zlbCost.mod"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 49,
+   "bytes": 864907,
+   "languages": [
+    "dynare",
+    "matlab"
+   ],
+   "code_files": {
+    "dynare": 10,
+    "matlab": 20
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": [
+    "Original AER Replication Dynare 4.5.3/main.m",
+    "main.m"
+   ]
+  },
+  "inputs": {
+   "reads": 22,
+   "writes": 76,
+   "missing": [
+    "result.mat"
+   ],
+   "unresolved": 2,
+   "remote": []
+  },
+  "links": {
+   "found": 2,
+   "checked": true,
+   "results": [
+    {
+     "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20162005",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+     "url": "https://www.openicpsr.org/openicpsr/project/117842/version/V1/view",
+     "status": null,
+     "ok": false,
+     "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    }
+   ]
+  },
+  "seconds": 0.296
+ }
+}

@@ -1,5 +1,11 @@
 # Package triage
 
+> **Parked, 2026-11-21.** This is an experiment I stopped, not a product. Across two held-out rounds, its verdict did not clearly
+> beat assuming every package is blocked: 4/6 against 4/6 in round 2, and 4/6 against 3/6 in round 3. It gave the right reason only
+> 3/6 and then 2/6 times. Its answer key was a hand reading of each README, never a rerun, and six packages per round is too few to
+> show improvement. The failures are left as found in [`results/heldout_review.md`](results/heldout_review.md) and
+> [`results/heldout_r3_review.md`](results/heldout_r3_review.md). No round 4 is planned.
+
 Step one of a reproduction check. Given a replication package, `triage.py` decides in about a second whether it can run at all on
 this desk, and why not, before anyone spends a day on it.
 
@@ -48,14 +54,21 @@ Same rules as the receipts.
 |---|---|---|---|---|
 | Round 1 fixtures, v1 | 16/16 | 5/16 | 6/16 | commit 52fb824 (tests) |
 | Round 1 + 2 fixtures, v1 | 17/21 | 7/21 | 8/21 | [`fixtures.v1.json`](results/fixtures.v1.json) |
-| Round 1 + 2 fixtures, v2 | 21/21 | 7/21 | 8/21 | [`fixtures.json`](results/fixtures.json) |
+| Round 1 + 2 fixtures, v2 | 21/21 | 7/21 | 8/21 | `results/fixtures.json` at commit 3350bd0 |
 | Six held-out journal packages, v2, verdict | 4/6 | 0/6 | 0/6 | [`heldout_review.md`](results/heldout_review.md) |
 | Same six, verdict and main reason | 3/6 | n/a | n/a | [`heldout_review.md`](results/heldout_review.md) |
+| Round 3 fixtures (13 cases from held-out failures), v2 | 23/34* | 12/34 | 13/34 | [`fixtures.v2.json`](results/fixtures.v2.json) |
+| Round 3 fixtures, v3 | 36/36 | 14/36 | 15/36 | [`fixtures.json`](results/fixtures.json) |
+| Six new held-out packages, v3, verdict | 4/6 | 0/6 (always-blocked 3/6) | 0/6 | [`heldout_r3_review.md`](results/heldout_r3_review.md) |
+| Same six, verdict and main reason | 2/6 | n/a | n/a | [`heldout_r3_review.md`](results/heldout_r3_review.md) |
+
+\* Scored on the first 34 cases. The last two were written after the v3 draft (see `FROZEN_CHANGES.md`); that draft scored 34/36 ([`fixtures.v3draft.json`](results/fixtures.v3draft.json)).
 
 Fixture scores measure whether triage catches what its author thought to inject; they are not accuracy on real packages. The
-held-out row is the one that counts, and on it **an always-blocked baseline also gets 4/6**: most economics packages are blocked
-by confidential data, so the verdict alone is cheap to guess. Triage's value is the reason and the evidence, which were right in
-three of six. Known false claims in those six, including proxy refusals reported as dead links, are listed in the review.
+held-out rows are the ones that count. In round 2, **an always-blocked baseline also got 4/6**, because most economics packages are
+blocked by confidential data and the verdict alone is cheap to guess. In round 3, triage got 4/6 against 3/6 for always-blocked, but
+its stated reason was right only 2 times in 6, down from 3 in 6. What round 3 did fix is a false claim: a refused connection is no
+longer called a dead link. Every known failure is listed in the two reviews.
 
 [frontiers2013](results/frontiers2013.md), the repository's next reproduction target, is a development case: v1 missed its
 committed score caches, run-time downloads and removed APIs, and round 2 was written from those misses.
