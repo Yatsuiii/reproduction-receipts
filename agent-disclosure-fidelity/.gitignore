@@ -1,0 +1,15 @@
+suts/
+__pycache__/
+*.pyc
+.venv/
+.venvs/
+.worktrees/
+.uv-cache/
+.npm-cache/
+.pnpm-store/
+node_modules/
+.pytest_cache/
+.ruff_cache/
+results/
+.claude/settings.local.json
+pilot_runs/
