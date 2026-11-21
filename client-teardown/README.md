@@ -18,10 +18,18 @@ Run 1, 21 Nov 2026: 37 drivers covering 27 of the most-used projects run directl
 
 | project | stars | what happens | patch | upstream report |
 |---|---:|---|---|---|
-| Pydantic AI 2.71.0 | 21k | Leaving `async with toolset`, or an `agent.run()` without one, does not stop the stdio server, though the docs say it does. A toolset built per request leaves one more server running per request (3 of 3 left, 10/10 trials). Cause: FastMCP's `keep_alive=True` default. | [patch](patches/pydantic-ai-close-stdio-on-exit.patch), `tests/test_mcp.py` passes | none found; [draft](drafts/pydantic-ai-issue.md) |
-| Vercel AI SDK, `@ai-sdk/mcp` 2.0.102 | 28k | `close()` sends one SIGTERM and stops. A server that ignores SIGTERM keeps running, and a script that ends with `await client.close()` never exits (10/10). | [patch](patches/ai-sdk-mcp-stdio-close-sequence.patch), unit tests pass | none found; [draft](drafts/vercel-ai-issue.md) |
+| Pydantic AI 2.71.0 | 21k | A dropped `MCPToolset` never stops its stdio server, so a toolset built per request leaves one more server running per request (3 of 3 left, 10/10 trials). A plain FastMCP `Client` dropped the same way stops cleanly. Cause: the toolset's message-handler closure holds the toolset strongly, and FastMCP's keep-alive task holds the handler, so the transport's finalizer never runs. Keeping the server up across `async with` blocks is intended upstream (#12177) and is not the bug. | [patch](patches/pydantic-ai-weakref-message-handler.patch) (weak ref), `tests/test_mcp.py` passes | none found; [draft](drafts/pydantic-ai-issue.md) |
+| Vercel AI SDK, `@ai-sdk/mcp` 2.0.102 | 28k | `close()` sends one SIGTERM and stops. It never closes stdin first, so even a server that would exit on EOF gets SIGTERM as its first shutdown event (10/10), and it never escalates, so a server that ignores SIGTERM keeps running and a script that ends with `await client.close()` never exits (10/10). The docs position this transport for local development. | [patch](patches/ai-sdk-mcp-stdio-close-sequence.patch), unit tests pass | none found; [draft](drafts/vercel-ai-issue.md) |
 
 Neither draft has been posted anywhere.
+
+**Scope check (second pass).** The first Pydantic AI draft blamed the keep-alive itself and patched
+`__aexit__` to close the transport ([old patch](patches/pydantic-ai-close-stdio-on-exit.patch), kept for the
+record). Reading the upstream history showed the keep-alive is deliberate (PR #12177), so that patch would
+change intended behaviour. The narrower bug is that a dropped toolset is never collected; the weak-ref patch
+fixes that (0 left in 10/10 trials, [`pydantic-ai-accumulate@weakref.json`](runs/20261121-run1/pydantic-ai-accumulate@weakref.json))
+and keeps reuse across entries. For Vercel the second pass widened the scope: the missing stdin close
+affects every server, not only SIGTERM-ignoring ones. Repro scripts: [`repro/`](repro/).
 
 **Everything else came out clean** on the three cells the MCP spec covers (exit on EOF, SIGTERM, SIGKILL),
 except Roo Code's pinned SDK, below. Full table: [`runs/20261121-run1/TABLE.md`](runs/20261121-run1/TABLE.md).

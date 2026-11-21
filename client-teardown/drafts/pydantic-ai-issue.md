@@ -1,68 +1,93 @@
 <!-- DRAFT for review. Not posted. Target: pydantic/pydantic-ai -->
 
-# Leaving an `MCPToolset` does not stop its stdio server, so servers pile up when toolsets are built per request
+# A dropped `MCPToolset` never stops its stdio server, so servers pile up when toolsets are built per request
 
 ## Summary
 
-`docs/mcp/client.md` says `async with agent` / `async with toolset` will "open and close connections ... (and in the case of stdio servers, start and stop the subprocesses)", and that without a context manager "the toolset will be opened and closed automatically as needed".
+With FastMCP's default `keep_alive=True`, leaving `async with toolset` keeps the stdio subprocess running so the
+next entry can reuse it. I understand that is intended (#12177 keeps the transport alive across activities on
+purpose). FastMCP's `StdioTransport` still stops the subprocess when the transport is garbage collected, so a
+plain FastMCP `Client` that goes out of scope cleans up after itself.
 
-With a stdio server the subprocess is not stopped. After the context exits (or `agent.run()` returns), the server keeps running for as long as the transport object lives, and in my runs it was still running after the toolset was deleted and `gc.collect()` was called. A handler that builds a toolset per request starts one more server per request and never stops any of them.
+An `MCPToolset` never gets collected. `_build_message_handler()` returns a closure that holds the toolset
+strongly, and FastMCP's keep-alive connection task holds that handler (through the session kwargs) for as long
+as the subprocess runs. That makes a cycle the collector can't break: task → handler → toolset → client →
+transport. The transport's finalizer never runs and the server never stops.
 
-The cause looks like FastMCP's `StdioTransport` default `keep_alive=True`: `MCPToolset.__aexit__` closes the FastMCP client session, but with `keep_alive=True` the transport keeps the subprocess. `load_mcp_toolsets()` builds its `StdioTransport` with the default too.
+So a handler that builds a toolset per request (or a test suite that builds one per test) starts one more server
+each time and none of them are ever stopped, even after `del toolset` and `gc.collect()`.
 
 ## Reproduction
 
-pydantic-ai-slim 2.71.0, fastmcp-slim 4.2.4, Python 3.12.3, Linux. No model provider needed.
+pydantic-ai-slim 2.71.0, fastmcp-slim 4.2.4, Python 3.12.3, Linux. No model provider needed. `my_server.py` is
+any stdio server that exits when its stdin closes.
 
 ```python
-import asyncio, subprocess
+import asyncio, gc, subprocess
+from fastmcp import Client
 from fastmcp.client.transports import StdioTransport
 from pydantic_ai.mcp import MCPToolset
 
+def count():
+    return subprocess.run(["pgrep", "-fc", "my_server.py"], capture_output=True, text=True).stdout.strip()
+
 async def main():
-    for _ in range(3):  # three "requests"
+    for _ in range(3):  # plain FastMCP client, dropped after use
+        client = Client(StdioTransport(command="python", args=["my_server.py"]))
+        async with client:
+            await client.list_tools()
+        del client
+    gc.collect(); await asyncio.sleep(2)
+    print("FastMCP Client:", count())  # 0
+
+    for _ in range(3):  # same thing through MCPToolset
         toolset = MCPToolset(StdioTransport(command="python", args=["my_server.py"]))
         async with toolset:
             await toolset.client.list_tools()
         del toolset
-    await asyncio.sleep(5)
-    print(subprocess.run(["pgrep", "-fc", "my_server.py"], capture_output=True, text=True).stdout)
+    gc.collect(); await asyncio.sleep(2)
+    print("MCPToolset:", count())  # 3
 
 asyncio.run(main())
 ```
 
-Expected: 0 servers running. Actual: 3. The server I used exits as soon as its stdin closes, so this means stdin was never closed.
-
 ## Measured
 
-Each row is 10 trials. "Residue" means the server was still running 10 s after the toolset context exited (or the run returned).
+10 trials, 3 toolsets per trial, each entered once and dropped, count taken 5 s later.
 
-| path | result |
+| | servers left per trial |
 |---|---|
-| `async with MCPToolset(StdioTransport(...))` | residue 10/10 |
-| `load_mcp_toolsets(config)` then `async with toolset` | residue 10/10 |
-| `Agent(FunctionModel(...), toolsets=[toolset]).run(...)`, no context manager | residue 10/10 |
-| same as row 1 with `StdioTransport(..., keep_alive=False)` | clean 10/10 |
-| 3 fresh toolsets per trial, each entered and dropped | 3 servers left in 10/10 trials |
+| pydantic-ai-slim 2.71.0 | 3 in 10/10 trials |
+| with the patch below | 0 in 10/10 trials (also 0 in 5/5 without calling `gc.collect()`) |
+| patched, one toolset entered twice | 1 server, reused, as before |
 
-The same harness gives clean 10/10 for the MCP Python SDK, FastMCP's own `Client`, Agno, LangChain, LlamaIndex, OpenAI Agents SDK and others, so the measurement is not inventing residue.
+Toolsets from `load_mcp_toolsets()` behave the same way (3 left unpatched, 0 patched, same script).
 
 ## Possible fix
 
-Close the stdio transport when the last context exits:
+Have the handler hold the toolset weakly:
 
 ```diff
-             if self._running_count == 0 and self._exit_stack is not None:
-                 await self._exit_stack.aclose()
-                 self._exit_stack = None
-+                # FastMCP's StdioTransport defaults to keep_alive=True, which keeps the
-+                # subprocess running after the client session closes. Leaving the toolset is
-+                # documented to stop the subprocess, so close the transport too.
-+                transport = getattr(self.client, 'transport', None)
-+                if isinstance(transport, StdioTransport) and transport.keep_alive:
-+                    await transport.close()
++    # FastMCP's keep-alive stdio connection task holds this handler for as long as the subprocess runs,
++    # so a strong reference would keep the toolset, its client and the transport reachable, and the
++    # transport's finalizer, which stops the subprocess, would never run.
++    toolset_ref = weakref.ref(toolset)
++
+     async def handler(message: Any) -> None:
+         notification = getattr(message, 'root', message)
+-        if isinstance(notification, mcp_types.ToolListChangedNotification):
++        toolset = toolset_ref()
++        if toolset is None:
++            pass
++        elif isinstance(notification, mcp_types.ToolListChangedNotification):
 ```
 
-With this, every row above comes out clean 10/10, the per-request test leaves 0 servers in 10/10 trials, and `tests/test_mcp.py` passes (178 passed, 19 skipped). Passing `keep_alive=False` in `load_mcp_toolsets()` would be a smaller change but would not cover a user-built `StdioTransport`. If keeping the server warm between `async with` blocks is intended, then the docs line about stopping subprocesses is what needs changing, and the per-request pile-up is still worth a warning.
+This keeps keep-alive reuse unchanged and only affects toolsets nobody references any more. `tests/test_mcp.py`
+passes with it (178 passed, 19 skipped).
+
+A smaller related point: `docs/mcp/client.md` says entering and leaving the toolset will "start and stop the
+subprocesses". With the default keep-alive that is not what happens on exit, so the line could say the server
+stays up for reuse until the toolset is dropped, and mention `keep_alive=False` for code that wants it stopped
+on exit.
 
 Full harness, controls and raw trials: https://github.com/yatsuiii/reproduction-receipts/tree/claude/project-thread-757w48/client-teardown
