@@ -1,0 +1,488 @@
+{
+  "counts": {
+    "all_handshakes_ok": true,
+    "group_trials": 10,
+    "group_with_residue": 10,
+    "pid_trials": 10,
+    "pid_with_residue": 10
+  },
+  "install": {
+    "argv": [
+      "/opt/node22/bin/node",
+      "/var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/cli.js",
+      "mcp"
+    ],
+    "artefact": {
+      "bin": "argent",
+      "integrity": "sha512-2orCUjTWBvyz9nLc7WK7TJsxxRzZZyRr1O/FE9sUmHrpTQ5g0hi1H3dVtu0rb8Olip1mXcoIFOuOgL1rEw9l8A==",
+      "registry": "npm",
+      "resolved": "https://registry.npmjs.org/@swmansion/argent/-/argent-0.34.0.tgz",
+      "resolved_version": "0.34.0",
+      "spec": "@swmansion/argent@0.34.0"
+    },
+    "ok": true,
+    "reason": ""
+  },
+  "started_at": "2026-11-21T11:12:32Z",
+  "target": {
+    "default_env": {},
+    "identifier": "@swmansion/argent",
+    "name": "io.github.software-mansion/argent",
+    "package_args": [
+      "mcp"
+    ],
+    "package_version": "0.34.0",
+    "registry_snapshot_sha256": "e27815345a70935e9f77a3874faf6642c6fab5f01e1ab3cc0b11d97e95febc39",
+    "registry_type": "npm",
+    "repo": "software-mansion/argent",
+    "required_env": [],
+    "subfolder": null,
+    "updated_at": "2026-11-19T15:49:56.412397Z",
+    "version": "0.34.0"
+  },
+  "trials": [
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 14306,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-3108f26f18f34a2d",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 14434,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4eb479ecbbe94055",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 14556,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4628ddc8dc224622",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 14685,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-60c1fa1cfe0d4025",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 14802,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-cfec83dce3ed480a",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 14936,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4c61027244234ef0",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 15085,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-d3cdf67f5ff64271",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 15249,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-60a8a70718734c0e",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 15417,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-bce650e5ff3a4371",
+      "teardown_return_s": 0.034,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 15524,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-65d40355b5a24e3d",
+      "teardown_return_s": 0.007,
+      "tool_count": 0
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 15661,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-2ef076e0970c4ee6",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 15752,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-1804e6b3d54a427e",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 15878,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-20d7621226864222",
+      "teardown_return_s": 0.007,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 16010,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-2c52cda33c4343ac",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 16140,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-68b534e36d204059",
+      "teardown_return_s": 0.007,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 16277,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-1c14addfc977413b",
+      "teardown_return_s": 0.008,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 16412,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-2fed02b949704607",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 16530,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-7ee4b81e98524727",
+      "teardown_return_s": 0.008,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 16656,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-7bee4b74f45a434e",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 16801,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-f87a07f36a0540f0",
+      "teardown_return_s": 0.016,
+      "tool_count": 0
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.software-mansion_argent-844f4f/pkg/node_modules/@swmansion/argent/dist/tool-server.cjs start",
+          "pid": 16903,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "argent",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-dde5904560444b8a",
+      "teardown_return_s": 0.017,
+      "tool_count": 0
+    }
+  ],
+  "verdict": "RESIDUE_BOTH_ARMS",
+  "wall_clock_s": 254.1
+}

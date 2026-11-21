@@ -1,0 +1,488 @@
+{
+  "counts": {
+    "all_handshakes_ok": true,
+    "group_trials": 10,
+    "group_with_residue": 10,
+    "pid_trials": 10,
+    "pid_with_residue": 10
+  },
+  "install": {
+    "argv": [
+      "/opt/node22/bin/node",
+      "/var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/cli.js",
+      "stdio"
+    ],
+    "artefact": {
+      "bin": "codesign-mcp",
+      "integrity": "sha512-Z1hTarw+wX6dAKCV4cF75Tv+zO38dhKttMQy8Ut499BTCS7DXVcUwlmR9gaUUCM79UcieZJ1cJBBd4vb5Yl27A==",
+      "registry": "npm",
+      "resolved": "https://registry.npmjs.org/@imgly/codesign-mcp/-/codesign-mcp-0.7.1.tgz",
+      "resolved_version": "0.7.1",
+      "spec": "@imgly/codesign-mcp@0.7.1"
+    },
+    "ok": true,
+    "reason": ""
+  },
+  "started_at": "2026-11-21T11:26:07Z",
+  "target": {
+    "default_env": {},
+    "identifier": "@imgly/codesign-mcp",
+    "name": "ly.img/codesign",
+    "package_args": [
+      "stdio"
+    ],
+    "package_version": "0.7.1",
+    "registry_snapshot_sha256": "e27815345a70935e9f77a3874faf6642c6fab5f01e1ab3cc0b11d97e95febc39",
+    "registry_type": "npm",
+    "repo": "imgly/codesign",
+    "required_env": [],
+    "subfolder": null,
+    "updated_at": "2026-11-18T13:10:59.758786Z",
+    "version": "0.7.1"
+  },
+  "trials": [
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 22793,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-a93fa76d431e4885",
+      "teardown_return_s": 0.007,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 22885,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-b4a853c3d9c540fe",
+      "teardown_return_s": 0.008,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 22985,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-acb9ac58a5da4c32",
+      "teardown_return_s": 0.007,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 23096,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-58483adae9dd4312",
+      "teardown_return_s": 0.007,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 23186,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-d01a25e076e64e0d",
+      "teardown_return_s": 0.008,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 23278,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-306aef8ac94c47a7",
+      "teardown_return_s": 0.009,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 23378,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-5fa448d8c5284618",
+      "teardown_return_s": 0.016,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 23475,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-ef77927dbcf24e1c",
+      "teardown_return_s": 0.008,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 23544,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-b1fc312862de4135",
+      "teardown_return_s": 0.021,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 23665,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-befb23c9c9f241c4",
+      "teardown_return_s": 0.016,
+      "tool_count": 17
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 23783,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-a70c1c1cf1954cac",
+      "teardown_return_s": 0.016,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 23903,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-96e5ddaa7004408f",
+      "teardown_return_s": 0.016,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 24020,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-3bb641fe61104aff",
+      "teardown_return_s": 0.007,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 24094,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-05abc777ea9d450d",
+      "teardown_return_s": 0.017,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 24197,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-f383a66ffc7349df",
+      "teardown_return_s": 0.016,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 24323,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-cc8c5e3b46d04f2c",
+      "teardown_return_s": 0.018,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 24447,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-252f8e5d38cd44a4",
+      "teardown_return_s": 0.016,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 24571,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-e15c6bd30cde48a4",
+      "teardown_return_s": 0.007,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 24694,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-79209c6a95564149",
+      "teardown_return_s": 0.016,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 24777,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-97f06b7ce66e43c7",
+      "teardown_return_s": 0.008,
+      "tool_count": 17
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/ly.img_codesign-16a545/pkg/node_modules/@imgly/codesign-mcp/dist/runtime/cli/main.js server start",
+          "pid": 24886,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "codesign",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-79a37e5b87df4d2e",
+      "teardown_return_s": 0.007,
+      "tool_count": 17
+    }
+  ],
+  "verdict": "RESIDUE_BOTH_ARMS",
+  "wall_clock_s": 159.9
+}

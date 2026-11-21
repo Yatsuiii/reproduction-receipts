@@ -1,0 +1,4 @@
+# Raw registry snapshot is ~300 MB; its sha256 is recorded in every target line.
+targets.registry.json
+results/
+__pycache__/

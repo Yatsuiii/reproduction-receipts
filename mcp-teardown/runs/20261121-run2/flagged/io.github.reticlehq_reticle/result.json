@@ -1,0 +1,460 @@
+{
+  "counts": {
+    "all_handshakes_ok": true,
+    "group_trials": 10,
+    "group_with_residue": 8,
+    "pid_trials": 10,
+    "pid_with_residue": 8
+  },
+  "install": {
+    "argv": [
+      "/opt/node22/bin/node",
+      "/var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js",
+      "mcp"
+    ],
+    "artefact": {
+      "bin": "reticle",
+      "integrity": "sha512-w5+J4hT9WpWEPIlml5h+qIKlZ04LAyvsG73J0/ALZDgywSsiPlCPn0FvLgqqfiMal7lWwEmcDacaUASXCPO1Tg==",
+      "registry": "npm",
+      "resolved": "https://registry.npmjs.org/@reticlehq/server/-/server-3.10.10.tgz",
+      "resolved_version": "3.10.10",
+      "spec": "@reticlehq/server@3.10.10"
+    },
+    "ok": true,
+    "reason": ""
+  },
+  "started_at": "2026-11-21T10:51:13Z",
+  "target": {
+    "default_env": {},
+    "identifier": "@reticlehq/server",
+    "name": "io.github.reticlehq/reticle",
+    "package_args": [
+      "mcp"
+    ],
+    "package_version": "3.10.10",
+    "registry_snapshot_sha256": "e27815345a70935e9f77a3874faf6642c6fab5f01e1ab3cc0b11d97e95febc39",
+    "registry_type": "npm",
+    "repo": "reticlehq/reticle",
+    "required_env": [],
+    "subfolder": "server",
+    "updated_at": "2026-11-21T01:12:01.648847Z",
+    "version": "3.10.10"
+  },
+  "trials": [
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 442,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-e414148c04bd4be0",
+      "teardown_return_s": 0.032,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-3d14cd89cc824ae9",
+      "teardown_return_s": 0.064,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 584,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4e67e0d48dc3461c",
+      "teardown_return_s": 0.032,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 662,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-f75fe099c8454f7b",
+      "teardown_return_s": 0.044,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 726,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-c58fc3b1647543d7",
+      "teardown_return_s": 0.04,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 797,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-1b31927deb084c58",
+      "teardown_return_s": 0.036,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 858,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-7995fc3fdc9a4ff7",
+      "teardown_return_s": 0.033,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 944,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-d2d0212f82fa46a5",
+      "teardown_return_s": 0.032,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1027,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-9c16db5b296d4c9d",
+      "teardown_return_s": 0.117,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1099,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-56a00d19b07c402a",
+      "teardown_return_s": 0.034,
+      "tool_count": 10
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-0be4b772352a4428",
+      "teardown_return_s": 0.064,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1199,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-453de25d9c0b4fd0",
+      "teardown_return_s": 0.033,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 3,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1278,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-00cc9f38ff074420",
+      "teardown_return_s": 0.032,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1376,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-00efddc0619e4614",
+      "teardown_return_s": 0.034,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1476,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-fa48fee29e8c4e43",
+      "teardown_return_s": 0.032,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1586,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-dd5fc33a2a85466b",
+      "teardown_return_s": 0.033,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1638,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-aefb647e47524f18",
+      "teardown_return_s": 0.034,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-6f7d5c987cad4f0a",
+      "teardown_return_s": 0.032,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1759,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-94e601c79a024315",
+      "teardown_return_s": 0.032,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node /var/tmp/mcpt-work/io.github.reticlehq_reticle-e4913a/pkg/node_modules/@reticlehq/server/bin/reticle.js _daemon --port 4400 --headless",
+          "pid": 1827,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-33e05014b2e34514",
+      "teardown_return_s": 0.034,
+      "tool_count": 10
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "reticle",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-2bb458a18c4d447f",
+      "teardown_return_s": 0.065,
+      "tool_count": 10
+    }
+  ],
+  "verdict": "UNCONFIRMED",
+  "wall_clock_s": 149.0
+}

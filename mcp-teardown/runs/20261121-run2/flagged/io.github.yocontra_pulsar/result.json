@@ -1,0 +1,418 @@
+{
+  "counts": {
+    "all_handshakes_ok": true,
+    "group_trials": 10,
+    "group_with_residue": 5,
+    "pid_trials": 10,
+    "pid_with_residue": 5
+  },
+  "install": {
+    "argv": [
+      "/opt/node22/bin/node",
+      "/var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js",
+      "mcp"
+    ],
+    "artefact": {
+      "bin": "pulsar",
+      "integrity": "sha512-+ZzlHXIKH+XUuKbfleLHb2ZeheLE4paLYtrBBiD7yzN31p9zWsns/F107JhplJUMRoQDQT8CiR+FwYP4vMRAyQ==",
+      "registry": "npm",
+      "resolved": "https://registry.npmjs.org/pulsar/-/pulsar-2.0.0.tgz",
+      "resolved_version": "2.0.0",
+      "spec": "pulsar@2.0.0"
+    },
+    "ok": true,
+    "reason": ""
+  },
+  "started_at": "2026-11-21T11:08:31Z",
+  "target": {
+    "default_env": {},
+    "identifier": "pulsar",
+    "name": "io.github.yocontra/pulsar",
+    "package_args": [
+      "mcp"
+    ],
+    "package_version": "2.0.0",
+    "registry_snapshot_sha256": "e27815345a70935e9f77a3874faf6642c6fab5f01e1ab3cc0b11d97e95febc39",
+    "registry_type": "npm",
+    "repo": "yocontra/pulsar",
+    "required_env": [],
+    "subfolder": null,
+    "updated_at": "2026-11-19T20:23:47.01826Z",
+    "version": "2.0.0"
+  },
+  "trials": [
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 11892,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-05c6c72d9d3b464e",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-b1f665b9935f4178",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 12028,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-53cdb7df522f4b30",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-bff809695dac4cfc",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 12231,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-37f66a606c254ecb",
+      "teardown_return_s": 0.007,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-e29d980909fe4f51",
+      "teardown_return_s": 0.016,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 12444,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-b28c7ff1aae84832",
+      "teardown_return_s": 0.007,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-fe41108978754535",
+      "teardown_return_s": 0.007,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 12630,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-b5425f91ae4d4e52",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-1a96cd814480460d",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 12801,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-a0009e0e39d54260",
+      "teardown_return_s": 0.011,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-592abf8472654663",
+      "teardown_return_s": 0.007,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 13031,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-667a052d836e4ffe",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4f432a3bc59c4529",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 13224,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-41fba412b4e842ee",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-2d0c6c7b0d83493a",
+      "teardown_return_s": 0.007,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 13419,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-de899544eda740ae",
+      "teardown_return_s": 0.007,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4d723b18af494050",
+      "teardown_return_s": 0.007,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 13572,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-7998f17c80604b23",
+      "teardown_return_s": 0.008,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 1,
+      "residuals": [],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-f8efc08228694e46",
+      "teardown_return_s": 0.007,
+      "tool_count": 6
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/opt/node22/bin/node --max-semi-space-size=2 /var/tmp/mcpt-work/io.github.yocontra_pulsar-7b3f22/pkg/node_modules/pulsar/dist/cli.js daemon",
+          "pid": 13736,
+          "ppid": 1,
+          "state": "S"
+        }
+      ],
+      "server_name": "pulsar",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-fc2f191f88b14407",
+      "teardown_return_s": 0.009,
+      "tool_count": 6
+    }
+  ],
+  "verdict": "UNCONFIRMED",
+  "wall_clock_s": 191.1
+}

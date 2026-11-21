@@ -1,0 +1,975 @@
+{
+  "counts": {
+    "all_handshakes_ok": true,
+    "group_trials": 10,
+    "group_with_residue": 10,
+    "pid_trials": 10,
+    "pid_with_residue": 10
+  },
+  "install": {
+    "argv": [
+      "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/superlocalmemory",
+      "mcp"
+    ],
+    "artefact": {
+      "console_script": "superlocalmemory",
+      "published_files": [
+        {
+          "filename": "superlocalmemory-4.2.33-py3-none-any.whl",
+          "sha256": "5b7d3c45649ea24c081485e51732fb3d1d242d074cf1ac2e0d0bb1c5eb4b8864"
+        },
+        {
+          "filename": "superlocalmemory-4.2.33.tar.gz",
+          "sha256": "83e5efd02784f9bead2a4bcd9c8b7802fd1ddac5c6abb4f2c8324ed20ccf4363"
+        }
+      ],
+      "registry": "pypi",
+      "resolved_version": "4.2.33",
+      "spec": "superlocalmemory==4.2.33"
+    },
+    "ok": true,
+    "reason": ""
+  },
+  "started_at": "2026-11-21T10:54:20Z",
+  "target": {
+    "default_env": {},
+    "identifier": "superlocalmemory",
+    "name": "io.github.qualixar/superlocalmemory",
+    "package_args": [
+      "mcp"
+    ],
+    "package_version": "4.2.33",
+    "registry_snapshot_sha256": "e27815345a70935e9f77a3874faf6642c6fab5f01e1ab3cc0b11d97e95febc39",
+    "registry_type": "pypi",
+    "repo": "qualixar/superlocalmemory",
+    "required_env": [],
+    "subfolder": null,
+    "updated_at": "2026-11-20T21:32:39.436594Z",
+    "version": "4.2.33"
+  },
+  "trials": [
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 2328,
+          "ppid": 1,
+          "state": "D"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-38e62bee27364657",
+      "teardown_return_s": 0.516,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 2433,
+          "ppid": 1,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 2506,
+          "ppid": 2433,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 2520,
+          "ppid": 2433,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-c917078160e54c24",
+      "teardown_return_s": 0.47,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 2565,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 2602,
+          "ppid": 2565,
+          "state": "D"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 2616,
+          "ppid": 2565,
+          "state": "D"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(41)",
+          "pid": 2706,
+          "ppid": 2565,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 2712,
+          "ppid": 2565,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-da7384abf1a743e6",
+      "teardown_return_s": 0.416,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 2745,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 2779,
+          "ppid": 2745,
+          "state": "D"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 2792,
+          "ppid": 2745,
+          "state": "D"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(54)",
+          "pid": 2869,
+          "ppid": 2745,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 2875,
+          "ppid": 2745,
+          "state": "D"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-12684e024eca49e9",
+      "teardown_return_s": 0.315,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 2930,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 2977,
+          "ppid": 2930,
+          "state": "D"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 2990,
+          "ppid": 2930,
+          "state": "D"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(54)",
+          "pid": 3054,
+          "ppid": 2930,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 3061,
+          "ppid": 2930,
+          "state": "D"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-5893f023a65243ef",
+      "teardown_return_s": 0.365,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 3106,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 3155,
+          "ppid": 3106,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 3168,
+          "ppid": 3106,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(51)",
+          "pid": 3224,
+          "ppid": 3106,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 3239,
+          "ppid": 3106,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4cbf0d797c214fde",
+      "teardown_return_s": 0.265,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 3303,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 3331,
+          "ppid": 3303,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 3345,
+          "ppid": 3303,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(52)",
+          "pid": 3403,
+          "ppid": 3303,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 3416,
+          "ppid": 3303,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-213936fb354a4cf6",
+      "teardown_return_s": 0.315,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 3482,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 3512,
+          "ppid": 3482,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 3526,
+          "ppid": 3482,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(51)",
+          "pid": 3613,
+          "ppid": 3482,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 3624,
+          "ppid": 3482,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-42af39daba18405f",
+      "teardown_return_s": 0.315,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 3651,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 3699,
+          "ppid": 3651,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 3712,
+          "ppid": 3651,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(51)",
+          "pid": 3769,
+          "ppid": 3651,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 3783,
+          "ppid": 3651,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-ab7e40545e0a41e9",
+      "teardown_return_s": 0.315,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 3829,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 3867,
+          "ppid": 3829,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 3881,
+          "ppid": 3829,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(56)",
+          "pid": 3936,
+          "ppid": 3829,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 3955,
+          "ppid": 3829,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-4cdcc7da81ee47fd",
+      "teardown_return_s": 0.316,
+      "tool_count": 60
+    },
+    {
+      "arm": "pid",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 4000,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 4055,
+          "ppid": 4000,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 4068,
+          "ppid": 4000,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(53)",
+          "pid": 4127,
+          "ppid": 4000,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 4141,
+          "ppid": 4000,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-c4cbb72c93ce4c14",
+      "teardown_return_s": 0.347,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 4170,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 4247,
+          "ppid": 4170,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 4259,
+          "ppid": 4170,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(52)",
+          "pid": 4305,
+          "ppid": 4170,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 4319,
+          "ppid": 4170,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-c9afa6db0b144a4c",
+      "teardown_return_s": 0.315,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 4360,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 4408,
+          "ppid": 4360,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 4421,
+          "ppid": 4360,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(53)",
+          "pid": 4479,
+          "ppid": 4360,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 4493,
+          "ppid": 4360,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-06ed8fa84a4c44ce",
+      "teardown_return_s": 0.318,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 4537,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 4576,
+          "ppid": 4537,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 4586,
+          "ppid": 4537,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(53)",
+          "pid": 4644,
+          "ppid": 4537,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=54, pipe_handle=56) --multiprocessing-fork",
+          "pid": 4653,
+          "ppid": 4537,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 4657,
+          "ppid": 4537,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-b27c789f70df4e66",
+      "teardown_return_s": 0.374,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 4691,
+          "ppid": 1,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 4740,
+          "ppid": 4691,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 4752,
+          "ppid": 4691,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(52)",
+          "pid": 4799,
+          "ppid": 4691,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 4814,
+          "ppid": 4691,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-94611806994644ae",
+      "teardown_return_s": 0.427,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 4858,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 4908,
+          "ppid": 4858,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 4921,
+          "ppid": 4858,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(56)",
+          "pid": 4967,
+          "ppid": 4858,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 4980,
+          "ppid": 4858,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-fabd2b7c62314640",
+      "teardown_return_s": 0.327,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 5039,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 5076,
+          "ppid": 5039,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 5090,
+          "ppid": 5039,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(51)",
+          "pid": 5168,
+          "ppid": 5039,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 5181,
+          "ppid": 5039,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-a03efcc433d54d44",
+      "teardown_return_s": 0.329,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 5207,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 5276,
+          "ppid": 5207,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 5289,
+          "ppid": 5207,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(53)",
+          "pid": 5337,
+          "ppid": 5207,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=54, pipe_handle=55) --multiprocessing-fork",
+          "pid": 5343,
+          "ppid": 5207,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 5353,
+          "ppid": 5207,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-1650a08e340a49e9",
+      "teardown_return_s": 0.367,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 5393,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 5436,
+          "ppid": 5393,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 5449,
+          "ppid": 5393,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(51)",
+          "pid": 5508,
+          "ppid": 5393,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 5521,
+          "ppid": 5393,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-e33bb197d51a497a",
+      "teardown_return_s": 0.365,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 5555,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 5620,
+          "ppid": 5555,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 5633,
+          "ppid": 5555,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(53)",
+          "pid": 5679,
+          "ppid": 5555,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 5693,
+          "ppid": 5555,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-b9b39ad5c191489b",
+      "teardown_return_s": 0.429,
+      "tool_count": 60
+    },
+    {
+      "arm": "group",
+      "exit_stage": "exited_on_stdin_eof",
+      "handshake_error": "",
+      "handshake_ok": true,
+      "live_before_shutdown": 2,
+      "residuals": [
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.server.unified_daemon --start --port=8765",
+          "pid": 5743,
+          "ppid": 1,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.reranker_worker",
+          "pid": 5831,
+          "ppid": 5743,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -m superlocalmemory.core.embedding_worker",
+          "pid": 5844,
+          "ppid": 5743,
+          "state": "R"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c from multiprocessing.resource_tracker import main;main(52)",
+          "pid": 5894,
+          "ppid": 5743,
+          "state": "S"
+        },
+        {
+          "cmdline": "/var/tmp/mcpt-work/io.github.qualixar_superlocalmemory-545f8c/venv/bin/python -c import sys\ntry:\n    from superlocalmemory.core.platform_utils import start_parent_watchdog\n    start_parent_watchdog()\nexcept Exception:\n    pass\nfrom sentence_transformers import SentenceTransformer; m = SentenceTransf",
+          "pid": 5906,
+          "ppid": 5743,
+          "state": "R"
+        }
+      ],
+      "server_name": "SuperLocalMemory V4",
+      "stdout_noise_lines": 0,
+      "stdout_noise_sample": [],
+      "tag": "mcpt-3c50b40fc76e48de",
+      "teardown_return_s": 0.315,
+      "tool_count": 60
+    }
+  ],
+  "verdict": "RESIDUE_BOTH_ARMS",
+  "wall_clock_s": 166.9
+}
