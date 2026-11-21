@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-receipts"
+version = "0.0.1"
+description = "Signed, chained, replayable records of what an AI agent's tool calls actually did, checkable by someone who was not there"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+fast = ["cryptography>=42"]
+mcp = ["mcp>=2,<3"]
+
+[tool.setuptools.packages.find]
+include = ["agent_receipts*"]

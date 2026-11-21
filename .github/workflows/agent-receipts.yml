@@ -1,0 +1,29 @@
+name: Agent receipts tests
+on:
+  pull_request:
+    paths: ['agent-receipts/**', 'stalefence/stalefence/ledger.py', 'scripts/hooks/**', '.github/workflows/agent-receipts.yml']
+  push:
+    branches: [main]
+    paths: ['agent-receipts/**', 'stalefence/stalefence/ledger.py', 'scripts/hooks/**', '.github/workflows/agent-receipts.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: Frozen spec and failure injections unchanged
+        run: python agent-receipts/check_frozen.py
+      - name: Tests with nothing installed (pure-Python Ed25519, MCP example skipped)
+        run: python -m unittest discover -s agent-receipts/tests -v
+      - name: Install optional extras
+        run: pip install cryptography==50.0.1 mcp==2.3.0
+      - name: Tests with cryptography and mcp, including the MCP worked example
+        run: python -m unittest discover -s agent-receipts/tests -v
+      - name: Verify the committed example receipt as a third party would
+        working-directory: agent-receipts
+        run: python -m agent_receipts verify examples/mcp/out/receipt.jsonl --trust "$(cat examples/mcp/out/public_key.txt)" --anchor "$(cat examples/mcp/out/anchor.txt)"

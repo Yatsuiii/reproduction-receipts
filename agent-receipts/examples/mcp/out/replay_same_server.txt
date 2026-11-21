@@ -1,0 +1,5 @@
+  seq   1 replay_match     same result
+  seq   2 replay_match     same result
+  seq   3 replay_match     same result
+  seq   4 replay_match     same error
+  seq   5 not_replayable   not declared replayable

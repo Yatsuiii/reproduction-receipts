@@ -20,6 +20,13 @@ This is one library example, not a neuroimaging paper replication or a complete 
 
 [A published neuroimaging paper with deprecated APIs and committed score caches](NEXT_TARGET.md). Selection is a preflight decision, not a finding of numerical non-reproduction.
 
+## Agent receipts
+
+[`agent-receipts/`](agent-receipts/README.md) is the execution-evidence half: a stdlib-only Python SDK that wraps an agent's
+tool calls and writes a signed, chained, replayable record of each one, checkable offline by someone who was not there. On 14
+frozen tampering cases it catches 13; a plain JSONL tool log catches 1 and an unsigned hash chain 5. The one it misses is the
+key holder rewriting history, which only an anchor published elsewhere catches. Worked example with an MCP client.
+
 ## Also in this repo
 
 Each folder below was its own repository and was merged in with its full history. The original repositories stay up and will be archived rather than deleted, so existing links keep working.

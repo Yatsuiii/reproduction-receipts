@@ -1,0 +1,604 @@
+{
+ "format": "agent-receipts-results/1",
+ "python": "3.13.18",
+ "ed25519_backend": "cryptography",
+ "wall_seconds": 0.039,
+ "attacks": 14,
+ "detected": {
+  "sdk": 13,
+  "hash_chain": 5,
+  "plain_log": 1
+ },
+ "departures_from_expected": 1,
+ "cases": [
+  {
+   "case": "clean",
+   "attack": false,
+   "got": {
+    "sdk": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": [],
+     "findings": []
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "edit_args",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "bad_signature",
+      "chain_broken"
+     ],
+     "stale": [],
+     "findings": [
+      "bad_signature    line 6 (seq 5): signature does not verify",
+      "chain_broken     line 7 (seq 6): prev does not match the hash of line 6"
+     ]
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "edit_result",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "bad_signature",
+      "chain_broken"
+     ],
+     "stale": [],
+     "findings": [
+      "bad_signature    line 3 (seq 2): signature does not verify",
+      "chain_broken     line 4 (seq 3): prev does not match the hash of line 3"
+     ]
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "hide_failure",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "bad_signature",
+      "chain_broken"
+     ],
+     "stale": [],
+     "findings": [
+      "bad_signature    line 5 (seq 4): signature does not verify",
+      "chain_broken     line 6 (seq 5): prev does not match the hash of line 5"
+     ]
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "delete_middle",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "chain_broken",
+      "count_mismatch",
+      "sequence"
+     ],
+     "stale": [],
+     "findings": [
+      "sequence         line 5 (seq 5): seq 5 at position 4",
+      "chain_broken     line 5 (seq 5): prev does not match the hash of line 4",
+      "sequence         line 6 (seq 6): seq 6 at position 5",
+      "count_mismatch   line 6 (seq 6): close says 5 calls, file has 4"
+     ]
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "reorder",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "chain_broken",
+      "clock_backwards",
+      "sequence"
+     ],
+     "stale": [],
+     "findings": [
+      "sequence         line 4 (seq 5): seq 5 at position 3",
+      "chain_broken     line 4 (seq 5): prev does not match the hash of line 3",
+      "chain_broken     line 5 (seq 4): prev does not match the hash of line 4",
+      "clock_backwards  line 5 (seq 4): t 1763700002.25 is earlier than the record before (1763700002.75)",
+      "sequence         line 6 (seq 3): seq 3 at position 5",
+      "chain_broken     line 6 (seq 3): prev does not match the hash of line 5",
+      "clock_backwards  line 6 (seq 3): t 1763700001.75 is earlier than the record before (1763700002.25)",
+      "chain_broken     line 7 (seq 6): prev does not match the hash of line 6"
+     ]
+    },
+    "hash_chain": {
+     "passes": false,
+     "codes": [
+      "clock_backwards"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {
+    "hash_chain": [
+     "passes=False expected True"
+    ]
+   }
+  },
+  {
+   "case": "truncate_tail",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "unclosed"
+     ],
+     "stale": [],
+     "findings": [
+      "unclosed         line 5: last record is not a close: the receipt may be truncated"
+     ]
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "drop_close_keep_count",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "chain_broken",
+      "count_mismatch",
+      "sequence"
+     ],
+     "stale": [],
+     "findings": [
+      "sequence         line 6 (seq 6): seq 6 at position 5",
+      "chain_broken     line 6 (seq 6): prev does not match the hash of line 5",
+      "count_mismatch   line 6 (seq 6): close says 5 calls, file has 4"
+     ]
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "foreign_resign",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "untrusted_key"
+     ],
+     "stale": [],
+     "findings": [
+      "untrusted_key    line 1 (seq 0): receipt is signed by 0bbc346a57667c38..., trust list gives 03a107bff3ce10be... for 'support-agent@example.test'"
+     ]
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "splice_other_session",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "chain_broken",
+      "count_mismatch",
+      "sequence",
+      "session_mismatch"
+     ],
+     "stale": [],
+     "findings": [
+      "session_mismatch line 4 (seq 2): session 9a4abf7adabd... is not this receipt's",
+      "sequence         line 4 (seq 2): seq 2 at position 3",
+      "chain_broken     line 4 (seq 2): prev does not match the hash of line 3",
+      "sequence         line 5 (seq 3): seq 3 at position 4",
+      "chain_broken     line 5 (seq 3): prev does not match the hash of line 4",
+      "sequence         line 6 (seq 4): seq 4 at position 5",
+      "sequence         line 7 (seq 5): seq 5 at position 6",
+      "sequence         line 8 (seq 6): seq 6 at position 7",
+      "count_mismatch   line 8 (seq 6): close says 5 calls, file has 6"
+     ]
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "inline_digest_lie",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "digest_mismatch"
+     ],
+     "stale": [],
+     "findings": [
+      "digest_mismatch  line 2 (seq 1): inline result does not hash to result_sha256"
+     ]
+    },
+    "hash_chain": {
+     "passes": false,
+     "codes": [
+      "digest_mismatch"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "malformed_line",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "chain_broken",
+      "count_mismatch",
+      "malformed"
+     ],
+     "stale": [],
+     "findings": [
+      "malformed        line 3: not JSON: Expecting property name enclosed in double quotes",
+      "chain_broken     line 4 (seq 3): record before it is unreadable",
+      "count_mismatch   line 7 (seq 6): close says 5 calls, file has 4"
+     ]
+    },
+    "hash_chain": {
+     "passes": false,
+     "codes": [
+      "chain_broken",
+      "count_mismatch",
+      "malformed"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": false,
+     "codes": [
+      "malformed"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "holder_rewrite",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": [],
+     "findings": []
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "holder_rewrite_with_anchor",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "anchor_mismatch"
+     ],
+     "stale": [],
+     "findings": [
+      "anchor_mismatch  line 7 (seq 6): close hash a450bb8e33ac76aa... is not the published anchor 27f5eeb3d8d0caa2..."
+     ]
+    },
+    "hash_chain": {
+     "passes": false,
+     "codes": [
+      "anchor_mismatch"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "holder_clock_backwards",
+   "attack": true,
+   "got": {
+    "sdk": {
+     "passes": false,
+     "codes": [
+      "clock_backwards"
+     ],
+     "stale": [],
+     "findings": [
+      "clock_backwards  line 4 (seq 3): t 1763699990.75 is earlier than the record before (1763700001.25)",
+      "clock_backwards  line 4 (seq 3): t_start is after t"
+     ]
+    },
+    "hash_chain": {
+     "passes": false,
+     "codes": [
+      "clock_backwards"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "revoked_source",
+   "attack": false,
+   "got": {
+    "sdk": {
+     "passes": true,
+     "codes": [
+      "stale"
+     ],
+     "stale": [
+      2,
+      3,
+      5
+     ],
+     "findings": [
+      "stale            line 3 (seq 2): uses a revoked source, directly or through derived_from",
+      "stale            line 4 (seq 3): uses a revoked source, directly or through derived_from",
+      "stale            line 6 (seq 5): uses a revoked source, directly or through derived_from"
+     ]
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "stale"
+     ],
+     "stale": [
+      2,
+      3,
+      5
+     ]
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "stale"
+     ],
+     "stale": [
+      2,
+      3,
+      5
+     ]
+    }
+   },
+   "departures": {}
+  },
+  {
+   "case": "replay_tool_changed",
+   "attack": false,
+   "got": {
+    "sdk": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": [],
+     "findings": []
+    },
+    "hash_chain": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "plain_log": {
+     "passes": true,
+     "codes": [
+      "ok"
+     ],
+     "stale": []
+    },
+    "replay": {
+     "1": "replay_match",
+     "2": "replay_mismatch",
+     "3": "replay_match",
+     "4": "replay_match",
+     "5": "not_replayable"
+    }
+   },
+   "departures": {}
+  }
+ ],
+ "unreviewed_departures": 0
+}
