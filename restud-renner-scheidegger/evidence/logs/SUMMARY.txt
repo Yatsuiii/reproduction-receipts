@@ -4,3 +4,10 @@
 run2 package hashes match run1
 run2_2_replicate_original exit=0 wall_s=107
 run2_4_validate_BE KILLED at ~20:22Z by the session's 2 h background limit (my timeout setting), after all five mpirun solves finished (last at 20:11Z), during the post-processing step. Resumed from 'parallel' onward with the script's own remaining lines.
+container restarted ~01:42Z (uptime 1 min at 01:43); run2 post-processing killed after ~5h20m; 2D_or simulation_4389 at 925/10000 lines. Others had not started writing simulation files.
+bench (fresh clone 'bench'): package simulate() on deposited 2D overreporting checkpoint 4379 with deposited shock list, run alone: 10000 steps in ~4 min (01:47-01:51Z). vs deposited simulation_4379.txt: not byte-identical, max abs diff 1.28e-4, max rel 5.0e-4; R_DIFF L2 4.384e-06 Linf 3.723e-05 both (Table 7 overreporting criterion 3 prints 4.4e-6, 3.7e-5).
+run2 post_process 2D_limited_overreporting run ALONE (no other jobs): exit 0 in 322 s, 10000 simulation lines. Same command under 'parallel -j 4' had reached 925 lines after ~5 h. Cause looks like thread oversubscription; run3 sets OMP_NUM_THREADS=1.
+run3 package hashes match run1
+run3_2_replicate_original exit=0 wall_s=89
+run3_4_validate_BE exit=0 wall_s=10992
+RUN3_DONE
