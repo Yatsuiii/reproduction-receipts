@@ -1,0 +1,25 @@
+MISSING  Table_2_error_table.tex
+DIFFER   Table_4_error_table_10D.tex
+         cell 0: reference 1.6e-06  candidate 8.8e-07
+         cell 1: reference 1.4e-04  candidate 4.4e-05
+         cell 2: reference 7.8e-05  candidate 7.7e-05
+         cell 3: reference 4.1e-04  candidate 4.3e-04
+MATCH    Table_5_max_value_table_10D.tex  (10 numbers)
+DIFFER   Table_7_error_table.tex
+         cell 0: reference 1.2e-06  candidate 2.6e-07
+         cell 1: reference 4.1e-06  candidate 7.8e-07
+         cell 2: reference 5.3e-06  candidate 1.1e-06
+         cell 3: reference 1.1e-05  candidate 1.9e-06
+         cell 4: reference 1.6e-06  candidate 9.2e-06
+         cell 5: reference 8.7e-06  candidate 1.5e-04
+         cell 6: reference 4.4e-06  candidate 2.8e-06
+         cell 7: reference 3.7e-05  candidate 1.1e-05
+DIFFER   Table_8_error_table.tex
+         cell 0: reference 2.9e-05  candidate 3.0e-05
+         cell 1: reference 7.5e-05  candidate 8.0e-05
+         cell 2: reference 3.4e-05  candidate 3.5e-05
+         cell 4: reference 4.0e-05  candidate 1.1e-07
+         cell 5: reference 2.0e-04  candidate 4.3e-07
+         cell 6: reference 7.1e-05  candidate 4.1e-07
+         cell 7: reference 6.8e-04  candidate 2.5e-06
+1/5 tables match

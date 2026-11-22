@@ -1,0 +1,101 @@
+ M 4_validate_BE.sh
+ M figure_replication/Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb
+ M figure_replication/Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb
+ M figure_replication/Sec_5_overreporting/2D_simulation_and_error.ipynb
+ M figure_replication/Sec_5_overreporting/4D_simulation_and_error.ipynb
+ M figure_replication/Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb
+ M figure_replication/Sec_5_overreporting/Plot_Table_4D_overreporting.ipynb
+ M figure_replication/Sec_5_overreporting/data/2D/baseline/V_func_error_5939.txt
+ M figure_replication/Sec_5_overreporting/data/2D/baseline/simulation_5939.txt
+ M figure_replication/Sec_5_overreporting/data/2D/overreporting/V_func_error_4379.txt
+ M figure_replication/Sec_5_overreporting/data/2D/overreporting/simulation_4379.txt
+ M figure_replication/Sec_5_overreporting/data/4D/baseline/V_func_error_3777.txt
+ M figure_replication/Sec_5_overreporting/data/4D/baseline/post_process.log
+ M figure_replication/Sec_5_overreporting/data/4D/baseline/simulation_3777.txt
+ M figure_replication/Sec_5_overreporting/data/4D/overreporting/V_func_error_2999.txt
+ M figure_replication/Sec_5_overreporting/data/4D/overreporting/post_process.log
+ M figure_replication/Sec_5_overreporting/data/4D/overreporting/simulation_2999.txt
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/.hydra/
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4320.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4321.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4322.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4323.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4324.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4325.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4326.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4327.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4328.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4329.pth
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/V_func_error_4318_4329.txt
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/V_func_error_4329.txt
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/V_raw_4329.txt
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/post_process.log
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/run_dpgp.log
+?? figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/simulation_4329.txt
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/.hydra/
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5940.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5941.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5942.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5943.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5944.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5945.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5946.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5947.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5948.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5949.pth
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/V_func_error_5938_5949.txt
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/V_func_error_5949.txt
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/V_raw_5949.txt
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/post_process.log
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/run_dpgp.log
+?? figure_replication/Sec_5_overreporting/data/2D/baseline/simulation_5949.txt
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/.hydra/
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4380.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4381.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4382.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4383.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4384.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4385.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4386.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4387.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4388.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4389.pth
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/V_func_error_4378_4389.txt
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/V_func_error_4389.txt
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/V_raw_4389.txt
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/post_process.log
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/run_dpgp.log
+?? figure_replication/Sec_5_overreporting/data/2D/overreporting/simulation_4389.txt
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/.hydra/
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3778.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3779.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3780.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3781.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3782.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3783.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3784.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3785.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3786.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3787.pth
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/V_func_error_3776_3787.txt
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/V_func_error_3787.txt
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/V_raw_3787.txt
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/run_dpgp.log
+?? figure_replication/Sec_5_overreporting/data/4D/baseline/simulation_3787.txt
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/.hydra/
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3000.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3001.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3002.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3003.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3004.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3005.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3006.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3007.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3008.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3009.pth
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/V_func_error_2998_3009.txt
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/V_func_error_3009.txt
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/V_raw_3009.txt
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/run_dpgp.log
+?? figure_replication/Sec_5_overreporting/data/4D/overreporting/simulation_3009.txt
+?? figure_replication/figure_and_table_outputs/

@@ -1,0 +1,198 @@
+# step=run3_2_replicate_original start=2026-11-22T01:58:31Z cwd=/home/claude/run3 cmd=bash ./2_replicate_original.sh
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/*.tex': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/*.pdf': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/*.tex': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/*.pdf': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4320.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4321.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4322.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4323.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4324.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4325.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4326.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4327.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4328.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4329.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/10D/Iter_4330.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_315.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_316.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_317.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_318.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_319.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_320.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_321.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_322.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_323.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_324.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_4_5_Fernandes_Phelan/data/feas_set/Iter_325.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5940.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5941.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5942.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5943.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5944.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5945.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5946.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5947.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5948.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5949.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/baseline/Iter_5950.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4380.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4381.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4382.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4383.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4384.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4385.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4386.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4387.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4388.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4389.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/2D/overreporting/Iter_4390.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3778.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3779.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3780.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3781.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3782.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3783.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3784.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3785.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3786.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3787.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/baseline/Iter_3788.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3000.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3001.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3002.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3003.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3004.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3005.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3006.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3007.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3008.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3009.pth': No such file or directory
+rm: cannot remove 'figure_replication/Sec_5_overreporting/data/4D/overreporting/Iter_3010.pth': No such file or directory
+Executing Sec_3/analytical_example_1d.py...
+[Initial GP (5 points)] Mean Approximation Error (L1): 0.472028
+Step 1: Added point at x ≈ 2.2295
+[BAL Step 1 (+1 point)] Mean Approximation Error (L1): 0.083682
+Step 2: Added point at x ≈ 2.8714
+[BAL Step 2 (+1 point)] Mean Approximation Error (L1): 0.014661
+Successfully finished Sec_3/analytical_example_1d.py
+-----------------------------------
+Executing Sec_3/analytical_example_2d.py...
+
+--- Starting Bayesian Active Learning (BAL) ---
+Initial BAL: size = 100, error = 0.000443
+BAL added point 1: size = 101, error = 0.000440
+BAL added point 2: size = 102, error = 0.000340
+BAL added point 3: size = 103, error = 0.000337
+BAL added point 4: size = 104, error = 0.000321
+BAL added point 5: size = 105, error = 0.000380
+BAL added point 6: size = 106, error = 0.000329
+BAL added point 7: size = 107, error = 0.000314
+BAL added point 8: size = 108, error = 0.000314
+BAL added point 9: size = 109, error = 0.000172
+BAL added point 10: size = 110, error = 0.000169
+BAL added point 11: size = 111, error = 0.000165
+BAL added point 12: size = 112, error = 0.000166
+BAL added point 13: size = 113, error = 0.000124
+BAL added point 14: size = 114, error = 0.000120
+BAL added point 15: size = 115, error = 0.000120
+BAL added point 16: size = 116, error = 0.000122
+BAL added point 17: size = 117, error = 0.000100
+BAL added point 18: size = 118, error = 0.000099
+BAL added point 19: size = 119, error = 0.000098
+BAL added point 20: size = 120, error = 0.000084
+BAL added point 21: size = 121, error = 0.000083
+BAL added point 22: size = 122, error = 0.000078
+BAL added point 23: size = 123, error = 0.000078
+BAL added point 24: size = 124, error = 0.000073
+BAL added point 25: size = 125, error = 0.000072
+BAL added point 26: size = 126, error = 0.000066
+BAL added point 27: size = 127, error = 0.000066
+BAL added point 28: size = 128, error = 0.000066
+BAL added point 29: size = 129, error = 0.000064
+BAL added point 30: size = 130, error = 0.000040
+BAL added point 31: size = 131, error = 0.000040
+BAL added point 32: size = 132, error = 0.000040
+BAL added point 33: size = 133, error = 0.000038
+BAL added point 34: size = 134, error = 0.000038
+BAL added point 35: size = 135, error = 0.000037
+BAL added point 36: size = 136, error = 0.000037
+BAL added point 37: size = 137, error = 0.000032
+BAL added point 38: size = 138, error = 0.000027
+BAL added point 39: size = 139, error = 0.000027
+BAL added point 40: size = 140, error = 0.000027
+
+--- Starting Uniform Random Sampling ---
+Initial Uniform: size = 100, error = 0.000443
+Uniform added point 1: size = 101, error = 0.000440
+Uniform added point 2: size = 102, error = 0.000439
+Uniform added point 3: size = 103, error = 0.000441
+Uniform added point 4: size = 104, error = 0.000443
+Uniform added point 5: size = 105, error = 0.000443
+Uniform added point 6: size = 106, error = 0.000413
+Uniform added point 7: size = 107, error = 0.000412
+Uniform added point 8: size = 108, error = 0.000314
+Uniform added point 9: size = 109, error = 0.000316
+Uniform added point 10: size = 110, error = 0.000311
+Uniform added point 11: size = 111, error = 0.000311
+Uniform added point 12: size = 112, error = 0.000341
+Uniform added point 13: size = 113, error = 0.000340
+Uniform added point 14: size = 114, error = 0.000341
+Uniform added point 15: size = 115, error = 0.000342
+Uniform added point 16: size = 116, error = 0.000339
+Uniform added point 17: size = 117, error = 0.000340
+Uniform added point 18: size = 118, error = 0.000339
+Uniform added point 19: size = 119, error = 0.000256
+Uniform added point 20: size = 120, error = 0.000253
+Uniform added point 21: size = 121, error = 0.000253
+Uniform added point 22: size = 122, error = 0.000241
+Uniform added point 23: size = 123, error = 0.000241
+Uniform added point 24: size = 124, error = 0.000241
+Uniform added point 25: size = 125, error = 0.000224
+Uniform added point 26: size = 126, error = 0.000191
+Uniform added point 27: size = 127, error = 0.000183
+Uniform added point 28: size = 128, error = 0.000181
+Uniform added point 29: size = 129, error = 0.000117
+Uniform added point 30: size = 130, error = 0.000111
+Uniform added point 31: size = 131, error = 0.000115
+Uniform added point 32: size = 132, error = 0.000108
+Uniform added point 33: size = 133, error = 0.000113
+Uniform added point 34: size = 134, error = 0.000108
+Uniform added point 35: size = 135, error = 0.000108
+Uniform added point 36: size = 136, error = 0.000107
+Uniform added point 37: size = 137, error = 0.000107
+Uniform added point 38: size = 138, error = 0.000118
+Uniform added point 39: size = 139, error = 0.000112
+Uniform added point 40: size = 140, error = 0.000112
+
+--- Starting Adaptive Sparse Grid (ASG) ---
+Initial ASG: size = 29, error = 0.055674
+ASG refinement 1: size = 65, error = 0.020210
+ASG refinement 2: size = 141, error = 0.007854
+ASG refinement 3: size = 305, error = 0.002612
+ASG refinement 4: size = 643, error = 0.000853
+ASG refinement 5: size = 1337, error = 0.000265
+Successfully finished Sec_3/analytical_example_2d.py
+-----------------------------------
+Executing Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb...
+[NbConvertApp] Converting notebook Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb to notebook
+[NbConvertApp] Writing 682672 bytes to Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb
+Successfully finished Sec_4_5_Fernandes_Phelan/Plots_Table_2D_fernandes_phelan.ipynb
+-----------------------------------
+Executing Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb...
+[NbConvertApp] Converting notebook Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb to notebook
+[NbConvertApp] Writing 14767 bytes to Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb
+Successfully finished Sec_4_5_Fernandes_Phelan/Table_10D_fernandes_phelan.ipynb
+-----------------------------------
+Executing Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb...
+[NbConvertApp] Converting notebook Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb to notebook
+[NbConvertApp] Writing 156751 bytes to Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb
+Successfully finished Sec_5_overreporting/Plot_Table_2D_overreporting.ipynb
+-----------------------------------
+Executing Sec_5_overreporting/Plot_Table_4D_overreporting.ipynb...
+[NbConvertApp] Converting notebook Sec_5_overreporting/Plot_Table_4D_overreporting.ipynb to notebook
+[NbConvertApp] Writing 409543 bytes to Sec_5_overreporting/Plot_Table_4D_overreporting.ipynb
+Successfully finished Sec_5_overreporting/Plot_Table_4D_overreporting.ipynb
+-----------------------------------
+All scripts and notebooks executed successfully!
+# step=run3_2_replicate_original end=2026-11-22T02:00:00Z exit=0 wall_s=89
