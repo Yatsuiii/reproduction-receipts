@@ -1,0 +1,282 @@
+{
+  "unpatched": {
+    "scenario_id": "smithery-cli/uplink-stdio-leaks-process-tree",
+    "adapter_id": "smithery-cli",
+    "verdict": "fail",
+    "armed": true,
+    "trials": [
+      {
+        "trial_index": 0,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2365",
+            "detail": {
+              "pid": "2365",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "49021",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.008777177,
+        "settle_s": null
+      },
+      {
+        "trial_index": 1,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2408",
+            "detail": {
+              "pid": "2408",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "50406",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.009200675,
+        "settle_s": null
+      },
+      {
+        "trial_index": 2,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2455",
+            "detail": {
+              "pid": "2455",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "51806",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.008833611,
+        "settle_s": null
+      },
+      {
+        "trial_index": 3,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2499",
+            "detail": {
+              "pid": "2499",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "53189",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.009573608,
+        "settle_s": null
+      },
+      {
+        "trial_index": 4,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2547",
+            "detail": {
+              "pid": "2547",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "54573",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.008408954,
+        "settle_s": null
+      },
+      {
+        "trial_index": 5,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2591",
+            "detail": {
+              "pid": "2591",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "55952",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.009751454,
+        "settle_s": null
+      },
+      {
+        "trial_index": 6,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2637",
+            "detail": {
+              "pid": "2637",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "57342",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.00777698,
+        "settle_s": null
+      },
+      {
+        "trial_index": 7,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2681",
+            "detail": {
+              "pid": "2681",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "58731",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.008584264,
+        "settle_s": null
+      },
+      {
+        "trial_index": 8,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2725",
+            "detail": {
+              "pid": "2725",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "60121",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.010351941,
+        "settle_s": null
+      },
+      {
+        "trial_index": 9,
+        "residuals": [
+          {
+            "kind": "process",
+            "identity": "2774",
+            "detail": {
+              "pid": "2774",
+              "ppid": "1",
+              "cmdline": "node /home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs /home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk",
+              "create_time": "61494",
+              "SHUTDOWN_INTEGRITY_SUT_ROOT": "/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli",
+              "SHUTDOWN_INTEGRITY_ROLE": "server"
+            }
+          }
+        ],
+        "teardown_return_s": 10.009102014,
+        "settle_s": null
+      }
+    ],
+    "sut_commit": "407ac3b33944a585357379bc213fdf1ee55464d7",
+    "environment": {
+      "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39",
+      "python": "3.13.18"
+    },
+    "repro_command": "SHUTDOWN_INTEGRITY_SUT_ROOT=/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/smithery-cli SHUTDOWN_INTEGRITY_TRIAL=demo suts/smithery-cli/node_modules/.bin/tsx src/shutdown_integrity/adapters/smithery_cli/adapter_main.mjs <<< '{\"op\": \"start_session\", \"spec\": {\"command\": \"node\", \"args\": [\"/home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/wrapper.mjs\", \"node\", \"/home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs\", \"/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk\"], \"env\": {\"SHUTDOWN_INTEGRITY_ROLE\": \"server\"}}}' # then send teardown on the same stdin, and check 'ps -eo pid,ppid,cmd | grep fixtures/server.mjs' before it exits",
+    "wall_clock_s": 138.6
+  },
+  "patched": {
+    "scenario_id": "smithery-cli/uplink-stdio-leaks-process-tree",
+    "adapter_id": "smithery-cli",
+    "verdict": "pass",
+    "armed": true,
+    "trials": [
+      {
+        "trial_index": 0,
+        "residuals": [],
+        "teardown_return_s": 6.043412844,
+        "settle_s": 4.870000793744111e-07
+      },
+      {
+        "trial_index": 1,
+        "residuals": [],
+        "teardown_return_s": 6.98539682,
+        "settle_s": 4.6000002384971594e-07
+      },
+      {
+        "trial_index": 2,
+        "residuals": [],
+        "teardown_return_s": 6.096283912,
+        "settle_s": 1.5199998415482696e-07
+      },
+      {
+        "trial_index": 3,
+        "residuals": [],
+        "teardown_return_s": 6.120975556,
+        "settle_s": 2.729999550865614e-07
+      },
+      {
+        "trial_index": 4,
+        "residuals": [],
+        "teardown_return_s": 6.132671352,
+        "settle_s": 4.0099996567732887e-07
+      },
+      {
+        "trial_index": 5,
+        "residuals": [],
+        "teardown_return_s": 6.16332785,
+        "settle_s": 2.1699997887481004e-07
+      },
+      {
+        "trial_index": 6,
+        "residuals": [],
+        "teardown_return_s": 6.239748262,
+        "settle_s": 2.7700002647179645e-07
+      },
+      {
+        "trial_index": 7,
+        "residuals": [],
+        "teardown_return_s": 6.2231172,
+        "settle_s": 2.2500000795844244e-07
+      },
+      {
+        "trial_index": 8,
+        "residuals": [],
+        "teardown_return_s": 6.205541973,
+        "settle_s": 3.059999471588526e-07
+      },
+      {
+        "trial_index": 9,
+        "residuals": [],
+        "teardown_return_s": 6.214945854,
+        "settle_s": 2.4999997094710125e-07
+      }
+    ],
+    "sut_commit": "407ac3b33944a585357379bc213fdf1ee55464d7",
+    "environment": {
+      "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39",
+      "python": "3.13.18"
+    },
+    "repro_command": "SHUTDOWN_INTEGRITY_SUT_ROOT=/home/claude/reproduction-receipts/agent-disclosure-fidelity/.worktrees/smithery-cli-constructed-process-group-teardown SHUTDOWN_INTEGRITY_TRIAL=demo .worktrees/smithery-cli-constructed-process-group-teardown/node_modules/.bin/tsx src/shutdown_integrity/adapters/smithery_cli/adapter_main.mjs <<< '{\"op\": \"start_session\", \"spec\": {\"command\": \"node\", \"args\": [\"/home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/wrapper.mjs\", \"node\", \"/home/claude/reproduction-receipts/agent-disclosure-fidelity/src/shutdown_integrity/adapters/typescript_sdk/fixtures/server.mjs\", \"/home/claude/reproduction-receipts/agent-disclosure-fidelity/suts/typescript-sdk\"], \"env\": {\"SHUTDOWN_INTEGRITY_ROLE\": \"server\"}}}' # then send teardown on the same stdin, and check 'ps -eo pid,ppid,cmd | grep fixtures/server.mjs' before it exits",
+    "wall_clock_s": 70.8
+  }
+}
