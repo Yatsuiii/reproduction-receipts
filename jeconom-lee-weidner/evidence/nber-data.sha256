@@ -1,0 +1,7 @@
+# Five files Table3_NSW.R and NSW_main_text.R read from http://users.nber.org/~rdehejia/data/ at run time.
+# Downloaded on both runners, run 45231977655, 23 Nov 2026 ~17:54 UTC. Same hashes on ubuntu-22.04 and ubuntu-24.04.
+ab65cd58de17a78b692e66e4d714219259ac180428f24c42ddbb928cfb1820fe  nsw_treated.txt
+e7b742fe0ff07a0f45e129b4ff108bb9611cd83d53604732c48a8a0a3e20eda3  nswre74_treated.txt
+8fd745ed2c3426bb77e34b395fb84d456d346ba545af58a65b4963160b0699fd  nsw_control.txt
+a1364cea459d953dc691a667d99194b4ad335d6d550354fe23a5d2dc58d729b5  nswre74_control.txt
+b5754be1d42e59d8e8e7067a71b68dab6e8efeb24bb654b286f18d02a809c0a1  psid2_controls.txt

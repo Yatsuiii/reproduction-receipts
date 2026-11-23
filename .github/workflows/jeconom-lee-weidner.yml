@@ -61,7 +61,8 @@ jobs:
             mkdir -p out/$(dirname $f); cp pkg/$f out/$f
             if git -C pkg cat-file -e HEAD:$f 2>/dev/null; then
               git -C pkg show HEAD:$f > committed.tmp
-              python3 jeconom-lee-weidner/compare_results.py committed.tmp pkg/$f | sed "s#committed.tmp#committed:$f#" | tee -a compare-committed.txt || rc=1
+              python3 jeconom-lee-weidner/compare_results.py committed.tmp pkg/$f > one.txt || rc=1
+              sed "s#committed.tmp#committed:$f#" one.txt | tee -a compare-committed.txt
             else echo "new file (not committed upstream): $f" | tee -a compare-committed.txt; fi
           done
           echo "NAME=$(echo ${{ matrix.script }} | tr / -)-${{ matrix.os }}" >> $GITHUB_ENV
