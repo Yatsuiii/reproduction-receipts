@@ -1,0 +1,66 @@
+name: Lee-Weidner Table 3, extra check across R versions
+# Labelled extra check, separate from the as-is rerun. Table3_NSW.R has no random
+# draws, yet the as-is rerun on R 4.6.2 did not regenerate 40 of 139 committed
+# numbers. This runs the same unchanged script under older R releases, and once
+# with ATbounds built from the companion GitHub repo, to see which change moves
+# the numbers. Nothing in the authors' files is edited.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['.github/workflows/jeconom-lee-weidner-table3-check.yml']
+permissions:
+  contents: read
+jobs:
+  table3:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        r: ['4.1.3', '4.2.3', '4.3.3', '4.4.3', '4.5.2', 'release']
+        atbounds: [cran]
+        include:
+          - r: 'release'
+            atbounds: github
+    env:
+      UPSTREAM: https://github.com/ATbounds/ATbounds-replication
+      COMMIT: 67c2c4d403d3dfbbfa4cfb25f72fe88d7d0f00da
+      ATB_UPSTREAM: https://github.com/ATbounds/ATbounds-r
+      ATB_COMMIT: 2333425abe9608a17d6a81bbd90e96a8ae2416fd
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: r-lib/actions/setup-r@929c772977a3a13c8733b363bf5a2f685c25dd91
+        with:
+          r-version: ${{ matrix.r }}
+          use-public-rspm: true
+      - name: Clean clone of the authors' package at the pinned commit
+        run: |
+          git clone -q "$UPSTREAM" pkg && git -C pkg checkout -q "$COMMIT"
+          (cd pkg && git ls-files | while read f; do sha256sum "$f"; done) > package-files.sha256
+          diff package-files.sha256 jeconom-lee-weidner/evidence/package-files.sha256 && echo "hash ok"
+      - name: ATbounds (${{ matrix.atbounds }})
+        run: |
+          if [ "${{ matrix.atbounds }}" = github ]; then
+            git clone -q "$ATB_UPSTREAM" atb && git -C atb checkout -q "$ATB_COMMIT"
+            R CMD INSTALL atb > install.log 2>&1
+          else
+            Rscript -e "install.packages('ATbounds')" > install.log 2>&1
+          fi
+          Rscript -e 'cat(R.version.string, "| ATbounds", as.character(packageVersion("ATbounds")), "| mgcv", as.character(packageVersion("mgcv")), "\n")' | tee versions.txt
+      - name: Run Table3_NSW.R unchanged
+        working-directory: pkg
+        run: Rscript Examples/Table3_NSW.R > ../run.log 2>&1; tail -3 ../run.log
+      - name: Compare with the committed table
+        run: |
+          git -C pkg show HEAD:Examples/Results/Table3_NSW.tex > committed.tex
+          cp pkg/Examples/Results/Table3_NSW.tex regenerated.tex
+          python3 jeconom-lee-weidner/compare_results.py committed.tex regenerated.tex | tee compare.txt || true
+          echo "$(cat versions.txt) | $(head -1 compare.txt)" >> $GITHUB_STEP_SUMMARY
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: lw-table3-check-r${{ matrix.r }}-${{ matrix.atbounds }}
+          path: |
+            *.log
+            *.txt
+            *.tex

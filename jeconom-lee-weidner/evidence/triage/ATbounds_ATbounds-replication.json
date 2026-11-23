@@ -1,0 +1,155 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pk/ATbounds_ATbounds-replication",
+  "commit": "67c2c4d403d3dfbbfa4cfb25f72fe88d7d0f00da"
+ },
+ "when": "2026-11-23T17:48:00Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "defaults",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 9,
+   "note": 1
+  },
+  "findings": [
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads ATbounds, FNN, ggplot2, lmtest, sandwich, xtable with no renv.lock. A rerun installs current CRAN versions and must log them.",
+    "evidence": [
+     "Examples/NSW_main_text.R:24",
+     "Examples/NSW_main_text.R:25",
+     "Examples/Table2_RHC.R:18",
+     "Examples/Table2_RHC.R:19",
+     "Examples/Table2_RHC.R:20"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code downloads http://users.nber.org/~rdehejia/data/nsw_treated.txt at run time. The content may have changed since publication; a receipt must record its SHA-256 (link not checked).",
+    "evidence": [
+     "Examples/NSW_main_text.R:67"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code downloads http://users.nber.org/~rdehejia/data/nsw_control.txt at run time. The content may have changed since publication; a receipt must record its SHA-256 (link not checked).",
+    "evidence": [
+     "Examples/NSW_main_text.R:71"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code downloads http://users.nber.org/~rdehejia/data/nswre74_treated.txt at run time. The content may have changed since publication; a receipt must record its SHA-256 (link not checked).",
+    "evidence": [
+     "Examples/NSW_main_text.R:85"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code downloads http://users.nber.org/~rdehejia/data/nswre74_control.txt at run time. The content may have changed since publication; a receipt must record its SHA-256 (link not checked).",
+    "evidence": [
+     "Examples/NSW_main_text.R:89"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code downloads http://users.nber.org/~rdehejia/data/nswre74_treated.txt at run time. The content may have changed since publication; a receipt must record its SHA-256 (link not checked).",
+    "evidence": [
+     "Examples/Table3_NSW.R:118"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code downloads http://users.nber.org/~rdehejia/data/nswre74_control.txt at run time. The content may have changed since publication; a receipt must record its SHA-256 (link not checked).",
+    "evidence": [
+     "Examples/Table3_NSW.R:122"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code downloads http://users.nber.org/~rdehejia/data/psid2_controls.txt at run time. The content may have changed since publication; a receipt must record its SHA-256 (link not checked).",
+    "evidence": [
+     "Examples/Table3_NSW.R:147"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "14 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "Examples/Table2_RHC.R:148",
+     "Examples/Table2_RHC.R:149",
+     "Examples/Table2_RHC.R:151",
+     "Examples/Table2_RHC.R:173",
+     "Examples/Table3_NSW.R:74",
+     "Examples/Table3_NSW.R:75",
+     "Examples/Table3_NSW.R:77",
+     "Examples/Table3_NSW.R:92",
+     "MC/AppendixTable_MonteCarloInference.R:174",
+     "MC/AppendixTable_MonteCarloInference.R:177"
+    ]
+   },
+   {
+    "code": "NONCOMMERCIAL_LICENCE",
+    "severity": "note",
+    "message": "Non-commercial licence. Rerunning for an editorial check is normally fine; a receipt should not redistribute the package's files.",
+    "evidence": [
+     "LICENSE"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 15,
+   "bytes": 78799,
+   "languages": [
+    "r"
+   ],
+   "code_files": {
+    "r": 6
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [
+    "CC BY-NC",
+    "GPL"
+   ],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 7,
+   "writes": 5,
+   "missing": [],
+   "unresolved": 0,
+   "remote": [
+    "http://users.nber.org/~rdehejia/data/nsw_control.txt",
+    "http://users.nber.org/~rdehejia/data/nsw_treated.txt",
+    "http://users.nber.org/~rdehejia/data/nswre74_control.txt",
+    "http://users.nber.org/~rdehejia/data/nswre74_treated.txt",
+    "http://users.nber.org/~rdehejia/data/psid2_controls.txt"
+   ]
+  },
+  "links": {
+   "found": 7,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.02
+ }
+}

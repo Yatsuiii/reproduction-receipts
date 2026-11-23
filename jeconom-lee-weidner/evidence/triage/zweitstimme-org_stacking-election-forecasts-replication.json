@@ -1,0 +1,261 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pk/zweitstimme-org_stacking-election-forecasts-replication",
+  "commit": "5f12ee2f1e81371bedefecfb0c022b5c84d55acd"
+ },
+ "when": "2026-11-23T17:48:03Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "defaults",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 10,
+   "deviation": 6,
+   "note": 2
+  },
+  "findings": [
+   {
+    "code": "PROPRIETARY_SOFTWARE",
+    "severity": "blocker",
+    "message": "Requires Stata, which is proprietary and not declared available on this desk. Rerun triage with --have stata if a licensed copy is available.",
+    "evidence": [
+     "app_us/input/replication_papers/tien/Pres2024 Forecast Tien Lewis-Beck.do"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`output/mdl_est/de_coef_draws.rds` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "app_germany/05_figures_tables.R:801"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`output/mdl_est/de_elpd_by_model.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "app_germany/05_figures_tables.R:76"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`output/mdl_est/de_loglik_fund.rds` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "app_germany/05_figures_tables.R:74"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`output/mdl_est/de_loglik_poll.rds` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "app_germany/05_figures_tables.R:75"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`output/mdl_est/de_pred_draws_fund.rds` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "app_germany/05_figures_tables.R:86"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`output/mdl_est/de_pred_draws_poll.rds` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "app_germany/05_figures_tables.R:87"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`output/mdl_est/de_pred_fund.rds` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "app_germany/05_figures_tables.R:79"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`output/mdl_est/de_pred_poll.rds` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "app_germany/05_figures_tables.R:80"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`output/mdl_est/de_weights_by_lead.rds` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"proprietary\"), so it is most likely one of those.",
+    "evidence": [
+     "app_germany/05_figures_tables.R:73"
+    ]
+   },
+   {
+    "code": "STATA_VERSION_MISSING",
+    "severity": "deviation",
+    "message": "No `version` statement in any do-file. Stata's behaviour depends on the version, so a rerun must choose one and log it.",
+    "evidence": []
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads DataCombine, EBMAforecast, R, brms, broom, dplyr, forcats, frequency, ggforce, ggh4x, ggplot2, ggrepel, glue, haven, lmtest, loo, lubridate, marginaleffects, modelsummary, patchwork, plyr, readr, readxl, rstan, rvest, sandwich, scales, setup.R, tibble, tidyr, tidyverse, zoo with no renv.lock. A rerun installs current CRAN versions and must log them.",
+    "evidence": [
+     "app_germany/04b_L_robustness.R:17",
+     "app_germany/04b_L_robustness.R:18",
+     "app_germany/05_figures_tables.R:21",
+     "app_germany/05_figures_tables.R:22",
+     "app_germany/05_figures_tables.R:23"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code fetches data over the network when it runs (download.file). What the server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+    "evidence": [
+     "app_us/R/abramowitz_time_for_change.R:162",
+     "app_us/R/hibbs_bread_peace.R:51"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code downloads https://fred.stlouisfed.org/graph/fredgraph.csv?id=A191RL1Q225SBEA at run time. The content may have changed since publication; a receipt must record its SHA-256 (link not checked).",
+    "evidence": [
+     "app_us/R/abramowitz_time_for_change.R:153"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "50 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:51",
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:53",
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:77",
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:87",
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:92",
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:99",
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:103",
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:105",
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:107",
+     "app_us/input/replication_papers/algara/PS_Forecasting_Analysis.R:109"
+    ]
+   },
+   {
+    "code": "LONG_COMPUTE",
+    "severity": "deviation",
+    "message": "The documentation claims a run time of about 336 hours, over this desk's budget of 24 hours (--max-hours). A full rerun needs a compute plan; a partial rerun must say which parts it skipped.",
+    "evidence": []
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "22 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "app_germany/R/de_ebma_woc.R:200",
+     "app_germany/R/de_ebma_woc.R:207",
+     "app_germany/R/de_ebma_woc.R:208",
+     "app_us/04_figures_tables.R:78",
+     "app_us/04_figures_tables.R:79",
+     "app_us/04_figures_tables.R:80",
+     "app_us/04b_performance_subsets.R:56",
+     "app_us/04b_performance_subsets.R:57",
+     "app_us/04b_performance_subsets.R:60",
+     "app_us/04b_performance_subsets.R:66"
+    ]
+   },
+   {
+    "code": "NONCOMMERCIAL_LICENCE",
+    "severity": "note",
+    "message": "Non-commercial licence. Rerunning for an editorial check is normally fine; a receipt should not redistribute the package's files.",
+    "evidence": [
+     "LICENSE"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 127,
+   "bytes": 2327156,
+   "languages": [
+    "r",
+    "stata"
+   ],
+   "code_files": {
+    "r": 30,
+    "stata": 1
+   },
+   "docs_read": [
+    "README.md",
+    "app_us/docs/FORECASTING_2024_COLLECTION.md",
+    "app_us/docs/mhw_ebma_component_models_scope.md",
+    "app_us/docs/ps_2024_symposium_model_scope.md",
+    "app_us/docs/us_implementation_departures.md",
+    "app_us/input/replication_papers/abramowitz/README.md",
+    "app_us/input/replication_papers/algara/Read_Me_PS_Forecasting_Analysis.txt",
+    "app_us/input/replication_papers/campbell/README.md",
+    "app_us/input/replication_papers/erikson_wlezien/README.md",
+    "app_us/input/replication_papers/fair/README.md",
+    "app_us/input/replication_papers/hibbs/README.md"
+   ],
+   "licences_named": [
+    "CC BY-NC",
+    "CC0",
+    "MIT"
+   ],
+   "master_scripts": [
+    "0_setup.R",
+    "Makefile",
+    "app_germany/01_prepare_data.R",
+    "app_germany/02_dlm_estimation.R",
+    "app_germany/03_prepare_model_data.R",
+    "app_germany/04_estimation.R",
+    "app_germany/04b_L_robustness.R",
+    "app_germany/05_figures_tables.R",
+    "app_us/01_prepare_data.R",
+    "app_us/02_estimation.R",
+    "app_us/03_post_estimation.R",
+    "app_us/04_figures_tables.R",
+    "app_us/04b_performance_subsets.R",
+    "app_us/04e_jackknife_leavek.R",
+    "app_us/04f_forecasts_appendix.R",
+    "app_us/05_robustness_L.R"
+   ]
+  },
+  "inputs": {
+   "reads": 82,
+   "writes": 50,
+   "missing": [
+    "de_coef_draws.rds",
+    "de_elpd_by_model.csv",
+    "de_loglik_fund.rds",
+    "de_loglik_poll.rds",
+    "de_pred_draws_fund.rds",
+    "de_pred_draws_poll.rds",
+    "de_pred_fund.rds",
+    "de_pred_poll.rds",
+    "de_weights_by_lead.rds"
+   ],
+   "unresolved": 22,
+   "remote": [
+    "https://fred.stlouisfed.org/graph/fredgraph.csv?id=A191RL1Q225SBEA"
+   ]
+  },
+  "links": {
+   "found": 29,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.192
+ }
+}

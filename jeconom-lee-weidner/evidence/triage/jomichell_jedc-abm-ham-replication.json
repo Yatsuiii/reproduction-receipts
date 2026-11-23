@@ -1,0 +1,87 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pk/jomichell_jedc-abm-ham-replication",
+  "commit": "a8aa69344fc9bc491e7356e8ae11937ad7570020"
+ },
+ "when": "2026-11-23T17:48:01Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "defaults",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 1,
+   "deviation": 2,
+   "note": 0
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`path/to/compustat_annual.csv` is read by the code but is not in the package, and the documentation (replication_notes.txt) describes it as restricted (\"WRDS\"). The desk cannot run this without access.",
+    "evidence": [
+     "replicate_moments.R:72"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads boot, dplyr, fredr, tibble with no renv.lock. A rerun installs current CRAN versions and must log them.",
+    "evidence": [
+     "replicate_moments.R:25",
+     "replicate_moments.R:26",
+     "replicate_moments.R:27",
+     "replicate_moments.R:28"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code fetches data over the network when it runs (fredr). What the server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+    "evidence": [
+     "replicate_moments.R:304"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 9,
+   "bytes": 35397,
+   "languages": [
+    "r"
+   ],
+   "code_files": {
+    "r": 3
+   },
+   "docs_read": [
+    "README.md",
+    "replication_notes.txt"
+   ],
+   "licences_named": [
+    "MIT"
+   ],
+   "master_scripts": [
+    "replicate_moments.R"
+   ]
+  },
+  "inputs": {
+   "reads": 2,
+   "writes": 0,
+   "missing": [
+    "compustat_annual.csv"
+   ],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 2,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.015
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pk/haukelicht_validating_opensource_mt",
+  "commit": "74a1d6b40d413cf511e1ffbc2c6a0fd85e429e8d"
+ },
+ "when": "2026-11-23T17:48:00Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "defaults",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 5,
+   "deviation": 5,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`cmp_translations.tsv` is read by the code and named in the documentation (data/datasets/classifier_finetuning/README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "code/05-analyses/02-describe_finetuning_datasets.R:300"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`dupont_and_rachuj_2022_coded_manifesto_sentences.rds` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"not publicly available\"), so it is most likely one of those.",
+    "evidence": [
+     "code/01-data_preparation/classifier_finetuning/prepare_dupont_and_rachuj_2022_manifesto_data.R:32"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`lda90.rds` is read by the code and named in the documentation (data/results/topic_modeling/README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "code/05-analyses/01-analyze_topic_modeling_results.R:246"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`PImPo_qsl_wo_verbatim.csv` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"not publicly available\"), so it is most likely one of those.",
+    "evidence": [
+     "code/01-data_preparation/classifier_finetuning/prepare_lehmann_and_zobel_2018_manifesto_data.R:45"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`poljak_2022_attack_data_translated.tsv` is read by the code and named in the documentation (data/datasets/classifier_finetuning/README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "code/05-analyses/02-describe_finetuning_datasets.R:507"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python requirements without an exact version: scikit-learn=1.3.2; imbalanced-learn=0.11.0. A rerun installs whatever is current and must log the versions it got.",
+    "evidence": [
+     "code/02-machine_translation/requirements.txt",
+     "code/04-classifier_finetuning/requirements.txt"
+    ]
+   },
+   {
+    "code": "UNDECLARED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python code imports google, imblearn, torch, tqdm, which no dependency file names.",
+    "evidence": [
+     "code/02-machine_translation/translate.py",
+     "code/04-classifier_finetuning/finetune_classifier.py",
+     "code/05-analyses/translation_discrepancy/02-compute_translation_similiarities_for_label_disagreement_cases.py",
+     "code/05-analyses/translation_similarity/01-sample_examples_for_similarity_analysis.py",
+     "code/05-analyses/translation_similarity/02-compute_translation_similiarities.py"
+    ]
+   },
+   {
+    "code": "UNDECLARED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads ISOcodes, cld2, countrycode, dataverse, devtools, lubridate, manifestoR, proxy, psych, quanteda, quanteda.textstats, readtext, readxl, which renv.lock does not pin.",
+    "evidence": [
+     "renv.lock"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code fetches data over the network when it runs (download.file). What the server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+    "evidence": [
+     "code/01-data_preparation/classifier_finetuning/prepare_dupont_and_rachuj_2022_manifesto_data.R:28",
+     "code/01-data_preparation/classifier_finetuning/prepare_lehmann_and_zobel_2018_manifesto_data.R:42"
+    ]
+   },
+   {
+    "code": "GPU_REQUIRED",
+    "severity": "deviation",
+    "message": "The package refers to GPUs or CUDA. A CPU rerun may be slower or numerically different and must say so.",
+    "evidence": []
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "2 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "code/03-topic_modeling/01-fit_tipic_models.R:49",
+     "code/05-analyses/02-describe_finetuning_datasets.R:410"
+    ]
+   },
+   {
+    "code": "CLUSTER_MENTIONED",
+    "severity": "note",
+    "message": "The package mentions a cluster or batch scheduler; scripts may assume one.",
+    "evidence": []
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 338,
+   "bytes": 402865214,
+   "languages": [
+    "python",
+    "r",
+    "shell"
+   ],
+   "code_files": {
+    "python": 5,
+    "r": 20,
+    "shell": 11
+   },
+   "docs_read": [
+    "README.md",
+    "data/datasets/classifier_finetuning/README.md",
+    "data/datasets/topic_modeling/texts/README.md",
+    "data/exdata/poljak_2022/README.md",
+    "data/exdata/theocharis_et_al_2016/README.md",
+    "data/results/topic_modeling/README.md",
+    "replication_r_requirements.txt"
+   ],
+   "licences_named": [],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 44,
+   "writes": 3,
+   "missing": [
+    "cmp_translations.tsv",
+    "dupont_and_rachuj_2022_coded_manifesto_sentences.rds",
+    "lda90.rds",
+    "pimpo_qsl_wo_verbatim.csv",
+    "poljak_2022_attack_data_translated.tsv"
+   ],
+   "unresolved": 2,
+   "remote": []
+  },
+  "links": {
+   "found": 7,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.162
+ }
+}
