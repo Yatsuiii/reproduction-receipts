@@ -1,0 +1,66 @@
+name: IJOC 2024.0863 rerun (second machine)
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['ijoc-yu-lai-tian-liu/**', '.github/workflows/ijoc-yu-lai-tian-liu.yml']
+permissions:
+  contents: read
+jobs:
+  rerun:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        script:
+          - value_estimation/intruder_monitor
+          - value_estimation/inventory_control
+          - value_estimation/ttt3x3_value_estimation
+          - value_estimation/ttt4x4_value_estimation
+          - policy_performance/ttt4x4_random
+          - policy_performance/ttt4x4_softmax
+    env:
+      UPSTREAM: https://github.com/INFORMSJoC/2024.0863
+      COMMIT: 325bb7d99908de5df94c9c709bcf37ccbdbff5ae
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Clean clone of the journal's archive at the pinned commit
+        run: |
+          git clone -q "$UPSTREAM" pkg
+          git -C pkg checkout -q "$COMMIT"
+          test "$(git -C pkg rev-parse HEAD)" = "$COMMIT"
+          (cd pkg && git ls-files | while read f; do sha256sum "$f"; done) > package-files.sha256
+          diff package-files.sha256 ijoc-yu-lai-tian-liu/evidence/package-files.sha256 && echo "hash ok"
+      - name: Fresh venv, pip install -r requirements.txt unchanged
+        run: |
+          python3 --version | tee python-version.txt
+          python3 -m venv venv
+          venv/bin/pip install -r pkg/requirements.txt > install.log 2>&1
+          venv/bin/pip freeze | tee pip-freeze.txt
+          lscpu | grep -E "Model name|^CPU\(s\)" > hardware.txt; free -g >> hardware.txt; cat hardware.txt
+      - name: Run the README command unchanged
+        working-directory: pkg
+        run: |
+          start=$(date +%s); ../venv/bin/python scripts/${{ matrix.script }}.py > ../run.log 2>&1; rc=$?
+          echo "exit=$rc wall_s=$(( $(date +%s)-start ))" | tee -a ../run.log; exit $rc
+      - name: Compare with the committed CSV and with the first machine
+        if: always()
+        run: |
+          n=$(basename ${{ matrix.script }})
+          csv=$(git -C pkg status --porcelain --untracked-files=all | awk '{print $2}' | grep '\.csv$' | head -1)
+          echo "changed: $csv"
+          git -C pkg status --porcelain --untracked-files=all > status-after.txt
+          git -C pkg show HEAD:"$csv" > committed.csv
+          python3 ijoc-yu-lai-tian-liu/compare_csv.py committed.csv pkg/"$csv" | tee compare-committed.txt || true
+          m1=ijoc-yu-lai-tian-liu/evidence/machine1/$(basename "$csv")
+          if [ -f "$m1" ]; then cmp "$m1" pkg/"$csv" && echo "byte-identical to the first machine" | tee compare-machine1.txt || python3 ijoc-yu-lai-tian-liu/compare_csv.py "$m1" pkg/"$csv" | tee compare-machine1.txt; fi
+          cp pkg/"$csv" .
+          echo "NAME=$n" >> $GITHUB_ENV
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ijoc-machine2-${{ env.NAME }}
+          path: |
+            *.log
+            *.txt
+            *.csv

@@ -30,3 +30,14 @@ Largest-size Average Estimator", INFORMS Journal on Computing, DOI 10.1287/ijoc.
 - The scripts seed every replication. A difference is reported as "the committed materials did not regenerate the committed
   value in this environment, reason unknown", never as an error in the paper.
 - Any edit to package code, any extra install, and any failed command goes in the deviations list, in order.
+
+## Addendum, 2026-11-23 ~04:10 UTC, after the first command had run 2 minutes
+
+`intruder_monitor.py` printed per-cell times of 1.5, 6.0, 17.3 and 41.9 s for N = 8 to 14 of its first estimator. The cost
+grows roughly as N to the 6th (H = 6), which projects to about 3 hours per estimator and setting, and 24 of those, so about
+3 days on this 4-core machine. The README gives no run time. I stopped it (its log is kept) and changed the order: the five
+other scripts run first, then `intruder_monitor.py` runs unchanged for as long as this machine allows. It writes its CSV
+only at the very end, so if it is stopped first, the cells it printed are compared with the committed CSV at the precision
+it prints (6 decimals for mean, bias and stdev, 8 for MSE) by `compare_printed.py`. That script was written after the
+first stopped run and checked against its log. A printed-precision match is weaker than a CSV match and is reported as
+such. Cells it did not reach are reported as not run.
