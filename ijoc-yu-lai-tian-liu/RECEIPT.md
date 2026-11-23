@@ -31,8 +31,9 @@ materials did on these machines. It does not say anything about whether the pape
 | `intruder_monitor.py` | waiting to run | not run | a first run stopped after 4 of 288 rows; **16 of 16 printed values match** |
 
 "Match" for a full CSV means every cell is either the same text or the same double to 1e-12 relative. No cell was in the
-"close" or "differs" class. On both machines the same cells differed in the last digit, with the same regenerated values,
-although the two machines ran different Python versions and different CPUs.
+"close" or "differs" class. The three regenerated CSVs are byte-identical between the two machines (`cmp` in the second
+workflow run, [45143409004](https://github.com/Yatsuiii/reproduction-receipts/actions/runs/45143409004)), although they ran
+different Python versions and different CPUs.
 
 "Printed precision" means the value the script prints while running (6 decimals for mean, bias and standard deviation, 8 for
 MSE), compared with the committed CSV rounded the same way, by [`compare_printed.py`](compare_printed.py). It is weaker than a
