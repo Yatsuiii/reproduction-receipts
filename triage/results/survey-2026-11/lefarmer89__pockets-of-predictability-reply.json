@@ -1,0 +1,269 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/lefarmer89__pockets-of-predictability-reply",
+  "commit": "22c6be1295b898a9ad9b963f1061cac6e6fcfb7c"
+ },
+ "when": "2026-11-21T18:16:39Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 3,
+   "deviation": 15,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`pcPredictor.mat` is read by the code and named in the documentation (MAT_ARCHIVE.md, README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "dailyEmpirics.m:69",
+     "dailyEmpiricsHyperparameters1.m:38",
+     "subroutines/forecasting/selectPredictor.m:30"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`simulatedPaths.mat` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "stickyExpectationsSim.m:58"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`results/aggregates/topKbotK.mat` is read by the code and named in the documentation (README.md, tests/VERIFICATION.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "figures/figure1.m:11",
+     "figures/figureA1.m:10",
+     "figures/figureA2.m:10",
+     "figures/figureA3.m:9"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`forecastResults_1_2.5yE_1yDM_1S_pm.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "figures/figure2.m:15",
+     "subroutines/bootstrap/computeSignifCell.m:24",
+     "tables/table2.m:14"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`forecastResults_2_2.5yE_1yDM_1S_pm_HyperR1.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "subroutines/hyperparameters/adaptivePanelsForSplit.m:67"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`forecastResultsMonthly_1_2.5yE_1yDM_1S_pm.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "tables/tableA5.m:11"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`integralR2.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "subroutines/bootstrap/computeSignifCell.m:36"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`OOSResults_1_2.5yE_1yDM.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "tables/table3.m:23",
+     "tables/table4.m:17"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`daily/OOSResults_2_2.5yE_1yDM.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "subroutines/hyperparameters/computeTab1Results.m:34",
+     "subroutines/hyperparameters/computeTabA3Results.m:74",
+     "tables/table3.m:28",
+     "tables/tableA1.m:24"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`OOSResults_2_HyperR1_ExpandingC.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "subroutines/hyperparameters/adaptivePanelsForSplit.m:124",
+     "subroutines/hyperparameters/adaptivePanelsForSplit.m:127"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`OOSResults_3_2.5yE_1yDM.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "tables/table3.m:33"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`OOSResultsHML_1_2.5yE_1yDM.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "tables/tableA4.m:20"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`OOSResultsMonthly_1_2.5yE_1yDM.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "tables/tableA6.m:16"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`OOSResultsMonthly_2_2.5yE_1yDM.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "tables/tableA6.m:21"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`OOSResultsMonthly_3_2.5yE_1yDM.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "tables/tableA6.m:26"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`OOSResultsSMB_1_2.5yE_1yDM.mat` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "tables/tableA4.m:15"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`W_sim.csv` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (MAT_ARCHIVE.md: 3 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "dailyAssetPricingBootstrap.m:68"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "3 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "subroutines/io/prettifyLatexTable.m:45",
+     "subroutines/io/prettifyLatexTable.m:46",
+     "subroutines/io/prettifyLatexTable.m:47"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "PathSimulator.m",
+     "dailyAssetPricingBootstrap.m",
+     "dailyBootstrap.m",
+     "dailyEmpirics.m",
+     "dailyEmpiricsGPriorRobustness.m"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "9 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "dailyAssetPricingBootstrap.m:71",
+     "dailyEmpiricsHyperparametersMarginals.m:268",
+     "dailyEmpiricsHyperparametersMarginals.m:269",
+     "subroutines/hyperparameters/computeTabA3Results.m:89",
+     "subroutines/io/saveTableScript.m:20",
+     "subroutines/io/splitDataPanels.m:61",
+     "tables/table4.m:26",
+     "tables/table5.m:24",
+     "tables/tableA2.m:23"
+    ]
+   },
+   {
+    "code": "MATLAB_TOOLBOX",
+    "severity": "note",
+    "message": "Documentation names MATLAB toolboxes: Machine Learning Toolbox, Parallel Computing Toolbox. Each is licensed separately; check the desk's MATLAB has them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 94,
+   "bytes": 4665083,
+   "languages": [
+    "matlab"
+   ],
+   "code_files": {
+    "matlab": 83
+   },
+   "docs_read": [
+    "MAT_ARCHIVE.md",
+    "README.md",
+    "tests/VERIFICATION.md"
+   ],
+   "licences_named": [
+    "MIT"
+   ],
+   "master_scripts": [
+    "runAll.m"
+   ]
+  },
+  "inputs": {
+   "reads": 49,
+   "writes": 26,
+   "missing": [
+    "forecastresults_1_2.5ye_1ydm_1s_pm.mat",
+    "forecastresults_2_2.5ye_1ydm_1s_pm_hyperr1.mat",
+    "forecastresultsmonthly_1_2.5ye_1ydm_1s_pm.mat",
+    "integralr2.mat",
+    "oosresults_1_2.5ye_1ydm.mat",
+    "oosresults_2_2.5ye_1ydm.mat",
+    "oosresults_2_hyperr1_expandingc.mat",
+    "oosresults_3_2.5ye_1ydm.mat",
+    "oosresultshml_1_2.5ye_1ydm.mat",
+    "oosresultsmonthly_1_2.5ye_1ydm.mat",
+    "oosresultsmonthly_2_2.5ye_1ydm.mat",
+    "oosresultsmonthly_3_2.5ye_1ydm.mat",
+    "oosresultssmb_1_2.5ye_1ydm.mat",
+    "pcpredictor.mat",
+    "simulatedpaths.mat",
+    "topkbotk.mat",
+    "w_sim.csv"
+   ],
+   "unresolved": 9,
+   "remote": []
+  },
+  "links": {
+   "found": 3,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.106
+ }
+}

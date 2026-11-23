@@ -1,0 +1,148 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/zhexiaolin__Estimation-based-on-nearest-neighbor-matching",
+  "commit": "0d0d5539c4b74c667c23bb909d27eebdd495b2c8"
+ },
+ "when": "2026-11-21T18:16:35Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 5,
+   "deviation": 5,
+   "note": 0
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`result/out.feather` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "produce_tables.R:16"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`result/out_shadish.feather` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "produce_tables_shadish.R:16"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`result/outse.feather` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"Confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "produce_tables.R:23"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`result/outse_shadish.feather` is read by the code but is not in the package. The documentation does not name it, but does describe restricted data (\"Confidential\"), so it is most likely one of those.",
+    "evidence": [
+     "produce_tables_shadish.R:23"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`data/shadish.txt` is read by the code but is not in the package, and the documentation (README.md) describes it as restricted (\"Confidential\"). The desk cannot run this without access.",
+    "evidence": [
+     "shadish.R:2"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python requirements without an exact version: numpy; torch; pandas; matplotlib; pyarrow; POT; git+https://github.com/gsbDBI/ds-wgan.git; git+https://github.com/gbaydin/hypergradient-descent.git. A rerun installs whatever is current and must log the versions it got.",
+    "evidence": [
+     "requirements.txt"
+    ]
+   },
+   {
+    "code": "UNDECLARED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python code imports hypergrad, ot, wgan, which no dependency file names.",
+    "evidence": [
+     "gan_estimation/gan_shadish.py",
+     "gan_estimation/gan_shadish_baseline.py"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads FNN, arrow, dplyr, feather, future, future.apply, optparse, tictoc, xtable with no renv.lock. A rerun installs current CRAN versions and must log them.",
+    "evidence": [
+     "check_dependency.R:1",
+     "check_dependency.R:2",
+     "check_dependency.R:3",
+     "check_dependency.R:4",
+     "check_dependency.R:5"
+    ]
+   },
+   {
+    "code": "LONG_COMPUTE",
+    "severity": "deviation",
+    "message": "The documentation claims a run time of about 336 hours, over this desk's budget of 24 hours (--max-hours). A full rerun needs a compute plan; a partial rerun must say which parts it skipped.",
+    "evidence": []
+   },
+   {
+    "code": "GPU_REQUIRED",
+    "severity": "deviation",
+    "message": "The package refers to GPUs or CUDA. A CPU rerun may be slower or numerically different and must say so.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 40,
+   "bytes": 88576384,
+   "languages": [
+    "python",
+    "r",
+    "shell"
+   ],
+   "code_files": {
+    "python": 2,
+    "r": 10,
+    "shell": 1
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [
+    "MIT"
+   ],
+   "master_scripts": [
+    "main.sh"
+   ]
+  },
+  "inputs": {
+   "reads": 12,
+   "writes": 2,
+   "missing": [
+    "out.feather",
+    "out_shadish.feather",
+    "outse.feather",
+    "outse_shadish.feather",
+    "shadish.txt"
+   ],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 4,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.025
+ }
+}

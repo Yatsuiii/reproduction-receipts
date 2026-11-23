@@ -1,0 +1,57 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/InsIDE-Lab-DiECO__permanent-transitory-decomposition-replication",
+  "commit": "d46e6006dda79c13313daa02d405b76e53df0ae4"
+ },
+ "when": "2026-11-21T18:16:37Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 1,
+   "deviation": 0,
+   "note": 0
+  },
+  "findings": [
+   {
+    "code": "NO_CODE",
+    "severity": "blocker",
+    "message": "No code files were found, so there is nothing to run. The package may hold data or results only.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 11,
+   "bytes": 715734,
+   "languages": [],
+   "code_files": {},
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [
+    "CC BY"
+   ],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 0,
+   "writes": 0,
+   "missing": [],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 1,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.006
+ }
+}

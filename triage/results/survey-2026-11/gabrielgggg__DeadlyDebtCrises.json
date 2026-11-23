@@ -1,0 +1,134 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/gabrielgggg__DeadlyDebtCrises",
+  "commit": "62d163e82276e1bc79d00adba0f075ca8b9766dc"
+ },
+ "when": "2026-11-21T18:16:42Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 1,
+   "deviation": 2,
+   "note": 5
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`\\t` is read by the code and named in the documentation (README.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "matlab_tables_figures/loadResultsToMatlab.m:8"
+    ]
+   },
+   {
+    "code": "STATA_VERSION_MISSING",
+    "severity": "deviation",
+    "message": "No `version` statement in any do-file. Stata's behaviour depends on the version, so a rerun must choose one and log it.",
+    "evidence": []
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "1 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "data/Main.do:10"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "matlab_tables_figures/loadBinary.m",
+     "matlab_tables_figures/loadResultsToMatlab.m",
+     "matlab_tables_figures/modelFit.m",
+     "matlab_tables_figures/modelFromMatrix.m",
+     "matlab_tables_figures/modelOutcomes.m"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Stata; the desk says it has it.",
+    "evidence": [
+     "data/Main.do"
+    ]
+   },
+   {
+    "code": "PRECOMPUTED_OUTPUTS",
+    "severity": "note",
+    "message": "Files the code both writes and reads are already in the package: Output.xls. A run may read these instead of recomputing them. A receipt must say whether it replayed them or recomputed them, and a matching output hash alone does not show recomputation.",
+    "evidence": [
+     "Output.xls"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "2 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "matlab_tables_figures/loadResultsToMatlab.m:148",
+     "matlab_tables_figures/loadResultsToMatlab.m:179"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 122,
+   "bytes": 148985557,
+   "languages": [
+    "fortran",
+    "matlab",
+    "shell",
+    "stata"
+   ],
+   "code_files": {
+    "fortran": 37,
+    "matlab": 9,
+    "shell": 4,
+    "stata": 1
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": [
+    "baseline/Makefile",
+    "data/Main.do",
+    "debt_suspension/Makefile",
+    "fixed_L/Makefile",
+    "matlab_tables_figures/replicate_tables_and_figures.m",
+    "perfect_financial/Makefile",
+    "persistent_recession/Makefile"
+   ]
+  },
+  "inputs": {
+   "reads": 16,
+   "writes": 6,
+   "missing": [
+    "t"
+   ],
+   "unresolved": 2,
+   "remote": []
+  },
+  "links": {
+   "found": 0,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.144
+ }
+}

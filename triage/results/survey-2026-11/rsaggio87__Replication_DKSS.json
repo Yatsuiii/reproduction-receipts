@@ -1,0 +1,341 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/rsaggio87__Replication_DKSS",
+  "commit": "ddbe91801f7193c63aebb4fd74cc63b77b0041d4"
+ },
+ "when": "2026-11-21T18:16:36Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 23,
+   "deviation": 1,
+   "note": 3
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`airfoil.mat` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/matlab_bgl/test/test_benchmark.m:58"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`src/AM_Tabulation5.csv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/AM_CI.m:15",
+     "analysis/add_ons/LeaveOutTwoWay/codes/AM_CI_old.m:13"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`tables/baseline_stats1.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/tableA2.do:294"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`tables/baseline_stats2.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/tableA2.do:295"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`tables/baseline_stats3.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/tableA2.do:296"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`/scratch/public/board/RAKIM/CLEANED_SPELL_GIANT_INVIND_data_1990_2016.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/multiple_spells.do:12"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`tables/controls_effects_FEMALE_SAMPLE_group_1_2_3.csv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/full_oaxaca.do:98"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`tables/controls_effects_MALE_SAMPLE_group_1_2_3.csv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/full_oaxaca.do:75"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`src/file_example1.csv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/example_testing_MC.m:158"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`/scratch/public/leave_out/matr_bitalia_1990_2013NEW_INVIND.dta` is read by the code and named in the documentation (README.md, README.txt), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "analysis/codes/missing_reason.do:101",
+     "analysis/codes/tableA1.do:10",
+     "build/build_RAKIM.do:29",
+     "build/export_matlab.do:80"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`name_save.mat` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/mc_read.m:19"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`tables/oaxaca_decom1.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/figure8.do:205",
+     "analysis/codes/figure8.do:213"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`parfor_progress.txt` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/parfor_progress.m:46",
+     "analysis/add_ons/LeaveOutTwoWay/codes/parfor_progress.m:68",
+     "analysis/add_ons/LeaveOutTwoWay/codes/parfor_progress.m:72"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`/scratch/public/leave_out/PROVINCE.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/missing_reason.do:121",
+     "build/build_AKM.do:41"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../build/src/RAKIM/Q_CLEANED_SPELL_GIANT_INVIND_data_1990_2016.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/figureA4.do:26",
+     "analysis/codes/tableA1.do:54",
+     "build/build_AKM.do:59",
+     "build/build_AKM.do:90"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`results/RESULTS_ALL_VENETO_LEAVE1_OUT.csv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/table_3.m:9"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`results/RESULTS_ALL_VENETO_LEAVE1_OUT_Lambda_P.mat` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/table_3.m:17"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../tmp/RovigoCS_Leave2.csv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/verify_stayers.m:1"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`codes/summary_build.do` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "build/main.do:41"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`../src/test.csv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/main.m:55"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`/scratch/public/leave_out/Third_CLEANED_MONTHLY_PANEL_GIANT_1_INVIND_data_1990_2016.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/codes/build_figure6.do:36"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`/scratch/public/leave_out/Verona_1996or2001_unbalanced.csv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/example_testing_MC.m:60"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`west0479.mat` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "analysis/add_ons/matlab_bgl/test/test_benchmark.m:74"
+    ]
+   },
+   {
+    "code": "STATA_VERSION_MISSING",
+    "severity": "deviation",
+    "message": "No `version` statement in any do-file. Stata's behaviour depends on the version, so a rerun must choose one and log it.",
+    "evidence": []
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/AM_CI.m",
+     "analysis/add_ons/LeaveOutTwoWay/codes/AM_CI_old.m",
+     "analysis/add_ons/LeaveOutTwoWay/codes/C_build.m",
+     "analysis/add_ons/LeaveOutTwoWay/codes/C_build_FD.m",
+     "analysis/add_ons/LeaveOutTwoWay/codes/C_build_cck.m"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Stata; the desk says it has it.",
+    "evidence": [
+     "analysis/codes/beaudry_di_nardo.do",
+     "analysis/codes/build_figure6.do",
+     "analysis/codes/build_lincom.do",
+     "analysis/codes/build_managers.do",
+     "analysis/codes/build_oaxaca.do"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "218 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "analysis/add_ons/LeaveOutTwoWay/codes/example_testing_MC.m:83",
+     "analysis/add_ons/LeaveOutTwoWay/codes/example_testing_MC.m:92",
+     "analysis/add_ons/LeaveOutTwoWay/codes/example_testing_MC.m:177",
+     "analysis/add_ons/LeaveOutTwoWay/codes/example_testing_MC.m:185",
+     "analysis/add_ons/LeaveOutTwoWay/codes/kss_cck.m:21",
+     "analysis/add_ons/LeaveOutTwoWay/codes/kss_cck.m:22",
+     "analysis/add_ons/LeaveOutTwoWay/codes/table_3_panel_B.m:5",
+     "analysis/add_ons/LeaveOutTwoWay/codes/table_3_panel_B.m:18",
+     "analysis/add_ons/LeaveOutTwoWay/codes/testing_cck.m:38",
+     "analysis/add_ons/LeaveOutTwoWay/codes/testing_cck.m:52"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 1353,
+   "bytes": 38374715,
+   "languages": [
+    "c",
+    "c++",
+    "matlab",
+    "shell",
+    "stata"
+   ],
+   "code_files": {
+    "c": 52,
+    "c++": 1,
+    "matlab": 297,
+    "shell": 6,
+    "stata": 38
+   },
+   "docs_read": [
+    "README.md",
+    "README.txt"
+   ],
+   "licences_named": [],
+   "master_scripts": [
+    "analysis/add_ons/LeaveOutTwoWay/codes/MATLAB/Hierarchy/MexFunctions/MakeHierarchyMex.m",
+    "analysis/add_ons/LeaveOutTwoWay/codes/MATLAB/Hierarchy/MexFunctions/MakeHierarchyMex_debug.m",
+    "analysis/add_ons/LeaveOutTwoWay/codes/MATLAB/Solver/MakeSolverMex.m",
+    "analysis/add_ons/LeaveOutTwoWay/codes/MATLAB/Solver/MakeSolverMex_debug.m",
+    "analysis/add_ons/LeaveOutTwoWay/codes/MakeCMG.m",
+    "analysis/add_ons/LeaveOutTwoWay/codes/main.m",
+    "analysis/add_ons/matlab_bgl/libmbgl/libmbgl_test/Makefile",
+    "analysis/add_ons/matlab_bgl/make_biconnected_planar.m",
+    "analysis/add_ons/matlab_bgl/make_connected.m",
+    "analysis/add_ons/matlab_bgl/make_maximal_planar.m",
+    "analysis/main.do",
+    "build/main.do"
+   ]
+  },
+  "inputs": {
+   "reads": 368,
+   "writes": 154,
+   "missing": [
+    "airfoil.mat",
+    "am_tabulation5.csv",
+    "baseline_stats1.dta",
+    "baseline_stats2.dta",
+    "baseline_stats3.dta",
+    "cleaned_spell_giant_invind_data_1990_2016.dta",
+    "controls_effects_female_sample_group_1_2_3.csv",
+    "controls_effects_male_sample_group_1_2_3.csv",
+    "file_example1.csv",
+    "matr_bitalia_1990_2013new_invind.dta",
+    "name_save.mat",
+    "oaxaca_decom1.dta",
+    "parfor_progress.txt",
+    "province.dta",
+    "q_cleaned_spell_giant_invind_data_1990_2016.dta",
+    "results_all_veneto_leave1_out.csv",
+    "results_all_veneto_leave1_out_lambda_p.mat",
+    "rovigocs_leave2.csv",
+    "summary_build.do",
+    "test.csv",
+    "third_cleaned_monthly_panel_giant_1_invind_data_1990_2016.dta",
+    "verona_1996or2001_unbalanced.csv",
+    "west0479.mat"
+   ],
+   "unresolved": 218,
+   "remote": []
+  },
+  "links": {
+   "found": 3,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.398
+ }
+}

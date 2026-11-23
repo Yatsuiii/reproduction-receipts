@@ -1,0 +1,124 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/tholden__RobustRealRateRulesReplication",
+  "commit": "41d8bf69e4b47dc71dd15aa2929db6eea131ef41"
+ },
+ "when": "2026-11-21T18:16:35Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 2,
+   "note": 5
+  },
+  "findings": [
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code fetches data over the network when it runs (websave). What the server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+    "evidence": [
+     "Main.m:81",
+     "Main.m:83"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "deviation",
+    "message": "Requires Dynare (free) inside MATLAB or Octave, with no version named; a rerun must choose one and log it.",
+    "evidence": [
+     "SmetsWouters2007/Smets_Wouters_2007_45.mod"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "Main.m",
+     "MakeRelease.m",
+     "private/DistributionOfCentralTendency.m",
+     "private/GCVRidgeRegression.m",
+     "private/GridFMinBound.m"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "3 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "private/ObtainHistoricalData.m:19",
+     "private/ObtainHistoricalData.m:20",
+     "private/ObtainHistoricalData.m:21"
+    ]
+   },
+   {
+    "code": "RESTRICTED_DATA_MENTIONED",
+    "severity": "note",
+    "message": "The documentation mentions restricted data (\"proprietary\") but every input triage could trace is present. Check by hand that no restricted file is read through a path triage could not resolve.",
+    "evidence": []
+   },
+   {
+    "code": "MATLAB_TOOLBOX",
+    "severity": "note",
+    "message": "Documentation names MATLAB toolboxes: Datafeed Toolbox, Econometrics Toolbox, Machine Learning Toolbox, Optimization Toolbox, Parallel Computing Toolbox. Each is licensed separately; check the desk's MATLAB has them.",
+    "evidence": []
+   },
+   {
+    "code": "NONCOMMERCIAL_LICENCE",
+    "severity": "note",
+    "message": "Non-commercial licence. Rerunning for an editorial check is normally fine; a receipt should not redistribute the package's files.",
+    "evidence": [
+     "LICENSE.md",
+     "SmetsWouters2007/LICENSE.txt"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 32,
+   "bytes": 3548682,
+   "languages": [
+    "dynare",
+    "matlab"
+   ],
+   "code_files": {
+    "dynare": 1,
+    "matlab": 11
+   },
+   "docs_read": [
+    "LICENSE.md",
+    "README.md"
+   ],
+   "licences_named": [
+    "CC BY-NC",
+    "CC0",
+    "BSD",
+    "GPL"
+   ],
+   "master_scripts": [
+    "Main.m",
+    "MakeRelease.m"
+   ]
+  },
+  "inputs": {
+   "reads": 7,
+   "writes": 18,
+   "missing": [],
+   "unresolved": 3,
+   "remote": []
+  },
+  "links": {
+   "found": 36,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.049
+ }
+}

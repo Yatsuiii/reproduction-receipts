@@ -1,0 +1,74 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/andreaviselli__comparing-predictive-ability-very-short-instability",
+  "commit": "09efc854d246d3b068c2e3f21e7ba8093561fede"
+ },
+ "when": "2026-11-21T18:16:37Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable",
+  "counts": {
+   "blocker": 0,
+   "deviation": 0,
+   "note": 2
+  },
+  "findings": [
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "ReplicationCode_MC_Table_1.m",
+     "ReplicationCode_MC_Table_2.m",
+     "ReplicationCode_MC_Table_3.m",
+     "ReplicationCode_MC_Table_4.m",
+     "ReplicationCode_MC_Table_5.m"
+    ]
+   },
+   {
+    "code": "RESTRICTED_DATA_MENTIONED",
+    "severity": "note",
+    "message": "The documentation mentions restricted data (\"proprietary\") but every input triage could trace is present. Check by hand that no restricted file is read through a path triage could not resolve.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 15,
+   "bytes": 107313,
+   "languages": [
+    "matlab"
+   ],
+   "code_files": {
+    "matlab": 11
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [
+    "CC0",
+    "MIT"
+   ],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 1,
+   "writes": 0,
+   "missing": [],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 4,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.016
+ }
+}

@@ -1,0 +1,269 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/ymohanty__rationing-commons",
+  "commit": "4d60ad2f8d12ced60106c70649d8984b8d97bce0"
+ },
+ "when": "2026-11-21T18:16:40Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 8,
+   "deviation": 6,
+   "note": 4
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`95feindiamap_state.shp` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "code/maps/ration_states_map.R:74"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`baseline_survey.dta` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "code/cleaning/farmer_survey/build_farmer_crop_data.do:42"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`d4_kotputli_mundawar_bansur/KOTPUTLI, MANDAWAR & BUNSUR BLOCK VECTOR/FRACTURE_LINEAMENT.shp` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "code/cleaning/geology/build_geological_variables.R:103",
+     "code/cleaning/geology/build_geological_variables.R:107",
+     "code/cleaning/geology/build_geological_variables.R:111",
+     "code/maps/depth_maps.R:109",
+     "code/maps/depth_maps.R:113"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`d4_kotputli_mundawar_bansur/KOTPUTLI, MANDAWAR & BUNSUR BLOCK VECTOR/FRACTURE_LINEAMENT_Inferred.shp` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "code/cleaning/geology/build_geological_variables.R:104",
+     "code/cleaning/geology/build_geological_variables.R:108",
+     "code/cleaning/geology/build_geological_variables.R:112",
+     "code/maps/depth_maps.R:110",
+     "code/maps/depth_maps.R:114"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`d2_dug/GANGDHAR BLOCK VECTOR/HYDROGEOMORPHIC_DIVISION.shp` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "code/cleaning/geology/build_geological_variables.R:84",
+     "code/cleaning/geology/build_geological_variables.R:86",
+     "code/cleaning/geology/build_geological_variables.R:88",
+     "code/maps/depth_maps.R:90",
+     "code/maps/depth_maps.R:92"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`prediction.csv` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "code/maps/depth_maps.R:211"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`project_root.txt` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "code/structural_analysis/rationing_main.m:16"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`telangana_shapefile.shp` is read by the code but is not in the package, and the documentation does not say where it comes from.",
+    "evidence": [
+     "code/maps/ration_states_map.R:80"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python requirements without an exact version: - pandas; - numpy; - openpyxl. A rerun installs whatever is current and must log the versions it got.",
+    "evidence": [
+     "code/environment.yml"
+    ]
+   },
+   {
+    "code": "UNDECLARED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python code imports matplotlib, which no dependency file names.",
+    "evidence": [
+     "code/cleaning/pending_consumers/clean_consumer_data.py",
+     "code/cleaning/pending_consumers/clean_pending_consumers_data.ipynb",
+     "code/cleaning/soil/clean_soil_data.py"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads FNN, GISTools, RColorBrewer, checkpoint, crop, dplyr, extrafont, foreign, fuzzyjoin, ggsn, gridExtra, gstat, lubridate, maptools, ncdf4, plm, plyr, raster, readstata13, readxl, rgdal, rlist, sf, sp, spdep, sphet, splm, stName, stplanr, tidyverse, tmap, tmaptools, waterfalls with no renv.lock. A rerun installs current CRAN versions and must log them.",
+    "evidence": [
+     "code/cleaning/farmer_survey/water_flow.R:33",
+     "code/cleaning/farmer_survey/water_flow.R:46",
+     "code/cleaning/farmer_survey/water_flow.R:50",
+     "code/cleaning/farmer_survey/water_flow.R:51",
+     "code/cleaning/farmer_survey/water_flow.R:52"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_DOWNLOAD",
+    "severity": "deviation",
+    "message": "`\\t` is not in the package; the documentation (README.md, code/structural_analysis/panel_data_toolbox/README.md, code/structural_analysis/panel_data_toolbox/readme.txt) says to download it from https://github.com/ymohanty/rationing_the_commons.git, http://www.paneldatatoolbox.com, http://dx.doi.org/10.18637/jss.v076.i06. The download date and the file's SHA-256 become part of the receipt; links were not checked (use --check-links).",
+    "evidence": [
+     "code/structural_analysis/@waterData/waterData.m:55",
+     "https://github.com/ymohanty/rationing_the_commons.git",
+     "http://www.paneldatatoolbox.com",
+     "http://dx.doi.org/10.18637/jss.v076.i06"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code fetches data over the network when it runs (webuse). What the server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+    "evidence": [
+     "code/structural_analysis/panel_data_toolbox/unittests/ut_IV2SLS.do:7",
+     "code/structural_analysis/panel_data_toolbox/unittests/ut_OLS.do:7",
+     "code/structural_analysis/panel_data_toolbox/unittests/ut_PANEL.do:7"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "51 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "code/cleaning/farmer_survey/build_farmer_crop_data.do:23",
+     "code/cleaning/farmer_survey/build_farmer_crop_data.do:24",
+     "code/cleaning/farmer_survey/build_farmer_crop_data.do:27",
+     "code/cleaning/farmer_survey/build_farmer_crop_data.do:28",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:17",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:18",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:21",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:22",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:1631",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:1632"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "code/structural_analysis/@gmm/gmm.m",
+     "code/structural_analysis/@waterCounter/findOptimalTransfers.m",
+     "code/structural_analysis/@waterCounter/plotFit.m",
+     "code/structural_analysis/@waterCounter/plotOptimalTransfers.m",
+     "code/structural_analysis/@waterCounter/plotShadowValue.m"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Stata (version 11, 15, 6.0, 9.2 named in code); the desk says it has it.",
+    "evidence": [
+     "code/ado/LASSO_~1.ADO",
+     "code/ado/_ivreg.ado",
+     "code/ado/_lasso_iv.ado",
+     "code/ado/_lasso_iv_first.ado",
+     "code/ado/_reg_ols.ado"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "57 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "code/cleaning/farmer_survey/build_farmer_crop_data.do:33",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:26",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:38",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:52",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:80",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:1640",
+     "code/cleaning/farmer_survey/impute_profits_farmer_crop.do:1641",
+     "code/cleaning/farmer_survey/rationing_dynamics_data.do:24",
+     "code/cleaning/farmer_survey/rationing_dynamics_data.do:29",
+     "code/cleaning/farmer_survey/rationing_dynamics_data.do:127"
+    ]
+   },
+   {
+    "code": "MATLAB_TOOLBOX",
+    "severity": "note",
+    "message": "Documentation names MATLAB toolboxes: Panel Data Toolbox. Each is licensed separately; check the desk's MATLAB has them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 321,
+   "bytes": 2150811,
+   "languages": [
+    "matlab",
+    "python",
+    "r",
+    "shell",
+    "stata"
+   ],
+   "code_files": {
+    "matlab": 126,
+    "python": 3,
+    "r": 14,
+    "shell": 1,
+    "stata": 36
+   },
+   "docs_read": [
+    "README.md",
+    "code/structural_analysis/panel_data_toolbox/README.md",
+    "code/structural_analysis/panel_data_toolbox/readme.txt"
+   ],
+   "licences_named": [
+    "GPL"
+   ],
+   "master_scripts": [
+    "code/main.sh",
+    "code/structural_analysis/panel_data_toolbox/paneldata/util/replicate_elements.m"
+   ]
+  },
+  "inputs": {
+   "reads": 107,
+   "writes": 141,
+   "missing": [
+    "95feindiamap_state.shp",
+    "baseline_survey.dta",
+    "fracture_lineament.shp",
+    "fracture_lineament_inferred.shp",
+    "hydrogeomorphic_division.shp",
+    "prediction.csv",
+    "project_root.txt",
+    "t",
+    "telangana_shapefile.shp"
+   ],
+   "unresolved": 57,
+   "remote": []
+  },
+  "links": {
+   "found": 6,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.244
+ }
+}

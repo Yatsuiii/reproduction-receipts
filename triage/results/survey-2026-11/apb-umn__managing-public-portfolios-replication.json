@@ -1,0 +1,118 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/apb-umn__managing-public-portfolios-replication",
+  "commit": "b9de92dd229ac162a5fafd4a46c8be17e23ef11e"
+ },
+ "when": "2026-11-21T18:16:41Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "blocked",
+  "counts": {
+   "blocker": 2,
+   "deviation": 3,
+   "note": 2
+  },
+  "findings": [
+   {
+    "code": "MISSING_INPUT_RESTRICTED",
+    "severity": "blocker",
+    "message": "`../Data/crsp_return_data.csv` is read by the code but is not in the package, and the documentation (Readme.md) describes it as restricted (\"cannot be redistributed\"). The desk cannot run this without access.",
+    "evidence": [
+     "Notebooks/optimalportfolio_finitemat_nominal_ABN.ipynb:127",
+     "Notebooks/optimalportfolio_infinitemat_nominal_heteroskedastic_final.ipynb:132"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_UNDOCUMENTED",
+    "severity": "blocker",
+    "message": "`Loadings_finer.csv` is read by the code and named in the documentation (Readme.md), but it is not in the package and no source for it is given.",
+    "evidence": [
+     "Notebooks/optimalportfolio_finitemat_nominal_factormimicking_final.ipynb:962",
+     "Notebooks/optimalportfolio_infinitemat_nominal_heteroskedastic_final.ipynb:891"
+    ]
+   },
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python requirements without an exact version: webcolors<24; xlrd>=2.0.1; setuptools; ipykernel; nbconvert. A rerun installs whatever is current and must log the versions it got.",
+    "evidence": [
+     "Notebooks/requirements.txt"
+    ]
+   },
+   {
+    "code": "UNDECLARED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python code imports IPython, which no dependency file names.",
+    "evidence": [
+     "Notebooks/optimalportfolio_finitemat_nominal_ABN.ipynb",
+     "Notebooks/optimalportfolio_finitemat_nominal_factormimicking_final.ipynb",
+     "Notebooks/optimalportfolio_infinitemat_nominal_heteroskedastic_final.ipynb"
+    ]
+   },
+   {
+    "code": "RUNTIME_DOWNLOAD",
+    "severity": "deviation",
+    "message": "Code fetches data over the network when it runs (DataReader). What the server returns today may differ from what the authors got; a receipt must record each file fetched and its SHA-256.",
+    "evidence": [
+     "Notebooks/optimalportfolio_finitemat_nominal_factormimicking_final.ipynb:51",
+     "Notebooks/optimalportfolio_infinitemat_nominal_heteroskedastic_final.ipynb:54"
+    ]
+   },
+   {
+    "code": "PRECOMPUTED_OUTPUTS",
+    "severity": "note",
+    "message": "Files the code both writes and reads are already in the package: Sim_data.csv, Sim_other_series.csv. A run may read these instead of recomputing them. A receipt must say whether it replayed them or recomputed them, and a matching output hash alone does not show recomputation.",
+    "evidence": [
+     "Sim_data.csv",
+     "Sim_other_series.csv"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 77,
+   "bytes": 30245777,
+   "languages": [
+    "julia",
+    "python"
+   ],
+   "code_files": {
+    "julia": 10,
+    "python": 3
+   },
+   "docs_read": [
+    "Readme.md"
+   ],
+   "licences_named": [],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 36,
+   "writes": 23,
+   "missing": [
+    "crsp_return_data.csv",
+    "loadings_finer.csv"
+   ],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 0,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.133
+ }
+}

@@ -1,0 +1,122 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pkgs/DavBrg__Structural-Forecast-Analysis-Final",
+  "commit": "3c18528c0bedd75867a4bb7a6418640345c3261d"
+ },
+ "when": "2026-11-21T18:16:37Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "--have matlab,stata",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 2,
+   "note": 4
+  },
+  "findings": [
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "3 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "Applications/Save_lambdas.m:30",
+     "Applications/Save_lambdas.m:31",
+     "Applications/Save_lambdas.m:32"
+    ]
+   },
+   {
+    "code": "NO_RUN_ORDER",
+    "severity": "deviation",
+    "message": "72 scripts, no master script, and the README does not name an order. A rerun must choose one and log it.",
+    "evidence": [
+     "Applications/Main_RunAll.m",
+     "Applications/Part1_EstimateSVARs.m",
+     "Applications/Part2_RunStructuralForecastAnalysis.m",
+     "Applications/Part3_FiguresSVAR.m",
+     "Applications/Part4_FiguresStructuralForecastAnalysis.m",
+     "Applications/Part5_Assess_Datarev.m",
+     "Applications/Part6_CompareEstimates.m",
+     "Applications/Part7_FigureGDPRevisions.m",
+     "Applications/Part8_OrganizeFiguresPaperAppendix.m",
+     "Applications/Save_lambdas.m"
+    ]
+   },
+   {
+    "code": "README_NOT_TEXT",
+    "severity": "note",
+    "message": "The README is not plain text (README.docx, README.pdf). Triage cannot read it, so the data availability statement, licence and run time below were not checked against it. Read it by hand.",
+    "evidence": [
+     "README.docx",
+     "README.pdf"
+    ]
+   },
+   {
+    "code": "SOFTWARE_REQUIRED",
+    "severity": "note",
+    "message": "Requires Matlab; the desk says it has it.",
+    "evidence": [
+     "Applications/Main_RunAll.m",
+     "Applications/Part1_EstimateSVARs.m",
+     "Applications/Part2_RunStructuralForecastAnalysis.m",
+     "Applications/Part3_FiguresSVAR.m",
+     "Applications/Part4_FiguresStructuralForecastAnalysis.m"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "12 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "Applications/Part1_EstimateSVARs.m:72",
+     "Applications/Part2_RunStructuralForecastAnalysis.m:88",
+     "Applications/Part3_FiguresSVAR.m:36",
+     "Applications/Part4_FiguresStructuralForecastAnalysis.m:46",
+     "Applications/Part4_FiguresStructuralForecastAnalysis.m:182",
+     "Applications/Part5_Assess_Datarev.m:60",
+     "Applications/Part5_Assess_Datarev.m:62",
+     "Applications/Part6_CompareEstimates.m:23",
+     "Applications/Part6_CompareEstimates.m:96",
+     "Applications/Part6_CompareEstimates.m:121"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 78,
+   "bytes": 1934794,
+   "languages": [
+    "matlab"
+   ],
+   "code_files": {
+    "matlab": 72
+   },
+   "docs_read": [],
+   "licences_named": [],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 14,
+   "writes": 35,
+   "missing": [],
+   "unresolved": 12,
+   "remote": []
+  },
+  "links": {
+   "found": 0,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.065
+ }
+}
