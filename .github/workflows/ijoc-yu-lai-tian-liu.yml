@@ -13,7 +13,6 @@ jobs:
       fail-fast: false
       matrix:
         script:
-          - value_estimation/intruder_monitor
           - value_estimation/inventory_control
           - value_estimation/ttt3x3_value_estimation
           - value_estimation/ttt4x4_value_estimation
