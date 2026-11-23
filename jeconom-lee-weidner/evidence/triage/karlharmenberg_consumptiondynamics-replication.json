@@ -1,0 +1,126 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pk/karlharmenberg_consumptiondynamics-replication",
+  "commit": "dac46ace39dd93f35010f8fd74c8be0cd9159dd7"
+ },
+ "when": "2026-11-23T17:48:01Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "defaults",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 2,
+   "note": 4
+  },
+  "findings": [
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python requirements without an exact version: - numpy>=2.0; - scipy>=1.14; - numba>=0.60; - pandas>=2.2; - statsmodels>=0.14; - patsy>=1.0; - matplotlib>=3.9; - scikit-learn>=1.5; - tabulate>=0.9; - quantecon>=0.10. A rerun installs whatever is current and must log the versions it got.",
+    "evidence": [
+     "environment.yml",
+     "requirements.txt"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "4 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "code/tables/generate_all_tables.py:229",
+     "code/tables/generate_all_tables.py:231",
+     "code/tables/generate_all_tables.py:272",
+     "code/tables/generate_all_tables.py:280"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "13 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "code/empirical/02_us_gdp_footnote.py:38",
+     "code/empirical/02_us_gdp_footnote.py:39",
+     "code/empirical/lib/shiw_data.py:122",
+     "code/empirical/lib/shiw_data.py:123",
+     "code/empirical/lib/shiw_data.py:124",
+     "code/empirical/lib/shiw_data.py:125",
+     "code/empirical/lib/shiw_data.py:126",
+     "code/empirical/lib/shiw_data.py:127",
+     "code/empirical/lib/shiw_data.py:128",
+     "code/empirical/lib/shiw_data.py:133"
+    ]
+   },
+   {
+    "code": "RESTRICTED_DATA_MENTIONED",
+    "severity": "note",
+    "message": "The documentation mentions restricted data (\"Confidential\") but every input triage could trace is present. Check by hand that no restricted file is read through a path triage could not resolve.",
+    "evidence": []
+   },
+   {
+    "code": "CLUSTER_MENTIONED",
+    "severity": "note",
+    "message": "The package mentions a cluster or batch scheduler; scripts may assume one.",
+    "evidence": []
+   },
+   {
+    "code": "NONCOMMERCIAL_LICENCE",
+    "severity": "note",
+    "message": "Non-commercial licence. Rerunning for an editorial check is normally fine; a receipt should not redistribute the package's files.",
+    "evidence": [
+     "LICENSE.txt"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 488,
+   "bytes": 81842865,
+   "languages": [
+    "python",
+    "shell"
+   ],
+   "code_files": {
+    "python": 29,
+    "shell": 2
+   },
+   "docs_read": [
+    "README.md",
+    "data/README_data.md",
+    "output/logs/verification_report.md"
+   ],
+   "licences_named": [
+    "CC BY-NC",
+    "CC0",
+    "MIT"
+   ],
+   "master_scripts": [
+    "code/empirical/01_labormarket_oecd.py",
+    "code/empirical/02_us_gdp_footnote.py",
+    "code/empirical/03_shiw_baseline.py",
+    "code/empirical/04_shiw_robustness_curves.py",
+    "code/empirical/05_shiw_probit.py",
+    "code/empirical/06_shiw_time_region_fe.py",
+    "run_all.sh"
+   ]
+  },
+  "inputs": {
+   "reads": 17,
+   "writes": 22,
+   "missing": [],
+   "unresolved": 13,
+   "remote": []
+  },
+  "links": {
+   "found": 12,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.384
+ }
+}

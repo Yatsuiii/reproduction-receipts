@@ -1,0 +1,126 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pk/thimodeschouwer_replication-meaningflexibilitypuzzle",
+  "commit": "a65a0e7fa4274f15551ebdfb0350c0ed2878c253"
+ },
+ "when": "2026-11-23T17:48:02Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "defaults",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 6,
+   "note": 2
+  },
+  "findings": [
+   {
+    "code": "UNDECLARED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads libpath, project, version, which code/renv.lock does not pin.",
+    "evidence": [
+     "code/renv.lock"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/raw/liss/background_202106.dta` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (readme.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "code/functions/1_Clean_LISS.R:26"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/raw/issp/ISSP_2015.dta` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (readme.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "code/appendix.R:56",
+     "code/main.R:52"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/raw/liss/L_HCE_5p.dta` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (readme.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "code/appendix.R:57",
+     "code/main.R:53"
+    ]
+   },
+   {
+    "code": "MISSING_INPUT_SOURCE_LISTED",
+    "severity": "deviation",
+    "message": "`data/raw/liss/work_2021.dta` is read by the code but is not in the package. The documentation does not name the file but lists external data sources (readme.md: 2 links). Matching this file to a source is a manual step, and each match is a logged deviation; a file no source accounts for would make this blocked.",
+    "evidence": [
+     "code/functions/1_Clean_LISS.R:30"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "2 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "code/appendix.R:13",
+     "code/main.R:14"
+    ]
+   },
+   {
+    "code": "SYSTEM_FILE_READS",
+    "severity": "note",
+    "message": "Code reads system files (/etc/redhat-release), usually to detect the operating system. Not package inputs; a rerun on another OS may take a different branch.",
+    "evidence": [
+     "code/renv/activate.R:850"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 53,
+   "bytes": 9743540,
+   "languages": [
+    "r"
+   ],
+   "code_files": {
+    "r": 12
+   },
+   "docs_read": [
+    "readme.md"
+   ],
+   "licences_named": [],
+   "master_scripts": [
+    "code/functions/0_Utilities.R",
+    "code/main.R"
+   ]
+  },
+  "inputs": {
+   "reads": 21,
+   "writes": 76,
+   "missing": [
+    "background_202106.dta",
+    "issp_2015.dta",
+    "l_hce_5p.dta",
+    "work_2021.dta"
+   ],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 5,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.065
+ }
+}

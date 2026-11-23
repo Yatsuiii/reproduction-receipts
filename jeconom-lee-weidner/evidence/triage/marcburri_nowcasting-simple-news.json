@@ -1,0 +1,90 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "pk/marcburri_nowcasting-simple-news",
+  "commit": "b50fe9e8330c99fec727e277a2cf016fa918bffb"
+ },
+ "when": "2026-11-23T17:48:01Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "defaults",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 2,
+   "note": 2
+  },
+  "findings": [
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "R code loads dfms, doParallel, dplyr, foreach, forecast, ggplot2, lmtest, lubridate, midasml, midasr, missMDA, quantmod, reshape2, scales, seasonal, stringr, tibble, tidyr, tsbox, tseries, urca, vars, xtable, xts, zoo with no renv.lock. A rerun installs current CRAN versions and must log them.",
+    "evidence": [
+     "R/0_AllPackages.R:14",
+     "R/0_AllPackages.R:15",
+     "R/0_AllPackages.R:16",
+     "R/0_AllPackages.R:17",
+     "R/0_AllPackages.R:18"
+    ]
+   },
+   {
+    "code": "ABSOLUTE_PATH",
+    "severity": "deviation",
+    "message": "2 code lines use absolute paths from the authors' machines. A rerun must edit them, and each edit is a logged deviation.",
+    "evidence": [
+     "R/0_AllPackages.R:615",
+     "R/0_AllPackages.R:619"
+    ]
+   },
+   {
+    "code": "UNRESOLVED_PATHS",
+    "severity": "note",
+    "message": "1 file reads use paths built at run time (macros, globs, variables), so triage could not check that those inputs exist.",
+    "evidence": [
+     "R/3_CollectResults.R:77"
+    ]
+   },
+   {
+    "code": "NO_LICENCE",
+    "severity": "note",
+    "message": "No licence file and no licence named in the documentation. Running it for a check is unaffected, but a receipt should quote and hash files rather than redistribute them.",
+    "evidence": []
+   }
+  ],
+  "inventory": {
+   "files": 76,
+   "bytes": 15333857,
+   "languages": [
+    "r"
+   ],
+   "code_files": {
+    "r": 4
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [],
+   "master_scripts": [
+    "R/0_AllPackages.R"
+   ]
+  },
+  "inputs": {
+   "reads": 10,
+   "writes": 3,
+   "missing": [],
+   "unresolved": 1,
+   "remote": []
+  },
+  "links": {
+   "found": 0,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.036
+ }
+}

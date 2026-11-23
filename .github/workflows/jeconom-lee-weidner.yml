@@ -1,0 +1,76 @@
+name: Lee-Weidner (J. Econometrics) rerun
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['jeconom-lee-weidner/PROTOCOL.md', 'jeconom-lee-weidner/compare_results.py', '.github/workflows/jeconom-lee-weidner.yml']
+permissions:
+  contents: read
+jobs:
+  rerun:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, ubuntu-22.04]
+        script:
+          - MC/Table1_MonteCarlo
+          - Examples/Table2_RHC
+          - Examples/Table3_NSW
+          - MC/AppendixTable_MonteCarloInference
+          - Examples/NSW_main_text
+    env:
+      UPSTREAM: https://github.com/ATbounds/ATbounds-replication
+      COMMIT: 67c2c4d403d3dfbbfa4cfb25f72fe88d7d0f00da
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Clean clone of the authors' package at the pinned commit
+        run: |
+          git clone -q "$UPSTREAM" pkg
+          git -C pkg checkout -q "$COMMIT"
+          test "$(git -C pkg rev-parse HEAD)" = "$COMMIT"
+          (cd pkg && git ls-files | while read f; do sha256sum "$f"; done) > package-files.sha256
+          diff package-files.sha256 jeconom-lee-weidner/evidence/package-files.sha256 && echo "hash ok" | tee hash-check.txt
+      - name: R and the packages the README names
+        run: |
+          if ! command -v Rscript >/dev/null; then echo "no R on runner, installing r-base-core from apt" | tee r-source.txt; sudo apt-get update -qq && sudo apt-get install -y -qq r-base-core > apt.log 2>&1; else echo "runner R used" | tee r-source.txt; fi
+          Rscript -e 'cat(R.version.string, "\n")' | tee r-version.txt
+          CODENAME=$(lsb_release -cs)
+          Rscript -e "options(HTTPUserAgent = sprintf('R/%s R (%s)', getRversion(), paste(getRversion(), R.version['platform'], R.version['arch'], R.version['os']))); dir.create(Sys.getenv('R_LIBS_USER'), recursive = TRUE, showWarnings = FALSE); .libPaths(Sys.getenv('R_LIBS_USER')); install.packages(c('ATbounds','FNN','xtable','ggplot2','sandwich','lmtest'), repos = 'https://p3m.dev/cran/__linux__/$CODENAME/latest', Ncpus = 4)" > install.log 2>&1
+          Rscript -e 'for (p in c("ATbounds","FNN","xtable","ggplot2","sandwich","lmtest")) cat(p, as.character(packageVersion(p)), "\n")' | tee package-versions.txt
+          lscpu | grep -E "Model name|^CPU\(s\)" > hardware.txt; free -g >> hardware.txt; cat /etc/os-release | head -2 >> hardware.txt; cat hardware.txt
+      - name: check_dependencies.R, unchanged
+        working-directory: pkg
+        run: Rscript check_dependencies.R 2>&1 | tee ../check-dependencies.log
+      - name: Run the README command unchanged
+        working-directory: pkg
+        run: |
+          start=$(date +%s); Rscript ${{ matrix.script }}.R > ../run.log 2>&1; rc=$?
+          echo "exit=$rc wall_s=$(( $(date +%s)-start ))" | tee -a ../run.log; exit $rc
+      - name: Hash the run-time downloads (NSW scripts)
+        if: always() && contains(matrix.script, 'NSW')
+        run: |
+          for f in nsw_treated nsw_control nswre74_treated nswre74_control psid2_controls; do curl -s -m 60 -o $f.txt http://users.nber.org/~rdehejia/data/$f.txt; done
+          sha256sum *_treated.txt *_control.txt *_controls.txt | tee nber-data.sha256
+      - name: Compare every regenerated file with the committed one
+        if: always()
+        run: |
+          git -C pkg status --porcelain --untracked-files=all | tee status-after.txt
+          mkdir -p out; rc=0
+          for f in $(git -C pkg status --porcelain --untracked-files=all | awk '{print $2}'); do
+            mkdir -p out/$(dirname $f); cp pkg/$f out/$f
+            if git -C pkg cat-file -e HEAD:$f 2>/dev/null; then
+              git -C pkg show HEAD:$f > committed.tmp
+              python3 jeconom-lee-weidner/compare_results.py committed.tmp pkg/$f | sed "s#committed.tmp#committed:$f#" | tee -a compare-committed.txt || rc=1
+            else echo "new file (not committed upstream): $f" | tee -a compare-committed.txt; fi
+          done
+          echo "NAME=$(echo ${{ matrix.script }} | tr / -)-${{ matrix.os }}" >> $GITHUB_ENV
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: lw-${{ env.NAME }}
+          path: |
+            *.log
+            *.txt
+            *.sha256
+            out/
