@@ -46,6 +46,11 @@ jobs:
           echo "=== rebuild.csv"; cat out/rebuild.csv
           echo "=== fetch.log"; cat fetch.log
           exit $rc
+      - name: Exploratory follow-up (written after the first run was seen)
+        run: |
+          venv/bin/python -I alice-eeg-onsets/diag_tails.py ds data out
+          echo "=== tails.csv"; cat out/tails.csv
+          echo "=== audio_channel.csv"; cat out/audio_channel.csv
       - if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
