@@ -1,0 +1,30 @@
+# step=intruder_monitor start=2026-11-23T03:57:19Z cwd=work/intruder_monitor cmd=/home/claude/receipt2/venv/bin/python scripts/value_estimation/intruder_monitor.py
+====================================================================================================
+Intruder Monitoring AMS — value only
+====================================================================================================
+SETTINGS_TO_RUN = ['a', 'b', 'c', 'd', 'e', 'f']
+H=6, N_values=[8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30], VALUE_REPLICATIONS=500
+Value estimators: ['lsa', 'weighted', 'max', 'ea']
+CPU threads available: 4
+Output file: /home/claude/receipt2/work/intruder_monitor/results/value_estimation/intruder_monitor.csv
+
+[Warmup] using setting 'a', danger_positions=[(1, 1)]
+[Warmup] solve_dp ...
+[Warmup] V*=0.755826
+[Warmup] compiling Numba ...
+[Warmup] done
+
+####################################################################################################
+# SETTING A  grid=3x3  intruder_start=(0, 0)  camera_start=(2, 2)  danger_positions=[(1, 1)]
+####################################################################################################
+
+[DP] Solving...
+S0: DP V*=0.755826
+
+--- Value phase (500 AMS replications per cell) ---
+
+  VALUE  lsa (ams_code=1)
+    N=  8  mean=0.670604  bias=-0.085222  stdev=0.169904  mse=0.03607261  (1.5s)
+    N= 10  mean=0.722733  bias=-0.033093  stdev=0.113020  mse=0.01384320  (6.0s)
+    N= 12  mean=0.774584  bias=+0.018758  stdev=0.115930  mse=0.01376482  (17.3s)
+    N= 14  mean=0.716672  bias=-0.039154  stdev=0.088964  mse=0.00943178  (41.9s)

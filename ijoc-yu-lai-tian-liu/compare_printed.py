@@ -1,43 +1,57 @@
-"""Compare the per-cell lines intruder_monitor.py prints with the committed CSV, at the precision it prints.
+"""Compare the per-cell lines a value-estimation script prints with the committed CSV, at the precision it prints.
 
 Usage: python compare_printed.py COMMITTED.csv RUN.log
 
-Each printed line "N=..  mean=..  bias=..  stdev=..  mse=.." under a SETTING and VALUE header is matched to the
-committed row (setting, estimator, N). The committed float is rounded to the printed number of decimals and compared
-as text. Used only for a run that was stopped before it wrote its CSV.
+Handles the three long scripts' print formats:
+  intruder_monitor.py   "# SETTING A ...", "  VALUE  lsa (...)", "    N=  8  mean=..  bias=..  stdev=..  mse=.."
+  inventory_control.py  "Setting 1 [main]: ...", "  VALUE  LSA (...)", same N line
+  ttt4x4_value_estimation.py  "N= 20 | est=lsa      | mean=.. | bias=.. | stdev=.. | mse=.."
+Each printed value is compared, as text, with the committed float rounded to the same number of decimals.
+Used for runs that have not written their CSV yet. Cells not printed are not compared.
 """
 import csv
 import re
 import sys
 
-SET = re.compile(r"^# SETTING (\w+)\s")
+SET = [re.compile(r"^# SETTING (\w+)\s"), re.compile(r"^Setting (\w+) \[")]
 EST = re.compile(r"^\s+VALUE\s+(\w+) \(")
-LINE = re.compile(r"N=\s*(\d+)\s+mean=(\S+)\s+bias=(\S+)\s+stdev=(\S+)\s+mse=(\S+)")
+LINE = re.compile(r"N=\s*(\d+)\s+(?:\|\s*est=(\w+)\s*\|\s*)?mean=(\S+?)\s+\|?\s*bias=(\S+?)\s+\|?\s*stdev=(\S+?)\s+\|?\s*mse=([-+0-9.eE]+)")
+
+
+def fmt(x, printed):
+    d = len(printed.split(".")[1])
+    s = f"{float(x):.{d}f}"
+    if printed[0] == "+" and not s.startswith("-"):
+        s = "+" + s
+    return s
 
 
 def main():
     with open(sys.argv[1], newline="", encoding="utf-8-sig") as f:
-        rows = {(r["setting"], r["estimator"], r["N"]): r for r in csv.DictReader(f)}
-    setting = est = None
-    match = differ = 0
-    for line in open(sys.argv[2], encoding="utf-8"):
-        if m := SET.match(line):
-            setting = m.group(1).lower()
-        elif m := EST.match(line):
+        rows = list(csv.DictReader(f))
+    has_setting = "setting" in rows[0]
+    table = {((r["setting"] if has_setting else ""), r["estimator"], r["N"]): r for r in rows}
+    setting, est = "", None
+    match = differ = cells = 0
+    for line in open(sys.argv[2], encoding="utf-8", errors="replace"):
+        for p in SET:
+            if m := p.match(line):
+                setting = m.group(1).lower() if m.group(1).isalpha() else m.group(1)
+        if m := EST.match(line):
             est = m.group(1)
         elif m := LINE.search(line):
-            n, *vals = m.groups()
-            r = rows[(setting, est, n)]
+            n, e, *vals = m.groups()
+            key = (setting if has_setting else "", e or est, n)
+            r = table[key]
+            cells += 1
             for name, printed in zip(["mean_V", "bias", "stdev", "mse"], vals):
-                d = len(printed.split(".")[1])
-                want = f"{float(r[name]):+.{d}f}" if printed[0] in "+-" and name == "bias" else f"{float(r[name]):.{d}f}"
-                if want == printed:
+                if fmt(r[name], printed) == printed:
                     match += 1
                 else:
                     differ += 1
-                    print(f"DIFFER {setting} {est} N={n} {name}: committed {r[name]} printed {printed}")
-            print(f"{setting} {est} N={n}: compared")
-    print(f"{match + differ} printed values compared: {match} match the committed CSV at printed precision, {differ} differ")
+                    print(f"DIFFER {key} {name}: committed {r[name]} printed {printed}")
+    print(f"{cells} of {len(rows)} CSV rows printed so far; {match + differ} values compared: "
+          f"{match} match the committed CSV at printed precision, {differ} differ")
     return 1 if differ else 0
 
 

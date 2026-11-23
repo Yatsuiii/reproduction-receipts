@@ -1,0 +1,11 @@
+results/value_estimation/ttt3x3.csv: 189 cells; exact 179, float-equal 10, close 0, differs 0, text-differs 0; worst rel 3.42e-16
+  row 16 stdev: float-equal committed 0.018816663257748868 regenerated 0.01881666325774887 rel 1.84e-16
+  row 16 mse: float-equal committed 0.19644985959123826 regenerated 0.19644985959123829 rel 1.41e-16
+  row 17 mean_V: float-equal committed 0.5437229843749999 regenerated 0.543722984375 rel 2.04e-16
+  row 17 bias: float-equal committed -0.4229436822916667 regenerated -0.42294368229166657 rel 2.62e-16
+  row 17 stdev: float-equal committed 0.015234365553692602 regenerated 0.015234365553692607 rel 3.42e-16
+  row 18 stdev: float-equal committed 0.013682461276754456 regenerated 0.01368246127675446 rel 2.54e-16
+  row 19 stdev: float-equal committed 0.012404607993457386 regenerated 0.012404607993457384 rel 1.4e-16
+  row 20 stdev: float-equal committed 0.011120065910056402 regenerated 0.0111200659100564 rel 1.56e-16
+  row 20 mse: float-equal committed 0.1499710981526263 regenerated 0.14997109815262633 rel 1.85e-16
+  row 21 stdev: float-equal committed 0.010647213329444601 regenerated 0.010647213329444597 rel 3.26e-16

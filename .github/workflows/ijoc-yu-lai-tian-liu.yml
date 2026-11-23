@@ -8,14 +8,12 @@ permissions:
 jobs:
   rerun:
     runs-on: ubuntu-24.04
-    timeout-minutes: 300
+    timeout-minutes: 90
     strategy:
       fail-fast: false
       matrix:
         script:
-          - value_estimation/inventory_control
           - value_estimation/ttt3x3_value_estimation
-          - value_estimation/ttt4x4_value_estimation
           - policy_performance/ttt4x4_random
           - policy_performance/ttt4x4_softmax
     env:

@@ -1,0 +1,5 @@
+0_install exit=0 wall_s=5
+intruder_monitor run1 stopped by me at 2026-11-23T03:59:40Z after N=14 of setting a/lsa; projected ~3 days at this rate
+ttt4x4_softmax_c exit=0 wall_s=914
+ttt4x4_random_c exit=0 wall_s=1335
+ttt3x3_value_estimation_c exit=0 wall_s=2651

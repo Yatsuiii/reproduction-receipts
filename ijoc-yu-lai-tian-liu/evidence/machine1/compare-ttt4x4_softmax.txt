@@ -1,0 +1,4 @@
+results/policy_performance/ttt4x4_softmax.csv: 320 cells; exact 317, float-equal 3, close 0, differs 0, text-differs 0; worst rel 2.57e-16
+  row 2 policy_reward_se: float-equal committed 0.0020131068053883755 regenerated 0.002013106805388376 rel 2.15e-16
+  row 3 policy_reward_se: float-equal committed 0.0016870861347194446 regenerated 0.001687086134719445 rel 2.57e-16
+  row 20 policy_reward_se: float-equal committed 0.00216082407105868 regenerated 0.0021608240710586798 rel 2.01e-16
