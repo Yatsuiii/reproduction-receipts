@@ -1,0 +1,1518 @@
+{
+ "target": "py-pydantic-ai-agent",
+ "variant": "",
+ "driver": [
+  "/home/claude/envs/py-pydantic-ai/bin/python",
+  "{here}/drivers/py/frameworks.py",
+  "pydantic-ai-agent"
+ ],
+ "env": null,
+ "cells": [
+  {
+   "scenario": "clean",
+   "n": 10,
+   "counts": {
+    "RESIDUE": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-1b563c2b84c5",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 32024,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-1b563c2b84c5 /tmp/ct-jzvdo8iu"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 32024,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-1b563c2b84c5 /tmp/ct-jzvdo8iu"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 32024 1795273215500",
+      "initialize 32024 1795273215504",
+      "tools/list 32024 1795273215506",
+      "tools/call 32024 1795273215514",
+      "eof 32024 1795273225526"
+     ],
+     "seconds": 12.35,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-3f499ae4966e",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 32235,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3f499ae4966e /tmp/ct-4kl61kkt"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 32235,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3f499ae4966e /tmp/ct-4kl61kkt"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 32235 1795273228135",
+      "initialize 32235 1795273228138",
+      "tools/list 32235 1795273228141",
+      "tools/call 32235 1795273228147",
+      "eof 32235 1795273238159"
+     ],
+     "seconds": 12.64,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-3a458828680c",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 32450,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3a458828680c /tmp/ct-skbfn0s_"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 32450,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3a458828680c /tmp/ct-skbfn0s_"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 32450 1795273240495",
+      "initialize 32450 1795273240500",
+      "tools/list 32450 1795273240503",
+      "tools/call 32450 1795273240508",
+      "eof 32450 1795273250521"
+     ],
+     "seconds": 12.37,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-2d29fd2d5edf",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 32692,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-2d29fd2d5edf /tmp/ct-xr47kiza"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 32692,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-2d29fd2d5edf /tmp/ct-xr47kiza"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 32692 1795273253180",
+      "initialize 32692 1795273253184",
+      "tools/list 32692 1795273253187",
+      "tools/call 32692 1795273253193",
+      "eof 32692 1795273263205"
+     ],
+     "seconds": 12.68,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-2cf58f2edcb1",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 396,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-2cf58f2edcb1 /tmp/ct-wkgat0pe"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 396,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-2cf58f2edcb1 /tmp/ct-wkgat0pe"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 396 1795273265452",
+      "initialize 396 1795273265456",
+      "tools/list 396 1795273265459",
+      "tools/call 396 1795273265464",
+      "eof 396 1795273275475"
+     ],
+     "seconds": 12.27,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-d7f7bd7dd893",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 590,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-d7f7bd7dd893 /tmp/ct-5nwhlilw"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 590,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-d7f7bd7dd893 /tmp/ct-5nwhlilw"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 590 1795273277765",
+      "initialize 590 1795273277769",
+      "tools/list 590 1795273277775",
+      "tools/call 590 1795273277781",
+      "eof 590 1795273287804"
+     ],
+     "seconds": 12.33,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-842d2edd0b37",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 775,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-842d2edd0b37 /tmp/ct-f4y6mwqc"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 775,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-842d2edd0b37 /tmp/ct-f4y6mwqc"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 775 1795273289781",
+      "initialize 775 1795273289786",
+      "tools/list 775 1795273289789",
+      "tools/call 775 1795273289794",
+      "eof 775 1795273299817"
+     ],
+     "seconds": 12.01,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-c1ba03bf6b02",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 969,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-c1ba03bf6b02 /tmp/ct-xhd2p69o"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 969,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-c1ba03bf6b02 /tmp/ct-xhd2p69o"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 969 1795273301720",
+      "initialize 969 1795273301723",
+      "tools/list 969 1795273301726",
+      "tools/call 969 1795273301732",
+      "eof 969 1795273311752"
+     ],
+     "seconds": 11.98,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-3672815146ed",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 1169,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3672815146ed /tmp/ct-0o9ihtxx"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 1169,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3672815146ed /tmp/ct-0o9ihtxx"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1169 1795273314053",
+      "initialize 1169 1795273314057",
+      "tools/list 1169 1795273314059",
+      "tools/call 1169 1795273314065",
+      "eof 1169 1795273324080"
+     ],
+     "seconds": 12.3,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-6fc9f5294ee6",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 1344,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-6fc9f5294ee6 /tmp/ct-dxkf0ckp"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 1344,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-6fc9f5294ee6 /tmp/ct-dxkf0ckp"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1344 1795273326327",
+      "initialize 1344 1795273326330",
+      "tools/list 1344 1795273326332",
+      "tools/call 1344 1795273326337",
+      "eof 1344 1795273336349"
+     ],
+     "seconds": 12.26,
+     "connected": true,
+     "verdict": "RESIDUE"
+    }
+   ]
+  },
+  {
+   "scenario": "eof-ignore",
+   "n": 10,
+   "counts": {
+    "RESIDUE": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-7f73afb29d16",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 1497,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-7f73afb29d16 /tmp/ct-_3ox1oyb"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 1497,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-7f73afb29d16 /tmp/ct-_3ox1oyb"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1497 1795273338247",
+      "initialize 1497 1795273338251",
+      "tools/list 1497 1795273338253",
+      "tools/call 1497 1795273338258",
+      "eof 1497 1795273348270",
+      "sigterm 1497 1795273350274"
+     ],
+     "seconds": 13.93,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-f0e0167f6e53",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 1690,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-f0e0167f6e53 /tmp/ct-irt1uwmc"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 1690,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-f0e0167f6e53 /tmp/ct-irt1uwmc"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1690 1795273352282",
+      "initialize 1690 1795273352285",
+      "tools/list 1690 1795273352288",
+      "tools/call 1690 1795273352295",
+      "eof 1690 1795273362309",
+      "sigterm 1690 1795273364311"
+     ],
+     "seconds": 14.02,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-9dcc5031e08c",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 1888,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-9dcc5031e08c /tmp/ct-2imql1sl"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 1888,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-9dcc5031e08c /tmp/ct-2imql1sl"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 1888 1795273366250",
+      "initialize 1888 1795273366254",
+      "tools/list 1888 1795273366256",
+      "tools/call 1888 1795273366261",
+      "eof 1888 1795273376274",
+      "sigterm 1888 1795273378281"
+     ],
+     "seconds": 14.01,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-b62244f02cbb",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 2122,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-b62244f02cbb /tmp/ct-o3b_hp4n"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 2122,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-b62244f02cbb /tmp/ct-o3b_hp4n"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2122 1795273380626",
+      "initialize 2122 1795273380630",
+      "tools/list 2122 1795273380633",
+      "tools/call 2122 1795273380639",
+      "eof 2122 1795273390656",
+      "sigterm 2122 1795273392658"
+     ],
+     "seconds": 14.38,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-2601de282761",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 2317,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-2601de282761 /tmp/ct-9d8fuqw7"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 2317,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-2601de282761 /tmp/ct-9d8fuqw7"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2317 1795273394900",
+      "initialize 2317 1795273394903",
+      "tools/list 2317 1795273394906",
+      "tools/call 2317 1795273394911",
+      "eof 2317 1795273404924",
+      "sigterm 2317 1795273406928"
+     ],
+     "seconds": 14.23,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-04b7c3a8349d",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 2477,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-04b7c3a8349d /tmp/ct-1_zxu77c"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 2477,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-04b7c3a8349d /tmp/ct-1_zxu77c"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2477 1795273408742",
+      "initialize 2477 1795273408748",
+      "tools/list 2477 1795273408750",
+      "tools/call 2477 1795273408756",
+      "eof 2477 1795273418769",
+      "sigterm 2477 1795273420782"
+     ],
+     "seconds": 13.87,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-b58ce66c6598",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 2693,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-b58ce66c6598 /tmp/ct-kgb3y3mn"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 2693,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-b58ce66c6598 /tmp/ct-kgb3y3mn"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2693 1795273422620",
+      "initialize 2693 1795273422624",
+      "tools/list 2693 1795273422626",
+      "tools/call 2693 1795273422631",
+      "eof 2693 1795273432645",
+      "sigterm 2693 1795273434647"
+     ],
+     "seconds": 13.88,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-40ae36e03d6a",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 2864,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-40ae36e03d6a /tmp/ct-x26r7biu"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 2864,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-40ae36e03d6a /tmp/ct-x26r7biu"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 2864 1795273436583",
+      "initialize 2864 1795273436586",
+      "tools/list 2864 1795273436588",
+      "tools/call 2864 1795273436594",
+      "eof 2864 1795273446607",
+      "sigterm 2864 1795273448617"
+     ],
+     "seconds": 13.96,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-57e0006c5c67",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 3067,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-57e0006c5c67 /tmp/ct-zhp_homp"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 3067,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-57e0006c5c67 /tmp/ct-zhp_homp"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 3067 1795273450770",
+      "initialize 3067 1795273450776",
+      "tools/list 3067 1795273450779",
+      "tools/call 3067 1795273450786",
+      "eof 3067 1795273460799",
+      "sigterm 3067 1795273462805"
+     ],
+     "seconds": 14.19,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-2fe9b09836ba",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 3323,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-2fe9b09836ba /tmp/ct-sqvp531y"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 3323,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-2fe9b09836ba /tmp/ct-sqvp531y"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 3323 1795273464632",
+      "initialize 3323 1795273464636",
+      "tools/list 3323 1795273464638",
+      "tools/call 3323 1795273464643",
+      "eof 3323 1795273474659",
+      "sigterm 3323 1795273476667"
+     ],
+     "seconds": 13.87,
+     "connected": true,
+     "verdict": "RESIDUE"
+    }
+   ]
+  },
+  {
+   "scenario": "term-ignore",
+   "n": 10,
+   "counts": {
+    "RESIDUE": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-39fd4f764cb3",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 3603,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-39fd4f764cb3 /tmp/ct-igxd954j"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 3603,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-39fd4f764cb3 /tmp/ct-igxd954j"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 3603 1795273478448",
+      "initialize 3603 1795273478452",
+      "tools/list 3603 1795273478455",
+      "tools/call 3603 1795273478462",
+      "eof 3603 1795273488475",
+      "sigterm-ignored 3603 1795273490482"
+     ],
+     "seconds": 15.81,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-05fd02ab91ab",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 3838,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-05fd02ab91ab /tmp/ct-eyt7c3hh"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 3838,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-05fd02ab91ab /tmp/ct-eyt7c3hh"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 3838 1795273494172",
+      "initialize 3838 1795273494175",
+      "tools/list 3838 1795273494177",
+      "tools/call 3838 1795273494182",
+      "eof 3838 1795273504202",
+      "sigterm-ignored 3838 1795273506203"
+     ],
+     "seconds": 15.73,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-5e8134fdc79a",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 4077,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-5e8134fdc79a /tmp/ct-su9l2_55"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 4077,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-5e8134fdc79a /tmp/ct-su9l2_55"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 4077 1795273510013",
+      "initialize 4077 1795273510017",
+      "tools/list 4077 1795273510020",
+      "tools/call 4077 1795273510025",
+      "eof 4077 1795273520038",
+      "sigterm-ignored 4077 1795273522046"
+     ],
+     "seconds": 15.85,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-05d3cf216057",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 4312,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-05d3cf216057 /tmp/ct-_0jn9c53"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 4312,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-05d3cf216057 /tmp/ct-_0jn9c53"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 4312 1795273525821",
+      "initialize 4312 1795273525824",
+      "tools/list 4312 1795273525829",
+      "tools/call 4312 1795273525838",
+      "eof 4312 1795273535852",
+      "sigterm-ignored 4312 1795273537859"
+     ],
+     "seconds": 15.82,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-81b80a329918",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 4558,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-81b80a329918 /tmp/ct-hmzlpw7x"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 4558,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-81b80a329918 /tmp/ct-hmzlpw7x"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 4558 1795273542041",
+      "initialize 4558 1795273542045",
+      "tools/list 4558 1795273542050",
+      "tools/call 4558 1795273542059",
+      "eof 4558 1795273552075",
+      "sigterm-ignored 4558 1795273554077"
+     ],
+     "seconds": 16.16,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-f99b277fac7b",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 4845,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-f99b277fac7b /tmp/ct-1k8vz0xx"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 4845,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-f99b277fac7b /tmp/ct-1k8vz0xx"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 4845 1795273557975",
+      "initialize 4845 1795273557979",
+      "tools/list 4845 1795273557982",
+      "tools/call 4845 1795273557988",
+      "eof 4845 1795273568005",
+      "sigterm-ignored 4845 1795273570013"
+     ],
+     "seconds": 15.98,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-bc04deca49b0",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 5115,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-bc04deca49b0 /tmp/ct-sg_g8xr9"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 5115,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-bc04deca49b0 /tmp/ct-sg_g8xr9"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5115 1795273573840",
+      "initialize 5115 1795273573843",
+      "tools/list 5115 1795273573846",
+      "tools/call 5115 1795273573850",
+      "eof 5115 1795273583864",
+      "sigterm-ignored 5115 1795273585873"
+     ],
+     "seconds": 15.85,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-1add36399c29",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 5332,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-1add36399c29 /tmp/ct-ee8a5oxf"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 5332,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-1add36399c29 /tmp/ct-ee8a5oxf"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5332 1795273589750",
+      "initialize 5332 1795273589754",
+      "tools/list 5332 1795273589756",
+      "tools/call 5332 1795273589762",
+      "eof 5332 1795273599775",
+      "sigterm-ignored 5332 1795273601783"
+     ],
+     "seconds": 15.92,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-aa55690cf7ad",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 5465,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-aa55690cf7ad /tmp/ct-1j85yqtq"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 5465,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-aa55690cf7ad /tmp/ct-1j85yqtq"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5465 1795273605737",
+      "initialize 5465 1795273605743",
+      "tools/list 5465 1795273605745",
+      "tools/call 5465 1795273605752",
+      "eof 5465 1795273615764",
+      "sigterm-ignored 5465 1795273617773"
+     ],
+     "seconds": 15.94,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-0610692aacd5",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 5579,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-0610692aacd5 /tmp/ct-5ymvsm3t"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 5579,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-0610692aacd5 /tmp/ct-5ymvsm3t"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5579 1795273621623",
+      "initialize 5579 1795273621627",
+      "tools/list 5579 1795273621631",
+      "tools/call 5579 1795273621637",
+      "eof 5579 1795273631650",
+      "sigterm-ignored 5579 1795273633655"
+     ],
+     "seconds": 15.87,
+     "connected": true,
+     "verdict": "RESIDUE"
+    }
+   ]
+  },
+  {
+   "scenario": "wrapped",
+   "n": 10,
+   "counts": {
+    "RESIDUE": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-f3b93cd460ff",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 5720,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 5727,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-f3b93cd460ff /tmp/ct-lak_yrgg"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 5720,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 5727,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-f3b93cd460ff /tmp/ct-lak_yrgg"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5727 1795273637345",
+      "initialize 5727 1795273637349",
+      "tools/list 5727 1795273637351",
+      "tools/call 5727 1795273637356",
+      "eof 5727 1795273647368",
+      "sigterm 5727 1795273649375"
+     ],
+     "seconds": 15.34,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-37ab4a39b33a",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 5842,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 5849,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-37ab4a39b33a /tmp/ct-upbbroxf"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 5842,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 5849,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-37ab4a39b33a /tmp/ct-upbbroxf"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 5849 1795273652694",
+      "initialize 5849 1795273652699",
+      "tools/list 5849 1795273652701",
+      "tools/call 5849 1795273652707",
+      "eof 5849 1795273662720",
+      "sigterm 5849 1795273664727"
+     ],
+     "seconds": 15.03,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-3161c529530d",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 5993,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 6007,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-3161c529530d /tmp/ct-bti60gql"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 5993,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 6007,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-3161c529530d /tmp/ct-bti60gql"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 6007 1795273667914",
+      "initialize 6007 1795273667918",
+      "tools/list 6007 1795273667921",
+      "tools/call 6007 1795273667927",
+      "eof 6007 1795273677941",
+      "sigterm 6007 1795273679942"
+     ],
+     "seconds": 14.98,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-0c55549b2386",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 6190,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 6197,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-0c55549b2386 /tmp/ct-dwj_zsdg"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 6190,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 6197,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-0c55549b2386 /tmp/ct-dwj_zsdg"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 6197 1795273683161",
+      "initialize 6197 1795273683165",
+      "tools/list 6197 1795273683169",
+      "tools/call 6197 1795273683174",
+      "eof 6197 1795273693186",
+      "sigterm 6197 1795273695186"
+     ],
+     "seconds": 15.99,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-79967033937c",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 6457,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 6464,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-79967033937c /tmp/ct-1boxi03s"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 6457,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 6464,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-79967033937c /tmp/ct-1boxi03s"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 6464 1795273698929",
+      "initialize 6464 1795273698933",
+      "tools/list 6464 1795273698937",
+      "tools/call 6464 1795273698945",
+      "eof 6464 1795273708961",
+      "sigterm 6464 1795273710970"
+     ],
+     "seconds": 15.03,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-5db32404d12f",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 6806,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 6813,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-5db32404d12f /tmp/ct-tifaddtq"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 6806,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 6813,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-5db32404d12f /tmp/ct-tifaddtq"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 6813 1795273713681",
+      "initialize 6813 1795273713685",
+      "tools/list 6813 1795273713688",
+      "tools/call 6813 1795273713695",
+      "eof 6813 1795273723709",
+      "sigterm 6813 1795273725717"
+     ],
+     "seconds": 14.99,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-166c9dfc6e5b",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 7024,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 7031,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-166c9dfc6e5b /tmp/ct-ekxy39hm"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 7024,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 7031,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-166c9dfc6e5b /tmp/ct-ekxy39hm"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 7031 1795273728871",
+      "initialize 7031 1795273728875",
+      "tools/list 7031 1795273728877",
+      "tools/call 7031 1795273728882",
+      "eof 7031 1795273738902",
+      "sigterm 7031 1795273740909"
+     ],
+     "seconds": 15.05,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-57bc90f7feec",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 7384,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 7391,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-57bc90f7feec /tmp/ct-c5g9ykxz"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 7384,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 7391,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-57bc90f7feec /tmp/ct-c5g9ykxz"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 7391 1795273743908",
+      "initialize 7391 1795273743913",
+      "tools/list 7391 1795273743915",
+      "tools/call 7391 1795273743921",
+      "eof 7391 1795273753933",
+      "sigterm 7391 1795273755935"
+     ],
+     "seconds": 14.97,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-396848f9e5af",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 7498,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 7505,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-396848f9e5af /tmp/ct-kdow9qeu"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 7498,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 7505,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-396848f9e5af /tmp/ct-kdow9qeu"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 7505 1795273758740",
+      "initialize 7505 1795273758744",
+      "tools/list 7505 1795273758746",
+      "tools/call 7505 1795273758752",
+      "eof 7505 1795273768765",
+      "sigterm 7505 1795273770767"
+     ],
+     "seconds": 15.05,
+     "connected": true,
+     "verdict": "RESIDUE"
+    },
+    {
+     "tag": "cttrial-a1612b738c87",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [
+      {
+       "pid": 7801,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 7808,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a1612b738c87 /tmp/ct-ewfdbfly"
+      }
+     ],
+     "residue": [
+      {
+       "pid": 7801,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/wrapper.mjs /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttr"
+      },
+      {
+       "pid": 7808,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-a1612b738c87 /tmp/ct-ewfdbfly"
+      }
+     ],
+     "residue_after_host_exit": [],
+     "stderr_tail": "                 pydantic-ai v2.71.0 \u2022 Python 3.12.3\n      / \\\n     /   \\       agent: agent \u2022 model: function:function:script: \u2022 tools: 1 \u2022 capabilities: 0\n   /___.___\\\n  /    |    \\    observability: off \u2014 see every model and tool call live, with cost\n/      |      \\    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai\n`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel\n\n                 goes away once observability is on \u2014 or PYDANTIC_AI_NO_BANNER=1\n",
+     "stdout_tail": [
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 7808 1795273773937",
+      "initialize 7808 1795273773941",
+      "tools/list 7808 1795273773943",
+      "tools/call 7808 1795273773948",
+      "eof 7808 1795273783963",
+      "sigterm 7808 1795273785965"
+     ],
+     "seconds": 14.98,
+     "connected": true,
+     "verdict": "RESIDUE"
+    }
+   ]
+  }
+ ]
+}

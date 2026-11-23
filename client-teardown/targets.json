@@ -1,0 +1,343 @@
+{
+ "ts-sdk-1.12.0": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/ts_sdk_v1.mjs"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/ts-sdk-1.12.0/node_modules"
+  }
+ },
+ "ts-sdk-1.25.2": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/ts_sdk_v1.mjs"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/ts-sdk-1.25.2/node_modules"
+  }
+ },
+ "ts-sdk-1.29.0": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/ts_sdk_v1.mjs"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/ts-sdk-1.29.0/node_modules"
+  }
+ },
+ "ts-sdk-1.32.1": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/ts_sdk_v1.mjs"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/ts-sdk-1.32.1/node_modules"
+  }
+ },
+ "ts-sdk-1.32.2": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/ts_sdk_v1.mjs"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/ts-sdk-1.32.2/node_modules"
+  }
+ },
+ "py-mcp-sdk": {
+  "driver": [
+   "/home/claude/envs/py-mcp/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "mcp-sdk"
+  ]
+ },
+ "py-langchain": {
+  "driver": [
+   "/home/claude/envs/py-langchain/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "langchain"
+  ]
+ },
+ "py-langchain-session": {
+  "driver": [
+   "/home/claude/envs/py-langchain/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "langchain-session"
+  ]
+ },
+ "py-crewai-adapter": {
+  "driver": [
+   "/home/claude/envs/py-crewai/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "crewai-adapter"
+  ]
+ },
+ "py-crewai-native": {
+  "driver": [
+   "/home/claude/envs/py-crewai/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "crewai-native"
+  ]
+ },
+ "py-llamaindex": {
+  "driver": [
+   "/home/claude/envs/py-llamaindex/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "llamaindex"
+  ]
+ },
+ "py-agno": {
+  "driver": [
+   "/home/claude/envs/py-agno/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "agno"
+  ]
+ },
+ "py-openai-agents": {
+  "driver": [
+   "/home/claude/envs/py-openai-agents/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "openai-agents"
+  ]
+ },
+ "py-smolagents": {
+  "driver": [
+   "/home/claude/envs/py-smolagents/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "smolagents"
+  ]
+ },
+ "py-fastmcp": {
+  "driver": [
+   "/home/claude/envs/py-fastmcp/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "fastmcp"
+  ]
+ },
+ "py-semantic-kernel": {
+  "driver": [
+   "/home/claude/envs/py-semantic-kernel/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "semantic-kernel"
+  ]
+ },
+ "py-adk": {
+  "driver": [
+   "/home/claude/envs/py-adk/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "adk"
+  ]
+ },
+ "py-pydantic-ai": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai"
+  ]
+ },
+ "py-camel": {
+  "driver": [
+   "/home/claude/envs/py-camel/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "camel"
+  ]
+ },
+ "py-mcp-use": {
+  "driver": [
+   "/home/claude/envs/py-mcp-use/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "mcp-use"
+  ]
+ },
+ "py-autogen": {
+  "driver": [
+   "/home/claude/envs/py-autogen/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "autogen"
+  ]
+ },
+ "js-ai-sdk": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/libs.mjs",
+   "ai-sdk"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/libs-js/node_modules"
+  }
+ },
+ "js-mastra": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/libs.mjs",
+   "mastra"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/libs-js/node_modules"
+  }
+ },
+ "js-mcp-use": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/libs.mjs",
+   "mcp-use"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/libs-js/node_modules"
+  }
+ },
+ "js-openai-agents": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/libs.mjs",
+   "openai-agents"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/libs-js/node_modules"
+  }
+ },
+ "js-langchain": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/libs.mjs",
+   "langchain"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/libs-js/node_modules"
+  }
+ },
+ "js-ts-client-v2": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/libs.mjs",
+   "ts-client-v2"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/ts-client-2.4.0/node_modules"
+  }
+ },
+ "go-go-sdk": {
+  "driver": [
+   "/home/claude/envs/ctgo",
+   "go-sdk"
+  ]
+ },
+ "go-mcp-go": {
+  "driver": [
+   "/home/claude/envs/ctgo",
+   "mcp-go"
+  ]
+ },
+ "cli-gemini": {
+  "driver": [
+   "python3",
+   "-I",
+   "{here}/drivers/cli.py",
+   "gemini"
+  ],
+  "env": {
+   "CT_CLI_BIN": "/home/claude/envs/clis/node_modules/.bin"
+  }
+ },
+ "cli-qwen": {
+  "driver": [
+   "python3",
+   "-I",
+   "{here}/drivers/cli.py",
+   "qwen"
+  ],
+  "env": {
+   "CT_CLI_BIN": "/home/claude/envs/clis/node_modules/.bin"
+  }
+ },
+ "cli-opencode": {
+  "driver": [
+   "python3",
+   "-I",
+   "{here}/drivers/cli.py",
+   "opencode"
+  ],
+  "env": {
+   "CT_CLI_BIN": "/home/claude/envs/clis/node_modules/.bin"
+  }
+ },
+ "cli-kilo": {
+  "driver": [
+   "python3",
+   "-I",
+   "{here}/drivers/cli.py",
+   "kilo"
+  ],
+  "env": {
+   "CT_CLI_BIN": "/home/claude/envs/clis/node_modules/.bin"
+  }
+ },
+ "rs-rmcp": {
+  "driver": [
+   "/home/claude/envs/ctrust",
+   "rmcp"
+  ]
+ },
+ "rs-goose-spawn": {
+  "driver": [
+   "/home/claude/envs/ctrust",
+   "goose-spawn"
+  ]
+ },
+ "py-pydantic-ai-config": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-config"
+  ]
+ },
+ "py-pydantic-ai-agent": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-agent"
+  ]
+ },
+ "py-pydantic-ai-nokeepalive": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-nokeepalive"
+  ]
+ },
+ "py-pydantic-ai@patched": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai-patched/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai"
+  ],
+  "patch": "patches/pydantic-ai-close-stdio-on-exit.patch"
+ },
+ "py-pydantic-ai-config@patched": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai-patched/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-config"
+  ],
+  "patch": "patches/pydantic-ai-close-stdio-on-exit.patch"
+ },
+ "py-pydantic-ai-agent@patched": {
+  "driver": [
+   "/home/claude/envs/py-pydantic-ai-patched/bin/python",
+   "{here}/drivers/py/frameworks.py",
+   "pydantic-ai-agent"
+  ],
+  "patch": "patches/pydantic-ai-close-stdio-on-exit.patch"
+ },
+ "js-ai-sdk@patched": {
+  "driver": [
+   "node",
+   "{here}/drivers/js/libs.mjs",
+   "ai-sdk"
+  ],
+  "env": {
+   "CT_NODE_PATH": "/home/claude/envs/libs-js-aisdk-patched/node_modules"
+  },
+  "patch": "patches/ai-sdk-mcp-stdio-close-sequence.patch"
+ }
+}

@@ -1,0 +1,149 @@
+diff --git a/packages/mcp/src/tool/mcp-stdio/mcp-stdio-transport.test.ts b/packages/mcp/src/tool/mcp-stdio/mcp-stdio-transport.test.ts
+index 4fb3e75..ebb7bbd 100644
+--- a/packages/mcp/src/tool/mcp-stdio/mcp-stdio-transport.test.ts
++++ b/packages/mcp/src/tool/mcp-stdio/mcp-stdio-transport.test.ts
+@@ -1,6 +1,6 @@
+ import type { ChildProcess } from 'node:child_process';
+ import { EventEmitter } from 'node:events';
+-import { beforeEach, afterEach, describe, expect, it, vi } from 'vitest';
++import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+ import type { JSONRPCMessage } from '../json-rpc-message';
+ import { MCPClientError } from '../../error/mcp-client-error';
+ import { createChildProcess } from './create-child-process';
+@@ -13,25 +13,36 @@ interface MockChildProcess {
+   stdout: EventEmitter;
+   stderr: EventEmitter;
+   on: ReturnType<typeof vi.fn>;
++  once: ReturnType<typeof vi.fn>;
++  kill: ReturnType<typeof vi.fn>;
+   removeAllListeners: ReturnType<typeof vi.fn>;
+ }
+ 
+ describe('StdioMCPTransport', () => {
+   let transport: StdioMCPTransport;
+   let mockChildProcess: MockChildProcess;
+-  let mockStdin: EventEmitter & { write?: ReturnType<typeof vi.fn> };
++  let mockStdin: EventEmitter & {
++    write?: ReturnType<typeof vi.fn>;
++    end?: ReturnType<typeof vi.fn>;
++  };
+   let mockStdout: EventEmitter;
+ 
+   beforeEach(() => {
+     vi.clearAllMocks();
+ 
+     mockStdin = new EventEmitter();
++    mockStdin.end = vi.fn();
+     mockStdout = new EventEmitter();
+     mockChildProcess = {
+       stdin: mockStdin,
+       stdout: mockStdout,
+       stderr: new EventEmitter(),
+       on: vi.fn(),
++      // a well-behaved server: exits as soon as its stdin is closed
++      once: vi.fn((event: string, callback: () => void) => {
++        if (event === 'exit') queueMicrotask(callback);
++      }),
++      kill: vi.fn(),
+       removeAllListeners: vi.fn(),
+     };
+ 
+@@ -282,4 +293,42 @@ describe('StdioMCPTransport', () => {
+       expect(onCloseSpy).toHaveBeenCalled();
+     });
+   });
++
++  describe('close shutdown sequence', () => {
++    beforeEach(async () => {
++      mockChildProcess.on.mockImplementation(
++        (event: string, callback: () => void) => {
++          if (event === 'spawn') callback();
++        },
++      );
++      await transport.start();
++    });
++
++    afterEach(() => {
++      vi.useRealTimers();
++    });
++
++    it('closes stdin and sends no signal when the server exits on its own', async () => {
++      await transport.close();
++
++      expect(mockStdin.end).toHaveBeenCalled();
++      expect(mockChildProcess.kill).not.toHaveBeenCalled();
++    });
++
++    it('sends SIGTERM, then SIGKILL, to a server that does not exit', async () => {
++      vi.useFakeTimers();
++      mockChildProcess.once.mockImplementation(() => {});
++
++      const closing = transport.close();
++      await vi.advanceTimersByTimeAsync(2000);
++      expect(mockChildProcess.kill).toHaveBeenCalledWith('SIGTERM');
++      expect(mockChildProcess.kill).not.toHaveBeenCalledWith('SIGKILL');
++
++      await vi.advanceTimersByTimeAsync(2000);
++      expect(mockChildProcess.kill).toHaveBeenCalledWith('SIGKILL');
++
++      await vi.advanceTimersByTimeAsync(2000);
++      await closing;
++    });
++  });
+ });
+diff --git a/packages/mcp/src/tool/mcp-stdio/mcp-stdio-transport.ts b/packages/mcp/src/tool/mcp-stdio/mcp-stdio-transport.ts
+index 56db4e0..ac3da1e 100644
+--- a/packages/mcp/src/tool/mcp-stdio/mcp-stdio-transport.ts
++++ b/packages/mcp/src/tool/mcp-stdio/mcp-stdio-transport.ts
+@@ -14,6 +14,9 @@ export interface StdioConfig {
+   shell?: boolean | string;
+ }
+ 
++// How long close() waits after each shutdown step before taking the next one.
++const SHUTDOWN_GRACE_MS = 2000;
++
+ export class StdioMCPTransport implements MCPTransport {
+   readonly supportsProtocolVersionDiscovery = true;
+   private process?: ChildProcess;
+@@ -99,10 +102,40 @@ export class StdioMCPTransport implements MCPTransport {
+     }
+   }
+ 
++  /**
++   * Shuts the server down the way the MCP lifecycle spec describes for stdio:
++   * close stdin, wait for the server to exit, send SIGTERM if it has not,
++   * then SIGKILL if it still has not.
++   */
+   async close(): Promise<void> {
+-    this.abortController.abort();
++    const proc = this.process;
+     this.process = undefined;
+     this.readBuffer.clear();
++
++    if (proc == null || proc.exitCode != null || proc.signalCode != null) {
++      this.abortController.abort();
++      return;
++    }
++
++    const exited = new Promise<void>(resolve =>
++      proc.once('exit', () => resolve()),
++    );
++    const exitedWithin = (ms: number) =>
++      Promise.race([
++        exited.then(() => true),
++        new Promise<boolean>(resolve =>
++          setTimeout(() => resolve(false), ms).unref(),
++        ),
++      ]);
++
++    proc.stdin?.end();
++    if (await exitedWithin(SHUTDOWN_GRACE_MS)) return;
++
++    proc.kill('SIGTERM');
++    if (await exitedWithin(SHUTDOWN_GRACE_MS)) return;
++
++    proc.kill('SIGKILL');
++    await exitedWithin(SHUTDOWN_GRACE_MS);
+   }
+ 
+   send(message: JSONRPCMessage): Promise<void> {

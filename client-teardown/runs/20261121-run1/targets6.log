@@ -1,0 +1,4 @@
+cli-qwen                                clean        {'CLEAN': 10}
+cli-qwen                                eof-ignore   {'CLEAN': 10}
+cli-qwen                                term-ignore  {'CLEAN': 10}
+cli-qwen                                wrapped      {'DEAD': 10}

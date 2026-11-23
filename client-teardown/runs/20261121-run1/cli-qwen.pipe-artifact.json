@@ -1,0 +1,1041 @@
+{
+ "target": "cli-qwen",
+ "variant": "",
+ "driver": [
+  "python3",
+  "-I",
+  "{here}/drivers/cli.py",
+  "qwen"
+ ],
+ "env": {
+  "CT_CLI_BIN": "/home/claude/envs/clis/node_modules/.bin"
+ },
+ "cells": [
+  {
+   "scenario": "clean",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-708a461100b0",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.45,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-708a461100b0 /tmp/ct-sq4iqfj2 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.45, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-708a461100b0 /tmp/ct-sq4iqfj2 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 10448 1795267205104",
+      "initialize 10448 1795267205106",
+      "eof 10448 1795267205112"
+     ],
+     "seconds": 11.01,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-86e6eeb45cd0",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.35,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-86e6eeb45cd0 /tmp/ct-qf3ai7bh (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.35, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-86e6eeb45cd0 /tmp/ct-qf3ai7bh (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 10713 1795267215993",
+      "initialize 10713 1795267215996",
+      "eof 10713 1795267216002"
+     ],
+     "seconds": 10.9,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-d542a82ea5e0",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.41,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-d542a82ea5e0 /tmp/ct-5wn06121 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.41, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-d542a82ea5e0 /tmp/ct-5wn06121 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 11002 1795267226969",
+      "initialize 11002 1795267226972",
+      "eof 11002 1795267226978"
+     ],
+     "seconds": 10.97,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ed4677461198",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.38,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-ed4677461198 /tmp/ct-9ky3tvoz (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.38, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-ed4677461198 /tmp/ct-9ky3tvoz (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 11291 1795267237898",
+      "initialize 11291 1795267237900",
+      "eof 11291 1795267237907"
+     ],
+     "seconds": 10.92,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-d558a5d800b3",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.57,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-d558a5d800b3 /tmp/ct-qn1hmk16 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.57, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-d558a5d800b3 /tmp/ct-qn1hmk16 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 12047 1795267249029",
+      "initialize 12047 1795267249031",
+      "eof 12047 1795267249043"
+     ],
+     "seconds": 11.16,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-268b75ee0ddc",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.49,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-268b75ee0ddc /tmp/ct-rennt1e6 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.49, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-268b75ee0ddc /tmp/ct-rennt1e6 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 12849 1795267260085",
+      "initialize 12849 1795267260087",
+      "eof 12849 1795267260097"
+     ],
+     "seconds": 11.05,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-d6fab9b15fff",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.34,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-d6fab9b15fff /tmp/ct-crxfmx60 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.34, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-d6fab9b15fff /tmp/ct-crxfmx60 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 13403 1795267270990",
+      "initialize 13403 1795267270992",
+      "eof 13403 1795267270998"
+     ],
+     "seconds": 10.88,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-9110c4e8cde6",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.45,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-9110c4e8cde6 /tmp/ct-yl68bdm8 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.45, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-9110c4e8cde6 /tmp/ct-yl68bdm8 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 13683 1795267281982",
+      "initialize 13683 1795267281993",
+      "eof 13683 1795267281999"
+     ],
+     "seconds": 11.02,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-3e15844074dd",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.51,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3e15844074dd /tmp/ct-3c859e6j (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.51, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-3e15844074dd /tmp/ct-3c859e6j (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 13937 1795267293062",
+      "initialize 13937 1795267293065",
+      "eof 13937 1795267293071"
+     ],
+     "seconds": 11.08,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-fe44e8ec6429",
+     "scenario": "clean",
+     "closed": {
+      "cli_seconds": 0.44,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-fe44e8ec6429 /tmp/ct-f1am47yb (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 0.44, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs clean cttrial-fe44e8ec6429 /tmp/ct-f1am47yb (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 14209 1795267304066",
+      "initialize 14209 1795267304069",
+      "eof 14209 1795267304076"
+     ],
+     "seconds": 10.98,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "eof-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-0660fb1cee9b",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.43,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-0660fb1cee9b /tmp/ct-rgb0ffzm (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.43, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-0660fb1cee9b /tmp/ct-rgb0ffzm (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 14493 1795267315038",
+      "initialize 14493 1795267315042",
+      "eof 14493 1795267315048",
+      "sigterm 14493 1795267317050"
+     ],
+     "seconds": 12.98,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-abd979b99697",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.47,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-abd979b99697 /tmp/ct-40fag1zr (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.47, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-abd979b99697 /tmp/ct-40fag1zr (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 14839 1795267328072",
+      "initialize 14839 1795267328076",
+      "eof 14839 1795267328086",
+      "sigterm 14839 1795267330089"
+     ],
+     "seconds": 13.03,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-0d46520a9ff9",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.38,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-0d46520a9ff9 /tmp/ct-d61x6f_q (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.38, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-0d46520a9ff9 /tmp/ct-d61x6f_q (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 15192 1795267341017",
+      "initialize 15192 1795267341019",
+      "eof 15192 1795267341024",
+      "sigterm 15192 1795267343027"
+     ],
+     "seconds": 12.95,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-2e51cabaee8f",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.52,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-2e51cabaee8f /tmp/ct-u484rknl (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.52, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-2e51cabaee8f /tmp/ct-u484rknl (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 15554 1795267354101",
+      "initialize 15554 1795267354104",
+      "eof 15554 1795267354111",
+      "sigterm 15554 1795267356113"
+     ],
+     "seconds": 13.09,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-e537a2ada4fb",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.38,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-e537a2ada4fb /tmp/ct-qm7iry85 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.38, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-e537a2ada4fb /tmp/ct-qm7iry85 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 15871 1795267367044",
+      "initialize 15871 1795267367047",
+      "eof 15871 1795267367053",
+      "sigterm 15871 1795267369055"
+     ],
+     "seconds": 12.93,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-485d6e954bc7",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.53,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-485d6e954bc7 /tmp/ct-8ajwb2jj (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.53, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-485d6e954bc7 /tmp/ct-8ajwb2jj (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 16220 1795267380131",
+      "initialize 16220 1795267380135",
+      "eof 16220 1795267380142",
+      "sigterm 16220 1795267382144"
+     ],
+     "seconds": 13.09,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-9599df003482",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.34,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-9599df003482 /tmp/ct-w4vsltsa (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.34, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-9599df003482 /tmp/ct-w4vsltsa (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 16513 1795267393025",
+      "initialize 16513 1795267393028",
+      "eof 16513 1795267393033",
+      "sigterm 16513 1795267395035"
+     ],
+     "seconds": 12.89,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-338b5f177009",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.36,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-338b5f177009 /tmp/ct-g_23qc19 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.36, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-338b5f177009 /tmp/ct-g_23qc19 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 16874 1795267405941",
+      "initialize 16874 1795267405944",
+      "eof 16874 1795267405949",
+      "sigterm 16874 1795267407952"
+     ],
+     "seconds": 12.91,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-7d7b23c67591",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.48,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-7d7b23c67591 /tmp/ct-rw8f2a41 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.48, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-7d7b23c67591 /tmp/ct-rw8f2a41 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 17210 1795267418969",
+      "initialize 17210 1795267418972",
+      "eof 17210 1795267418982",
+      "sigterm 17210 1795267420984"
+     ],
+     "seconds": 13.03,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-1163309f8a61",
+     "scenario": "eof-ignore",
+     "closed": {
+      "cli_seconds": 2.4,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-1163309f8a61 /tmp/ct-sc25ffur (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 2.4, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-1163309f8a61 /tmp/ct-sc25ffur (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 17538 1795267431922",
+      "initialize 17538 1795267431926",
+      "eof 17538 1795267431936",
+      "sigterm 17538 1795267433936"
+     ],
+     "seconds": 12.96,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "term-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-f84511bc8fec",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.36,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-f84511bc8fec /tmp/ct-ylupm9rx (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.36, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-f84511bc8fec /tmp/ct-ylupm9rx (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 17894 1795267444846",
+      "initialize 17894 1795267444848",
+      "eof 17894 1795267444854",
+      "sigterm-ignored 17894 1795267446855"
+     ],
+     "seconds": 14.92,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-0e63bfa377e6",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.33,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-0e63bfa377e6 /tmp/ct-dxcf25go (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.33, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-0e63bfa377e6 /tmp/ct-dxcf25go (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 18256 1795267459720",
+      "initialize 18256 1795267459722",
+      "eof 18256 1795267459727",
+      "sigterm-ignored 18256 1795267461728"
+     ],
+     "seconds": 14.88,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-4f2e5b14c649",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.38,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-4f2e5b14c649 /tmp/ct-duha7bpx (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.38, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-4f2e5b14c649 /tmp/ct-duha7bpx (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 18654 1795267474646",
+      "initialize 18654 1795267474648",
+      "eof 18654 1795267474656",
+      "sigterm-ignored 18654 1795267476663"
+     ],
+     "seconds": 14.93,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ce529efaa950",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.39,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-ce529efaa950 /tmp/ct-j9lo3kme (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.39, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-ce529efaa950 /tmp/ct-j9lo3kme (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 19009 1795267489612",
+      "initialize 19009 1795267489615",
+      "eof 19009 1795267489621",
+      "sigterm-ignored 19009 1795267491624"
+     ],
+     "seconds": 14.95,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-e6ecf366664b",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.37,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-e6ecf366664b /tmp/ct-039neqd0 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.37, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-e6ecf366664b /tmp/ct-039neqd0 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 19312 1795267504554",
+      "initialize 19312 1795267504559",
+      "eof 19312 1795267504564",
+      "sigterm-ignored 19312 1795267506567"
+     ],
+     "seconds": 14.95,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-3a0168810eef",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.38,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-3a0168810eef /tmp/ct-k5q81lrr (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.38, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-3a0168810eef /tmp/ct-k5q81lrr (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 19702 1795267519501",
+      "initialize 19702 1795267519503",
+      "eof 19702 1795267519510",
+      "sigterm-ignored 19702 1795267521511"
+     ],
+     "seconds": 14.94,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-3b810146d690",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.65,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-3b810146d690 /tmp/ct-jd9zhmkj (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.65, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-3b810146d690 /tmp/ct-jd9zhmkj (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 20250 1795267534689",
+      "initialize 20250 1795267534692",
+      "eof 20250 1795267534722",
+      "sigterm-ignored 20250 1795267536724"
+     ],
+     "seconds": 15.22,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-600fa50ec2a6",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.38,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-600fa50ec2a6 /tmp/ct-z9dtmd51 (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.38, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-600fa50ec2a6 /tmp/ct-z9dtmd51 (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 20609 1795267549662",
+      "initialize 20609 1795267549664",
+      "eof 20609 1795267549671",
+      "sigterm-ignored 20609 1795267551673"
+     ],
+     "seconds": 14.94,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-acda4d35a2f5",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.36,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-acda4d35a2f5 /tmp/ct-g7ne6p0l (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.36, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-acda4d35a2f5 /tmp/ct-g7ne6p0l (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 20915 1795267564579",
+      "initialize 20915 1795267564582",
+      "eof 20915 1795267564589",
+      "sigterm-ignored 20915 1795267566591"
+     ],
+     "seconds": 14.93,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-599dafba9bf0",
+     "scenario": "term-ignore",
+     "closed": {
+      "cli_seconds": 4.39,
+      "exit": 0,
+      "connected_line": true,
+      "out_tail": "Configured MCP servers:\n\u001b[32m\u2713\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-599dafba9bf0 /tmp/ct-nunqdcjr (stdio) - Connected\n"
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "CLOSED {\"cli_seconds\": 4.39, \"exit\": 0, \"connected_line\": true, \"out_tail\": \"Configured MCP servers:\\n\\u001b[32m\\u2713\\u001b[0m fx: /opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs term-ignore cttrial-599dafba9bf0 /tmp/ct-nunqdcjr (stdio) - Connected\\n\"}"
+     ],
+     "markers": [
+      "start 21253 1795267579560",
+      "initialize 21253 1795267579563",
+      "eof 21253 1795267579571",
+      "sigterm-ignored 21253 1795267581573"
+     ],
+     "seconds": 14.96,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "wrapped",
+   "n": 10,
+   "counts": {
+    "DEAD": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-ba76dcc5866b",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 21625,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-ba76dcc5866b /tmp/ct-zd44t5ub"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 21625 1795267594502",
+      "initialize 21625 1795267594505",
+      "eof 21625 1795267594511"
+     ],
+     "seconds": 120.87,
+     "connected": true,
+     "verdict": "DEAD"
+    },
+    {
+     "tag": "cttrial-bab39ae54dfb",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 24136,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-bab39ae54dfb /tmp/ct-2t0c1vbl"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 24136 1795267715567",
+      "initialize 24136 1795267715569",
+      "eof 24136 1795267715577"
+     ],
+     "seconds": 120.82,
+     "connected": true,
+     "verdict": "DEAD"
+    },
+    {
+     "tag": "cttrial-4c5ed424bd1d",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 26135,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-4c5ed424bd1d /tmp/ct-qldec7bu"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 26135 1795267836237",
+      "initialize 26135 1795267836239",
+      "eof 26135 1795267836245"
+     ],
+     "seconds": 120.79,
+     "connected": true,
+     "verdict": "DEAD"
+    },
+    {
+     "tag": "cttrial-d3ea7d8b2a89",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 27380,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-d3ea7d8b2a89 /tmp/ct-hu3nojbi"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 27380 1795267956994",
+      "initialize 27380 1795267956997",
+      "eof 27380 1795267957004"
+     ],
+     "seconds": 120.87,
+     "connected": true,
+     "verdict": "DEAD"
+    },
+    {
+     "tag": "cttrial-5b41947c39ba",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 28518,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-5b41947c39ba /tmp/ct-0o7inb7b"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 28518 1795268077830",
+      "initialize 28518 1795268077832",
+      "eof 28518 1795268077838"
+     ],
+     "seconds": 120.86,
+     "connected": true,
+     "verdict": "DEAD"
+    },
+    {
+     "tag": "cttrial-673a48f27890",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 28890,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-673a48f27890 /tmp/ct-mfz26iz2"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 28890 1795268198688",
+      "initialize 28890 1795268198690",
+      "eof 28890 1795268198696"
+     ],
+     "seconds": 120.78,
+     "connected": true,
+     "verdict": "DEAD"
+    },
+    {
+     "tag": "cttrial-f8405e878f49",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 29023,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-f8405e878f49 /tmp/ct-7ggeveh_"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 29023 1795268319477",
+      "initialize 29023 1795268319479",
+      "eof 29023 1795268319485"
+     ],
+     "seconds": 120.86,
+     "connected": true,
+     "verdict": "DEAD"
+    },
+    {
+     "tag": "cttrial-dd5c809dedab",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 29176,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-dd5c809dedab /tmp/ct-pn5bcwo1"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 29176 1795268440368",
+      "initialize 29176 1795268440370",
+      "eof 29176 1795268440377"
+     ],
+     "seconds": 120.88,
+     "connected": true,
+     "verdict": "DEAD"
+    },
+    {
+     "tag": "cttrial-52876f8ad309",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 29222,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-52876f8ad309 /tmp/ct-nycnu36a"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 29222 1795268561220",
+      "initialize 29222 1795268561222",
+      "eof 29222 1795268561228"
+     ],
+     "seconds": 120.77,
+     "connected": true,
+     "verdict": "DEAD"
+    },
+    {
+     "tag": "cttrial-d32c13687a9a",
+     "scenario": "wrapped",
+     "error": "driver exited before CLOSED",
+     "closed": null,
+     "residue_after_host_exit": [
+      {
+       "pid": 29268,
+       "cmd": "/opt/node22/bin/node /home/claude/reproduction-receipts/client-teardown/fixtures/server.mjs eof-ignore cttrial-d32c13687a9a /tmp/ct-p1bjlv31"
+      }
+     ],
+     "stderr_tail": "me, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['/home/claude/envs/clis/node_modules/.bin/qwen', 'mcp', 'list']' timed out after 120 seconds\n",
+     "stdout_tail": [],
+     "markers": [
+      "start 29268 1795268682032",
+      "initialize 29268 1795268682035",
+      "eof 29268 1795268682042"
+     ],
+     "seconds": 120.87,
+     "connected": true,
+     "verdict": "DEAD"
+    }
+   ]
+  }
+ ]
+}

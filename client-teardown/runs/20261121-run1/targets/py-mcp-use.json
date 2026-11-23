@@ -1,0 +1,1078 @@
+{
+ "target": "py-mcp-use",
+ "variant": "",
+ "driver": [
+  "/home/claude/envs/py-mcp-use/bin/python",
+  "{here}/drivers/py/frameworks.py",
+  "mcp-use"
+ ],
+ "env": null,
+ "cells": [
+  {
+   "scenario": "clean",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-9f4059172077",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:12:03,834 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.01}"
+     ],
+     "markers": [
+      "start 9445 1795273924229",
+      "initialize 9445 1795273924231",
+      "tools/list 9445 1795273924234",
+      "tools/call 9445 1795273924235",
+      "eof 9445 1795273924236"
+     ],
+     "seconds": 13.13,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-62f92568de38",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:12:15,674 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 9511 1795273935987",
+      "initialize 9511 1795273935989",
+      "tools/list 9511 1795273935992",
+      "tools/call 9511 1795273935992",
+      "eof 9511 1795273935993"
+     ],
+     "seconds": 11.75,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-15ed5bdb4e54",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:12:27,466 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 9578 1795273947796",
+      "initialize 9578 1795273947799",
+      "tools/list 9578 1795273947800",
+      "tools/call 9578 1795273947801",
+      "eof 9578 1795273947802"
+     ],
+     "seconds": 11.81,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-8f6199975ad2",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:12:39,306 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 9741 1795273959450",
+      "initialize 9741 1795273959452",
+      "tools/list 9741 1795273959454",
+      "tools/call 9741 1795273959454",
+      "eof 9741 1795273959455"
+     ],
+     "seconds": 11.66,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b7dcb9fea2c9",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:12:50,922 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 9868 1795273971256",
+      "initialize 9868 1795273971259",
+      "tools/list 9868 1795273971261",
+      "tools/call 9868 1795273971261",
+      "eof 9868 1795273971262"
+     ],
+     "seconds": 11.8,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-1d5c115c004f",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:13:02,815 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 10006 1795273983155",
+      "initialize 10006 1795273983157",
+      "tools/list 10006 1795273983164",
+      "tools/call 10006 1795273983165",
+      "eof 10006 1795273983166"
+     ],
+     "seconds": 11.91,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-ab64cc32d38f",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:13:14,589 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 10123 1795273994903",
+      "initialize 10123 1795273994905",
+      "tools/list 10123 1795273994906",
+      "tools/call 10123 1795273994907",
+      "eof 10123 1795273994907"
+     ],
+     "seconds": 11.72,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c1f893a9cd3c",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:13:26,417 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 10209 1795274006633",
+      "initialize 10209 1795274006635",
+      "tools/list 10209 1795274006637",
+      "tools/call 10209 1795274006638",
+      "eof 10209 1795274006639"
+     ],
+     "seconds": 11.74,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-83d55d9b20dd",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:13:38,082 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.0}"
+     ],
+     "markers": [
+      "start 10306 1795274018691",
+      "initialize 10306 1795274018695",
+      "tools/list 10306 1795274018696",
+      "tools/call 10306 1795274018697",
+      "eof 10306 1795274018698"
+     ],
+     "seconds": 12.06,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-465f3187c187",
+     "scenario": "clean",
+     "closed": {
+      "close_seconds": 0.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:13:50,243 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 0.01}"
+     ],
+     "markers": [
+      "start 10391 1795274030862",
+      "initialize 10391 1795274030866",
+      "tools/list 10391 1795274030867",
+      "tools/call 10391 1795274030869",
+      "eof 10391 1795274030870"
+     ],
+     "seconds": 12.17,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "eof-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-121c81a80a3e",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:14:02,378 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 10475 1795274042710",
+      "initialize 10475 1795274042712",
+      "tools/list 10475 1795274042714",
+      "tools/call 10475 1795274042715",
+      "eof 10475 1795274042715",
+      "sigterm 10475 1795274044718"
+     ],
+     "seconds": 13.93,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b82916871e9f",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:14:16,239 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 10596 1795274056572",
+      "initialize 10596 1795274056574",
+      "tools/list 10596 1795274056575",
+      "tools/call 10596 1795274056576",
+      "eof 10596 1795274056576",
+      "sigterm 10596 1795274058579"
+     ],
+     "seconds": 13.86,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-cdc5ae880515",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:14:30,119 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 10666 1795274070449",
+      "initialize 10666 1795274070451",
+      "tools/list 10666 1795274070453",
+      "tools/call 10666 1795274070454",
+      "eof 10666 1795274070454",
+      "sigterm 10666 1795274072457"
+     ],
+     "seconds": 13.88,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-fe94aa8e45ed",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:14:44,135 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 10795 1795274084528",
+      "initialize 10795 1795274084531",
+      "tools/list 10795 1795274084533",
+      "tools/call 10795 1795274084533",
+      "eof 10795 1795274084534",
+      "sigterm 10795 1795274086537"
+     ],
+     "seconds": 14.09,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-9c8004ee5767",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:14:58,175 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 10935 1795274098510",
+      "initialize 10935 1795274098513",
+      "tools/list 10935 1795274098515",
+      "tools/call 10935 1795274098516",
+      "eof 10935 1795274098517",
+      "sigterm 10935 1795274100520"
+     ],
+     "seconds": 13.97,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-7183ac939b0f",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:15:11,961 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11073 1795274112203",
+      "initialize 11073 1795274112205",
+      "tools/list 11073 1795274112206",
+      "tools/call 11073 1795274112207",
+      "eof 11073 1795274112208",
+      "sigterm 11073 1795274114210"
+     ],
+     "seconds": 13.69,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-8e0230f55bc1",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:15:25,687 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11210 1795274126006",
+      "initialize 11210 1795274126008",
+      "tools/list 11210 1795274126010",
+      "tools/call 11210 1795274126011",
+      "eof 11210 1795274126012",
+      "sigterm 11210 1795274128014"
+     ],
+     "seconds": 13.8,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-825ca7b484f9",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:15:39,648 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11315 1795274139791",
+      "initialize 11315 1795274139794",
+      "tools/list 11315 1795274139796",
+      "tools/call 11315 1795274139796",
+      "eof 11315 1795274139797",
+      "sigterm 11315 1795274141799"
+     ],
+     "seconds": 13.79,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-8204df3f2b11",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:15:53,424 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11446 1795274153659",
+      "initialize 11446 1795274153662",
+      "tools/list 11446 1795274153663",
+      "tools/call 11446 1795274153664",
+      "eof 11446 1795274153665",
+      "sigterm 11446 1795274155667"
+     ],
+     "seconds": 13.87,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-1b8174f45511",
+     "scenario": "eof-ignore",
+     "closed": {
+      "close_seconds": 2.1
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:16:07,336 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 2.1}"
+     ],
+     "markers": [
+      "start 11562 1795274167698",
+      "initialize 11562 1795274167701",
+      "tools/list 11562 1795274167702",
+      "tools/call 11562 1795274167704",
+      "eof 11562 1795274167705",
+      "sigterm 11562 1795274169707"
+     ],
+     "seconds": 14.04,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "term-ignore",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-03f83f2d6c05",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:16:21,397 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 11677 1795274181654",
+      "initialize 11677 1795274181656",
+      "tools/list 11677 1795274181659",
+      "tools/call 11677 1795274181661",
+      "eof 11677 1795274181662",
+      "sigterm-ignored 11677 1795274183664"
+     ],
+     "seconds": 15.86,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b05bf5e21342",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:16:37,236 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 11766 1795274197478",
+      "initialize 11766 1795274197481",
+      "tools/list 11766 1795274197482",
+      "tools/call 11766 1795274197483",
+      "eof 11766 1795274197484",
+      "sigterm-ignored 11766 1795274199486"
+     ],
+     "seconds": 15.82,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-aca9d7c9041b",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:16:52,994 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 11856 1795274213240",
+      "initialize 11856 1795274213243",
+      "tools/list 11856 1795274213245",
+      "tools/call 11856 1795274213246",
+      "eof 11856 1795274213248",
+      "sigterm-ignored 11856 1795274215248"
+     ],
+     "seconds": 15.75,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-aa6fd3598c7a",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:17:08,604 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 11984 1795274228941",
+      "initialize 11984 1795274228944",
+      "tools/list 11984 1795274228945",
+      "tools/call 11984 1795274228946",
+      "eof 11984 1795274228947",
+      "sigterm-ignored 11984 1795274230949"
+     ],
+     "seconds": 15.71,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-9f7e58e659d4",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:17:24,411 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12065 1795274244755",
+      "initialize 12065 1795274244758",
+      "tools/list 12065 1795274244760",
+      "tools/call 12065 1795274244760",
+      "eof 12065 1795274244761",
+      "sigterm-ignored 12065 1795274246764"
+     ],
+     "seconds": 15.83,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-94d0304f4fcb",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:17:40,154 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12148 1795274260460",
+      "initialize 12148 1795274260462",
+      "tools/list 12148 1795274260463",
+      "tools/call 12148 1795274260464",
+      "eof 12148 1795274260464",
+      "sigterm-ignored 12148 1795274262467"
+     ],
+     "seconds": 15.69,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b3bf1aaf3568",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:17:55,922 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12228 1795274276302",
+      "initialize 12228 1795274276305",
+      "tools/list 12228 1795274276307",
+      "tools/call 12228 1795274276308",
+      "eof 12228 1795274276309",
+      "sigterm-ignored 12228 1795274278311"
+     ],
+     "seconds": 15.85,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-220a2241f025",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:18:11,981 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12333 1795274292242",
+      "initialize 12333 1795274292244",
+      "tools/list 12333 1795274292247",
+      "tools/call 12333 1795274292248",
+      "eof 12333 1795274292249",
+      "sigterm-ignored 12333 1795274294251"
+     ],
+     "seconds": 15.94,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-88c73b730851",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:18:27,808 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12413 1795274308132",
+      "initialize 12413 1795274308134",
+      "tools/list 12413 1795274308136",
+      "tools/call 12413 1795274308136",
+      "eof 12413 1795274308137",
+      "sigterm-ignored 12413 1795274310139"
+     ],
+     "seconds": 15.88,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-de0e1fefacb6",
+     "scenario": "term-ignore",
+     "closed": {
+      "close_seconds": 4.01
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:18:43,516 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.01}"
+     ],
+     "markers": [
+      "start 12481 1795274323825",
+      "initialize 12481 1795274323827",
+      "tools/list 12481 1795274323828",
+      "tools/call 12481 1795274323829",
+      "eof 12481 1795274323829",
+      "sigterm-ignored 12481 1795274325832"
+     ],
+     "seconds": 15.7,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  },
+  {
+   "scenario": "wrapped",
+   "n": 10,
+   "counts": {
+    "CLEAN": 10
+   },
+   "trials": [
+    {
+     "tag": "cttrial-542b0e51e715",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.61
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:18:59,365 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 3.61}"
+     ],
+     "markers": [
+      "start 12562 1795274339646",
+      "initialize 12562 1795274339649",
+      "tools/list 12562 1795274339651",
+      "tools/call 12562 1795274339651",
+      "eof 12562 1795274339652",
+      "sigterm 12562 1795274341655"
+     ],
+     "seconds": 15.43,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-c26589fe1f25",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 4.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:19:14,816 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.0}"
+     ],
+     "markers": [
+      "start 12669 1795274355220",
+      "initialize 12669 1795274355223",
+      "tools/list 12669 1795274355226",
+      "tools/call 12669 1795274355227",
+      "eof 12669 1795274355229",
+      "sigterm 12669 1795274357231"
+     ],
+     "seconds": 15.97,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-b3519a211547",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.41
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:19:30,596 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 3.41}"
+     ],
+     "markers": [
+      "start 12774 1795274370920",
+      "initialize 12774 1795274370922",
+      "tools/list 12774 1795274370923",
+      "tools/call 12774 1795274370924",
+      "eof 12774 1795274370925",
+      "sigterm 12774 1795274372927"
+     ],
+     "seconds": 15.09,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-a4ec51f1eca7",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:19:45,695 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 12863 1795274386044",
+      "initialize 12863 1795274386046",
+      "tools/list 12863 1795274386048",
+      "tools/call 12863 1795274386048",
+      "eof 12863 1795274386049",
+      "sigterm 12863 1795274388051"
+     ],
+     "seconds": 14.93,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-51a826091eb6",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.11
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:20:00,874 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 3.11}"
+     ],
+     "markers": [
+      "start 12954 1795274401148",
+      "initialize 12954 1795274401151",
+      "tools/list 12954 1795274401153",
+      "tools/call 12954 1795274401153",
+      "eof 12954 1795274401154",
+      "sigterm 12954 1795274403157"
+     ],
+     "seconds": 15.0,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-f1d7731f70af",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:20:15,774 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 13060 1795274416083",
+      "initialize 13060 1795274416085",
+      "tools/list 13060 1795274416087",
+      "tools/call 13060 1795274416088",
+      "eof 13060 1795274416089",
+      "sigterm 13060 1795274418091"
+     ],
+     "seconds": 15.03,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-274ed7b8440d",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.21
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:20:30,707 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 3.21}"
+     ],
+     "markers": [
+      "start 13156 1795274431059",
+      "initialize 13156 1795274431062",
+      "tools/list 13156 1795274431063",
+      "tools/call 13156 1795274431064",
+      "eof 13156 1795274431065",
+      "sigterm 13156 1795274433067"
+     ],
+     "seconds": 14.97,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-1090adfb07fb",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.31
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:20:45,625 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 3.31}"
+     ],
+     "markers": [
+      "start 13235 1795274446010",
+      "initialize 13235 1795274446012",
+      "tools/list 13235 1795274446013",
+      "tools/call 13235 1795274446014",
+      "eof 13235 1795274446014",
+      "sigterm 13235 1795274448017"
+     ],
+     "seconds": 15.06,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-9124b3d9e1b4",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 4.0
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:21:00,851 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 4.0}"
+     ],
+     "markers": [
+      "start 13323 1795274461262",
+      "initialize 13323 1795274461266",
+      "tools/list 13323 1795274461268",
+      "tools/call 13323 1795274461269",
+      "eof 13323 1795274461270",
+      "sigterm 13323 1795274463272"
+     ],
+     "seconds": 15.95,
+     "connected": true,
+     "verdict": "CLEAN"
+    },
+    {
+     "tag": "cttrial-6e29d3d1c49d",
+     "scenario": "wrapped",
+     "closed": {
+      "close_seconds": 3.41
+     },
+     "residue_early": [],
+     "residue": [],
+     "residue_after_host_exit": [],
+     "stderr_tail": "",
+     "stdout_tail": [
+      "2026-11-21 15:21:16,685 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.",
+      "CLOSED {\"close_seconds\": 3.41}"
+     ],
+     "markers": [
+      "start 13433 1795274476959",
+      "initialize 13433 1795274476963",
+      "tools/list 13433 1795274476964",
+      "tools/call 13433 1795274476965",
+      "eof 13433 1795274476966",
+      "sigterm 13433 1795274478968"
+     ],
+     "seconds": 15.1,
+     "connected": true,
+     "verdict": "CLEAN"
+    }
+   ]
+  }
+ ]
+}

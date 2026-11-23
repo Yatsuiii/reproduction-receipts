@@ -1,0 +1,12 @@
+[package]
+name = "ctrust"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+# rmcp at the version Goose pins (aaif-goose/goose Cargo.toml: rmcp = "3.9.0")
+[dependencies]
+rmcp = { version = "=3.9.0", features = ["client", "transport-child-process"] }
+tokio = { version = "1", features = ["full"] }
+serde_json = "1"
+libc = "0.2"

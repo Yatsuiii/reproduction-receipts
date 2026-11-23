@@ -1,0 +1,4 @@
+js-ai-sdk@patched                       clean        {'CLEAN': 10}
+js-ai-sdk@patched                       eof-ignore   {'CLEAN': 10}
+js-ai-sdk@patched                       term-ignore  {'CLEAN': 10}
+js-ai-sdk@patched                       wrapped      {'RESIDUE': 10}
