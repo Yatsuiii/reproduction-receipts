@@ -65,6 +65,7 @@ jobs:
             else echo "new file (not committed upstream): $f" | tee -a compare-committed.txt; fi
           done
           echo "NAME=$(echo ${{ matrix.script }} | tr / -)-${{ matrix.os }}" >> $GITHUB_ENV
+          exit $rc
       - if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
