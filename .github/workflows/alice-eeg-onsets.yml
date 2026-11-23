@@ -41,7 +41,10 @@ jobs:
           start=$(date +%s)
           venv/bin/python -I alice-eeg-onsets/check_onsets.py ds data out > run.log 2>&1; rc=$?
           echo "exit=$rc wall_s=$(( $(date +%s)-start ))" | tee -a run.log
-          tail -40 run.log
+          cat run.log
+          echo "=== per_segment.csv"; cat out/per_segment.csv
+          echo "=== rebuild.csv"; cat out/rebuild.csv
+          echo "=== fetch.log"; cat fetch.log
           exit $rc
       - if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
