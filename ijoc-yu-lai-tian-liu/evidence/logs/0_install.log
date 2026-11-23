@@ -1,0 +1,20 @@
+# step=0_install start=2026-11-23T03:57:04Z cwd=work/install cmd=/home/claude/receipt2/venv/bin/pip install -r requirements.txt
+Collecting numpy (from -r requirements.txt (line 1))
+  Downloading numpy-2.5.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting numba (from -r requirements.txt (line 2))
+  Downloading numba-0.68.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (2.8 kB)
+Collecting tqdm (from -r requirements.txt (line 3))
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting llvmlite<0.51,>=0.50.0dev0 (from numba->-r requirements.txt (line 2))
+  Downloading llvmlite-0.50.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.1 kB)
+Downloading numpy-2.5.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (15.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 51.4 MB/s  0:00:00
+Downloading numba-0.68.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (3.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 45.5 MB/s  0:00:00
+Downloading llvmlite-0.50.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (59.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.7/59.7 MB 51.0 MB/s  0:00:01
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Installing collected packages: tqdm, numpy, llvmlite, numba
+
+Successfully installed llvmlite-0.50.0 numba-0.68.1 numpy-2.5.5 tqdm-4.70.1
+# step=0_install end=2026-11-23T03:57:09Z exit=0 wall_s=5

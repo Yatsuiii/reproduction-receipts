@@ -1,0 +1,63 @@
+{
+ "format": "triage-verdict/1",
+ "source": {
+  "kind": "directory",
+  "path": "/home/claude/receipt2/pkg-inspect",
+  "commit": "325bb7d99908de5df94c9c709bcf37ccbdbff5ae"
+ },
+ "when": "2026-11-23T03:56:18Z",
+ "triage_sha256": "c2ddd83b920c4425cd0a0de65ad0939cbd2fcd483f8eed518b115216c43138ca",
+ "options": "defaults",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39"
+ },
+ "result": {
+  "verdict": "runnable-with-deviations",
+  "counts": {
+   "blocker": 0,
+   "deviation": 1,
+   "note": 0
+  },
+  "findings": [
+   {
+    "code": "UNPINNED_DEPENDENCIES",
+    "severity": "deviation",
+    "message": "Python requirements without an exact version: numpy; numba; tqdm. A rerun installs whatever is current and must log the versions it got.",
+    "evidence": [
+     "requirements.txt"
+    ]
+   }
+  ],
+  "inventory": {
+   "files": 16,
+   "bytes": 220965,
+   "languages": [
+    "python"
+   ],
+   "code_files": {
+    "python": 6
+   },
+   "docs_read": [
+    "README.md"
+   ],
+   "licences_named": [
+    "MIT"
+   ],
+   "master_scripts": []
+  },
+  "inputs": {
+   "reads": 0,
+   "writes": 0,
+   "missing": [],
+   "unresolved": 0,
+   "remote": []
+  },
+  "links": {
+   "found": 5,
+   "checked": false,
+   "results": []
+  },
+  "seconds": 0.191
+ }
+}

@@ -1,0 +1,56 @@
+# step=ttt4x4_softmax_c start=2026-11-23T06:00:17Z cwd=work/ttt4x4_softmax_c cmd=/home/claude/receipt2/venv/bin/python scripts/policy_performance/ttt4x4_softmax.py
+====================================================================================================
+4x4 Tic-Tac-Toe with softmax Player 1 — policy-performance AMS with on-the-fly expansion
+====================================================================================================
+DEPTH=6, P1_TAU=2.0, SAMPLE_SIZES=[20, 30, 40, 50, 60]
+POLICY_REPLICATIONS=1, POLICY_ROLLOUTS=10000
+POLICY_MODELS=['lsa', 'max', 'weighted', 'lsa_maxq']
+Warming up Numba... done (4.5s)
+Building reachable states and exact benchmark...
+|S_reach|=15428, V*(s0)=0.64662881, optimal_actions=[3]
+N= 20 | model=lsa       | reward=0.597100 ± 0.001978 | visited=0.154006 | otf_unique=366 | otf_rollout_rate=0.927400
+N= 20 | model=max       | reward=0.601750 ± 0.002013 | visited=0.153746 | otf_unique=467 | otf_rollout_rate=0.888800
+N= 20 | model=weighted  | reward=0.565500 ± 0.001687 | visited=0.142857 | otf_unique=487 | otf_rollout_rate=0.877600
+N= 20 | model=lsa_maxq  | reward=0.598150 ± 0.001986 | visited=0.154006 | otf_unique=377 | otf_rollout_rate=0.873500
+N= 30 | model=lsa       | reward=0.618650 ± 0.002127 | visited=0.259723 | otf_unique=239 | otf_rollout_rate=0.661100
+N= 30 | model=max       | reward=0.634500 ± 0.002217 | visited=0.282473 | otf_unique=167 | otf_rollout_rate=0.448100
+N= 30 | model=weighted  | reward=0.556700 ± 0.001585 | visited=0.231397 | otf_unique=335 | otf_rollout_rate=0.893900
+N= 30 | model=lsa_maxq  | reward=0.620600 ± 0.002139 | visited=0.259723 | otf_unique=240 | otf_rollout_rate=0.669400
+N= 40 | model=lsa       | reward=0.614900 ± 0.002104 | visited=0.315012 | otf_unique=201 | otf_rollout_rate=0.601800
+N= 40 | model=max       | reward=0.616500 ± 0.002114 | visited=0.338605 | otf_unique=172 | otf_rollout_rate=0.360900
+N= 40 | model=weighted  | reward=0.572000 ± 0.001756 | visited=0.296992 | otf_unique=162 | otf_rollout_rate=0.609800
+N= 40 | model=lsa_maxq  | reward=0.615000 ± 0.002104 | visited=0.315012 | otf_unique=201 | otf_rollout_rate=0.601800
+N= 50 | model=lsa       | reward=0.630300 ± 0.002195 | visited=0.365828 | otf_unique=100 | otf_rollout_rate=0.389800
+N= 50 | model=max       | reward=0.623600 ± 0.002157 | visited=0.354615 | otf_unique=108 | otf_rollout_rate=0.355800
+N= 50 | model=weighted  | reward=0.571350 ± 0.001749 | visited=0.368227 | otf_unique=152 | otf_rollout_rate=0.390100
+N= 50 | model=lsa_maxq  | reward=0.629900 ± 0.002193 | visited=0.365828 | otf_unique=99 | otf_rollout_rate=0.389500
+N= 60 | model=lsa       | reward=0.631100 ± 0.002199 | visited=0.418654 | otf_unique=84 | otf_rollout_rate=0.237200
+N= 60 | model=max       | reward=0.620000 ± 0.002136 | visited=0.420664 | otf_unique=48 | otf_rollout_rate=0.220300
+N= 60 | model=weighted  | reward=0.587650 ± 0.001901 | visited=0.406015 | otf_unique=85 | otf_rollout_rate=0.346200
+N= 60 | model=lsa_maxq  | reward=0.624250 ± 0.002161 | visited=0.418654 | otf_unique=86 | otf_rollout_rate=0.253100
+
+POLICY SUMMARY
+==============================================================================================================
+N= 20 | model=lsa       | agreement=0.146552 | conditional=0.951599 | visited=0.154006 | reward=0.597100 ± 0.001978 | true_V=0.646629 | opt_a=3
+N= 20 | model=max       | agreement=0.145968 | conditional=0.949410 | visited=0.153746 | reward=0.601750 ± 0.002013 | true_V=0.646629 | opt_a=3
+N= 20 | model=weighted  | agreement=0.136051 | conditional=0.952359 | visited=0.142857 | reward=0.565500 ± 0.001687 | true_V=0.646629 | opt_a=3
+N= 20 | model=lsa_maxq  | agreement=0.147005 | conditional=0.954545 | visited=0.154006 | reward=0.598150 ± 0.001986 | true_V=0.646629 | opt_a=3
+N= 30 | model=lsa       | agreement=0.247278 | conditional=0.952084 | visited=0.259723 | reward=0.618650 ± 0.002127 | true_V=0.646629 | opt_a=3
+N= 30 | model=max       | agreement=0.268667 | conditional=0.951124 | visited=0.282473 | reward=0.634500 ± 0.002217 | true_V=0.646629 | opt_a=3
+N= 30 | model=weighted  | agreement=0.219471 | conditional=0.948459 | visited=0.231397 | reward=0.556700 ± 0.001585 | true_V=0.646629 | opt_a=3
+N= 30 | model=lsa_maxq  | agreement=0.247407 | conditional=0.952583 | visited=0.259723 | reward=0.620600 ± 0.002139 | true_V=0.646629 | opt_a=3
+N= 40 | model=lsa       | agreement=0.296020 | conditional=0.939712 | visited=0.315012 | reward=0.614900 ± 0.002104 | true_V=0.646629 | opt_a=3
+N= 40 | model=max       | agreement=0.324216 | conditional=0.957504 | visited=0.338605 | reward=0.616500 ± 0.002114 | true_V=0.646629 | opt_a=3
+N= 40 | model=weighted  | agreement=0.280723 | conditional=0.945220 | visited=0.296992 | reward=0.572000 ± 0.001756 | true_V=0.646629 | opt_a=3
+N= 40 | model=lsa_maxq  | agreement=0.303020 | conditional=0.961934 | visited=0.315012 | reward=0.615000 ± 0.002104 | true_V=0.646629 | opt_a=3
+N= 50 | model=lsa       | agreement=0.354745 | conditional=0.969702 | visited=0.365828 | reward=0.630300 ± 0.002195 | true_V=0.646629 | opt_a=3
+N= 50 | model=max       | agreement=0.343142 | conditional=0.967648 | visited=0.354615 | reward=0.623600 ± 0.002157 | true_V=0.646629 | opt_a=3
+N= 50 | model=weighted  | agreement=0.352930 | conditional=0.958458 | visited=0.368227 | reward=0.571350 ± 0.001749 | true_V=0.646629 | opt_a=3
+N= 50 | model=lsa_maxq  | agreement=0.354485 | conditional=0.968994 | visited=0.365828 | reward=0.629900 ± 0.002193 | true_V=0.646629 | opt_a=3
+N= 60 | model=lsa       | agreement=0.408478 | conditional=0.975693 | visited=0.418654 | reward=0.631100 ± 0.002199 | true_V=0.646629 | opt_a=3
+N= 60 | model=max       | agreement=0.411978 | conditional=0.979353 | visited=0.420664 | reward=0.620000 ± 0.002136 | true_V=0.646629 | opt_a=3
+N= 60 | model=weighted  | agreement=0.390070 | conditional=0.960728 | visited=0.406015 | reward=0.587650 ± 0.001901 | true_V=0.646629 | opt_a=3
+N= 60 | model=lsa_maxq  | agreement=0.408154 | conditional=0.974919 | visited=0.418654 | reward=0.624250 ± 0.002161 | true_V=0.646629 | opt_a=3
+
+Saved: /home/claude/receipt2/work/ttt4x4_softmax_c/results/policy_performance/ttt4x4_softmax.csv
+# step=ttt4x4_softmax_c end=2026-11-23T06:15:31Z exit=0 wall_s=914

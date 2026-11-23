@@ -1,0 +1,9 @@
+# compare_csv.py: one cell changed in a copy of the committed ttt3x3.csv
+/tmp/claude-0/bad.csv: 189 cells; exact 188, float-equal 0, close 0, differs 0, text-differs 1; worst rel 0
+  row 11 mse: committed '0.0001982374388366453' regenerated '0.0.01882374388366453'
+exit=1
+
+# compare_printed.py: one printed mean changed in a copy of the inventory_control log
+DIFFER ('1', 'LSA', '100') mean_V: committed 6.963420102596992 printed 6.963421
+57 of 160 CSV rows printed so far; 228 values compared: 227 match the committed CSV at printed precision, 1 differ
+exit=1

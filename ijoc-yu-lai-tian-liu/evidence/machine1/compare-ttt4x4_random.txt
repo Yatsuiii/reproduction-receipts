@@ -1,0 +1,5 @@
+results/policy_performance/ttt4x4_random.csv: 320 cells; exact 316, float-equal 4, close 0, differs 0, text-differs 0; worst rel 2.33e-16
+  row 6 policy_reward_se: float-equal committed 0.003928360084220275 regenerated 0.0039283600842202745 rel 2.21e-16
+  row 9 policy_reward_se: float-equal committed 0.0037201090939873137 regenerated 0.0037201090939873145 rel 2.33e-16
+  row 14 policy_reward_se: float-equal committed 0.003806435195151691 regenerated 0.0038064351951516908 rel 1.14e-16
+  row 16 policy_reward_se: float-equal committed 0.003838908369803475 regenerated 0.0038389083698034754 rel 1.13e-16

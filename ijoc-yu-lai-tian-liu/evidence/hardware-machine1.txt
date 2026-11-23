@@ -1,0 +1,5 @@
+CPU(s):                                  4
+Model name:                              Intel(R) Xeon(R) Processor @ 2.10GHz
+               total        used        free      shared  buff/cache   available
+Mem:              15           0          13           0           1          14
+Swap:              0           0           0
