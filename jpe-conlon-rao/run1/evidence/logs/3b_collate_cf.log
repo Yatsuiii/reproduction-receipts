@@ -1,0 +1,29 @@
+# command: cd counterfactual_code && ../venv/bin/python 3b_collate_cf.py
+# cwd: .
+# start: 2026-11-25T16:38:57Z
+# timeout_s: 3600
+Traceback (most recent call last):
+  File "/tmp/claude-0/jpe-work/checkout/counterfactual_code/3b_collate_cf.py", line 30, in <module>
+    consolidate(pattern, results_dir / filename)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work/checkout/counterfactual_code/3b_collate_cf.py", line 12, in consolidate
+    pd.concat(
+    ~~~~~~~~~^
+        (
+        ^
+    ...<3 lines>...
+        ignore_index=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pandas/core/reshape/concat.py", line 426, in concat
+    objs, keys, ndims = _clean_keys_and_objs(objs, keys)
+                        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pandas/core/reshape/concat.py", line 842, in _clean_keys_and_objs
+    raise ValueError("No objects to concatenate")
+ValueError: No objects to concatenate
+
+# end: 2026-11-25T16:38:57Z
+# exit: 1
+# seconds: 0.42
+# outcome: failed

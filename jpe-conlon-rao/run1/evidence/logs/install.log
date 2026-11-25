@@ -1,0 +1,268 @@
+# command: python3 -m venv venv && venv/bin/pip install -r requirements.txt
+# cwd: .
+# start: 2026-11-25T16:37:50Z
+# timeout_s: 3600
+Collecting kiltsreader @ git+https://github.com/chrisconlon/kiltsnielsen.git (from -r requirements.txt (line 14))
+  Cloning https://github.com/chrisconlon/kiltsnielsen.git to /tmp/pip-install-jmlu6ps9/kiltsreader_b91f8cd1098041c29a6afcdb30415bf0
+  Running command git clone --filter=blob:none --quiet https://github.com/chrisconlon/kiltsnielsen.git /tmp/pip-install-jmlu6ps9/kiltsreader_b91f8cd1098041c29a6afcdb30415bf0
+  Resolved https://github.com/chrisconlon/kiltsnielsen.git to commit 6d56c251d6815c343685a78ef6a911174a88119c
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting matplotlib>=3.6.0 (from -r requirements.txt (line 1))
+  Downloading matplotlib-3.11.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+Collecting numpy>=1.22.4 (from -r requirements.txt (line 2))
+  Downloading numpy-2.5.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting pandas>=1.5.2 (from -r requirements.txt (line 3))
+  Downloading pandas-3.1.1-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+Collecting polars>=0.19.0 (from -r requirements.txt (line 4))
+  Downloading polars-2.2.0-py3-none-any.whl.metadata (12 kB)
+Collecting pyblp>=0.13.0 (from -r requirements.txt (line 5))
+  Downloading pyblp-1.3.0-py3-none-any.whl.metadata (9.0 kB)
+Collecting pyfixest>=0.2.0 (from -r requirements.txt (line 6))
+  Downloading pyfixest-0.70.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (36 kB)
+Collecting scikit_learn>=1.1.3 (from -r requirements.txt (line 7))
+  Downloading scikit_learn-1.9.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+Collecting scipy>=1.9.0 (from -r requirements.txt (line 8))
+  Downloading scipy-1.18.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting seaborn>=0.12.1 (from -r requirements.txt (line 9))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting statsmodels>=0.13.2 (from -r requirements.txt (line 10))
+  Downloading statsmodels-0.15.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.6 kB)
+Collecting openpyxl>=3.0.0 (from -r requirements.txt (line 11))
+  Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting pyarrow>=10.0.0 (from -r requirements.txt (line 12))
+  Downloading pyarrow-26.0.1-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting jinja2>=3.0.0 (from -r requirements.txt (line 13))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.6.0->-r requirements.txt (line 1))
+  Downloading contourpy-1.4.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.6.0->-r requirements.txt (line 1))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.28.2 (from matplotlib>=3.6.0->-r requirements.txt (line 1))
+  Downloading fonttools-4.69.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (147 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.6.0->-r requirements.txt (line 1))
+  Downloading kiwisolver-1.5.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+Collecting packaging>=20.0 (from matplotlib>=3.6.0->-r requirements.txt (line 1))
+  Downloading packaging-26.4-py3-none-any.whl.metadata (3.5 kB)
+Collecting pillow>=9 (from matplotlib>=3.6.0->-r requirements.txt (line 1))
+  Downloading pillow-13.0.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting pyparsing>=3 (from matplotlib>=3.6.0->-r requirements.txt (line 1))
+  Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.6.0->-r requirements.txt (line 1))
+  Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting polars-runtime-32==2.2.0 (from polars>=0.19.0->-r requirements.txt (line 4))
+  Downloading polars_runtime_32-2.2.0-cp311-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting patsy>=0.5.1 (from pyblp>=0.13.0->-r requirements.txt (line 5))
+  Downloading patsy-1.0.3-py2.py3-none-any.whl.metadata (3.7 kB)
+Collecting pyhdfe>=0.1.0 (from pyblp>=0.13.0->-r requirements.txt (line 5))
+  Downloading pyhdfe-0.2.1-py3-none-any.whl.metadata (4.5 kB)
+Collecting sympy>=1.1.0 (from pyblp>=0.13.0->-r requirements.txt (line 5))
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting formulaic<1.3,>=1.2.2 (from pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading formulaic-1.2.2-py3-none-any.whl.metadata (7.0 kB)
+Collecting joblib>=1.4.2 (from pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting maketables>=0.1.4 (from pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading maketables-0.2.0-py3-none-any.whl.metadata (10 kB)
+Collecting narwhals>=1.17 (from pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading narwhals-2.29.0-py3-none-any.whl.metadata (15 kB)
+Collecting tabulate>=0.9.0 (from pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting tqdm>=4.0.0 (from pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting within-py<0.5.0,>=0.4.0 (from pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading within_py-0.4.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (16 kB)
+Collecting interface-meta>=1.2.0 (from formulaic<1.3,>=1.2.2->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading interface_meta-2.0.1-py3-none-any.whl.metadata (6.4 kB)
+Collecting typing-extensions>=4.2.0 (from formulaic<1.3,>=1.2.2->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting wrapt>=1.17.0rc1 (from formulaic<1.3,>=1.2.2->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading wrapt-2.6.0.dev1-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (7.6 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit_learn>=1.1.3->-r requirements.txt (line 7))
+  Downloading threadpoolctl-3.8.0-py3-none-any.whl.metadata (29 kB)
+Collecting et-xmlfile (from openpyxl>=3.0.0->-r requirements.txt (line 11))
+  Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=3.0.0->-r requirements.txt (line 13))
+  Downloading markupsafe-3.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting cloudpickle>=3.0 (from joblib>=1.4.2->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading cloudpickle-3.1.3-py3-none-any.whl.metadata (7.1 kB)
+Collecting great-tables>=0.2 (from maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading great_tables-1.2.0-py3-none-any.whl.metadata (20 kB)
+Collecting ipython>=7 (from maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading ipython-9.19.1-py3-none-any.whl.metadata (4.6 kB)
+Collecting python-docx>=0.8.11 (from maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting multimark>=0.1.3 (from great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading multimark-0.5.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.0 kB)
+Collecting importlib-metadata (from great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading importlib_metadata-10.2.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting nokap>=0.1.0 (from great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading nokap-0.2.0-py3-none-any.whl.metadata (11 kB)
+Collecting Babel>=2.13.1 (from great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading babel-2.19.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting importlib-resources (from great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading importlib_resources-7.1.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting ipython-pygments-lexers>=1.0.0 (from ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting jedi>=0.18.2 (from ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading jedi-0.20.1-py2.py3-none-any.whl.metadata (23 kB)
+Collecting matplotlib-inline>=0.1.6 (from ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading matplotlib_inline-0.2.2-py3-none-any.whl.metadata (2.4 kB)
+Collecting pexpect>4.6 (from ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+Collecting psutil>=7 (from ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting pygments>=2.14.0 (from ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting stack_data>=0.6.0 (from ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting traitlets>=5.13.0 (from ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading traitlets-5.16.1-py3-none-any.whl.metadata (10 kB)
+Collecting wcwidth>=0.1.4 (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (26 kB)
+Collecting parso<0.9.0,>=0.8.7 (from jedi>=0.18.2->ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting cffi>=1.15 (from multimark>=0.1.3->great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Collecting click>=8.0 (from multimark>=0.1.3->great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=1.15->multimark>=0.1.3->great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+Collecting websockets>=12.0 (from nokap>=0.1.0->great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading websockets-17.4-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+Collecting ptyprocess>=0.5 (from pexpect>4.6->ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting tzdata (from python-dateutil>=2.7->matplotlib>=3.6.0->-r requirements.txt (line 1))
+  Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting lxml>=3.1.0 (from python-docx>=0.8.11->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading lxml-6.1.3-cp313-cp313-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Collecting executing>=1.2.0 (from stack_data>=0.6.0->ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading executing-2.3.0-py3-none-any.whl.metadata (9.1 kB)
+Collecting asttokens>=2.1.0 (from stack_data>=0.6.0->ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading asttokens-3.0.2-py3-none-any.whl.metadata (5.7 kB)
+Collecting pure-eval (from stack_data>=0.6.0->ipython>=7->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading pure_eval-0.2.4-py3-none-any.whl.metadata (6.4 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.1.0->pyblp>=0.13.0->-r requirements.txt (line 5))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting zipp>=3.20 (from importlib-metadata->great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading zipp-4.1.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting lazy-importer>=0.1 (from importlib-metadata->great-tables>=0.2->maketables>=0.1.4->pyfixest>=0.2.0->-r requirements.txt (line 6))
+  Downloading lazy_importer-0.1.0-py3-none-any.whl.metadata (7.3 kB)
+Downloading matplotlib-3.11.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 7.3 MB/s  0:00:01
+Downloading numpy-2.5.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (15.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 13.1 MB/s  0:00:01
+Downloading pandas-3.1.1-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 17.9 MB/s  0:00:00
+Downloading polars-2.2.0-py3-none-any.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 17.9 MB/s  0:00:00
+Downloading polars_runtime_32-2.2.0-cp311-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (52.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.1/52.1 MB 19.5 MB/s  0:00:02
+Downloading pyblp-1.3.0-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 18.8 MB/s  0:00:00
+Downloading pyfixest-0.70.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 18.8 MB/s  0:00:00
+Downloading formulaic-1.2.2-py3-none-any.whl (118 kB)
+Downloading within_py-0.4.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (866 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 866.3/866.3 kB 17.3 MB/s  0:00:00
+Downloading scikit_learn-1.9.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 8.4 MB/s  0:00:01
+Downloading scipy-1.18.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 10.2 MB/s  0:00:03
+Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+Downloading statsmodels-0.15.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (12.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 13.0 MB/s  0:00:00
+Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+Downloading pyarrow-26.0.1-cp313-cp313-manylinux_2_28_x86_64.whl (55.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.0/55.0 MB 10.4 MB/s  0:00:05
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading contourpy-1.4.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (384 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.69.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.7/6.7 MB 9.9 MB/s  0:00:00
+Downloading interface_meta-2.0.1-py3-none-any.whl (15 kB)
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Downloading cloudpickle-3.1.3-py3-none-any.whl (22 kB)
+Downloading kiwisolver-1.5.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 6.3 MB/s  0:00:00
+Downloading maketables-0.2.0-py3-none-any.whl (80 kB)
+Downloading great_tables-1.2.0-py3-none-any.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 4.7 MB/s  0:00:00
+Downloading babel-2.19.0-py3-none-any.whl (11.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.0/11.0 MB 9.1 MB/s  0:00:01
+Downloading ipython-9.19.1-py3-none-any.whl (649 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 649.9/649.9 kB 10.9 MB/s  0:00:00
+Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+Downloading jedi-0.20.1-py2.py3-none-any.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 12.1 MB/s  0:00:00
+Downloading parso-0.8.7-py2.py3-none-any.whl (107 kB)
+Downloading markupsafe-3.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (23 kB)
+Downloading matplotlib_inline-0.2.2-py3-none-any.whl (9.5 kB)
+Downloading multimark-0.5.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (513 kB)
+Downloading cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+Downloading click-8.5.1-py3-none-any.whl (126 kB)
+Downloading narwhals-2.29.0-py3-none-any.whl (501 kB)
+Downloading nokap-0.2.0-py3-none-any.whl (48 kB)
+Downloading packaging-26.4-py3-none-any.whl (140 kB)
+Downloading patsy-1.0.3-py2.py3-none-any.whl (233 kB)
+Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Downloading pillow-13.0.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 86.9 MB/s  0:00:00
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 13.8 MB/s  0:00:00
+Downloading pyhdfe-0.2.1-py3-none-any.whl (20 kB)
+Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+Downloading python_docx-1.2.0-py3-none-any.whl (252 kB)
+Downloading lxml-6.1.3-cp313-cp313-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 7.9 MB/s  0:00:00
+Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+Downloading asttokens-3.0.2-py3-none-any.whl (28 kB)
+Downloading executing-2.3.0-py3-none-any.whl (29 kB)
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 6.6 MB/s  0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 8.4 MB/s  0:00:00
+Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+Downloading threadpoolctl-3.8.0-py3-none-any.whl (32 kB)
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Downloading traitlets-5.16.1-py3-none-any.whl (86 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (822 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.7/822.7 kB 4.6 MB/s  0:00:00
+Downloading websockets-17.4-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (226 kB)
+Downloading wrapt-2.6.0.dev1-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (248 kB)
+Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Downloading importlib_metadata-10.2.0-py3-none-any.whl (34 kB)
+Downloading lazy_importer-0.1.0-py3-none-any.whl (12 kB)
+Downloading zipp-4.1.2-py3-none-any.whl (10 kB)
+Downloading importlib_resources-7.1.0-py3-none-any.whl (37 kB)
+Downloading pure_eval-0.2.4-py3-none-any.whl (11 kB)
+Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+Building wheels for collected packages: kiltsreader
+  Building wheel for kiltsreader (pyproject.toml): started
+  Building wheel for kiltsreader (pyproject.toml): finished with status 'done'
+  Created wheel for kiltsreader: filename=kiltsreader-0.0.1-py3-none-any.whl size=25633 sha256=1e00f55f01b28fcd6057f36278ced5fc7b66a95e45b1cd4638a7d3585e1f64dd
+  Stored in directory: /tmp/pip-ephem-wheel-cache-jth47w0t/wheels/a1/c7/2d/ad14d9ea6724b3ddf1bd38d01ba804eb47cc928c7ef00a9165
+Successfully built kiltsreader
+Installing collected packages: pure-eval, ptyprocess, mpmath, zipp, wrapt, websockets, wcwidth, tzdata, typing-extensions, traitlets, tqdm, threadpoolctl, tabulate, sympy, pyparsing, pygments, pycparser, pyarrow, psutil, polars-runtime-32, pillow, pexpect, parso, packaging, numpy, narwhals, MarkupSafe, lxml, lazy-importer, kiwisolver, interface-meta, importlib-resources, fonttools, executing, et-xmlfile, cycler, cloudpickle, click, Babel, asttokens, within-py, stack_data, scipy, python-docx, python-dateutil, prompt_toolkit, polars, patsy, openpyxl, nokap, matplotlib-inline, kiltsreader, joblib, jinja2, jedi, ipython-pygments-lexers, importlib-metadata, contourpy, cffi, scikit_learn, pyhdfe, pandas, multimark, matplotlib, ipython, seaborn, pyblp, great-tables, formulaic, statsmodels, maketables, pyfixest
+
+Successfully installed Babel-2.19.0 MarkupSafe-3.0.4 asttokens-3.0.2 cffi-2.1.1 click-8.5.1 cloudpickle-3.1.3 contourpy-1.4.0 cycler-0.12.1 et-xmlfile-2.0.0 executing-2.3.0 fonttools-4.69.0 formulaic-1.2.2 great-tables-1.2.0 importlib-metadata-10.2.0 importlib-resources-7.1.0 interface-meta-2.0.1 ipython-9.19.1 ipython-pygments-lexers-1.1.1 jedi-0.20.1 jinja2-3.1.6 joblib-1.6.0 kiltsreader-0.0.1 kiwisolver-1.5.1 lazy-importer-0.1.0 lxml-6.1.3 maketables-0.2.0 matplotlib-3.11.2 matplotlib-inline-0.2.2 mpmath-1.3.0 multimark-0.5.0 narwhals-2.29.0 nokap-0.2.0 numpy-2.5.5 openpyxl-3.1.5 packaging-26.4 pandas-3.1.1 parso-0.8.7 patsy-1.0.3 pexpect-4.9.0 pillow-13.0.0 polars-2.2.0 polars-runtime-32-2.2.0 prompt_toolkit-3.0.53 psutil-7.2.2 ptyprocess-0.7.0 pure-eval-0.2.4 pyarrow-26.0.1 pyblp-1.3.0 pycparser-3.12 pyfixest-0.70.0 pygments-2.21.0 pyhdfe-0.2.1 pyparsing-3.3.3 python-dateutil-4.0.0 python-docx-1.2.0 scikit_learn-1.9.1 scipy-1.18.1 seaborn-0.13.2 stack_data-0.6.3 statsmodels-0.15.0 sympy-1.14.0 tabulate-0.10.0 threadpoolctl-3.8.0 tqdm-4.70.1 traitlets-5.16.1 typing-extensions-4.16.0 tzdata-2026.6 wcwidth-0.9.5 websockets-17.4 within-py-0.4.0 wrapt-2.6.0.dev1 zipp-4.1.2
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /tmp/claude-0/jpe-work/checkout/venv/bin/python3 -m pip install --upgrade pip
+
+# end: 2026-11-25T16:38:34Z
+# exit: 0
+# seconds: 43.62
+# outcome: exit0

@@ -1,0 +1,132 @@
+# command: cd counterfactual_code && ../venv/bin/python 12_panel_regressions.py
+# cwd: .
+# start: 2026-11-25T16:38:43Z
+# timeout_s: 3600
+Loading NIAAA data...
+  NIAAA: 4284 obs, years 1983-2010
+Loading CPS demographics...
+  Demographics: 1428 state-year obs
+Running NIAAA panel regressions (Table A9)...
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:301: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_56'].
+            
+  m2 = pf.feols(f2, data=sub)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:307: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_56'].
+            
+  m3 = pf.feols(f3, data=sub3)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:315: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_54'].
+            
+  m4 = pf.feols(f4, data=sub4)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:324: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_42'].
+            
+  m5 = pf.feols(f5, data=sub5)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:301: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_56'].
+            
+  m2 = pf.feols(f2, data=sub)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:307: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_56'].
+            
+  m3 = pf.feols(f3, data=sub3)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:315: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_54'].
+            
+  m4 = pf.feols(f4, data=sub4)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:324: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_42'].
+            
+  m5 = pf.feols(f5, data=sub5)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:301: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_56'].
+            
+  m2 = pf.feols(f2, data=sub)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:307: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_56'].
+            
+  m3 = pf.feols(f3, data=sub3)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:315: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_54'].
+            
+  m4 = pf.feols(f4, data=sub4)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:324: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_42'].
+            
+  m5 = pf.feols(f5, data=sub5)
+Wrote /tmp/claude-0/jpe-work/checkout/counterfactual_code/../tables_and_figures/ph_panelreg.tex
+
+  Comparison to published ph_panelreg.tex:
+      Wine:  -0.0618(0.0160)   -0.0159(0.0177)   -0.0151(0.0177)   -0.0240(0.0155)   -0.0055(0.0354)
+      Beer:  -0.0156(0.0111)   -0.0186(0.0099)   -0.0177(0.0099)   -0.0152(0.0086)   -0.0206(0.0159)
+   Spirits:  -0.0155(0.0169)   -0.0646(0.0178)   -0.0639(0.0176)   -0.0571(0.0170)   -0.0809(0.0276)
+  TARGET:
+      Wine: -0.0545(0.0183) -0.0215(0.0192) -0.0197(0.0192) -0.0277(0.0182) -0.0036(0.0356)
+      Beer: -0.0155(0.0113) -0.0218(0.0097) -0.0207(0.0096) -0.0192(0.0086) -0.0297(0.0134)
+   Spirits: -0.0070(0.0175) -0.0731(0.0183) -0.0725(0.0181) -0.0665(0.0175) -0.0851(0.0279)
+
+Loading CBP data...
+  CBP: 1275 state-year obs
+Running CBP retail regressions (Table A10)...
+/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pandas/core/arraylike.py:438: RuntimeWarning: divide by zero encountered in log
+  result = getattr(ufunc, method)(*inputs, **kwargs)
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:423: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_56'].
+            
+  m3 = pf.feols(f3, data=sub, vcov="iid")
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:431: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_54'].
+            
+  m4 = pf.feols(f4, data=sub_ph, vcov="iid")
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:423: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_56'].
+            
+  m3 = pf.feols(f3, data=sub, vcov="iid")
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:431: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_54'].
+            
+  m4 = pf.feols(f4, data=sub_ph, vcov="iid")
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:423: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_56'].
+            
+  m3 = pf.feols(f3, data=sub, vcov="iid")
+/tmp/claude-0/jpe-work/checkout/counterfactual_code/12_panel_regressions.py:431: UserWarning: 
+            1 variables dropped due to multicollinearity.
+            The following variables are dropped: ['st_54'].
+            
+  m4 = pf.feols(f4, data=sub_ph, vcov="iid")
+Wrote /tmp/claude-0/jpe-work/checkout/counterfactual_code/../tables_and_figures/ph_retailreg.tex
+
+  Comparison to published panelretail inline table:
+  Share of 1-4 Employee Retailers:   0.0728(0.0432)    0.0339(0.0209)    0.0473(0.0263)    0.0429(0.0219)
+  Log(Alcohol Employment/Pop 14+):   0.4515(0.3364)   -1.7664(0.1983)   -0.4916(0.2391)   -0.4177(0.2232)
+  Log(Liquor Stores Per Capita):   0.3438(0.2040)   -1.3360(0.0863)   -0.6049(0.0901)   -0.5163(0.1004)
+  TARGET:
+  Share 1-4:  0.0728(0.0432)  0.0339(0.0209)  0.0477(0.0262)  0.0472(0.0227)
+  Log Emp:    0.452(0.336)    -1.762(0.198)   -0.497(0.239)   -0.422(0.223)
+  Log Est:    0.344(0.204)    -1.335(0.0866)  -0.608(0.0914)  -0.515(0.103)
+
+Done.
+
+# end: 2026-11-25T16:38:48Z
+# exit: 0
+# seconds: 4.94
+# outcome: exit0

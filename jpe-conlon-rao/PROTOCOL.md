@@ -39,3 +39,16 @@ committed ones (except Table 2 in step 2, as noted).
 - Figures 7 and 8: hashed, not compared.
 - A failed step is reported with its log, and the steps after it still run and are reported as they go.
 - The receipt does not say whether the paper is right. It says what the committed materials did on this machine.
+
+## Addendum, 2026-11-25 ~17:30 UTC, after run 1 and before run 2
+
+Run 1 stopped at the main estimation within seconds; what it showed is in [`run1/NOTE.md`](run1/NOTE.md). Run 2
+([`spec2.json`](spec2.json)) changes three things and nothing else, each logged as a deviation in its receipt:
+
+1. Install with `pip install --uploaded-prior-to 2026-03-20T00:00:00Z -r requirements.txt`, so versions are those current
+   at the package commit date. This is the least arbitrary choice for unpinned requirements.
+2. `mkdir -p checks` before the scripts run.
+3. The README's stage order (Stage 2 estimation first, then Stage 3 from 3.1), so every table reads this run's estimates.
+
+The comparison rule is unchanged. In addition, `estimation_outputs/*.parquet` and `results/*.parquet` are declared committed
+intermediates: an output whose step read one of them before this run regenerated it is not counted as reproduced.

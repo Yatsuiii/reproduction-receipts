@@ -1,0 +1,66 @@
+# command: cd estimation_code && ../venv/bin/python estimate_demand_MAIN.py ../estimation_outputs/slow_paper.pickle
+# cwd: .
+# start: 2026-11-25T16:38:48Z
+# timeout_s: 259200
+                 min    max  size
+category_cons                    
+Gin             9.30  24.33     6
+NA Whiskey      8.52  32.79    11
+Rum             9.43  21.79    12
+Tequila         8.83  23.44     5
+UK Whiskey     19.90  33.09     6
+Vodka           5.88  39.88    26
+Including second choice moments...
+Initializing the problem ...
+Absorbing demand-side fixed effects ...
+Detected collinearity issues with [tequila, prices] and at least one other column in X2. To disable collinearity checks, set options.collinear_atol = options.collinear_rtol = 0.
+Initialized the problem after 00:00:01.
+
+Dimensions:
+====================================================================
+ T     N     F     I     K1    K2    K3    D    MD    MS    ED    H 
+---  -----  ---  -----  ----  ----  ----  ---  ----  ----  ----  ---
+24   15285  15   12000   2     10    1     5    34    1     2     6 
+====================================================================
+
+Formulations:
+===============================================================================================================================================================================
+        Column Indices:                   0                    1                    2                    3                    4               5        6    7      8       9   
+-------------------------------  -------------------  -------------------  -------------------  -------------------  -------------------  ----------  ---  ---  -------  ------
+  X1: Linear Characteristics            trend               is_1750                                                                                                            
+ X2: Nonlinear Characteristics            1                 -prices              is_1750               vodka             na_whiskey       uk_whiskey  gin  rum  tequila  prices
+X3: Linear Cost Characteristics     marginal_cost                                                                                                                              
+        d: Demographics          demog_agent_dummy_0  demog_agent_dummy_1  demog_agent_dummy_2  demog_agent_dummy_3  demog_agent_dummy_4                                       
+===============================================================================================================================================================================
+Solving the problem ...
+Traceback (most recent call last):
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pyblp/micro.py", line 438, in __init__
+    part.dataset._validate(economy)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pyblp/micro.py", line 179, in _validate
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: In market '24', the products with eliminated product ID '999' span multiple nesting groups without covering all of them. With nesting, each group of eliminated products must be within a single nesting group or be a union of nesting groups.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/claude-0/jpe-work/checkout/estimation_code/estimate_demand_MAIN.py", line 110, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/claude-0/jpe-work/checkout/estimation_code/estimate_demand_MAIN.py", line 106, in main
+    estimate_rcnl(args.file, args.rho, args.categories, args.fast, args.rho_grid, args.starting)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work/checkout/estimation_code/estimate_demand_MAIN.py", line 61, in estimate_rcnl
+    rcnl_res = initial_problem.solve(**solve_options_init)
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pyblp/economies/problem.py", line 690, in solve
+    moments = Moments(micro_moments, self)
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pyblp/micro.py", line 441, in __init__
+    raise ValueError(message) from exception
+ValueError: The micro dataset 'second_choices: 186 Observations in Market '24'' is invalid because of the above exception.
+
+# end: 2026-11-25T16:38:52Z
+# exit: 1
+# seconds: 4.03
+# outcome: failed

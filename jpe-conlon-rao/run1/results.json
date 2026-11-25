@@ -1,0 +1,532 @@
+{
+ "format": "receiptgen-results/1",
+ "spec": {
+  "title": "Conlon and Rao, \"The Cost of Curbing Externalities with Market Power: Alcohol Regulations and Tax Alternatives\" (Journal of Political Economy, forthcoming)",
+  "paper": "Christopher T. Conlon and Nirupama S. Rao, The Cost of Curbing Externalities with Market Power: Alcohol Regulations and Tax Alternatives, Journal of Political Economy, forthcoming",
+  "package_label": "the authors' repository [chrisconlon/Liquor_Replication_JPE](https://github.com/chrisconlon/Liquor_Replication_JPE), README Entry Point 2 (no NielsenIQ access)",
+  "repo": "https://github.com/chrisconlon/Liquor_Replication_JPE",
+  "commit": "97567b1968f44980a47a7b72c1928a5e01255a67",
+  "protocol": "PROTOCOL.md",
+  "cost_per_hour_usd": 0.2,
+  "cost_basis": "typical on-demand price for a 4 vCPU, 16 GB cloud machine",
+  "compare": {
+   "rel_tol": 1e-12
+  },
+  "environment_commands": [
+   {
+    "id": "pip_freeze",
+    "cmd": "cd \"$(ls -d /tmp/claude-0/jpe-work/checkout 2>/dev/null || echo .)\" && venv/bin/pip freeze"
+   }
+  ],
+  "setup": [
+   {
+    "id": "install",
+    "cmd": "python3 -m venv venv && venv/bin/pip install -r requirements.txt",
+    "timeout_s": 3600
+   }
+  ],
+  "commands": [
+   {
+    "id": "1_descriptive_tables",
+    "cmd": "cd counterfactual_code && ../venv/bin/python 1_descriptive_tables.py",
+    "timeout_s": 3600,
+    "outputs": [
+     "tables_and_figures/table1_summary_tab_cat.tex",
+     "tables_and_figures/table2_summary_tab_manuf.tex",
+     "app_figures/summary_tab_cat_all.tex",
+     "app_figures/summary_tab_manuf_all.tex",
+     "app_figures/size_cat_table.tex"
+    ]
+   },
+   {
+    "id": "12_panel_regressions",
+    "cmd": "cd counterfactual_code && ../venv/bin/python 12_panel_regressions.py",
+    "timeout_s": 3600,
+    "outputs": [
+     "tables_and_figures/ph_panelreg.tex",
+     "tables_and_figures/ph_retailreg.tex"
+    ]
+   },
+   {
+    "id": "estimate_demand_MAIN",
+    "cmd": "cd estimation_code && ../venv/bin/python estimate_demand_MAIN.py ../estimation_outputs/slow_paper.pickle",
+    "timeout_s": 259200,
+    "outputs": [
+     "estimation_outputs/slow_paper.pickle"
+    ]
+   },
+   {
+    "id": "post_estimation",
+    "cmd": "cd estimation_code && ../venv/bin/python post_estimation.py ../estimation_outputs/slow_paper.pickle",
+    "timeout_s": 14400,
+    "outputs": [
+     "estimation_outputs/slow_paper_mc.parquet"
+    ]
+   },
+   {
+    "id": "4_parameter_tables",
+    "cmd": "cd counterfactual_code && ../venv/bin/python 4_parameter_tables.py",
+    "timeout_s": 3600,
+    "outputs": [
+     "tables_and_figures/table3_parameter_results.tex",
+     "tables_and_figures/table4_diversion_results.tex"
+    ]
+   },
+   {
+    "id": "3a_compute_counterfactual",
+    "cmd": "cd counterfactual_code && ../venv/bin/python 3a_compute_counterfactual.py --all",
+    "timeout_s": 86400,
+    "outputs": []
+   },
+   {
+    "id": "3b_collate_cf",
+    "cmd": "cd counterfactual_code && ../venv/bin/python 3b_collate_cf.py",
+    "timeout_s": 3600,
+    "outputs": [
+     "results/all_both_taxes.parquet",
+     "results/all_endog.parquet",
+     "results/all_main.parquet",
+     "results/all_mc1.parquet"
+    ]
+   },
+   {
+    "id": "3c_compute_counterfactual_both_tax",
+    "cmd": "cd counterfactual_code && ../venv/bin/python 3c_compute_counterfactual_both_tax.py",
+    "timeout_s": 43200,
+    "outputs": []
+   },
+   {
+    "id": "6_counterfactual_plots",
+    "cmd": "cd counterfactual_code && ../venv/bin/python 6_counterfactual_plots.py",
+    "timeout_s": 3600,
+    "outputs": [
+     "tables_and_figures/table6_distributional_effects_main.tex",
+     "tables_and_figures/table7_welfare_volume_main.tex",
+     "tables_and_figures/table8_welfare_ethanol_main.tex",
+     "tables_and_figures/table8_welfare_ethanol_short.tex",
+     "tables_and_figures/alt_table6_distributional_effects_mc1_v2.tex",
+     "tables_and_figures/figure7_prices_triple.pdf",
+     "tables_and_figures/figure7a_prices_main.pdf",
+     "tables_and_figures/figure7b_prices_main.pdf",
+     "tables_and_figures/figure7c_prices_main.pdf",
+     "tables_and_figures/figure8_welfare_main.pdf"
+    ]
+   }
+  ],
+  "scope_notes": [
+   "Entry Point 2 of the README: demand estimation from the provided `estimation_data/`, then the counterfactuals and their tables. Stage 1 (cleaning from NielsenIQ) needs licensed data and is not run.",
+   "The README's Stage 3 asks for `slow_paper.pickle` from a Dataverse DOI marked TBD. That file is not in the repository, so here it is produced by the README's own Stage 2 command (`estimate_demand_MAIN.py`) and used by every later step.",
+   "Not run: the nested logit, demographics-only and fast RCNL specifications (they feed no main-text table compared here), the rho grid, and the five appendix notebooks. Figures 7 and 8 are hashed only. The paper's PDF was not compared."
+  ]
+ },
+ "started": "2026-11-25T16:37:42Z",
+ "status": "ran",
+ "flags": [
+  "OUTPUT_FROM_FAILED_COMMAND",
+  "UNDECLARED_TRACKED_CHANGE"
+ ],
+ "commands": [
+  {
+   "id": "install",
+   "cmd": "python3 -m venv venv && venv/bin/pip install -r requirements.txt",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T16:37:50Z",
+   "end": "2026-11-25T16:38:34Z",
+   "exit_code": 0,
+   "seconds": 43.62,
+   "outcome": "exit0",
+   "log": "evidence/logs/install.log",
+   "setup": true
+  },
+  {
+   "id": "1_descriptive_tables",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 1_descriptive_tables.py",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T16:38:34Z",
+   "end": "2026-11-25T16:38:43Z",
+   "exit_code": 1,
+   "seconds": 9.26,
+   "outcome": "failed",
+   "log": "evidence/logs/1_descriptive_tables.log",
+   "setup": false
+  },
+  {
+   "id": "12_panel_regressions",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 12_panel_regressions.py",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T16:38:43Z",
+   "end": "2026-11-25T16:38:48Z",
+   "exit_code": 0,
+   "seconds": 4.94,
+   "outcome": "exit0",
+   "log": "evidence/logs/12_panel_regressions.log",
+   "setup": false
+  },
+  {
+   "id": "estimate_demand_MAIN",
+   "cmd": "cd estimation_code && ../venv/bin/python estimate_demand_MAIN.py ../estimation_outputs/slow_paper.pickle",
+   "cwd": ".",
+   "timeout_s": 259200,
+   "start": "2026-11-25T16:38:48Z",
+   "end": "2026-11-25T16:38:52Z",
+   "exit_code": 1,
+   "seconds": 4.03,
+   "outcome": "failed",
+   "log": "evidence/logs/estimate_demand_MAIN.log",
+   "setup": false
+  },
+  {
+   "id": "post_estimation",
+   "cmd": "cd estimation_code && ../venv/bin/python post_estimation.py ../estimation_outputs/slow_paper.pickle",
+   "cwd": ".",
+   "timeout_s": 14400,
+   "start": "2026-11-25T16:38:52Z",
+   "end": "2026-11-25T16:38:53Z",
+   "exit_code": 1,
+   "seconds": 1.43,
+   "outcome": "failed",
+   "log": "evidence/logs/post_estimation.log",
+   "setup": false
+  },
+  {
+   "id": "4_parameter_tables",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 4_parameter_tables.py",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T16:38:53Z",
+   "end": "2026-11-25T16:38:55Z",
+   "exit_code": 1,
+   "seconds": 1.52,
+   "outcome": "failed",
+   "log": "evidence/logs/4_parameter_tables.log",
+   "setup": false
+  },
+  {
+   "id": "3a_compute_counterfactual",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 3a_compute_counterfactual.py --all",
+   "cwd": ".",
+   "timeout_s": 86400,
+   "start": "2026-11-25T16:38:55Z",
+   "end": "2026-11-25T16:38:57Z",
+   "exit_code": 1,
+   "seconds": 1.57,
+   "outcome": "failed",
+   "log": "evidence/logs/3a_compute_counterfactual.log",
+   "setup": false
+  },
+  {
+   "id": "3b_collate_cf",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 3b_collate_cf.py",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T16:38:57Z",
+   "end": "2026-11-25T16:38:57Z",
+   "exit_code": 1,
+   "seconds": 0.42,
+   "outcome": "failed",
+   "log": "evidence/logs/3b_collate_cf.log",
+   "setup": false
+  },
+  {
+   "id": "3c_compute_counterfactual_both_tax",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 3c_compute_counterfactual_both_tax.py",
+   "cwd": ".",
+   "timeout_s": 43200,
+   "start": "2026-11-25T16:38:58Z",
+   "end": "2026-11-25T16:38:59Z",
+   "exit_code": 1,
+   "seconds": 1.42,
+   "outcome": "failed",
+   "log": "evidence/logs/3c_compute_counterfactual_both_tax.log",
+   "setup": false
+  },
+  {
+   "id": "6_counterfactual_plots",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 6_counterfactual_plots.py",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T16:38:59Z",
+   "end": "2026-11-25T16:39:21Z",
+   "exit_code": 0,
+   "seconds": 21.77,
+   "outcome": "exit0",
+   "log": "evidence/logs/6_counterfactual_plots.log",
+   "setup": false,
+   "undeclared_tracked_changes": [
+    "tables_and_figures/alt_figure7_prices_mc1_v2.pdf",
+    "tables_and_figures/alt_figure7_prices_period_1.pdf",
+    "tables_and_figures/alt_figure8_welfare_mc1_v2.pdf",
+    "tables_and_figures/alt_figure8_welfare_period_1.pdf"
+   ]
+  }
+ ],
+ "outputs": {
+  "tables_and_figures/table1_summary_tab_cat.tex": {
+   "command": "1_descriptive_tables",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "eae265715674b7c03ca410708a1ef307bbbaa3277f55644f08f76fc2851d2860",
+   "committed_sha256": "eae265715674b7c03ca410708a1ef307bbbaa3277f55644f08f76fc2851d2860",
+   "class": "identical",
+   "reproduced": false
+  },
+  "tables_and_figures/table2_summary_tab_manuf.tex": {
+   "command": "1_descriptive_tables",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "7cb4ee395e71aae1d9064de980ec7c5d65a6a2a78b956c2b1f2e6388fb6cbff5",
+   "committed_sha256": "7e25ee1d59fc2584410f9c14214cd3dfd11007de6c29c2eb53b69d406290599e",
+   "class": "text-differs",
+   "numbers_committed": 303,
+   "numbers_regenerated": 303,
+   "reproduced": false
+  },
+  "app_figures/summary_tab_cat_all.tex": {
+   "command": "1_descriptive_tables",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "42b322718e22159588437c7ca215f4f497bdf8dbb24fcac64563826e509315fe",
+   "committed_sha256": "42b322718e22159588437c7ca215f4f497bdf8dbb24fcac64563826e509315fe",
+   "class": "identical",
+   "reproduced": false
+  },
+  "app_figures/summary_tab_manuf_all.tex": {
+   "command": "1_descriptive_tables",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "140f5165e479de6c59a080112b57be71771e61145a7cbe334a31c91e27333a62",
+   "committed_sha256": "9b4d0acd06b63060b01247db4268f430e8351f6a27272c3ee656103844d8ceda",
+   "class": "text-differs",
+   "numbers_committed": 303,
+   "numbers_regenerated": 303,
+   "reproduced": false
+  },
+  "app_figures/size_cat_table.tex": {
+   "command": "1_descriptive_tables",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "tables_and_figures/ph_panelreg.tex": {
+   "command": "12_panel_regressions",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "334bc3988d1b986a9020d1c7b4de6d397278bc817b2941909b348d273b900060",
+   "committed_sha256": "334bc3988d1b986a9020d1c7b4de6d397278bc817b2941909b348d273b900060",
+   "class": "identical",
+   "reproduced": true
+  },
+  "tables_and_figures/ph_retailreg.tex": {
+   "command": "12_panel_regressions",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "4fef3094b96dba4916474595e3e015378d5e5d8bd150c93fc251216e711fcc12",
+   "committed_sha256": "4fef3094b96dba4916474595e3e015378d5e5d8bd150c93fc251216e711fcc12",
+   "class": "identical",
+   "reproduced": true
+  },
+  "estimation_outputs/slow_paper.pickle": {
+   "command": "estimate_demand_MAIN",
+   "committed": false,
+   "rewritten": false,
+   "class": "missing",
+   "reproduced": false
+  },
+  "estimation_outputs/slow_paper_mc.parquet": {
+   "command": "post_estimation",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "tables_and_figures/table3_parameter_results.tex": {
+   "command": "4_parameter_tables",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "tables_and_figures/table4_diversion_results.tex": {
+   "command": "4_parameter_tables",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/all_both_taxes.parquet": {
+   "command": "3b_collate_cf",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/all_endog.parquet": {
+   "command": "3b_collate_cf",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/all_main.parquet": {
+   "command": "3b_collate_cf",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/all_mc1.parquet": {
+   "command": "3b_collate_cf",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "tables_and_figures/table6_distributional_effects_main.tex": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "1b137fac3a8970135e564d0b4dbd2f8b87f5a7e006a7bbcd46f46186882c8a20",
+   "committed_sha256": "1b137fac3a8970135e564d0b4dbd2f8b87f5a7e006a7bbcd46f46186882c8a20",
+   "class": "identical",
+   "reproduced": true
+  },
+  "tables_and_figures/table7_welfare_volume_main.tex": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "077e84d149daa3cdbaf4b5eff06ba949edd6f50ded3e5ec9afb63a56d336444b",
+   "committed_sha256": "077e84d149daa3cdbaf4b5eff06ba949edd6f50ded3e5ec9afb63a56d336444b",
+   "class": "identical",
+   "reproduced": true
+  },
+  "tables_and_figures/table8_welfare_ethanol_main.tex": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "7b84291d1703de64b9fb144c742abdb981f6cb64b0ec3c68bd8a78d12f8a8d86",
+   "committed_sha256": "7b84291d1703de64b9fb144c742abdb981f6cb64b0ec3c68bd8a78d12f8a8d86",
+   "class": "identical",
+   "reproduced": true
+  },
+  "tables_and_figures/table8_welfare_ethanol_short.tex": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "7b84291d1703de64b9fb144c742abdb981f6cb64b0ec3c68bd8a78d12f8a8d86",
+   "committed_sha256": "7b84291d1703de64b9fb144c742abdb981f6cb64b0ec3c68bd8a78d12f8a8d86",
+   "class": "identical",
+   "reproduced": true
+  },
+  "tables_and_figures/alt_table6_distributional_effects_mc1_v2.tex": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "2c4a0920d98c999bf2d6ab5e767ebf8f686f2a3e401e307531583b1cdd04476b",
+   "committed_sha256": "2c4a0920d98c999bf2d6ab5e767ebf8f686f2a3e401e307531583b1cdd04476b",
+   "class": "identical",
+   "reproduced": true
+  },
+  "tables_and_figures/figure7_prices_triple.pdf": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "tables_and_figures/figure7a_prices_main.pdf": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "8d1ee92683e1bcdb50024f94b195c64a583efdaaac612ec98884a5b00c0fd8f4",
+   "class": "rewritten-not-compared",
+   "reproduced": false
+  },
+  "tables_and_figures/figure7b_prices_main.pdf": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "c2bf671c62ca78624c09b4176144138998b565cb19b94e4e582fe9a87aa70516",
+   "class": "rewritten-not-compared",
+   "reproduced": false
+  },
+  "tables_and_figures/figure7c_prices_main.pdf": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "c950b0028557d3ecdabc3effb1490b7d99019f5aae6c51bfff2115e1a8b8ad13",
+   "class": "rewritten-not-compared",
+   "reproduced": false
+  },
+  "tables_and_figures/figure8_welfare_main.pdf": {
+   "command": "6_counterfactual_plots",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "80cdab948fcc055950c83df3005b380be5486b520281faa4f7fca8f7e1a40344",
+   "class": "rewritten-not-compared",
+   "reproduced": false
+  }
+ },
+ "reproduced": [
+  "tables_and_figures/ph_panelreg.tex",
+  "tables_and_figures/ph_retailreg.tex",
+  "tables_and_figures/table6_distributional_effects_main.tex",
+  "tables_and_figures/table7_welfare_volume_main.tex",
+  "tables_and_figures/table8_welfare_ethanol_main.tex",
+  "tables_and_figures/table8_welfare_ethanol_short.tex",
+  "tables_and_figures/alt_table6_distributional_effects_mc1_v2.tex"
+ ],
+ "commit": "97567b1968f44980a47a7b72c1928a5e01255a67",
+ "package_files": 257,
+ "package_files_sha256": "0e2eed899de23b9bb47d43832add57a97956fa8a6ac89cba34689bb3f706af43",
+ "environment": {
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cores": 4,
+  "os": "Ubuntu 24.04.5 LTS",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "ram_gb": 15.7,
+  "gpu": "none",
+  "tools": {
+   "git": "git version 2.43.0",
+   "python3": "Python 3.13.18",
+   "R": "R version 4.3.3 (2024-02-29) -- \"Angel Food Cake\""
+  },
+  "extra": {
+   "pip_freeze": "asttokens==3.0.2\nbabel==2.19.0\ncffi==2.1.1\nclick==8.5.1\ncloudpickle==3.1.3\ncontourpy==1.4.0\ncycler==0.12.1\net_xmlfile==2.0.0\nexecuting==2.3.0\nfonttools==4.69.0\nformulaic==1.2.2\ngreat-tables==1.2.0\nimportlib_metadata==10.2.0\nimportlib_resources==7.1.0\ninterface_meta==2.0.1\nipython==9.19.1\nipython_pygments_lexers==1.1.1\njedi==0.20.1\nJinja2==3.1.6\njoblib==1.6.0\nkiltsreader @ git+https://github.com/chrisconlon/kiltsnielsen.git@6d56c251d6815c343685a78ef6a911174a88119c\nkiwisolver==1.5.1\nlazy-importer==0.1.0\nlxml==6.1.3\nmaketables==0.2.0\nMarkupSafe==3.0.4\nmatplotlib==3.11.2\nmatplotlib-inline==0.2.2\nmpmath==1.3.0\nmultimark==0.5.0\nnarwhals==2.29.0\nnokap==0.2.0\nnumpy==2.5.5\nopenpyxl==3.1.5\npackaging==26.4\npandas==3.1.1\nparso==0.8.7\npatsy==1.0.3\npexpect==4.9.0\npillow==13.0.0\npolars==2.2.0\npolars-runtime-32==2.2.0\nprompt_toolkit==3.0.53\npsutil==7.2.2\nptyprocess==0.7.0\npure_eval==0.2.4\npyarrow==26.0.1\npyblp==1.3.0\npycparser==3.12\npyfixest==0.70.0\nPygments==2.21.0\npyhdfe==0.2.1\npyparsing==3.3.3\npython-dateutil==4.0.0\npython-docx==1.2.0\nscikit-learn==1.9.1\nscipy==1.18.1\nseaborn==0.13.2\nstack-data==0.6.3\nstatsmodels==0.15.0\nsympy==1.14.0\ntabulate==0.10.0\nthreadpoolctl==3.8.0\ntqdm==4.70.1\ntraitlets==5.16.1\ntyping_extensions==4.16.0\ntzdata==2026.6\nwcwidth==0.9.5\nwebsockets==17.4\nwithin-py==0.4.0\nwrapt==2.6.0.dev1\nzipp==4.1.2\n"
+  }
+ },
+ "untracked_after": 2,
+ "tracked_not_declared_ok": [
+  "app_figures/size_cat_table.tex",
+  "app_figures/summary_tab_cat_all.tex",
+  "app_figures/summary_tab_manuf_all.tex",
+  "estimation_outputs/slow_paper_mc.parquet",
+  "results/all_both_taxes.parquet",
+  "results/all_endog.parquet",
+  "results/all_main.parquet",
+  "results/all_mc1.parquet",
+  "tables_and_figures/alt_table6_distributional_effects_mc1_v2.tex",
+  "tables_and_figures/figure7_prices_triple.pdf",
+  "tables_and_figures/figure7a_prices_main.pdf",
+  "tables_and_figures/figure7b_prices_main.pdf",
+  "tables_and_figures/figure7c_prices_main.pdf",
+  "tables_and_figures/figure8_welfare_main.pdf",
+  "tables_and_figures/ph_panelreg.tex",
+  "tables_and_figures/ph_retailreg.tex",
+  "tables_and_figures/table1_summary_tab_cat.tex",
+  "tables_and_figures/table2_summary_tab_manuf.tex",
+  "tables_and_figures/table3_parameter_results.tex",
+  "tables_and_figures/table4_diversion_results.tex",
+  "tables_and_figures/table6_distributional_effects_main.tex",
+  "tables_and_figures/table7_welfare_volume_main.tex",
+  "tables_and_figures/table8_welfare_ethanol_main.tex",
+  "tables_and_figures/table8_welfare_ethanol_short.tex"
+ ],
+ "finished": "2026-11-25T16:39:21Z",
+ "wall_clock_seconds": 89.98,
+ "cost_usd": 0.005
+}
