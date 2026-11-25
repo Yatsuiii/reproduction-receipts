@@ -1,0 +1,18 @@
+{
+ "platform": "Windows-2025Server-10.0.26100-SP0",
+ "machine": "AMD64",
+ "cores": 4,
+ "os": "Windows",
+ "cpu": "AMD64 Family 26 Model 2 Stepping 1, AuthenticAMD",
+ "ram_gb": null,
+ "gpu": "none",
+ "tools": {
+  "git": "git version 2.56.1.windows.1",
+  "python3": "Python 3.12.10",
+  "R": "R version 4.6.2 (2026-10-29 ucrt) -- \"Diversified Portfolio\"",
+  "julia": "julia version 1.12.0"
+ },
+ "extra": {
+  "R_sessionInfo": ""
+ }
+}
