@@ -97,5 +97,6 @@
  "tracked_not_declared_ok": [],
  "finished": "2026-11-25T18:06:15Z",
  "wall_clock_seconds": 19.43,
- "cost_usd": 0.0
+ "cost_usd": 0.0,
+ "post_run_notes": "This run did not test the intended version, because of a mistake in the spec, not in the package. The setup step picked `ramchoice` 1.1:\nthe newest file in the CRAN archive dated on or before 2021-10-20. The dates in that archive index are the dates a file was\narchived, which is when the next release replaced it, not when it was published. So 1.1 had already been replaced before\nthe script was written. It has no `logitSimu`, and the script stops on its first call. Nothing here speaks to the\npackage. Run 3 corrects the rule (see the protocol).\n"
 }
