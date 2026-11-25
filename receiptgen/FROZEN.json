@@ -61,7 +61,7 @@
   "fixtures/writes_then_fails/pkg/make.py": "10e9dc0a844c539e3832d7ebadac8dcad45dad1b92138910ea19643cb70fc4e6",
   "fixtures/writes_then_fails/pkg/out/t.csv": "daff832f802000e645771a60983c76c963f6ee602a6230e45237bd360e91cc1a",
   "fixtures/writes_then_fails/spec.json": "937c46e83bb2322aa3f17ee9284400f5c2dd49ff047045040bc57834c0721905",
-  "rerun.py": "7512d43ae66e5106c5484ecfca320c492f0caa1630f74ea147e7b68944a5f1bd",
+  "rerun.py": "8a6324ab15827515eaa73e7f4c40308a67b1f0892f9438be96ab620a42d5cfdb",
   "run_fixtures.py": "e82c335e42f9be095591172da0521ee03e409248d83ff3634999bec78be91657"
  }
 }

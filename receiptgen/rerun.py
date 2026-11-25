@@ -136,7 +136,7 @@ def environment(extra: list) -> dict:
 
 # ---------------------------------------------------------------- running
 
-def run_command(cmd: dict, clone: Path, logdir: Path) -> dict:
+def run_command(cmd: dict, clone: Path, logdir: Path, trace: bool = False) -> dict:
     cwd = clone / cmd.get("cwd", ".")
     timeout = cmd.get("timeout_s", 3600)
     log = logdir / f"{cmd['id']}.log"
@@ -144,7 +144,10 @@ def run_command(cmd: dict, clone: Path, logdir: Path) -> dict:
     with open(log, "w", encoding="utf-8") as fh:
         fh.write(f"# command: {cmd['cmd']}\n# cwd: {cmd.get('cwd', '.')}\n# start: {start}\n# timeout_s: {timeout}\n")
         fh.flush()
-        proc = subprocess.Popen(["bash", "-c", cmd["cmd"]], cwd=cwd, stdout=fh, stderr=subprocess.STDOUT,
+        argv = ["bash", "-c", cmd["cmd"]]
+        if trace:
+            argv = ["strace", "-f", "-qq", "-e", "trace=open,openat", "-o", str(logdir / f"{cmd['id']}.trace")] + argv
+        proc = subprocess.Popen(argv, cwd=cwd, stdout=fh, stderr=subprocess.STDOUT,
                                 start_new_session=True, env={**os.environ, **cmd.get("env", {})})
         try:
             code = proc.wait(timeout=timeout)
@@ -194,6 +197,39 @@ def expand_outputs(items: list, tracked: list, hash_only: set) -> list:
     return out
 
 
+OPEN_RE = re.compile(r'open(?:at)?\((?:[^,]*, )?"((?:[^"\\]|\\.)*)", ([A-Z_|]+)')
+
+
+def traced_reads(trace_file: Path, clone: Path, cwd: str, candidates: set) -> set:
+    """Tracked files from `candidates` that the traced command opened read-only."""
+    hits = set()
+    if not trace_file.exists():
+        return hits
+    for line in trace_file.read_text(errors="replace").splitlines():
+        m = OPEN_RE.search(line)
+        if not m or "O_WRONLY" in m.group(2) or "O_RDWR" in m.group(2) or line.rstrip().endswith("ENOENT (No such file or directory)"):
+            continue
+        raw = m.group(1)
+        if os.path.isabs(raw):
+            try:
+                rel = Path(os.path.normpath(raw)).relative_to(clone.resolve()).as_posix()
+            except ValueError:
+                try:
+                    rel = Path(os.path.normpath(raw)).relative_to(clone).as_posix()
+                except ValueError:
+                    continue
+            if rel in candidates:
+                hits.add(rel)
+            continue
+        joined = os.path.normpath(os.path.join(cwd, raw))
+        if joined in candidates:
+            hits.add(joined)
+            continue
+        stripped = re.sub(r"^(\.\./|\./)+", "", raw)
+        hits.update(c for c in candidates if c == stripped or c.endswith("/" + stripped))
+    return hits
+
+
 def snapshot(path: Path) -> tuple | None:
     if not path.is_file():
         return None
@@ -238,11 +274,27 @@ def rerun(spec: dict, out: Path, workdir: Path | None = None) -> dict:
             c["outputs"] = expand_outputs(c.get("outputs", []), tracked, hash_only)
         declared = {o for c in spec["commands"] for o in c["outputs"]}
         tracked_set = set(tracked)
+        inter_globs = spec.get("committed_intermediates", [])
+        intermediates = {t for t in tracked if any(fnmatch.fnmatch(t, g) for g in inter_globs)}
+        inter_at_checkout = {t: snapshot(clone / t) for t in intermediates}
+        can_trace = bool(intermediates) and shutil.which("strace") is not None
+        if intermediates and not can_trace:
+            res["flags"].append("INTERMEDIATE_READS_NOT_TRACED")
         for cmd in spec.get("setup", []) + spec["commands"]:
             outputs = cmd.get("outputs", [])
             before = {o: snapshot(clone / o) for o in outputs}
-            c = run_command(cmd, clone, ev / "logs")
+            fresh = {t for t in intermediates if snapshot(clone / t) != inter_at_checkout[t]}
+            c = run_command(cmd, clone, ev / "logs", trace=can_trace)
             c["setup"] = cmd in spec.get("setup", [])
+            stale = []
+            if can_trace:
+                tf = ev / "logs" / f"{cmd['id']}.trace"
+                stale = sorted(traced_reads(tf, clone, os.path.normpath(cmd.get("cwd", ".")), intermediates - fresh))
+                tf.unlink(missing_ok=True)
+                if stale and not c["setup"]:
+                    c["read_committed_intermediates"] = stale
+                    if "READ_COMMITTED_INTERMEDIATE" not in res["flags"]:
+                        res["flags"].append("READ_COMMITTED_INTERMEDIATE")
             res["commands"].append(c)
             changed = [l[3:] for l in sh(["git", "status", "--porcelain", "--untracked-files=no"], cwd=clone).stdout.splitlines()]
             undeclared = sorted(p for p in changed if p not in declared)
@@ -286,7 +338,10 @@ def rerun(spec: dict, out: Path, workdir: Path | None = None) -> dict:
                             entry.update(compare(blob, regenerated, rel_tol))
                     if c["outcome"] != "exit0" and "OUTPUT_FROM_FAILED_COMMAND" not in res["flags"]:
                         res["flags"].append("OUTPUT_FROM_FAILED_COMMAND")
-                entry["reproduced"] = c["outcome"] == "exit0" and rewritten and entry["class"] in REPRODUCED_CLASSES
+                entry["reproduced"] = (c["outcome"] == "exit0" and rewritten and entry["class"] in REPRODUCED_CLASSES
+                                       and not stale and not (intermediates and not can_trace))
+                if stale:
+                    entry["read_committed_intermediates"] = stale
                 res["outputs"][o] = entry
                 if entry["reproduced"]:
                     res["reproduced"].append(o)
@@ -360,6 +415,10 @@ def headline(res: dict) -> str:
         tail = f", {nvals} value{'s' if nvals != 1 else ''} in all" if nvals else ""
         parts.append(f"{len(differ)} did not regenerate the committed file{tail}; the committed materials did not reproduce "
                      f"those values here, reason unknown.")
+    stale_match = [o for o, e in outs.items() if e.get("read_committed_intermediates") and e["class"] in REPRODUCED_CLASSES]
+    if stale_match:
+        parts.append(f"{len(stale_match)} matched the committed file but were formatted from committed intermediate files "
+                     f"this run did not regenerate, so they are not counted.")
     if by["not-rewritten"]:
         parts.append(f"{len(by['not-rewritten'])} were not written by the run, so they are not counted.")
     if by["rewritten-not-compared"]:
@@ -413,6 +472,8 @@ def render(res: dict) -> str:
                         outcome += f": {e['numbers_differ']} of {e['numbers']} numbers"
                     elif e["class"] == "numbers-match" and "numbers" in e:
                         outcome += f" ({e['numbers_text_identical']} of {e['numbers']} numbers identical text)"
+                    if e.get("read_committed_intermediates"):
+                        outcome += "; its command read committed intermediate files this run did not regenerate"
                     if e.get("converter"):
                         outcome += f"; compared after `{e['converter']}`"
                     if e.get("rewritten") and c["outcome"] != "exit0":
@@ -431,6 +492,16 @@ def render(res: dict) -> str:
                     L.append(f"| `{o}` | {d['line']} | {d['committed']} | {d['regenerated']} |")
                 if len(e["differences"]) > 40:
                     L.append(f"| `{o}` | … | {len(e['differences']) - 40} more in `results.json` | |")
+            L.append("")
+        stale_cmds = [c for c in res["commands"] if c.get("read_committed_intermediates")]
+        if stale_cmds:
+            L += ["### Formatted from committed intermediate files", "",
+                  "These commands read intermediate results that the package can regenerate but that this run did not, so "
+                  "their outputs show that the committed intermediates produce the committed tables, not that the code "
+                  "produces the intermediates. None of their outputs is counted as reproduced.", ""]
+            for c in stale_cmds:
+                L.append(f"- `{c['cmd']}` read " + ", ".join(f"`{p}`" for p in c["read_committed_intermediates"][:12])
+                         + (f" and {len(c['read_committed_intermediates']) - 12} more" if len(c["read_committed_intermediates"]) > 12 else "") + ".")
             L.append("")
         replay = [o for o, e in res["outputs"].items() if e["class"] == "not-rewritten"]
         if replay:

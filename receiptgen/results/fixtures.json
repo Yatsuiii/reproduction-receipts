@@ -1,9 +1,9 @@
 {
- "rerun_py_sha256": "7512d43ae66e5106c5484ecfca320c492f0caa1630f74ea147e7b68944a5f1bd",
- "passed": 14,
- "text_rules_passed": 14,
- "naive_baseline_passed": 9,
- "cases": 14,
+ "rerun_py_sha256": "8a6324ab15827515eaa73e7f4c40308a67b1f0892f9438be96ab620a42d5cfdb",
+ "passed": 16,
+ "text_rules_passed": 16,
+ "naive_baseline_passed": 10,
+ "cases": 16,
  "rows": [
   {
    "fixture": "clean_identical",
@@ -422,6 +422,76 @@
     "flags": [],
     "reproduced": [
      "out/x.bin"
+    ]
+   }
+  },
+  {
+   "fixture": "replay_from_intermediate",
+   "pass": true,
+   "naive_baseline_pass": false,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "fmt": "exit0"
+    },
+    "outputs": {
+     "out/table.csv": "identical"
+    },
+    "flags": [
+     "READ_COMMITTED_INTERMEDIATE"
+    ],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "fmt": "exit0"
+    },
+    "outputs": {
+     "out/table.csv": "identical"
+    },
+    "flags": [
+     "READ_COMMITTED_INTERMEDIATE"
+    ],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "intermediate_regenerated",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "solve": "exit0",
+     "fmt": "exit0"
+    },
+    "outputs": {
+     "results/inter.csv": "identical",
+     "out/table.csv": "identical"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/table.csv",
+     "results/inter.csv"
+    ]
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "solve": "exit0",
+     "fmt": "exit0"
+    },
+    "outputs": {
+     "results/inter.csv": "identical",
+     "out/table.csv": "identical"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/table.csv",
+     "results/inter.csv"
     ]
    }
   }
