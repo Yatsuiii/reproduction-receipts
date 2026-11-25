@@ -1,0 +1,28 @@
+{
+ "title": "Barrette, Goulet Coulombe and Reinicke, \"Building Macroeconomically Relevant Climate Indices via the Assemblage VAR\" (Econometrics Journal, forthcoming)",
+ "paper": "Barrette, Goulet Coulombe and Reinicke, Building Macroeconomically Relevant Climate Indices via the Assemblage VAR, The Econometrics Journal, forthcoming (arXiv 2610.10043)",
+ "package_label": "the authors' repository [timmy-o-toole/Assemblage_VAR](https://github.com/timmy-o-toole/Assemblage_VAR), not the Zenodo deposit 10.5281/zenodo.23976450, which this machine cannot reach",
+ "repo": "https://github.com/timmy-o-toole/Assemblage_VAR",
+ "commit": "199c5f8c432c9571e601ce68ada49ab3d1819e55",
+ "protocol": "PROTOCOL.md",
+ "cost_per_hour_usd": 0.2,
+ "cost_basis": "typical on-demand price for a 4 vCPU, 16 GB cloud machine",
+ "compare": {"rel_tol": 1e-12},
+ "environment_commands": [
+  {"id": "R_sessionInfo", "cmd": "Rscript -e 'for (p in c(\"NlcOptim\",\"vars\",\"ggplot2\",\"ggthemes\",\"zoo\",\"scales\",\"ggh4x\",\"ragg\",\"systemfonts\")) cat(p, tryCatch(as.character(packageVersion(p)), error=function(e) \"not installed\"), \"\\n\"); print(sessionInfo())'"}
+ ],
+ "setup": [
+  {"id": "install", "cmd": "Rscript install_packages.R", "timeout_s": 3600}
+ ],
+ "commands": [
+  {"id": "run_all", "cmd": "Rscript run_all.R", "timeout_s": 7200,
+   "outputs": [
+    {"glob": "results/point_estimates/*.rds", "convert": "Rscript -e 'dput(readRDS(commandArgs(TRUE)[1]), control = c(\"keepNA\", \"keepInteger\", \"niceNames\", \"showAttributes\", \"digits17\"))' {in}"},
+    "results/summary_numbers.txt"
+   ]}
+ ],
+ "scope_notes": [
+  "Fast mode only, the README's default (`Rscript run_all.R`, about 10 minutes): it re-estimates the aggregation weights at the published penalties, recomputes the point impulse responses, redraws the figures and rewrites the numbers quoted in the paper. It reads the shipped bootstrap bands and appendix bootstrap results; those are not recomputed, so nothing here speaks to them.",
+  "Figures are git-ignored in this package, so there is nothing committed to compare them with. The paper's PDF was not compared."
+ ]
+}
