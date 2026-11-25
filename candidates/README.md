@@ -22,8 +22,8 @@ How it was made:
 
 | Points | Journal | Package | Tier to rerun | Status |
 |---|---|---|---|---|
-| 10 | Econometrics Journal | [timmy-o-toole/Assemblage_VAR](https://github.com/timmy-o-toole/Assemblage_VAR/tree/199c5f8c432c9571e601ce68ada49ab3d1819e55) | `Rscript run_all.R` fast mode | rerun started 25 Nov ([ectj-assemblage-var](../ectj-assemblage-var/)) |
-| 9 | JPE | [chrisconlon/Liquor_Replication_JPE](https://github.com/chrisconlon/Liquor_Replication_JPE/tree/97567b1968f44980a47a7b72c1928a5e01255a67) | Entry Point 2: RCNL estimation, post-estimation, Tables 3-4, counterfactuals, Tables 6-8 | rerun started 25 Nov ([jpe-conlon-rao](../jpe-conlon-rao/)) |
+| 10 | Econometrics Journal | [timmy-o-toole/Assemblage_VAR](https://github.com/timmy-o-toole/Assemblage_VAR/tree/199c5f8c432c9571e601ce68ada49ab3d1819e55) | `Rscript run_all.R` fast mode | rerun 25 Nov: exit 0, 89 of 1,267 quoted numbers differ on Linux, 43 on Windows ([receipt](../ectj-assemblage-var/RECEIPT.md)) |
+| 9 | JPE | [chrisconlon/Liquor_Replication_JPE](https://github.com/chrisconlon/Liquor_Replication_JPE/tree/97567b1968f44980a47a7b72c1928a5e01255a67) | Entry Point 2: RCNL estimation, post-estimation, Tables 3-4, counterfactuals, Tables 6-8 | rerun 25 Nov: main estimation fails with current and commit-date versions; run 3 (numpy below 2.4) estimating ([jpe-conlon-rao](../jpe-conlon-rao/)) |
 | 7 | Econometrics Journal | [InsIDE-Lab-DiECO/permanent-transitory-decomposition-replication](https://github.com/InsIDE-Lab-DiECO/permanent-transitory-decomposition-replication/tree/d46e6006dda79c13313daa02d405b76e53df0ae4) | empirical analysis (gretl) |  |
 | 7 | Econometrica | [mdcattaneo/replication-CJN_2020_ECMA](https://github.com/mdcattaneo/replication-CJN_2020_ECMA/tree/b03241c) | simulation tables (R with Rcpp) |  |
 | 3 | JPE | [mdcattaneo/replication-CMMS_2020_JPE](https://github.com/mdcattaneo/replication-CMMS_2020_JPE/tree/d307dcd) | one R script |  |

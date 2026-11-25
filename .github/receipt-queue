@@ -1,2 +1,1 @@
 # One spec per line. "#r" installs R on the runner first; "#windows" runs on a Windows runner.
-ectj-assemblage-var/spec.json #r #windows

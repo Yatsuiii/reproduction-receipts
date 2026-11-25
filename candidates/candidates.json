@@ -179,7 +179,7 @@
    "year": 2026,
    "main_estimates": 1,
    "source": "README.md Quick start ('~5-10 min'); results/summary_numbers.txt and results/point_estimates/*.rds tracked; requirements.csv gives minimum versions",
-   "status": "rerun started 25 Nov ([ectj-assemblage-var](../ectj-assemblage-var/))"
+   "status": "rerun 25 Nov: exit 0, 89 of 1,267 quoted numbers differ on Linux, 43 on Windows ([receipt](../ectj-assemblage-var/RECEIPT.md))"
   },
   {
    "repo": "johanneswieland/MPC2001",
@@ -253,7 +253,7 @@
    "year": 2026,
    "main_estimates": 1,
    "source": "README.md Stage 2 table ('10+ hours'), run_estimation.sh ('~15 hours'), Stage 3.3 ('~4.5 hours'); tables_and_figures/*.tex tracked; requirements.txt uses >=",
-   "status": "rerun started 25 Nov ([jpe-conlon-rao](../jpe-conlon-rao/))"
+   "status": "rerun 25 Nov: main estimation fails with current and commit-date versions; run 3 (numpy below 2.4) estimating ([jpe-conlon-rao](../jpe-conlon-rao/))"
   },
   {
    "repo": "fediskhakov/EQB",
