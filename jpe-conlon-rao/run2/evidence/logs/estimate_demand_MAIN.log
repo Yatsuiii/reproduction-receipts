@@ -1,0 +1,43 @@
+# command: cd estimation_code && ../venv/bin/python estimate_demand_MAIN.py ../estimation_outputs/slow_paper.pickle
+# cwd: .
+# start: 2026-11-25T16:45:35Z
+# timeout_s: 259200
+                 min    max  size
+category_cons                    
+Gin             9.30  24.33     6
+NA Whiskey      8.52  32.79    11
+Rum             9.43  21.79    12
+Tequila         8.83  23.44     5
+UK Whiskey     19.90  33.09     6
+Vodka           5.88  39.88    26
+Traceback (most recent call last):
+  File "/tmp/claude-0/jpe-work2/checkout/estimation_code/estimate_demand_MAIN.py", line 110, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/claude-0/jpe-work2/checkout/estimation_code/estimate_demand_MAIN.py", line 106, in main
+    estimate_rcnl(args.file, args.rho, args.categories, args.fast, args.rho_grid, args.starting)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work2/checkout/estimation_code/estimate_demand_MAIN.py", line 45, in estimate_rcnl
+    (problem_options, solve_options) = get_rc_setup(
+                                       ~~~~~~~~~~~~^
+        prod_df, agent_df, fn_micro=fn_micro,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        same_category=categories, subset=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/tmp/claude-0/jpe-work2/checkout/estimation_code/estimate_helper.py", line 148, in get_rc_setup
+    mm.extend(make_micro_moments_demog(fn_micro, prod_df))
+              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work2/checkout/estimation_code/micro_moments.py", line 56, in make_micro_moments_demog
+    MicroMoment(f"Pr[inc_2 | purchase] for {y}", mom_const[y][2], [part_inc_inside_1, part_purchase], compute_ratio, compute_ratio_gradient),
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work2/checkout/venv/lib/python3.13/site-packages/pyblp/micro.py", line 356, in __init__
+    self.value = float(value)
+                 ~~~~~^^^^^^^
+TypeError: only 0-dimensional arrays can be converted to Python scalars
+
+# end: 2026-11-25T16:45:43Z
+# exit: 1
+# seconds: 7.9
+# outcome: failed

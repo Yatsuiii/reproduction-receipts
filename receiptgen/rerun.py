@@ -87,7 +87,14 @@ def compare(committed: bytes, regenerated: bytes, rel_tol: float) -> dict:
     c_skel, c_nums = split_numbers(c_text.replace("\r\n", "\n"))
     r_skel, r_nums = split_numbers(r_text.replace("\r\n", "\n"))
     if c_skel != r_skel or len(c_nums) != len(r_nums):
-        return {"class": "text-differs", "numbers_committed": len(c_nums), "numbers_regenerated": len(r_nums)}
+        out = {"class": "text-differs", "numbers_committed": len(c_nums), "numbers_regenerated": len(r_nums)}
+        first = next(i for i, (a, b) in enumerate(zip(c_skel + [None], r_skel + [None])) if a != b)
+        out["first_text_difference"] = {"committed": (c_skel[first] or "")[:120], "regenerated": (r_skel[first] or "")[:120]}
+        if len(c_nums) == len(r_nums):
+            diffs = [{"line": cl, "committed": cv, "regenerated": rv}
+                     for (cl, cv), (_, rv) in zip(c_nums, r_nums) if not numbers_equal(cv, rv, rel_tol)]
+            out.update(numbers=len(c_nums), numbers_differ=len(diffs), differences=diffs)
+        return out
     diffs = [{"line": cl, "committed": cv, "regenerated": rv}
              for (cl, cv), (_, rv) in zip(c_nums, r_nums) if not numbers_equal(cv, rv, rel_tol)]
     exact = sum(1 for (_, cv), (_, rv) in zip(c_nums, r_nums) if cv == rv)
@@ -148,12 +155,12 @@ def run_command(cmd: dict, clone: Path, logdir: Path, trace: bool = False) -> di
         if trace:
             argv = ["strace", "-f", "-qq", "-e", "trace=open,openat", "-o", str(logdir / f"{cmd['id']}.trace")] + argv
         proc = subprocess.Popen(argv, cwd=cwd, stdout=fh, stderr=subprocess.STDOUT,
-                                start_new_session=True, env={**os.environ, **cmd.get("env", {})})
+                                start_new_session=os.name != "nt", env={**os.environ, **cmd.get("env", {})})
         try:
             code = proc.wait(timeout=timeout)
             outcome = "exit0" if code == 0 else "failed"
         except subprocess.TimeoutExpired:
-            os.killpg(proc.pid, signal.SIGKILL)
+            os.killpg(proc.pid, signal.SIGKILL) if os.name != "nt" else proc.kill()
             code = proc.wait()
             outcome = "timeout"
         seconds = round(time.monotonic() - t0, 2)
@@ -472,6 +479,8 @@ def render(res: dict) -> str:
                     outcome = CLASS_WORDS[e["class"]]
                     if e["class"] == "numbers-differ":
                         outcome += f": {e['numbers_differ']} of {e['numbers']} numbers"
+                    elif e["class"] == "text-differs" and "numbers_differ" in e:
+                        outcome += f"; same count of numbers, {e['numbers_differ']} of {e['numbers']} differ"
                     elif e["class"] == "numbers-match" and "numbers" in e:
                         outcome += f" ({e['numbers_text_identical']} of {e['numbers']} numbers identical text)"
                     if e.get("read_committed_intermediates"):
@@ -509,6 +518,8 @@ def render(res: dict) -> str:
         if replay:
             L += [f"Not written by this run: {', '.join('`' + o + '`' for o in replay)}. A committed file that the run leaves "
                   "untouched may be read back rather than recomputed, so it counts for nothing here.", ""]
+    if res.get("post_run_notes"):
+        L += ["## Reading the differences (written after the run)", "", res["post_run_notes"].rstrip(), ""]
     for section in spec.get("extra_sections", []):
         L += [f"## {section['heading']}", "", section["body"].rstrip(), ""]
     if res["status"] == "ran":
@@ -559,11 +570,24 @@ def render(res: dict) -> str:
 
 def main(argv: list) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("spec")
+    ap.add_argument("spec", help="spec.json, or with --render an existing results.json")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--render", action="store_true", help="re-render RECEIPT.md from results.json without running anything")
+    ap.add_argument("--notes", help="with --render: a Markdown file of notes written after the run, shown under its own heading")
     ap.add_argument("--workdir")
     ap.add_argument("--set", action="append", default=[], help="KEY=VALUE substituted for {{KEY}} in the spec text")
     a = ap.parse_args(argv)
+    if a.render:
+        res = json.loads(Path(a.spec).read_text(encoding="utf-8"))
+        if a.notes:
+            res["post_run_notes"] = Path(a.notes).read_text(encoding="utf-8")
+        text = render(res)
+        if BANNED.findall(text):
+            raise SystemExit(f"receipt text uses banned wording {BANNED.findall(text)}")
+        (Path(a.out) / "RECEIPT.md").write_text(text, encoding="utf-8")
+        (Path(a.out) / "results.json").write_text(json.dumps(res, indent=1) + "\n", encoding="utf-8")
+        print(headline(res))
+        return 0
     text = Path(a.spec).read_text(encoding="utf-8")
     for kv in a.set:
         k, v = kv.split("=", 1)

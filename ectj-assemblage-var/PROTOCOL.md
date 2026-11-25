@@ -40,3 +40,12 @@ package result was produced. The run is kept as found in [`run1/`](run1/).
 Change: the same spec now runs on a GitHub-hosted `ubuntu-24.04` runner, which can reach CRAN, through
 [`.github/workflows/receipt-run.yml`](../.github/workflows/receipt-run.yml). R there is the current release installed by
 `r-lib/actions/setup-r`, not 4.3.3. Commands, outputs and the comparison rule are unchanged.
+
+## Addendum, 2026-11-25 ~17:50 UTC, after the first GitHub run
+
+The first GitHub run (`runs/github-45655687005`) finished: `run_all.R` exited 0 and its own validation passed, but 89 of
+1,267 numbers in `summary_numbers.txt` differ from the committed file, and the six `.rds` files differ. The `.rds` files
+store the R session they were written in; the committed ones name a Windows (UCRT) build of R. To separate platform from
+package, the same spec now runs again on a Linux runner and on a Windows runner (`windows-2025`), with the generator
+change logged in `receiptgen/FROZEN_CHANGES.md` (number-level detail for files whose text also differs). Commands and the
+comparison rule are unchanged.

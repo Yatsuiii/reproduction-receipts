@@ -1,0 +1,9 @@
+# command: cd counterfactual_code && ../venv/bin/python 1_descriptive_tables.py
+# cwd: .
+# start: 2026-11-25T16:45:46Z
+# timeout_s: 3600
+
+# end: 2026-11-25T16:45:55Z
+# exit: 0
+# seconds: 8.96
+# outcome: exit0

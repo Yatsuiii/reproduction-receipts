@@ -1,0 +1,26 @@
+# command: cd counterfactual_code && ../venv/bin/python 3a_compute_counterfactual.py --all
+# cwd: .
+# start: 2026-11-25T16:46:20Z
+# timeout_s: 86400
+Pickle:  /tmp/claude-0/jpe-work2/checkout/estimation_outputs/slow_paper.pickle
+Ramsey skip:  None
+All markets:  True
+calculating for market_id == 1
+Traceback (most recent call last):
+  File "/tmp/claude-0/jpe-work2/checkout/counterfactual_code/3a_compute_counterfactual.py", line 98, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/claude-0/jpe-work2/checkout/counterfactual_code/3a_compute_counterfactual.py", line 91, in main
+    compute_cf(args.file, skip, i)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work2/checkout/counterfactual_code/3a_compute_counterfactual.py", line 35, in compute_cf
+    res = pyblp.read_pickle(fn_results)
+  File "/tmp/claude-0/jpe-work2/checkout/venv/lib/python3.13/site-packages/pyblp/construction.py", line 639, in read_pickle
+    with open(path, 'rb') as handle:
+         ~~~~^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/claude-0/jpe-work2/checkout/estimation_outputs/slow_paper.pickle'
+
+# end: 2026-11-25T16:46:23Z
+# exit: 1
+# seconds: 2.62
+# outcome: failed
