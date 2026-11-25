@@ -8,7 +8,7 @@
   "run_fixtures.py"
  ],
  "files": {
-  "fixtures/EXPECTED.json": "384f17316ae03def7a82063ddbdc99f4f4bbaf3957bcc2b6721d94fe0d973feb",
+  "fixtures/EXPECTED.json": "2d5cd0b23251031285e9187278798a0e98a5c81ba3aef46e1cc1b3a5fb6a9c7d",
   "fixtures/bad_commit/pkg/make.py": "8aa66d85f6dee2f9d985fbcbe10425068157c5d33db3a49f8220ccc26dfe5606",
   "fixtures/bad_commit/pkg/out/t.csv": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
   "fixtures/bad_commit/spec.json": "19efd8ad51b782e49c15cc30ed8aa4c40da7f6b9a87fba0e6748aea6325df641",
@@ -21,6 +21,9 @@
   "fixtures/command_fails/pkg/make.py": "10b767937ee9674ad65ab1451b82f60ef55fb154663427e1b5066a926e6fbcc8",
   "fixtures/command_fails/pkg/out/table.csv": "daff832f802000e645771a60983c76c963f6ee602a6230e45237bd360e91cc1a",
   "fixtures/command_fails/spec.json": "47168d4fed02f2bc7d89c1b5a641bde787ec794e2c92bfec10ed5199222349a6",
+  "fixtures/converted_binary/pkg/make.py": "9c47b52ea0b740ed3d018630d9a57b7b98faa12f14086dd178207ffcf0fe9230",
+  "fixtures/converted_binary/pkg/out/x.bin": "7792988d73bfe9a3b9775cdcde3678c9d7a83ccc27b1511d88d4e6d862a425cd",
+  "fixtures/converted_binary/spec.json": "c5100a42183a5c708e04d96ae571f9eaef706555b5ba4015e6eb70eaff87af3b",
   "fixtures/float_last_digit/pkg/make.py": "9b41d6120d122f68e63f9f368b6301e6644e48418d2c26e3154e96210e49dcd1",
   "fixtures/float_last_digit/pkg/out/table.csv": "dff1d5d239457195801b1cb7c1565fbe2a4d8ac49c03f19aee38c5cc7d35c046",
   "fixtures/float_last_digit/spec.json": "1e9952d486b921dca82ce0d21df0ea3f2cf200c1035c43a6e5c0a8629d0b5a0a",

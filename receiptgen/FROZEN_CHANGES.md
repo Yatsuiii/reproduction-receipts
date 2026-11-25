@@ -7,3 +7,4 @@ Every change to a file pinned in `FROZEN.json` is logged here, with the reason, 
   package ran: `rerun.py` gained outputs given as `{"glob": ..., "compare": "hash-only"}`, for figures whose bytes carry
   metadata (class `rewritten-not-compared`, never counted as reproduced). No fixture or expected outcome changed; the
   fixtures were re-run after the change, 13/13.
+- 2026-11-25: added fixture `converted_binary` and its expected outcome, before `rerun.py` supported converters. Needed for R `.rds` outputs, whose header records the R version that wrote them.

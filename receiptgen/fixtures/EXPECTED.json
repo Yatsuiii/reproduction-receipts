@@ -12,19 +12,190 @@
   "no-reference": "produced, but nothing committed to compare with"
  },
  "cases": [
-  {"fixture": "clean_identical", "status": "ran", "commands": {"make": "exit0"}, "outputs": {"out/table.csv": "identical"}, "flags": [], "reproduced": ["out/table.csv"]},
-  {"fixture": "float_last_digit", "status": "ran", "commands": {"make": "exit0"}, "outputs": {"out/table.csv": "numbers-match"}, "flags": [], "reproduced": ["out/table.csv"]},
-  {"fixture": "values_differ", "status": "ran", "commands": {"make": "exit0"}, "outputs": {"out/table.tex": "numbers-differ"}, "flags": [], "reproduced": [], "differing_numbers": 1},
-  {"fixture": "cache_replay", "status": "ran", "commands": {"make": "exit0"}, "outputs": {"out/scores.csv": "not-rewritten"}, "flags": [], "reproduced": []},
-  {"fixture": "command_fails", "status": "ran", "commands": {"make": "failed"}, "outputs": {"out/table.csv": "not-rewritten"}, "flags": [], "reproduced": []},
-  {"fixture": "timeout", "status": "ran", "commands": {"make": "timeout"}, "outputs": {"out/table.csv": "not-rewritten"}, "flags": [], "reproduced": []},
-  {"fixture": "bad_commit", "status": "aborted", "commands": {}, "outputs": {}, "flags": ["COMMIT_NOT_FOUND"], "reproduced": []},
-  {"fixture": "undeclared_edit", "status": "ran", "commands": {"make": "exit0"}, "outputs": {"out/t.csv": "identical"}, "flags": ["UNDECLARED_TRACKED_CHANGE"], "reproduced": ["out/t.csv"]},
-  {"fixture": "missing_output", "status": "ran", "commands": {"make": "exit0"}, "outputs": {"out/never.csv": "missing"}, "flags": [], "reproduced": []},
-  {"fixture": "new_output", "status": "ran", "commands": {"make": "exit0"}, "outputs": {"out/fresh.csv": "no-reference"}, "flags": [], "reproduced": []},
-  {"fixture": "writes_then_fails", "status": "ran", "commands": {"make": "failed"}, "outputs": {"out/t.csv": "identical"}, "flags": ["OUTPUT_FROM_FAILED_COMMAND"], "reproduced": []},
-  {"fixture": "text_differs", "status": "ran", "commands": {"make": "exit0"}, "outputs": {"out/t.txt": "text-differs"}, "flags": [], "reproduced": []},
-  {"fixture": "two_commands_one_fails", "status": "ran", "commands": {"a": "exit0", "b": "failed"}, "outputs": {"out/a.csv": "identical", "out/b.csv": "not-rewritten"}, "flags": [], "reproduced": ["out/a.csv"]}
+  {
+   "fixture": "clean_identical",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/table.csv": "identical"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/table.csv"
+   ]
+  },
+  {
+   "fixture": "float_last_digit",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/table.csv": "numbers-match"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/table.csv"
+   ]
+  },
+  {
+   "fixture": "values_differ",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/table.tex": "numbers-differ"
+   },
+   "flags": [],
+   "reproduced": [],
+   "differing_numbers": 1
+  },
+  {
+   "fixture": "cache_replay",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/scores.csv": "not-rewritten"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "command_fails",
+   "status": "ran",
+   "commands": {
+    "make": "failed"
+   },
+   "outputs": {
+    "out/table.csv": "not-rewritten"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "timeout",
+   "status": "ran",
+   "commands": {
+    "make": "timeout"
+   },
+   "outputs": {
+    "out/table.csv": "not-rewritten"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "bad_commit",
+   "status": "aborted",
+   "commands": {},
+   "outputs": {},
+   "flags": [
+    "COMMIT_NOT_FOUND"
+   ],
+   "reproduced": []
+  },
+  {
+   "fixture": "undeclared_edit",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/t.csv": "identical"
+   },
+   "flags": [
+    "UNDECLARED_TRACKED_CHANGE"
+   ],
+   "reproduced": [
+    "out/t.csv"
+   ]
+  },
+  {
+   "fixture": "missing_output",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/never.csv": "missing"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "new_output",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/fresh.csv": "no-reference"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "writes_then_fails",
+   "status": "ran",
+   "commands": {
+    "make": "failed"
+   },
+   "outputs": {
+    "out/t.csv": "identical"
+   },
+   "flags": [
+    "OUTPUT_FROM_FAILED_COMMAND"
+   ],
+   "reproduced": []
+  },
+  {
+   "fixture": "text_differs",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/t.txt": "text-differs"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "two_commands_one_fails",
+   "status": "ran",
+   "commands": {
+    "a": "exit0",
+    "b": "failed"
+   },
+   "outputs": {
+    "out/a.csv": "identical",
+    "out/b.csv": "not-rewritten"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/a.csv"
+   ]
+  },
+  {
+   "fixture": "converted_binary",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/x.bin": "numbers-match"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/x.bin"
+   ],
+   "note": "added 2026-11-25 before converters existed: a binary file whose header names the writer's version differs in bytes; after the spec's converter, content is equal, so numbers-match, not identical"
+  }
  ],
  "receipt_text_rules": [
   "The rendered RECEIPT.md never contains the words wrong, incorrect, error in the paper, or fails to replicate.",
