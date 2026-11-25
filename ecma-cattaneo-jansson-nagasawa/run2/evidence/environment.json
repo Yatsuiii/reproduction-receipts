@@ -1,0 +1,17 @@
+{
+ "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+ "machine": "x86_64",
+ "cores": 4,
+ "os": "Ubuntu 24.04.5 LTS",
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+ "ram_gb": 15.7,
+ "gpu": "none",
+ "tools": {
+  "git": "git version 2.43.0",
+  "python3": "Python 3.13.18",
+  "R": "R version 4.3.3 (2024-02-29) -- \"Angel Food Cake\""
+ },
+ "extra": {
+  "R_versions": "Rcpp 1.0.12 \nR version 4.3.3 (2024-02-29)\nPlatform: x86_64-pc-linux-gnu (64-bit)\nRunning under: Ubuntu 24.04.5 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8    LC_NUMERIC=C        LC_TIME=C          \n [4] LC_COLLATE=C        LC_MONETARY=C       LC_MESSAGES=C      \n [7] LC_PAPER=C          LC_NAME=C           LC_ADDRESS=C       \n[10] LC_TELEPHONE=C      LC_MEASUREMENT=C    LC_IDENTIFICATION=C\n\ntime zone: Etc/UTC\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n[1] compiler_4.3.3\ng++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\n"
+ }
+}

@@ -1,0 +1,184 @@
+{
+ "format": "receiptgen-results/1",
+ "spec": {
+  "title": "Cattaneo, Jansson and Nagasawa, \"Bootstrap-Based Inference for Cube Root Asymptotics\" (Econometrica 88(5), 2020): simulation tuning constants",
+  "paper": "Matias D. Cattaneo, Michael Jansson and Kenichi Nagasawa, Bootstrap-Based Inference for Cube Root Asymptotics, Econometrica 88(5): 2203-2219, 2020, doi 10.3982/ECTA17950",
+  "package_label": "the authors' repository [mdcattaneo/replication-CJN_2020_ECMA](https://github.com/mdcattaneo/replication-CJN_2020_ECMA)",
+  "repo": "https://github.com/mdcattaneo/replication-CJN_2020_ECMA",
+  "commit": "b03241cf302c3ddb1881bcec864b29fd27097890",
+  "protocol": "PROTOCOL.md",
+  "cost_per_hour_usd": 0.2,
+  "cost_basis": "typical on-demand price for a 4 vCPU, 16 GB cloud machine",
+  "compare": {
+   "rel_tol": 1e-12
+  },
+  "committed_intermediates": [
+   "H0.txt"
+  ],
+  "environment_commands": [
+   {
+    "id": "R_versions",
+    "cmd": "Rscript -e 'cat(\"Rcpp\", as.character(packageVersion(\"Rcpp\")), \"\\n\"); print(sessionInfo())'; g++ --version | head -1"
+   }
+  ],
+  "commands": [
+   {
+    "id": "DGP_constants",
+    "cmd": "Rscript DGP_constants.R",
+    "timeout_s": 600,
+    "outputs": [
+     "H0.txt"
+    ]
+   },
+   {
+    "id": "AMSE",
+    "cmd": "Rscript AMSE.R",
+    "timeout_s": 600,
+    "outputs": [
+     "AMSEopt_bw.txt"
+    ]
+   },
+   {
+    "id": "mse_opt_simulation",
+    "cmd": "R_MAKEVARS_USER=$PWD/../Makevars.receipt Rscript mse_opt_simulation.R",
+    "timeout_s": 14400,
+    "outputs": [
+     "mseopt_bw.txt"
+    ]
+   }
+  ],
+  "scope_notes": [
+   "Only the three scripts that produce the tuning constants used by the simulations were run: `DGP_constants.R` (the true H0), `AMSE.R` (AMSE-optimal tuning parameters) and `mse_opt_simulation.R` (MSE-optimal tuning parameters from 50,000 Monte Carlo draws per model). Each writes a committed text file, which is what was compared.",
+   "Not run: `main_maxscore.R`, the bootstrap simulation behind the paper's table (`table_maxscore.txt`). The README says it was run in batch mode, and its settings (2,000 bootstrap draws for each of 2,000 simulations, over a parallel cluster) are beyond this machine. Nothing here speaks to that table.",
+   "`V0.txt` is committed but no script in the package writes it; it is not compared."
+  ],
+  "setup": [
+   {
+    "id": "makevars",
+    "cmd": "printf 'CPPFLAGS += -DRCPP_NO_STRICT_R_HEADERS\\n' > ../Makevars.receipt",
+    "timeout_s": 60
+   }
+  ]
+ },
+ "started": "2026-11-25T17:33:35Z",
+ "status": "ran",
+ "flags": [],
+ "commands": [
+  {
+   "id": "makevars",
+   "cmd": "printf 'CPPFLAGS += -DRCPP_NO_STRICT_R_HEADERS\\n' > ../Makevars.receipt",
+   "cwd": ".",
+   "timeout_s": 60,
+   "start": "2026-11-25T17:33:35Z",
+   "end": "2026-11-25T17:33:35Z",
+   "exit_code": 0,
+   "seconds": 0.02,
+   "outcome": "exit0",
+   "log": "evidence/logs/makevars.log",
+   "setup": true
+  },
+  {
+   "id": "DGP_constants",
+   "cmd": "Rscript DGP_constants.R",
+   "cwd": ".",
+   "timeout_s": 600,
+   "start": "2026-11-25T17:33:35Z",
+   "end": "2026-11-25T17:33:35Z",
+   "exit_code": 0,
+   "seconds": 0.42,
+   "outcome": "exit0",
+   "log": "evidence/logs/DGP_constants.log",
+   "setup": false
+  },
+  {
+   "id": "AMSE",
+   "cmd": "Rscript AMSE.R",
+   "cwd": ".",
+   "timeout_s": 600,
+   "start": "2026-11-25T17:33:35Z",
+   "end": "2026-11-25T17:33:36Z",
+   "exit_code": 0,
+   "seconds": 0.47,
+   "outcome": "exit0",
+   "log": "evidence/logs/AMSE.log",
+   "setup": false
+  },
+  {
+   "id": "mse_opt_simulation",
+   "cmd": "R_MAKEVARS_USER=$PWD/../Makevars.receipt Rscript mse_opt_simulation.R",
+   "cwd": ".",
+   "timeout_s": 14400,
+   "start": "2026-11-25T17:33:36Z",
+   "end": "2026-11-25T17:42:17Z",
+   "exit_code": 0,
+   "seconds": 520.65,
+   "outcome": "exit0",
+   "log": "evidence/logs/mse_opt_simulation.log",
+   "setup": false
+  }
+ ],
+ "outputs": {
+  "H0.txt": {
+   "command": "DGP_constants",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "a66726fab75c11e2065a186b2cf3cd95504dda4926b9ed99ed4a366552f837bc",
+   "committed_sha256": "a66726fab75c11e2065a186b2cf3cd95504dda4926b9ed99ed4a366552f837bc",
+   "class": "identical",
+   "reproduced": true
+  },
+  "AMSEopt_bw.txt": {
+   "command": "AMSE",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "984c2b5208cab7c67885eadc5b647c7c0a176bbe2244ebe431966cd11bbf0537",
+   "committed_sha256": "984c2b5208cab7c67885eadc5b647c7c0a176bbe2244ebe431966cd11bbf0537",
+   "class": "identical",
+   "reproduced": true
+  },
+  "mseopt_bw.txt": {
+   "command": "mse_opt_simulation",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "589c79ded0b6f5a54bfaeec50aba63ecd4380800f26d52b7a2dc357b3ad1a327",
+   "committed_sha256": "589c79ded0b6f5a54bfaeec50aba63ecd4380800f26d52b7a2dc357b3ad1a327",
+   "class": "identical",
+   "reproduced": true
+  }
+ },
+ "reproduced": [
+  "H0.txt",
+  "AMSEopt_bw.txt",
+  "mseopt_bw.txt"
+ ],
+ "commit": "b03241cf302c3ddb1881bcec864b29fd27097890",
+ "package_files": 17,
+ "package_files_sha256": "7ba5a362f8bf2f967754238e27a1129a3024aa1553beca3bacbcd6797edb44ad",
+ "environment": {
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cores": 4,
+  "os": "Ubuntu 24.04.5 LTS",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "ram_gb": 15.7,
+  "gpu": "none",
+  "tools": {
+   "git": "git version 2.43.0",
+   "python3": "Python 3.13.18",
+   "R": "R version 4.3.3 (2024-02-29) -- \"Angel Food Cake\""
+  },
+  "extra": {
+   "R_versions": "Rcpp 1.0.12 \nR version 4.3.3 (2024-02-29)\nPlatform: x86_64-pc-linux-gnu (64-bit)\nRunning under: Ubuntu 24.04.5 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8    LC_NUMERIC=C        LC_TIME=C          \n [4] LC_COLLATE=C        LC_MONETARY=C       LC_MESSAGES=C      \n [7] LC_PAPER=C          LC_NAME=C           LC_ADDRESS=C       \n[10] LC_TELEPHONE=C      LC_MEASUREMENT=C    LC_IDENTIFICATION=C\n\ntime zone: Etc/UTC\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n[1] compiler_4.3.3\ng++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\n"
+  }
+ },
+ "untracked_after": 0,
+ "tracked_not_declared_ok": [
+  "AMSEopt_bw.txt",
+  "H0.txt",
+  "mseopt_bw.txt"
+ ],
+ "finished": "2026-11-25T17:42:17Z",
+ "wall_clock_seconds": 521.56,
+ "cost_usd": 0.029,
+ "post_run_notes": "All three committed files came back byte for byte, including `mseopt_bw.txt`, the MSE-optimal tuning parameters picked\nfrom 150,000 seeded Monte Carlo draws (about 9 minutes here).\n\nThe one change from the package as found is an environment setting, not a code change: with the current Rcpp, `Hhat.cpp`\ndoes not compile because R's old `PI` macro is hidden by default ([`../run1/`](../run1/RECEIPT.md) shows the error). Setting\nRcpp's documented opt-out, `RCPP_NO_STRICT_R_HEADERS`, through a Makevars file outside the clone, is enough. Anyone rerunning\nthe package with a recent Rcpp will hit the same compile error; replacing `PI` with `M_PI` in `Hhat.cpp` would be the\none-line fix in the package itself.\n\nOut of scope, as set in the protocol: the bootstrap simulation behind the paper's table (`main_maxscore.R`), which is\ncluster-scale.\n"
+}
