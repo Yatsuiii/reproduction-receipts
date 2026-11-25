@@ -1,0 +1,27 @@
+{
+ "title": "fixture two_commands_one_fails",
+ "repo": "{{REPO}}",
+ "commit": "{{HEAD}}",
+ "cost_per_hour_usd": 0.2,
+ "compare": {
+  "rel_tol": 1e-12
+ },
+ "commands": [
+  {
+   "id": "a",
+   "cmd": "python3 a.py",
+   "timeout_s": 60,
+   "outputs": [
+    "out/a.csv"
+   ]
+  },
+  {
+   "id": "b",
+   "cmd": "python3 b.py",
+   "timeout_s": 60,
+   "outputs": [
+    "out/b.csv"
+   ]
+  }
+ ]
+}
