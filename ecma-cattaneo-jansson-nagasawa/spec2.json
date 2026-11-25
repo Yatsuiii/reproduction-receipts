@@ -1,0 +1,60 @@
+{
+ "title": "Cattaneo, Jansson and Nagasawa, \"Bootstrap-Based Inference for Cube Root Asymptotics\" (Econometrica 88(5), 2020): simulation tuning constants",
+ "paper": "Matias D. Cattaneo, Michael Jansson and Kenichi Nagasawa, Bootstrap-Based Inference for Cube Root Asymptotics, Econometrica 88(5): 2203-2219, 2020, doi 10.3982/ECTA17950",
+ "package_label": "the authors' repository [mdcattaneo/replication-CJN_2020_ECMA](https://github.com/mdcattaneo/replication-CJN_2020_ECMA)",
+ "repo": "https://github.com/mdcattaneo/replication-CJN_2020_ECMA",
+ "commit": "b03241cf302c3ddb1881bcec864b29fd27097890",
+ "protocol": "PROTOCOL.md",
+ "cost_per_hour_usd": 0.2,
+ "cost_basis": "typical on-demand price for a 4 vCPU, 16 GB cloud machine",
+ "compare": {
+  "rel_tol": 1e-12
+ },
+ "committed_intermediates": [
+  "H0.txt"
+ ],
+ "environment_commands": [
+  {
+   "id": "R_versions",
+   "cmd": "Rscript -e 'cat(\"Rcpp\", as.character(packageVersion(\"Rcpp\")), \"\\n\"); print(sessionInfo())'; g++ --version | head -1"
+  }
+ ],
+ "commands": [
+  {
+   "id": "DGP_constants",
+   "cmd": "Rscript DGP_constants.R",
+   "timeout_s": 600,
+   "outputs": [
+    "H0.txt"
+   ]
+  },
+  {
+   "id": "AMSE",
+   "cmd": "Rscript AMSE.R",
+   "timeout_s": 600,
+   "outputs": [
+    "AMSEopt_bw.txt"
+   ]
+  },
+  {
+   "id": "mse_opt_simulation",
+   "cmd": "R_MAKEVARS_USER=$PWD/../Makevars.receipt Rscript mse_opt_simulation.R",
+   "timeout_s": 14400,
+   "outputs": [
+    "mseopt_bw.txt"
+   ]
+  }
+ ],
+ "scope_notes": [
+  "Only the three scripts that produce the tuning constants used by the simulations were run: `DGP_constants.R` (the true H0), `AMSE.R` (AMSE-optimal tuning parameters) and `mse_opt_simulation.R` (MSE-optimal tuning parameters from 50,000 Monte Carlo draws per model). Each writes a committed text file, which is what was compared.",
+  "Not run: `main_maxscore.R`, the bootstrap simulation behind the paper's table (`table_maxscore.txt`). The README says it was run in batch mode, and its settings (2,000 bootstrap draws for each of 2,000 simulations, over a parallel cluster) are beyond this machine. Nothing here speaks to that table.",
+  "`V0.txt` is committed but no script in the package writes it; it is not compared."
+ ],
+ "setup": [
+  {
+   "id": "makevars",
+   "cmd": "printf 'CPPFLAGS += -DRCPP_NO_STRICT_R_HEADERS\\n' > ../Makevars.receipt",
+   "timeout_s": 60
+  }
+ ]
+}
