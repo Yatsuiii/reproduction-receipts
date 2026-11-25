@@ -52,3 +52,13 @@ Run 1 stopped at the main estimation within seconds; what it showed is in [`run1
 
 The comparison rule is unchanged. In addition, `estimation_outputs/*.parquet` and `results/*.parquet` are declared committed
 intermediates: an output whose step read one of them before this run regenerated it is not counted as reproduced.
+
+## Addendum, 2026-11-25 ~18:10 UTC, after run 2 and before run 3
+
+Run 2 ([`run2/`](run2/)) stopped at the main estimation again, at a different place: with versions as of the package
+date (pyblp 1.1.2, pandas 3.0.1, numpy 2.4.3), `estimation_code/micro_moments.py` line 56 passes `mom_const[y][2]`, a
+one-element numpy array, to `pyblp.MicroMoment`, and numpy 2.4 refuses to convert it to a float. Outside the receipt, in a
+scratch copy, the same call goes through with numpy 2.3.5 (a deprecation warning only) and the estimation starts solving.
+
+Run 3 ([`spec3.json`](spec3.json)) changes only the environment: Python 3.12 via uv, packages as of 2026-03-20, numpy held
+below 2.4. No package file is edited. Everything else as in run 2.
