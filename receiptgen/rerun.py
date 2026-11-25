@@ -231,7 +231,7 @@ def rerun(spec: dict, out: Path, workdir: Path | None = None) -> dict:
         (ev / "package-files.sha256").write_text("\n".join(lines) + "\n", encoding="utf-8")
         res["package_files"] = len(lines)
         res["package_files_sha256"] = sha256_bytes(("\n".join(lines) + "\n").encode())
-        res["environment"] = environment(spec.get("environment_commands", []))
+        res["environment"] = environment([])
         hash_only = set()
         CONVERTERS.clear()
         for c in spec["commands"]:
@@ -290,6 +290,8 @@ def rerun(spec: dict, out: Path, workdir: Path | None = None) -> dict:
                 res["outputs"][o] = entry
                 if entry["reproduced"]:
                     res["reproduced"].append(o)
+        # Run after the commands, so versions installed by a setup command are the ones recorded.
+        res["environment"]["extra"] = environment(spec.get("environment_commands", []))["extra"]
         res["untracked_after"] = len(sh(["git", "ls-files", "--others", "--exclude-standard"], cwd=clone).stdout.splitlines())
         res["tracked_not_declared_ok"] = sorted(tracked_set & declared)
         return finish(res, out, spec)
