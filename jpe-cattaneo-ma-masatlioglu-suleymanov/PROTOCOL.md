@@ -46,3 +46,11 @@ on or before 2021-10-20, the date in the script's header, chosen by the setup st
 is installed first only to bring in its dependencies, then replaced) and recorded by the
 environment command. The comparison rule is unchanged. Whatever run 2 shows is reported next to run 1; neither replaces the
 other.
+
+## Addendum, 2026-11-25 ~18:30 UTC, after run 2
+
+Run 2 ([`runs/github-45671410800-linux/`](runs/github-45671410800-linux/RECEIPT.md)) installed `ramchoice` 1.1, which has no
+`logitSimu`, and the script stopped at once. The rule in the previous addendum was wrong: a CRAN archive date is when a
+release was replaced, not when it was published. Run 3 ([`spec3.json`](spec3.json)) installs the release that was current on
+2021-10-20, that is, the archived file with the earliest archive date after 2021-10-20 (or the current release if none
+was archived after that date). Nothing else changes.
