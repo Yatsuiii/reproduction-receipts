@@ -195,6 +195,39 @@
     "out/x.bin"
    ],
    "note": "added 2026-11-25 before converters existed: a binary file whose header names the writer's version differs in bytes; after the spec's converter, content is equal, so numbers-match, not identical"
+  },
+  {
+   "fixture": "replay_from_intermediate",
+   "status": "ran",
+   "commands": {
+    "fmt": "exit0"
+   },
+   "outputs": {
+    "out/table.csv": "identical"
+   },
+   "flags": [
+    "READ_COMMITTED_INTERMEDIATE"
+   ],
+   "reproduced": [],
+   "note": "added 2026-11-25 after the first JPE run counted tables formatted from committed results/*.parquet as reproduced: an output whose command read a committed intermediate that this run did not regenerate is not reproduced"
+  },
+  {
+   "fixture": "intermediate_regenerated",
+   "status": "ran",
+   "commands": {
+    "solve": "exit0",
+    "fmt": "exit0"
+   },
+   "outputs": {
+    "results/inter.csv": "identical",
+    "out/table.csv": "identical"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/table.csv",
+    "results/inter.csv"
+   ],
+   "note": "added with the case above: when an earlier command in the same run rewrote the intermediate, reading it is fine"
   }
  ],
  "receipt_text_rules": [

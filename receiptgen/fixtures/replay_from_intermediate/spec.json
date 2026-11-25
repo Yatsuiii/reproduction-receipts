@@ -1,0 +1,9 @@
+{
+ "title": "fixture replay_from_intermediate",
+ "repo": "{{REPO}}",
+ "commit": "{{HEAD}}",
+ "cost_per_hour_usd": 0.2,
+ "compare": {"rel_tol": 1e-12},
+ "committed_intermediates": ["results/*"],
+ "commands": [{"id": "fmt", "cmd": "python3 fmt.py", "timeout_s": 60, "outputs": ["out/table.csv"]}]
+}
