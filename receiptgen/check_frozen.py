@@ -15,6 +15,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 REGISTRY = HERE / "FROZEN.json"
 ROOTS = ["fixtures"]
+# Frozen entry points: pinned after they first passed every fixture. A change needs a FROZEN_CHANGES.md entry and a
+# fresh results/fixtures.json in the same commit.
+ENTRY_POINTS = ["rerun.py", "run_fixtures.py"]
 
 
 def sha256(p: Path) -> str:
@@ -27,12 +30,14 @@ def current() -> dict:
         for p in sorted((HERE / root).rglob("*")):
             if p.is_file():
                 out[p.relative_to(HERE).as_posix()] = sha256(p)
+    for name in ENTRY_POINTS:
+        out[name] = sha256(HERE / name)
     return out
 
 
 def main(argv: list) -> int:
     if "--update" in argv:
-        REGISTRY.write_text(json.dumps({"format": "receiptgen-frozen/1", "roots": ROOTS, "files": current()}, indent=1) + "\n",
+        REGISTRY.write_text(json.dumps({"format": "receiptgen-frozen/1", "roots": ROOTS, "entry_points": ENTRY_POINTS, "files": current()}, indent=1) + "\n",
                             encoding="utf-8", newline="\n")
         print(f"wrote {REGISTRY.name}; log the reason in FROZEN_CHANGES.md in the same commit")
         return 0

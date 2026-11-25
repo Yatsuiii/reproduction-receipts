@@ -3,6 +3,10 @@
  "roots": [
   "fixtures"
  ],
+ "entry_points": [
+  "rerun.py",
+  "run_fixtures.py"
+ ],
  "files": {
   "fixtures/EXPECTED.json": "384f17316ae03def7a82063ddbdc99f4f4bbaf3957bcc2b6721d94fe0d973feb",
   "fixtures/bad_commit/pkg/make.py": "8aa66d85f6dee2f9d985fbcbe10425068157c5d33db3a49f8220ccc26dfe5606",
@@ -44,6 +48,8 @@
   "fixtures/values_differ/spec.json": "abfd7bf6859ca94fd839321d3dc2d6fe7815cf7217f420035a71adaae449f7c7",
   "fixtures/writes_then_fails/pkg/make.py": "10e9dc0a844c539e3832d7ebadac8dcad45dad1b92138910ea19643cb70fc4e6",
   "fixtures/writes_then_fails/pkg/out/t.csv": "daff832f802000e645771a60983c76c963f6ee602a6230e45237bd360e91cc1a",
-  "fixtures/writes_then_fails/spec.json": "937c46e83bb2322aa3f17ee9284400f5c2dd49ff047045040bc57834c0721905"
+  "fixtures/writes_then_fails/spec.json": "937c46e83bb2322aa3f17ee9284400f5c2dd49ff047045040bc57834c0721905",
+  "rerun.py": "ad3e522c58debe8c98918e0820d76daa4cbc338012e00a74b35ced0c47423ead",
+  "run_fixtures.py": "e82c335e42f9be095591172da0521ee03e409248d83ff3634999bec78be91657"
  }
 }
