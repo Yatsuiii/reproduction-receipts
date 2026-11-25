@@ -238,6 +238,8 @@ def snapshot(path: Path) -> tuple | None:
 
 
 def rerun(spec: dict, out: Path, workdir: Path | None = None) -> dict:
+    out = Path(out).resolve()  # commands run inside the checkout, so every path handed to them must be absolute
+    workdir = Path(workdir).resolve() if workdir else None
     out.mkdir(parents=True, exist_ok=True)
     ev = out / "evidence"
     (ev / "logs").mkdir(parents=True, exist_ok=True)
