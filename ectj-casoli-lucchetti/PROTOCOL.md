@@ -42,3 +42,11 @@ The package commits no outputs, so `rerun.py` can only record exit codes, logs a
 - The working paper (p. 12) also states q = 2 dynamic factors, chosen by Bai and Ng (2007). `part2.inp` hard-codes
   `q = 2` and computes the criterion as `optimal_q`; if the log shows it, it is reported, not scored.
 - The receipt does not say whether the paper is right. It says what the committed materials did on this machine.
+
+## Addendum, 2026-11-25 ~17:40 UTC, after a first attempt
+
+The first attempt's setup step failed in 0.03 s on the spec's side: gretl did not find the install script at the relative
+path `../pkgs.inp`. The scripts still ran, using the copies of `DFM` and `staticfactor` installed by the pre-run check
+above. Because the packages were not installed by the run itself, that attempt was discarded. Changes: the setup path is
+now absolute, the environment command records the function packages' own version and date fields, and both packages are
+removed from this machine before the run so the setup step has to install them. Nothing else changed.

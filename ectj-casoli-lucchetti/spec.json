@@ -13,13 +13,13 @@
  "environment_commands": [
   {
    "id": "gretl_versions",
-   "cmd": "gretlcli --version | head -1; grep -h -m1 -o 'version=\"[^\"]*\"' /usr/share/gretl/functions/DFM/DFM.gfn /usr/share/gretl/functions/staticfactor/staticfactor.gfn"
+   "cmd": "gretlcli --version | head -1; grep -h -m2 -E '<version>|<date>' /usr/share/gretl/functions/DFM/DFM.gfn /usr/share/gretl/functions/staticfactor/staticfactor.gfn"
   }
  ],
  "setup": [
   {
    "id": "gretl_packages",
-   "cmd": "printf 'pkg install DFM\\npkg install staticfactor\\n' > ../pkgs.inp && gretlcli -b ../pkgs.inp",
+   "cmd": "printf 'pkg install DFM\\npkg install staticfactor\\n' > \"$PWD/../pkgs.inp\" && gretlcli -b \"$PWD/../pkgs.inp\"",
    "timeout_s": 600
   }
  ],
