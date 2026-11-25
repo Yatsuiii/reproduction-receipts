@@ -1,2 +1,2 @@
 # One spec per line. "#r" installs R on the runner first; "#windows" runs on a Windows runner.
-jpe-cattaneo-ma-masatlioglu-suleymanov/spec.json #r
+jpe-cattaneo-ma-masatlioglu-suleymanov/spec2.json #r

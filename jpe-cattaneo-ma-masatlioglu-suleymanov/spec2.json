@@ -1,0 +1,39 @@
+{
+ "title": "Cattaneo, Ma, Masatlioglu and Suleymanov, \"A Random Attention Model\" (Journal of Political Economy 128(7), 2020): simulation",
+ "paper": "Matias D. Cattaneo, Xinwei Ma, Yusufcan Masatlioglu and Elchin Suleymanov, A Random Attention Model, Journal of Political Economy 128(7): 2796-2836, 2020, doi 10.1086/706861",
+ "package_label": "the authors' repository [mdcattaneo/replication-CMMS_2020_JPE](https://github.com/mdcattaneo/replication-CMMS_2020_JPE)",
+ "repo": "https://github.com/mdcattaneo/replication-CMMS_2020_JPE",
+ "commit": "d307dcdc7e9d8982eda70196b10d2af2907b4be2",
+ "protocol": "PROTOCOL.md",
+ "cost_per_hour_usd": 0.0,
+ "cost_basis": "GitHub-hosted ubuntu-24.04 runner, free for public repositories",
+ "compare": {
+  "rel_tol": 1e-12
+ },
+ "environment_commands": [
+  {
+   "id": "R_versions",
+   "cmd": "Rscript -e 'cat(\"ramchoice\", as.character(packageVersion(\"ramchoice\")), \"\\n\"); print(sessionInfo())'"
+  }
+ ],
+ "setup": [
+  {
+   "id": "install_ramchoice_2021",
+   "cmd": "Rscript -e \"u <- 'https://cloud.r-project.org/src/contrib/Archive/ramchoice/'; x <- readLines(u); m <- regmatches(x, regexec('(ramchoice_[0-9.-]+[.]tar[.]gz).*?([0-9]{4}-[0-9]{2}-[0-9]{2})', x)); m <- do.call(rbind, Filter(function(v) length(v) == 3, m)); m <- m[as.Date(m[, 3]) <= as.Date('2021-10-20'), , drop = FALSE]; f <- m[order(as.Date(m[, 3])), 2][nrow(m)]; cat('installing', f, '\\n'); install.packages('ramchoice', repos = 'https://cloud.r-project.org'); install.packages(paste0(u, f), repos = NULL, type = 'source'); stopifnot(requireNamespace('ramchoice'))\"",
+   "timeout_s": 1800
+  }
+ ],
+ "commands": [
+  {
+   "id": "simulation",
+   "cmd": "Rscript Cattaneo-Ma-Masatlioglu-Suleymanov_2020_JPE.R",
+   "timeout_s": 7200,
+   "outputs": []
+  }
+ ],
+ "scope_notes": [
+  "The package is one R script, the simulation of the empirical size and power of the proposed revealed-preference test (1,000 repetitions, seed 42). It writes no file; it prints five rejection rates.",
+  "The script's own comments give the expected result (0.000, 0.004, 0.144, 0.275, 0.351). The printed rates are compared with those by hand, as set out in the protocol; the comparison is under notes.",
+  "`ramchoice` is the newest CRAN archive release published on or before 2021-10-20 (the script's date), chosen by the setup step; the version is in the environment listing."
+ ]
+}

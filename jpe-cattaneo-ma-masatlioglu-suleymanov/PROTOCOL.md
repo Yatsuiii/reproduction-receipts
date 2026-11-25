@@ -35,3 +35,14 @@ counts out of 1,000, so a difference of one repetition shows as 0.001.
 
 These are the script's comments, not the paper's table; whether the paper prints the same rates was not checked from this
 machine. The receipt does not say whether the paper is right. It says what the committed materials did on this machine.
+
+## Addendum, 2026-11-25 ~18:05 UTC, after run 1
+
+Run 1 ([`runs/github-45666704089-linux/`](runs/github-45666704089-linux/RECEIPT.md)), with `ramchoice` 3.0.0: the two null
+rates match the script's comments; the three alternative rates differ by one or two repetitions out of 1,000.
+
+Run 2 ([`spec2.json`](spec2.json)) changes only the `ramchoice` version: the newest release in the CRAN archive published
+on or before 2021-10-20, the date in the script's header, chosen by the setup step from the archive index (the current release
+is installed first only to bring in its dependencies, then replaced) and recorded by the
+environment command. The comparison rule is unchanged. Whatever run 2 shows is reported next to run 1; neither replaces the
+other.
