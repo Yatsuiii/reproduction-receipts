@@ -1,6 +1,6 @@
 # Protocol, written before any package code ran
 
-Written 2026-11-25 ~17:10 UTC, after reading the README, `run_all.R`, `install_packages.R` and `requirements.csv`, and before
+Written 2026-11-25 ~16:34 UTC, after reading the README, `run_all.R`, `install_packages.R` and `requirements.csv`, and before
 running any of them. The run is driven by [`spec.json`](spec.json) through [`receiptgen/rerun.py`](../receiptgen/README.md).
 
 Package: [timmy-o-toole/Assemblage_VAR](https://github.com/timmy-o-toole/Assemblage_VAR) at commit
@@ -31,7 +31,7 @@ R 4.3.3 from Ubuntu 24.04 is used; the README asks for R 4.3 or newer.
 - Anything else the run changes in tracked files is listed as a deviation. Figures are git-ignored and not compared.
 - The receipt does not say whether the paper is right. It says what the committed materials did on this machine.
 
-## Addendum, 2026-11-25 ~16:40 UTC, after run 1
+## Addendum, 2026-11-25 ~16:36 UTC, after run 1
 
 Run 1, on the cloud container, stopped at step 1: this container's network refuses `cloud.r-project.org`, so
 `install_packages.R` could not install anything, and `run_all.R` then stopped at the first missing package (`NlcOptim`). No
@@ -41,7 +41,7 @@ Change: the same spec now runs on a GitHub-hosted `ubuntu-24.04` runner, which c
 [`.github/workflows/receipt-run.yml`](../.github/workflows/receipt-run.yml). R there is the current release installed by
 `r-lib/actions/setup-r`, not 4.3.3. Commands, outputs and the comparison rule are unchanged.
 
-## Addendum, 2026-11-25 ~17:50 UTC, after the first GitHub run
+## Addendum, 2026-11-25 ~16:48 UTC, after the first GitHub run
 
 The first GitHub run (`runs/github-45655687005`) finished: `run_all.R` exited 0 and its own validation passed, but 89 of
 1,267 numbers in `summary_numbers.txt` differ from the committed file, and the six `.rds` files differ. The `.rds` files
@@ -49,3 +49,5 @@ store the R session they were written in; the committed ones name a Windows (UCR
 package, the same spec now runs again on a Linux runner and on a Windows runner (`windows-2025`), with the generator
 change logged in `receiptgen/FROZEN_CHANGES.md` (number-level detail for files whose text also differs). Commands and the
 comparison rule are unchanged.
+
+(Times in the headings above were corrected on 2026-11-25 to the commit times of the commits that added them; the first versions gave estimated times that were wrong. No content changed.)
