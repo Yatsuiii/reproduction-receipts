@@ -1,0 +1,11 @@
+# command: Rscript Cattaneo-Ma-Masatlioglu-Suleymanov_2020_JPE.R
+# cwd: .
+# start: 2026-11-25T18:06:15Z
+# timeout_s: 7200
+Error in logitSimu(n, 5, j, varsig) : could not find function "logitSimu"
+Execution halted
+
+# end: 2026-11-25T18:06:15Z
+# exit: 1
+# seconds: 0.21
+# outcome: failed
