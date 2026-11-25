@@ -1,9 +1,9 @@
 {
- "rerun_py_sha256": "ad3e522c58debe8c98918e0820d76daa4cbc338012e00a74b35ced0c47423ead",
- "passed": 13,
- "text_rules_passed": 13,
- "naive_baseline_passed": 8,
- "cases": 13,
+ "rerun_py_sha256": "ad03145cd1c303a92eab3238b7e8dc006b666b604dd9a1792e4c45aae7f61b65",
+ "passed": 14,
+ "text_rules_passed": 14,
+ "naive_baseline_passed": 9,
+ "cases": 14,
  "rows": [
   {
    "fixture": "clean_identical",
@@ -390,6 +390,38 @@
     "flags": [],
     "reproduced": [
      "out/a.csv"
+    ]
+   }
+  },
+  {
+   "fixture": "converted_binary",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/x.bin": "numbers-match"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/x.bin"
+    ]
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/x.bin": "numbers-match"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/x.bin"
     ]
    }
   }

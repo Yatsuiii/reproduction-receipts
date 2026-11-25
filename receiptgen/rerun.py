@@ -160,6 +160,22 @@ def run_command(cmd: dict, clone: Path, logdir: Path) -> dict:
             "exit_code": code, "seconds": seconds, "outcome": outcome, "log": f"evidence/logs/{log.name}"}
 
 
+CONVERTERS: dict = {}
+
+
+def convert(cmd: str, data: bytes, cwd: Path) -> bytes:
+    """Run the spec's converter on a file holding data; its stdout is what gets compared."""
+    with tempfile.NamedTemporaryFile(delete=False) as fh:
+        fh.write(data)
+    try:
+        r = subprocess.run(cmd.replace("{in}", fh.name), shell=True, cwd=cwd, capture_output=True, timeout=600)
+        if r.returncode != 0:
+            raise RuntimeError(f"converter failed ({r.returncode}): {cmd}: {r.stderr.decode(errors='replace')[-500:]}")
+        return r.stdout
+    finally:
+        os.unlink(fh.name)
+
+
 def expand_outputs(items: list, tracked: list, hash_only: set) -> list:
     """Outputs are paths, or {"glob": ..., "compare": "hash-only"} for files such as PDF figures whose bytes carry
     metadata. A glob is expanded against the committed tree, so it names only files there is something to compare with."""
@@ -171,6 +187,9 @@ def expand_outputs(items: list, tracked: list, hash_only: set) -> list:
         paths = [t for t in tracked if fnmatch.fnmatch(t, item["glob"])] if "glob" in item else [item["path"]]
         if item.get("compare") == "hash-only":
             hash_only.update(paths)
+        if item.get("convert"):
+            for path in paths:
+                CONVERTERS[path] = item["convert"]
         out.extend(p for p in sorted(paths) if p not in out)
     return out
 
@@ -214,6 +233,7 @@ def rerun(spec: dict, out: Path, workdir: Path | None = None) -> dict:
         res["package_files_sha256"] = sha256_bytes(("\n".join(lines) + "\n").encode())
         res["environment"] = environment(spec.get("environment_commands", []))
         hash_only = set()
+        CONVERTERS.clear()
         for c in spec["commands"]:
             c["outputs"] = expand_outputs(c.get("outputs", []), tracked, hash_only)
         declared = {o for c in spec["commands"] for o in c["outputs"]}
@@ -252,7 +272,18 @@ def rerun(spec: dict, out: Path, workdir: Path | None = None) -> dict:
                     else:
                         blob = subprocess.run(["git", "show", f"HEAD:{o}"], cwd=clone, capture_output=True).stdout
                         entry["committed_sha256"] = sha256_bytes(blob)
-                        entry.update(compare(blob, regenerated, rel_tol))
+                        if blob != regenerated and o in CONVERTERS:
+                            entry["converter"] = CONVERTERS[o]
+                            try:
+                                c_conv, r_conv = convert(CONVERTERS[o], blob, clone), convert(CONVERTERS[o], regenerated, clone)
+                                entry.update(compare(c_conv, r_conv, rel_tol))
+                                if entry["class"] == "identical":
+                                    entry["class"] = "numbers-match"
+                                    entry["note"] = "bytes differ; equal after the converter"
+                            except RuntimeError as exc:
+                                entry.update({"class": "binary-differs", "converter_error": str(exc)})
+                        else:
+                            entry.update(compare(blob, regenerated, rel_tol))
                     if c["outcome"] != "exit0" and "OUTPUT_FROM_FAILED_COMMAND" not in res["flags"]:
                         res["flags"].append("OUTPUT_FROM_FAILED_COMMAND")
                 entry["reproduced"] = c["outcome"] == "exit0" and rewritten and entry["class"] in REPRODUCED_CLASSES
@@ -378,8 +409,10 @@ def render(res: dict) -> str:
                     outcome = CLASS_WORDS[e["class"]]
                     if e["class"] == "numbers-differ":
                         outcome += f": {e['numbers_differ']} of {e['numbers']} numbers"
-                    elif e["class"] == "numbers-match":
+                    elif e["class"] == "numbers-match" and "numbers" in e:
                         outcome += f" ({e['numbers_text_identical']} of {e['numbers']} numbers identical text)"
+                    if e.get("converter"):
+                        outcome += f"; compared after `{e['converter']}`"
                     if e.get("rewritten") and c["outcome"] != "exit0":
                         outcome += "; written by a command that did not exit 0"
                 L.append(f"| {'`' + c['cmd'] + '`' if first else ''} | {exit_txt} | {fmt_secs(c['seconds']) if first else ''} "
