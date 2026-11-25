@@ -151,7 +151,7 @@ def run_command(cmd: dict, clone: Path, logdir: Path, trace: bool = False) -> di
     with open(log, "w", encoding="utf-8") as fh:
         fh.write(f"# command: {cmd['cmd']}\n# cwd: {cmd.get('cwd', '.')}\n# start: {start}\n# timeout_s: {timeout}\n")
         fh.flush()
-        argv = ["bash", "-c", cmd["cmd"]]
+        argv = [os.environ.get("RECEIPTGEN_BASH", "bash"), "-c", cmd["cmd"]]
         if trace:
             argv = ["strace", "-f", "-qq", "-e", "trace=open,openat", "-o", str(logdir / f"{cmd['id']}.trace")] + argv
         proc = subprocess.Popen(argv, cwd=cwd, stdout=fh, stderr=subprocess.STDOUT,

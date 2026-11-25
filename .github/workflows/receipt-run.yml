@@ -49,6 +49,8 @@ jobs:
           echo "DIR=$dir" >> "$GITHUB_ENV"
         env:
           matrix_spec: ${{ matrix.spec }}
+          # On Windows, plain "bash" from Python resolves to the WSL stub in System32; use Git Bash.
+          RECEIPTGEN_BASH: ${{ runner.os == 'Windows' && 'C:\Program Files\Git\bin\bash.exe' || 'bash' }}
       - name: Commit the run directory back to the branch
         if: always() && env.DIR != ''
         run: |
