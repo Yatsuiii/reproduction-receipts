@@ -1,0 +1,23 @@
+# command: cd estimation_code && ../venv/bin/python post_estimation.py ../estimation_outputs/slow_paper.pickle
+# cwd: .
+# start: 2026-11-25T16:45:43Z
+# timeout_s: 14400
+Reading in:  ../estimation_outputs/slow_paper.pickle
+Traceback (most recent call last):
+  File "/tmp/claude-0/jpe-work2/checkout/estimation_code/post_estimation.py", line 96, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/claude-0/jpe-work2/checkout/estimation_code/post_estimation.py", line 92, in main
+    do_post_estimation(args.file, args.rho)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work2/checkout/estimation_code/post_estimation.py", line 66, in do_post_estimation
+    res = pyblp.read_pickle(fn_results)
+  File "/tmp/claude-0/jpe-work2/checkout/venv/lib/python3.13/site-packages/pyblp/construction.py", line 639, in read_pickle
+    with open(path, 'rb') as handle:
+         ~~~~^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../estimation_outputs/slow_paper.pickle'
+
+# end: 2026-11-25T16:45:46Z
+# exit: 1
+# seconds: 2.7
+# outcome: failed

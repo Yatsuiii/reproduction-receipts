@@ -1,0 +1,18 @@
+{
+ "platform": "Linux-7.0.0-1018-aws-x86_64-with-glibc2.39",
+ "machine": "x86_64",
+ "cores": 4,
+ "os": "Ubuntu 24.04.5 LTS",
+ "cpu": "Intel(R) Xeon(R) 6975P-C",
+ "ram_gb": 15.3,
+ "gpu": "none",
+ "tools": {
+  "git": "git version 2.56.1",
+  "python3": "Python 3.12.10",
+  "R": "R version 4.6.2 (2026-10-29) -- \"Diversified Portfolio\"",
+  "julia": "julia version 1.13.4"
+ },
+ "extra": {
+  "R_sessionInfo": "NlcOptim 0.6 \nvars 1.6.1 \nggplot2 4.0.4 \nggthemes 7.0.0 \nzoo 1.9.1 \nscales 1.4.0 \nggh4x 0.3.1 \nragg not installed \nsystemfonts not installed \nR version 4.6.2 (2026-10-29)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.5 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 \nLAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: UTC\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n[1] compiler_4.6.2\n"
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "title": "fixture clean_identical",
+ "repo": "{{REPO}}",
+ "commit": "{{HEAD}}",
+ "cost_per_hour_usd": 0.2,
+ "compare": {
+  "rel_tol": 1e-12
+ },
+ "commands": [
+  {
+   "id": "make",
+   "cmd": "python3 make.py",
+   "timeout_s": 60,
+   "outputs": [
+    "out/table.csv"
+   ]
+  }
+ ]
+}

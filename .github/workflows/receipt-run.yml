@@ -1,0 +1,61 @@
+name: Receipt run (GitHub-hosted machine)
+# Runs receiptgen/rerun.py for every spec listed in .github/receipt-queue, on a fresh ubuntu-24.04 runner, and commits
+# each run directory back to the branch that triggered it. Anyone can rerun this from the Actions tab.
+on:
+  workflow_dispatch:
+  push:
+    branches: ['claude/**']
+    paths: ['.github/receipt-queue']
+permissions:
+  contents: write
+jobs:
+  queue:
+    runs-on: ubuntu-24.04
+    outputs:
+      specs: ${{ steps.q.outputs.specs }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - id: q
+        run: echo "specs=$(grep -v '^#' .github/receipt-queue | grep . | jq -R . | jq -sc .)" >> "$GITHUB_OUTPUT"
+  run:
+    needs: queue
+    runs-on: ${{ contains(matrix.spec, '#windows') && 'windows-2025' || 'ubuntu-24.04' }}
+    timeout-minutes: 350
+    defaults:
+      run:
+        shell: bash
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        spec: ${{ fromJson(needs.queue.outputs.specs) }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.10'
+      - name: R, if the spec needs it
+        if: contains(matrix.spec, '#r')
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: release
+          use-public-rspm: false
+      - name: Run the spec through rerun.py
+        run: |
+          spec="${matrix_spec%%#*}"; spec="${spec% }"
+          os=linux; case "$matrix_spec" in *"#windows"*) os=windows;; esac
+          dir="$(dirname "$spec")/runs/github-${GITHUB_RUN_ID}-$os"
+          python receiptgen/rerun.py "$spec" --out "$dir" | tee summary.txt
+          echo "DIR=$dir" >> "$GITHUB_ENV"
+        env:
+          matrix_spec: ${{ matrix.spec }}
+          # On Windows, plain "bash" from Python resolves to the WSL stub in System32; use Git Bash.
+          RECEIPTGEN_BASH: ${{ runner.os == 'Windows' && 'C:\Program Files\Git\bin\bash.exe' || 'bash' }}
+      - name: Commit the run directory back to the branch
+        if: always() && env.DIR != ''
+        run: |
+          git config user.name "receipt-run"
+          git config user.email "receipt-run@users.noreply.github.com"
+          git add "$DIR"
+          git commit -qm "Receipt run on GitHub runner ${GITHUB_RUN_ID}: $DIR"
+          for i in 1 2 3 4; do git pull -q --rebase origin "$GITHUB_REF_NAME" && git push -q origin "HEAD:$GITHUB_REF_NAME" && break; sleep $((i*5)); done

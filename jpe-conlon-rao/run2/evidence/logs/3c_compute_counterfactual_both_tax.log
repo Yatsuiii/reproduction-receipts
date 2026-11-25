@@ -1,0 +1,16 @@
+# command: cd counterfactual_code && ../venv/bin/python 3c_compute_counterfactual_both_tax.py
+# cwd: .
+# start: 2026-11-25T16:46:25Z
+# timeout_s: 43200
+Traceback (most recent call last):
+  File "/tmp/claude-0/jpe-work2/checkout/counterfactual_code/3c_compute_counterfactual_both_tax.py", line 29, in <module>
+    res = pyblp.read_pickle(fn_results)
+  File "/tmp/claude-0/jpe-work2/checkout/venv/lib/python3.13/site-packages/pyblp/construction.py", line 639, in read_pickle
+    with open(path, 'rb') as handle:
+         ~~~~^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/claude-0/jpe-work2/checkout/estimation_outputs/slow_paper.pickle'
+
+# end: 2026-11-25T16:46:27Z
+# exit: 1
+# seconds: 2.48
+# outcome: failed

@@ -6,3 +6,4 @@ python3 "$top/triage/check_frozen.py" || exit 1
 python3 "$top/agent-receipts/check_frozen.py" || exit 1
 # Same guard for the offline-model receipt's task, injections and frozen entry points.
 python3 "$top/offline-model/check_frozen.py" || exit 1
+python3 "$top/receiptgen/check_frozen.py" || exit 1

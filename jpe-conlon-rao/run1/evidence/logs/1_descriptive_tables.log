@@ -1,0 +1,45 @@
+# command: cd counterfactual_code && ../venv/bin/python 1_descriptive_tables.py
+# cwd: .
+# start: 2026-11-25T16:38:34Z
+# timeout_s: 3600
+Traceback (most recent call last):
+  File "/tmp/claude-0/jpe-work/checkout/counterfactual_code/1_descriptive_tables.py", line 45, in <module>
+    summ_df_all.to_parquet(fn_summ_pq)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pandas/core/frame.py", line 3002, in to_parquet
+    return to_parquet(
+        self,
+    ...<7 lines>...
+        **kwargs,
+    )
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pandas/io/parquet.py", line 555, in to_parquet
+    impl.write(
+    ~~~~~~~~~~^
+        df,
+        ^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pandas/io/parquet.py", line 245, in write
+    path_or_handle, handles, filesystem = _get_path_or_handle(
+                                          ~~~~~~~~~~~~~~~~~~~^
+        path,
+        ^^^^^
+    ...<3 lines>...
+        is_dir=partition_cols is not None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pandas/io/parquet.py", line 177, in _get_path_or_handle
+    check_parent_directory(path_or_handle)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work/checkout/venv/lib/python3.13/site-packages/pandas/io/common.py", line 662, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/tmp/claude-0/jpe-work/checkout/checks'
+
+# end: 2026-11-25T16:38:43Z
+# exit: 1
+# seconds: 9.26
+# outcome: failed

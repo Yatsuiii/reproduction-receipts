@@ -1,0 +1,240 @@
+{
+ "format": "receiptgen-expected/1",
+ "written": "2026-11-25, before rerun.py existed; see the commit that adds this file",
+ "rule": "A case passes when status, every command outcome, every output class, every listed flag and the reproduced list all match exactly. 'reproduced' is the set of declared outputs a receipt may call reproduced: rewritten during this run by a command that exited 0, and equal to the committed file (identical) or equal in every number within rel_tol with the same text (numbers-match). The naive baseline calls every declared output of an exit-0 command reproduced.",
+ "classes": {
+  "identical": "rewritten in this run, bytes equal to the committed file",
+  "numbers-match": "rewritten, same text, every number within rel_tol of the committed one, bytes differ",
+  "numbers-differ": "rewritten, same text skeleton, at least one number outside rel_tol",
+  "text-differs": "rewritten, non-numeric text differs from the committed file",
+  "not-rewritten": "committed file present and not written by this run (possible replay of a committed result)",
+  "missing": "declared, not committed, not produced",
+  "no-reference": "produced, but nothing committed to compare with"
+ },
+ "cases": [
+  {
+   "fixture": "clean_identical",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/table.csv": "identical"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/table.csv"
+   ]
+  },
+  {
+   "fixture": "float_last_digit",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/table.csv": "numbers-match"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/table.csv"
+   ]
+  },
+  {
+   "fixture": "values_differ",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/table.tex": "numbers-differ"
+   },
+   "flags": [],
+   "reproduced": [],
+   "differing_numbers": 1
+  },
+  {
+   "fixture": "cache_replay",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/scores.csv": "not-rewritten"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "command_fails",
+   "status": "ran",
+   "commands": {
+    "make": "failed"
+   },
+   "outputs": {
+    "out/table.csv": "not-rewritten"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "timeout",
+   "status": "ran",
+   "commands": {
+    "make": "timeout"
+   },
+   "outputs": {
+    "out/table.csv": "not-rewritten"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "bad_commit",
+   "status": "aborted",
+   "commands": {},
+   "outputs": {},
+   "flags": [
+    "COMMIT_NOT_FOUND"
+   ],
+   "reproduced": []
+  },
+  {
+   "fixture": "undeclared_edit",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/t.csv": "identical"
+   },
+   "flags": [
+    "UNDECLARED_TRACKED_CHANGE"
+   ],
+   "reproduced": [
+    "out/t.csv"
+   ]
+  },
+  {
+   "fixture": "missing_output",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/never.csv": "missing"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "new_output",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/fresh.csv": "no-reference"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "writes_then_fails",
+   "status": "ran",
+   "commands": {
+    "make": "failed"
+   },
+   "outputs": {
+    "out/t.csv": "identical"
+   },
+   "flags": [
+    "OUTPUT_FROM_FAILED_COMMAND"
+   ],
+   "reproduced": []
+  },
+  {
+   "fixture": "text_differs",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/t.txt": "text-differs"
+   },
+   "flags": [],
+   "reproduced": []
+  },
+  {
+   "fixture": "two_commands_one_fails",
+   "status": "ran",
+   "commands": {
+    "a": "exit0",
+    "b": "failed"
+   },
+   "outputs": {
+    "out/a.csv": "identical",
+    "out/b.csv": "not-rewritten"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/a.csv"
+   ]
+  },
+  {
+   "fixture": "converted_binary",
+   "status": "ran",
+   "commands": {
+    "make": "exit0"
+   },
+   "outputs": {
+    "out/x.bin": "numbers-match"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/x.bin"
+   ],
+   "note": "added 2026-11-25 before converters existed: a binary file whose header names the writer's version differs in bytes; after the spec's converter, content is equal, so numbers-match, not identical"
+  },
+  {
+   "fixture": "replay_from_intermediate",
+   "status": "ran",
+   "commands": {
+    "fmt": "exit0"
+   },
+   "outputs": {
+    "out/table.csv": "identical"
+   },
+   "flags": [
+    "READ_COMMITTED_INTERMEDIATE"
+   ],
+   "reproduced": [],
+   "note": "added 2026-11-25 after the first JPE run counted tables formatted from committed results/*.parquet as reproduced: an output whose command read a committed intermediate that this run did not regenerate is not reproduced"
+  },
+  {
+   "fixture": "intermediate_regenerated",
+   "status": "ran",
+   "commands": {
+    "solve": "exit0",
+    "fmt": "exit0"
+   },
+   "outputs": {
+    "results/inter.csv": "identical",
+    "out/table.csv": "identical"
+   },
+   "flags": [],
+   "reproduced": [
+    "out/table.csv",
+    "results/inter.csv"
+   ],
+   "note": "added with the case above: when an earlier command in the same run rewrote the intermediate, reading it is fine"
+  }
+ ],
+ "receipt_text_rules": [
+  "The rendered RECEIPT.md never contains the words wrong, incorrect, error in the paper, or fails to replicate.",
+  "Every output in 'reproduced' and no other is described as reproduced.",
+  "Every command that did not exit 0 appears under 'Failed, stopped or killed runs' with its log path.",
+  "The receipt names the commit, each command exactly as run, the OS, CPU, cores, RAM, tool versions, wall clock and run cost.",
+  "An aborted run says no package code ran."
+ ]
+}

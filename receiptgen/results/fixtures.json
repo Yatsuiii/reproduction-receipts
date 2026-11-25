@@ -1,0 +1,499 @@
+{
+ "rerun_py_sha256": "7573be2328f3094e364b33312c9e72b3827b105fdad88b62ff2df7c265ebd85a",
+ "passed": 16,
+ "text_rules_passed": 16,
+ "naive_baseline_passed": 10,
+ "cases": 16,
+ "rows": [
+  {
+   "fixture": "clean_identical",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/table.csv": "identical"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/table.csv"
+    ]
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/table.csv": "identical"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/table.csv"
+    ]
+   }
+  },
+  {
+   "fixture": "float_last_digit",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/table.csv": "numbers-match"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/table.csv"
+    ]
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/table.csv": "numbers-match"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/table.csv"
+    ]
+   }
+  },
+  {
+   "fixture": "values_differ",
+   "pass": true,
+   "naive_baseline_pass": false,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/table.tex": "numbers-differ"
+    },
+    "flags": [],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/table.tex": "numbers-differ"
+    },
+    "flags": [],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "cache_replay",
+   "pass": true,
+   "naive_baseline_pass": false,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/scores.csv": "not-rewritten"
+    },
+    "flags": [],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/scores.csv": "not-rewritten"
+    },
+    "flags": [],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "command_fails",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "failed"
+    },
+    "outputs": {
+     "out/table.csv": "not-rewritten"
+    },
+    "flags": [],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "failed"
+    },
+    "outputs": {
+     "out/table.csv": "not-rewritten"
+    },
+    "flags": [],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "timeout",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "timeout"
+    },
+    "outputs": {
+     "out/table.csv": "not-rewritten"
+    },
+    "flags": [],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "timeout"
+    },
+    "outputs": {
+     "out/table.csv": "not-rewritten"
+    },
+    "flags": [],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "bad_commit",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "aborted",
+    "commands": {},
+    "outputs": {},
+    "flags": [
+     "COMMIT_NOT_FOUND"
+    ],
+    "reproduced": []
+   },
+   "want": {
+    "status": "aborted",
+    "commands": {},
+    "outputs": {},
+    "flags": [
+     "COMMIT_NOT_FOUND"
+    ],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "undeclared_edit",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/t.csv": "identical"
+    },
+    "flags": [
+     "UNDECLARED_TRACKED_CHANGE"
+    ],
+    "reproduced": [
+     "out/t.csv"
+    ]
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/t.csv": "identical"
+    },
+    "flags": [
+     "UNDECLARED_TRACKED_CHANGE"
+    ],
+    "reproduced": [
+     "out/t.csv"
+    ]
+   }
+  },
+  {
+   "fixture": "missing_output",
+   "pass": true,
+   "naive_baseline_pass": false,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/never.csv": "missing"
+    },
+    "flags": [],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/never.csv": "missing"
+    },
+    "flags": [],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "new_output",
+   "pass": true,
+   "naive_baseline_pass": false,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/fresh.csv": "no-reference"
+    },
+    "flags": [],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/fresh.csv": "no-reference"
+    },
+    "flags": [],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "writes_then_fails",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "failed"
+    },
+    "outputs": {
+     "out/t.csv": "identical"
+    },
+    "flags": [
+     "OUTPUT_FROM_FAILED_COMMAND"
+    ],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "failed"
+    },
+    "outputs": {
+     "out/t.csv": "identical"
+    },
+    "flags": [
+     "OUTPUT_FROM_FAILED_COMMAND"
+    ],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "text_differs",
+   "pass": true,
+   "naive_baseline_pass": false,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/t.txt": "text-differs"
+    },
+    "flags": [],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/t.txt": "text-differs"
+    },
+    "flags": [],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "two_commands_one_fails",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "a": "exit0",
+     "b": "failed"
+    },
+    "outputs": {
+     "out/a.csv": "identical",
+     "out/b.csv": "not-rewritten"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/a.csv"
+    ]
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "a": "exit0",
+     "b": "failed"
+    },
+    "outputs": {
+     "out/a.csv": "identical",
+     "out/b.csv": "not-rewritten"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/a.csv"
+    ]
+   }
+  },
+  {
+   "fixture": "converted_binary",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/x.bin": "numbers-match"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/x.bin"
+    ]
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "make": "exit0"
+    },
+    "outputs": {
+     "out/x.bin": "numbers-match"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/x.bin"
+    ]
+   }
+  },
+  {
+   "fixture": "replay_from_intermediate",
+   "pass": true,
+   "naive_baseline_pass": false,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "fmt": "exit0"
+    },
+    "outputs": {
+     "out/table.csv": "identical"
+    },
+    "flags": [
+     "READ_COMMITTED_INTERMEDIATE"
+    ],
+    "reproduced": []
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "fmt": "exit0"
+    },
+    "outputs": {
+     "out/table.csv": "identical"
+    },
+    "flags": [
+     "READ_COMMITTED_INTERMEDIATE"
+    ],
+    "reproduced": []
+   }
+  },
+  {
+   "fixture": "intermediate_regenerated",
+   "pass": true,
+   "naive_baseline_pass": true,
+   "text_rule_problems": [],
+   "got": {
+    "status": "ran",
+    "commands": {
+     "solve": "exit0",
+     "fmt": "exit0"
+    },
+    "outputs": {
+     "results/inter.csv": "identical",
+     "out/table.csv": "identical"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/table.csv",
+     "results/inter.csv"
+    ]
+   },
+   "want": {
+    "status": "ran",
+    "commands": {
+     "solve": "exit0",
+     "fmt": "exit0"
+    },
+    "outputs": {
+     "results/inter.csv": "identical",
+     "out/table.csv": "identical"
+    },
+    "flags": [],
+    "reproduced": [
+     "out/table.csv",
+     "results/inter.csv"
+    ]
+   }
+  }
+ ]
+}

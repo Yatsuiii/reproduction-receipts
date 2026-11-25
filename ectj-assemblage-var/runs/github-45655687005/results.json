@@ -1,0 +1,648 @@
+{
+ "format": "receiptgen-results/1",
+ "spec": {
+  "title": "Barrette, Goulet Coulombe and Reinicke, \"Building Macroeconomically Relevant Climate Indices via the Assemblage VAR\" (Econometrics Journal, forthcoming)",
+  "paper": "Barrette, Goulet Coulombe and Reinicke, Building Macroeconomically Relevant Climate Indices via the Assemblage VAR, The Econometrics Journal, forthcoming (arXiv 2610.10043)",
+  "package_label": "the authors' repository [timmy-o-toole/Assemblage_VAR](https://github.com/timmy-o-toole/Assemblage_VAR), not the Zenodo deposit 10.5281/zenodo.23976450, which this machine cannot reach",
+  "repo": "https://github.com/timmy-o-toole/Assemblage_VAR",
+  "commit": "199c5f8c432c9571e601ce68ada49ab3d1819e55",
+  "protocol": "PROTOCOL.md",
+  "cost_per_hour_usd": 0.2,
+  "cost_basis": "typical on-demand price for a 4 vCPU, 16 GB cloud machine",
+  "compare": {
+   "rel_tol": 1e-12
+  },
+  "environment_commands": [
+   {
+    "id": "R_sessionInfo",
+    "cmd": "Rscript -e 'for (p in c(\"NlcOptim\",\"vars\",\"ggplot2\",\"ggthemes\",\"zoo\",\"scales\",\"ggh4x\",\"ragg\",\"systemfonts\")) cat(p, tryCatch(as.character(packageVersion(p)), error=function(e) \"not installed\"), \"\\n\"); print(sessionInfo())'"
+   }
+  ],
+  "setup": [
+   {
+    "id": "install",
+    "cmd": "Rscript install_packages.R",
+    "timeout_s": 3600
+   }
+  ],
+  "commands": [
+   {
+    "id": "run_all",
+    "cmd": "Rscript run_all.R",
+    "timeout_s": 7200,
+    "outputs": [
+     "results/point_estimates/comp_national.rds",
+     "results/point_estimates/comp_noaa.rds",
+     "results/point_estimates/comp_regional.rds",
+     "results/point_estimates/rank_national.rds",
+     "results/point_estimates/rank_noaa.rds",
+     "results/point_estimates/rank_regional.rds",
+     "results/summary_numbers.txt"
+    ]
+   }
+  ],
+  "scope_notes": [
+   "Fast mode only, the README's default (`Rscript run_all.R`, about 10 minutes): it re-estimates the aggregation weights at the published penalties, recomputes the point impulse responses, redraws the figures and rewrites the numbers quoted in the paper. It reads the shipped bootstrap bands and appendix bootstrap results; those are not recomputed, so nothing here speaks to them.",
+   "Figures are git-ignored in this package, so there is nothing committed to compare them with. The paper's PDF was not compared."
+  ]
+ },
+ "started": "2026-11-25T16:37:46Z",
+ "status": "ran",
+ "flags": [],
+ "commands": [
+  {
+   "id": "install",
+   "cmd": "Rscript install_packages.R",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T16:37:57Z",
+   "end": "2026-11-25T16:40:10Z",
+   "exit_code": 0,
+   "seconds": 132.98,
+   "outcome": "exit0",
+   "log": "evidence/logs/install.log",
+   "setup": true
+  },
+  {
+   "id": "run_all",
+   "cmd": "Rscript run_all.R",
+   "cwd": ".",
+   "timeout_s": 7200,
+   "start": "2026-11-25T16:40:11Z",
+   "end": "2026-11-25T16:42:14Z",
+   "exit_code": 0,
+   "seconds": 123.66,
+   "outcome": "exit0",
+   "log": "evidence/logs/run_all.log",
+   "setup": false
+  }
+ ],
+ "outputs": {
+  "results/point_estimates/comp_national.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "d8dd936477a3c4ce33af60eb59bfea56c009bdf18ebbb96f0b6b221f10fd111f",
+   "committed_sha256": "edb297dfc542ead51d685e277be6807d50e5d309219883461f6bcb304d41c13d",
+   "converter": "Rscript -e 'dput(readRDS(commandArgs(TRUE)[1]), control = c(\"keepNA\", \"keepInteger\", \"niceNames\", \"showAttributes\", \"digits17\"))' {in}",
+   "class": "text-differs",
+   "numbers_committed": 35112,
+   "numbers_regenerated": 35112,
+   "reproduced": false
+  },
+  "results/point_estimates/comp_noaa.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "3df4cfcdaf48701aa47494e1ac6d952c7ab3225be8f45bb1d81fe0459e098a60",
+   "committed_sha256": "d538fcb757c6ca0aeda6ee55ab9b4dd8de48a14d71ea2b6fc57acf61a4f0d258",
+   "converter": "Rscript -e 'dput(readRDS(commandArgs(TRUE)[1]), control = c(\"keepNA\", \"keepInteger\", \"niceNames\", \"showAttributes\", \"digits17\"))' {in}",
+   "class": "text-differs",
+   "numbers_committed": 80398,
+   "numbers_regenerated": 80398,
+   "reproduced": false
+  },
+  "results/point_estimates/comp_regional.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "f4227657889d54e4ef09559693f78f8801386e4f734d1c855f55c5ad8052b481",
+   "committed_sha256": "f1a5edbd5001dcac23e066e7a77f8fe47d1577ad54b0cae6a163f964d060b491",
+   "converter": "Rscript -e 'dput(readRDS(commandArgs(TRUE)[1]), control = c(\"keepNA\", \"keepInteger\", \"niceNames\", \"showAttributes\", \"digits17\"))' {in}",
+   "class": "text-differs",
+   "numbers_committed": 52200,
+   "numbers_regenerated": 52200,
+   "reproduced": false
+  },
+  "results/point_estimates/rank_national.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "ad48216398b05eaaafd9a89e1308705804eaa340b24061cfe4047f52e91c36c5",
+   "committed_sha256": "f21671f1af6526f75e4c1801768405b827b8e376fee69d6bb0a955f1071a1558",
+   "converter": "Rscript -e 'dput(readRDS(commandArgs(TRUE)[1]), control = c(\"keepNA\", \"keepInteger\", \"niceNames\", \"showAttributes\", \"digits17\"))' {in}",
+   "class": "text-differs",
+   "numbers_committed": 39804,
+   "numbers_regenerated": 39804,
+   "reproduced": false
+  },
+  "results/point_estimates/rank_noaa.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "9ec17835cd9102443fd8ef31ffb17360c42c44e2bf745a0ccf96ebd6ad6fcef7",
+   "committed_sha256": "61c2a6e73d396a2bb20cda058dba6d006e70009fb1dec8ef280eb101f3275a2b",
+   "converter": "Rscript -e 'dput(readRDS(commandArgs(TRUE)[1]), control = c(\"keepNA\", \"keepInteger\", \"niceNames\", \"showAttributes\", \"digits17\"))' {in}",
+   "class": "text-differs",
+   "numbers_committed": 130498,
+   "numbers_regenerated": 130498,
+   "reproduced": false
+  },
+  "results/point_estimates/rank_regional.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "a6e6c6ccfade69604637c02598a59c2df833ee4fce02ba03dbf90fd211331e2e",
+   "committed_sha256": "dcfcd17198be36433e97fcfc185c513e3b1b827c13a33b8c70921698ffe9f775",
+   "converter": "Rscript -e 'dput(readRDS(commandArgs(TRUE)[1]), control = c(\"keepNA\", \"keepInteger\", \"niceNames\", \"showAttributes\", \"digits17\"))' {in}",
+   "class": "text-differs",
+   "numbers_committed": 73954,
+   "numbers_regenerated": 73954,
+   "reproduced": false
+  },
+  "results/summary_numbers.txt": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "9471983988ab813af28a934c852f3da57c1a8f575d977da9d894f895b029d4e5",
+   "committed_sha256": "d436c805a996b496bb306658e30f6fb6f3654d51e4cd6e0f1c5523a7813d7637",
+   "numbers": 1267,
+   "numbers_text_identical": 1178,
+   "numbers_differ": 89,
+   "differences": [
+    {
+     "line": 16,
+     "committed": "1.6e-14",
+     "regenerated": "2.9e-15"
+    },
+    {
+     "line": 17,
+     "committed": "0.0e+00",
+     "regenerated": "1.5e-06"
+    },
+    {
+     "line": 18,
+     "committed": "-0.239",
+     "regenerated": "-0.242"
+    },
+    {
+     "line": 18,
+     "committed": "3.1e-03",
+     "regenerated": "1.4e-02"
+    },
+    {
+     "line": 19,
+     "committed": "-0.313",
+     "regenerated": "-0.314"
+    },
+    {
+     "line": 19,
+     "committed": "5.2e-03",
+     "regenerated": "6.6e-03"
+    },
+    {
+     "line": 20,
+     "committed": "5.7e-07",
+     "regenerated": "6.5e-07"
+    },
+    {
+     "line": 21,
+     "committed": "1.1e-03",
+     "regenerated": "1.7e-05"
+    },
+    {
+     "line": 22,
+     "committed": "-0.314",
+     "regenerated": "-0.312"
+    },
+    {
+     "line": 22,
+     "committed": "2.2e-03",
+     "regenerated": "1.4e-02"
+    },
+    {
+     "line": 38,
+     "committed": "24.4",
+     "regenerated": "24.7"
+    },
+    {
+     "line": 38,
+     "committed": "9.1",
+     "regenerated": "9.2"
+    },
+    {
+     "line": 38,
+     "committed": "8.8",
+     "regenerated": "8.5"
+    },
+    {
+     "line": 38,
+     "committed": "18.2",
+     "regenerated": "18.4"
+    },
+    {
+     "line": 38,
+     "committed": "39.4",
+     "regenerated": "39.3"
+    },
+    {
+     "line": 39,
+     "committed": "0.0",
+     "regenerated": "0.1"
+    },
+    {
+     "line": 39,
+     "committed": "28.6",
+     "regenerated": "28.1"
+    },
+    {
+     "line": 39,
+     "committed": "2.8",
+     "regenerated": "2.9"
+    },
+    {
+     "line": 39,
+     "committed": "8.0",
+     "regenerated": "8.2"
+    },
+    {
+     "line": 40,
+     "committed": "2.3",
+     "regenerated": "2.5"
+    },
+    {
+     "line": 41,
+     "committed": "7.3",
+     "regenerated": "7.5"
+    },
+    {
+     "line": 42,
+     "committed": "13.7",
+     "regenerated": "13.8"
+    },
+    {
+     "line": 42,
+     "committed": "3.7",
+     "regenerated": "4.0"
+    },
+    {
+     "line": 42,
+     "committed": "35.9",
+     "regenerated": "35.6"
+    },
+    {
+     "line": 42,
+     "committed": "12.8",
+     "regenerated": "12.9"
+    },
+    {
+     "line": 42,
+     "committed": "12.0",
+     "regenerated": "12.1"
+    },
+    {
+     "line": 42,
+     "committed": "21.9",
+     "regenerated": "21.7"
+    },
+    {
+     "line": 43,
+     "committed": "87",
+     "regenerated": "-1353"
+    },
+    {
+     "line": 43,
+     "committed": "0",
+     "regenerated": "4"
+    },
+    {
+     "line": 43,
+     "committed": "80",
+     "regenerated": "79"
+    },
+    {
+     "line": 43,
+     "committed": "67",
+     "regenerated": "68"
+    },
+    {
+     "line": 48,
+     "committed": "1.6",
+     "regenerated": "1.5"
+    },
+    {
+     "line": 48,
+     "committed": "10.6",
+     "regenerated": "10.5"
+    },
+    {
+     "line": 48,
+     "committed": "4.6",
+     "regenerated": "4.7"
+    },
+    {
+     "line": 49,
+     "committed": "12.2",
+     "regenerated": "12.3"
+    },
+    {
+     "line": 51,
+     "committed": "9.5",
+     "regenerated": "9.4"
+    },
+    {
+     "line": 51,
+     "committed": "0.4",
+     "regenerated": "0.3"
+    },
+    {
+     "line": 51,
+     "committed": "26.7",
+     "regenerated": "26.6"
+    },
+    {
+     "line": 53,
+     "committed": "0.2",
+     "regenerated": "0.3"
+    },
+    {
+     "line": 54,
+     "committed": "16.8",
+     "regenerated": "17.0"
+    },
+    {
+     "line": 54,
+     "committed": "32.0",
+     "regenerated": "31.9"
+    },
+    {
+     "line": 55,
+     "committed": "36.16",
+     "regenerated": "36.08"
+    },
+    {
+     "line": 55,
+     "committed": "27.45",
+     "regenerated": "27.53"
+    },
+    {
+     "line": 62,
+     "committed": "13.724",
+     "regenerated": "13.723"
+    },
+    {
+     "line": 62,
+     "committed": "14.833",
+     "regenerated": "14.839"
+    },
+    {
+     "line": 62,
+     "committed": "5.968",
+     "regenerated": "5.964"
+    },
+    {
+     "line": 62,
+     "committed": "5.502",
+     "regenerated": "5.504"
+    },
+    {
+     "line": 62,
+     "committed": "14.833",
+     "regenerated": "14.839"
+    },
+    {
+     "line": 63,
+     "committed": "12.49",
+     "regenerated": "12.46"
+    },
+    {
+     "line": 63,
+     "committed": "12.49",
+     "regenerated": "12.46"
+    },
+    {
+     "line": 63,
+     "committed": "25.01",
+     "regenerated": "24.98"
+    },
+    {
+     "line": 64,
+     "committed": "59.2",
+     "regenerated": "59.1"
+    },
+    {
+     "line": 65,
+     "committed": "2.921",
+     "regenerated": "2.895"
+    },
+    {
+     "line": 65,
+     "committed": "8",
+     "regenerated": "7"
+    },
+    {
+     "line": 65,
+     "committed": "9",
+     "regenerated": "8"
+    },
+    {
+     "line": 65,
+     "committed": "2.585",
+     "regenerated": "2.567"
+    },
+    {
+     "line": 65,
+     "committed": "2.947",
+     "regenerated": "2.915"
+    },
+    {
+     "line": 65,
+     "committed": "2.591",
+     "regenerated": "2.562"
+    },
+    {
+     "line": 65,
+     "committed": "2.921",
+     "regenerated": "2.895"
+    },
+    {
+     "line": 66,
+     "committed": "75.2",
+     "regenerated": "73.3"
+    },
+    {
+     "line": 66,
+     "committed": "0.17",
+     "regenerated": "0.66"
+    },
+    {
+     "line": 66,
+     "committed": "0.43",
+     "regenerated": "0.96"
+    },
+    {
+     "line": 66,
+     "committed": "3.30",
+     "regenerated": "3.70"
+    },
+    {
+     "line": 67,
+     "committed": "39.7",
+     "regenerated": "38.9"
+    },
+    {
+     "line": 67,
+     "committed": "49.0",
+     "regenerated": "47.9"
+    },
+    {
+     "line": 67,
+     "committed": "49.2",
+     "regenerated": "48.3"
+    },
+    {
+     "line": 67,
+     "committed": "49.2",
+     "regenerated": "48.3"
+    },
+    {
+     "line": 67,
+     "committed": "49.2",
+     "regenerated": "49.1"
+    },
+    {
+     "line": 67,
+     "committed": "51.4",
+     "regenerated": "52.9"
+    },
+    {
+     "line": 67,
+     "committed": "64.5",
+     "regenerated": "65.6"
+    },
+    {
+     "line": 67,
+     "committed": "82.8",
+     "regenerated": "82.9"
+    },
+    {
+     "line": 89,
+     "committed": "9.1",
+     "regenerated": "9.2"
+    },
+    {
+     "line": 89,
+     "committed": "24.4",
+     "regenerated": "24.7"
+    },
+    {
+     "line": 89,
+     "committed": "8.8",
+     "regenerated": "8.5"
+    },
+    {
+     "line": 89,
+     "committed": "18.2",
+     "regenerated": "18.4"
+    },
+    {
+     "line": 89,
+     "committed": "39.4",
+     "regenerated": "39.3"
+    },
+    {
+     "line": 90,
+     "committed": "32.0",
+     "regenerated": "31.9"
+    },
+    {
+     "line": 90,
+     "committed": "16.8",
+     "regenerated": "17.0"
+    },
+    {
+     "line": 92,
+     "committed": "5.97",
+     "regenerated": "5.96"
+    },
+    {
+     "line": 93,
+     "committed": "2.95",
+     "regenerated": "2.91"
+    },
+    {
+     "line": 98,
+     "committed": "86.8",
+     "regenerated": "87.1"
+    },
+    {
+     "line": 102,
+     "committed": "99.8",
+     "regenerated": "100.0"
+    },
+    {
+     "line": 103,
+     "committed": "92.2",
+     "regenerated": "92.3"
+    },
+    {
+     "line": 103,
+     "committed": "99.5",
+     "regenerated": "99.6"
+    },
+    {
+     "line": 125,
+     "committed": "+13.9",
+     "regenerated": "+13.3"
+    },
+    {
+     "line": 125,
+     "committed": "-6.6",
+     "regenerated": "-6.2"
+    },
+    {
+     "line": 125,
+     "committed": "+1.1",
+     "regenerated": "+1.2"
+    },
+    {
+     "line": 125,
+     "committed": "+13.3",
+     "regenerated": "+12.6"
+    },
+    {
+     "line": 127,
+     "committed": "+10.8",
+     "regenerated": "+10.9"
+    }
+   ],
+   "class": "numbers-differ",
+   "reproduced": false
+  }
+ },
+ "reproduced": [],
+ "commit": "199c5f8c432c9571e601ce68ada49ab3d1819e55",
+ "package_files": 78,
+ "package_files_sha256": "0a9af5448cf42a7e4ba344e8f64b4718841017d5fbc65cd51a02e863fca0abb3",
+ "environment": {
+  "platform": "Linux-7.0.0-1014-aws-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cores": 4,
+  "os": "Ubuntu 24.04.5 LTS",
+  "cpu": "Intel(R) Xeon(R) 6975P-C",
+  "ram_gb": 15.3,
+  "gpu": "none",
+  "tools": {
+   "git": "git version 2.56.1",
+   "python3": "Python 3.12.3",
+   "R": "R version 4.6.2 (2026-10-29) -- \"Diversified Portfolio\"",
+   "julia": "julia version 1.13.4"
+  },
+  "extra": {
+   "R_sessionInfo": "NlcOptim 0.6 \nvars 1.6.1 \nggplot2 4.0.4 \nggthemes 7.0.0 \nzoo 1.9.1 \nscales 1.4.0 \nggh4x 0.3.1 \nragg not installed \nsystemfonts not installed \nR version 4.6.2 (2026-10-29)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.5 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 \nLAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: UTC\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n[1] compiler_4.6.2\n"
+  }
+ },
+ "untracked_after": 0,
+ "tracked_not_declared_ok": [
+  "results/point_estimates/comp_national.rds",
+  "results/point_estimates/comp_noaa.rds",
+  "results/point_estimates/comp_regional.rds",
+  "results/point_estimates/rank_national.rds",
+  "results/point_estimates/rank_noaa.rds",
+  "results/point_estimates/rank_regional.rds",
+  "results/summary_numbers.txt"
+ ],
+ "finished": "2026-11-25T16:45:07Z",
+ "wall_clock_seconds": 256.64,
+ "cost_usd": 0.0143
+}

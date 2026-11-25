@@ -1,0 +1,21 @@
+# command: Rscript run_all.R
+# cwd: .
+# start: 2026-11-25T16:35:08Z
+# timeout_s: 7200
+
+############ 01_estimate_weights.R ############
+
+== comp_national (National, component space) ==
+  sample 1975-01-01..2025-05-01, 587 months after removing 18 covid months; 574 lag-stack rows, 561 gap-valid pairs; K = 5
+  using the published cross-validated lambda = 11.5684
+Error in loadNamespace(x) : there is no package called ‘NlcOptim’
+Calls: solve_weights ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+Error in run("01_estimate_weights.R") : 
+  step failed: 01_estimate_weights.R
+Execution halted
+
+# end: 2026-11-25T16:35:09Z
+# exit: 1
+# seconds: 0.72
+# outcome: failed

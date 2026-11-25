@@ -1,0 +1,139 @@
+{
+ "title": "Conlon and Rao, \"The Cost of Curbing Externalities with Market Power: Alcohol Regulations and Tax Alternatives\" (Journal of Political Economy, forthcoming)",
+ "paper": "Christopher T. Conlon and Nirupama S. Rao, The Cost of Curbing Externalities with Market Power: Alcohol Regulations and Tax Alternatives, Journal of Political Economy, forthcoming",
+ "package_label": "the authors' repository [chrisconlon/Liquor_Replication_JPE](https://github.com/chrisconlon/Liquor_Replication_JPE), README Entry Point 2 (no NielsenIQ access)",
+ "repo": "https://github.com/chrisconlon/Liquor_Replication_JPE",
+ "commit": "97567b1968f44980a47a7b72c1928a5e01255a67",
+ "protocol": "PROTOCOL.md",
+ "cost_per_hour_usd": 0.2,
+ "cost_basis": "typical on-demand price for a 4 vCPU, 16 GB cloud machine",
+ "compare": {
+  "rel_tol": 1e-12
+ },
+ "environment_commands": [
+  {
+   "id": "pip_freeze",
+   "cmd": "/tmp/claude-0/jpe-work2/checkout/venv/bin/pip freeze"
+  }
+ ],
+ "setup": [
+  {
+   "id": "install",
+   "cmd": "python3 -m venv venv && venv/bin/pip install -q -U pip && venv/bin/pip install --uploaded-prior-to 2026-03-20T00:00:00Z -r requirements.txt",
+   "timeout_s": 3600
+  },
+  {
+   "id": "mkdir_checks",
+   "cmd": "mkdir -p checks",
+   "timeout_s": 60
+  }
+ ],
+ "commands": [
+  {
+   "id": "estimate_demand_MAIN",
+   "cmd": "cd estimation_code && ../venv/bin/python estimate_demand_MAIN.py ../estimation_outputs/slow_paper.pickle",
+   "timeout_s": 259200,
+   "outputs": [
+    "estimation_outputs/slow_paper.pickle"
+   ]
+  },
+  {
+   "id": "post_estimation",
+   "cmd": "cd estimation_code && ../venv/bin/python post_estimation.py ../estimation_outputs/slow_paper.pickle",
+   "timeout_s": 14400,
+   "outputs": [
+    {
+     "path": "estimation_outputs/slow_paper_mc.parquet",
+     "convert": "venv/bin/python -c \"import sys, pandas as pd; print(pd.read_parquet(sys.argv[1]).to_csv(index=False, float_format='%.17g'))\" {in}"
+    }
+   ]
+  },
+  {
+   "id": "1_descriptive_tables",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 1_descriptive_tables.py",
+   "timeout_s": 3600,
+   "outputs": [
+    "tables_and_figures/table1_summary_tab_cat.tex",
+    "tables_and_figures/table2_summary_tab_manuf.tex",
+    {
+     "glob": "app_figures/summary_tab_*.tex"
+    },
+    {
+     "glob": "app_figures/size_cat_table.tex"
+    }
+   ]
+  },
+  {
+   "id": "12_panel_regressions",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 12_panel_regressions.py",
+   "timeout_s": 3600,
+   "outputs": [
+    "tables_and_figures/ph_panelreg.tex",
+    "tables_and_figures/ph_retailreg.tex"
+   ]
+  },
+  {
+   "id": "4_parameter_tables",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 4_parameter_tables.py",
+   "timeout_s": 3600,
+   "outputs": [
+    "tables_and_figures/table3_parameter_results.tex",
+    "tables_and_figures/table4_diversion_results.tex"
+   ]
+  },
+  {
+   "id": "3a_compute_counterfactual",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 3a_compute_counterfactual.py --all",
+   "timeout_s": 86400,
+   "outputs": []
+  },
+  {
+   "id": "3b_collate_cf",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 3b_collate_cf.py",
+   "timeout_s": 3600,
+   "outputs": [
+    {
+     "glob": "results/all_*.parquet",
+     "convert": "venv/bin/python -c \"import sys, pandas as pd; print(pd.read_parquet(sys.argv[1]).to_csv(index=False, float_format='%.17g'))\" {in}"
+    }
+   ]
+  },
+  {
+   "id": "3c_compute_counterfactual_both_tax",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 3c_compute_counterfactual_both_tax.py",
+   "timeout_s": 43200,
+   "outputs": []
+  },
+  {
+   "id": "6_counterfactual_plots",
+   "cmd": "cd counterfactual_code && ../venv/bin/python 6_counterfactual_plots.py",
+   "timeout_s": 3600,
+   "outputs": [
+    {
+     "glob": "tables_and_figures/table[678]*.tex"
+    },
+    {
+     "glob": "tables_and_figures/alt_table*.tex"
+    },
+    {
+     "glob": "tables_and_figures/figure[78]*.pdf",
+     "compare": "hash-only"
+    }
+   ]
+  }
+ ],
+ "scope_notes": [
+  "Entry Point 2 of the README: demand estimation from the provided `estimation_data/`, then the counterfactuals and their tables. Stage 1 (cleaning from NielsenIQ) needs licensed data and is not run.",
+  "The README's Stage 3 asks for `slow_paper.pickle` from a Dataverse DOI marked TBD. That file is not in the repository, so here it is produced by the README's own Stage 2 command (`estimate_demand_MAIN.py`) and used by every later step.",
+  "Not run: the nested logit, demographics-only and fast RCNL specifications (they feed no main-text table compared here), the rho grid, and the five appendix notebooks. Figures 7 and 8 are hashed only. The paper's PDF was not compared."
+ ],
+ "committed_intermediates": [
+  "estimation_outputs/*.parquet",
+  "results/*.parquet"
+ ],
+ "deviations": [
+  "Package versions: `pip install --uploaded-prior-to 2026-03-20T00:00:00Z -r requirements.txt`, so pip chooses what was current the day after the package commit (19 Mar 2026). In run 1, plain `pip install -r requirements.txt` resolved pyblp 1.3.0 (Oct 2026), which rejects the package's micro dataset before estimation starts.",
+  "`mkdir -p checks` before any step: `1_descriptive_tables.py` saves to `checks/`, which is not in the repository.",
+  "Order: the README's stage order (estimation, then Stage 3.1 descriptive tables onward), not the order written in the protocol, so that Table 2 reads this run's marginal costs. The protocol addendum records this."
+ ]
+}

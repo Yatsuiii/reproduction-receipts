@@ -1,0 +1,35 @@
+# command: cd counterfactual_code && ../venv/bin/python 4_parameter_tables.py
+# cwd: .
+# start: 2026-11-25T16:46:17Z
+# timeout_s: 3600
+/tmp/claude-0/jpe-work2/checkout/counterfactual_code/parameter_helper.py:28: SyntaxWarning: invalid escape sequence '\$'
+  pi_table.index = ['Below \$25k', '', '\$25k-\$45k', '', '\$45k-\$70k', '', '\$70k-\$100k', '', 'Above \$100k', '']
+/tmp/claude-0/jpe-work2/checkout/counterfactual_code/parameter_helper.py:28: SyntaxWarning: invalid escape sequence '\$'
+  pi_table.index = ['Below \$25k', '', '\$25k-\$45k', '', '\$45k-\$70k', '', '\$70k-\$100k', '', 'Above \$100k', '']
+/tmp/claude-0/jpe-work2/checkout/counterfactual_code/parameter_helper.py:28: SyntaxWarning: invalid escape sequence '\$'
+  pi_table.index = ['Below \$25k', '', '\$25k-\$45k', '', '\$45k-\$70k', '', '\$70k-\$100k', '', 'Above \$100k', '']
+/tmp/claude-0/jpe-work2/checkout/counterfactual_code/parameter_helper.py:28: SyntaxWarning: invalid escape sequence '\$'
+  pi_table.index = ['Below \$25k', '', '\$25k-\$45k', '', '\$45k-\$70k', '', '\$70k-\$100k', '', 'Above \$100k', '']
+/tmp/claude-0/jpe-work2/checkout/counterfactual_code/parameter_helper.py:28: SyntaxWarning: invalid escape sequence '\$'
+  pi_table.index = ['Below \$25k', '', '\$25k-\$45k', '', '\$45k-\$70k', '', '\$70k-\$100k', '', 'Above \$100k', '']
+/tmp/claude-0/jpe-work2/checkout/counterfactual_code/parameter_helper.py:89: SyntaxWarning: invalid escape sequence '\ '
+  header = '\\begin{tabular}{lccc} \n\\toprule \n\\multicolumn{1}{c}{$\\Pi$} &  Const &  Price &  1750mL \\\ \n\\cmidrule(r){1-1} \\cmidrule(rrr){2-4} \n'
+/tmp/claude-0/jpe-work2/checkout/counterfactual_code/parameter_helper.py:91: SyntaxWarning: invalid escape sequence '\ '
+  mid_1 = '\\midrule \\multicolumn{1}{c}{$\\Sigma^2$}& \\multicolumn{2}{c}{} \\\ \\cmidrule(r){1-1} \\cmidrule(rrr){2-4}\n'
+/tmp/claude-0/jpe-work2/checkout/counterfactual_code/parameter_helper.py:96: SyntaxWarning: invalid escape sequence '\ '
+  mid_2 = '\\midrule  \n\\multicolumn{1}{l}{Nesting Parameter $\\rho$} &  &'+rho+'&    \\\ \n& &('+rho_se+')&     \\\ \n\\multicolumn{1}{l}{Fixed Effects} &   \\multicolumn{3}{c}{Brand+Quarter}\\\ \n\\midrule \n%\\multicolumn{1}{c}{}& \\multicolumn{3}{c}{Model Predictions} \\\ \n\\multicolumn{1}{c}{Model Predictions}& 25\\% & 50\\% & 75\\% \\\ \\midrule'
+/tmp/claude-0/jpe-work2/checkout/counterfactual_code/parameter_helper.py:96: SyntaxWarning: invalid escape sequence '\ '
+  mid_2 = '\\midrule  \n\\multicolumn{1}{l}{Nesting Parameter $\\rho$} &  &'+rho+'&    \\\ \n& &('+rho_se+')&     \\\ \n\\multicolumn{1}{l}{Fixed Effects} &   \\multicolumn{3}{c}{Brand+Quarter}\\\ \n\\midrule \n%\\multicolumn{1}{c}{}& \\multicolumn{3}{c}{Model Predictions} \\\ \n\\multicolumn{1}{c}{Model Predictions}& 25\\% & 50\\% & 75\\% \\\ \\midrule'
+Traceback (most recent call last):
+  File "/tmp/claude-0/jpe-work2/checkout/counterfactual_code/4_parameter_tables.py", line 24, in <module>
+    eth_diversion = pd.Series(np.hstack([calc_ethanol_diversion(pyblp.read_pickle(fn_results), prod_info, mkt=i)['ethanol_diversion'].values for i in range(1,25)])).describe()
+                                                                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/tmp/claude-0/jpe-work2/checkout/venv/lib/python3.13/site-packages/pyblp/construction.py", line 639, in read_pickle
+    with open(path, 'rb') as handle:
+         ~~~~^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/claude-0/jpe-work2/checkout/estimation_outputs/slow_paper.pickle'
+
+# end: 2026-11-25T16:46:20Z
+# exit: 1
+# seconds: 2.58
+# outcome: failed

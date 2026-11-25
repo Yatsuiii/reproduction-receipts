@@ -1,0 +1,90 @@
+# command: Rscript install_packages.R
+# cwd: .
+# start: 2026-11-25T17:02:15Z
+# timeout_s: 3600
+installing: NlcOptim, vars, ggplot2, ggthemes, zoo, scales, ggh4x 
+Installing packages into 'D:/a/_temp/Library'
+(as 'lib' is unspecified)
+also installing the dependencies 'utf8', 'cpp11', 'magrittr', 'pillar', 'pkgconfig', 'quadprog', 'strucchange', 'urca', 'lmtest', 'sandwich', 'cli', 'gtable', 'isoband', 'lifecycle', 'rlang', 'S7', 'vctrs', 'withr', 'purrr', 'tibble', 'farver', 'glue', 'labeling', 'R6', 'RColorBrewer', 'viridisLite'
+
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/utf8_1.2.6.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/cpp11_0.5.5.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/magrittr_2.0.5.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/pillar_1.11.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/pkgconfig_2.0.3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/quadprog_1.5-8.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/strucchange_1.6-0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/urca_1.3-4.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/lmtest_0.9-40.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/sandwich_3.1-3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/cli_3.6.6.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/gtable_0.3.6.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/isoband_0.3.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/lifecycle_1.0.5.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/rlang_1.3.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/S7_1.0.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/vctrs_0.7.3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/withr_3.0.3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/purrr_1.2.2.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/tibble_3.3.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/farver_2.1.2.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/glue_1.8.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/labeling_0.4.3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/R6_2.6.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/RColorBrewer_1.1-3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/viridisLite_0.4.3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/NlcOptim_0.6.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/vars_1.6-1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/ggplot2_4.0.4.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/ggthemes_7.0.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/zoo_1.9-1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/scales_1.4.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/ggh4x_0.3.1.zip'
+package 'utf8' successfully unpacked and MD5 sums checked
+package 'cpp11' successfully unpacked and MD5 sums checked
+package 'magrittr' successfully unpacked and MD5 sums checked
+package 'pillar' successfully unpacked and MD5 sums checked
+package 'pkgconfig' successfully unpacked and MD5 sums checked
+package 'quadprog' successfully unpacked and MD5 sums checked
+package 'strucchange' successfully unpacked and MD5 sums checked
+package 'urca' successfully unpacked and MD5 sums checked
+package 'lmtest' successfully unpacked and MD5 sums checked
+package 'sandwich' successfully unpacked and MD5 sums checked
+package 'cli' successfully unpacked and MD5 sums checked
+package 'gtable' successfully unpacked and MD5 sums checked
+package 'isoband' successfully unpacked and MD5 sums checked
+package 'lifecycle' successfully unpacked and MD5 sums checked
+package 'rlang' successfully unpacked and MD5 sums checked
+package 'S7' successfully unpacked and MD5 sums checked
+package 'vctrs' successfully unpacked and MD5 sums checked
+package 'withr' successfully unpacked and MD5 sums checked
+package 'purrr' successfully unpacked and MD5 sums checked
+package 'tibble' successfully unpacked and MD5 sums checked
+package 'farver' successfully unpacked and MD5 sums checked
+package 'glue' successfully unpacked and MD5 sums checked
+package 'labeling' successfully unpacked and MD5 sums checked
+package 'R6' successfully unpacked and MD5 sums checked
+package 'RColorBrewer' successfully unpacked and MD5 sums checked
+package 'viridisLite' successfully unpacked and MD5 sums checked
+package 'NlcOptim' successfully unpacked and MD5 sums checked
+package 'vars' successfully unpacked and MD5 sums checked
+package 'ggplot2' successfully unpacked and MD5 sums checked
+package 'ggthemes' successfully unpacked and MD5 sums checked
+package 'zoo' successfully unpacked and MD5 sums checked
+package 'scales' successfully unpacked and MD5 sums checked
+package 'ggh4x' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\runneradmin\AppData\Local\Temp\Rtmp4GavQy\downloaded_packages
+all required packages are installed at or above the tested versions
+optional packages not installed:
+  ragg         PNG device (optional; without it the figures use the base PNG device)
+  systemfonts  font detection (optional; without it the figures use default fonts)
+  RJDemetra    X-13ARIMA-SEATS seasonal adjustment, data preparation only (optional; needs rJava and a Java 8+ runtime)
+  rJava        Java interface for RJDemetra, data preparation only (optional)
+  readxl       reading the raw Excel files, data preparation only (optional)
+
+# end: 2026-11-25T17:02:18Z
+# exit: 0
+# seconds: 3.09
+# outcome: exit0

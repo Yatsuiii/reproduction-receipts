@@ -1,0 +1,12 @@
+{
+ "title": "fixture intermediate_regenerated",
+ "repo": "{{REPO}}",
+ "commit": "{{HEAD}}",
+ "cost_per_hour_usd": 0.2,
+ "compare": {"rel_tol": 1e-12},
+ "committed_intermediates": ["results/*"],
+ "commands": [
+  {"id": "solve", "cmd": "python3 solve.py", "timeout_s": 60, "outputs": ["results/inter.csv"]},
+  {"id": "fmt", "cmd": "python3 fmt.py", "timeout_s": 60, "outputs": ["out/table.csv"]}
+ ]
+}

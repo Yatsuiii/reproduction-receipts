@@ -1,0 +1,165 @@
+{
+ "format": "receiptgen-results/1",
+ "spec": {
+  "title": "Barrette, Goulet Coulombe and Reinicke, \"Building Macroeconomically Relevant Climate Indices via the Assemblage VAR\" (Econometrics Journal, forthcoming)",
+  "paper": "Barrette, Goulet Coulombe and Reinicke, Building Macroeconomically Relevant Climate Indices via the Assemblage VAR, The Econometrics Journal, forthcoming (arXiv 2610.10043)",
+  "package_label": "the authors' repository [timmy-o-toole/Assemblage_VAR](https://github.com/timmy-o-toole/Assemblage_VAR), not the Zenodo deposit 10.5281/zenodo.23976450, which this machine cannot reach",
+  "repo": "https://github.com/timmy-o-toole/Assemblage_VAR",
+  "commit": "199c5f8c432c9571e601ce68ada49ab3d1819e55",
+  "protocol": "PROTOCOL.md",
+  "cost_per_hour_usd": 0.2,
+  "cost_basis": "typical on-demand price for a 4 vCPU, 16 GB cloud machine",
+  "compare": {
+   "rel_tol": 1e-12
+  },
+  "environment_commands": [
+   {
+    "id": "R_sessionInfo",
+    "cmd": "Rscript -e 'for (p in c(\"NlcOptim\",\"vars\",\"ggplot2\",\"ggthemes\",\"zoo\",\"scales\",\"ggh4x\",\"ragg\",\"systemfonts\")) cat(p, tryCatch(as.character(packageVersion(p)), error=function(e) \"not installed\"), \"\\n\"); print(sessionInfo())'"
+   }
+  ],
+  "setup": [
+   {
+    "id": "install",
+    "cmd": "Rscript install_packages.R",
+    "timeout_s": 3600
+   }
+  ],
+  "commands": [
+   {
+    "id": "run_all",
+    "cmd": "Rscript run_all.R",
+    "timeout_s": 7200,
+    "outputs": [
+     "results/point_estimates/comp_national.rds",
+     "results/point_estimates/comp_noaa.rds",
+     "results/point_estimates/comp_regional.rds",
+     "results/point_estimates/rank_national.rds",
+     "results/point_estimates/rank_noaa.rds",
+     "results/point_estimates/rank_regional.rds",
+     "results/summary_numbers.txt"
+    ]
+   }
+  ],
+  "scope_notes": [
+   "Fast mode only, the README's default (`Rscript run_all.R`, about 10 minutes): it re-estimates the aggregation weights at the published penalties, recomputes the point impulse responses, redraws the figures and rewrites the numbers quoted in the paper. It reads the shipped bootstrap bands and appendix bootstrap results; those are not recomputed, so nothing here speaks to them.",
+   "Figures are git-ignored in this package, so there is nothing committed to compare them with. The paper's PDF was not compared."
+  ]
+ },
+ "started": "2026-11-25T16:35:02Z",
+ "status": "ran",
+ "flags": [],
+ "commands": [
+  {
+   "id": "install",
+   "cmd": "Rscript install_packages.R",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T16:35:06Z",
+   "end": "2026-11-25T16:35:08Z",
+   "exit_code": 1,
+   "seconds": 1.22,
+   "outcome": "failed",
+   "log": "evidence/logs/install.log",
+   "setup": true
+  },
+  {
+   "id": "run_all",
+   "cmd": "Rscript run_all.R",
+   "cwd": ".",
+   "timeout_s": 7200,
+   "start": "2026-11-25T16:35:08Z",
+   "end": "2026-11-25T16:35:09Z",
+   "exit_code": 1,
+   "seconds": 0.72,
+   "outcome": "failed",
+   "log": "evidence/logs/run_all.log",
+   "setup": false
+  }
+ ],
+ "outputs": {
+  "results/point_estimates/comp_national.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/point_estimates/comp_noaa.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/point_estimates/comp_regional.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/point_estimates/rank_national.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/point_estimates/rank_noaa.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/point_estimates/rank_regional.rds": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "results/summary_numbers.txt": {
+   "command": "run_all",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  }
+ },
+ "reproduced": [],
+ "commit": "199c5f8c432c9571e601ce68ada49ab3d1819e55",
+ "package_files": 78,
+ "package_files_sha256": "0a9af5448cf42a7e4ba344e8f64b4718841017d5fbc65cd51a02e863fca0abb3",
+ "environment": {
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cores": 4,
+  "os": "Ubuntu 24.04.5 LTS",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "ram_gb": 15.7,
+  "gpu": "none",
+  "tools": {
+   "git": "git version 2.43.0",
+   "python3": "Python 3.13.18",
+   "R": "R version 4.3.3 (2024-02-29) -- \"Angel Food Cake\""
+  },
+  "extra": {
+   "R_sessionInfo": "NlcOptim not installed \nvars not installed \nggplot2 not installed \nggthemes not installed \nzoo not installed \nscales not installed \nggh4x not installed \nragg not installed \nsystemfonts not installed \nR version 4.3.3 (2024-02-29)\nPlatform: x86_64-pc-linux-gnu (64-bit)\nRunning under: Ubuntu 24.04.5 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8    LC_NUMERIC=C        LC_TIME=C          \n [4] LC_COLLATE=C        LC_MONETARY=C       LC_MESSAGES=C      \n [7] LC_PAPER=C          LC_NAME=C           LC_ADDRESS=C       \n[10] LC_TELEPHONE=C      LC_MEASUREMENT=C    LC_IDENTIFICATION=C\n\ntime zone: Etc/UTC\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n[1] compiler_4.3.3\n"
+  }
+ },
+ "untracked_after": 0,
+ "tracked_not_declared_ok": [
+  "results/point_estimates/comp_national.rds",
+  "results/point_estimates/comp_noaa.rds",
+  "results/point_estimates/comp_regional.rds",
+  "results/point_estimates/rank_national.rds",
+  "results/point_estimates/rank_noaa.rds",
+  "results/point_estimates/rank_regional.rds",
+  "results/summary_numbers.txt"
+ ],
+ "finished": "2026-11-25T16:35:09Z",
+ "wall_clock_seconds": 1.94,
+ "cost_usd": 0.0001
+}

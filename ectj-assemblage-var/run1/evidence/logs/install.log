@@ -1,0 +1,22 @@
+# command: Rscript install_packages.R
+# cwd: .
+# start: 2026-11-25T16:35:06Z
+# timeout_s: 3600
+installing: NlcOptim, vars, ggplot2, ggthemes, zoo, scales, ggh4x 
+Installing packages into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Warning: unable to access index for repository https://cloud.r-project.org/src/contrib:
+  cannot open URL 'https://cloud.r-project.org/src/contrib/PACKAGES'
+Warning message:
+packages ‘NlcOptim’, ‘vars’, ‘ggplot2’, ‘ggthemes’, ‘zoo’, ‘scales’, ‘ggh4x’ are not available for this version of R
+
+Versions of these packages for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 
+Error: required packages could not be installed: NlcOptim, vars, ggplot2, ggthemes, zoo, scales, ggh4x
+Execution halted
+
+# end: 2026-11-25T16:35:08Z
+# exit: 1
+# seconds: 1.22
+# outcome: failed
