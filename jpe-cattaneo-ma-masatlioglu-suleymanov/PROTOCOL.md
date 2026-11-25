@@ -1,6 +1,6 @@
 # Protocol, written before any package code ran
 
-Written 2026-11-25 ~17:50 UTC, after reading the README and the one R script. The run is driven by
+Written 2026-11-25 ~17:37 UTC, after reading the README and the one R script. The run is driven by
 [`spec.json`](spec.json) through [`receiptgen/rerun.py`](../receiptgen/README.md) on a GitHub-hosted `ubuntu-24.04` runner
 (this container cannot reach CRAN), listed in `.github/receipt-queue` with `#r`.
 

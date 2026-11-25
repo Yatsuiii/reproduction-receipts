@@ -1,6 +1,6 @@
 # Protocol, written before the receipt runs
 
-Written 2026-11-25 ~17:45 UTC, after reading the README files and every script, and after one scratch probe described
+Written 2026-11-25 ~17:33 UTC, after reading the README files and every script, and after one scratch probe described
 below. The runs are driven by [`spec.json`](spec.json) and [`spec2.json`](spec2.json) through
 [`receiptgen/rerun.py`](../receiptgen/README.md).
 

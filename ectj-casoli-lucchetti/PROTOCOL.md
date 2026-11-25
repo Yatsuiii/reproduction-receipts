@@ -1,6 +1,6 @@
 # Protocol, written before any package code ran
 
-Written 2026-11-25 ~17:55 UTC, after reading the README and the three Section 4 scripts. The run is driven by
+Written 2026-11-25 ~17:34 UTC, after reading the README and the three Section 4 scripts. The run is driven by
 [`spec.json`](spec.json) through [`receiptgen/rerun.py`](../receiptgen/README.md). The only thing run beforehand was
 installing the two gretl function packages the README names (`DFM`, `staticfactor`), to check this machine can reach
 gretl's package server; the third, `extra` (Monte Carlo only), timed out.
@@ -43,7 +43,7 @@ The package commits no outputs, so `rerun.py` can only record exit codes, logs a
   `q = 2` and computes the criterion as `optimal_q`; if the log shows it, it is reported, not scored.
 - The receipt does not say whether the paper is right. It says what the committed materials did on this machine.
 
-## Addendum, 2026-11-25 ~17:40 UTC, after a first attempt
+## Addendum, 2026-11-25 ~17:35 UTC, after a first attempt
 
 The first attempt's setup step failed in 0.03 s on the spec's side: gretl did not find the install script at the relative
 path `../pkgs.inp`. The scripts still ran, using the copies of `DFM` and `staticfactor` installed by the pre-run check
