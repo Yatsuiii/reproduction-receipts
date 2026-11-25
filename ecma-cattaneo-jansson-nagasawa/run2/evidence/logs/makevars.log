@@ -1,0 +1,9 @@
+# command: printf 'CPPFLAGS += -DRCPP_NO_STRICT_R_HEADERS\n' > ../Makevars.receipt
+# cwd: .
+# start: 2026-11-25T17:33:35Z
+# timeout_s: 60
+
+# end: 2026-11-25T17:33:35Z
+# exit: 0
+# seconds: 0.02
+# outcome: exit0

@@ -16,9 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - id: q
-        run: echo "specs=$(grep -v '^#' .github/receipt-queue | grep . | jq -R . | jq -sc .)" >> "$GITHUB_OUTPUT"
+        run: echo "specs=$({ grep -v '^#' .github/receipt-queue || true; } | { grep . || true; } | jq -R . | jq -sc .)" >> "$GITHUB_OUTPUT"
   run:
     needs: queue
+    if: needs.queue.outputs.specs != '[]'
     runs-on: ${{ contains(matrix.spec, '#windows') && 'windows-2025' || 'ubuntu-24.04' }}
     timeout-minutes: 350
     defaults:

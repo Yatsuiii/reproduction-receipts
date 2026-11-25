@@ -1,0 +1,9 @@
+# command: Rscript DGP_constants.R
+# cwd: .
+# start: 2026-11-25T17:33:24Z
+# timeout_s: 600
+
+# end: 2026-11-25T17:33:25Z
+# exit: 0
+# seconds: 0.37
+# outcome: exit0

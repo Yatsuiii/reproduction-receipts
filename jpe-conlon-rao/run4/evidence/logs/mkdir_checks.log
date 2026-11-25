@@ -1,0 +1,9 @@
+# command: mkdir -p checks
+# cwd: .
+# start: 2026-11-25T17:32:24Z
+# timeout_s: 60
+
+# end: 2026-11-25T17:32:24Z
+# exit: 0
+# seconds: 0.03
+# outcome: exit0

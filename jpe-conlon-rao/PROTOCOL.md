@@ -1,6 +1,6 @@
 # Protocol, written before any package code ran
 
-Written 2026-11-25 ~17:00 UTC, after reading the README, `run_estimation.sh`, `run_counterfactuals.sh`, `run_slow.sh`,
+Written 2026-11-25 ~16:37 UTC, after reading the README, `run_estimation.sh`, `run_counterfactuals.sh`, `run_slow.sh`,
 `cleaning_code/lp2023_config.py` and the input and output paths of each script named below, and before running any of
 them. The run is driven by [`spec.json`](spec.json) through [`receiptgen/rerun.py`](../receiptgen/README.md).
 
@@ -40,7 +40,7 @@ committed ones (except Table 2 in step 2, as noted).
 - A failed step is reported with its log, and the steps after it still run and are reported as they go.
 - The receipt does not say whether the paper is right. It says what the committed materials did on this machine.
 
-## Addendum, 2026-11-25 ~17:30 UTC, after run 1 and before run 2
+## Addendum, 2026-11-25 ~16:42 UTC, after run 1 and before run 2
 
 Run 1 stopped at the main estimation within seconds; what it showed is in [`run1/NOTE.md`](run1/NOTE.md). Run 2
 ([`spec2.json`](spec2.json)) changes three things and nothing else, each logged as a deviation in its receipt:
@@ -53,7 +53,7 @@ Run 1 stopped at the main estimation within seconds; what it showed is in [`run1
 The comparison rule is unchanged. In addition, `estimation_outputs/*.parquet` and `results/*.parquet` are declared committed
 intermediates: an output whose step read one of them before this run regenerated it is not counted as reproduced.
 
-## Addendum, 2026-11-25 ~18:10 UTC, after run 2 and before run 3
+## Addendum, 2026-11-25 ~16:55 UTC, after run 2 and before run 3
 
 Run 2 ([`run2/`](run2/)) stopped at the main estimation again, at a different place: with versions as of the package
 date (pyblp 1.1.2, pandas 3.0.1, numpy 2.4.3), `estimation_code/micro_moments.py` line 56 passes `mom_const[y][2]`, a
@@ -62,3 +62,5 @@ scratch copy, the same call goes through with numpy 2.3.5 (a deprecation warning
 
 Run 3 ([`spec3.json`](spec3.json)) changes only the environment: Python 3.12 via uv, packages as of 2026-03-20, numpy held
 below 2.4. No package file is edited. Everything else as in run 2.
+
+(Times in the headings above were corrected on 2026-11-25 to the commit times of the commits that added them; the first versions gave estimated times that were wrong. No content changed.)

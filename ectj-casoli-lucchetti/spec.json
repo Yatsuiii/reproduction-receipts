@@ -1,0 +1,51 @@
+{
+ "title": "Casoli and Lucchetti, \"Permanent-Transitory decomposition of cointegrated time series via Dynamic Factor Models, with an application to commodity prices\" (Econometrics Journal 25(2), 2022): Section 4 commodity application",
+ "paper": "Chiara Casoli and Riccardo Lucchetti, Permanent-Transitory decomposition of cointegrated time series via Dynamic Factor Models, with an application to commodity prices, The Econometrics Journal 25(2): 494-514, 2022",
+ "package_label": "the authors' repository [InsIDE-Lab-DiECO/permanent-transitory-decomposition-replication](https://github.com/InsIDE-Lab-DiECO/permanent-transitory-decomposition-replication)",
+ "repo": "https://github.com/InsIDE-Lab-DiECO/permanent-transitory-decomposition-replication",
+ "commit": "d46e6006dda79c13313daa02d405b76e53df0ae4",
+ "protocol": "PROTOCOL.md",
+ "cost_per_hour_usd": 0.2,
+ "cost_basis": "typical on-demand price for a 4 vCPU, 16 GB cloud machine",
+ "compare": {
+  "rel_tol": 1e-12
+ },
+ "environment_commands": [
+  {
+   "id": "gretl_versions",
+   "cmd": "gretlcli --version | head -1; grep -h -m2 -E '<version>|<date>' /usr/share/gretl/functions/DFM/DFM.gfn /usr/share/gretl/functions/staticfactor/staticfactor.gfn"
+  }
+ ],
+ "setup": [
+  {
+   "id": "gretl_packages",
+   "cmd": "printf 'pkg install DFM\\npkg install staticfactor\\n' > \"$PWD/../pkgs.inp\" && gretlcli -b \"$PWD/../pkgs.inp\"",
+   "timeout_s": 600
+  }
+ ],
+ "commands": [
+  {
+   "id": "part1",
+   "cmd": "cd Sec4-Commodities && gretlcli -b part1.inp",
+   "timeout_s": 1800,
+   "outputs": []
+  },
+  {
+   "id": "part2",
+   "cmd": "cd Sec4-Commodities && gretlcli -b part2.inp",
+   "timeout_s": 3600,
+   "outputs": []
+  },
+  {
+   "id": "part3",
+   "cmd": "cd Sec4-Commodities && gretlcli -b part3.inp",
+   "timeout_s": 3600,
+   "outputs": []
+  }
+ ],
+ "scope_notes": [
+  "Section 4 (the commodity application) only. The Monte Carlo in Section 3 has to be edited by hand for each table row (README: set the parameters in `main.inp`, then the file name in `stats.inp`), and its `extra` gretl package could not be downloaded here; it was not run.",
+  "The package commits no output files, so there is nothing for the generator to compare. The table printed by `part1.inp` is compared by hand with the paper's cointegration table, as set out in the protocol, and that comparison is listed under notes.",
+  "Plots written by `part2.inp` and `part3.inp` are not compared."
+ ]
+}
