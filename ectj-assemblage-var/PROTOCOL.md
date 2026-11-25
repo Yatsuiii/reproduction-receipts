@@ -30,3 +30,13 @@ R 4.3.3 from Ubuntu 24.04 is used; the README asks for R 4.3 or newer.
   records the R version that wrote it, so a byte difference alone means nothing.
 - Anything else the run changes in tracked files is listed as a deviation. Figures are git-ignored and not compared.
 - The receipt does not say whether the paper is right. It says what the committed materials did on this machine.
+
+## Addendum, 2026-11-25 ~16:40 UTC, after run 1
+
+Run 1, on the cloud container, stopped at step 1: this container's network refuses `cloud.r-project.org`, so
+`install_packages.R` could not install anything, and `run_all.R` then stopped at the first missing package (`NlcOptim`). No
+package result was produced. The run is kept as found in [`run1/`](run1/).
+
+Change: the same spec now runs on a GitHub-hosted `ubuntu-24.04` runner, which can reach CRAN, through
+[`.github/workflows/receipt-run.yml`](../.github/workflows/receipt-run.yml). R there is the current release installed by
+`r-lib/actions/setup-r`, not 4.3.3. Commands, outputs and the comparison rule are unchanged.
