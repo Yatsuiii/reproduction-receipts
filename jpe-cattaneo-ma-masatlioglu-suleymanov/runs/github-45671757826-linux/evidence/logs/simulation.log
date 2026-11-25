@@ -1,0 +1,33 @@
+# command: Rscript Cattaneo-Ma-Masatlioglu-Suleymanov_2020_JPE.R
+# cwd: .
+# start: 2026-11-25T18:11:23Z
+# timeout_s: 7200
+5% completed.
+10% completed.
+15% completed.
+20% completed.
+25% completed.
+30% completed.
+35% completed.
+40% completed.
+45% completed.
+50% completed.
+55% completed.
+60% completed.
+65% completed.
+70% completed.
+75% completed.
+80% completed.
+85% completed.
+90% completed.
+95% completed.
+100% completed.
+   user  system elapsed 
+315.145 234.232 246.987 
+   H1    H2    H3    H4    H5 
+0.000 0.004 0.143 0.277 0.352 
+
+# end: 2026-11-25T18:15:30Z
+# exit: 0
+# seconds: 247.16
+# outcome: exit0
