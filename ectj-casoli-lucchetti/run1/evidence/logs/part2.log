@@ -1,0 +1,351 @@
+# command: cd Sec4-Commodities && gretlcli -b part2.inp
+# cwd: .
+# start: 2026-11-25T17:36:02Z
+# timeout_s: 3600
+gretl version 2023c
+Copyright Ramu Ramanathan, Allin Cottrell and Riccardo "Jack" Lucchetti
+This is free software with ABSOLUTELY NO WARRANTY
+Current session: 2026-11-25 17:36
+? run part2.inp
+ part2.inp
+? include part1.inp
+Reading 358 Kbytes of data...
+ /tmp/claude-0/cl-w2/checkout/Sec4-Commodities/part1.inp
+
+                    VAR length   c.rank  #trends
+
+         Base Metals:        2        1        5
+     Precious Metals:        2        1        2
+              Energy:        2        3        1
+           Livestock:        2        2        4
+       Raw Materials:        2        1        7
+                Food:        2        9        1
+
+              TOTAL:                 17       20
+DFM 0.5, 2023-07-09 (Ioannis A. Venetis and Riccardo "Jack" Lucchetti)
+staticfactor 0.82, 2023-03-13 (Riccardo "Jack" Lucchetti and Sven Schreiber)
+============================================================
+   Factor analysis (Principal components)
+   on correlation matrix
+============================================================
+eigenvectors:
+
+       z_1   0.1129
+       z_2  -0.0367
+       z_3  -0.2083
+       z_4  -0.2256
+       z_5  -0.1796
+       z_6   0.0275
+       z_7   0.0149
+       z_8   0.0367
+       z_9  -0.0518
+      z_10  -0.3742
+      z_11  -0.2965
+      z_12  -0.3514
+      z_13  -0.3615
+      z_14   0.3352
+      z_15  -0.2410
+      z_16  -0.3080
+      z_17  -0.2494
+     d_m_1   0.0077
+     d_m_2   0.0208
+     d_m_3   0.0466
+     d_m_4  -0.0447
+     d_m_5  -0.0340
+     d_m_6  -0.0277
+     d_m_7  -0.0651
+     d_m_8  -0.0088
+     d_m_9  -0.0785
+    d_m_10  -0.0444
+    d_m_11  -0.0146
+    d_m_12  -0.0136
+    d_m_13  -0.0408
+    d_m_14  -0.0029
+    d_m_15   0.0962
+    d_m_16   0.0153
+    d_m_17   0.0235
+    d_m_18   0.0118
+    d_m_19   0.0893
+    d_m_20  -0.0747
+
+             Load01
+
+       z_1   0.2479
+       z_2  -0.0806
+       z_3  -0.4573
+       z_4  -0.4952
+       z_5  -0.3943
+       z_6   0.0604
+       z_7   0.0328
+       z_8   0.0806
+       z_9  -0.1137
+      z_10  -0.8214
+      z_11  -0.6509
+      z_12  -0.7714
+      z_13  -0.7935
+      z_14   0.7358
+      z_15  -0.5290
+      z_16  -0.6761
+      z_17  -0.5476
+     d_m_1   0.0168
+     d_m_2   0.0457
+     d_m_3   0.1023
+     d_m_4  -0.0980
+     d_m_5  -0.0746
+     d_m_6  -0.0608
+     d_m_7  -0.1428
+     d_m_8  -0.0193
+     d_m_9  -0.1724
+    d_m_10  -0.0975
+    d_m_11  -0.0320
+    d_m_12  -0.0298
+    d_m_13  -0.0895
+    d_m_14  -0.0064
+    d_m_15   0.2112
+    d_m_16   0.0335
+    d_m_17   0.0516
+    d_m_18   0.0259
+    d_m_19   0.1961
+    d_m_20  -0.1639
+
+Eigenvalue  1: 4.8193 (0.1303, cum = 0.1303)
+
+Suggested numbers of factors (limited number considered):
+   AH(ratio)   AH(growth) BaiNg(IC_p2) 
+           3            3            3 
+
+ref: Bai-Ng(2002), Econometrica; Ahn-Horenstein(2013), Econometrica
+
+---------------------------------------------------------
+Number of static factors: 3. Number of dynamic factors: q
+          D(1,k)    D(2,k)   Dc(1,k)   Dc(2,k)
+k=0 :     0.9678         1    0.9139         1
+k=1 :     0.2166    0.2517    0.3617     0.406
+k=2 :     0.1282    0.1282    0.1846    0.1846
+
+Suggested q value: 
+   D(1,k)   D(2,k)  Dc(1,k)  Dc(2,k)
+        1        2        2        1
+
+Bai & Ng (2007). Determining the Number of Primitive Shocks
+                 in Factor Models. JBES, Vol. 25, No. 1
+-----------------------------------------------------------
+
+iter 0001: lnL =    -23724.120, par distance =  0.09549
+iter 0002: lnL =    -23327.114, par distance =  0.08599
+iter 0003: lnL =    -22720.441, par distance =  0.05337
+iter 0004: lnL =    -22220.107, par distance =  0.01971
+iter 0005: lnL =    -21984.473, par distance =  0.00837
+iter 0006: lnL =    -21900.546, par distance =  0.00482
+iter 0007: lnL =    -21869.026, par distance =  0.00355
+iter 0008: lnL =    -21855.367, par distance =  0.00289
+iter 0009: lnL =    -21848.586, par distance =  0.00249
+iter 0010: lnL =    -21844.476, par distance =  0.00219
+iter 0020: lnL =    -21829.730, par distance =  0.00097
+iter 0030: lnL =    -21825.637, par distance =  0.00050
+iter 0040: lnL =    -21823.696, par distance =  0.00031
+iter 0050: lnL =    -21822.481, par distance =  0.00025
+iter 0060: lnL =    -21821.583, par distance =  0.00023
+iter 0070: lnL =    -21820.828, par distance =  0.00024
+iter 0080: lnL =    -21820.104, par distance =  0.00026
+iter 0090: lnL =    -21819.298, par distance =  0.00031
+iter 0100: lnL =    -21818.249, par distance =  0.00037
+iter 0110: lnL =    -21816.753, par distance =  0.00042
+iter 0120: lnL =    -21814.767, par distance =  0.00043
+iter 0130: lnL =    -21812.685, par distance =  0.00037
+iter 0140: lnL =    -21810.976, par distance =  0.00029
+iter 0150: lnL =    -21809.755, par distance =  0.00022
+iter 0160: lnL =    -21808.908, par distance =  0.00017
+iter 0170: lnL =    -21808.306, par distance =  0.00013
+iter 0180: lnL =    -21807.860, par distance =  0.00010
+iter 0190: lnL =    -21807.514, par distance =  0.00008
+iter 0200: lnL =    -21807.238, par distance =  0.00007
+iter 0208: lnL =    -21807.053, par distance =  0.00006
+-----------------------------------------------------------
+Number of series = 37, number of observations = 495
+Number of factors = 2; factors are a VAR(2)
+Number of lags in the observation equation = 0
+-----------------------------------------------------------
+method: ML via EM (208 iterations)
+Log-likelihood = -21807.1
+Total SSR/NT:  0.80414
+
+Loadings
+
+   z_1    0.530  -0.616
+   z_2   -0.209  -0.636
+   z_3   -1.383   2.405
+   z_4   -1.485   2.329
+   z_5   -1.235   2.422
+   z_6    0.162   0.039
+   z_7    0.136  -0.302
+   z_8    0.254  -0.184
+   z_9    0.246   1.150
+  z_10   -2.607  -0.681
+  z_11   -1.862  -1.083
+  z_12   -1.601  -0.067
+  z_13   -1.652  -0.268
+  z_14    1.824   0.178
+  z_15   -1.021  -0.976
+  z_16   -1.330  -0.390
+  z_17   -1.544  -0.604
+ d_m_1    0.010   0.189
+ d_m_2    0.092  -0.003
+ d_m_3    0.172  -0.078
+ d_m_4   -0.146   0.126
+ d_m_5   -0.106   0.246
+ d_m_6   -0.174   0.054
+ d_m_7   -0.290   0.028
+ d_m_8   -0.060   0.073
+ d_m_9   -0.231   0.029
+d_m_10   -0.174   0.163
+d_m_11    0.042   0.239
+d_m_12    0.089   0.372
+d_m_13   -0.249   0.107
+d_m_14   -0.033  -0.007
+d_m_15    0.278  -0.207
+d_m_16    0.046  -0.092
+d_m_17    0.092   0.093
+d_m_18   -0.032  -0.022
+d_m_19    0.362   0.076
+d_m_20   -0.160   0.401
+
+
+Idiosyncratic s.e.
+
+   z_1    0.95606
+   z_2    0.96650
+   z_3    0.01702
+   z_4    0.12010
+   z_5    0.18568
+   z_6    0.99712
+   z_7    0.99175
+   z_8    0.99280
+   z_9    0.89589
+  z_10    0.13832
+  z_11    0.59280
+  z_12    0.81328
+  z_13    0.79056
+  z_14    0.74473
+  z_15    0.84517
+  z_16    0.85903
+  z_17    0.78856
+ d_m_1    0.99649
+ d_m_2    0.99844
+ d_m_3    0.99675
+ d_m_4    0.99664
+ d_m_5    0.99426
+ d_m_6    0.99689
+ d_m_7    0.99351
+ d_m_8    0.99842
+ d_m_9    0.99550
+d_m_10    0.99540
+d_m_11    0.99482
+d_m_12    0.98855
+d_m_13    0.99435
+d_m_14    0.99891
+d_m_15    0.99142
+d_m_16    0.99830
+d_m_17    0.99778
+d_m_18    0.99888
+d_m_19    0.98977
+d_m_20    0.98663
+
+
+VAR parameters
+
+   1.449   0.126  -0.480  -0.120
+   0.061   1.232  -0.057  -0.288
+
+Eigenvalues of the companion matrix
+
+    0.9155
+    0.9359
+    0.5491
+    0.2799
+
+
+Factor innovations covariance matrix
+
+   0.004  -0.002
+  -0.002   0.011
+
+wrote /root/gretl/l_aluminum_perm.eps
+wrote /root/gretl/l_aluminum_panes.eps
+wrote /root/gretl/l_copper_perm.eps
+wrote /root/gretl/l_copper_panes.eps
+wrote /root/gretl/l_lead_perm.eps
+wrote /root/gretl/l_lead_panes.eps
+wrote /root/gretl/l_nickel_perm.eps
+wrote /root/gretl/l_nickel_panes.eps
+wrote /root/gretl/l_tin_perm.eps
+wrote /root/gretl/l_tin_panes.eps
+wrote /root/gretl/l_zinc_perm.eps
+wrote /root/gretl/l_zinc_panes.eps
+wrote /root/gretl/l_gold_perm.eps
+wrote /root/gretl/l_gold_panes.eps
+wrote /root/gretl/l_silver_perm.eps
+wrote /root/gretl/l_silver_panes.eps
+wrote /root/gretl/l_platinum_perm.eps
+wrote /root/gretl/l_platinum_panes.eps
+wrote /root/gretl/l_oil_brent_perm.eps
+wrote /root/gretl/l_oil_brent_panes.eps
+wrote /root/gretl/l_oil_DF_perm.eps
+wrote /root/gretl/l_oil_DF_panes.eps
+wrote /root/gretl/l_oil_WTI_perm.eps
+wrote /root/gretl/l_oil_WTI_panes.eps
+wrote /root/gretl/l_coal_perm.eps
+wrote /root/gretl/l_coal_panes.eps
+wrote /root/gretl/l_beef_perm.eps
+wrote /root/gretl/l_beef_panes.eps
+wrote /root/gretl/l_fish_perm.eps
+wrote /root/gretl/l_fish_panes.eps
+wrote /root/gretl/l_swine_perm.eps
+wrote /root/gretl/l_swine_panes.eps
+wrote /root/gretl/l_poultry_perm.eps
+wrote /root/gretl/l_poultry_panes.eps
+wrote /root/gretl/l_lamb_perm.eps
+wrote /root/gretl/l_lamb_panes.eps
+wrote /root/gretl/l_shrimp_perm.eps
+wrote /root/gretl/l_shrimp_panes.eps
+wrote /root/gretl/l_soft_logs_perm.eps
+wrote /root/gretl/l_soft_logs_panes.eps
+wrote /root/gretl/l_cotton_perm.eps
+wrote /root/gretl/l_cotton_panes.eps
+wrote /root/gretl/l_hides_perm.eps
+wrote /root/gretl/l_hides_panes.eps
+wrote /root/gretl/l_hard_logs_perm.eps
+wrote /root/gretl/l_hard_logs_panes.eps
+wrote /root/gretl/l_rubber_perm.eps
+wrote /root/gretl/l_rubber_panes.eps
+wrote /root/gretl/l_hard_sawnwood_perm.eps
+wrote /root/gretl/l_hard_sawnwood_panes.eps
+wrote /root/gretl/l_soft_sawnwood_perm.eps
+wrote /root/gretl/l_soft_sawnwood_panes.eps
+wrote /root/gretl/l_wool_perm.eps
+wrote /root/gretl/l_wool_panes.eps
+wrote /root/gretl/l_barley_perm.eps
+wrote /root/gretl/l_barley_panes.eps
+wrote /root/gretl/l_cocoa_perm.eps
+wrote /root/gretl/l_cocoa_panes.eps
+wrote /root/gretl/l_coffee_perm.eps
+wrote /root/gretl/l_coffee_panes.eps
+wrote /root/gretl/l_rapeseed_oil_perm.eps
+wrote /root/gretl/l_rapeseed_oil_panes.eps
+wrote /root/gretl/l_maize_perm.eps
+wrote /root/gretl/l_maize_panes.eps
+wrote /root/gretl/l_olive_oil_perm.eps
+wrote /root/gretl/l_olive_oil_panes.eps
+wrote /root/gretl/l_rice_perm.eps
+wrote /root/gretl/l_rice_panes.eps
+wrote /root/gretl/l_sunflower_oil_perm.eps
+wrote /root/gretl/l_sunflower_oil_panes.eps
+wrote /root/gretl/l_tea_perm.eps
+wrote /root/gretl/l_tea_panes.eps
+wrote /root/gretl/l_wheat_perm.eps
+wrote /root/gretl/l_wheat_panes.eps
+
+# end: 2026-11-25T17:36:11Z
+# exit: 0
+# seconds: 9.48
+# outcome: exit0

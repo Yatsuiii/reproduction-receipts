@@ -1,0 +1,139 @@
+{
+ "format": "receiptgen-results/1",
+ "spec": {
+  "title": "Casoli and Lucchetti, \"Permanent-Transitory decomposition of cointegrated time series via Dynamic Factor Models, with an application to commodity prices\" (Econometrics Journal 25(2), 2022): Section 4 commodity application",
+  "paper": "Chiara Casoli and Riccardo Lucchetti, Permanent-Transitory decomposition of cointegrated time series via Dynamic Factor Models, with an application to commodity prices, The Econometrics Journal 25(2): 494-514, 2022",
+  "package_label": "the authors' repository [InsIDE-Lab-DiECO/permanent-transitory-decomposition-replication](https://github.com/InsIDE-Lab-DiECO/permanent-transitory-decomposition-replication)",
+  "repo": "https://github.com/InsIDE-Lab-DiECO/permanent-transitory-decomposition-replication",
+  "commit": "d46e6006dda79c13313daa02d405b76e53df0ae4",
+  "protocol": "PROTOCOL.md",
+  "cost_per_hour_usd": 0.2,
+  "cost_basis": "typical on-demand price for a 4 vCPU, 16 GB cloud machine",
+  "compare": {
+   "rel_tol": 1e-12
+  },
+  "environment_commands": [
+   {
+    "id": "gretl_versions",
+    "cmd": "gretlcli --version | head -1; grep -h -m2 -E '<version>|<date>' /usr/share/gretl/functions/DFM/DFM.gfn /usr/share/gretl/functions/staticfactor/staticfactor.gfn"
+   }
+  ],
+  "setup": [
+   {
+    "id": "gretl_packages",
+    "cmd": "printf 'pkg install DFM\\npkg install staticfactor\\n' > \"$PWD/../pkgs.inp\" && gretlcli -b \"$PWD/../pkgs.inp\"",
+    "timeout_s": 600
+   }
+  ],
+  "commands": [
+   {
+    "id": "part1",
+    "cmd": "cd Sec4-Commodities && gretlcli -b part1.inp",
+    "timeout_s": 1800,
+    "outputs": []
+   },
+   {
+    "id": "part2",
+    "cmd": "cd Sec4-Commodities && gretlcli -b part2.inp",
+    "timeout_s": 3600,
+    "outputs": []
+   },
+   {
+    "id": "part3",
+    "cmd": "cd Sec4-Commodities && gretlcli -b part3.inp",
+    "timeout_s": 3600,
+    "outputs": []
+   }
+  ],
+  "scope_notes": [
+   "Section 4 (the commodity application) only. The Monte Carlo in Section 3 has to be edited by hand for each table row (README: set the parameters in `main.inp`, then the file name in `stats.inp`), and its `extra` gretl package could not be downloaded here; it was not run.",
+   "The package commits no output files, so there is nothing for the generator to compare. The table printed by `part1.inp` is compared by hand with the paper's cointegration table, as set out in the protocol, and that comparison is listed under notes.",
+   "Plots written by `part2.inp` and `part3.inp` are not compared."
+  ]
+ },
+ "started": "2026-11-25T17:35:57Z",
+ "status": "ran",
+ "flags": [],
+ "commands": [
+  {
+   "id": "gretl_packages",
+   "cmd": "printf 'pkg install DFM\\npkg install staticfactor\\n' > \"$PWD/../pkgs.inp\" && gretlcli -b \"$PWD/../pkgs.inp\"",
+   "cwd": ".",
+   "timeout_s": 600,
+   "start": "2026-11-25T17:35:58Z",
+   "end": "2026-11-25T17:36:01Z",
+   "exit_code": 0,
+   "seconds": 2.53,
+   "outcome": "exit0",
+   "log": "evidence/logs/gretl_packages.log",
+   "setup": true
+  },
+  {
+   "id": "part1",
+   "cmd": "cd Sec4-Commodities && gretlcli -b part1.inp",
+   "cwd": ".",
+   "timeout_s": 1800,
+   "start": "2026-11-25T17:36:01Z",
+   "end": "2026-11-25T17:36:02Z",
+   "exit_code": 0,
+   "seconds": 0.92,
+   "outcome": "exit0",
+   "log": "evidence/logs/part1.log",
+   "setup": false
+  },
+  {
+   "id": "part2",
+   "cmd": "cd Sec4-Commodities && gretlcli -b part2.inp",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T17:36:02Z",
+   "end": "2026-11-25T17:36:11Z",
+   "exit_code": 0,
+   "seconds": 9.48,
+   "outcome": "exit0",
+   "log": "evidence/logs/part2.log",
+   "setup": false
+  },
+  {
+   "id": "part3",
+   "cmd": "cd Sec4-Commodities && gretlcli -b part3.inp",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-25T17:36:11Z",
+   "end": "2026-11-25T17:36:18Z",
+   "exit_code": 0,
+   "seconds": 6.84,
+   "outcome": "exit0",
+   "log": "evidence/logs/part3.log",
+   "setup": false
+  }
+ ],
+ "outputs": {},
+ "reproduced": [],
+ "commit": "d46e6006dda79c13313daa02d405b76e53df0ae4",
+ "package_files": 11,
+ "package_files_sha256": "3fe4f314ef0243e4cd572651dd083f2d681e64482bc851f05d3db95807b1be98",
+ "environment": {
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cores": 4,
+  "os": "Ubuntu 24.04.5 LTS",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "ram_gb": 15.7,
+  "gpu": "none",
+  "tools": {
+   "git": "git version 2.43.0",
+   "python3": "Python 3.13.18",
+   "R": "R version 4.3.3 (2024-02-29) -- \"Angel Food Cake\""
+  },
+  "extra": {
+   "gretl_versions": "gretl version 2023c\n<version>0.5</version>\n<date>2023-07-09</date>\n<version>0.82</version>\n<date>2023-03-13</date>\n"
+  }
+ },
+ "untracked_after": 0,
+ "tracked_not_declared_ok": [],
+ "finished": "2026-11-25T17:36:18Z",
+ "wall_clock_seconds": 19.77,
+ "cost_usd": 0.0011,
+ "post_run_notes": "The generator had no committed file to compare, so its own count of reproduced outputs is 0 of 0. The comparison fixed in\nthe protocol was done by hand, from the `part1.inp` log above against Table 4 (p. 12) of the working paper version\n(FEEM Nota di Lavoro 2021-019), not the published article:\n\n| Block | VAR length (paper / run) | Coint. rank (paper / run) | Common trends (paper / run) |\n|---|---|---|---|\n| Base metals | 2 / 2 | 1 / 1 | 5 / 5 |\n| Precious metals | 2 / 2 | 1 / 1 | 2 / 2 |\n| Energy | 2 / 2 | 3 / 3 | 1 / 1 |\n| Livestock | 2 / 2 | 2 / 2 | 4 / 4 |\n| Raw materials | 2 / 2 | 1 / 1 | 7 / 7 |\n| Food | 2 / 2 | 9 / 9 | 1 / 1 |\n| Total | | 17 / 17 | 20 / 20 |\n\nAll 20 printed cells match. These are integers chosen by tests (lag length by Hannan-Quinn, rank by the Johansen trace test\nat 1%), so a match says the same choices were made here, not that every underlying statistic agrees to many digits.\n\nReported, not scored: in `part2.log`, the Bai and Ng (2007) criteria suggest q = 1, 2, 2, 1 for the four variants, and\nthe script takes the largest, 2, which is the q = 2 stated in the paper. The DFM estimation converged by EM in 208\niterations.\n\n`part3.inp` exited 0 but its last command asks gretl to draw a plot on screen, which this headless machine cannot do; the log\nshows `Unable to initialize GTK+` there. The numbers it prints before that are in the log and were not compared.\n"
+}

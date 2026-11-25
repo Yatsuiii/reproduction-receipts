@@ -1,0 +1,20 @@
+# command: printf 'pkg install DFM\npkg install staticfactor\n' > "$PWD/../pkgs.inp" && gretlcli -b "$PWD/../pkgs.inp"
+# cwd: .
+# start: 2026-11-25T17:35:58Z
+# timeout_s: 600
+gretl version 2023c
+Copyright Ramu Ramanathan, Allin Cottrell and Riccardo "Jack" Lucchetti
+This is free software with ABSOLUTELY NO WARRANTY
+Current session: 2026-11-25 17:35
+? run /tmp/claude-0/cl-w2/checkout/../pkgs.inp
+ /tmp/claude-0/cl-w2/checkout/../pkgs.inp
+? pkg install DFM
+Installed DFM.zip
+? pkg install staticfactor
+Installed staticfactor.zip
+Done
+
+# end: 2026-11-25T17:36:01Z
+# exit: 0
+# seconds: 2.53
+# outcome: exit0

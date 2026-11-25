@@ -1,0 +1,27 @@
+# command: cd Sec4-Commodities && gretlcli -b part1.inp
+# cwd: .
+# start: 2026-11-25T17:36:01Z
+# timeout_s: 1800
+gretl version 2023c
+Copyright Ramu Ramanathan, Allin Cottrell and Riccardo "Jack" Lucchetti
+This is free software with ABSOLUTELY NO WARRANTY
+Current session: 2026-11-25 17:36
+? run part1.inp
+Reading 358 Kbytes of data...
+ part1.inp
+
+                    VAR length   c.rank  #trends
+
+         Base Metals:        2        1        5
+     Precious Metals:        2        1        2
+              Energy:        2        3        1
+           Livestock:        2        2        4
+       Raw Materials:        2        1        7
+                Food:        2        9        1
+
+              TOTAL:                 17       20
+
+# end: 2026-11-25T17:36:02Z
+# exit: 0
+# seconds: 0.92
+# outcome: exit0
