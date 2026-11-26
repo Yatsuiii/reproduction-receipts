@@ -1,0 +1,64 @@
+name: Alice EEG (NEMAR nm000180) onset check
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['alice-eeg-onsets/**', '.github/workflows/alice-eeg-onsets.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      DATASET: https://github.com/nemarDatasets/nm000180
+      COMMIT: e37db55b334496f1602489963f94f354012ba580
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Clean clone of the dataset at the pinned commit
+        run: |
+          git clone -q "$DATASET" ds
+          git -C ds checkout -q "$COMMIT"
+          test "$(git -C ds rev-parse HEAD)" = "$COMMIT" && echo "commit ok"
+      - name: Fresh venv with pinned packages
+        run: |
+          python3 --version | tee python-version.txt
+          python3 -m venv venv
+          venv/bin/pip install -q mne==1.10.2 scipy==1.16.3 numpy==2.3.5 pandas==2.3.3
+          venv/bin/pip freeze | tee pip-freeze.txt
+          lscpu | grep -E "Model name|^CPU\(s\)" > hardware.txt; free -g >> hardware.txt; cat hardware.txt
+      - name: Fetch annexed files from NEMAR's public S3, hash-checked against their keys
+        run: |
+          start=$(date +%s)
+          venv/bin/python -I alice-eeg-onsets/fetch.py ds data \
+            'sourcedata/AliceChapterOne-EEG.csv' 'sourcedata/proc/*.mat' 'stimuli/*.wav' 'sub-*/eeg/*_eeg.*' \
+            > fetch.log 2>&1; rc=$?
+          echo "exit=$rc wall_s=$(( $(date +%s)-start ))" | tee -a fetch.log
+          cut -f1 fetch.log | sort | uniq -c
+          du -sh data
+          exit $rc
+      - name: Run the check
+        run: |
+          start=$(date +%s)
+          venv/bin/python -I alice-eeg-onsets/check_onsets.py ds data out > run.log 2>&1; rc=$?
+          echo "exit=$rc wall_s=$(( $(date +%s)-start ))" | tee -a run.log
+          cat run.log
+          echo "=== per_segment.csv"; cat out/per_segment.csv
+          echo "=== rebuild.csv"; cat out/rebuild.csv
+          echo "=== fetch.log"; cat fetch.log
+          exit $rc
+      - name: Exploratory follow-up (written after the first run was seen)
+        run: |
+          venv/bin/python -I alice-eeg-onsets/diag_tails.py ds data out
+          echo "=== tails.csv"; cat out/tails.csv
+          echo "=== audio_channel.csv"; cat out/audio_channel.csv
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: alice-eeg-onsets
+          path: |
+            out/
+            fetch.log
+            run.log
+            pip-freeze.txt
+            python-version.txt
+            hardware.txt
