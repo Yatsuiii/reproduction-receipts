@@ -1,0 +1,337 @@
+# command: sudo apt-get install -y -q libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev >/dev/null; Rscript -e 'install.packages("renv", repos="https://cloud.r-project.org"); renv::restore(prompt = FALSE)'
+# cwd: .
+# start: 2026-11-26T16:15:16Z
+# timeout_s: 5400
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+ systemctl restart php8.3-fpm.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+# Bootstrapping renv 1.3.1 ---------------------------------------------------
+- Downloading renv ... OK
+- Installing renv  ... OK
+
+- One or more packages recorded in the lockfile are not installed.
+- Use `renv::status()` for more details.
+- Querying repositories for available source packages ... Done!
+The following package(s) will be installed:
+- renv [1.3.1]
+These packages will be installed into "/tmp/receiptgen-950lt6so/checkout/renv/library/linux-ubuntu-noble/R-4.6/x86_64-pc-linux-gnu".
+
+# Downloading packages -------------------------------------------------------
+[32m✔[0m renv 1.3.1                               [1.6 MB in 63s]
+Successfully downloaded 1 package in 0.21 seconds.
+
+# Installing packages --------------------------------------------------------
+[32m✔[0m renv 1.3.1                               [built from source in 9.7s]
+Successfully installed 1 package in 9.7 seconds.
+The following required system packages are not installed:
+- cmake       [required by fs]
+- libuv1-dev  [required by fs]
+- libx11-dev  [required by clipr]
+- pandoc      [required by knitr, tables]
+The R packages depending on these system packages may fail to install.
+
+An administrator can install these packages with:
+- sudo apt install cmake libuv1-dev libx11-dev pandoc
+
+The following package(s) will be updated:
+
+# CRAN -----------------------------------------------------------------------
+- lattice           [0.23-1 -> 0.22-7]
+- Matrix            [1.7-6 -> 1.7-3]
+- nlme              [3.1-171 -> 3.1-172]
+- backports         [* -> 1.5.1]
+- base64enc         [* -> 0.1-6]
+- bayestestR        [* -> 0.18.1]
+- bit               [* -> 4.6.0]
+- bit64             [* -> 4.8.2]
+- checkmate         [* -> 2.3.4]
+- cli               [* -> 3.6.6]
+- clipr             [* -> 0.8.1]
+- cpp11             [* -> 0.5.5]
+- crayon            [* -> 1.5.3]
+- curl              [* -> 7.1.0]
+- data.table        [* -> 1.18.6.1]
+- datawizard        [* -> 1.3.1]
+- digest            [* -> 0.6.39]
+- evaluate          [* -> 1.0.5]
+- fastmap           [* -> 1.2.0]
+- forcats           [* -> 1.0.1]
+- Formula           [* -> 1.2-6]
+- fs                [* -> 2.1.0]
+- generics          [* -> 0.1.4]
+- ggplot2           [* -> 4.0.3]
+- glue              [* -> 1.8.1]
+- GPArotation       [* -> 2026.8-2]
+- gtable            [* -> 0.3.6]
+- haven             [* -> 2.5.5]
+- here              [* -> 1.0.2]
+- highr             [* -> 0.12]
+- hms               [* -> 1.1.4]
+- htmltools         [* -> 0.5.9]
+- insight           [* -> 1.5.3]
+- isoband           [* -> 0.3.0]
+- knitr             [* -> 1.51]
+- lifecycle         [* -> 1.0.5]
+- lmtest            [* -> 0.9-40]
+- magrittr          [* -> 2.0.5]
+- marginaleffects   [* -> 0.32.0]
+- mnormt            [* -> 2.1.2]
+- modelsummary      [* -> 2.6.0]
+- parameters        [* -> 0.29.3]
+- performance       [* -> 0.17.0]
+- pillar            [* -> 1.11.1]
+- pkgconfig         [* -> 2.0.3]
+- prettyunits       [* -> 1.2.0]
+- progress          [* -> 1.2.3]
+- psych             [* -> 2.6.5]
+- R6                [* -> 2.6.1]
+- RColorBrewer      [* -> 1.1-3]
+- readr             [* -> 2.2.0]
+- rlang             [* -> 1.3.0]
+- rprojroot         [* -> 2.1.1]
+- S7                [* -> 0.2.2]
+- sandwich          [* -> 3.1-1]
+- scales            [* -> 1.4.0]
+- stringi           [* -> 1.8.9]
+- tables            [* -> 0.9.35]
+- tibble            [* -> 3.3.1]
+- tidyselect        [* -> 1.2.1]
+- tinytable         [* -> 0.18.0]
+- tzdb              [* -> 0.5.0]
+- utf8              [* -> 1.2.6]
+- vctrs             [* -> 0.7.3]
+- vroom             [* -> 1.7.1]
+- withr             [* -> 3.0.3]
+- xfun              [* -> 0.60]
+- yaml              [* -> 2.3.12]
+- zoo               [* -> 1.9-0]
+
+# RSPM -----------------------------------------------------------------------
+- farver            [* -> 2.1.2]
+- labeling          [* -> 0.4.3]
+- viridisLite       [* -> 0.4.3]
+
+# https://kjhealy.r-universe.dev ---------------------------------------------
+- gssr              [* -> 0.9]
+
+# https://packagemanager.posit.co/cran/__linux__/noble/latest ----------------
+- broom             [* -> 1.0.13]
+- dplyr             [* -> 1.2.1]
+- purrr             [* -> 1.2.2]
+- stringr           [* -> 1.6.0]
+- tidyr             [* -> 1.3.2]
+
+- Querying repositories for available source packages ... Done!
+- Querying repositories for available source packages ... Done!
+# Downloading packages -------------------------------------------------------
+[32m✔[0m highr 0.12                               [14 kB in 0.22s]
+[32m✔[0m pkgconfig 2.0.3                          [6 kB in 0.22s]
+[32m✔[0m gtable 0.3.6                             [148 kB in 0.24s]
+[32m✔[0m generics 0.1.4                           [47 kB in 0.24s]
+[32m✔[0m tibble 3.3.1                             [557 kB in 0.25s]
+[32m✔[0m lattice 0.22-7                           [599 kB in 0.25s]
+[32m✔[0m tzdb 0.5.0                               [601 kB in 0.25s]
+[32m✔[0m sandwich 3.1-1                           [1.4 MB in 0.25s]
+[32m✔[0m checkmate 2.3.4                          [253 kB in 22s]
+[32m✔[0m vctrs 0.7.3                              [1.1 MB in 0.26s]
+[32m✔[0m curl 7.1.0                               [718 kB in 0.26s]
+[32m✔[0m Matrix 1.7-3                             [2.5 MB in 59s]
+[32m✔[0m data.table 1.18.6.1                      [6.0 MB in 63s]
+[32m✔[0m RColorBrewer 1.1-3                       [12 kB in 41s]
+[32m✔[0m S7 0.2.2                                 [185 kB in 36s]
+[32m✔[0m lifecycle 1.0.5                          [107 kB in 34s]
+[32m✔[0m farver 2.1.2                             [1.3 MB in 33s]
+[32m✔[0m ggplot2 4.0.3                            [6.3 MB in 0.29s]
+[32m✔[0m Formula 1.2-6                            [47 kB in 9.2s]
+[32m✔[0m mnormt 2.1.2                             [64 kB in 12s]
+[32m✔[0m htmltools 0.5.9                          [135 kB in 13s]
+[32m✔[0m yaml 2.3.12                              [109 kB in 13s]
+[32m✔[0m pillar 1.11.1                            [410 kB in 14s]
+[32m✔[0m progress 1.2.3                           [30 kB in 15s]
+[32m✔[0m crayon 1.5.3                             [40 kB in 8.9s]
+[32m✔[0m nlme 3.1-172                             [854 kB in 22s]
+[32m✔[0m tidyselect 1.2.1                         [104 kB in 21s]
+[32m✔[0m digest 0.6.39                            [237 kB in 21s]
+[32m✔[0m labeling 0.4.3                           [10 kB in 12s]
+[32m✔[0m forcats 1.0.1                            [295 kB in 12s]
+[32m✔[0m bayestestR 0.18.1                        [575 kB in 0.36s]
+[32m✔[0m stringi 1.8.9                            [11.9 MB in 65s]
+[32m✔[0m rprojroot 2.1.1                          [60 kB in 21s]
+[32m✔[0m xfun 0.60                                [205 kB in 0.4s]
+[32m✔[0m GPArotation 2026.8-2                     [1.7 MB in 0.16s]
+[32m✔[0m cli 3.6.6                                [644 kB in 18s]
+[32m✔[0m utf8 1.2.6                               [244 kB in 9.1s]
+[32m✔[0m base64enc 0.1-6                          [9 kB in 10s]
+[32m✔[0m magrittr 2.0.5                           [282 kB in 11s]
+[32m✔[0m here 1.0.2                               [33 kB in 30s]
+[32m✔[0m readr 2.2.0                              [296 kB in 9.5s]
+[32m✔[0m withr 3.0.3                              [104 kB in 9.5s]
+[32m✔[0m prettyunits 1.2.0                        [97 kB in 9.1s]
+[32m✔[0m scales 1.4.0                             [329 kB in 9.8s]
+[32m✔[0m fastmap 1.2.0                            [47 kB in 0.11s]
+[32m✔[0m psych 2.6.5                              [1.2 MB in 0.47s]
+[32m✔[0m backports 1.5.1                          [30 kB in 16s]
+[32m✔[0m cpp11 0.5.5                              [305 kB in 8.4s]
+[32m✔[0m bit 4.6.0                                [305 kB in 12s]
+[32m✔[0m hms 1.1.4                                [45 kB in 7.4s]
+[32m✔[0m evaluate 1.0.5                           [39 kB in 7.2s]
+[32m✔[0m knitr 1.51                               [484 kB in 40s]
+[32m✔[0m haven 2.5.5                              [317 kB in 12s]
+[32m✔[0m clipr 0.8.1                              [21 kB in 0.14s]
+[32m✔[0m gssr 0.9                                 [32.7 MB in 0.32s]
+[32m✔[0m zoo 1.9-0                                [688 kB in 0.11s]
+[32m✔[0m stringr 1.6.0                            [343 kB in 0.32s]
+[32m✔[0m viridisLite 0.4.3                        [1.3 MB in 8.9s]
+[32m✔[0m lmtest 0.9-40                            [230 kB in 11s]
+[32m✔[0m rlang 1.3.0                              [784 kB in 12s]
+[32m✔[0m glue 1.8.1                               [130 kB in 14s]
+[32m✔[0m isoband 0.3.0                            [1.6 MB in 21s]
+[32m✔[0m R6 2.6.1                                 [65 kB in 14s]
+[32m✔[0m bit64 4.8.2                              [172 kB in 0.16s]
+[32m✔[0m tidyr 1.3.2                              [1.2 MB in 0.3s]
+[32m✔[0m broom 1.0.13                             [1.6 MB in 0.18s]
+[32m✔[0m purrr 1.2.2                              [558 kB in 0.28s]
+[32m✔[0m dplyr 1.2.1                              [1.5 MB in 0.28s]
+[32m✔[0m vroom 1.7.1                              [620 kB in 25s]
+[32m✔[0m fs 2.1.0                                 [1.5 MB in 14s]
+[32m✔[0m datawizard 1.3.1                         [449 kB in 0.64s]
+[32m✔[0m tinytable 0.18.0                         [440 kB in 0.41s]
+[32m✔[0m parameters 0.29.3                        [704 kB in 100s]
+[32m✔[0m tables 0.9.35                            [720 kB in 97s]
+[32m✔[0m modelsummary 2.6.0                       [3.1 MB in 0.23s]
+[32m✔[0m insight 1.5.3                            [1.1 MB in 0.71s]
+[32m✔[0m marginaleffects 0.32.0                   [1.6 MB in 0.49s]
+[32m✔[0m performance 0.17.0                       [1.9 MB in 0.53s]
+Successfully downloaded 78 packages in 1 second.
+
+# Installing packages --------------------------------------------------------
+[32m✔[0m base64enc 0.1-6                          [built from source in 1.5s]
+[32m✔[0m backports 1.5.1                          [built from source in 1.9s]
+[32m✔[0m clipr 0.8.1                              [built from source in 1.4s]
+[32m✔[0m cpp11 0.5.5                              [built from source in 1.5s]
+[32m✔[0m crayon 1.5.3                             [built from source in 2.3s]
+[32m✔[0m bit 4.6.0                                [built from source in 7.0s]
+[32m✔[0m curl 7.1.0                               [built from source in 4.4s]
+[32m✔[0m evaluate 1.0.5                           [built from source in 1.4s]
+[32m✔[0m cli 3.6.6                                [built from source in 11s]
+[32m✔[0m fastmap 1.2.0                            [built from source in 3.9s]
+[32m✔[0m digest 0.6.39                            [built from source in 8.9s]
+[32m✔[0m Formula 1.2-6                            [built from source in 1.4s]
+[31m✖[0m fs 2.1.0                                
+[32m✔[0m generics 0.1.4                           [built from source in 1.5s]
+[32m✔[0m glue 1.8.1                               [built from source in 2.0s]
+[32m✔[0m GPArotation 2026.8-2                     [built from source in 3.2s]
+[32m✔[0m labeling 0.4.3                           [built from source in 1.6s]
+[32m✔[0m data.table 1.18.6.1                      [built from source in 26s]
+[32m✔[0m lattice 0.22-7                           [built from source in 10s]
+[32m✔[0m magrittr 2.0.5                           [built from source in 1.8s]
+[32m✔[0m farver 2.1.2                             [built from source in 24s]
+[32m✔[0m pkgconfig 2.0.3                          [built from source in 1.1s]
+[32m✔[0m prettyunits 1.2.0                        [built from source in 1.4s]
+[32m✔[0m R6 2.6.1                                 [built from source in 1.5s]
+[32m✔[0m RColorBrewer 1.1-3                       [built from source in 1.7s]
+[32m✔[0m mnormt 2.1.2                             [built from source in 5.4s]
+[32m✔[0m rprojroot 2.1.1                          [built from source in 1.6s]
+[32m✔[0m insight 1.5.3                            [built from source in 21s]
+[32m✔[0m S7 0.2.2                                 [built from source in 3.1s]
+[32m✔[0m tinytable 0.18.0                         [built from source in 6.5s]
+[32m✔[0m viridisLite 0.4.3                        [built from source in 1.2s]
+[32m✔[0m rlang 1.3.0                              [built from source in 13s]
+[32m✔[0m withr 3.0.3                              [built from source in 1.4s]
+[32m✔[0m yaml 2.3.12                              [built from source in 3.9s]
+[32m✔[0m xfun 0.60                                [built from source in 5.1s]
+[32m✔[0m checkmate 2.3.4                          [built from source in 4.9s]
+[32m✔[0m utf8 1.2.6                               [built from source in 17s]
+[32m✔[0m bit64 4.8.2                              [built from source in 8.3s]
+[32m✔[0m tzdb 0.5.0                               [built from source in 14s]
+[32m✔[0m zoo 1.9-0                                [built from source in 5.3s]
+[32m✔[0m here 1.0.2                               [built from source in 1.2s]
+[32m✔[0m nlme 3.1-172                             [built from source in 16s]
+[32m✔[0m datawizard 1.3.1                         [built from source in 7.9s]
+[32m✔[0m htmltools 0.5.9                          [built from source in 4.4s]
+[32m✔[0m lifecycle 1.0.5                          [built from source in 2.1s]
+[32m✔[0m highr 0.12                               [built from source in 1.3s]
+[32m✔[0m isoband 0.3.0                            [built from source in 9.8s]
+[32m✔[0m lmtest 0.9-40                            [built from source in 3.0s]
+[32m✔[0m sandwich 3.1-1                           [built from source in 3.3s]
+[32m✔[0m marginaleffects 0.32.0                   [built from source in 9.0s]
+[32m✔[0m bayestestR 0.18.1                        [built from source in 8.3s]
+[32m✔[0m gtable 0.3.6                             [built from source in 2.4s]
+[32m✔[0m scales 1.4.0                             [built from source in 6.1s]
+[32m✔[0m stringi 1.8.9                            [built from source in 1.4m]
+[32m✔[0m knitr 1.51                               [built from source in 6.7s]
+[32m✔[0m psych 2.6.5                              [built from source in 36s]
+[32m✔[0m vctrs 0.7.3                              [built from source in 25s]
+[32m✔[0m tables 0.9.35                            [built from source in 3.1s]
+[32m✔[0m performance 0.17.0                       [built from source in 12s]
+[32m✔[0m parameters 0.29.3                        [built from source in 18s]
+[32m✔[0m purrr 1.2.2                              [installed binary]
+[32m✔[0m stringr 1.6.0                            [installed binary]
+[32m✔[0m hms 1.1.4                                [built from source in 2.4s]
+[32m✔[0m tidyselect 1.2.1                         [built from source in 2.3s]
+[32m✔[0m pillar 1.11.1                            [built from source in 4.6s]
+[32m✔[0m progress 1.2.3                           [built from source in 2.2s]
+[32m✔[0m modelsummary 2.6.0                       [built from source in 6.2s]
+[32m✔[0m tibble 3.3.1                             [built from source in 4.0s]
+[32m✔[0m dplyr 1.2.1                              [installed binary]
+[32m✔[0m tidyr 1.3.2                              [installed binary]
+[32m✔[0m broom 1.0.13                             [installed binary]
+[32m✔[0m forcats 1.0.1                            [built from source in 3.0s]
+[32m✔[0m ggplot2 4.0.3                            [built from source in 22s]
+[32m✔[0m Matrix 1.7-3                             [built from source in 2.4m]
+[32m✔[0m vroom 1.7.1                              [built from source in 59s]
+[32m✔[0m readr 2.2.0                              [built from source in 28s]
+[32m✔[0m haven 2.5.5                              [built from source in 12s]
+Rolled back installation of 76 packages due to errors.
+
+The following package(s) were not installed successfully:
+- [fs]: install failed
+- [gssr]: dependency failed (fs)
+You may need to manually download and install these packages.
+
+# fs -------------------------------------------------------------------------
+* installing *source* package ‘fs’ ...
+** this is package ‘fs’ version ‘2.1.0’
+** package ‘fs’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package libuv was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libuv.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'libuv', required by 'virtual:world', not found
+Using PKG_CFLAGS=
+Using PKG_LIBS=-luv
+--------------------------- [CONFIGURE] --------------------------------
+Configuration failed because libuv was not found. Try installing:
+ * deb: libuv1-dev (Debian, Ubuntu, etc)
+ * rpm: libuv-devel (Fedora, EPEL)
+ * brew: libuv (OSX)
+Alternatively set environment variable USE_BUNDLED_LIBUV=1 to build a static
+version of libuv that is included with this package.
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: uv.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+ERROR: configuration failed for package ‘fs’
+* removing ‘/tmp/receiptgen-950lt6so/checkout/renv/library/.renv-staging/1/fs’
+
+Error: failed to install "fs", "gssr"
+Traceback (most recent calls last):
+4: renv::restore(prompt = FALSE)
+3: renv_restore_run_actions(project, diff, current, lockfile, rebuild, 
+       strict, descriptions, retry)
+2: stopf("failed to install %s", paste(dQuote(failed), collapse = ", "))
+1: stop(sprintf(fmt, ...), call. = call.)
+Execution halted
+
+# end: 2026-11-26T16:20:15Z
+# exit: 1
+# seconds: 298.8
+# outcome: failed

@@ -1,0 +1,72 @@
+# Receipt: Lizardo, "Patriotism as a Choice Process: National Pride After 9/11" (Social Psychology Quarterly, forthcoming)
+
+**Status, 2026-11-26 16:20 UTC: 0 of 4 commands exited 0. 0 of 8 declared outputs reproduced. 8 were not written by the run, so they are not counted.**
+
+This was done unasked, by someone with no connection to the authors or the journal. It says what the committed
+materials did on this machine. It does not say anything about whether the paper is right.
+
+## What was checked
+
+- Package: the author's repository [olizardo/patriotism-choice-process](https://github.com/olizardo/patriotism-choice-process), commit `5100bd52fd6854ac27ec8881d11f4ebfa43e8fce`.
+- Paper: Omar Lizardo, Patriotism as a Choice Process: National Pride After 9/11, Social Psychology Quarterly, forthcoming.
+- 20 tracked files, each hashed in [`evidence/package-files.sha256`](evidence/package-files.sha256) (SHA-256 of that list `859f033173171aa4…`).
+- Protocol and comparison rule, committed before any package code ran: [`PROTOCOL.md`](PROTOCOL.md).
+- Comparison: each declared output, after the run, against the committed file of the same path. Numbers are compared one by one with relative tolerance 1e-12; all other text must be identical.
+- The README's full pipeline. Data are the GSS 1996 and 2004 files fetched from NORC at run time, so a difference can come from a revised GSS file as well as from code or versions.
+- Figures are compared by hash only; PDF metadata alone changes a hash.
+
+## Result
+
+| Command | Exit | Time | Output | Outcome | Reproduced |
+|---|---|---|---|---|---|
+| `Rscript -e 'source("scripts/generate_tables.R")'` | 1 | 1 s | `Tabs/tbl-nationalism.tex` | not written by this run, so not compared | no |
+|  |  |  | `Tabs/tbl-regression-educ.tex` | not written by this run, so not compared | no |
+|  |  |  | `Tabs/tbl-regression-full-2004.tex` | not written by this run, so not compared | no |
+| `Rscript -e 'source("scripts/generate_descriptives.R")'` | 1 | 1 s | `Tabs/tbl-descriptives.tex` | not written by this run, so not compared | no |
+| `Rscript -e 'source("scripts/generate_figures.R")'` | 1 | 1 s | `Plots/fig-logistic-pride.pdf` | not written by this run, so not compared | no |
+|  |  |  | `Plots/fig-marginal-educ.pdf` | not written by this run, so not compared | no |
+|  |  |  | `Plots/fig-membership-forest-ci.pdf` | not written by this run, so not compared | no |
+|  |  |  | `Plots/fig-pride-bar.pdf` | not written by this run, so not compared | no |
+| `Rscript -e 'source("scripts/supplementary_analysis_footnote2.R")'` | 1 | 1 s | `(none declared)` |  |  |
+
+Not written by this run: `Tabs/tbl-nationalism.tex`, `Tabs/tbl-regression-educ.tex`, `Tabs/tbl-regression-full-2004.tex`, `Tabs/tbl-descriptives.tex`, `Plots/fig-logistic-pride.pdf`, `Plots/fig-marginal-educ.pdf`, `Plots/fig-membership-forest-ci.pdf`, `Plots/fig-pride-bar.pdf`. A committed file that the run leaves untouched may be read back rather than recomputed, so it counts for nothing here.
+
+## Environment
+
+| | |
+|---|---|
+| OS | Ubuntu 24.04.5 LTS |
+| CPU | Intel(R) Xeon(R) 6975P-C |
+| Cores | 4 |
+| RAM | 15.3 GB |
+| GPU | none |
+| git | git version 2.56.1 |
+| python3 | Python 3.12.10 |
+| R | R version 4.6.2 (2026-10-29) -- "Diversified Portfolio" |
+| julia | julia version 1.13.4 |
+
+Full environment listings: [`evidence/environment.json`](evidence/environment.json).
+
+## Wall clock and cost
+
+Commands ran for 5 min 1 s in all, one after another, from 2026-11-26T16:15:10Z to 2026-11-26T16:20:18Z.
+At 0.0 USD an hour for this machine (GitHub-hosted ubuntu-24.04 runner, free for public repositories (a comparable 4 vCPU cloud machine is about 0.20 USD an hour)), that is about 0.00 USD.
+
+## Deviations, in order
+
+None. No package file was edited before or between commands.
+
+## Failed, stopped or killed runs
+
+1. `sudo apt-get install -y -q libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev >/dev/null; Rscript -e 'install.packages("renv", repos="https://cloud.r-project.org"); renv::restore(prompt = FALSE)'`: exit 1 after 4 min 59 s. [Log](evidence/logs/renv_restore.log).
+2. `Rscript -e 'source("scripts/generate_tables.R")'`: exit 1 after 1 s. [Log](evidence/logs/tables.log).
+3. `Rscript -e 'source("scripts/generate_descriptives.R")'`: exit 1 after 1 s. [Log](evidence/logs/descriptives.log).
+4. `Rscript -e 'source("scripts/generate_figures.R")'`: exit 1 after 1 s. [Log](evidence/logs/figures.log).
+5. `Rscript -e 'source("scripts/supplementary_analysis_footnote2.R")'`: exit 1 after 1 s. [Log](evidence/logs/footnote2.log).
+
+## Evidence
+
+- [`results.json`](results.json): every number above, with each command's start, end and exit code.
+- [`evidence/logs/`](evidence/logs/): stdout and stderr of every command.
+- [`evidence/outputs/`](evidence/outputs/): every output this run wrote.
+- Generated by `receiptgen/rerun.py` from the spec in `results.json`.
