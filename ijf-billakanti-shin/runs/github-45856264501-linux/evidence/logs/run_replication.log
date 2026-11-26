@@ -1,0 +1,36 @@
+# command: python3 scripts/run_replication.py; rc=$?; echo '--- run_report.json'; cat run_report.json 2>/dev/null; exit $rc
+# cwd: .
+# start: 2026-11-26T16:11:32Z
+# timeout_s: 18600
+Resolved 26 packages in 0.80ms
+Uninstalled 1 package in 0.81ms
+ - xlrd==2.0.2
+Checked 308 required inputs.
+Computed main Section 2 result bundle
+Computed revised/main: 11340 forecasts in 2978.9s
+Computed revised/extended: 15120 forecasts in 6931.4s
+Computed revised/probit_spread: 2520 forecasts in 42.2s
+Computed revised/parameter_free: 1260 forecasts in 206.0s
+Generated Figure 1: /tmp/receiptgen-e18wmlon/checkout/program_v04/output/main/figures/section2_binary_signals.pdf
+Generated Table 1: /tmp/receiptgen-e18wmlon/checkout/program_v04/output/main/tables/table01_single_binary_summary.csv and /tmp/receiptgen-e18wmlon/checkout/program_v04/output/main/tables/table01_single_binary_summary.tex
+Generated main-paper Table 2
+Generated main-paper Table 3
+Generated main-paper Table 4
+Generated main-paper Figure 2 (three panels)
+Generated main-paper Table 5
+Generated main-paper Figure 3
+Generated main-paper Table 6
+Generated main-paper Table 7
+Reusing fingerprint-verified revised/main run b93782d7cb13f7c609151fb1ae633498c0b9bcf512a97be9881ff65d3042260a
+Reusing fingerprint-verified revised/extended run b69d83ac01303ee63b5e26a586f156c00b3354a08a2d96696a08599278f7e6b9
+Computed revised/threshold: 5040 forecasts in 1277.5s
+Computed revised/moving_average: 7560 forecasts in 1915.3s
+Computed revised/nolag: 11340 forecasts in 2134.4s
+Computed revised/parsimonious: 3780 forecasts in 251.3s
+Computed revised/alternative_subsets: 5040 forecasts in 352.5s
+Computed revised/expanding_threshold: 1260 forecasts in 428.2s
+
+# end: 2026-11-26T21:21:32Z
+# exit: -9
+# seconds: 18600.0
+# outcome: timeout
