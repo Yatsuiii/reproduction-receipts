@@ -1,2 +1,2 @@
 # One spec per line. "#r" installs R on the runner first; "#windows" runs on a Windows runner.
-spq-lizardo/spec.json #r
+spq-lizardo/spec2.json #r

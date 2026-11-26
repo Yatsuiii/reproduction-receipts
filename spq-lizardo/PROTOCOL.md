@@ -25,3 +25,11 @@ manuscript text; that audit is kept in the log and summarised in the notes.
 The README warns that NORC may revise the GSS files. A table that differs is reported as "did not regenerate here, reason
 unknown", and the run records the GSS files' hashes so a data revision can be told apart from a code or version difference.
 The receipt says nothing about whether the paper is right.
+
+## Addendum, 2026-11-26 ~16:45 UTC, after run 1
+
+Run 1 ([receipt](runs/github-45856745397-linux/RECEIPT.md)) stopped in setup: `renv::restore()` could not compile the R
+package `fs`, which `gssr` needs, because the runner lacked the system library libuv. That is my setup's gap, not the
+package's: the README asks for R and renv, and the system libraries a desk installs are the desk's job. Run 1 is kept as
+found. Run 2 ([`spec2.json`](spec2.json)) is the same spec with `libuv1-dev` added to the setup, and nothing else changed.
+The comparison rule above is unchanged.
