@@ -1,0 +1,149 @@
+# command: Rscript -e 'source("scripts/generate_tables.R")'
+# cwd: .
+# start: 2026-11-26T16:45:02Z
+# timeout_s: 3600
+- The project is out-of-sync -- use `renv::status()` for details.
+Package loaded. To attach the GSS data, type data(gss_all) at the console.
+For the panel data and documentation, type e.g. data(gss_panel08_long) and data(gss_panel_doc).
+For help on a specific GSS variable, type ?varname at the console.
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘psych’
+
+The following object is masked _by_ ‘.GlobalEnv’:
+
+    %+%
+
+The following object is masked from ‘package:modelsummary’:
+
+    SD
+
+Fetching: https://gss.norc.org/documents/stata/1996_stata.zip
+Fetching: https://gss.norc.org/documents/stata/2004_stata.zip
+  ✓ Saved: Tabs/tbl-nationalism.tex 
+  ✓ Saved: Tabs/tbl-regression-educ.tex 
+  ✓ Saved: Tabs/tbl-regression-full-2004.tex 
+
+=== ROBUSTNESS CHECK: Continuous U.S. Pride Scale ===
+Correlation between dichotomized and continuous pride scales: r = 0.87 
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+
+Education × Year 2004 interaction coefficient (continuous scale):
+  Coefficient: 0.0148 
+  SE (classical): 0.0071 
+  SE (HC1 robust): 0.0083 
+  t-stat (classical): 2.0888 
+  t-stat (robust): 1.7932 
+  p-value (classical, two-tailed): 0.037 
+  p-value (robust, two-tailed): 0.073 
+  p-value (robust, one-tailed): 0.037 
+
+
+Full model comparison (dichotomized vs. continuous pride scale):
+
+Call:
+lm(formula = uspridescal ~ educ * year_f + cohort, data = gss_clean, 
+    weights = wtssall)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-7.3450 -2.0551 -0.3172  1.7297 10.8928 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     79.100101   7.182665  11.013  < 2e-16 ***
+educ            -0.071949   0.030048  -2.394  0.01673 *  
+year_f2004      -0.342634   0.624088  -0.549  0.58305    
+cohort          -0.038262   0.003689 -10.373  < 2e-16 ***
+educ:year_f2004  0.114336   0.044049   2.596  0.00951 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.69 on 2036 degrees of freedom
+  (507 observations deleted due to missingness)
+Multiple R-squared:  0.08438,	Adjusted R-squared:  0.08258 
+F-statistic: 46.91 on 4 and 2036 DF,  p-value: < 2.2e-16
+
+
+---
+
+Call:
+lm(formula = uspridescal_continuous ~ educ * year_f + cohort, 
+    data = gss_clean, weights = wtssall)
+
+Weighted Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.40481 -0.23200  0.00749  0.27164  1.51337 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     16.4215154  1.1560972  14.204   <2e-16 ***
+educ            -0.0110684  0.0048364  -2.289   0.0222 *  
+year_f2004       0.0034761  0.1004511   0.035   0.9724    
+cohort          -0.0067400  0.0005937 -11.352   <2e-16 ***
+educ:year_f2004  0.0148099  0.0070900   2.089   0.0368 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.433 on 2036 degrees of freedom
+  (507 observations deleted due to missingness)
+Multiple R-squared:  0.09424,	Adjusted R-squared:  0.09246 
+F-statistic: 52.96 on 4 and 2036 DF,  p-value: < 2.2e-16
+
+
+
+======================================================================
+NUMERICAL AUDIT: Manuscript Claim Verification
+======================================================================
+
+SCALE RELIABILITY (Cronbach's alpha):
+  U.S. Pride Scale (dichotomized items): 0.804 (text: .80)
+  Nationalism Scale: 0.644 (text: .64)
+
+DESCRIPTIVE STATISTICS (Table 1 sample):
+  U.S. Pride: M = 3.88, SD = 2.79, range [0.0, 10.0] (text: 3.88 ± 2.79, [0.0, 10.0])
+  Nationalism: M = 3.72, SD = 0.71, range [1.0, 5.0] (text: 3.72 ± .71, [1.0, 5.0])
+  Education: M = 13.53, SD = 2.91, range [0.0, 20.0] (text: 13.53 ± 2.91, [0.0, 20.0])
+  Total Memberships: M = 1.61, SD = 1.88 (text: 1.61 ± 1.88)
+  Birth cohort: M = 1954.57 (text: birth cohort is not centered)
+
+KEY MODEL RESULTS (classical SEs; HC1 robust SEs in brackets):
+  Nationalism Educ x 2004: b = -0.0004, p = 0.9637 (text: b = -.0004, p = .964)
+  Pride Educ x 2004: b = 0.1143, p = 0.0095 [HC1 p = 0.0211] (text: b = .114, p = .010; robust p = .021)
+  Pride Educ, 1996: b = -0.0663, p = 0.0297 (text: b = -.066, p = .030)
+  Pride Educ, 2004: b = 0.0396, p = 0.2135 (text: b = .040, p = .213)
+  SE ratio (HC1/classical), Pride interaction: 1.125
+  SE ratio (HC1/classical), Nationalism interaction: 1.113
+  SE ratio (HC1/classical), 1996 educ: 1.134
+  Count model memnum: b = 0.1148, p = 0.0114 (text: b = .115, p = .011)
+  Full model memnum: b = 0.1125, p = 0.0095, HC1 p = 0.0272 (text: robust p = .027)
+
+
+======================================================================
+END OF NUMERICAL AUDIT
+======================================================================
+Warning message:
+In readLines(f, n) :
+  incomplete final line found on '/tmp/receiptgen-lpx08v1l/checkout/renv.lock'
+
+# end: 2026-11-26T16:45:21Z
+# exit: 0
+# seconds: 19.16
+# outcome: exit0
