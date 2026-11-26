@@ -1,0 +1,193 @@
+# command: Rscript -e 'source("scripts/supplementary_analysis_footnote2.R")'
+# cwd: .
+# start: 2026-11-26T16:45:53Z
+# timeout_s: 3600
+- The project is out-of-sync -- use `renv::status()` for details.
+Package loaded. To attach the GSS data, type data(gss_all) at the console.
+For the panel data and documentation, type e.g. data(gss_panel08_long) and data(gss_panel_doc).
+For help on a specific GSS variable, type ?varname at the console.
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading and cleaning data for supplementary analysis (Footnote 2)...
+
+Fetching: https://gss.norc.org/documents/stata/1996_stata.zip
+Fetching: https://gss.norc.org/documents/stata/2004_stata.zip
+1996 sample size with valid political ideology: n = 1272
+  Conservative: 245 (19.3%)
+  Not Conservative: 1027 (80.7%)
+
+Fitting models with political ideology control (1996 only)...
+
+MODEL 1: Nationalism Scale (1996 with Conservative Control)
+----------------------------------------------------------------------
+Base Model (Cohort + Conservative only):
+
+Call:
+lm(formula = nationalistscal ~ cohort + conservative, data = gss_cons_96, 
+    weights = wtssall)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2943 -0.3979  0.0193  0.4229  1.8821 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  23.521647   2.290412  10.270  < 2e-16 ***
+cohort       -0.010176   0.001173  -8.679  < 2e-16 ***
+conservative  0.177782   0.048167   3.691 0.000233 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6775 on 1256 degrees of freedom
+  (13 observations deleted due to missingness)
+Multiple R-squared:  0.07016,	Adjusted R-squared:  0.06868 
+F-statistic: 47.39 on 2 and 1256 DF,  p-value: < 2.2e-16
+
+
+
+With Education Effect:
+
+Call:
+lm(formula = nationalistscal ~ educ + cohort + conservative, 
+    data = gss_cons_96, weights = wtssall)
+
+Weighted Residuals:
+     Min       1Q   Median       3Q      Max 
+-3.11722 -0.38664 -0.00403  0.41771  2.18594 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  22.005922   2.244106   9.806  < 2e-16 ***
+educ         -0.055374   0.006774  -8.174 7.21e-16 ***
+cohort       -0.009017   0.001154  -7.815 1.15e-14 ***
+conservative  0.194644   0.047025   4.139 3.72e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6606 on 1253 degrees of freedom
+  (15 observations deleted due to missingness)
+Multiple R-squared:  0.1174,	Adjusted R-squared:  0.1153 
+F-statistic: 55.54 on 3 and 1253 DF,  p-value: < 2.2e-16
+
+
+**EDUCATION EFFECT ON NATIONALISM:**
+  Coefficient: -0.0554
+  SE: 0.0068
+  t-value: -8.1744
+  p-value: 0.0000
+  Significance: SIGNIFICANT at p < .05
+
+
+MODEL 2: U.S. Pride Scale (1996 with Conservative Control)
+----------------------------------------------------------------------
+Education Effect on U.S. Pride (controlling for Cohort + Conservative):
+
+Call:
+lm(formula = uspridescal ~ educ + cohort + conservative, data = gss_cons_96, 
+    weights = wtssall)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.6948 -2.0140 -0.4156  1.8037 11.2684 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  94.621560  10.123537   9.347  < 2e-16 ***
+educ         -0.063003   0.030801  -2.045  0.04106 *  
+cohort       -0.046348   0.005204  -8.906  < 2e-16 ***
+conservative  0.686557   0.206754   3.321  0.00093 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.688 on 1025 degrees of freedom
+  (243 observations deleted due to missingness)
+Multiple R-squared:  0.09418,	Adjusted R-squared:  0.09153 
+F-statistic: 35.52 on 3 and 1025 DF,  p-value: < 2.2e-16
+
+
+**EDUCATION EFFECT ON U.S. PRIDE:**
+  Coefficient: -0.0630
+  SE: 0.0308
+  t-value: -2.0455
+  p-value: 0.0411
+  Significance: SIGNIFICANT at p < .05
+
+
+======================================================================
+ROBUSTNESS CHECK SUMMARY
+======================================================================
+
+U.S. PRIDE SCALE - Education Effect (1996):
+  Main model (no ideology):        β = -0.0663, p = 0.0297
+  With ideology control:           β = -0.0630, p = 0.0411
+  Change in coefficient:           Δβ = 0.0033 (5.0% of original)
+  Conclusion: Education effect IS robust to political ideology control
+
+NATIONALISM SCALE - Education Effect (1996):
+  Main model (no ideology):        β = -0.0553, p = 0.0000
+  With ideology control:           β = -0.0554, p = 0.0000
+  Change in coefficient:           Δβ = -0.0001 (0.2% of original)
+  Conclusion: Education effect IS robust to political ideology control
+
+
+======================================================================
+POLITICAL IDEOLOGY EFFECTS (1996 only)
+======================================================================
+
+U.S. PRIDE SCALE:
+  Conservative ideology effect:    β = 0.6866, SE = 0.2068, p = 0.0009
+  Interpretation: Conservatives score 0.69 points higher on pride scale (0-10)
+
+NATIONALISM SCALE:
+  Conservative ideology effect:    β = 0.1946, SE = 0.0470, p = 0.0000
+  Interpretation: Conservatives score 0.19 points higher on nationalism scale (1-5)
+
+======================================================================
+Generating supplementary LaTeX tables...
+======================================================================
+
+✓ Saved: Supplementary/tbl-supplement-nationalism-ideology.tex
+✓ Saved: Supplementary/tbl-supplement-pride-ideology.tex
+
+======================================================================
+SUPPLEMENTARY ANALYSIS COMPLETE
+======================================================================
+
+SUMMARY FOR FOOTNOTE 2 RESPONSE:
+
+These robustness checks verify that the education effects reported in the
+main text (which exclude political ideology due to 2004 data limitations)
+remain substantively unchanged when political ideology is controlled for
+in the 1996 subsample where both variables are available.
+
+KEY FINDINGS:
+1. U.S. Pride education effect (1996):
+   - Main model:           β = -0.0663, p = 0.0297
+   - With ideology control: β = -0.0630, p = 0.0411
+   → Effect is ROBUST to ideology control (same direction and significance)
+
+2. Nationalism education effect (1996):
+   - Main model:           β = -0.0553, p = 0.0000
+   - With ideology control: β = -0.0554, p = 0.0000
+   → Effect is ROBUST to ideology control (same direction and significance)
+
+CONCLUSION: The education effects reported in the main text do not depend
+on the exclusion of political ideology. Conservative political ideology
+is a significant predictor of both U.S. Pride and Nationalism, but does
+not substantively alter the education effects.Warning message:
+In readLines(f, n) :
+  incomplete final line found on '/tmp/receiptgen-lpx08v1l/checkout/renv.lock'
+
+# end: 2026-11-26T16:46:01Z
+# exit: 0
+# seconds: 8.43
+# outcome: exit0

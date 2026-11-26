@@ -1,0 +1,239 @@
+{
+ "format": "receiptgen-results/1",
+ "spec": {
+  "title": "Lizardo, \"Patriotism as a Choice Process: National Pride After 9/11\" (Social Psychology Quarterly, forthcoming)",
+  "paper": "Omar Lizardo, Patriotism as a Choice Process: National Pride After 9/11, Social Psychology Quarterly, forthcoming",
+  "package_label": "the author's repository [olizardo/patriotism-choice-process](https://github.com/olizardo/patriotism-choice-process)",
+  "repo": "https://github.com/olizardo/patriotism-choice-process",
+  "commit": "5100bd52fd6854ac27ec8881d11f4ebfa43e8fce",
+  "protocol": "PROTOCOL.md",
+  "cost_per_hour_usd": 0.0,
+  "cost_basis": "GitHub-hosted ubuntu-24.04 runner, free for public repositories (a comparable 4 vCPU cloud machine is about 0.20 USD an hour)",
+  "compare": {
+   "rel_tol": 1e-12
+  },
+  "environment_commands": [
+   {
+    "id": "R_sessionInfo",
+    "cmd": "Rscript -e 'print(sessionInfo()); for (p in c(\"renv\",\"gssr\",\"dplyr\",\"survey\",\"modelsummary\")) cat(p, tryCatch(as.character(packageVersion(p)), error=function(e) \"not installed\"), \"\\n\")'"
+   },
+   {
+    "id": "gss_cache_hashes",
+    "cmd": "find ~ /tmp -iname '*gss*' -type f \\( -name '*.dta' -o -name '*.zip' -o -name '*.rds' \\) 2>/dev/null | head -20 | xargs -r sha256sum"
+   }
+  ],
+  "setup": [
+   {
+    "id": "renv_restore",
+    "cmd": "sudo apt-get install -y -q libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev >/dev/null; Rscript -e 'install.packages(\"renv\", repos=\"https://cloud.r-project.org\"); renv::restore(prompt = FALSE)'",
+    "timeout_s": 5400
+   }
+  ],
+  "commands": [
+   {
+    "id": "tables",
+    "cmd": "Rscript -e 'source(\"scripts/generate_tables.R\")'",
+    "timeout_s": 3600,
+    "outputs": [
+     "Tabs/tbl-nationalism.tex",
+     "Tabs/tbl-regression-educ.tex",
+     "Tabs/tbl-regression-full-2004.tex"
+    ]
+   },
+   {
+    "id": "descriptives",
+    "cmd": "Rscript -e 'source(\"scripts/generate_descriptives.R\")'",
+    "timeout_s": 3600,
+    "outputs": [
+     "Tabs/tbl-descriptives.tex"
+    ]
+   },
+   {
+    "id": "figures",
+    "cmd": "Rscript -e 'source(\"scripts/generate_figures.R\")'",
+    "timeout_s": 3600,
+    "outputs": [
+     "Plots/fig-logistic-pride.pdf",
+     "Plots/fig-marginal-educ.pdf",
+     "Plots/fig-membership-forest-ci.pdf",
+     "Plots/fig-pride-bar.pdf"
+    ]
+   },
+   {
+    "id": "footnote2",
+    "cmd": "Rscript -e 'source(\"scripts/supplementary_analysis_footnote2.R\")'",
+    "timeout_s": 3600,
+    "outputs": []
+   }
+  ],
+  "scope_notes": [
+   "The README's full pipeline. Data are the GSS 1996 and 2004 files fetched from NORC at run time, so a difference can come from a revised GSS file as well as from code or versions.",
+   "Figures are compared by hash only; PDF metadata alone changes a hash."
+  ]
+ },
+ "started": "2026-11-26T16:15:10Z",
+ "status": "ran",
+ "flags": [],
+ "commands": [
+  {
+   "id": "renv_restore",
+   "cmd": "sudo apt-get install -y -q libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev >/dev/null; Rscript -e 'install.packages(\"renv\", repos=\"https://cloud.r-project.org\"); renv::restore(prompt = FALSE)'",
+   "cwd": ".",
+   "timeout_s": 5400,
+   "start": "2026-11-26T16:15:16Z",
+   "end": "2026-11-26T16:20:15Z",
+   "exit_code": 1,
+   "seconds": 298.8,
+   "outcome": "failed",
+   "log": "evidence/logs/renv_restore.log",
+   "setup": true
+  },
+  {
+   "id": "tables",
+   "cmd": "Rscript -e 'source(\"scripts/generate_tables.R\")'",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-26T16:20:15Z",
+   "end": "2026-11-26T16:20:15Z",
+   "exit_code": 1,
+   "seconds": 0.62,
+   "outcome": "failed",
+   "log": "evidence/logs/tables.log",
+   "setup": false
+  },
+  {
+   "id": "descriptives",
+   "cmd": "Rscript -e 'source(\"scripts/generate_descriptives.R\")'",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-26T16:20:15Z",
+   "end": "2026-11-26T16:20:16Z",
+   "exit_code": 1,
+   "seconds": 0.56,
+   "outcome": "failed",
+   "log": "evidence/logs/descriptives.log",
+   "setup": false
+  },
+  {
+   "id": "figures",
+   "cmd": "Rscript -e 'source(\"scripts/generate_figures.R\")'",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-26T16:20:16Z",
+   "end": "2026-11-26T16:20:17Z",
+   "exit_code": 1,
+   "seconds": 0.62,
+   "outcome": "failed",
+   "log": "evidence/logs/figures.log",
+   "setup": false
+  },
+  {
+   "id": "footnote2",
+   "cmd": "Rscript -e 'source(\"scripts/supplementary_analysis_footnote2.R\")'",
+   "cwd": ".",
+   "timeout_s": 3600,
+   "start": "2026-11-26T16:20:17Z",
+   "end": "2026-11-26T16:20:17Z",
+   "exit_code": 1,
+   "seconds": 0.62,
+   "outcome": "failed",
+   "log": "evidence/logs/footnote2.log",
+   "setup": false
+  }
+ ],
+ "outputs": {
+  "Tabs/tbl-nationalism.tex": {
+   "command": "tables",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "Tabs/tbl-regression-educ.tex": {
+   "command": "tables",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "Tabs/tbl-regression-full-2004.tex": {
+   "command": "tables",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "Tabs/tbl-descriptives.tex": {
+   "command": "descriptives",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "Plots/fig-logistic-pride.pdf": {
+   "command": "figures",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "Plots/fig-marginal-educ.pdf": {
+   "command": "figures",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "Plots/fig-membership-forest-ci.pdf": {
+   "command": "figures",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  },
+  "Plots/fig-pride-bar.pdf": {
+   "command": "figures",
+   "committed": true,
+   "rewritten": false,
+   "class": "not-rewritten",
+   "reproduced": false
+  }
+ },
+ "reproduced": [],
+ "commit": "5100bd52fd6854ac27ec8881d11f4ebfa43e8fce",
+ "package_files": 20,
+ "package_files_sha256": "859f033173171aa48de6efa1e3ec2ddb2409d0424e5d7e25d1b7600cfc678e04",
+ "environment": {
+  "platform": "Linux-7.0.0-1018-aws-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cores": 4,
+  "os": "Ubuntu 24.04.5 LTS",
+  "cpu": "Intel(R) Xeon(R) 6975P-C",
+  "ram_gb": 15.3,
+  "gpu": "none",
+  "tools": {
+   "git": "git version 2.56.1",
+   "python3": "Python 3.12.10",
+   "R": "R version 4.6.2 (2026-10-29) -- \"Diversified Portfolio\"",
+   "julia": "julia version 1.13.4"
+  },
+  "extra": {
+   "R_sessionInfo": "R version 4.6.2 (2026-10-29)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.5 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 \nLAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: UTC\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n[1] compiler_4.6.2\nrenv not installed \ngssr not installed \ndplyr not installed \nsurvey not installed \nmodelsummary not installed \n",
+   "gss_cache_hashes": ""
+  }
+ },
+ "untracked_after": 0,
+ "tracked_not_declared_ok": [
+  "Plots/fig-logistic-pride.pdf",
+  "Plots/fig-marginal-educ.pdf",
+  "Plots/fig-membership-forest-ci.pdf",
+  "Plots/fig-pride-bar.pdf",
+  "Tabs/tbl-descriptives.tex",
+  "Tabs/tbl-nationalism.tex",
+  "Tabs/tbl-regression-educ.tex",
+  "Tabs/tbl-regression-full-2004.tex"
+ ],
+ "finished": "2026-11-26T16:20:18Z",
+ "wall_clock_seconds": 301.22,
+ "cost_usd": 0.0
+}

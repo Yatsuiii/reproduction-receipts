@@ -1,0 +1,65 @@
+# command: Rscript -e 'source("scripts/generate_figures.R")'
+# cwd: .
+# start: 2026-11-26T16:45:32Z
+# timeout_s: 3600
+- The project is out-of-sync -- use `renv::status()` for details.
+Package loaded. To attach the GSS data, type data(gss_all) at the console.
+For the panel data and documentation, type e.g. data(gss_panel08_long) and data(gss_panel_doc).
+For help on a specific GSS variable, type ?varname at the console.
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘ggplot2’
+
+The following object is masked _by_ ‘.GlobalEnv’:
+
+    %+%
+
+Fetching: https://gss.norc.org/documents/stata/1996_stata.zip
+Fetching: https://gss.norc.org/documents/stata/2004_stata.zip
+Data loaded and cleaned. Generating figures...
+
+Generating Figure 1: Item-level logistic regression odds ratios...
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+  ✓ Saved: Plots/fig-logistic-pride.pdf
+Generating Figure 2: Distribution of U.S. Pride scale by year...
+  ✓ Saved: Plots/fig-pride-bar.pdf
+Generating Figure 3: Marginal effects of education on U.S. Pride by year...
+  ✓ Saved: Plots/fig-marginal-educ.pdf
+Generating Figure 4: Membership forest plot with 90/95% CIs...
+  ✓ Saved: Plots/fig-membership-forest-ci.pdf
+
+======================================================================
+Figure Generation Complete
+======================================================================
+Generated files:
+  1. Plots/fig-logistic-pride.pdf
+  2. Plots/fig-pride-bar.pdf
+  3. Plots/fig-marginal-educ.pdf
+  4. Plots/fig-membership-forest-ci.pdf
+
+All figures are now reproducible from the canonical data pipeline.
+There were 50 or more warnings (use warnings() to see the first 50)
+
+# end: 2026-11-26T16:45:53Z
+# exit: 0
+# seconds: 20.32
+# outcome: exit0

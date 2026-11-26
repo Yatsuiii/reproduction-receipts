@@ -1,0 +1,77 @@
+# command: Rscript -e 'source("scripts/generate_descriptives.R")'
+# cwd: .
+# start: 2026-11-26T16:45:21Z
+# timeout_s: 3600
+- The project is out-of-sync -- use `renv::status()` for details.
+Package loaded. To attach the GSS data, type data(gss_all) at the console.
+For the panel data and documentation, type e.g. data(gss_panel08_long) and data(gss_panel_doc).
+For help on a specific GSS variable, type ?varname at the console.
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Fetching: https://gss.norc.org/documents/stata/1996_stata.zip
+Fetching: https://gss.norc.org/documents/stata/2004_stata.zip
+Data loaded and cleaned. Computing descriptive statistics...
+
+CONTINUOUS VARIABLES:
+# A tibble: 5 × 5
+  variable             mean    sd   min   max
+  <chr>               <dbl> <dbl> <dbl> <dbl>
+1 U.S. Pride Scale     3.88  2.79     0    10
+2 Nationalism Scale    3.72  0.71     1     5
+3 Education (Years)   13.5   2.91     0    20
+4 Birth Cohort      1955.   17.2   1907  1986
+5 Total Memberships    1.61  1.88     0    13
+
+
+CATEGORICAL VARIABLES:
+# A tibble: 6 × 2
+  variable                         pct_yes
+  <chr>                              <dbl>
+1 Female                              55.1
+2 Race: White                         80.2
+3 Race: Black                         13.6
+4 Race: Other                          6.2
+5 Region: South                       36.7
+6 Political Ideology: Conservative    20.5
+
+
+VOLUNTARY ASSOCIATION MEMBERSHIPS (2004 only):
+# A tibble: 15 × 2
+   membership_type            pct_member
+   <chr>                           <dbl>
+ 1 Church-affiliated                31.1
+ 2 Sports                           16.8
+ 3 Professional                     15.1
+ 4 School                           14.1
+ 5 Hobby                            10.9
+ 6 Literary or Art                  10.5
+ 7 Youth                            10.3
+ 8 Labor Union                       9.6
+ 9 Service                           9.6
+10 Fraternal                         6.8
+11 Veterans                          5.3
+12 Political                         4.3
+13 School Fraternity/Sorority        4.2
+14 Farm                              3  
+15 Nationality                       2.7
+
+======================================================================
+✓ Descriptive statistics table generated: Tabs/tbl-descriptives.tex
+======================================================================
+Warning message:
+In readLines(f, n) :
+  incomplete final line found on '/tmp/receiptgen-lpx08v1l/checkout/renv.lock'
+
+# end: 2026-11-26T16:45:32Z
+# exit: 0
+# seconds: 11.59
+# outcome: exit0
