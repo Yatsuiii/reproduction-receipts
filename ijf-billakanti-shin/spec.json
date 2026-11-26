@@ -1,0 +1,45 @@
+{
+ "title": "Billakanti and Shin, \"At-Risk Transformation for U.S. Recession Prediction\" (International Journal of Forecasting, conditionally accepted): first Linux run",
+ "paper": "Rahul Billakanti and Minchul Shin, At-Risk Transformation for U.S. Recession Prediction, International Journal of Forecasting, conditionally accepted",
+ "package_label": "the authors' repository [mcmcs/At-Risk-Public](https://github.com/mcmcs/At-Risk-Public)",
+ "repo": "https://github.com/mcmcs/At-Risk-Public",
+ "commit": "4ec0c1de156a19cd0fa318dd4a885d253fbb27ed",
+ "protocol": "PROTOCOL.md",
+ "cost_per_hour_usd": 0.0,
+ "cost_basis": "GitHub-hosted ubuntu-24.04 runner, free for public repositories (a comparable 4 vCPU cloud machine is about 0.20 USD an hour)",
+ "environment_commands": [
+  {
+   "id": "tools",
+   "cmd": "uv --version; pdftoppm -v 2>&1 | head -1; nproc; free -g | head -2; program_v04/.venv/bin/python -c 'import sys,numpy,sklearn,xgboost;print(sys.version);print(numpy.__version__,sklearn.__version__,xgboost.__version__)' || true"
+  }
+ ],
+ "setup": [
+  {
+   "id": "install_tools",
+   "cmd": "python -m pip install --quiet uv && sudo apt-get install -y -q poppler-utils >/dev/null && uv --version",
+   "timeout_s": 900
+  },
+  {
+   "id": "uv_sync",
+   "cmd": "cd program_v04 && uv sync --locked && cd .. && uv pip install --python program_v04/.venv/bin/python xlrd==2.0.2",
+   "timeout_s": 1800
+  },
+  {
+   "id": "download_inputs",
+   "cmd": "program_v04/.venv/bin/python scripts/download_inputs.py && program_v04/.venv/bin/python scripts/verify_inputs.py",
+   "timeout_s": 1800
+  }
+ ],
+ "commands": [
+  {
+   "id": "run_replication",
+   "cmd": "python3 scripts/run_replication.py; rc=$?; echo '--- run_report.json'; cat run_report.json 2>/dev/null; exit $rc",
+   "timeout_s": 18600,
+   "outputs": []
+  }
+ ],
+ "scope_notes": [
+  "The README's full run: every model estimated from the 308 public inputs, then the package's own comparison of 50 outputs with the manuscript references, at its own tolerance; the log holds its output.",
+  "The tested platform is macOS on Apple Silicon. This is an x86-64 Linux runner, so the run also says whether the results carry across platforms."
+ ]
+}
