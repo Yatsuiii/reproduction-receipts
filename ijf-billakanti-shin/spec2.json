@@ -1,0 +1,63 @@
+{
+ "title": "Billakanti and Shin, \"At-Risk Transformation for U.S. Recession Prediction\" (International Journal of Forecasting, conditionally accepted): first Linux run, main paper",
+ "paper": "Rahul Billakanti and Minchul Shin, At-Risk Transformation for U.S. Recession Prediction, International Journal of Forecasting, conditionally accepted",
+ "package_label": "the authors' repository [mcmcs/At-Risk-Public](https://github.com/mcmcs/At-Risk-Public)",
+ "repo": "https://github.com/mcmcs/At-Risk-Public",
+ "commit": "4ec0c1de156a19cd0fa318dd4a885d253fbb27ed",
+ "protocol": "PROTOCOL.md",
+ "cost_per_hour_usd": 0.0,
+ "cost_basis": "GitHub-hosted ubuntu-24.04 runner, free for public repositories (a comparable 4 vCPU cloud machine is about 0.20 USD an hour)",
+ "environment_commands": [
+  {
+   "id": "tools",
+   "cmd": "uv --version; pdftoppm -v 2>&1 | head -1; nproc; free -g | head -2; program_v04/.venv/bin/python -c 'import sys,numpy,sklearn,xgboost;print(sys.version);print(numpy.__version__,sklearn.__version__,xgboost.__version__)' || true"
+  }
+ ],
+ "setup": [
+  {
+   "id": "install_tools",
+   "cmd": "python -m pip install --quiet uv && sudo apt-get install -y -q poppler-utils >/dev/null && uv --version",
+   "timeout_s": 900
+  },
+  {
+   "id": "uv_sync",
+   "cmd": "cd program_v04 && uv sync --locked && cd .. && uv pip install --python program_v04/.venv/bin/python xlrd==2.0.2",
+   "timeout_s": 1800
+  },
+  {
+   "id": "download_inputs",
+   "cmd": "program_v04/.venv/bin/python scripts/download_inputs.py && program_v04/.venv/bin/python scripts/verify_inputs.py",
+   "timeout_s": 1800
+  }
+ ],
+ "commands": [
+  {
+   "id": "run_main",
+   "cmd": "cd program_v04 && .venv/bin/python -m program_v04.main.run_main --input-mode public",
+   "timeout_s": 16200,
+   "outputs": []
+  },
+  {
+   "id": "place_main_tables_for_comparison",
+   "cmd": "cp program_v04/output/main/tables/*.csv reference/output/main/tables/",
+   "timeout_s": 60,
+   "outputs": [
+    "reference/output/main/tables/table01_single_binary_summary.csv",
+    "reference/output/main/tables/table02_zt_vs_benchmarks.csv",
+    "reference/output/main/tables/table03_aggregation_comparison.csv",
+    "reference/output/main/tables/table04_encompassing_tests.csv",
+    "reference/output/main/tables/table05_mse_decomposition_h3.csv",
+    "reference/output/main/tables/table06_feature_importance.csv",
+    "reference/output/main/tables/table07_sector_contribution.csv"
+   ]
+  }
+ ],
+ "scope_notes": [
+  "Main paper only: Tables 1-7 as CSV. LaTeX tables carry a run fingerprint comment and figures are PDFs, so they are not compared here. The appendix (Tables 8-22, Figure 4) is not run.",
+  "The tested platform is macOS on Apple Silicon. This is an x86-64 Linux runner, so the run also says whether the results carry across platforms."
+ ],
+ "deviations": [
+  "Run 2 runs only the README's main-paper command (Figures 1-3, Tables 1-7), because the full run passed this runner's time limit in run 1.",
+  "The package's own comparison script checks all 50 outputs and so cannot run on the main paper alone. Instead the seven regenerated main-table CSVs are copied over the committed reference CSVs, and receiptgen compares each with the committed file, number by number, at relative tolerance 1e-12. The package's own rule is absolute 5e-12; both are given in the notes."
+ ]
+}

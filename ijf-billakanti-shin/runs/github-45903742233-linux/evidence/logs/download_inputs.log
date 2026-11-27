@@ -1,0 +1,43 @@
+# command: program_v04/.venv/bin/python scripts/download_inputs.py && program_v04/.venv/bin/python scripts/verify_inputs.py
+# cwd: .
+# start: 2026-11-26T22:17:20Z
+# timeout_s: 1800
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-26T22:17:28.850616+00:00",
+  "verified_inputs": 308,
+  "downloads": [
+    {
+      "url": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/historical-vintages-of-fred-md-2015-01-to-2025-12.zip",
+      "sha256": "7cf486e5f7fe6142fa47f78dedbb290111cfdd0ff6ac2273400110103271e41e"
+    },
+    {
+      "url": "https://www.newyorkfed.org/medialibrary/media/research/capital_markets/allmonth.xls",
+      "sha256": "2fe39a1698a8c58e49180fafaf4bd3fb4afaf8a1ac587408a7760d7a9ba6035f"
+    },
+    {
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=USRECM",
+      "retrieved_at_utc": "2026-11-26T22:17:23.298316+00:00",
+      "initial_comparison_date_America_New_York": "2026-09-10",
+      "sample_start": "1960-01-01",
+      "sample_end": "2024-12-01",
+      "months": 780,
+      "recession_months": 104,
+      "monthly_values_sha256": "6994f06c6bba9ef26a5aa29265babc34665d40db092ed93f0cec531d8566f484",
+      "download_sha256": "23463db4e751eab4b9aa570b3070737a01cb0ebe119f29d751eb6cf940666850",
+      "output": "/tmp/receiptgen-dnqxmn66/checkout/program_v04/data/raw/target/y_target.pkl",
+      "output_sha256": "5525776da15ccd74c602403d04cc365e1bb3c3d18dc6ecf3ce7362bc8907f98b"
+    },
+    {
+      "url": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/historical_fred-md.zip?hash=8A23C5FAF7A0D743A353D77DF4704028&sc_lang=en",
+      "sha256": "3434963f26fbf1aa2e6ff06fd43e1f7b2318ab1a529fa38ac28762f84736a9bb"
+    }
+  ],
+  "verification": "Exact manifest bytes except USRECM, which requires exact monthly dates and values."
+}
+Verified 308 required inputs. No models were estimated.
+
+# end: 2026-11-26T22:17:32Z
+# exit: 0
+# seconds: 11.74
+# outcome: exit0

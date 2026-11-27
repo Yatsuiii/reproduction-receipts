@@ -1,0 +1,24 @@
+# command: cd program_v04 && .venv/bin/python -m program_v04.main.run_main --input-mode public
+# cwd: .
+# start: 2026-11-26T22:17:32Z
+# timeout_s: 16200
+Computed main Section 2 result bundle
+Computed revised/main: 11340 forecasts in 2351.4s
+Computed revised/extended: 15120 forecasts in 5354.7s
+Computed revised/probit_spread: 2520 forecasts in 32.3s
+Computed revised/parameter_free: 1260 forecasts in 142.4s
+Generated Figure 1: /tmp/receiptgen-dnqxmn66/checkout/program_v04/output/main/figures/section2_binary_signals.pdf
+Generated Table 1: /tmp/receiptgen-dnqxmn66/checkout/program_v04/output/main/tables/table01_single_binary_summary.csv and /tmp/receiptgen-dnqxmn66/checkout/program_v04/output/main/tables/table01_single_binary_summary.tex
+Generated main-paper Table 2
+Generated main-paper Table 3
+Generated main-paper Table 4
+Generated main-paper Figure 2 (three panels)
+Generated main-paper Table 5
+Generated main-paper Figure 3
+Generated main-paper Table 6
+Generated main-paper Table 7
+
+# end: 2026-11-27T00:29:16Z
+# exit: 0
+# seconds: 7903.77
+# outcome: exit0

@@ -1,0 +1,9 @@
+# command: cp program_v04/output/main/tables/*.csv reference/output/main/tables/
+# cwd: .
+# start: 2026-11-27T00:29:16Z
+# timeout_s: 60
+
+# end: 2026-11-27T00:29:16Z
+# exit: 0
+# seconds: 0.01
+# outcome: exit0
