@@ -1,0 +1,731 @@
+{
+ "format": "receiptgen-results/1",
+ "spec": {
+  "title": "Billakanti and Shin, \"At-Risk Transformation for U.S. Recession Prediction\" (International Journal of Forecasting, conditionally accepted): first Linux run, main paper",
+  "paper": "Rahul Billakanti and Minchul Shin, At-Risk Transformation for U.S. Recession Prediction, International Journal of Forecasting, conditionally accepted",
+  "package_label": "the authors' repository [mcmcs/At-Risk-Public](https://github.com/mcmcs/At-Risk-Public)",
+  "repo": "https://github.com/mcmcs/At-Risk-Public",
+  "commit": "4ec0c1de156a19cd0fa318dd4a885d253fbb27ed",
+  "protocol": "PROTOCOL.md",
+  "cost_per_hour_usd": 0.0,
+  "cost_basis": "GitHub-hosted ubuntu-24.04 runner, free for public repositories (a comparable 4 vCPU cloud machine is about 0.20 USD an hour)",
+  "environment_commands": [
+   {
+    "id": "tools",
+    "cmd": "uv --version; pdftoppm -v 2>&1 | head -1; nproc; free -g | head -2; program_v04/.venv/bin/python -c 'import sys,numpy,sklearn,xgboost;print(sys.version);print(numpy.__version__,sklearn.__version__,xgboost.__version__)' || true"
+   }
+  ],
+  "setup": [
+   {
+    "id": "install_tools",
+    "cmd": "python -m pip install --quiet uv && sudo apt-get install -y -q poppler-utils >/dev/null && uv --version",
+    "timeout_s": 900
+   },
+   {
+    "id": "uv_sync",
+    "cmd": "cd program_v04 && uv sync --locked && cd .. && uv pip install --python program_v04/.venv/bin/python xlrd==2.0.2",
+    "timeout_s": 1800
+   },
+   {
+    "id": "download_inputs",
+    "cmd": "program_v04/.venv/bin/python scripts/download_inputs.py && program_v04/.venv/bin/python scripts/verify_inputs.py",
+    "timeout_s": 1800
+   }
+  ],
+  "commands": [
+   {
+    "id": "run_main",
+    "cmd": "cd program_v04 && .venv/bin/python -m program_v04.main.run_main --input-mode public",
+    "timeout_s": 16200,
+    "outputs": []
+   },
+   {
+    "id": "place_main_tables_for_comparison",
+    "cmd": "cp program_v04/output/main/tables/*.csv reference/output/main/tables/",
+    "timeout_s": 60,
+    "outputs": [
+     "reference/output/main/tables/table01_single_binary_summary.csv",
+     "reference/output/main/tables/table02_zt_vs_benchmarks.csv",
+     "reference/output/main/tables/table03_aggregation_comparison.csv",
+     "reference/output/main/tables/table04_encompassing_tests.csv",
+     "reference/output/main/tables/table05_mse_decomposition_h3.csv",
+     "reference/output/main/tables/table06_feature_importance.csv",
+     "reference/output/main/tables/table07_sector_contribution.csv"
+    ]
+   }
+  ],
+  "scope_notes": [
+   "Main paper only: Tables 1-7 as CSV. LaTeX tables carry a run fingerprint comment and figures are PDFs, so they are not compared here. The appendix (Tables 8-22, Figure 4) is not run.",
+   "The tested platform is macOS on Apple Silicon. This is an x86-64 Linux runner, so the run also says whether the results carry across platforms."
+  ],
+  "deviations": [
+   "Run 2 runs only the README's main-paper command (Figures 1-3, Tables 1-7), because the full run passed this runner's time limit in run 1.",
+   "The package's own comparison script checks all 50 outputs and so cannot run on the main paper alone. Instead the seven regenerated main-table CSVs are copied over the committed reference CSVs, and receiptgen compares each with the committed file, number by number, at relative tolerance 1e-12. The package's own rule is absolute 5e-12; both are given in the notes."
+  ]
+ },
+ "started": "2026-11-26T22:17:05Z",
+ "status": "ran",
+ "flags": [],
+ "commands": [
+  {
+   "id": "install_tools",
+   "cmd": "python -m pip install --quiet uv && sudo apt-get install -y -q poppler-utils >/dev/null && uv --version",
+   "cwd": ".",
+   "timeout_s": 900,
+   "start": "2026-11-26T22:17:08Z",
+   "end": "2026-11-26T22:17:16Z",
+   "exit_code": 0,
+   "seconds": 8.08,
+   "outcome": "exit0",
+   "log": "evidence/logs/install_tools.log",
+   "setup": true
+  },
+  {
+   "id": "uv_sync",
+   "cmd": "cd program_v04 && uv sync --locked && cd .. && uv pip install --python program_v04/.venv/bin/python xlrd==2.0.2",
+   "cwd": ".",
+   "timeout_s": 1800,
+   "start": "2026-11-26T22:17:16Z",
+   "end": "2026-11-26T22:17:20Z",
+   "exit_code": 0,
+   "seconds": 3.98,
+   "outcome": "exit0",
+   "log": "evidence/logs/uv_sync.log",
+   "setup": true
+  },
+  {
+   "id": "download_inputs",
+   "cmd": "program_v04/.venv/bin/python scripts/download_inputs.py && program_v04/.venv/bin/python scripts/verify_inputs.py",
+   "cwd": ".",
+   "timeout_s": 1800,
+   "start": "2026-11-26T22:17:20Z",
+   "end": "2026-11-26T22:17:32Z",
+   "exit_code": 0,
+   "seconds": 11.74,
+   "outcome": "exit0",
+   "log": "evidence/logs/download_inputs.log",
+   "setup": true
+  },
+  {
+   "id": "run_main",
+   "cmd": "cd program_v04 && .venv/bin/python -m program_v04.main.run_main --input-mode public",
+   "cwd": ".",
+   "timeout_s": 16200,
+   "start": "2026-11-26T22:17:32Z",
+   "end": "2026-11-27T00:29:16Z",
+   "exit_code": 0,
+   "seconds": 7903.77,
+   "outcome": "exit0",
+   "log": "evidence/logs/run_main.log",
+   "setup": false
+  },
+  {
+   "id": "place_main_tables_for_comparison",
+   "cmd": "cp program_v04/output/main/tables/*.csv reference/output/main/tables/",
+   "cwd": ".",
+   "timeout_s": 60,
+   "start": "2026-11-27T00:29:16Z",
+   "end": "2026-11-27T00:29:16Z",
+   "exit_code": 0,
+   "seconds": 0.01,
+   "outcome": "exit0",
+   "log": "evidence/logs/place_main_tables_for_comparison.log",
+   "setup": false
+  }
+ ],
+ "outputs": {
+  "reference/output/main/tables/table01_single_binary_summary.csv": {
+   "command": "place_main_tables_for_comparison",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "b2f49623564d8627dbc365644f847fe4967de93a86e58cf83d14d7221ef36bd6",
+   "committed_sha256": "7dc4f8302d9a403eaf4ca748b335ef81fcdf7f5fb6c827686cb5dd50144c1b54",
+   "numbers": 30,
+   "numbers_text_identical": 24,
+   "numbers_differ": 0,
+   "differences": [],
+   "class": "numbers-match",
+   "reproduced": true
+  },
+  "reference/output/main/tables/table02_zt_vs_benchmarks.csv": {
+   "command": "place_main_tables_for_comparison",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "6a1bc5c40ffc321e98aafbf5203e17e63c19684bcec9fdb19dd6f017cf92febf",
+   "committed_sha256": "8c8c379346d0a63e674e5d77767fe78df2d6217c971d80d2ff0effb7813cc4c2",
+   "numbers": 38,
+   "numbers_text_identical": 19,
+   "numbers_differ": 9,
+   "differences": [
+    {
+     "line": 5,
+     "committed": "0.0631581642921904",
+     "regenerated": "0.06315816363302572"
+    },
+    {
+     "line": 5,
+     "committed": "0.08649560310915522",
+     "regenerated": "0.08649560304866484"
+    },
+    {
+     "line": 5,
+     "committed": "0.10496414834183229",
+     "regenerated": "0.10496414825138352"
+    },
+    {
+     "line": 6,
+     "committed": "0.5871605239516309",
+     "regenerated": "0.5872770966432267"
+    },
+    {
+     "line": 6,
+     "committed": "0.05944214285714285",
+     "regenerated": "0.05948166666666666"
+    },
+    {
+     "line": 6,
+     "committed": "0.38439869006941185",
+     "regenerated": "0.38170798961936225"
+    },
+    {
+     "line": 6,
+     "committed": "0.07223238095238095",
+     "regenerated": "0.07227999999999998"
+    },
+    {
+     "line": 6,
+     "committed": "0.4125728745235048",
+     "regenerated": "0.420071609295358"
+    },
+    {
+     "line": 6,
+     "committed": "0.07068904761904762",
+     "regenerated": "0.07052190476190476"
+    }
+   ],
+   "class": "numbers-differ",
+   "reproduced": false
+  },
+  "reference/output/main/tables/table03_aggregation_comparison.csv": {
+   "command": "place_main_tables_for_comparison",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "b6f50dea1cb3e4caf553d0280c8eb4fd6a6c60216503c609dfedf884934afc14",
+   "committed_sha256": "531b226cacc2883861de8e63baf2a3262af1ba732ae8bd72b35b7ac8d0b3a6ac",
+   "numbers": 45,
+   "numbers_text_identical": 29,
+   "numbers_differ": 10,
+   "differences": [
+    {
+     "line": 3,
+     "committed": "0.05941969651374924",
+     "regenerated": "0.05941969734871816"
+    },
+    {
+     "line": 3,
+     "committed": "0.09008001668615043",
+     "regenerated": "0.09008001737310173"
+    },
+    {
+     "line": 3,
+     "committed": "0.09236899101545284",
+     "regenerated": "0.09236899231622021"
+    },
+    {
+     "line": 5,
+     "committed": "0.102508393630588",
+     "regenerated": "0.10250839389881886"
+    },
+    {
+     "line": 5,
+     "committed": "0.1424631193014328",
+     "regenerated": "0.1424631188403671"
+    },
+    {
+     "line": 5,
+     "committed": "0.11562152977728055",
+     "regenerated": "0.11560824860274177"
+    },
+    {
+     "line": 5,
+     "committed": "0.131090971694137",
+     "regenerated": "0.13109157164376273"
+    },
+    {
+     "line": 7,
+     "committed": "0.05245600306051973",
+     "regenerated": "0.05245600367618478"
+    },
+    {
+     "line": 7,
+     "committed": "0.06723569914694515",
+     "regenerated": "0.06723569826783932"
+    },
+    {
+     "line": 7,
+     "committed": "0.0868573321462641",
+     "regenerated": "0.08685733220566189"
+    }
+   ],
+   "class": "numbers-differ",
+   "reproduced": false
+  },
+  "reference/output/main/tables/table04_encompassing_tests.csv": {
+   "command": "place_main_tables_for_comparison",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "20fef77133e2e5e867e4360a29756017b3f44f75104a0c380e224b3b86122c81",
+   "committed_sha256": "0783381158ac1ef1fe0dee189eab61b1cc6ddeeeab45f08380f8337ec70669c5",
+   "numbers": 60,
+   "numbers_text_identical": 13,
+   "numbers_differ": 28,
+   "differences": [
+    {
+     "line": 2,
+     "committed": "-0.01450481739915004",
+     "regenerated": "-0.014504817399125297"
+    },
+    {
+     "line": 3,
+     "committed": "0.7266024679877018",
+     "regenerated": "0.7266024524051495"
+    },
+    {
+     "line": 3,
+     "committed": "5.610838947765513e-07",
+     "regenerated": "5.610842476185222e-07"
+    },
+    {
+     "line": 3,
+     "committed": "-0.023765325447434153",
+     "regenerated": "-0.023765316605247035"
+    },
+    {
+     "line": 3,
+     "committed": "0.7272657217461909",
+     "regenerated": "0.727265821774767"
+    },
+    {
+     "line": 4,
+     "committed": "0.4196498497356429",
+     "regenerated": "0.4192437794322006"
+    },
+    {
+     "line": 4,
+     "committed": "0.001426954846506276",
+     "regenerated": "0.0014411198203174989"
+    },
+    {
+     "line": 4,
+     "committed": "0.39464881575121497",
+     "regenerated": "0.3957530110652952"
+    },
+    {
+     "line": 4,
+     "committed": "0.027803608529637185",
+     "regenerated": "0.02839531774149061"
+    },
+    {
+     "line": 7,
+     "committed": "0.6952752286171854",
+     "regenerated": "0.6952754547520087"
+    },
+    {
+     "line": 7,
+     "committed": "4.816206439118614e-09",
+     "regenerated": "4.8160589581226445e-09"
+    },
+    {
+     "line": 7,
+     "committed": "-0.04518753323964164",
+     "regenerated": "-0.04518771258571849"
+    },
+    {
+     "line": 7,
+     "committed": "0.38390613194384604",
+     "regenerated": "0.38390423348136193"
+    },
+    {
+     "line": 8,
+     "committed": "0.4072210876515942",
+     "regenerated": "0.4014762499156874"
+    },
+    {
+     "line": 8,
+     "committed": "0.0010009571213895712",
+     "regenerated": "0.0012464139840490098"
+    },
+    {
+     "line": 8,
+     "committed": "0.2594687147985696",
+     "regenerated": "0.2666038217180211"
+    },
+    {
+     "line": 8,
+     "committed": "0.07402370406845016",
+     "regenerated": "0.06846280942920438"
+    },
+    {
+     "line": 9,
+     "committed": "0.01213476827733316",
+     "regenerated": "0.012134768277320433"
+    },
+    {
+     "line": 11,
+     "committed": "0.8789392597697834",
+     "regenerated": "0.8789392529548645"
+    },
+    {
+     "line": 11,
+     "committed": "8.194166125793028e-06",
+     "regenerated": "8.194168848365124e-06"
+    },
+    {
+     "line": 11,
+     "committed": "-0.012222428677745274",
+     "regenerated": "-0.012222426670567357"
+    },
+    {
+     "line": 11,
+     "committed": "0.7847880671996724",
+     "regenerated": "0.7847881042417196"
+    },
+    {
+     "line": 12,
+     "committed": "0.482676260871951",
+     "regenerated": "0.4668918507592393"
+    },
+    {
+     "line": 12,
+     "committed": "0.008984275352646585",
+     "regenerated": "0.01120542512098158"
+    },
+    {
+     "line": 12,
+     "committed": "0.3125895331808877",
+     "regenerated": "0.3300596067830239"
+    },
+    {
+     "line": 12,
+     "committed": "0.02961341487177834",
+     "regenerated": "0.023125155181233408"
+    },
+    {
+     "line": 13,
+     "committed": "1.2091922268587973e-08",
+     "regenerated": "1.2091922268601326e-08"
+    },
+    {
+     "line": 13,
+     "committed": "-0.010780505888862415",
+     "regenerated": "-0.01078050588880591"
+    }
+   ],
+   "class": "numbers-differ",
+   "reproduced": false
+  },
+  "reference/output/main/tables/table05_mse_decomposition_h3.csv": {
+   "command": "place_main_tables_for_comparison",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "bee152bb476f605b6c0218fd8f5f6b00f7ed0f527f74cd54e119ae2ef41f4464",
+   "committed_sha256": "ff8f6109d8e4f64def16946c17c85388d9f0da2b6d635bee0e5b9b9fc77a9baa",
+   "numbers": 6,
+   "numbers_text_identical": 0,
+   "numbers_differ": 3,
+   "differences": [
+    {
+     "line": 3,
+     "committed": "0.5233131659995177",
+     "regenerated": "0.5233131648083835"
+    },
+    {
+     "line": 3,
+     "committed": "0.014720795691419097",
+     "regenerated": "0.014720795088251217"
+    },
+    {
+     "line": 3,
+     "committed": "0.0631581642921904",
+     "regenerated": "0.06315816363302572"
+    }
+   ],
+   "class": "numbers-differ",
+   "reproduced": false
+  },
+  "reference/output/main/tables/table06_feature_importance.csv": {
+   "command": "place_main_tables_for_comparison",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "c8fb56f5985322312bd1a2a9c446d0ab6135d22e286fae5b68014904ad3fa8a9",
+   "committed_sha256": "8f874f5c453a07416f0d5fb9d64013832ce5c2a0f1a26dc5a698599d90c3fdd7",
+   "numbers": 31,
+   "numbers_text_identical": 11,
+   "numbers_differ": 10,
+   "differences": [
+    {
+     "line": 2,
+     "committed": "12.506191591707774",
+     "regenerated": "12.506191590982384"
+    },
+    {
+     "line": 3,
+     "committed": "11.369226786104548",
+     "regenerated": "11.369226778866395"
+    },
+    {
+     "line": 4,
+     "committed": "11.125158954703485",
+     "regenerated": "11.125158958170784"
+    },
+    {
+     "line": 5,
+     "committed": "6.664173616548934",
+     "regenerated": "6.664173613724715"
+    },
+    {
+     "line": 6,
+     "committed": "4.759328276937984",
+     "regenerated": "4.759328277358037"
+    },
+    {
+     "line": 7,
+     "committed": "3.5463779851198924",
+     "regenerated": "3.546377984023275"
+    },
+    {
+     "line": 8,
+     "committed": "3.24587371609007",
+     "regenerated": "3.2458737152832104"
+    },
+    {
+     "line": 9,
+     "committed": "2.85170070759237",
+     "regenerated": "2.8517006980606094"
+    },
+    {
+     "line": 10,
+     "committed": "2.4600843345148653",
+     "regenerated": "2.4600843326473036"
+    },
+    {
+     "line": 11,
+     "committed": "2.4171128427429474",
+     "regenerated": "2.417112844322906"
+    }
+   ],
+   "class": "numbers-differ",
+   "reproduced": false
+  },
+  "reference/output/main/tables/table07_sector_contribution.csv": {
+   "command": "place_main_tables_for_comparison",
+   "committed": true,
+   "rewritten": true,
+   "sha256": "971f1f90e49f2cff07532fbeaa5082d4b882c4ef8e92609640d34f851a60d8c1",
+   "committed_sha256": "c29e3c4b0bb168d1f1563bcfe416b4657d9473a7400bc6f177acd8bf44dd382b",
+   "numbers": 68,
+   "numbers_text_identical": 4,
+   "numbers_differ": 32,
+   "differences": [
+    {
+     "line": 10,
+     "committed": "3.2845619329929345",
+     "regenerated": "3.2845618965724808"
+    },
+    {
+     "line": 10,
+     "committed": "2.57158051264698",
+     "regenerated": "2.571580516418756"
+    },
+    {
+     "line": 10,
+     "committed": "3.7438009181590948",
+     "regenerated": "3.7438009173017983"
+    },
+    {
+     "line": 10,
+     "committed": "6.378338832335082",
+     "regenerated": "6.378338832968146"
+    },
+    {
+     "line": 11,
+     "committed": "19.235000993180815",
+     "regenerated": "19.235001315791816"
+    },
+    {
+     "line": 11,
+     "committed": "19.796533585932377",
+     "regenerated": "19.796533628358297"
+    },
+    {
+     "line": 11,
+     "committed": "28.68424668356587",
+     "regenerated": "28.68424667665147"
+    },
+    {
+     "line": 11,
+     "committed": "20.867015522012082",
+     "regenerated": "20.867015490346144"
+    },
+    {
+     "line": 12,
+     "committed": "2.293762139771989",
+     "regenerated": "2.2937621595034354"
+    },
+    {
+     "line": 12,
+     "committed": "12.389442785727809",
+     "regenerated": "12.38944277139408"
+    },
+    {
+     "line": 12,
+     "committed": "12.44058889790761",
+     "regenerated": "12.440588905232886"
+    },
+    {
+     "line": 12,
+     "committed": "13.514339254904941",
+     "regenerated": "13.514339258662314"
+    },
+    {
+     "line": 13,
+     "committed": "0.5160612766743394",
+     "regenerated": "0.516061262588534"
+    },
+    {
+     "line": 13,
+     "committed": "1.5558478712272414",
+     "regenerated": "1.55584787475782"
+    },
+    {
+     "line": 13,
+     "committed": "2.6431086307001923",
+     "regenerated": "2.643108631297772"
+    },
+    {
+     "line": 13,
+     "committed": "0.7848163918855356",
+     "regenerated": "0.7848163920560498"
+    },
+    {
+     "line": 14,
+     "committed": "0.812188199394412",
+     "regenerated": "0.812187828709571"
+    },
+    {
+     "line": 14,
+     "committed": "5.101239114154406",
+     "regenerated": "5.101239115034359"
+    },
+    {
+     "line": 14,
+     "committed": "0.9541491052982316",
+     "regenerated": "0.9541491056060485"
+    },
+    {
+     "line": 14,
+     "committed": "0.7808891528481469",
+     "regenerated": "0.7808891341652546"
+    },
+    {
+     "line": 15,
+     "committed": "66.71933204612459",
+     "regenerated": "66.71933217878689"
+    },
+    {
+     "line": 15,
+     "committed": "53.33930677102148",
+     "regenerated": "53.33930670792247"
+    },
+    {
+     "line": 15,
+     "committed": "47.21600675490917",
+     "regenerated": "47.21600675794046"
+    },
+    {
+     "line": 15,
+     "committed": "54.716662902196646",
+     "regenerated": "54.71666292931048"
+    },
+    {
+     "line": 16,
+     "committed": "0.9649895963900985",
+     "regenerated": "0.9649896048185569"
+    },
+    {
+     "line": 16,
+     "committed": "0.5788804231712771",
+     "regenerated": "0.5788804272530359"
+    },
+    {
+     "line": 16,
+     "committed": "1.399351825578732",
+     "regenerated": "1.3993518232704438"
+    },
+    {
+     "line": 16,
+     "committed": "1.0580367626389384",
+     "regenerated": "1.0580367830215434"
+    },
+    {
+     "line": 17,
+     "committed": "6.174103815470825",
+     "regenerated": "6.174103753228721"
+    },
+    {
+     "line": 17,
+     "committed": "4.667168936118434",
+     "regenerated": "4.6671689588611835"
+    },
+    {
+     "line": 17,
+     "committed": "2.918747183881096",
+     "regenerated": "2.918747182699123"
+    },
+    {
+     "line": 17,
+     "committed": "1.8999011811786233",
+     "regenerated": "1.899901179470068"
+    }
+   ],
+   "class": "numbers-differ",
+   "reproduced": false
+  }
+ },
+ "reproduced": [
+  "reference/output/main/tables/table01_single_binary_summary.csv"
+ ],
+ "commit": "4ec0c1de156a19cd0fa318dd4a885d253fbb27ed",
+ "package_files": 154,
+ "package_files_sha256": "dd861cd1f21252e25f7b6e84be76c8aedeaa285aef9af826f5c34b90499b31f4",
+ "environment": {
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cores": 4,
+  "os": "Ubuntu 24.04.5 LTS",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "ram_gb": 15.6,
+  "gpu": "none",
+  "tools": {
+   "git": "git version 2.56.1",
+   "python3": "Python 3.12.10",
+   "julia": "julia version 1.13.4"
+  },
+  "extra": {
+   "tools": "uv 0.13.10 (x86_64-unknown-linux-gnu)\npdftoppm version 24.02.0\n4\n               total        used        free      shared  buff/cache   available\nMem:              15           1          10           0           4          14\n"
+  }
+ },
+ "untracked_after": 0,
+ "tracked_not_declared_ok": [
+  "reference/output/main/tables/table01_single_binary_summary.csv",
+  "reference/output/main/tables/table02_zt_vs_benchmarks.csv",
+  "reference/output/main/tables/table03_aggregation_comparison.csv",
+  "reference/output/main/tables/table04_encompassing_tests.csv",
+  "reference/output/main/tables/table05_mse_decomposition_h3.csv",
+  "reference/output/main/tables/table06_feature_importance.csv",
+  "reference/output/main/tables/table07_sector_contribution.csv"
+ ],
+ "finished": "2026-11-27T00:29:16Z",
+ "wall_clock_seconds": 7927.58,
+ "cost_usd": 0.0
+}
